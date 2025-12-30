@@ -6,7 +6,7 @@
 # - files are migrated from ${SYNOPKG_PKGDEST}/var to ${SYNOPKG_PKGVAR}
 
 # installer log is not writable, use for reference only.
-INST_LOG="/var/log/packages/${SYNOPKG_PKGNAME}.log"
+INST_LOG="/var/log/apps/${SYNOPKG_PKGNAME}.log"
 
 # Optional FWPORTS file
 FWPORTS_FILE="/var/packages/${SYNOPKG_PKGNAME}/config/${SYNOPKG_PKGNAME}.sc"
@@ -23,7 +23,7 @@ install_log ()
             install_log "${line}"
         done
     else
-        # stderr goes to /var/log/packages/{package}.log
+        # stderr goes to /var/log/apps/{package}.log
         # stdout goes to dialog in package manager ui.
         echo -e "$(date +'%Y/%m/%d %H:%M:%S')\t${_msg_}" 1>&2
     fi

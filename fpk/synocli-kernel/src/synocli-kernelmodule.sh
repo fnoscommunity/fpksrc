@@ -198,7 +198,7 @@ MPATH=""                                                               # Kernel 
 KO_LIST=""                                                             # List of kernel objects to enable|disable (includes config+args)
 KO_LIST_ARG=$(echo ${KO_LIST_ARG} | xargs)                             # List of kernel objects passed in argument
 KO_PATH=""                                                             # List of found kernel objects (*.ko) with path (includes config+args)
-SYNOLOG_PATH=/var/log/packages                                         # Default log output file
+SYNOLOG_PATH=/var/log/apps                                         # Default log output file
 SYNOLOG=${SYNOLOG_PATH}/synocli-kernelmodule.log                       # Default log output file
 
 # If SPK is set reassign variables

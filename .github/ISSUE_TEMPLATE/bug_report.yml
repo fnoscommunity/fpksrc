@@ -84,7 +84,7 @@ body:
   id: install-log
   attributes:
     label: Install Log
-    description: "Please copy the log file from `/var/log/packages/{package}.log` or for DSM<6: `/var/packages/{package}/target/var/{package}_installer.log` in here"
+    description: "Please copy the log file from `/var/log/apps/{package}.log` or for DSM<6: `/var/packages/{package}/target/var/{package}_installer.log` in here"
     render: log
   validations:
     required: true
