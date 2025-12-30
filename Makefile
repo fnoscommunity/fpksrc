@@ -143,7 +143,7 @@ jsonlint:
 ifeq (,$(shell which jsonlint))
 	$(error "jsonlint not found, install with: npm install -g jsonlint")
 else
-	find spk/ -not -path "*work*" -regextype posix-extended -regex '.*(\.json|install_uifile\w*|upgrade_uifile\w*|app/config)' -print -exec jsonlint -q -c {} \;
+	find spk/ -not -path "*work*" -regextype posix-extended -regex '.*(\.json|install\w*|upgrade\w*|app/config)' -print -exec jsonlint -q -c {} \;
 endif
 lint: jsonlint
 

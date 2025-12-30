@@ -48,7 +48,7 @@ DSM_UI_CONFIG = src/app/config
 SERVICE_COMMAND = /var/packages/rutorrent/target/bin/rtorrent-daemon
 
 WIZARDS_DIR = $(WORK_DIR)/generated-wizards
-WIZARDS = install_uifile upgrade_uifile
+WIZARDS = install upgrade
 
 POST_STRIP_TARGET = rutorrent_extra_install
 

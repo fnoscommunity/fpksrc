@@ -405,18 +405,22 @@ info-checksum:
 
 
 # file names to be used with "find" command
-WIZARD_FILE_NAMES  =     -name "install_uifile" 
-WIZARD_FILE_NAMES += -or -name "install_uifile_???" 
-WIZARD_FILE_NAMES += -or -name "install_uifile.sh"
-WIZARD_FILE_NAMES += -or -name "install_uifile_???.sh"
-WIZARD_FILE_NAMES += -or -name "upgrade_uifile"
-WIZARD_FILE_NAMES += -or -name "upgrade_uifile_???"
-WIZARD_FILE_NAMES += -or -name "upgrade_uifile.sh"
-WIZARD_FILE_NAMES += -or -name "upgrade_uifile_???.sh"
-WIZARD_FILE_NAMES += -or -name "uninstall_uifile"
-WIZARD_FILE_NAMES += -or -name "uninstall_uifile_???"
-WIZARD_FILE_NAMES += -or -name "uninstall_uifile.sh"
-WIZARD_FILE_NAMES += -or -name "uninstall_uifile_???.sh"
+WIZARD_FILE_NAMES  =     -name "install" 
+WIZARD_FILE_NAMES += -or -name "install_???" 
+WIZARD_FILE_NAMES += -or -name "install.sh"
+WIZARD_FILE_NAMES += -or -name "install_???.sh"
+WIZARD_FILE_NAMES += -or -name "upgrade"
+WIZARD_FILE_NAMES += -or -name "upgrade_???"
+WIZARD_FILE_NAMES += -or -name "upgrade.sh"
+WIZARD_FILE_NAMES += -or -name "upgrade_???.sh"
+WIZARD_FILE_NAMES += -or -name "uninstall"
+WIZARD_FILE_NAMES += -or -name "uninstall_???"
+WIZARD_FILE_NAMES += -or -name "uninstall.sh"
+WIZARD_FILE_NAMES += -or -name "uninstall_???.sh"
+WIZARD_FILE_NAMES += -or -name "config"
+WIZARD_FILE_NAMES += -or -name "config_???"
+WIZARD_FILE_NAMES += -or -name "config.sh"
+WIZARD_FILE_NAMES += -or -name "config_???.sh"
 
 
 .PHONY: wizards
@@ -424,7 +428,7 @@ wizards:
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@$(MSG) "Create default DSM7 uninstall wizard"
 	@mkdir -p $(DSM_WIZARDS_DIR)
-	@find $(SPKSRC_MK)wizard -maxdepth 1 -type f -and \( -name "uninstall_uifile" -or -name "uninstall_uifile_???" \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \;
+	@find $(SPKSRC_MK)wizard -maxdepth 1 -type f -and \( -name "uninstall" -or -name "uninstall_???" \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \;
 ifeq ($(strip $(WIZARDS_DIR)),)
 	$(eval FPK_CONTENT += wizard)
 endif
@@ -474,8 +478,8 @@ ifneq ($(strip $(WIZARDS_DIR)),)
 	$(eval FPK_CONTENT += wizard)
 	@mkdir -p $(DSM_WIZARDS_DIR)
 	@find $${SPKSRC_WIZARDS_DIR} -maxdepth 1 -type f -and \( $(WIZARD_FILE_NAMES) \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \;
-	@if [ -f "$(DSM_WIZARDS_DIR)/uninstall_uifile.sh" ] && [ -f "$(DSM_WIZARDS_DIR)/uninstall_uifile" ]; then \
-		rm "$(DSM_WIZARDS_DIR)/uninstall_uifile"; \
+	@if [ -f "$(DSM_WIZARDS_DIR)/uninstall.sh" ] && [ -f "$(DSM_WIZARDS_DIR)/uninstall" ]; then \
+		rm "$(DSM_WIZARDS_DIR)/uninstall"; \
 	fi
 	@if [ -d "$(WIZARDS_DIR)$(TCVERSION)" ]; then \
 	   $(MSG) "Create DSM Version specific Wizards: $(WIZARDS_DIR)$(TCVERSION)"; \

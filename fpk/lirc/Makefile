@@ -49,8 +49,8 @@ lirc_extra_install:
 	install -m 644 src/lircd.conf $(STAGING_DIR)/etc/lirc/lircd.conf
 	cp -R $(WORK_DIR)/$(SPK_NAME)-$(SPK_VERS)/remotes $(STAGING_DIR)/
 	install -m 755 -d $(WIZARDS_DIR)
-	install src/install_uifile.tmpl $(WIZARDS_DIR)/install_uifile
+	install src/install.tmpl $(WIZARDS_DIR)/install
 	@for DRIVER in $(LIRC_SUPPORTED_DRIVERS); do \
-	    sed -i "s/@keys@/$${DRIVER} @keys@/" $(WIZARDS_DIR)/install_uifile; \
+	    sed -i "s/@keys@/$${DRIVER} @keys@/" $(WIZARDS_DIR)/install; \
 	done;
-	@sed -i 's/@keys@//' $(WIZARDS_DIR)/install_uifile
+	@sed -i 's/@keys@//' $(WIZARDS_DIR)/install
