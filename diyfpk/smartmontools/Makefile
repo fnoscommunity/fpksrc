@@ -17,4 +17,4 @@ LICENSE = GPLv2
 # you have to use smartctl7 (or /usr/local/bin/smartctl or /var/packages/smartmontools/target/sbin/smartctl)
 SPK_COMMANDS = sbin/smartctl7 sbin/smartctl sbin/smartd sbin/update-smart-drivedb
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

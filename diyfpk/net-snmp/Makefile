@@ -32,4 +32,4 @@ SPK_COMMANDS += bin/snmpusm
 SPK_COMMANDS += bin/snmpvacm
 SPK_COMMANDS += bin/snmpwalk
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

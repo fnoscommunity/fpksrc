@@ -18,4 +18,4 @@ SERVICE_SETUP = src/service-setup.sh
 
 SPK_COMMANDS = bin/irssi
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

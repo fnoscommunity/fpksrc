@@ -27,7 +27,7 @@ SPK_COMMANDS += bin/tiger-hash
 SPK_COMMANDS += bin/tth-hash
 SPK_COMMANDS += bin/whirlpool-hash
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: rhash_extra_install
 rhash_extra_install:

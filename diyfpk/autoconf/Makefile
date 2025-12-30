@@ -20,4 +20,4 @@ SPK_COMMANDS += bin/autoscan
 SPK_COMMANDS += bin/autoupdate
 SPK_COMMANDS += bin/ifnames
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

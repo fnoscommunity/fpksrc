@@ -16,4 +16,4 @@ LICENSE  = Apache 2.0
 
 SPK_COMMANDS = bin/erl bin/erlc
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

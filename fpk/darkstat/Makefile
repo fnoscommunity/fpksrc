@@ -26,7 +26,7 @@ SERVICE_PORT = 667
 
 POST_STRIP_TARGET = darkstat_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: darkstat_extra_install
 darkstat_extra_install:

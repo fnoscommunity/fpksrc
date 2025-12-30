@@ -32,7 +32,7 @@ SERVICE_SETUP = src/service-setup.sh
 SPK_COMMANDS += bin/vainfo
 endif
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: ffmpeg4_extra_install
 ffmpeg4_extra_install:

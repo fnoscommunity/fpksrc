@@ -19,4 +19,4 @@ STARTABLE = no
 
 SPK_COMMANDS = bin/btop
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

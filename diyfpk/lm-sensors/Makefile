@@ -16,4 +16,4 @@ LICENSE = GPLv2
 
 SPK_COMMANDS = bin/sensors bin/sensors-conf-convert sbin/fancontrol sbin/sensors-detect
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

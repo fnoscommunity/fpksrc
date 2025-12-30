@@ -16,4 +16,4 @@ LICENSE = GPLv2
 
 SPK_COMMANDS = bin/fidentify bin/photorec bin/testdisk
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -62,7 +62,7 @@ POST_STRIP_TARGET = jackett_extra_install
 # TMPDIR is used for jackett built in backup and update
 USE_ALTERNATE_TMPDIR = 1
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: jackett_extra_install
 jackett_extra_install:

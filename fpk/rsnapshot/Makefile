@@ -22,4 +22,4 @@ override ARCH=noarch
 
 SPK_COMMANDS = bin/rsnapshot bin/rsnapshot-diff
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

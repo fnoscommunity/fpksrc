@@ -132,4 +132,4 @@ SPK_COMMANDS += bin/aria2c
 SPK_COMMANDS += bin/nc bin/netcat
 SPK_COMMANDS += bin/imapfilter
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

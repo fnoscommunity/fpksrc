@@ -28,7 +28,7 @@ POST_STRIP_TARGET = openlist_extra_install
 
 WIZARDS_TEMPLATES_DIR = src/wizard_templates
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: openlist_extra_install
 openlist_extra_install:

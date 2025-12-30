@@ -20,4 +20,4 @@ LICENSE  = Charityware
 SPK_COMMANDS = bin/vim bin/vim$(firstword $(subst ., ,$(SPK_VERS)))
 SPK_COMMANDS += bin/view bin/vimdiff bin/rvim bin/rview bin/vimtutor
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

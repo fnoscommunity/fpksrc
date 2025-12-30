@@ -33,4 +33,4 @@ CONF_DIR = src/conf/
 SERVICE_SETUP = src/service-setup.sh
 STARTABLE = no
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

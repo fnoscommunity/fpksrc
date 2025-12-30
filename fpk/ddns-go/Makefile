@@ -28,7 +28,7 @@ WIZARDS_TEMPLATES_DIR = src/wizard_templates
 
 POST_STRIP_TARGET = ddns_go_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: ddns_go_extra_install
 ddns_go_extra_install:

@@ -34,7 +34,7 @@ FWPORTS = src/syncthing.sc
 
 POST_STRIP_TARGET = syncthing_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: syncthing_extra_install
 syncthing_extra_install:

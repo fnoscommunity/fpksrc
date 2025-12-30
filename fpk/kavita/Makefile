@@ -35,7 +35,7 @@ WIZARDS_DIR = src/wizard/
 
 POST_STRIP_TARGET = kavita_custom_libe_sqlite3 kavita_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: kavita_custom_libe_sqlite3
 kavita_custom_libe_sqlite3:

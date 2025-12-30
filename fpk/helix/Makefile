@@ -18,4 +18,4 @@ LICENSE = MPL-2.0
 
 SPK_COMMANDS = bin/hx
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

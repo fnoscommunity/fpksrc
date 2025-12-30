@@ -37,7 +37,7 @@ NO_SERVICE_SHORTCUT = yes
 
 POST_STRIP_TARGET = aria2_post_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: aria2_post_install
 aria2_post_install:

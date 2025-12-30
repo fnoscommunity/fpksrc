@@ -26,7 +26,7 @@ POST_STRIP_TARGET = gotify_extra_install
 
 SPK_COMMANDS = bin/gotify-cli
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: gotify_extra_install
 gotify_extra_install:

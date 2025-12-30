@@ -18,4 +18,4 @@ LICENSE  = LGPLv2
 
 SPK_COMMANDS = bin/gpac bin/MP4Box
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

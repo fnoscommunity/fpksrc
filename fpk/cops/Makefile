@@ -37,7 +37,7 @@ STARTABLE = no
 
 POST_STRIP_TARGET = cops_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: cops_extra_install
 cops_extra_install:

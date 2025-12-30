@@ -31,4 +31,4 @@ SPK_COMMANDS += bin/axfer
 SPK_COMMANDS += bin/iecset
 SPK_COMMANDS += bin/speaker-test
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

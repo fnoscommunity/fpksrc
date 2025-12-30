@@ -37,7 +37,7 @@ COPY_TARGET = syno_magnet_copy
 # Pure web package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 include ../../mk/spksrc.download.mk
 checksum: download

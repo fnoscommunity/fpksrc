@@ -27,4 +27,4 @@ LICENSE  = public domain/Unlicense
 
 SPK_COMMANDS = bin/rg
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

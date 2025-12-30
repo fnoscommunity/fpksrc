@@ -20,7 +20,7 @@ POST_STRIP_TARGET = nushell_extra_install
 
 SPK_COMMANDS = bin/nu bin/nu_install_plugins.sh
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: nushell_extra_install
 # some plugins need rpath to find shared libraries (of openssl) in the lib folder of the package

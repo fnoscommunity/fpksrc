@@ -28,7 +28,7 @@ ADMIN_PORT = 2812
 
 POST_STRIP_TARGET = monit_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: monit_extra_install
 monit_extra_install:

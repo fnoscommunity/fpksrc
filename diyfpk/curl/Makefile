@@ -18,4 +18,4 @@ LICENSE = https://curl.haxx.se/docs/copyright.html
 
 SPK_COMMANDS = bin/curl
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -15,4 +15,4 @@ LICENSE = GPLv2
 
 SPK_COMMANDS = bin/links
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

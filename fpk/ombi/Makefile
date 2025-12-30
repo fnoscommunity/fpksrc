@@ -32,7 +32,7 @@ DEPENDS += cross/libstdc++
 POST_STRIP_TARGET += ombi_patch_target
 endif
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: ombi_custom_libe_sqlite3
 ombi_custom_libe_sqlite3:

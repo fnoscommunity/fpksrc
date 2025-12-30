@@ -70,7 +70,7 @@ SPK_COMMANDS += bin/inetcat
 SPK_COMMANDS += bin/iproxy
 SPK_COMMANDS += bin/plistutil
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: itools_extra_install
 itools_extra_install:

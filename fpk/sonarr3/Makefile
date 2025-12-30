@@ -39,7 +39,7 @@ POST_STRIP_TARGET = sonarr_extra_install
 # TMPDIR is used for sonarr built in backup and update
 USE_ALTERNATE_TMPDIR = 1
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 PACKAGE_VERSION = $(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com)

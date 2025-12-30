@@ -52,7 +52,7 @@ USE_ALTERNATE_TMPDIR = 1
 
 POST_STRIP_TARGET = owncloud_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: owncloud_extra_install
 owncloud_extra_install:

@@ -24,7 +24,7 @@ SPK_COMMANDS += bin/git-upload-archive
 SPK_COMMANDS += bin/git-upload-pack
 SPK_COMMANDS += bin/scalar
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 ifneq ($(findstring $(ARCH),$(PPC_ARCHS) $(ARMv5_ARCHS) $(ARMv7L_ARCHS)),$(ARCH))
 DEPENDS += cross/git-lfs

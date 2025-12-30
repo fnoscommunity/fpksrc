@@ -33,7 +33,7 @@ POST_STRIP_TARGET = horde_extra_install
 BUSYBOX_CONFIG = daemon nice
 ENV += BUSYBOX_CONFIG="$(BUSYBOX_CONFIG)"
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: horde_extra_install
 horde_extra_install:

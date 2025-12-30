@@ -11,4 +11,4 @@ STARTABLE = no
 BOOST_LIBRARIES += all
 ENV += BOOST_LIBRARIES="$(BOOST_LIBRARIES)"
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

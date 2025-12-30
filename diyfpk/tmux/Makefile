@@ -15,4 +15,4 @@ LICENSE  = BSD License
 
 SPK_COMMANDS = bin/tmux
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

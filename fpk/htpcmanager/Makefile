@@ -29,7 +29,7 @@ POST_STRIP_TARGET = htpcmanager_extra_install
 # Pure Python package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: htpcmanager_extra_install
 htpcmanager_extra_install: 

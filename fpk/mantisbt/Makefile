@@ -52,7 +52,7 @@ endif
 
 POST_STRIP_TARGET = mantisbt_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: mantisbt_extra_install
 mantisbt_extra_install:

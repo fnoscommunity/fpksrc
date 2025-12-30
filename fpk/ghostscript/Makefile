@@ -47,4 +47,4 @@ SPK_COMMANDS += bin/ps2ps
 SPK_COMMANDS += bin/ps2ps2
 SPK_COMMANDS += bin/unix-lpr.sh
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

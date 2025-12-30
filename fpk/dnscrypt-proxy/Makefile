@@ -42,7 +42,7 @@ endif
 
 include ../../mk/spksrc.cross-go-env.mk
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 
 .PHONY: dnscrypt_extra_install

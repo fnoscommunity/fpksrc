@@ -43,7 +43,7 @@ endif
 
 POST_STRIP_TARGET = ntopng_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: ntopng_extra_install
 ntopng_extra_install:

@@ -32,7 +32,7 @@ POST_STRIP_TARGET = subliminal_extra_install
 # Pure Python package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: subliminal_extra_install
 subliminal_extra_install:

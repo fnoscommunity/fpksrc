@@ -23,4 +23,4 @@ endif
 
 SPK_COMMANDS = bin/pngquant
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

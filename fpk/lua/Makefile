@@ -19,4 +19,4 @@ LICENSE = MIT
 
 SPK_COMMANDS = bin/lua bin/luac
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

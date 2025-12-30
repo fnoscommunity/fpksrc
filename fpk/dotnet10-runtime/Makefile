@@ -25,4 +25,4 @@ include ../../mk/spksrc.common.mk
 
 SPK_COMMANDS = share/dotnet/dotnet
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

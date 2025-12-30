@@ -61,4 +61,4 @@ SPK_COMMANDS += bin/uhubctl
 # expect
 SPK_COMMANDS += bin/expect
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

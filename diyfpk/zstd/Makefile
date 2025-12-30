@@ -15,4 +15,4 @@ LICENSE  = GPLv2/BSD
 
 SPK_COMMANDS = bin/zstd bin/unzstd bin/zstdcat bin/zstdmt bin/zstdgrep bin/zstdless bin/zstd-frugal
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

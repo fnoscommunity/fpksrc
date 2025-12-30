@@ -16,4 +16,4 @@ HELP_URL = https://www.kokkonen.net/tjko/src/man/jpegoptim.txt
 
 SPK_COMMANDS = bin/jpegoptim
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

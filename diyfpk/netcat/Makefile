@@ -14,4 +14,4 @@ LICENSE = GPLv2
 
 SPK_COMMANDS = bin/nc bin/netcat
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -63,4 +63,4 @@ SPK_COMMANDS += bin/check_wave
 SPK_COMMANDS += bin/utils.sh
 SPK_COMMANDS += bin/utils.pm
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

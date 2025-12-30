@@ -46,7 +46,7 @@ USE_ALTERNATE_TMPDIR = 1
 
 POST_STRIP_TARGET += jellyfin_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: jellyfin_extra_install
 jellyfin_extra_install:

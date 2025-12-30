@@ -27,7 +27,7 @@ ADMIN_PORT = 15672
 
 POST_STRIP_TARGET = rabbitmq_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: rabbitmq_extra_install
 rabbitmq_extra_install:

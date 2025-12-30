@@ -170,4 +170,4 @@ SPK_COMMANDS += bin/strace
 SPK_COMMANDS += bin/strace-log-merge
 
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

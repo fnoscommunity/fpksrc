@@ -21,7 +21,7 @@ LICENSE = 3-clause BSD
 
 POST_STRIP_TARGET = umurmur_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: umurmur_extra_install
 umurmur_extra_install:

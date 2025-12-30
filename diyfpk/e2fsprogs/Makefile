@@ -19,4 +19,4 @@ SPK_COMMANDS += sbin/fsck sbin/fsck.ext2 sbin/fsck.ext3 sbin/fsck.ext4
 SPK_COMMANDS += sbin/logsave sbin/mke2fs sbin/mkfs.ext2 sbin/mkfs.ext3 sbin/mkfs.ext4
 SPK_COMMANDS += sbin/mklost+found sbin/resize2fs sbin/tune2fs
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

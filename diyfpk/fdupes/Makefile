@@ -16,4 +16,4 @@ HELP_URL = https://github.com/adrianlopezroche/fdupes/wiki
 
 SPK_COMMANDS = bin/fdupes
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

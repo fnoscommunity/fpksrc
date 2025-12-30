@@ -65,7 +65,7 @@ GENTOO_STAGE3 = $(shell curl -s http://distfiles.gentoo.org/releases/$(GENTOO_CP
 GENTOO_STAGE3_URL = http://distfiles.gentoo.org/releases/$(GENTOO_CPU)/autobuilds/$(GENTOO_STAGE3)
 GENTOO_STAGE3_FILE = $(shell basename $(GENTOO_STAGE3))
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: gentoo-chroot_extra_install
 gentoo-chroot_extra_install:

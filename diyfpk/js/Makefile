@@ -16,4 +16,4 @@ LICENSE = MPL/GPL/LGPL tri-license
 
 SPK_COMMANDS = "bin/js bin/jslint bin/jspack"
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

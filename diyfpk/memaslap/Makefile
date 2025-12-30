@@ -13,4 +13,4 @@ LICENSE = 3-Clause BSD
 
 SPK_COMMANDS = bin/memaslap
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

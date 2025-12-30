@@ -15,4 +15,4 @@ LICENSE = 2-Clause BSD
 
 SPK_COMMANDS = bin/pixz
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -21,4 +21,4 @@ SPK_COMMANDS += sbin/mkfs.ext3 sbin/mkfs.ext4 sbin/mklost+found sbin/resize2fs s
 # avoid link to e4defrag
 #SPK_COMMANDS += sbin/e4defrag
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

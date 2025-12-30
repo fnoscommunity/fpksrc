@@ -17,4 +17,4 @@ LICENSE  = 2-clause BSD
 
 SPK_COMMANDS = bin/fossil
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

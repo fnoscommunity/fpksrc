@@ -20,4 +20,4 @@ LICENSE = GPLv3
 
 SPK_COMMANDS = bin/pngquant bin/jpegoptim bin/pngcrush bin/advmng bin/advpng
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -37,4 +37,4 @@ SPK_COMMANDS += bin/size
 SPK_COMMANDS += bin/strings
 SPK_COMMANDS += bin/strip
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

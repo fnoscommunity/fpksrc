@@ -34,7 +34,7 @@ POST_STRIP_TARGET = headphones_extra_install
 # Pure Python package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: headphones_extra_install
 headphones_extra_install: $(STAGING_DIR)/share/Headphones

@@ -32,7 +32,7 @@ POST_STRIP_TARGET = mylar_extra_install
 # Pure Python package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: mylar_extra_install
 mylar_extra_install: $(STAGING_DIR)/share/mylar

@@ -15,4 +15,4 @@ LICENSE = ISC
 
 SPK_COMMANDS = bin/mergerfs bin/mergerfs-fusermount sbin/mount.mergerfs
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

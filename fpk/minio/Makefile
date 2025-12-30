@@ -31,7 +31,7 @@ POST_STRIP_TARGET = minio_extra_install
 # official binary is "mc" not "minio-client", but "mc" is already used for midnight-commander
 SPK_COMMANDS = bin/minio-client
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: minio_extra_install
 minio_extra_install:

@@ -28,4 +28,4 @@ ifeq ($(findstring $(ARCH),$(ARM_ARCHS)),$(ARCH))
 SPK_COMMANDS += bin/run
 endif
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

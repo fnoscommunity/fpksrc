@@ -24,4 +24,4 @@ LICENSE = 3-clause BSD
 
 SPK_COMMANDS = bin/iperf3
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

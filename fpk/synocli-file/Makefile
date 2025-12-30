@@ -165,7 +165,7 @@ SPK_COMMANDS += bin/whirlpool-hash
 SPK_COMMANDS += bin/xstow bin/merge-info
 SPK_COMMANDS += bin/patch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 ifeq ($(call version_ge, $(TC_GCC), 4.8.1),1)
 # A compiler with support for C++11 language features is required.

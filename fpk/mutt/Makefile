@@ -21,7 +21,7 @@ SPK_COMMANDS = bin/mutt
 
 POST_STRIP_TARGET = mutt_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: mutt_extra_install
 mutt_extra_install:

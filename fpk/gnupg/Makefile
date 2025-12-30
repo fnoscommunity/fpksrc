@@ -31,4 +31,4 @@ SPK_COMMANDS += bin/gpg-wks-server
 SPK_COMMANDS += bin/kbxutil
 SPK_COMMANDS += bin/watchgnupg
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

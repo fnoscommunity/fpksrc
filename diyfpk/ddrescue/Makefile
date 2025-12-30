@@ -19,4 +19,4 @@ LICENSE  = GPLv2/GPLv3
 
 SPK_COMMANDS = bin/ddrescue bin/ddrescuelog
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

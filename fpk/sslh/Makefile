@@ -24,7 +24,7 @@ SERVICE_SETUP = src/service-setup.sh
 
 POST_STRIP_TARGET = sslh_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: sslh_extra_install
 sslh_extra_install:

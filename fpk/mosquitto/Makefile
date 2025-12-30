@@ -33,7 +33,7 @@ SPK_COMMANDS += bin/mosquitto_rr
 SPK_COMMANDS += bin/mosquitto_pub
 SPK_COMMANDS += bin/mosquitto_sub
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: mosquitto_extra_install
 mosquitto_extra_install:

@@ -29,7 +29,7 @@ SERVICE_WIZARD_SHARENAME = wizard_music_folder
 
 POST_STRIP_TARGET = navidrome_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: navidrome_extra_install
 navidrome_extra_install:

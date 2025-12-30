@@ -29,7 +29,7 @@ POST_STRIP_TARGET = full-text-rss_extra_install
 # Pure PHP package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: full-text-rss_extra_install
 full-text-rss_extra_install: $(STAGING_DIR)/share/full-text-rss

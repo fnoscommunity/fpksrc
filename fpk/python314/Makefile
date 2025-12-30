@@ -35,7 +35,7 @@ POST_STRIP_TARGET = python314_extra_install
 
 SPK_USR_LOCAL_LINKS = bin:bin/python3.14
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: python314_extra_install
 python314_extra_install:

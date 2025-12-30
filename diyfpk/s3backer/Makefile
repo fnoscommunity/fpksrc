@@ -13,4 +13,4 @@ LICENSE  = GPLv2
 
 SPK_COMMANDS = bin/s3backer
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

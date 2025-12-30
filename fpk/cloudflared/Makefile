@@ -22,7 +22,7 @@ SERVICE_SETUP = src/service-setup.sh
 
 POST_STRIP_TARGET = cloudflared_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: cloudflared_extra_install
 cloudflared_extra_install:

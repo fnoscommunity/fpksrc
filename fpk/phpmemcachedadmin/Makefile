@@ -43,7 +43,7 @@ ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 POST_STRIP_TARGET = phpmemcachedadmin_extra_install
 endif
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: phpmemcachedadmin_extra_install
 phpmemcachedadmin_extra_install:

@@ -13,4 +13,4 @@ LICENSE = FreeBSD style
 
 SPK_COMMANDS = bin/dos2unix bin/unix2dos bin/mac2unix bin/unix2mac 
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

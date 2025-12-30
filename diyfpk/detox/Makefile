@@ -14,4 +14,4 @@ LICENSE = 3-clause BSD
 
 SPK_COMMANDS = bin/detox bin/inline-detox
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -51,7 +51,7 @@ USE_DEPRECATED_REPLACE_MECHANISM = yes
 # disable checking for port conflicts
 CHECKPORT = no
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 PACKAGE_VERSION = $(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com)

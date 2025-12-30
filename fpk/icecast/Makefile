@@ -28,7 +28,7 @@ POST_STRIP_TARGET = icecast_extra_install
 
 SPK_COMMANDS = bin/ezstream bin/ezstream-cfgmigrate bin/ezstream-file.sh
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: icecast_extra_install
 icecast_extra_install:

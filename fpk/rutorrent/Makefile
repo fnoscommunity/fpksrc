@@ -76,7 +76,7 @@ include ../../mk/spksrc.directories.mk
 
 wizards: generated-wizards
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: generated-wizards
 generated-wizards:

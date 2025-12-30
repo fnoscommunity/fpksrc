@@ -22,7 +22,7 @@ SERVICE_SETUP = src/service-setup.sh
 
 POST_STRIP_TARGET = sockd_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: sockd_extra_install
 sockd_extra_install:

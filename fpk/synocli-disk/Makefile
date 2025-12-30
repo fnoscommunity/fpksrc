@@ -103,7 +103,7 @@ SPK_COMMANDS += bin/lsscsi
 SPK_COMMANDS += bin/ddrescue bin/ddrescuelog
 SPK_COMMANDS += bin/disktype
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 ifneq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 ifeq ($(call version_ge, $(TC_GCC), 4.8),1)

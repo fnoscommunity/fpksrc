@@ -13,4 +13,4 @@ LICENSE = MIT
 
 SPK_COMMANDS = bin/disktype
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

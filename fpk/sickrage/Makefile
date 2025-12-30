@@ -30,7 +30,7 @@ POST_STRIP_TARGET = sickrage_extra_install
 # Pure Python package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: sickrage_extra_install
 sickrage_extra_install:

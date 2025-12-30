@@ -32,7 +32,7 @@ POST_STRIP_TARGET = kiwix_extra_install
 
 SPK_COMMANDS = bin/kiwix-manage bin/kiwix-search bin/kiwix-serve
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: kiwix_extra_install
 kiwix_extra_install:

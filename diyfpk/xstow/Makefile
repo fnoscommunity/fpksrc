@@ -15,4 +15,4 @@ LICENSE  = GPLv2
 
 SPK_COMMANDS = bin/xstow bin/merge-info
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

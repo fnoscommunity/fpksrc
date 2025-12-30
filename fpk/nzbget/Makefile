@@ -32,7 +32,7 @@ override ARCH=noarch
 
 POST_STRIP_TARGET = nzbget_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: nzbget_extra_install
 nzbget_extra_install:

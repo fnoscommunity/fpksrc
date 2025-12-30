@@ -17,4 +17,4 @@ SERVICE_SETUP = src/service-setup.sh
 
 SPK_COMMANDS = bin/nano bin/rnano
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

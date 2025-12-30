@@ -16,4 +16,4 @@ LICENSE = MIT
 
 SPK_COMMANDS = bin/fzf
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

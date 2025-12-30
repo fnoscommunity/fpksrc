@@ -18,4 +18,4 @@ export PCRE2_CLI_FULL
 
 SPK_COMMANDS = bin/pcre2grep bin/pcre2test
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

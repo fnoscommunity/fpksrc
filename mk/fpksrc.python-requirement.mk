@@ -13,7 +13,7 @@
 #  WHEELS             List of wheels to go through
 
 # When wheel is called from:
-#                  spksrc.spk.mk: MAKECMDGOALS is empty (needs to be set to wheel)
+#                  fpksrc.fpk.mk: MAKECMDGOALS is empty (needs to be set to wheel)
 # make wheel-<arch>-<tcversion> : MAKECMDGOALS is wheel
 #          make download-wheels : MAKECMDGOALS is download-wheels
 REQUIREMENT_GOAL := $(if $(MAKECMDGOALS),$(MAKECMDGOALS),requirement)

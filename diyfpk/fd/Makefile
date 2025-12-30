@@ -17,4 +17,4 @@ LICENSE = Apache 2.0 / MIT
 
 SPK_COMMANDS = bin/fd
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

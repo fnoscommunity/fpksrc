@@ -23,4 +23,4 @@ LICENSE  = 2-clause BSDL
 SPK_COMMANDS  = bin/bundle bin/bundler bin/erb bin/gem bin/irb bin/racc
 SPK_COMMANDS += bin/rake bin/rbs bin/rdbg bin/rdoc bin/ri bin/ruby bin/typeprof
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

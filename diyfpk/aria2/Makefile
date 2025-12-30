@@ -17,4 +17,4 @@ HOMEPAGE = http://aria2.github.io
 
 SPK_COMMANDS = bin/aria2c
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -62,7 +62,7 @@ STARTABLE = no
 COPY_TARGET = demowebservice_install
 POST_ICON_TARGET = demowebservice_post_icon
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: demowebservice_install
 demowebservice_install:

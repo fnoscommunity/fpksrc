@@ -28,7 +28,7 @@ NO_SERVICE_SHORTCUT = yes
 
 POST_STRIP_TARGET = ps3netsrv_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: ps3netsrv_extra_install
 ps3netsrv_extra_install:

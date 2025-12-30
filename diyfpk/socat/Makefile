@@ -16,4 +16,4 @@ LICENSE = GPLv2
 SPK_COMMANDS = bin/socat bin/socat1 bin/filan bin/procan
 SPK_COMMANDS += bin/socat-broker.sh bin/socat-chain.sh bin/socat-mux.sh
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

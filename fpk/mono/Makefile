@@ -26,7 +26,7 @@ MONO_NATIVE_INSTALL = $(realpath $(WORK_DIR)/../../../native/mono/work-native/in
 
 SPK_COMMANDS = bin/mono bin/mcs bin/gacutil bin/gacutil2 bin/makecert
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: mono_extra_install
 mono_extra_install:

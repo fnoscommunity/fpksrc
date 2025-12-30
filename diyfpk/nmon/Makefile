@@ -16,4 +16,4 @@ HELP_URL = http://nmon.sourceforge.net/pmwiki.php
 
 SPK_COMMANDS = bin/nmon
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

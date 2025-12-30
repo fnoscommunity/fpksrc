@@ -23,7 +23,7 @@ CUSTOM_AUTHENTICATOR_NAME = sc-google-authenticator
 POST_STRIP_TARGET = google-authenticator-libpam_extra_install
 SPK_COMMANDS = bin/$(CUSTOM_AUTHENTICATOR_NAME)
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: google-authenticator-libpam_extra_install
 google-authenticator-libpam_extra_install:

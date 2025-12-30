@@ -22,4 +22,4 @@ LICENSE = Tcl/Tk License
 
 SPK_COMMANDS = bin/tclsh bin/tclsh$(SPK_MAIN_VERS)
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -15,7 +15,7 @@ LICENSE = MPL 2.0
 
 SPK_COMMANDS = bin/arpaname bin/delv bin/dig bin/mdig
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 ifeq ($(call version_ge,${TCVERSION},7.0),1)
 # DSM 7

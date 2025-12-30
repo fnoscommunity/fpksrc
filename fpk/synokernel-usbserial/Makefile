@@ -34,7 +34,7 @@ SPK_DEPENDS = synocli-kernel
 STRIP_TARGET = usbserial_strip
 POST_STRIP_TARGET = usbserial_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: usbserial_strip
 usbserial_strip:

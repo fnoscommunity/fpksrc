@@ -27,7 +27,7 @@ SERVICE_SETUP = src/service-setup.sh
 
 POST_STRIP_TARGET = go2rtc_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: go2rtc_extra_install
 go2rtc_extra_install:

@@ -18,4 +18,4 @@ LICENSE  = AGPLv3
 STARTABLE = no
 SPK_COMMANDS = bin/CuraEngine
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

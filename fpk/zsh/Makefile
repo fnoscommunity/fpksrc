@@ -23,4 +23,4 @@ LICENSE = Custom
 
 SPK_COMMANDS = bin/zsh
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

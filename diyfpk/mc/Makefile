@@ -16,4 +16,4 @@ LICENSE = GPL
 
 SPK_COMMANDS = bin/mc bin/mcdiff bin/mcview bin/mcedit
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

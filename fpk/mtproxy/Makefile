@@ -27,7 +27,7 @@ SERVICE_SETUP = src/service-setup.sh
 
 POST_STRIP_TARGET = mtproxy_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: mtproxy_extra_install
 mtproxy_extra_install:

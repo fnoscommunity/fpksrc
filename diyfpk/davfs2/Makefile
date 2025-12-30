@@ -14,4 +14,4 @@ LICENSE = GPLv3+
 
 SPK_COMMANDS = sbin/mount.davfs sbin/umount.davfs
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

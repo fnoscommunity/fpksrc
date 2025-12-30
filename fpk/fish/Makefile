@@ -21,4 +21,4 @@ SERVICE_SETUP = src/service-setup.sh
 
 SPK_COMMANDS = bin/fish bin/fish_indent bin/fish_key_reader
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

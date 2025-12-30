@@ -25,7 +25,7 @@ ADMIN_PORT = $(SERVICE_PORT)
 
 POST_STRIP_TARGET = gitea_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: gitea_extra_install
 gitea_extra_install:

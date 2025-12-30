@@ -51,7 +51,7 @@ endif
 
 POST_STRIP_TARGET = wallabag_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: wallabag_extra_install
 wallabag_extra_install:

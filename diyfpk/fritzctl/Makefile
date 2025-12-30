@@ -18,4 +18,4 @@ SPK_COMMANDS = bin/fritzctl
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

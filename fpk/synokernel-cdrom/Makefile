@@ -29,7 +29,7 @@ SPK_DEPENDS = synocli-kernel
 STRIP_TARGET = synokernel-cdrom_strip
 POST_STRIP_TARGET = synokernel-cdrom_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: synokernel-cdrom_strip
 synokernel-cdrom_strip:

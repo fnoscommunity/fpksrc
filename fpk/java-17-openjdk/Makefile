@@ -53,4 +53,4 @@ SPK_COMMANDS += bin/keytool
 SPK_COMMANDS += bin/rmiregistry
 SPK_COMMANDS += bin/serialver
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -63,7 +63,7 @@ POST_STRIP_TARGET = adminer_extra_install
 # Pure PHP package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: adminer_extra_install
 adminer_extra_install:

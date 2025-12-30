@@ -14,4 +14,4 @@ LICENSE = zlib
 
 SPK_COMMANDS = bin/pigz bin/unpigz
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

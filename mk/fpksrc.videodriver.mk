@@ -65,7 +65,7 @@ endif
 # end ifeq $(x64_ARCHS)
 endif
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: videodrv_pre_depend
 videodrv_pre_depend:

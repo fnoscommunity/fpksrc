@@ -32,7 +32,7 @@ FWPORTS = src/mpd.sc
 
 POST_STRIP_TARGET = mpd_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: mpd_extra_install
 mpd_extra_install:

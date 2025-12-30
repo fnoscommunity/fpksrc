@@ -30,7 +30,7 @@ POST_STRIP_TARGET = xz-compress
 BUSYBOX_CONFIG = usrmng
 ENV += BUSYBOX_CONFIG="$(BUSYBOX_CONFIG)"
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: xz-compress
 xz-compress:

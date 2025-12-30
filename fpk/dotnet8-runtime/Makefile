@@ -31,7 +31,7 @@ endif
 
 SPK_COMMANDS = share/dotnet/dotnet
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: dotnet_patch_target
 # Set library path to use bundled libstdc++

@@ -14,4 +14,4 @@ LICENSE  = various
 
 SPK_COMMANDS = bin/xz bin/xzcat bin/xzdec bin/lzcat bin/unxz bin/lzma bin/lzmadec bin/lzmainfo bin/unlzma
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

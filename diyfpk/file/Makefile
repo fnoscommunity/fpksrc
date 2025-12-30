@@ -13,4 +13,4 @@ LICENSE = https://github.com/file/file/blob/master/COPYING
 
 SPK_COMMANDS = bin/file
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

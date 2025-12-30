@@ -15,4 +15,4 @@ LICENSE  = GPL
 
 SPK_COMMANDS = bin/etherwake
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

@@ -53,7 +53,7 @@ $(error Arch $(ARCH) not supported)
 endif
 
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: debian-chroot_extra_install
 debian-chroot_extra_install:

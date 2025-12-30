@@ -26,4 +26,4 @@ SERVICE_PORT = 8091
 ADMIN_PORT = $(SERVICE_PORT)
 SERVICE_PORT_TITLE = File Browser (HTTP)
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

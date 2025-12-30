@@ -24,7 +24,7 @@ ADMIN_PORT = $(SERVICE_PORT)
 
 POST_STRIP_TARGET = ympd_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: ympd_extra_install
 ympd_extra_install:

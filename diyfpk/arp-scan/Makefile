@@ -16,4 +16,4 @@ SPK_COMMANDS = bin/arp-scan
 # perl script (works only when perl package is installed)
 SPK_COMMANDS += bin/arp-fingerprint
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

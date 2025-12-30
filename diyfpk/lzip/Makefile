@@ -16,4 +16,4 @@ LICENSE = GPLv2
 
 SPK_COMMANDS = bin/lzip bin/plzip
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

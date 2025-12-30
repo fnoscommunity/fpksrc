@@ -29,7 +29,7 @@ SPK_COMMANDS += bin/optipng
 SPK_COMMANDS += bin/pngcrush
 SPK_COMMANDS += bin/pngquant
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: imagemagick_patch_rpath
 # some binaries and libraries contain the full installation path in RPATH (.../spk/imagemagick/...)

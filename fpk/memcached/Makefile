@@ -21,4 +21,4 @@ NO_SERVICE_SHORTCUT = true
 STARTABLE = yes
 SERVICE_SETUP = src/service-setup.sh
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

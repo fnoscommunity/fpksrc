@@ -42,7 +42,7 @@ endif
 
 STARTABLE = no
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: metacubexd_custom_post_strip
 metacubexd_custom_post_strip:

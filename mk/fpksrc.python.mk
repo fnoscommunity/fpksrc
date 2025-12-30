@@ -81,7 +81,7 @@ endif
 ifneq ($(FFMPEG_PACKAGE),)
 include ../../mk/spksrc.ffmpeg.mk
 else
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 endif
 
 .PHONY: python_pre_depend

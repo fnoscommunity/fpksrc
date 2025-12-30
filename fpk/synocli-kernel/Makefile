@@ -22,7 +22,7 @@ SPK_COMMANDS += bin/lsusb.py
 
 POST_STRIP_TARGET = synocli-kernel_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: synocli-kernel_extra_install
 synocli-kernel_extra_install:

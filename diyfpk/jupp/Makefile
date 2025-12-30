@@ -18,4 +18,4 @@ LICENSE = GPLv1
 
 SPK_COMMANDS = bin/jmacs bin/joe bin/jpico bin/jstar bin/jupp bin/rjoe
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

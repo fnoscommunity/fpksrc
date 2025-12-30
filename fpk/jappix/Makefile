@@ -30,7 +30,7 @@ POST_STRIP_TARGET = jappix_extra_install
 # Pure PHP package, make sure ARCH is noarch
 override ARCH=noarch
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: jappix_extra_install
 jappix_extra_install:

@@ -39,7 +39,7 @@ ADMIN_PORT = $(SERVICE_PORT)
 PRE_COPY_TARGET = demoservice_pre_copy
 POST_STRIP_TARGET = demoservice_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: demoservice_pre_copy
 # Replace standard copy/install targets, no sources, no content

@@ -42,7 +42,7 @@ ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 DEPENDS += cross/libstdc++
 endif
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 PACKAGE_VERSION = $(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)

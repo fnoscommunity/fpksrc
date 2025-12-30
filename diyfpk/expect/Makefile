@@ -13,4 +13,4 @@ LICENSE  = Public Domain
 
 SPK_COMMANDS = bin/expect
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

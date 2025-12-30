@@ -20,4 +20,4 @@ LICENSE    = GPLv2
 SERVICE_SETUP = src/service-setup.sh
 SPK_COMMANDS = bin/he853
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

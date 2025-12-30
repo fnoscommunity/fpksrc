@@ -21,4 +21,4 @@ LICENSE  = MIT
 
 SPK_COMMANDS = bin/rclone
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

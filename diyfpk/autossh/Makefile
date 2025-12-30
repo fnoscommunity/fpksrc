@@ -16,4 +16,4 @@ SPK_COMMANDS += bin/scp bin/sftp bin/slogin bin/ssh bin/ssh-add bin/ssh-agent bi
 SPK_COMMANDS += libexec/sftp-server libexec/ssh-keysign libexec/ssh-pkcs11-helper libexec/ssh-sk-helper
 SPK_COMMANDS += sbin/sshd
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

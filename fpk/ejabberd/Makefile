@@ -32,7 +32,7 @@ SPK_COMMANDS = bin/ejabberdctl
 
 POST_STRIP_TARGET = ejabberd_extra_install
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: ejabberd_extra_install
 ejabberd_extra_install:

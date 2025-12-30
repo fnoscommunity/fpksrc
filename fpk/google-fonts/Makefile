@@ -24,4 +24,4 @@ SERVICE_WIZARD_SHARE = wizard_shared_folder
 # use data share worker for DSM 6 too (default is for DSM 7 only)
 USE_DATA_SHARE_WORKER = yes
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

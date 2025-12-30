@@ -45,7 +45,7 @@ USE_ALTERNATE_TMPDIR = 1
 PRE_COPY_TARGET = nextcloud_install
 PLIST_TRANSFORM = sed 's,^target/,,'
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: nextcloud_install
 nextcloud_install:

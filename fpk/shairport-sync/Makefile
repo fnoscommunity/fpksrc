@@ -26,7 +26,7 @@ POST_STRIP_TARGET = shairport_extra_install
 BUSYBOX_CONFIG = daemon
 ENV += BUSYBOX_CONFIG="$(BUSYBOX_CONFIG)"
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: shairport_extra_install
 shairport_extra_install:

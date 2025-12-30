@@ -55,4 +55,4 @@ DEPENDS += cross/intel-libvpl cross/intel-libvpl-tools
 
 endif
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

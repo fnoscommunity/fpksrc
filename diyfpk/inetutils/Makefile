@@ -13,4 +13,4 @@ LICENSE = GPLv3
 
 SPK_COMMANDS = bin/telnet bin/whois
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk

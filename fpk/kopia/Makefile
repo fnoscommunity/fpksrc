@@ -27,7 +27,7 @@ POST_STRIP_TARGET = kopia_extra_install
 
 SPK_COMMANDS = bin/kopia
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: kopia_extra_install
 kopia_extra_install:

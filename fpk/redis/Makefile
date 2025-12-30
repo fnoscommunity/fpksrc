@@ -36,7 +36,7 @@ SPK_COMMANDS += bin/redis-check-rdb
 SPK_COMMANDS += bin/redis-cli
 SPK_COMMANDS += bin/redis-sentinel
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: redis_extra_install
 redis_extra_install:

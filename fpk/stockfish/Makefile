@@ -29,7 +29,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
 SPK_COMMANDS  = bin/stockfish
 
-include ../../mk/spksrc.spk.mk
+include ../../mk/fpksrc.fpk.mk
 
 .PHONY: stockfish_extra_install
 stockfish_extra_install:
