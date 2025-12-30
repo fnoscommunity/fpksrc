@@ -357,7 +357,7 @@ ifneq ($(strip $(GROUP)),)
 	@jq '."groupname" = "$(GROUP)"' $@ | sponge $@
 else
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-	@jq '."groupname" = "FnOScommunity"' $@ | sponge $@
+	@jq '."groupname" = "fnoscommunity"' $@ | sponge $@
 else
 	@jq '."groupname" = "sc-$(SPK_USER)"' $@ | sponge $@
 endif
