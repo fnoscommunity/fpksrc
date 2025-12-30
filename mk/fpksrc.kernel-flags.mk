@@ -1,5 +1,5 @@
 # if TC_TYPE is unset then it is being
-# called directly from spksrc/kernel directory
+# called directly from fpksrc/kernel directory
 ifeq ($(strip $(TC_TYPE)),)
 include $(WORK_DIR)/tc_vars.mk
 endif

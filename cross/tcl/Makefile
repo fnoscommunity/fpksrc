@@ -26,7 +26,7 @@ POST_INSTALL_TARGET = tcl_post_install
 include ../../mk/fpksrc.cross-cc.mk
 
 # Create a symlink libtcl so that any other packages which are compiled by
-# spksrc may link to a library without a version number in the filename
+# fpksrc may link to a library without a version number in the filename
 .PHONY: tcl_post_install
 tcl_post_install:
 	@$(RUN) ln -s -r $(STAGING_INSTALL_PREFIX)/lib/libtcl$(PKG_MAIN_VERS).so $(STAGING_INSTALL_PREFIX)/lib/libtcl.so

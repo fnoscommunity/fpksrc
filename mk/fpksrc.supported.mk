@@ -38,7 +38,7 @@ endif
 
 $(ACTION)$(TARGET_TYPE)-arch-error:
 	@$(MSG) ########################################################
-	@$(MSG) ERROR - Please run make setup from spksrc root directory
+	@$(MSG) ERROR - Please run make setup from fpksrc root directory
 	@$(MSG) ########################################################
 
 ###

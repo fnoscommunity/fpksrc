@@ -165,7 +165,7 @@ service_postinst () {
     fi
 
     echo "Fixing permissions for cgi GUI... "
-    # Fixes https://github.com/publicarray/spksrc/issues/3
+    # Fixes https://github.com/publicarray/fpksrc/issues/3
     # https://originhelp.synology.com/developer-guide/privilege/privilege_specification.html
     chmod 0777 "${SYNOPKG_PKGDEST}/var/"
 

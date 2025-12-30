@@ -123,6 +123,6 @@ RUN adduser --disabled-password --gecos '' user && \
 	adduser user sudo && \
 	echo "%user ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/users
 
-# Volume pointing to spksrc sources
-VOLUME /spksrc
-WORKDIR /spksrc
+# Volume pointing to fpksrc sources
+VOLUME /fpksrc
+WORKDIR /fpksrc

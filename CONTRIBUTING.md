@@ -1,7 +1,7 @@
 Contributing
 ============
 
-You can contribute to spksrc and FnOScommunity in several ways. Apart from reporting bugs, adding suggestions or requesting new packages, you can open Pull Requests to add new packages or to improve existing packages. If you're good at writing, help out with adding and updating documentation. Lastly, donations towards maintaining the FnOScommunity repository infrastructure are much appreciated.
+You can contribute to fpksrc and FnOScommunity in several ways. Apart from reporting bugs, adding suggestions or requesting new packages, you can open Pull Requests to add new packages or to improve existing packages. If you're good at writing, help out with adding and updating documentation. Lastly, donations towards maintaining the FnOScommunity repository infrastructure are much appreciated.
 For other suggestions, open an issue so it can be discussed.
 
 
@@ -66,7 +66,7 @@ Content:
 
 Pull requests
 ----------
-Pull requests to add packages to the [FnOScommunity repository](https://FnOScommunity.com) are always welcome, as are improvements to the spksrc framework or existing packages.
+Pull requests to add packages to the [FnOScommunity repository](https://FnOScommunity.com) are always welcome, as are improvements to the fpksrc framework or existing packages.
 
 Please create a new branch before pulling your request and avoid using the master branch. Pay attention on [How to make a clean pull request](https://github.com/MarcDiethelm/contributing/blob/master/README.md).
 

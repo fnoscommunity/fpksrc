@@ -18,7 +18,7 @@ DEPENDS = cross/acl cross/attr cross/fuse cross/libb2 cross/lz4 cross/openssl3 c
 # # Generate Requirements File
 # 
 # # 1. Set up the development environment
-# # If you don't have an spksrc environment set up, run the following in your target folder:
+# # If you don't have an fpksrc environment set up, run the following in your target folder:
 # git clone https://github.com/fnoscommunity/fpksrc.git
 # 
 # # 2. Install required dependencies for Borg
@@ -26,7 +26,7 @@ DEPENDS = cross/acl cross/attr cross/fuse cross/libb2 cross/lz4 cross/openssl3 c
 # sudo apt-get install acl-dev build-essential libfuse-dev liblz4-dev libxxhash-dev libzstd-dev
 # 
 # # 3. Prepare the requirements generation script
-# cd spksrc/spk/borgbackup/
+# cd fpksrc/spk/borgbackup/
 # curl -O https://gist.githubusercontent.com/hgy59/6676a55ea8b0b0264af7f23850f5e7c8/raw/8d0a3912069c746d1a1fb1d23ca9d650e2ec331d/generate_requirements.sh
 # sudo chmod +x generate_requirements.sh
 # 

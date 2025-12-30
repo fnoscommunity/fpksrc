@@ -24,11 +24,11 @@ VERSION_CFLAGS = -DOSNAME=\"Synology\" -DOSVERSION=\"$(TC_VERS)\" -DHW=\"$(ARCH)
 include ../../mk/fpksrc.cross-cc.mk
 
 # HINT:
-# When building in spksrc/cross/njmon, the variable $(CC) might evaluate to "cc" instead of the cross compiler 
+# When building in fpksrc/cross/njmon, the variable $(CC) might evaluate to "cc" instead of the cross compiler 
 # of the toolchain.
 # You will get compiler errors about invalid flags (like cc: error: unrecognized command-line option ‘-mfloat-abi=hard’ for comcerto2k-7.1)
 # or targets are built for x86_64.
-# Building in spksrc/diyspk/njmon or spksrc/spk/synocli-monitor works as expected.
+# Building in fpksrc/diyspk/njmon or fpksrc/spk/synocli-monitor works as expected.
 .PHONY: njmon_compile
 njmon_compile:
 	@$(RUN) $(CC) $(FILE) $(CFLAGS) $(VERSION_CFLAGS)

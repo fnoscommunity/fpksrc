@@ -5,7 +5,7 @@
 # list dependencies for all spk packages
 # - used by github prepare action to evaluate packages to build, regarding the modified files
 # - broken packages are excluded
-# This script must be called in the top folder (spksrc) of the repository
+# This script must be called in the top folder (fpksrc) of the repository
 # It is called by the dependency-list target of the toplevel Makefile 
 # 
 # This script has benefits over iterating all spk folders and call "make dependency-list"
@@ -40,7 +40,7 @@ function get_spk_name ()
 # param1: spk package folder (like spk/{name})
 function get_python_dependency ()
 {
-   if [ -f ${1}/Makefile -a "$(grep ^include.*\/spksrc\.python\.mk ${1}/Makefile)" ]; then
+   if [ -f ${1}/Makefile -a "$(grep ^include.*\/fpksrc\.python\.mk ${1}/Makefile)" ]; then
       local dep=$(grep "PYTHON_PACKAGE\s*=" ${1}/Makefile | cut -d= -f2 | xargs)
       echo "cross/${dep} "
    fi
@@ -50,7 +50,7 @@ function get_python_dependency ()
 # param1: spk package folder (like spk/{name})
 function get_ffmpeg_dependency ()
 {
-   if [ -f ${1}/Makefile -a "$(grep ^include.*\/spksrc\.ffmpeg\.mk ${1}/Makefile)" ]; then
+   if [ -f ${1}/Makefile -a "$(grep ^include.*\/fpksrc\.ffmpeg\.mk ${1}/Makefile)" ]; then
       local dep=$(grep "FFMPEG_PACKAGE\s*=" ${1}/Makefile | cut -d= -f2 | xargs)
       echo "cross/${dep} "
    fi

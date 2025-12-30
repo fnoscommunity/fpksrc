@@ -546,7 +546,7 @@ wheelclean: spkclean
 	       work-*/install/var/packages/**/target/share/wheelhouse
 	@make --no-print-directory dependency-flat | sort -u | grep '\(cross\|python\)/' | while read depend ; do \
 	   makefile="../../$${depend}/Makefile" ; \
-	   if grep -q 'spksrc\.python-wheel\(-meson\)\?\.mk' $${makefile} ; then \
+	   if grep -q 'fpksrc\.python-wheel\(-meson\)\?\.mk' $${makefile} ; then \
 	      pkgstr=$$(grep ^PKG_NAME $${makefile}) ; \
 	      pkgname=$$(echo $${pkgstr#*=} | xargs) ; \
 	      echo "rm -fr work-*/$${pkgname}*\\n       work-*/.$${pkgname}-*" ; \

@@ -1,5 +1,5 @@
 # wheels that need cross compilation
-# but fail to build with spksrc framework
+# but fail to build with fpksrc framework
 # are downloaded from index at package installation
 
 # wheels for python arch i686

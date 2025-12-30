@@ -1,5 +1,5 @@
 # Adjust Makefile options
-# - disable git: we build inside the git repository of spksrc and not mergerfs
+# - disable git: we build inside the git repository of fpksrc and not mergerfs
 # - allow ENV variables for installation paths (DESTDIR, PREFIX)
 # 
 --- Makefile.orig	2024-02-29 23:33:57.000000000 +0000

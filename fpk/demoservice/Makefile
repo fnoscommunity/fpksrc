@@ -17,7 +17,7 @@ WIZARDS_DIR = src/wizard/
 # 'auto' reserved value grabs SPK_NAME (only auto is supported)
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
-# The spksrc framework does not parse the service-setup.sh file for valid SERVICE_COMMAND
+# The fpksrc framework does not parse the service-setup.sh file for valid SERVICE_COMMAND
 # so we have to tell it, that the package provides a startable service.
 STARTABLE = yes
 

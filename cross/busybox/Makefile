@@ -26,11 +26,11 @@ include ../../mk/fpksrc.cross-cc.mk
 .PHONY: busybox_configure
 busybox_configure:
 	@$(MSG) "Configure for busybox config: $(BUSYBOX_CONFIG)"
-	cp spksrc_defconfig $(WORK_DIR)/$(PKG_DIR)/configs/spksrc_defconfig
+	cp fpksrc_defconfig $(WORK_DIR)/$(PKG_DIR)/configs/fpksrc_defconfig
 	cat $(addprefix configs/, $(BUSYBOX_CONFIG)) | while IFS== read option value; do \
-	  sed -r -e "s/^(# )?$$option\s.*$$/$$option=$$value/" -i $(WORK_DIR)/$(PKG_DIR)/configs/spksrc_defconfig ; \
+	  sed -r -e "s/^(# )?$$option\s.*$$/$$option=$$value/" -i $(WORK_DIR)/$(PKG_DIR)/configs/fpksrc_defconfig ; \
 	done
-	$(RUN) $(MAKE) spksrc_defconfig
+	$(RUN) $(MAKE) fpksrc_defconfig
 
 .PHONY: busybox_install
 busybox_install:
