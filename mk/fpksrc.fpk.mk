@@ -204,7 +204,8 @@ endif
 ifeq ($(call version_lt, ${TC_OS_MIN_VER}, 6.1)$(call version_ge, ${TC_OS_MIN_VER}, 3.0),11)
 	@echo firmware=\"$(OS_MIN_VER)\" >> $@
 else
-	@echo os_min_version=\"$(OS_MIN_VER)\" >> $@
+# TODO: 需要动态设置最小系统版本
+	@echo os_min_version=\"1.1.8\" >> $@
 ifneq ($(strip $(OS_MAX_VER)),)
 	@echo os_max_version=\"$(OS_MAX_VER)\" >> $@
 endif

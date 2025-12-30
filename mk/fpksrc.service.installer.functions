@@ -16,14 +16,14 @@ TEE="/usr/bin/tee -a"
 RSYNC="/bin/rsync -avh"
 TAR="/bin/tar"
 
-INST_ETC="/var/apps/${SYNOPKG_PKGNAME}/etc"
+INST_ETC="/var/apps/${TRIM_APPNAME}/etc"
 INST_VARIABLES="${INST_ETC}/installer-variables"
 # DSM7 only
-INST_SHARES="/var/apps/${SYNOPKG_PKGNAME}/shares"
+INST_SHARES="/var/apps/${TRIM_APPNAME}/shares"
 
-if [ -z "${SYNOPKG_PKGVAR}" ]; then
-    # define SYNOPKG_PKGVAR for compatibility with DSM7 (replaces former INST_VAR)
-    SYNOPKG_PKGVAR="${SYNOPKG_PKGDEST}/var"
+if [ -z "${TRIM_PKGVAR}" ]; then
+    # define TRIM_PKGVAR for compatibility with DSM7 (replaces former INST_VAR)
+    TRIM_PKGVAR="${TRIM_APPDEST}/var"
 fi
 
 
@@ -31,7 +31,7 @@ fi
 
 log_step ()
 {
-    install_log "===> Step $1. STATUS=${SYNOPKG_PKG_STATUS} USER=$USER GROUP=$GROUP SHARE_PATH=${SHARE_PATH}"
+    install_log "===> Step $1. STATUS=${TRIM_APP_STATUS} USER=$USER GROUP=$GROUP SHARE_PATH=${SHARE_PATH}"
 }
 
 
@@ -39,7 +39,7 @@ initialize_variables ()
 {
     # Expect user to be set from package specific variables
     if [ -n "${USER}" -a -z "${USER_DESC}" ]; then
-        USER_DESC="User running $SYNOPKG_PKGNAME"
+        USER_DESC="User running $TRIM_APPNAME"
     fi
 
     # Default description if group name provided by UI
@@ -88,10 +88,10 @@ install_python_virtualenv ()
     echo "Default pip version ${PIP_VERSION}"
 
     # Create a Python virtualenv
-    python3 -m venv --system-site-packages ${SYNOPKG_PKGDEST}/env
+    python3 -m venv --system-site-packages ${TRIM_APPDEST}/env
 
     if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
-        set_unix_permissions ${SYNOPKG_PKGDEST}/env
+        set_unix_permissions ${TRIM_APPDEST}/env
     fi
 }
 
@@ -99,8 +99,8 @@ install_python_virtualenv ()
 install_python_wheels ()
 {
     # default PATH to wheelhouse
-    cachedir=${SYNOPKG_PKGVAR}/pip-cache
-    wheelhouse=${SYNOPKG_PKGDEST}/share/wheelhouse
+    cachedir=${TRIM_PKGVAR}/pip-cache
+    wheelhouse=${TRIM_APPDEST}/share/wheelhouse
     requirements=${wheelhouse}/requirements.txt
 
     # Install the wheels
@@ -117,7 +117,7 @@ install_python_wheels ()
     fi
 
     if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
-        set_unix_permissions ${SYNOPKG_PKGDEST}/env
+        set_unix_permissions ${TRIM_APPDEST}/env
     fi
 
     echo "Installed modules:"
