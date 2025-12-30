@@ -285,8 +285,8 @@ ifneq ($(strip $(VIDEODRIVER)),)
 endif
 
 SERVICE_FILES += $(DSM_CONF_DIR)/resource
-ifneq ($(findstring conf,$(SPK_CONTENT)),conf)
-SPK_CONTENT += conf
+ifneq ($(findstring conf,$(FPK_CONTENT)),conf)
+FPK_CONTENT += conf
 endif
 
 # Less than DSM 6.0
@@ -362,8 +362,8 @@ else
 	@jq '."groupname" = "sc-$(SPK_USER)"' $@ | sponge $@
 endif
 endif
-ifneq ($(findstring conf,$(SPK_CONTENT)),conf)
-SPK_CONTENT += conf
+ifneq ($(findstring conf,$(FPK_CONTENT)),conf)
+FPK_CONTENT += conf
 endif
 
 # DSM <= 6 and SERVICE_USER defined
@@ -381,8 +381,8 @@ endif
 ifneq ($(strip $(SPK_GROUP)),)
 	@jq '."groupname" = "$(SPK_GROUP)"' $@ | sponge $@
 endif
-ifneq ($(findstring conf,$(SPK_CONTENT)),conf)
-SPK_CONTENT += conf
+ifneq ($(findstring conf,$(FPK_CONTENT)),conf)
+FPK_CONTENT += conf
 endif
 
 # DSM <= 6 and SERVICE_USER is NOT defined

@@ -22,7 +22,7 @@
 #                               package names starting with upper case letters.
 #                               (e.g. Mono => synology.com, mono => FnOScommunity.com)
 #  SPK_FILE_NAME                The full spk name with folder, package name, arch, tc- and package version.
-#  SPK_CONTENT                  List of files and folders that are added to package.tgz within the spk file.
+#  FPK_CONTENT                  List of files and folders that are added to package.tgz within the spk file.
 #  DSM_SCRIPT_FILES             List of script files that are in the scripts folder within the spk file.
 #
 
@@ -136,7 +136,7 @@ $(DSM_SCRIPTS_DIR)/installer: $(INSTALLER_SCRIPT)
 	@$(dsm_script_copy)
 endif
 
-SPK_CONTENT = package.tgz INFO scripts
+FPK_CONTENT = package.tgz INFO scripts
 
 # conf
 DSM_CONF_DIR = $(WORK_DIR)/conf
@@ -377,7 +377,7 @@ else
 endif
 	@$(MSG) "Creating PACKAGE_ICON_256.PNG for $(SPK_NAME)"
 	(convert $(SPK_ICON) -resize 256x256 -strip -sharpen 0x2 - > $(WORK_DIR)/PACKAGE_ICON_256.PNG)
-	$(eval SPK_CONTENT += PACKAGE_ICON.PNG PACKAGE_ICON_256.PNG)
+	$(eval FPK_CONTENT += PACKAGE_ICON.PNG PACKAGE_ICON_256.PNG)
 endif
 
 .PHONY: info-checksum
@@ -408,7 +408,7 @@ ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@mkdir -p $(DSM_WIZARDS_DIR)
 	@find $(SPKSRC_MK)wizard -maxdepth 1 -type f -and \( -name "uninstall_uifile" -or -name "uninstall_uifile_???" \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \;
 ifeq ($(strip $(WIZARDS_DIR)),)
-	$(eval SPK_CONTENT += WIZARD_UIFILES)
+	$(eval FPK_CONTENT += WIZARD_UIFILES)
 endif
 endif
 ifneq ($(strip $(WIZARDS_TEMPLATES_DIR)),)
@@ -453,7 +453,7 @@ ifneq ($(strip $(WIZARDS_TEMPLATES_DIR)),)
 endif
 ifneq ($(strip $(WIZARDS_DIR)),)
 	@$(MSG) "Create DSM Wizards"
-	$(eval SPK_CONTENT += WIZARD_UIFILES)
+	$(eval FPK_CONTENT += WIZARD_UIFILES)
 	@mkdir -p $(DSM_WIZARDS_DIR)
 	@find $${SPKSRC_WIZARDS_DIR} -maxdepth 1 -type f -and \( $(WIZARD_FILE_NAMES) \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \;
 	@if [ -f "$(DSM_WIZARDS_DIR)/uninstall_uifile.sh" ] && [ -f "$(DSM_WIZARDS_DIR)/uninstall_uifile" ]; then \
@@ -476,18 +476,18 @@ ifneq ($(strip $(CONF_DIR)),)
 	@mkdir -p $(DSM_CONF_DIR)
 	@find $(SPK_CONF_DIR) -maxdepth 1 -type f -print -exec cp -f {} $(DSM_CONF_DIR) \;
 	@find $(DSM_CONF_DIR) -maxdepth 1 -type f -print -exec chmod 0644 {} \;
-ifneq ($(findstring conf,$(SPK_CONTENT)),conf)
-SPK_CONTENT += conf
+ifneq ($(findstring conf,$(FPK_CONTENT)),conf)
+FPK_CONTENT += conf
 endif
 endif
 
 ifneq ($(strip $(DSM_LICENSE)),)
-SPK_CONTENT += LICENSE
+FPK_CONTENT += LICENSE
 endif
 
 $(SPK_FILE_NAME): $(WORK_DIR)/package.tgz $(WORK_DIR)/INFO info-checksum icons service $(DSM_SCRIPTS) wizards $(DSM_LICENSE) conf
 	$(create_target_dir)
-	(cd $(WORK_DIR) && tar cpf $@ --group=root --owner=root $(SPK_CONTENT))
+	(cd $(WORK_DIR) && tar cpf $@ --group=root --owner=root $(FPK_CONTENT))
 
 package: $(SPK_FILE_NAME)
 
