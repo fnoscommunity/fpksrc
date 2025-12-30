@@ -9,7 +9,7 @@ SC_BINARY="${SYNOPKG_PKGDEST}/env/bin/sickchill"
 SC_DATA_DIR="${SYNOPKG_PKGVAR}/data"
 SC_CFG_FILE="${SC_DATA_DIR}/config.ini"
 
-# Set group for DSM6 (historical) as DSM7 is synocommunity
+# Set group for DSM6 (historical) as DSM7 is FnOScommunity
 GROUP="sc-download"
 
 SERVICE_COMMAND="${SC_BINARY} --daemon --nolaunch --pidfile ${PID_FILE} --config ${SC_CFG_FILE} --datadir ${SC_DATA_DIR}"

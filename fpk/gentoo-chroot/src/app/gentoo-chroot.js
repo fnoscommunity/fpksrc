@@ -1,15 +1,15 @@
 // Namespace
-Ext.ns("SYNOCOMMUNITY.GentooChroot");
+Ext.ns("FnOScommunity.GentooChroot");
 
 // Translator
 _V = function (category, element) {
-    return _TT("SYNOCOMMUNITY.GentooChroot.AppInstance", category, element)
+    return _TT("FnOScommunity.GentooChroot.AppInstance", category, element)
 }
 
 // Direct API
 Ext.Direct.addProvider({
     "url": "3rdparty/gentoo-chroot/gentoo-chroot.cgi/direct/router",
-    "namespace": "SYNOCOMMUNITY.GentooChroot.Remote",
+    "namespace": "FnOScommunity.GentooChroot.Remote",
     "type": "remoting",
     "actions": {
         "Overview": [{
@@ -49,58 +49,58 @@ Ext.Direct.addProvider({
         }]
     }
 });
-SYNOCOMMUNITY.GentooChroot.Poller = new Ext.direct.PollingProvider({
+FnOScommunity.GentooChroot.Poller = new Ext.direct.PollingProvider({
     'type': 'polling',
     'url': '3rdparty/gentoo-chroot/gentoo-chroot.cgi/direct/poller',
     'interval': 10000
 });
-Ext.Direct.addProvider(SYNOCOMMUNITY.GentooChroot.Poller);
-SYNOCOMMUNITY.GentooChroot.Poller.disconnect();
+Ext.Direct.addProvider(FnOScommunity.GentooChroot.Poller);
+FnOScommunity.GentooChroot.Poller.disconnect();
 
 // Const
-SYNOCOMMUNITY.GentooChroot.DEFAULT_HEIGHT = 300;
-SYNOCOMMUNITY.GentooChroot.MAIN_WIDTH = 800;
-SYNOCOMMUNITY.GentooChroot.LIST_WIDTH = 210;
+FnOScommunity.GentooChroot.DEFAULT_HEIGHT = 300;
+FnOScommunity.GentooChroot.MAIN_WIDTH = 800;
+FnOScommunity.GentooChroot.LIST_WIDTH = 210;
 
 // Application
-SYNOCOMMUNITY.GentooChroot.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
-    appWindowName: "SYNOCOMMUNITY.GentooChroot.AppWindow",
+FnOScommunity.GentooChroot.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
+    appWindowName: "FnOScommunity.GentooChroot.AppWindow",
     constructor: function () {
-        SYNOCOMMUNITY.GentooChroot.AppInstance.superclass.constructor.apply(this, arguments);
+        FnOScommunity.GentooChroot.AppInstance.superclass.constructor.apply(this, arguments);
     }
 });
 
 // Main window
-SYNOCOMMUNITY.GentooChroot.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
+FnOScommunity.GentooChroot.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
     appInstance: null,
     mainPanel: null,
     constructor: function (config) {
         this.appInstance = config.appInstance;
-        this.mainPanel = new SYNOCOMMUNITY.GentooChroot.MainPanel({
+        this.mainPanel = new FnOScommunity.GentooChroot.MainPanel({
             owner: this
         });
         config = Ext.apply({
             resizable: true,
             maximizable: true,
             minimizable: true,
-            width: SYNOCOMMUNITY.GentooChroot.MAIN_WIDTH,
-            height: SYNOCOMMUNITY.GentooChroot.DEFAULT_HEIGHT,
+            width: FnOScommunity.GentooChroot.MAIN_WIDTH,
+            height: FnOScommunity.GentooChroot.DEFAULT_HEIGHT,
             layout: "fit",
             border: false,
-            cls: "synocommunity-gentoochroot",
+            cls: "FnOScommunity-gentoochroot",
             items: [this.mainPanel]
         }, config);
-        SYNOCOMMUNITY.GentooChroot.AppWindow.superclass.constructor.call(this, config);
+        FnOScommunity.GentooChroot.AppWindow.superclass.constructor.call(this, config);
     },
     onOpen: function (a) {
-        SYNOCOMMUNITY.GentooChroot.AppWindow.superclass.onOpen.call(this, a);
+        FnOScommunity.GentooChroot.AppWindow.superclass.onOpen.call(this, a);
         this.mainPanel.onActivate();
     },
     onRequest: function (a) {
-        SYNOCOMMUNITY.GentooChroot.AppWindow.superclass.onRequest.call(this, a);
+        FnOScommunity.GentooChroot.AppWindow.superclass.onRequest.call(this, a);
     },
     onClose: function () {
-        if (SYNOCOMMUNITY.GentooChroot.AppWindow.superclass.onClose.apply(this, arguments)) {
+        if (FnOScommunity.GentooChroot.AppWindow.superclass.onClose.apply(this, arguments)) {
             this.doClose();
             this.mainPanel.onDeactivate();
             return true;
@@ -119,19 +119,19 @@ SYNOCOMMUNITY.GentooChroot.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
 });
 
 // Main panel
-SYNOCOMMUNITY.GentooChroot.MainPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.GentooChroot.MainPanel = Ext.extend(Ext.Panel, {
     listPanel: null,
     cardPanel: null,
     constructor: function (config) {
         this.owner = config.owner;
-        var a = new SYNOCOMMUNITY.GentooChroot.ListView({
+        var a = new FnOScommunity.GentooChroot.ListView({
             module: this
         });
         this.listPanel = new Ext.Panel({
             region: "west",
-            width: SYNOCOMMUNITY.GentooChroot.LIST_WIDTH,
-            height: SYNOCOMMUNITY.GentooChroot.DEFAULT_HEIGHT,
-            cls: "synocommunity-gentoochroot-list",
+            width: FnOScommunity.GentooChroot.LIST_WIDTH,
+            height: FnOScommunity.GentooChroot.DEFAULT_HEIGHT,
+            cls: "FnOScommunity-gentoochroot-list",
             items: [a],
             listeners: {
                 scope: this,
@@ -143,8 +143,8 @@ SYNOCOMMUNITY.GentooChroot.MainPanel = Ext.extend(Ext.Panel, {
             }
         });
         this.listView = a;
-        this.curHeight = SYNOCOMMUNITY.GentooChroot.DEFAULT_HEIGHT;
-        this.cardPanel = new SYNOCOMMUNITY.GentooChroot.MainCardPanel({
+        this.curHeight = FnOScommunity.GentooChroot.DEFAULT_HEIGHT;
+        this.cardPanel = new FnOScommunity.GentooChroot.MainCardPanel({
             module: this,
             owner: config.owner,
             itemId: "grid",
@@ -154,10 +154,10 @@ SYNOCOMMUNITY.GentooChroot.MainPanel = Ext.extend(Ext.Panel, {
             ["overview", this.cardPanel.PanelOverview],
             ["services", this.cardPanel.PanelServices]
         ];
-        SYNOCOMMUNITY.GentooChroot.MainPanel.superclass.constructor.call(this, {
+        FnOScommunity.GentooChroot.MainPanel.superclass.constructor.call(this, {
             border: false,
             layout: "border",
-            height: SYNOCOMMUNITY.GentooChroot.DEFAULT_HEIGHT,
+            height: FnOScommunity.GentooChroot.DEFAULT_HEIGHT,
             monitorResize: true,
             items: [this.listPanel, this.cardPanel]
         });
@@ -188,7 +188,7 @@ SYNOCOMMUNITY.GentooChroot.MainPanel = Ext.extend(Ext.Panel, {
         }
     },
     getPanelHeight: function (id_panel) {
-        return SYNOCOMMUNITY.GentooChroot.DEFAULT_HEIGHT
+        return FnOScommunity.GentooChroot.DEFAULT_HEIGHT
     },
     isPanelDirty: function (c) {
         var b;
@@ -257,7 +257,7 @@ SYNOCOMMUNITY.GentooChroot.MainPanel = Ext.extend(Ext.Panel, {
 });
 
 // List view
-SYNOCOMMUNITY.GentooChroot.ListView = Ext.extend(Ext.list.ListView, {
+FnOScommunity.GentooChroot.ListView = Ext.extend(Ext.list.ListView, {
     constructor: function (config) {
         var store = new Ext.data.JsonStore({
             data: {
@@ -277,7 +277,7 @@ SYNOCOMMUNITY.GentooChroot.ListView = Ext.extend(Ext.list.ListView, {
             fields: ["title", "id"]
         });
         config = Ext.apply({
-            cls: "synocommunity-gentoochroot-list",
+            cls: "FnOScommunity-gentoochroot-list",
             padding: 10,
             split: false,
             trackOver: false,
@@ -286,9 +286,9 @@ SYNOCOMMUNITY.GentooChroot.ListView = Ext.extend(Ext.list.ListView, {
             store: store,
             columns: [{
                 dataIndex: "title",
-                cls: "synocommunity-gentoochroot-list-column",
+                cls: "FnOScommunity-gentoochroot-list-column",
                 sortable: false,
-                tpl: '<div class="synocommunity-gentoochroot-list-{id}">{title}</div>'
+                tpl: '<div class="FnOScommunity-gentoochroot-list-{id}">{title}</div>'
             }],
             listeners: {
                 scope: this,
@@ -310,7 +310,7 @@ SYNOCOMMUNITY.GentooChroot.ListView = Ext.extend(Ext.list.ListView, {
             }
         }, config);
         this.addEvents("onbeforeclick");
-        SYNOCOMMUNITY.GentooChroot.ListView.superclass.constructor.call(this, config)
+        FnOScommunity.GentooChroot.ListView.superclass.constructor.call(this, config)
     },
     onBeforeClick: function (c, d, f, b) {
         var g = c.getRecord(f);
@@ -351,15 +351,15 @@ SYNOCOMMUNITY.GentooChroot.ListView = Ext.extend(Ext.list.ListView, {
 });
 
 // Card panel
-SYNOCOMMUNITY.GentooChroot.MainCardPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.GentooChroot.MainCardPanel = Ext.extend(Ext.Panel, {
     PanelOverview: null,
     constructor: function (config) {
         this.owner = config.owner;
         this.module = config.module;
-        this.PanelOverview = new SYNOCOMMUNITY.GentooChroot.PanelOverview({
+        this.PanelOverview = new FnOScommunity.GentooChroot.PanelOverview({
             owner: this.owner
         });
-        this.PanelServices = new SYNOCOMMUNITY.GentooChroot.PanelServices({
+        this.PanelServices = new FnOScommunity.GentooChroot.PanelServices({
             owner: this.owner
         });
         config = Ext.apply({
@@ -373,7 +373,7 @@ SYNOCOMMUNITY.GentooChroot.MainCardPanel = Ext.extend(Ext.Panel, {
                 deactivate: this.onDeactivate
             }
         }, config);
-        SYNOCOMMUNITY.GentooChroot.MainCardPanel.superclass.constructor.call(this, config)
+        FnOScommunity.GentooChroot.MainCardPanel.superclass.constructor.call(this, config)
     },
     onActivate: function (panel) {
         if (this.PanelOverview) {
@@ -386,7 +386,7 @@ SYNOCOMMUNITY.GentooChroot.MainCardPanel = Ext.extend(Ext.Panel, {
 });
 
 // FormPanel base
-SYNOCOMMUNITY.GentooChroot.FormPanel = Ext.extend(Ext.FormPanel, {
+FnOScommunity.GentooChroot.FormPanel = Ext.extend(Ext.FormPanel, {
     constructor: function (config) {
         config = Ext.apply({
             owner: null,
@@ -416,7 +416,7 @@ SYNOCOMMUNITY.GentooChroot.FormPanel = Ext.extend(Ext.FormPanel, {
             }
         }, config);
         SYNO.LayoutConfig.fill(config);
-        SYNOCOMMUNITY.GentooChroot.FormPanel.superclass.constructor.call(this, config);
+        FnOScommunity.GentooChroot.FormPanel.superclass.constructor.call(this, config);
         if (!this.owner instanceof SYNO.SDS.BaseWindow) {
             throw Error("please set the owner window of form");
         }
@@ -454,7 +454,7 @@ SYNOCOMMUNITY.GentooChroot.FormPanel = Ext.extend(Ext.FormPanel, {
 });
 
 // Overview panel
-SYNOCOMMUNITY.GentooChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.GentooChroot.FormPanel, {
+FnOScommunity.GentooChroot.PanelOverview = Ext.extend(FnOScommunity.GentooChroot.FormPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -496,13 +496,13 @@ SYNOCOMMUNITY.GentooChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.GentooChroot
                         value: ""
                     }, {
                         xtype: "button",
-                        id: "synocommunity-gentoochroot-do_refresh",
+                        id: "FnOScommunity-gentoochroot-do_refresh",
                         text: _V("ui", "do_refresh"),
                         handler: this.onClickRefreshUpdates,
                         scope: this
                     }, {
                         xtype: "button",
-                        id: "synocommunity-gentoochroot-do_update",
+                        id: "FnOScommunity-gentoochroot-do_update",
                         text: _V("ui", "do_update"),
                         handler: this.onClickUpdate,
                         scope: this
@@ -510,16 +510,16 @@ SYNOCOMMUNITY.GentooChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.GentooChroot
                 }]
             }],
             api: {
-                load: SYNOCOMMUNITY.GentooChroot.Remote.Overview.load
+                load: FnOScommunity.GentooChroot.Remote.Overview.load
             }
         }, config);
         SYNO.LayoutConfig.fill(config);
-        SYNOCOMMUNITY.GentooChroot.PanelOverview.superclass.constructor.call(this, config);
+        FnOScommunity.GentooChroot.PanelOverview.superclass.constructor.call(this, config);
     },
     onClickRefreshUpdates: function (button, event) {
         button.disable();
-        Ext.getCmp("synocommunity-gentoochroot-do_update").disable();
-        SYNOCOMMUNITY.GentooChroot.Remote.Overview.do_refresh(function (provider, response) {
+        Ext.getCmp("FnOScommunity-gentoochroot-do_update").disable();
+        FnOScommunity.GentooChroot.Remote.Overview.do_refresh(function (provider, response) {
             if (response.result !== false) {
                 this.getForm().findField("updates").setValue(response.result);
                 this.owner.setStatusOK({
@@ -532,13 +532,13 @@ SYNOCOMMUNITY.GentooChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.GentooChroot
                 });
             }
             button.enable();
-            Ext.getCmp("synocommunity-gentoochroot-do_update").enable();
+            Ext.getCmp("FnOScommunity-gentoochroot-do_update").enable();
         }, this);
     },
     onClickUpdate: function (button, event) {
         button.disable();
-        Ext.getCmp("synocommunity-gentoochroot-do_refresh").disable();
-        SYNOCOMMUNITY.GentooChroot.Remote.Overview.do_update(function (provider, response) {
+        Ext.getCmp("FnOScommunity-gentoochroot-do_refresh").disable();
+        FnOScommunity.GentooChroot.Remote.Overview.do_update(function (provider, response) {
             if (response.result) {
                 this.getForm().findField("updates").setValue(0);
                 this.owner.setStatusOK({
@@ -551,18 +551,18 @@ SYNOCOMMUNITY.GentooChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.GentooChroot
                 });
             }
             button.enable();
-            Ext.getCmp("synocommunity-gentoochroot-do_refresh").enable();
+            Ext.getCmp("FnOScommunity-gentoochroot-do_refresh").enable();
         }, this);
     },
     onStatus: function (response) {
         this.getForm().findField("install_status").setValue(_V("ui", response.data.installed));
         this.getForm().findField("running_services").setValue(response.data.running_services);
         if (response.data.installed == "installing") {
-            Ext.getCmp("synocommunity-gentoochroot-do_refresh").disable();
-            Ext.getCmp("synocommunity-gentoochroot-do_update").disable();
+            Ext.getCmp("FnOScommunity-gentoochroot-do_refresh").disable();
+            Ext.getCmp("FnOScommunity-gentoochroot-do_update").disable();
         } else {
-            Ext.getCmp("synocommunity-gentoochroot-do_refresh").enable();
-            Ext.getCmp("synocommunity-gentoochroot-do_update").enable();
+            Ext.getCmp("FnOScommunity-gentoochroot-do_refresh").enable();
+            Ext.getCmp("FnOScommunity-gentoochroot-do_update").enable();
         }
     },
     onActivate: function () {
@@ -580,25 +580,25 @@ SYNOCOMMUNITY.GentooChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.GentooChroot
                         });
                     }
                     if (action.result.data.installed == "installing") {
-                        Ext.getCmp("synocommunity-gentoochroot-do_refresh").disable();
-                        Ext.getCmp("synocommunity-gentoochroot-do_update").disable();
+                        Ext.getCmp("FnOScommunity-gentoochroot-do_refresh").disable();
+                        Ext.getCmp("FnOScommunity-gentoochroot-do_update").disable();
                     }
                     this.getEl().unmask();
-                    SYNOCOMMUNITY.GentooChroot.Poller.connect();
+                    FnOScommunity.GentooChroot.Poller.connect();
                 }
             });
         } else {
-            SYNOCOMMUNITY.GentooChroot.Poller.connect();
+            FnOScommunity.GentooChroot.Poller.connect();
         }
     },
     onDeactivate: function () {
         Ext.Direct.un("status", this.onStatus, this);
-        SYNOCOMMUNITY.GentooChroot.Poller.disconnect();
+        FnOScommunity.GentooChroot.Poller.disconnect();
     }
 });
 
 // Services panel
-SYNOCOMMUNITY.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
+FnOScommunity.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -606,10 +606,10 @@ SYNOCOMMUNITY.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
             autoSave: false,
             fields: ["id", "name", "launch_script", "status_command", "status"],
             api: {
-                read: SYNOCOMMUNITY.GentooChroot.Remote.Services.read,
-                create: SYNOCOMMUNITY.GentooChroot.Remote.Services.create,
-                update: SYNOCOMMUNITY.GentooChroot.Remote.Services.update,
-                destroy: SYNOCOMMUNITY.GentooChroot.Remote.Services.destroy
+                read: FnOScommunity.GentooChroot.Remote.Services.read,
+                create: FnOScommunity.GentooChroot.Remote.Services.create,
+                update: FnOScommunity.GentooChroot.Remote.Services.update,
+                destroy: FnOScommunity.GentooChroot.Remote.Services.destroy
             },
             idProperty: "id",
             root: "data",
@@ -681,7 +681,7 @@ SYNOCOMMUNITY.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
                 }
             }]
         }, config);
-        SYNOCOMMUNITY.GentooChroot.PanelServices.superclass.constructor.call(this, config);
+        FnOScommunity.GentooChroot.PanelServices.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         if (!this.loaded) {
@@ -690,11 +690,11 @@ SYNOCOMMUNITY.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
         }
     },
     onClickAdd: function () {
-        var editor = new SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow({}, this.store);
+        var editor = new FnOScommunity.GentooChroot.ServiceEditorWindow({}, this.store);
         editor.open()
     },
     onClickEdit: function () {
-        var editor = new SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow({}, this.store, this.getSelectionModel().getSelected());
+        var editor = new FnOScommunity.GentooChroot.ServiceEditorWindow({}, this.store, this.getSelectionModel().getSelected());
         editor.open()
     },
     onClickDelete: function () {
@@ -706,7 +706,7 @@ SYNOCOMMUNITY.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
     },
     onClickStart: function () {
         this.getSelectionModel().each(function (record) {
-            SYNOCOMMUNITY.GentooChroot.Remote.Services.start(record.id, function (provider, response) {
+            FnOScommunity.GentooChroot.Remote.Services.start(record.id, function (provider, response) {
                 if (response.result) {
                     record.set("status", true);
                     record.commit();
@@ -716,7 +716,7 @@ SYNOCOMMUNITY.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
     },
     onClickStop: function () {
         this.getSelectionModel().each(function (record) {
-            SYNOCOMMUNITY.GentooChroot.Remote.Services.stop(record.id, function (provider, response) {
+            FnOScommunity.GentooChroot.Remote.Services.stop(record.id, function (provider, response) {
                 if (response.result) {
                     record.set("status", false);
                     record.commit();
@@ -730,12 +730,12 @@ SYNOCOMMUNITY.GentooChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
 });
 
 // Service window
-SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
+FnOScommunity.GentooChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
     title: _V("ui", "service"),
     constructor: function (config, store, record) {
         this.store = store;
         this.record = record;
-        this.panel = new SYNOCOMMUNITY.GentooChroot.PanelServiceEditor({}, record);
+        this.panel = new FnOScommunity.GentooChroot.PanelServiceEditor({}, record);
         config = Ext.apply(config, {
             width: 550,
             height: 210,
@@ -752,7 +752,7 @@ SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow
                 handler: this.onClickClose
             }]
         })
-        SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow.superclass.constructor.call(this, config);
+        FnOScommunity.GentooChroot.ServiceEditorWindow.superclass.constructor.call(this, config);
     },
     onClickApply: function () {
         if (this.record === undefined) {
@@ -778,7 +778,7 @@ SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow
 });
 
 // Service panel
-SYNOCOMMUNITY.GentooChroot.PanelServiceEditor = Ext.extend(SYNOCOMMUNITY.GentooChroot.FormPanel, {
+FnOScommunity.GentooChroot.PanelServiceEditor = Ext.extend(FnOScommunity.GentooChroot.FormPanel, {
     constructor: function (config, record) {
         this.record = record;
         config = Ext.apply({
@@ -801,7 +801,7 @@ SYNOCOMMUNITY.GentooChroot.PanelServiceEditor = Ext.extend(SYNOCOMMUNITY.GentooC
                 name: "status_command"
             }]
         }, config);
-        SYNOCOMMUNITY.GentooChroot.PanelServiceEditor.superclass.constructor.call(this, config);
+        FnOScommunity.GentooChroot.PanelServiceEditor.superclass.constructor.call(this, config);
         if (this.record !== undefined) {
             this.loadRecord();
         }

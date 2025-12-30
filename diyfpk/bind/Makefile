@@ -6,7 +6,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 OPTIONAL_DEPENDS = cross/bind cross/bind_9.16
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = BIND \(Berkeley Internet Name Domain\) is a complete, highly portable implementation of the DNS \(Domain Name System\) protocol.
 STARTABLE = no
 

@@ -9,7 +9,7 @@ SPK_ICON = ../zsh/src/zsh.png
 
 DEPENDS = cross/zsh
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = The Z shell \(Zsh\) is a Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is an extended Bourne shell with many improvements, including some features of Bash, ksh, and tcsh.
 DESCRIPTION_FRE = Le Z shell ou zsh est un shell Unix qui peut être utilisé de façon interactive, à l\'ouverture de la session ou en tant que puissant interpréteur de commande. zsh peut être vu comme un «Bourne shell» étendu avec beaucoup d\'améliorations. Il reprend en plus la plupart des fonctions les plus pratiques de bash, ksh et tcsh.
 DESCRIPTION_GER = Die Z shell \(zsh\) ist eine Unix-Shell, die sowohl als interaktive Login-Shell, als auch als ein mächtiger Kommandozeileninterpreter für Shellskripte verwendet werden kann. Die zsh wird oft als erweiterte Bourne-Shell angesehen, welche viele Verbesserungen und Eigenschaften von bash, ksh und tcsh vereint.

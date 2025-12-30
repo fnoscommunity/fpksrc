@@ -10,7 +10,7 @@ DEPENDS = cross/darkstat
 # error: pcap_open_live(): ovs_eth0: You don't have permission to capture on that device (socket: Operation not permitted)
 REQUIRED_MAX_DSM = 6.999
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = DarkStat is an ntop-workalike network statistics gatherer. It runs as a background process on a cable or DSL router, uses libpcap to capture network traffic, and has a Web interface that serves up reports of statistics such as data transferred by host, port, and protocol. It also has a neat bandwidth usage graph.
 DESCRIPTION_FRE = DarkStat est un outil de monitoring réseau simple et léger. Il présente ses résultats via une interface web par des graphiques simplifiés avec leurs statistiques sommaires \(min/moy/max\) et un récapitulatif du trafic pour les différentes adresses IP ayant eu une connexion avec la machine surveillée.
 ADMIN_PORT = 667

@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/s3backer
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = FUSE-based single file backing store via Amazon S3.
 STARTABLE = no
 

@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/e2fsprogs
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Ext2/3/4 filesystem userspace utilities.
 STARTABLE = no
 

@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/etherwake
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Generate and transmit a Wake-On-LAN (WOL) Magic Packet
 DISPLAY_NAME = etherwake
 STARTABLE = no

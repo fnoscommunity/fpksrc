@@ -92,7 +92,7 @@ if (version_compare(PHP_VERSION, '8.0', '<=')) {
   <p>It demonstrates how to build a package to integrate with web server and PHP.</p>
   <p>It also shows how to configure and use a shared folder.</p>
 
-  <p>The source code is located in the SynoCommunity respository under <a target="_blank" href="https://github.com/fnoscommunity/fpksrc/tree/master/spk/demowebservice">demowebservice</a>.</p>
+  <p>The source code is located in the FnOScommunity respository under <a target="_blank" href="https://github.com/fnoscommunity/fpksrc/tree/master/spk/demowebservice">demowebservice</a>.</p>
 
   <h4>List of server variables:</h4>
   <p><small><pre><?php foreach($_SERVER as $key_name => $key_value) { print $key_name . " = " . $key_value . "<br>"; } ?></pre></small></p>

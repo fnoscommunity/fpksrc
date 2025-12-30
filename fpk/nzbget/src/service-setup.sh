@@ -41,7 +41,7 @@ service_postinst ()
 
     # Make sure installation worked
     if [ ! -r "${NZBGET}" ]; then
-        echo "The installer failed to install NZBGet. Please report the log below to SynoCommunity:"
+        echo "The installer failed to install NZBGet. Please report the log below to FnOScommunity:"
         echo "${INST_LOG}"
         exit 1
     fi

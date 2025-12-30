@@ -16,7 +16,7 @@ set -o pipefail
 echo "::group:: ---- find dependent packages"
 
 # Generate local.mk to capture DEFAULT_TC
-make setup-synocommunity
+make setup-FnOScommunity
 DEFAULT_TC=$(grep DEFAULT_TC local.mk | cut -f2 -d= | xargs)
 
 # all packages to build from changes or manual definition

@@ -35,7 +35,7 @@ check_php_profiles ()
 {
     PHP_CFG_PATH="/usr/syno/etc/packages/WebStation/PHPSettings.json"
     if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ] && \
-        jq -e 'to_entries | map(select((.key | startswith("com-synocommunity-packages-")) and .key != "com-synocommunity-packages-tt-rss")) | length > 0' "${PHP_CFG_PATH}" >/dev/null; then
+        jq -e 'to_entries | map(select((.key | startswith("com-FnOScommunity-packages-")) and .key != "com-FnOScommunity-packages-tt-rss")) | length > 0' "${PHP_CFG_PATH}" >/dev/null; then
         return 0  # true
     else
         return 1  # false

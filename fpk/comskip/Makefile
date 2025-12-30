@@ -13,7 +13,7 @@ SPK_DEPENDS = $(FFMPEG_PACKAGE)
 
 STARTABLE = no
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Comskip is a free mpeg commercial detector. Read the wiki on how to use and configure it.
 DISPLAY_NAME = Comskip
 CHANGELOG = "1. Update to version 0.83<br/>2. Migrate to using ffmpeg7"

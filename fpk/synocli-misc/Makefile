@@ -9,7 +9,7 @@ DEPENDS += cross/misc-util-linux
 DEPENDS += cross/uhubctl
 DEPENDS += cross/expect
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DISPLAY_NAME = SynoCli misc. Tools
 
 DESCRIPTION = "SynoCli misc. Tools provide a set of miscellaneous small command-line utilities: bc, errno, expect, ifdata, ifne, isutf8, lckdo, mispipe, parallel, pee, sponge, ts, cal, col, colcrt, colrm, column, hardlink, findmnt, hexdump, lsblk, lscpu, lsipc, lsirq, rev, wall, whereis, zramctl, uhubctl."

@@ -8,7 +8,7 @@ DEPENDS = cross/ejabberd
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Robust, Scalable and Extensible Realtime Platform XMPP Server + MQTT Broker + SIP Service.
 ADMIN_URL = /admin/
 ADMIN_PORT = 5280

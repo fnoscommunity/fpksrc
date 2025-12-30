@@ -1,6 +1,6 @@
 {
     ".url": {
-        "com.synocommunity.packages.selfoss": {
+        "com.FnOScommunity.packages.selfoss": {
             "allUsers": true,
             "desc": "Selfoss",
             "icon": "images/selfoss-{0}.png",

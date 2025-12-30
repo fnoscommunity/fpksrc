@@ -6,7 +6,7 @@ DEPENDS = cross/sd
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Intuitive find & replace CLI (sed alternative).
 STARTABLE = no
 

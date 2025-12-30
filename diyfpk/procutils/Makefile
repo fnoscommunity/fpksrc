@@ -5,7 +5,7 @@ SPK_REV = 1
 # procutils of busybox, according to synocli-monitor package
 DEPENDS = cross/busybox
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 STARTABLE = no
 SERVICE_SETUP = src/service-setup.sh
 

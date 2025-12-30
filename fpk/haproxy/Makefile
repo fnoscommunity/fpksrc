@@ -3,7 +3,7 @@ SPK_VERS = 2.2.4
 SPK_REV = 22
 SPK_ICON = src/haproxy.png
 DSM_UI_DIR = app
-DSM_APP_NAME = SYNOCOMMUNITY.HAProxy.AppInstance
+DSM_APP_NAME = FnOScommunity.HAProxy.AppInstance
 
 DEPENDS = cross/haproxy
 WHEELS = src/requirements.txt
@@ -19,7 +19,7 @@ CHANGELOG = "1. Update haproxy 2.2.4.<br/>2. Update openssl to 1.1."
 HOMEPAGE   = https://haproxy.1wt.eu/
 LICENSE    = GPLv2
 # this help url does not work anymore!
-HELPURL    = https://synocommunity.com/help/haproxy
+HELPURL    = https://FnOScommunity.com/help/haproxy
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh

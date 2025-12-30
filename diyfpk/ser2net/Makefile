@@ -8,7 +8,7 @@ DEPENDS = cross/ser2net
 # qoriq is the only PPC arch that is supported
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = ser2net provides a way for a user to connect from a network connection to a serial port.
 DISPLAY_NAME = ser2net
 STARTABLE = no

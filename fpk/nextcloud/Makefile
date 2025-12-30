@@ -14,7 +14,7 @@ SPK_DEPENDS = WebStation:PHP8.2:MariaDB10:Apache2.4:redis
 # SRM is not supported due lacking webstation, php, mariadb and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Nextcloud is a self-hosted productivity platform giving you control over your data with web, desktop and mobile access.
 DISPLAY_NAME = Nextcloud
 CHANGELOG = "Initial packaging for Nextcloud 32.0.2."

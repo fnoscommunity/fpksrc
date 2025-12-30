@@ -37,7 +37,7 @@ DELUGED_DAEMON="${DELUGED} -c ${CFG_PATH} ${DELUGE_ARGS} -l ${DELUGED_LOG} -L in
 SERVICE_COMMAND=$(printf "${DELUGED_DAEMON}\n${DELUGEWEB_DAEMON}")
 
 if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
-    GROUP="synocommunity"
+    GROUP="FnOScommunity"
 else
     GROUP="sc-download"
 fi

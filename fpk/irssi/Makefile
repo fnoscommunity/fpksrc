@@ -5,7 +5,7 @@ SPK_ICON = src/irssi.png
 
 DEPENDS = cross/irssi
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Irssi is a terminal based IRC client for UNIX systems. It also supports SILC and ICB protocols via plugins.
 DISPLAY_NAME = Irssi
 STARTABLE = no

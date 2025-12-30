@@ -21,7 +21,7 @@
      they are already using an alpha/beta/rc.
      RC's are valued higher than Beta's, which are valued higher than Alpha's.
      """
-+    logging.info("Version check disabled by SynoCommunity packaging")
++    logging.info("Version check disabled by FnOScommunity packaging")
 +    return
  
      if not cfg.version_check():

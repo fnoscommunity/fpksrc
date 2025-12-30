@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/pigz
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A parallel implementation of gzip for modern multi-processor, multi-core machines.
 DISPLAY_NAME = pigz
 STARTABLE = no

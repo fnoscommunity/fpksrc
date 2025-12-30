@@ -5,7 +5,7 @@ SPK_ICON = src/zstd.png
 
 DEPENDS = cross/zstd
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Zstandard is a fast compression algorithm, providing high compression ratios.
 DISPLAY_NAME = Zstandard
 STARTABLE = no

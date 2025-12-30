@@ -8,7 +8,7 @@ PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
 DEPENDS = cross/zlib cross/openssl cross/lua cross/pcre2
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 HOMEPAGE   = https://www.haproxy.org
 COMMENT    = HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 LICENSE    = GPLv2

@@ -1,6 +1,6 @@
 {
     ".url": {
-        "com.synocommunity.packages.jackett": {
+        "com.FnOScommunity.packages.jackett": {
             "title": "Jackett",
             "desc": "Jackett Web UI",
             "icon": "images/jackett-{0}.png",

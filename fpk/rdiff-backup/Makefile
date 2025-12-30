@@ -14,7 +14,7 @@ DEPENDS = cross/librsync cross/attr cross/acl
 # [PyYAML]
 DEPENDS += cross/libyaml
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Reverse differential backup tool, over a network or locally.
 STARTABLE = no
 DISPLAY_NAME = rdiff-backup

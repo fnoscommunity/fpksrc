@@ -5,7 +5,7 @@ SPK_ICON = src/google-fonts.png
 
 DEPENDS = cross/google-fonts
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Collection of all available Google Fonts.
 DISPLAY_NAME = Google Fonts
 STARTABLE = no

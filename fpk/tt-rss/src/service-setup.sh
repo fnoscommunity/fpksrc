@@ -101,9 +101,9 @@ service_postinst ()
         RESTART_APACHE="yes"
     fi
     # Check for tt-rss PHP profile
-    if ! ${JQ} -e '.["com-synocommunity-packages-tt-rss"]' "${FULL_PHP_CFG_FILE}" >/dev/null; then
+    if ! ${JQ} -e '.["com-FnOScommunity-packages-tt-rss"]' "${FULL_PHP_CFG_FILE}" >/dev/null; then
         echo "Add PHP profile for tt-rss"
-        ${JQ} --slurpfile ttRssNode "${SYNOPKG_PKGDEST}/web/tt-rss.json" '.["com-synocommunity-packages-tt-rss"] = $ttRssNode[0]' "${FULL_PHP_CFG_FILE}" > "${TEMP_PHP_CFG_FILE}"
+        ${JQ} --slurpfile ttRssNode "${SYNOPKG_PKGDEST}/web/tt-rss.json" '.["com-FnOScommunity-packages-tt-rss"] = $ttRssNode[0]' "${FULL_PHP_CFG_FILE}" > "${TEMP_PHP_CFG_FILE}"
         # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
         rsync -aX ${RSYNC_ARCH_ARGS} "${TEMP_PHP_CFG_FILE}" "${WS_CFG_PATH}/" 2>&1
         RESTART_APACHE="yes"
@@ -116,7 +116,7 @@ service_postinst ()
     fi
     # Restart Apache if configs have changed
     if [ "${RESTART_APACHE}" = "yes" ]; then
-        if ${JQ} -e 'to_entries | map(select((.key | startswith("com-synocommunity-packages-")) and .key != "com-synocommunity-packages-tt-rss")) | length > 0' "${FULL_PHP_CFG_FILE}" >/dev/null; then
+        if ${JQ} -e 'to_entries | map(select((.key | startswith("com-FnOScommunity-packages-")) and .key != "com-FnOScommunity-packages-tt-rss")) | length > 0' "${FULL_PHP_CFG_FILE}" >/dev/null; then
             echo " [WARNING] Multiple PHP profiles detected, will require restart of DSM to load new configs"
         else
             echo "Restart Apache to load new configs"
@@ -236,12 +236,12 @@ service_postuninst ()
     RESTART_APACHE="no"
     RSYNC_ARCH_ARGS="--backup --suffix=.bak --remove-source-files"
     # Check for tt-rss PHP profile
-    if ${JQ} -e '.["com-synocommunity-packages-tt-rss"]' "${FULL_PHP_CFG_FILE}" >/dev/null; then
+    if ${JQ} -e '.["com-FnOScommunity-packages-tt-rss"]' "${FULL_PHP_CFG_FILE}" >/dev/null; then
         echo "Removing PHP profile for tt-rss"
-        ${JQ} 'del(.["com-synocommunity-packages-tt-rss"])' "${FULL_PHP_CFG_FILE}" > "${TEMP_PHP_CFG_FILE}"
+        ${JQ} 'del(.["com-FnOScommunity-packages-tt-rss"])' "${FULL_PHP_CFG_FILE}" > "${TEMP_PHP_CFG_FILE}"
         # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
         rsync -aX ${RSYNC_ARCH_ARGS} "${TEMP_PHP_CFG_FILE}" "${WS_CFG_PATH}/" 2>&1
-        ${RM} "${WS_CFG_PATH}/php_profile/com-synocommunity-packages-tt-rss"
+        ${RM} "${WS_CFG_PATH}/php_profile/com-FnOScommunity-packages-tt-rss"
         RESTART_APACHE="yes"
     fi
     # Check for tt-rss Apache config
@@ -252,7 +252,7 @@ service_postuninst ()
     fi
     # Restart Apache if configs have changed
     if [ "$RESTART_APACHE" = "yes" ]; then
-        if ${JQ} -e 'to_entries | map(select((.key | startswith("com-synocommunity-packages-")) and .key != "com-synocommunity-packages-tt-rss")) | length > 0' "${FULL_PHP_CFG_FILE}" >/dev/null; then
+        if ${JQ} -e 'to_entries | map(select((.key | startswith("com-FnOScommunity-packages-")) and .key != "com-FnOScommunity-packages-tt-rss")) | length > 0' "${FULL_PHP_CFG_FILE}" >/dev/null; then
             echo " [WARNING] Multiple PHP profiles detected, will require restart of DSM to load new configs"
         else
             echo "Restart Apache to load new configs"

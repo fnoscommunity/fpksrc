@@ -1,6 +1,6 @@
 {
     ".url": {
-        "com.synocommunity.packages.plexivity": {
+        "com.FnOScommunity.packages.plexivity": {
             "title": "plexivity",
             "desc": "plexivity Web UI",
             "icon": "images/plexivity-{0}.png",

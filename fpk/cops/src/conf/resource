@@ -24,7 +24,7 @@
 		}],
 		"portals": [{
 			"alias": "cops",
-			"app": "com.synocommunity.packages.cops",
+			"app": "com.FnOScommunity.packages.cops",
 			"name": "COPS",
 			"service": "cops",
 			"type": "alias"

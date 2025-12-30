@@ -5,7 +5,7 @@ SPK_ICON = src/fossil-scm.png
 
 DEPENDS = cross/fossil-scm
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DISPLAY_NAME = Fossil SCM
 
 DESCRIPTION = "Fossil is a simple, high-reliability, distributed software configuration management system."

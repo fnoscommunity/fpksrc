@@ -16,7 +16,7 @@
 				"display_name":"MetaCubeXD",
 				"type": "alias",
 				"alias": "metacubexd",
-				"app": "com.synocommunity.packages.metacubexd"
+				"app": "com.FnOScommunity.packages.metacubexd"
 			}
 		],
 		"pkg_dir_prepare": [

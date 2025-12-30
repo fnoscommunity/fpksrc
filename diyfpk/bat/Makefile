@@ -11,7 +11,7 @@ ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 SPK_VERS = 0.25.0
 endif
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A cat(1) clone with wings.
 STARTABLE = no
 

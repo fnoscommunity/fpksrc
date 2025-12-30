@@ -2,7 +2,7 @@ PKG_NAME = znc
 PKG_VERS = 1.10.1
 PKG_EXT = tar.gz
 PKG_DIST_NAME = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
-# use synocommunity "abandoned sources" 
+# use FnOScommunity "abandoned sources" 
 # original site https://znc.in/releases/archive does not work
 PKG_DIST_SITE = https://github.com/fnoscommunity/fpksrc/releases/download/sources
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)

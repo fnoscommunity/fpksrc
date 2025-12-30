@@ -5,7 +5,7 @@ SPK_ICON = src/gnupg.png
 
 DEPENDS = cross/gnupg
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = GnuPG allows to encrypt and sign your data and communication, features a versatile key management system as well as access modules for all kinds of public key directories.
 STARTABLE = no
 DISPLAY_NAME = GnuPG

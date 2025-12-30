@@ -5,7 +5,7 @@ SPK_ICON = src/mutt.png
 
 DEPENDS = cross/mutt
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Mutt is a small but very powerful text-based mail client for Unix operating systems.
 DISPLAY_NAME = Mutt
 STARTABLE = no

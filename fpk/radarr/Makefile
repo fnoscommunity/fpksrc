@@ -54,7 +54,7 @@ POST_STRIP_TARGET += radarr_extra_install
 include ../../mk/spksrc.spk.mk
 
 PACKAGE_VERSION = $(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
-PACKAGE_AUTHOR = [SynoCommunity](https://synocommunity.com/)
+PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: radarr_custom_libe_sqlite3
 radarr_custom_libe_sqlite3:

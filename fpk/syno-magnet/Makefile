@@ -53,7 +53,7 @@ $(WORK_DIR)/config:
 	$(create_target_dir)
 	@echo '{}' | jq --arg name "${DISPLAY_NAME}" \
 		--arg desc "${DESC}" \
-		--arg id "com.synocommunity.packages.SynoMagnet" \
+		--arg id "com.FnOScommunity.packages.SynoMagnet" \
 		--arg icon "images/${SPK_NAME}-{0}.png" \
 		--arg type "${SERVICE_TYPE}" \
 		--arg url "${SERVICE_URL}" \

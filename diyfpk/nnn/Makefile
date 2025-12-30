@@ -16,7 +16,7 @@ SPK_VERS = 4.0
 endif
 endif
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = n³ The unorthodox terminal file manager.
 DISPLAY_NAME = n³
 STARTABLE = no

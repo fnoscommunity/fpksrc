@@ -43,7 +43,7 @@
         "portals": [
             {
                 "alias": "wallabag",
-                "app": "com.synocommunity.packages.wallabag",
+                "app": "com.FnOScommunity.packages.wallabag",
                 "name": "Wallabag",
                 "service": "wallabag",
                 "type": "alias"

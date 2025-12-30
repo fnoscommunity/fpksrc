@@ -8,7 +8,7 @@ DEPENDS = cross/busybox cross/unrar cross/squidclamav cross/squidguard cross/squ
 
 SPK_DEPENDS = "AntiVirus>1.2"
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = SquidGuard is a URL redirector used to use blacklists with the proxysoftware Squid. This package also includes SquidClamav for viruses protection and SquidGuard Manager.
 DESCRIPTION_FRE = SquidGuard est un proxy HTTP, basé sur squid, qui permet de filtrer les accès selon une liste noire. Ce paquet contient également SquidClamav pour une protection antivirus et SquidGuard Manager.
 DISPLAY_NAME = SquidGuard
@@ -50,5 +50,5 @@ xz-compress:
 	install -m 644 src/app/config $(STAGING_DIR)/var/www/squidguardmgr/
 	install -m 755 src/app/squidGuard.cgi $(STAGING_DIR)/var/www/squidguardmgr/
 	install -m 644 src/app/babel.* $(STAGING_DIR)/var/www/squidguardmgr/
-	install -m 644 src/app/synocommunity.png $(STAGING_DIR)/var/www/squidguardmgr/
+	install -m 644 src/app/FnOScommunity.png $(STAGING_DIR)/var/www/squidguardmgr/
 	install -m 644 src/app/blocked.gif $(STAGING_DIR)/var/www/squidguardmgr/

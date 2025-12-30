@@ -5,7 +5,7 @@ SPK_ICON = src/links.png
 
 DEPENDS = cross/links
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Links is a web browser running in text mode.
 DISPLAY_NAME = Links
 STARTABLE = no

@@ -7,7 +7,7 @@ DEPENDS = cross/gotify-server cross/gotify-cli
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS) $(ARMv5_ARCHS) $(ARMv7L_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DISPLAY_NAME = Gotify
 DESCRIPTION = A simple server for sending and receiving messages. Includes gotify-cli for pushing messages to gotify/server.
 HOMEPAGE = https://gotify.net/

@@ -23,7 +23,7 @@
             "name": "AriaNg",
             "type": "alias",
             "alias": "ariang",
-            "app": "com.synocommunity.packages.ariang"
+            "app": "com.FnOScommunity.packages.ariang"
         }
     ],
     "pkg_dir_prepare": [

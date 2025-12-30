@@ -5,7 +5,7 @@ SPK_ICON = src/micro.png
 
 DEPENDS = cross/micro
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A modern and intuitive terminal-based text editor.
 DISPLAY_NAME = micro
 STARTABLE = no

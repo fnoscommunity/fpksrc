@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/netcat
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Netcat is a featured networking utility which reads and writes data across network connections, using the TCP/IP protocol.
 DISPLAY_NAME = netcat
 STARTABLE = no

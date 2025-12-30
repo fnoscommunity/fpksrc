@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/cpulimit
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = CPU usage limiter for Linux.
 STARTABLE = no
 

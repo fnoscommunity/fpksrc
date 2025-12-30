@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/ionice
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = ionice of util-linux (random collection of Linux utilities).
 STARTABLE = no
 

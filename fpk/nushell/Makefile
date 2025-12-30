@@ -7,7 +7,7 @@ DEPENDS = cross/nushell
 
 REQUIRED_MIN_DSM = 7.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A new type of shell. This package includes the nushell plugins 'inc' 'polars' 'gstat' 'formats' and 'query' and a script 'nu_install_plugins.sh'.
 DISPLAY_NAME = nu
 STARTABLE = no

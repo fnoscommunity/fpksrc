@@ -1,6 +1,6 @@
 {
     "haproxy.js": {
-        "SYNOCOMMUNITY.HAProxy.AppInstance": {
+        "FnOScommunity.HAProxy.AppInstance": {
             "type": "app",
             "title": "app:app_name",
             "version": "0.1",
@@ -8,17 +8,17 @@
             "texts": "texts",
             "allowMultiInstance": false,
             "allUsers": false,
-            "appWindow": "SYNOCOMMUNITY.HAProxy.AppWindow",
-            "depend": ["SYNOCOMMUNITY.HAProxy.AppWindow"]
+            "appWindow": "FnOScommunity.HAProxy.AppWindow",
+            "depend": ["FnOScommunity.HAProxy.AppWindow"]
         },
-        "SYNOCOMMUNITY.HAProxy.AppWindow": {
+        "FnOScommunity.HAProxy.AppWindow": {
             "type": "lib",
             "title": "app:app_name",
             "icon": "images/haproxy-{0}.png",
             "texts": "texts",
-            "depend": ["SYNOCOMMUNITY.HAProxy.ListView", "SYNOCOMMUNITY.HAProxy.MainCardPanel"]
+            "depend": ["FnOScommunity.HAProxy.ListView", "FnOScommunity.HAProxy.MainCardPanel"]
         },
-        "SYNOCOMMUNITY.HAProxy.ListView": [],
-        "SYNOCOMMUNITY.HAProxy.MainCardPanel": []
+        "FnOScommunity.HAProxy.ListView": [],
+        "FnOScommunity.HAProxy.MainCardPanel": []
     }
 }

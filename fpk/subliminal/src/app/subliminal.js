@@ -1725,17 +1725,17 @@ Ext.ux.form.SuperBoxSelectItem = Ext.extend(Ext.ux.form.SuperBoxSelectItem, Ext.
 });
 
 // Namespace
-Ext.ns("SYNOCOMMUNITY.Subliminal");
+Ext.ns("FnOScommunity.Subliminal");
 
 // Translator
 _V = function (category, element) {
-    return _TT("SYNOCOMMUNITY.Subliminal.AppInstance", category, element)
+    return _TT("FnOScommunity.Subliminal.AppInstance", category, element)
 }
 
 // Direct API
 Ext.Direct.addProvider({
     "url": "3rdparty/subliminal/subliminal.cgi/direct/router",
-    "namespace": "SYNOCOMMUNITY.Subliminal.Remote",
+    "namespace": "FnOScommunity.Subliminal.Remote",
     "type": "remoting",
     "actions": {
         "Subliminal": [{
@@ -1794,49 +1794,49 @@ Ext.form.RadioGroup.override({
 });
 
 // Const
-SYNOCOMMUNITY.Subliminal.DEFAULT_HEIGHT = 480;
-SYNOCOMMUNITY.Subliminal.MAIN_WIDTH = 750;
-SYNOCOMMUNITY.Subliminal.LIST_WIDTH = 210;
+FnOScommunity.Subliminal.DEFAULT_HEIGHT = 480;
+FnOScommunity.Subliminal.MAIN_WIDTH = 750;
+FnOScommunity.Subliminal.LIST_WIDTH = 210;
 
 // Application
-SYNOCOMMUNITY.Subliminal.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
-    appWindowName: "SYNOCOMMUNITY.Subliminal.AppWindow",
+FnOScommunity.Subliminal.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
+    appWindowName: "FnOScommunity.Subliminal.AppWindow",
     constructor: function () {
-        SYNOCOMMUNITY.Subliminal.AppInstance.superclass.constructor.apply(this, arguments);
+        FnOScommunity.Subliminal.AppInstance.superclass.constructor.apply(this, arguments);
     }
 });
 
 // Main window
-SYNOCOMMUNITY.Subliminal.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
+FnOScommunity.Subliminal.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
     appInstance: null,
     mainPanel: null,
     constructor: function (config) {
         this.appInstance = config.appInstance;
-        this.mainPanel = new SYNOCOMMUNITY.Subliminal.MainPanel({
+        this.mainPanel = new FnOScommunity.Subliminal.MainPanel({
             owner: this
         });
         config = Ext.apply({
             resizable: true,
             maximizable: true,
             minimizable: true,
-            width: SYNOCOMMUNITY.Subliminal.MAIN_WIDTH,
-            height: SYNOCOMMUNITY.Subliminal.DEFAULT_HEIGHT,
+            width: FnOScommunity.Subliminal.MAIN_WIDTH,
+            height: FnOScommunity.Subliminal.DEFAULT_HEIGHT,
             layout: "fit",
             border: false,
-            cls: "synocommunity-subliminal",
+            cls: "FnOScommunity-subliminal",
             items: [this.mainPanel]
         }, config);
-        SYNOCOMMUNITY.Subliminal.AppWindow.superclass.constructor.call(this, config);
+        FnOScommunity.Subliminal.AppWindow.superclass.constructor.call(this, config);
     },
     onOpen: function (a) {
-        SYNOCOMMUNITY.Subliminal.AppWindow.superclass.onOpen.call(this, a);
+        FnOScommunity.Subliminal.AppWindow.superclass.onOpen.call(this, a);
         this.mainPanel.onActivate();
     },
     onRequest: function (a) {
-        SYNOCOMMUNITY.Subliminal.AppWindow.superclass.onRequest.call(this, a);
+        FnOScommunity.Subliminal.AppWindow.superclass.onRequest.call(this, a);
     },
     onClose: function () {
-        if (SYNOCOMMUNITY.Subliminal.AppWindow.superclass.onClose.apply(this, arguments)) {
+        if (FnOScommunity.Subliminal.AppWindow.superclass.onClose.apply(this, arguments)) {
             this.doClose();
             this.mainPanel.onDeactivate();
             return true;
@@ -1855,19 +1855,19 @@ SYNOCOMMUNITY.Subliminal.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
 });
 
 // Main panel
-SYNOCOMMUNITY.Subliminal.MainPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.Subliminal.MainPanel = Ext.extend(Ext.Panel, {
     listPanel: null,
     cardPanel: null,
     constructor: function (config) {
         this.owner = config.owner;
-        var a = new SYNOCOMMUNITY.Subliminal.ListView({
+        var a = new FnOScommunity.Subliminal.ListView({
             module: this
         });
         this.listPanel = new Ext.Panel({
             region: "west",
-            width: SYNOCOMMUNITY.Subliminal.LIST_WIDTH,
-            height: SYNOCOMMUNITY.Subliminal.DEFAULT_HEIGHT,
-            cls: "synocommunity-subliminal-list",
+            width: FnOScommunity.Subliminal.LIST_WIDTH,
+            height: FnOScommunity.Subliminal.DEFAULT_HEIGHT,
+            cls: "FnOScommunity-subliminal-list",
             items: [a],
             listeners: {
                 scope: this,
@@ -1879,8 +1879,8 @@ SYNOCOMMUNITY.Subliminal.MainPanel = Ext.extend(Ext.Panel, {
             }
         });
         this.listView = a;
-        this.curHeight = SYNOCOMMUNITY.Subliminal.DEFAULT_HEIGHT;
-        this.cardPanel = new SYNOCOMMUNITY.Subliminal.MainCardPanel({
+        this.curHeight = FnOScommunity.Subliminal.DEFAULT_HEIGHT;
+        this.cardPanel = new FnOScommunity.Subliminal.MainCardPanel({
             module: this,
             owner: config.owner,
             itemId: "grid",
@@ -1890,10 +1890,10 @@ SYNOCOMMUNITY.Subliminal.MainPanel = Ext.extend(Ext.Panel, {
             ["parameters", this.cardPanel.PanelParameters],
             ["directories", this.cardPanel.PanelDirectories]
         ];
-        SYNOCOMMUNITY.Subliminal.MainPanel.superclass.constructor.call(this, {
+        FnOScommunity.Subliminal.MainPanel.superclass.constructor.call(this, {
             border: false,
             layout: "border",
-            height: SYNOCOMMUNITY.Subliminal.DEFAULT_HEIGHT,
+            height: FnOScommunity.Subliminal.DEFAULT_HEIGHT,
             monitorResize: true,
             items: [this.listPanel, this.cardPanel]
         });
@@ -1924,7 +1924,7 @@ SYNOCOMMUNITY.Subliminal.MainPanel = Ext.extend(Ext.Panel, {
         }
     },
     getPanelHeight: function (id_panel) {
-        return SYNOCOMMUNITY.Subliminal.DEFAULT_HEIGHT
+        return FnOScommunity.Subliminal.DEFAULT_HEIGHT
     },
     isPanelDirty: function (c) {
         var b;
@@ -1993,7 +1993,7 @@ SYNOCOMMUNITY.Subliminal.MainPanel = Ext.extend(Ext.Panel, {
 });
 
 // List view
-SYNOCOMMUNITY.Subliminal.ListView = Ext.extend(Ext.list.ListView, {
+FnOScommunity.Subliminal.ListView = Ext.extend(Ext.list.ListView, {
     constructor: function (config) {
         var store = new Ext.data.JsonStore({
             data: {
@@ -2013,7 +2013,7 @@ SYNOCOMMUNITY.Subliminal.ListView = Ext.extend(Ext.list.ListView, {
             fields: ["title", "id"]
         });
         config = Ext.apply({
-            cls: "synocommunity-subliminal-list",
+            cls: "FnOScommunity-subliminal-list",
             padding: 10,
             split: false,
             trackOver: false,
@@ -2022,9 +2022,9 @@ SYNOCOMMUNITY.Subliminal.ListView = Ext.extend(Ext.list.ListView, {
             store: store,
             columns: [{
                 dataIndex: "title",
-                cls: "synocommunity-subliminal-list-column",
+                cls: "FnOScommunity-subliminal-list-column",
                 sortable: false,
-                tpl: '<div class="synocommunity-subliminal-list-{id}">{title}</div>'
+                tpl: '<div class="FnOScommunity-subliminal-list-{id}">{title}</div>'
             }],
             listeners: {
                 scope: this,
@@ -2046,7 +2046,7 @@ SYNOCOMMUNITY.Subliminal.ListView = Ext.extend(Ext.list.ListView, {
             }
         }, config);
         this.addEvents("onbeforeclick");
-        SYNOCOMMUNITY.Subliminal.ListView.superclass.constructor.call(this, config)
+        FnOScommunity.Subliminal.ListView.superclass.constructor.call(this, config)
     },
     onBeforeClick: function (c, d, f, b) {
         var g = c.getRecord(f);
@@ -2088,15 +2088,15 @@ SYNOCOMMUNITY.Subliminal.ListView = Ext.extend(Ext.list.ListView, {
 });
 
 // Card panel
-SYNOCOMMUNITY.Subliminal.MainCardPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.Subliminal.MainCardPanel = Ext.extend(Ext.Panel, {
     PanelParameters: null,
     constructor: function (config) {
         this.owner = config.owner;
         this.module = config.module;
-        this.PanelParameters = new SYNOCOMMUNITY.Subliminal.PanelParameters({
+        this.PanelParameters = new FnOScommunity.Subliminal.PanelParameters({
             owner: this.owner
         });
-        this.PanelDirectories = new SYNOCOMMUNITY.Subliminal.PanelDirectories({
+        this.PanelDirectories = new FnOScommunity.Subliminal.PanelDirectories({
             owner: this.owner
         });
         config = Ext.apply({
@@ -2110,7 +2110,7 @@ SYNOCOMMUNITY.Subliminal.MainCardPanel = Ext.extend(Ext.Panel, {
                 deactivate: this.onDeactivate
             }
         }, config);
-        SYNOCOMMUNITY.Subliminal.MainCardPanel.superclass.constructor.call(this, config)
+        FnOScommunity.Subliminal.MainCardPanel.superclass.constructor.call(this, config)
     },
     onActivate: function (panel) {
         if (this.PanelParameters) {
@@ -2123,7 +2123,7 @@ SYNOCOMMUNITY.Subliminal.MainCardPanel = Ext.extend(Ext.Panel, {
 });
 
 // FormPanel base
-SYNOCOMMUNITY.Subliminal.FormPanel = Ext.extend(Ext.FormPanel, {
+FnOScommunity.Subliminal.FormPanel = Ext.extend(Ext.FormPanel, {
     constructor: function (config) {
         config = Ext.apply({
             owner: null,
@@ -2153,7 +2153,7 @@ SYNOCOMMUNITY.Subliminal.FormPanel = Ext.extend(Ext.FormPanel, {
             }
         }, config);
         SYNO.LayoutConfig.fill(config);
-        SYNOCOMMUNITY.Subliminal.FormPanel.superclass.constructor.call(this, config);
+        FnOScommunity.Subliminal.FormPanel.superclass.constructor.call(this, config);
         if (!this.owner instanceof SYNO.SDS.BaseWindow) {
             throw Error("please set the owner window of form");
         }
@@ -2192,7 +2192,7 @@ SYNOCOMMUNITY.Subliminal.FormPanel = Ext.extend(Ext.FormPanel, {
 });
 
 // Parameters panel
-SYNOCOMMUNITY.Subliminal.PanelParameters = Ext.extend(SYNOCOMMUNITY.Subliminal.FormPanel, {
+FnOScommunity.Subliminal.PanelParameters = Ext.extend(FnOScommunity.Subliminal.FormPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -2733,11 +2733,11 @@ SYNOCOMMUNITY.Subliminal.PanelParameters = Ext.extend(SYNOCOMMUNITY.Subliminal.F
                 }]
             }],
             api: {
-                load: SYNOCOMMUNITY.Subliminal.Remote.Subliminal.load,
-                submit: SYNOCOMMUNITY.Subliminal.Remote.Subliminal.save
+                load: FnOScommunity.Subliminal.Remote.Subliminal.load,
+                submit: FnOScommunity.Subliminal.Remote.Subliminal.save
             }
         }, config);
-        SYNOCOMMUNITY.Subliminal.PanelParameters.superclass.constructor.call(this, config);
+        FnOScommunity.Subliminal.PanelParameters.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         if (!this.loaded) {
@@ -2752,7 +2752,7 @@ SYNOCOMMUNITY.Subliminal.PanelParameters = Ext.extend(SYNOCOMMUNITY.Subliminal.F
         }
     },
     onApply: function () {
-        if (!SYNOCOMMUNITY.Subliminal.PanelParameters.superclass.onApply.apply(this, arguments)) {
+        if (!FnOScommunity.Subliminal.PanelParameters.superclass.onApply.apply(this, arguments)) {
             return false;
         }
         this.owner.setStatusBusy({
@@ -2770,7 +2770,7 @@ SYNOCOMMUNITY.Subliminal.PanelParameters = Ext.extend(SYNOCOMMUNITY.Subliminal.F
 });
 
 // Directories panel
-SYNOCOMMUNITY.Subliminal.PanelDirectories = Ext.extend(Ext.grid.GridPanel, {
+FnOScommunity.Subliminal.PanelDirectories = Ext.extend(Ext.grid.GridPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -2778,10 +2778,10 @@ SYNOCOMMUNITY.Subliminal.PanelDirectories = Ext.extend(Ext.grid.GridPanel, {
             autoSave: false,
             fields: ["id", "name", "path"],
             api: {
-                read: SYNOCOMMUNITY.Subliminal.Remote.Directories.read,
-                create: SYNOCOMMUNITY.Subliminal.Remote.Directories.create,
-                update: SYNOCOMMUNITY.Subliminal.Remote.Directories.update,
-                destroy: SYNOCOMMUNITY.Subliminal.Remote.Directories.destroy
+                read: FnOScommunity.Subliminal.Remote.Directories.read,
+                create: FnOScommunity.Subliminal.Remote.Directories.create,
+                update: FnOScommunity.Subliminal.Remote.Directories.update,
+                destroy: FnOScommunity.Subliminal.Remote.Directories.destroy
             },
             idProperty: "id",
             root: "data",
@@ -2829,7 +2829,7 @@ SYNOCOMMUNITY.Subliminal.PanelDirectories = Ext.extend(Ext.grid.GridPanel, {
                 dataIndex: "path"
             }]
         }, config);
-        SYNOCOMMUNITY.Subliminal.PanelDirectories.superclass.constructor.call(this, config);
+        FnOScommunity.Subliminal.PanelDirectories.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         if (!this.loaded) {
@@ -2838,14 +2838,14 @@ SYNOCOMMUNITY.Subliminal.PanelDirectories = Ext.extend(Ext.grid.GridPanel, {
         }
     },
     onClickAdd: function () {
-        var editor = new SYNOCOMMUNITY.Subliminal.DirectoryEditorWindow({
+        var editor = new FnOScommunity.Subliminal.DirectoryEditorWindow({
             store: this.store,
             title: _V("ui", "directory_add")
         });
         editor.open();
     },
     onClickEdit: function () {
-        var editor = new SYNOCOMMUNITY.Subliminal.DirectoryEditorWindow({
+        var editor = new FnOScommunity.Subliminal.DirectoryEditorWindow({
             store: this.store,
             record: this.getSelectionModel().getSelected(),
             title: _V("ui", "directory_edit")
@@ -2861,7 +2861,7 @@ SYNOCOMMUNITY.Subliminal.PanelDirectories = Ext.extend(Ext.grid.GridPanel, {
     },
     onClickScan: function () {
         this.getSelectionModel().each(function (record) {
-            SYNOCOMMUNITY.Subliminal.Remote.Directories.scan(record.id);
+            FnOScommunity.Subliminal.Remote.Directories.scan(record.id);
         });
     },
     onClickRefresh: function () {
@@ -2870,9 +2870,9 @@ SYNOCOMMUNITY.Subliminal.PanelDirectories = Ext.extend(Ext.grid.GridPanel, {
 });
 
 // Directory window
-SYNOCOMMUNITY.Subliminal.DirectoryEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
+FnOScommunity.Subliminal.DirectoryEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
     initComponent: function () {
-        this.panel = new SYNOCOMMUNITY.Subliminal.PanelDirectoryEditor();
+        this.panel = new FnOScommunity.Subliminal.PanelDirectoryEditor();
         var config = {
             width: 450,
             height: 180,
@@ -2894,7 +2894,7 @@ SYNOCOMMUNITY.Subliminal.DirectoryEditorWindow = Ext.extend(SYNO.SDS.ModalWindow
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.Subliminal.DirectoryEditorWindow.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.Subliminal.DirectoryEditorWindow.superclass.initComponent.apply(this, arguments);
     },
     onAfterRender: function () {
         if (this.record) {
@@ -2923,7 +2923,7 @@ SYNOCOMMUNITY.Subliminal.DirectoryEditorWindow = Ext.extend(SYNO.SDS.ModalWindow
 });
 
 // Directory panel
-SYNOCOMMUNITY.Subliminal.PanelDirectoryEditor = Ext.extend(SYNOCOMMUNITY.Subliminal.FormPanel, {
+FnOScommunity.Subliminal.PanelDirectoryEditor = Ext.extend(FnOScommunity.Subliminal.FormPanel, {
     initComponent: function () {
         var config = {
             itemId: "directory",
@@ -2946,7 +2946,7 @@ SYNOCOMMUNITY.Subliminal.PanelDirectoryEditor = Ext.extend(SYNOCOMMUNITY.Sublimi
                     readOnly: true
                 }, {
                     xtype: "button",
-                    id: "synocommunity-subliminal-browse",
+                    id: "FnOScommunity-subliminal-browse",
                     text: _V("browser", "browse"),
                     handler: this.onClickBrowse,
                     scope: this
@@ -2954,14 +2954,14 @@ SYNOCOMMUNITY.Subliminal.PanelDirectoryEditor = Ext.extend(SYNOCOMMUNITY.Sublimi
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.Subliminal.PanelDirectoryEditor.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.Subliminal.PanelDirectoryEditor.superclass.initComponent.apply(this, arguments);
     },
     loadRecord: function (record) {
         this.getForm().findField("name").setValue(record.data.name);
         this.getForm().findField("path").setValue(record.data.path);
     },
     onClickBrowse: function (button, event) {
-        var browser = new SYNOCOMMUNITY.Subliminal.BrowserWindow({});
+        var browser = new FnOScommunity.Subliminal.BrowserWindow({});
         browser.mon(browser, "apply",
         function (selectionModel) {
             this.getForm().findField("path").setValue(selectionModel.getSelectedNode().attributes.path);
@@ -2971,7 +2971,7 @@ SYNOCOMMUNITY.Subliminal.PanelDirectoryEditor = Ext.extend(SYNOCOMMUNITY.Sublimi
 });
 
 // Folder browser window
-SYNOCOMMUNITY.Subliminal.BrowserWindow = Ext.extend(SYNO.SDS.ModalWindow, {
+FnOScommunity.Subliminal.BrowserWindow = Ext.extend(SYNO.SDS.ModalWindow, {
     initComponent: function () {
         this.panel = new Ext.tree.TreePanel({
             loader: {
@@ -3024,7 +3024,7 @@ SYNOCOMMUNITY.Subliminal.BrowserWindow = Ext.extend(SYNO.SDS.ModalWindow, {
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
         this.addEvents("apply", "cancel");
-        SYNOCOMMUNITY.Subliminal.BrowserWindow.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.Subliminal.BrowserWindow.superclass.initComponent.apply(this, arguments);
     },
     onClickApply: function () {
         this.fireEvent("apply", this.panel.getSelectionModel());

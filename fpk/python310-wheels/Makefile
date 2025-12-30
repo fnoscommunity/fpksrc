@@ -7,7 +7,7 @@ SPK_ICON = src/python3-pip.png
 PYTHON_PACKAGE = python310
 SPK_DEPENDS = "$(PYTHON_PACKAGE)"
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION =  Collection of programs for the Python 3.10 programming language.
 DESCRIPTION_FRE = Collection of programs for the Python 3.10 programming language.
 DESCRIPTION_SPN = Colección de programas para el lenguaje de programación Python 3.10.

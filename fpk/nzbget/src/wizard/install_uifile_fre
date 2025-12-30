@@ -50,7 +50,7 @@
           }
         ]
       }, {
-        "desc": "Permissions for download-related packages are managed with the group <b>'synocommunity'</b> in DSM. Please read <a target=\"_blank\" href=\"https://github.com/fnoscommunity/fpksrc/wiki/Permission-Management\">Permission Management</a> for further information."
+        "desc": "Permissions for download-related packages are managed with the group <b>'FnOScommunity'</b> in DSM. Please read <a target=\"_blank\" href=\"https://github.com/fnoscommunity/fpksrc/wiki/Permission-Management\">Permission Management</a> for further information."
       }
     ]
   }, {

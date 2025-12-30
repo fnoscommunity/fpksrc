@@ -1,4 +1,4 @@
-### common installer functions and variables for synocommunity generic service installer
+### common installer functions and variables for FnOScommunity generic service installer
 # 
 # functions are common for all DSM versions
 #
@@ -44,7 +44,7 @@ initialize_variables ()
 
     # Default description if group name provided by UI
     if [ -n "${GROUP}" -a -z "${GROUP_DESC}" ]; then
-        GROUP_DESC="SynoCommunity Package Group"
+        GROUP_DESC="FnOScommunity Package Group"
     fi
 
     # Extract share volume and share name from share path when provided, and not already defined

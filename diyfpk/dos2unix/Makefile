@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/dos2unix
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Convert text files with DOS or Mac line breaks to Unix line breaks and vice versa.
 STARTABLE = no
 

@@ -7,7 +7,7 @@ DEPENDS = cross/kopia
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS) $(ARMv5_ARCHS) $(ARMv7L_ARCHS) $(i686_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DISPLAY_NAME = Kopia
 DESCRIPTION = Kopia is a fast and secure open-source backup/restore tool that allows you to create encrypted snapshots of your data and save the snapshots to remote or cloud storage of your choice, to network-attached storage or server, or locally on your machine.
 HOMEPAGE = https://kopia.io/

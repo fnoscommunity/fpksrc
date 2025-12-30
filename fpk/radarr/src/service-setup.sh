@@ -41,7 +41,7 @@ service_postinst ()
     if [ "${SYNOPKG_PKG_STATUS}" = "INSTALL" ]; then
         if internal_update_supported; then
             # Make Radarr do an update check on start to avoid possible Radarr
-            # downgrade when synocommunity package is updated
+            # downgrade when FnOScommunity package is updated
             echo "Set update required"
             touch "${RADARR_CONFIG_DIR}/update_required" 2>&1
         fi

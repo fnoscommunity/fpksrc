@@ -3,7 +3,7 @@
 # Package
 PACKAGE="horde"
 DNAME="Horde"
-PACKAGE_NAME="com.synocommunity.packages.${PACKAGE}"
+PACKAGE_NAME="com.FnOScommunity.packages.${PACKAGE}"
 
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"

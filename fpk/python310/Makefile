@@ -6,7 +6,7 @@ SPK_ICON = src/python3.png
 
 DEPENDS  = cross/python310
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Python Programming Language.
 DESCRIPTION_FRE = Language de programmation Python.
 DESCRIPTION_SPN = Lenguaje de programación Python.

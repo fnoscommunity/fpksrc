@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/boost
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Makefile to build all boost libraries (except boost-python).
 STARTABLE = no
 

@@ -11,7 +11,7 @@ ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 SPK_VERS = 1.1.5
 endif
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = The next gen ls command.
 STARTABLE = no
 

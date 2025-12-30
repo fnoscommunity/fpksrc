@@ -14,7 +14,7 @@ COMMENT  = Vim is a highly configurable text editor built to enable efficient te
 LICENSE  = Charityware
 
 GNU_CONFIGURE = 1
-CONFIGURE_ARGS  = --with-compiledby=SynoCommunity
+CONFIGURE_ARGS  = --with-compiledby=FnOScommunity
 CONFIGURE_ARGS += --with-features=huge
 CONFIGURE_ARGS += --with-tlib=ncursesw
 CONFIGURE_ARGS += vim_cv_toupper_broken=no

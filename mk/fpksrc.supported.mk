@@ -68,7 +68,7 @@ arch-noarch-%:
 
 build-arch-%: SHELL:=/bin/bash
 build-arch-%: 
-	@$(MSG) BUILDING package for arch $* with SynoCommunity toolchain | tee --append build-$*.log
+	@$(MSG) BUILDING package for arch $* with FnOScommunity toolchain | tee --append build-$*.log
 	@$(MSG) $$(printf "%s MAKELEVEL: %02d, PARALLEL_MAKE: %s, ARCH: %s, NAME: %s [BEGIN]\n" \
 	        "$$(date +%Y%m%d-%H%M%S)" $(MAKELEVEL) "$(PARALLEL_MAKE)" "$*" "$(NAME)") \
 	        | tee --append $(STATUS_LOG)

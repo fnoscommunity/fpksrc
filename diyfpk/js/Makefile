@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/js
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Mozilla JavaScript Engine
 RELOAD_UI = no
 DISPLAY_NAME = OSSP JavaScript

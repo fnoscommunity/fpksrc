@@ -1,22 +1,22 @@
 # Discord
-SynoCommunity is now on Discord!
+FnOScommunity is now on Discord!
 
 [![Discord](https://img.shields.io/discord/732558169863225384?color=7289DA&label=Discord&logo=Discord&logoColor=white&style=for-the-badge)](https://discord.gg/nnN9fgE7EF)
 
 # spksrc
-spksrc is a cross compilation framework intended to compile and package software for Synology NAS devices. Packages are made available via the [SynoCommunity repository].
+spksrc is a cross compilation framework intended to compile and package software for Synology NAS devices. Packages are made available via the [FnOScommunity repository].
 
 
 # DSM 7
 DSM 7 was released on June 29 2021 as Version 7.0.41890.
 
-* The main issue we had with our reposity is fixed in [spkrepo](https://github.com/SynoCommunity/spkrepo/pull/112) and online since February 2024
+* The main issue we had with our reposity is fixed in [spkrepo](https://github.com/FnOScommunity/spkrepo/pull/112) and online since February 2024
   - before the repository deliverd DSM 6 packages for Systems with DSM 7, when no DSM 7 package was available
   - this gave errors like "invalid file format" (or "package requires root privileges")
   - you still get this error when manually installing a DSM 6 package on DSM 7
 * You find the status of the former packages in the issue [#4524] **Meta: DSM7 package status**
 * New packages support DSM 7 from initial package version (and some require at least DSM 7).
-* **ATTENTION**: As reported, package configuration settings may be lost following the upgrade to DSM 7 and the execution of a Package repair. Make sure to backup your settings and configuration for your SynoCommunity packages before installation of DSM 7 to facilitate restoration if needed.
+* **ATTENTION**: As reported, package configuration settings may be lost following the upgrade to DSM 7 and the execution of a Package repair. Make sure to backup your settings and configuration for your FnOScommunity packages before installation of DSM 7 to facilitate restoration if needed.
 
 
 ## Contributing
@@ -190,4 +190,4 @@ When not explicitly set, files are placed under a [3 clause BSD license]
 [Docker installation]: https://docs.docker.com/engine/installation
 [FAQ]: https://github.com/fnoscommunity/fpksrc/wiki/Frequently-Asked-Questions
 [Install Docker with wget]: https://docs.docker.com/linux/step_one
-[SynoCommunity repository]: http://www.synocommunity.com
+[FnOScommunity repository]: http://www.FnOScommunity.com

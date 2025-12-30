@@ -20,7 +20,7 @@
     "portals": [
       {
         "alias": "nextcloud",
-        "app": "com.synocommunity.packages.nextcloud",
+        "app": "com.FnOScommunity.packages.nextcloud",
         "display_name": "Nextcloud",
         "name": "Nextcloud",
         "service": "Nextcloud",

@@ -30,7 +30,7 @@
         "portals": [
             {
                 "alias": "mantisbt",
-                "app": "com.synocommunity.packages.mantisbt",
+                "app": "com.FnOScommunity.packages.mantisbt",
                 "name": "MantisBT",
                 "service": "mantisbt",
                 "type": "alias"

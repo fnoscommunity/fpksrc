@@ -6,7 +6,7 @@ DEPENDS = cross/mergerfs
 
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = mergerfs - a featureful union filesystem.
 STARTABLE = no
 

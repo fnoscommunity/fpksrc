@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/binutils
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = GNU Binutils.
 STARTABLE = no
 

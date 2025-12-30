@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/xz
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Free general-purpose data compression software with high compression ratio.
 DISPLAY_NAME = xz
 STARTABLE = no

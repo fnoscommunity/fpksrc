@@ -357,7 +357,7 @@ ifneq ($(strip $(GROUP)),)
 	@jq '."groupname" = "$(GROUP)"' $@ | sponge $@
 else
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-	@jq '."groupname" = "synocommunity"' $@ | sponge $@
+	@jq '."groupname" = "FnOScommunity"' $@ | sponge $@
 else
 	@jq '."groupname" = "sc-$(SPK_USER)"' $@ | sponge $@
 endif
@@ -463,7 +463,7 @@ $(STAGING_DIR)/$(DSM_UI_DIR)/config:
 	$(create_target_dir)
 	@echo '{}' | jq --arg name "${DISPLAY_NAME}" \
 		--arg desc "${SERVICE_DESC}" \
-		--arg id "com.synocommunity.packages.${SPK_NAME}" \
+		--arg id "com.FnOScommunity.packages.${SPK_NAME}" \
 		--arg icon "images/${SPK_NAME}-{0}.png" \
 		--arg prot "${SERVICE_PORT_PROTOCOL}" \
 		--arg port "${SERVICE_PORT}" \

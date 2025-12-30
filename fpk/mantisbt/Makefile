@@ -12,7 +12,7 @@ REQUIRED_MIN_DSM = 6.0
 # SRM is not supported due lacking webstation, php, mariadb and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Mantis is an easily deployable, web based bugtracker to aid product bug tracking. It requires PHP, MySQL and a web server. It is simpler than Bugzilla and easily editable.
 DESCRIPTION_FRE = Mantis est un bugtracker web aisément déployable pour faciliter le suivi des bogues. Il nécessite PHP, MySQL et un serveur web. Il est plus simple d\'accès que Bugzilla et facilement modifiable.
 DISPLAY_NAME = MantisBT

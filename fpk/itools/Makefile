@@ -18,8 +18,8 @@ DEPENDS = cross/usbmuxd cross/ifuse
 
 MAINTAINER = bxxxjxxg
 MAINTAINER_URL = https://www.linkedin.com/in/bingjing-chang/
-DISTRIBUTOR = SynoCommunity
-DISTRIBUTOR_URL = https://synocommunity.com
+DISTRIBUTOR = FnOScommunity
+DISTRIBUTOR_URL = https://FnOScommunity.com
 DESCRIPTION = "This package contains tools of libimobiledevice to mount an iOS® device \(connected by USB\) to a shared folder of your Diskstation. You can access such folders locally or from remote with Synology FileStation. Some command line tools are included to communicate with connected devices."
 DISPLAY_NAME = iOS Access
 CHANGELOG = "1. Update usb tools and imobile device libraries to v2.0<br/>2. Update openssl to v3.1.0."

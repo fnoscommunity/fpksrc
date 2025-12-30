@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/autoconf
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages.
 LICENSE  = GPLv2
 DISPLAY_NAME = autoconf

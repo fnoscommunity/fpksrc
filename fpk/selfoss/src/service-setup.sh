@@ -78,9 +78,9 @@ service_postinst ()
             RESTART_APACHE="yes"
         fi
         # Check for Selfoss PHP profile
-        if ! ${JQ} -e '.["com-synocommunity-packages-selfoss"]' "${PHP_CFG_PATH}" >/dev/null; then
+        if ! ${JQ} -e '.["com-FnOScommunity-packages-selfoss"]' "${PHP_CFG_PATH}" >/dev/null; then
             echo "Add PHP profile for Selfoss"
-            ${JQ} --slurpfile newProfile "${SYNOPKG_PKGDEST}/web/selfoss.json" '.["com-synocommunity-packages-selfoss"] = $newProfile[0]' "${PHP_CFG_PATH}" > "${TMP_PHP_CFG_PATH}"
+            ${JQ} --slurpfile newProfile "${SYNOPKG_PKGDEST}/web/selfoss.json" '.["com-FnOScommunity-packages-selfoss"] = $newProfile[0]' "${PHP_CFG_PATH}" > "${TMP_PHP_CFG_PATH}"
             # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
             rsync -aX ${RSYNC_ARCH_ARGS} "${TMP_PHP_CFG_PATH}" "${WS_CFG_DIR}/" 2>&1
             RESTART_APACHE="yes"
@@ -93,7 +93,7 @@ service_postinst ()
         fi
         # Restart Apache if configs have changed
         if [ "${RESTART_APACHE}" = "yes" ]; then
-            if ${JQ} -e 'to_entries | map(select((.key | startswith("com-synocommunity-packages-")) and .key != "com-synocommunity-packages-selfoss")) | length > 0' "${PHP_CFG_PATH}" >/dev/null; then
+            if ${JQ} -e 'to_entries | map(select((.key | startswith("com-FnOScommunity-packages-")) and .key != "com-FnOScommunity-packages-selfoss")) | length > 0' "${PHP_CFG_PATH}" >/dev/null; then
                 echo " [WARNING] Multiple PHP profiles detected, will require restart of DSM to load new configs"
             else
                 echo "Restart Apache to load new configs"
@@ -130,12 +130,12 @@ service_postuninst ()
         RESTART_APACHE="no"
         RSYNC_ARCH_ARGS="--backup --suffix=.bak --remove-source-files"
         # Check for Selfoss PHP profile
-        if ${JQ} -e '.["com-synocommunity-packages-selfoss"]' "${PHP_CFG_PATH}" >/dev/null; then
+        if ${JQ} -e '.["com-FnOScommunity-packages-selfoss"]' "${PHP_CFG_PATH}" >/dev/null; then
             echo "Removing PHP profile for Selfoss"
-            ${JQ} 'del(.["com-synocommunity-packages-selfoss"])' "${PHP_CFG_PATH}" > "${TMP_PHP_CFG_PATH}"
+            ${JQ} 'del(.["com-FnOScommunity-packages-selfoss"])' "${PHP_CFG_PATH}" > "${TMP_PHP_CFG_PATH}"
             # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
             rsync -aX ${RSYNC_ARCH_ARGS} "${TMP_PHP_CFG_PATH}" "${WS_CFG_DIR}/" 2>&1
-            ${RM} "${WS_CFG_DIR}/php_profile/com-synocommunity-packages-selfoss"
+            ${RM} "${WS_CFG_DIR}/php_profile/com-FnOScommunity-packages-selfoss"
             RESTART_APACHE="yes"
         fi
         # Check for Selfoss Apache config
@@ -146,7 +146,7 @@ service_postuninst ()
         fi
         # Restart Apache if configs have changed
         if [ "${RESTART_APACHE}" = "yes" ]; then
-            if ${JQ} -e 'to_entries | map(select((.key | startswith("com-synocommunity-packages-")) and .key != "com-synocommunity-packages-selfoss")) | length > 0' "${PHP_CFG_PATH}" >/dev/null; then
+            if ${JQ} -e 'to_entries | map(select((.key | startswith("com-FnOScommunity-packages-")) and .key != "com-FnOScommunity-packages-selfoss")) | length > 0' "${PHP_CFG_PATH}" >/dev/null; then
                 echo " [WARNING] Multiple PHP profiles detected, will require restart of DSM to load new configs"
             else
                 echo "Restart Apache to load new configs"

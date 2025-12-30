@@ -23,7 +23,7 @@
 				"type": "alias",
 				"name": "ruTorrent",
 				"alias": "rutorrent",
-				"app": "com.synocommunity.packages.rutorrent"
+				"app": "com.FnOScommunity.packages.rutorrent"
 			}
 		],
 		"migrate": {

@@ -12,7 +12,7 @@
         "portals": [
             {
                 "alias": "selfoss",
-                "app": "com.synocommunity.packages.selfoss",
+                "app": "com.FnOScommunity.packages.selfoss",
                 "display_name": "Selfoss",
                 "name": "Selfoss",
                 "service": "Selfoss",

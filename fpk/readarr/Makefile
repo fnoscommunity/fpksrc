@@ -9,8 +9,8 @@ DEPENDS = cross/readarr
 # Arch exclusions for dotnet 6.0
 DOTNET_SERVARR_ARCHS = 2
 
-MAINTAINER = SynoCommunity
-MAINTAINER_URL = https://synocommunity.com/
+MAINTAINER = FnOScommunity
+MAINTAINER_URL = https://FnOScommunity.com/
 DESCRIPTION  = Readarr is an ebook and audiobook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books from your favorite authors and will grab, sort, and rename them.
 CHANGELOG = "1. Update Readarr to v0.4.16.2793."
 DISPLAY_NAME = Readarr
@@ -45,7 +45,7 @@ endif
 include ../../mk/spksrc.spk.mk
 
 PACKAGE_VERSION = $(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
-PACKAGE_AUTHOR = [SynoCommunity](https://synocommunity.com/)
+PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: readarr_extra_install
 readarr_extra_install:

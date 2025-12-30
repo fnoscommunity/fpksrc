@@ -21,7 +21,7 @@
 set -o pipefail
 
 echo "::group:: ---- initialize build"
-make setup-synocommunity
+make setup-FnOScommunity
 sed -i -e "s|#PARALLEL_MAKE\s*=.*|PARALLEL_MAKE=max|" \
     -e "s|PUBLISH_API_KEY\s*=.*|PUBLISH_API_KEY=$API_KEY|" \
     local.mk
@@ -54,7 +54,7 @@ fi
 
 echo "===> PACKAGES to Build: ${build_packages}"
 
-# publish to synocommunity.com when the API key is set
+# publish to FnOScommunity.com when the API key is set
 MAKE_ARGS=
 if [ -n "$API_KEY" ] && [ "$PUBLISH" == "true" ]; then
     MAKE_ARGS="publish-"

@@ -3,7 +3,7 @@ app_name = "Gentoo Chroot"
 description = "Management UI for Gentoo Chroot"
 
 [help]
-description = "SynoCommunity Gentoo Chroot"
+description = "FnOScommunity Gentoo Chroot"
 
 [ui]
 console = "Console"

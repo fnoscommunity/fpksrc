@@ -5,7 +5,7 @@ SPK_ICON = src/unix.png
 
 DEPENDS = cross/mg
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Micro \(GNU\) Emacs-like text editor.
 
 DISPLAY_NAME = "mg (micro gnu)"

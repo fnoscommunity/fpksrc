@@ -1,6 +1,6 @@
 {
     ".url": {
-        "com.synocommunity.packages.darkstat": {
+        "com.FnOScommunity.packages.darkstat": {
             "title": "DarkStat",
             "desc": "DarkStat Web UI",
             "icon": "images/darkstat-{0}.png",

@@ -1,6 +1,6 @@
 {
     "subliminal.js": {
-        "SYNOCOMMUNITY.Subliminal.AppInstance": {
+        "FnOScommunity.Subliminal.AppInstance": {
             "type": "app",
             "title": "app:app_name",
             "version": "0.1",
@@ -8,24 +8,24 @@
             "texts": "texts",
             "allowMultiInstance": false,
             "allUsers": false,
-            "appWindow": "SYNOCOMMUNITY.Subliminal.AppWindow",
-            "depend": ["SYNOCOMMUNITY.Subliminal.AppWindow"]
+            "appWindow": "FnOScommunity.Subliminal.AppWindow",
+            "depend": ["FnOScommunity.Subliminal.AppWindow"]
         },
-        "SYNOCOMMUNITY.Subliminal.AppWindow": {
+        "FnOScommunity.Subliminal.AppWindow": {
             "type": "lib",
             "title": "app:app_name",
             "icon": "images/subliminal-{0}.png",
             "texts": "texts",
-            "depend": ["SYNOCOMMUNITY.Subliminal.ListView", "SYNOCOMMUNITY.Subliminal.MainCardPanel"]
+            "depend": ["FnOScommunity.Subliminal.ListView", "FnOScommunity.Subliminal.MainCardPanel"]
         },
-        "SYNOCOMMUNITY.Subliminal.ListView": [],
-        "SYNOCOMMUNITY.Subliminal.MainCardPanel": {
-            "depend": ["SYNOCOMMUNITY.Subliminal.PanelOverview", "SYNOCOMMUNITY.Subliminal.PanelServices"]
+        "FnOScommunity.Subliminal.ListView": [],
+        "FnOScommunity.Subliminal.MainCardPanel": {
+            "depend": ["FnOScommunity.Subliminal.PanelOverview", "FnOScommunity.Subliminal.PanelServices"]
         },
-        "SYNOCOMMUNITY.Subliminal.PanelOverview": [],
-        "SYNOCOMMUNITY.Subliminal.PanelServices": {
-            "depend": ["SYNOCOMMUNITY.Subliminal.ServiceEditorWindow"]
+        "FnOScommunity.Subliminal.PanelOverview": [],
+        "FnOScommunity.Subliminal.PanelServices": {
+            "depend": ["FnOScommunity.Subliminal.ServiceEditorWindow"]
         },
-        "SYNOCOMMUNITY.Subliminal.ServiceEditorWindow": []
+        "FnOScommunity.Subliminal.ServiceEditorWindow": []
     }
 }

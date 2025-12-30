@@ -6,7 +6,7 @@ PYTHON_DIR="/var/packages/python312/target/bin"
 # Add local bin, virtualenv along with python312 to the default PATH
 PATH="${SYNOPKG_PKGDEST}/env/bin:${SYNOPKG_PKGDEST}/bin:${SYNOPKG_PKGDEST}/usr/bin:${PYTHON_DIR}:${PATH}"
 
-GROUP="synocommunity"
+GROUP="FnOScommunity"
 APACHE_USER="http"
 APACHE_GROUP=${APACHE_USER}
 

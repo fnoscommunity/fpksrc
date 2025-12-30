@@ -3,7 +3,7 @@ app_name = "HAProxy"
 description = "HAProxy's Configuration UI"
 
 [help]
-description = "HAProxy SynoCommunity"
+description = "HAProxy FnOScommunity"
 
 [ui]
 console = "Console"

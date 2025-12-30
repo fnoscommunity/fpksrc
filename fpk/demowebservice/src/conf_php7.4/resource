@@ -30,7 +30,7 @@
 				"type": "alias",
 				"name": "Demo Web Service",
 				"alias": "demowebservice",
-				"app": "com.synocommunity.packages.demowebservice"
+				"app": "com.FnOScommunity.packages.demowebservice"
 			}
 		],
 		"pkg_dir_prepare": [{

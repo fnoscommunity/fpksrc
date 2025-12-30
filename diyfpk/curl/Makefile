@@ -9,7 +9,7 @@ DEPENDS = cross/curl
 export BUILD_CURL_WITH="mbedtls gnutls libssh2 libidn2 libpsl librtmp nghttp2 nghttp3 gsasl gss ldap zstd brotli websockets"
 export CURL_INCLUDE_EXECUTABLE=1
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Command line tool and library for transferring data with URLs.
 STARTABLE = no
 

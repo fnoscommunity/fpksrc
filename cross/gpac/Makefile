@@ -1,6 +1,6 @@
 PKG_NAME = gpac
 PKG_VERS = 2.2.1
-GPAC_GIT_REVISION = "1 (SynoCommunity)"
+GPAC_GIT_REVISION = "1 (FnOScommunity)"
 PKG_EXT = tar.gz
 PKG_DIST_NAME = v$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/gpac/gpac/archive

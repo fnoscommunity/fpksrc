@@ -1,15 +1,15 @@
 // Namespace
-Ext.ns("SYNOCOMMUNITY.DebianChroot");
+Ext.ns("FnOScommunity.DebianChroot");
 
 // Translator
 _V = function (category, element) {
-    return _TT("SYNOCOMMUNITY.DebianChroot.AppInstance", category, element)
+    return _TT("FnOScommunity.DebianChroot.AppInstance", category, element)
 }
 
 // Direct API
 Ext.Direct.addProvider({
     "url": "3rdparty/debian-chroot/debian-chroot.cgi/direct/router",
-    "namespace": "SYNOCOMMUNITY.DebianChroot.Remote",
+    "namespace": "FnOScommunity.DebianChroot.Remote",
     "type": "remoting",
     "actions": {
         "Overview": [{
@@ -49,58 +49,58 @@ Ext.Direct.addProvider({
         }]
     }
 });
-SYNOCOMMUNITY.DebianChroot.Poller = new Ext.direct.PollingProvider({
+FnOScommunity.DebianChroot.Poller = new Ext.direct.PollingProvider({
     'type': 'polling',
     'url': '3rdparty/debian-chroot/debian-chroot.cgi/direct/poller',
     'interval': 10000
 });
-Ext.Direct.addProvider(SYNOCOMMUNITY.DebianChroot.Poller);
-SYNOCOMMUNITY.DebianChroot.Poller.disconnect();
+Ext.Direct.addProvider(FnOScommunity.DebianChroot.Poller);
+FnOScommunity.DebianChroot.Poller.disconnect();
 
 // Const
-SYNOCOMMUNITY.DebianChroot.DEFAULT_HEIGHT = 300;
-SYNOCOMMUNITY.DebianChroot.MAIN_WIDTH = 800;
-SYNOCOMMUNITY.DebianChroot.LIST_WIDTH = 210;
+FnOScommunity.DebianChroot.DEFAULT_HEIGHT = 300;
+FnOScommunity.DebianChroot.MAIN_WIDTH = 800;
+FnOScommunity.DebianChroot.LIST_WIDTH = 210;
 
 // Application
-SYNOCOMMUNITY.DebianChroot.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
-    appWindowName: "SYNOCOMMUNITY.DebianChroot.AppWindow",
+FnOScommunity.DebianChroot.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
+    appWindowName: "FnOScommunity.DebianChroot.AppWindow",
     constructor: function () {
-        SYNOCOMMUNITY.DebianChroot.AppInstance.superclass.constructor.apply(this, arguments);
+        FnOScommunity.DebianChroot.AppInstance.superclass.constructor.apply(this, arguments);
     }
 });
 
 // Main window
-SYNOCOMMUNITY.DebianChroot.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
+FnOScommunity.DebianChroot.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
     appInstance: null,
     mainPanel: null,
     constructor: function (config) {
         this.appInstance = config.appInstance;
-        this.mainPanel = new SYNOCOMMUNITY.DebianChroot.MainPanel({
+        this.mainPanel = new FnOScommunity.DebianChroot.MainPanel({
             owner: this
         });
         config = Ext.apply({
             resizable: true,
             maximizable: true,
             minimizable: true,
-            width: SYNOCOMMUNITY.DebianChroot.MAIN_WIDTH,
-            height: SYNOCOMMUNITY.DebianChroot.DEFAULT_HEIGHT,
+            width: FnOScommunity.DebianChroot.MAIN_WIDTH,
+            height: FnOScommunity.DebianChroot.DEFAULT_HEIGHT,
             layout: "fit",
             border: false,
-            cls: "synocommunity-debianchroot",
+            cls: "FnOScommunity-debianchroot",
             items: [this.mainPanel]
         }, config);
-        SYNOCOMMUNITY.DebianChroot.AppWindow.superclass.constructor.call(this, config);
+        FnOScommunity.DebianChroot.AppWindow.superclass.constructor.call(this, config);
     },
     onOpen: function (a) {
-        SYNOCOMMUNITY.DebianChroot.AppWindow.superclass.onOpen.call(this, a);
+        FnOScommunity.DebianChroot.AppWindow.superclass.onOpen.call(this, a);
         this.mainPanel.onActivate();
     },
     onRequest: function (a) {
-        SYNOCOMMUNITY.DebianChroot.AppWindow.superclass.onRequest.call(this, a);
+        FnOScommunity.DebianChroot.AppWindow.superclass.onRequest.call(this, a);
     },
     onClose: function () {
-        if (SYNOCOMMUNITY.DebianChroot.AppWindow.superclass.onClose.apply(this, arguments)) {
+        if (FnOScommunity.DebianChroot.AppWindow.superclass.onClose.apply(this, arguments)) {
             this.doClose();
             this.mainPanel.onDeactivate();
             return true;
@@ -119,19 +119,19 @@ SYNOCOMMUNITY.DebianChroot.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
 });
 
 // Main panel
-SYNOCOMMUNITY.DebianChroot.MainPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.DebianChroot.MainPanel = Ext.extend(Ext.Panel, {
     listPanel: null,
     cardPanel: null,
     constructor: function (config) {
         this.owner = config.owner;
-        var a = new SYNOCOMMUNITY.DebianChroot.ListView({
+        var a = new FnOScommunity.DebianChroot.ListView({
             module: this
         });
         this.listPanel = new Ext.Panel({
             region: "west",
-            width: SYNOCOMMUNITY.DebianChroot.LIST_WIDTH,
-            height: SYNOCOMMUNITY.DebianChroot.DEFAULT_HEIGHT,
-            cls: "synocommunity-debianchroot-list",
+            width: FnOScommunity.DebianChroot.LIST_WIDTH,
+            height: FnOScommunity.DebianChroot.DEFAULT_HEIGHT,
+            cls: "FnOScommunity-debianchroot-list",
             items: [a],
             listeners: {
                 scope: this,
@@ -143,8 +143,8 @@ SYNOCOMMUNITY.DebianChroot.MainPanel = Ext.extend(Ext.Panel, {
             }
         });
         this.listView = a;
-        this.curHeight = SYNOCOMMUNITY.DebianChroot.DEFAULT_HEIGHT;
-        this.cardPanel = new SYNOCOMMUNITY.DebianChroot.MainCardPanel({
+        this.curHeight = FnOScommunity.DebianChroot.DEFAULT_HEIGHT;
+        this.cardPanel = new FnOScommunity.DebianChroot.MainCardPanel({
             module: this,
             owner: config.owner,
             itemId: "grid",
@@ -154,10 +154,10 @@ SYNOCOMMUNITY.DebianChroot.MainPanel = Ext.extend(Ext.Panel, {
             ["overview", this.cardPanel.PanelOverview],
             ["services", this.cardPanel.PanelServices]
         ];
-        SYNOCOMMUNITY.DebianChroot.MainPanel.superclass.constructor.call(this, {
+        FnOScommunity.DebianChroot.MainPanel.superclass.constructor.call(this, {
             border: false,
             layout: "border",
-            height: SYNOCOMMUNITY.DebianChroot.DEFAULT_HEIGHT,
+            height: FnOScommunity.DebianChroot.DEFAULT_HEIGHT,
             monitorResize: true,
             items: [this.listPanel, this.cardPanel]
         });
@@ -188,7 +188,7 @@ SYNOCOMMUNITY.DebianChroot.MainPanel = Ext.extend(Ext.Panel, {
         }
     },
     getPanelHeight: function (id_panel) {
-        return SYNOCOMMUNITY.DebianChroot.DEFAULT_HEIGHT
+        return FnOScommunity.DebianChroot.DEFAULT_HEIGHT
     },
     isPanelDirty: function (c) {
         var b;
@@ -257,7 +257,7 @@ SYNOCOMMUNITY.DebianChroot.MainPanel = Ext.extend(Ext.Panel, {
 });
 
 // List view
-SYNOCOMMUNITY.DebianChroot.ListView = Ext.extend(Ext.list.ListView, {
+FnOScommunity.DebianChroot.ListView = Ext.extend(Ext.list.ListView, {
     constructor: function (config) {
         var store = new Ext.data.JsonStore({
             data: {
@@ -277,7 +277,7 @@ SYNOCOMMUNITY.DebianChroot.ListView = Ext.extend(Ext.list.ListView, {
             fields: ["title", "id"]
         });
         config = Ext.apply({
-            cls: "synocommunity-debianchroot-list",
+            cls: "FnOScommunity-debianchroot-list",
             padding: 10,
             split: false,
             trackOver: false,
@@ -286,9 +286,9 @@ SYNOCOMMUNITY.DebianChroot.ListView = Ext.extend(Ext.list.ListView, {
             store: store,
             columns: [{
                 dataIndex: "title",
-                cls: "synocommunity-debianchroot-list-column",
+                cls: "FnOScommunity-debianchroot-list-column",
                 sortable: false,
-                tpl: '<div class="synocommunity-debianchroot-list-{id}">{title}</div>'
+                tpl: '<div class="FnOScommunity-debianchroot-list-{id}">{title}</div>'
             }],
             listeners: {
                 scope: this,
@@ -310,7 +310,7 @@ SYNOCOMMUNITY.DebianChroot.ListView = Ext.extend(Ext.list.ListView, {
             }
         }, config);
         this.addEvents("onbeforeclick");
-        SYNOCOMMUNITY.DebianChroot.ListView.superclass.constructor.call(this, config)
+        FnOScommunity.DebianChroot.ListView.superclass.constructor.call(this, config)
     },
     onBeforeClick: function (c, d, f, b) {
         var g = c.getRecord(f);
@@ -351,15 +351,15 @@ SYNOCOMMUNITY.DebianChroot.ListView = Ext.extend(Ext.list.ListView, {
 });
 
 // Card panel
-SYNOCOMMUNITY.DebianChroot.MainCardPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.DebianChroot.MainCardPanel = Ext.extend(Ext.Panel, {
     PanelOverview: null,
     constructor: function (config) {
         this.owner = config.owner;
         this.module = config.module;
-        this.PanelOverview = new SYNOCOMMUNITY.DebianChroot.PanelOverview({
+        this.PanelOverview = new FnOScommunity.DebianChroot.PanelOverview({
             owner: this.owner
         });
-        this.PanelServices = new SYNOCOMMUNITY.DebianChroot.PanelServices({
+        this.PanelServices = new FnOScommunity.DebianChroot.PanelServices({
             owner: this.owner
         });
         config = Ext.apply({
@@ -373,7 +373,7 @@ SYNOCOMMUNITY.DebianChroot.MainCardPanel = Ext.extend(Ext.Panel, {
                 deactivate: this.onDeactivate
             }
         }, config);
-        SYNOCOMMUNITY.DebianChroot.MainCardPanel.superclass.constructor.call(this, config)
+        FnOScommunity.DebianChroot.MainCardPanel.superclass.constructor.call(this, config)
     },
     onActivate: function (panel) {
         if (this.PanelOverview) {
@@ -386,7 +386,7 @@ SYNOCOMMUNITY.DebianChroot.MainCardPanel = Ext.extend(Ext.Panel, {
 });
 
 // FormPanel base
-SYNOCOMMUNITY.DebianChroot.FormPanel = Ext.extend(Ext.FormPanel, {
+FnOScommunity.DebianChroot.FormPanel = Ext.extend(Ext.FormPanel, {
     constructor: function (config) {
         config = Ext.apply({
             owner: null,
@@ -416,7 +416,7 @@ SYNOCOMMUNITY.DebianChroot.FormPanel = Ext.extend(Ext.FormPanel, {
             }
         }, config);
         SYNO.LayoutConfig.fill(config);
-        SYNOCOMMUNITY.DebianChroot.FormPanel.superclass.constructor.call(this, config);
+        FnOScommunity.DebianChroot.FormPanel.superclass.constructor.call(this, config);
         if (!this.owner instanceof SYNO.SDS.BaseWindow) {
             throw Error("please set the owner window of form");
         }
@@ -454,7 +454,7 @@ SYNOCOMMUNITY.DebianChroot.FormPanel = Ext.extend(Ext.FormPanel, {
 });
 
 // Overview panel
-SYNOCOMMUNITY.DebianChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.DebianChroot.FormPanel, {
+FnOScommunity.DebianChroot.PanelOverview = Ext.extend(FnOScommunity.DebianChroot.FormPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -496,13 +496,13 @@ SYNOCOMMUNITY.DebianChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.DebianChroot
                         value: ""
                     }, {
                         xtype: "button",
-                        id: "synocommunity-debianchroot-do_update",
+                        id: "FnOScommunity-debianchroot-do_update",
                         text: _V("ui", "do_update"),
                         handler: this.onClickUpdate,
                         scope: this
                     }, {
                         xtype: "button",
-                        id: "synocommunity-debianchroot-do_upgrade",
+                        id: "FnOScommunity-debianchroot-do_upgrade",
                         text: _V("ui", "do_upgrade"),
                         handler: this.onClickUpgrade,
                         scope: this
@@ -510,16 +510,16 @@ SYNOCOMMUNITY.DebianChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.DebianChroot
                 }]
             }],
             api: {
-                load: SYNOCOMMUNITY.DebianChroot.Remote.Overview.load
+                load: FnOScommunity.DebianChroot.Remote.Overview.load
             }
         }, config);
         SYNO.LayoutConfig.fill(config);
-        SYNOCOMMUNITY.DebianChroot.PanelOverview.superclass.constructor.call(this, config);
+        FnOScommunity.DebianChroot.PanelOverview.superclass.constructor.call(this, config);
     },
     onClickUpdate: function (button, event) {
         button.disable();
-        Ext.getCmp("synocommunity-debianchroot-do_upgrade").disable();
-        SYNOCOMMUNITY.DebianChroot.Remote.Overview.do_update(function (provider, response) {
+        Ext.getCmp("FnOScommunity-debianchroot-do_upgrade").disable();
+        FnOScommunity.DebianChroot.Remote.Overview.do_update(function (provider, response) {
             if (response.result !== false) {
                 this.getForm().findField("updates").setValue(response.result);
                 this.owner.setStatusOK({
@@ -532,13 +532,13 @@ SYNOCOMMUNITY.DebianChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.DebianChroot
                 });
             }
             button.enable();
-            Ext.getCmp("synocommunity-debianchroot-do_upgrade").enable();
+            Ext.getCmp("FnOScommunity-debianchroot-do_upgrade").enable();
         }, this);
     },
     onClickUpgrade: function (button, event) {
         button.disable();
-        Ext.getCmp("synocommunity-debianchroot-do_update").disable();
-        SYNOCOMMUNITY.DebianChroot.Remote.Overview.do_upgrade(function (provider, response) {
+        Ext.getCmp("FnOScommunity-debianchroot-do_update").disable();
+        FnOScommunity.DebianChroot.Remote.Overview.do_upgrade(function (provider, response) {
             if (response.result) {
                 this.getForm().findField("updates").setValue(0);
                 this.owner.setStatusOK({
@@ -551,18 +551,18 @@ SYNOCOMMUNITY.DebianChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.DebianChroot
                 });
             }
             button.enable();
-            Ext.getCmp("synocommunity-debianchroot-do_update").enable();
+            Ext.getCmp("FnOScommunity-debianchroot-do_update").enable();
         }, this);
     },
     onStatus: function (response) {
         this.getForm().findField("install_status").setValue(_V("ui", response.data.installed));
         this.getForm().findField("running_services").setValue(response.data.running_services);
         if (response.data.installed == "installing") {
-            Ext.getCmp("synocommunity-debianchroot-do_update").disable();
-            Ext.getCmp("synocommunity-debianchroot-do_upgrade").disable();
+            Ext.getCmp("FnOScommunity-debianchroot-do_update").disable();
+            Ext.getCmp("FnOScommunity-debianchroot-do_upgrade").disable();
         } else {
-            Ext.getCmp("synocommunity-debianchroot-do_update").enable();
-            Ext.getCmp("synocommunity-debianchroot-do_upgrade").enable();
+            Ext.getCmp("FnOScommunity-debianchroot-do_update").enable();
+            Ext.getCmp("FnOScommunity-debianchroot-do_upgrade").enable();
         }
     },
     onActivate: function () {
@@ -580,25 +580,25 @@ SYNOCOMMUNITY.DebianChroot.PanelOverview = Ext.extend(SYNOCOMMUNITY.DebianChroot
                         });
                     }
                     if (action.result.data.installed == "installing") {
-                        Ext.getCmp("synocommunity-debianchroot-do_update").disable();
-                        Ext.getCmp("synocommunity-debianchroot-do_upgrade").disable();
+                        Ext.getCmp("FnOScommunity-debianchroot-do_update").disable();
+                        Ext.getCmp("FnOScommunity-debianchroot-do_upgrade").disable();
                     }
                     this.getEl().unmask();
-                    SYNOCOMMUNITY.DebianChroot.Poller.connect();
+                    FnOScommunity.DebianChroot.Poller.connect();
                 }
             });
         } else {
-            SYNOCOMMUNITY.DebianChroot.Poller.connect();
+            FnOScommunity.DebianChroot.Poller.connect();
         }
     },
     onDeactivate: function () {
         Ext.Direct.un("status", this.onStatus, this);
-        SYNOCOMMUNITY.DebianChroot.Poller.disconnect();
+        FnOScommunity.DebianChroot.Poller.disconnect();
     }
 });
 
 // Services panel
-SYNOCOMMUNITY.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
+FnOScommunity.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -606,10 +606,10 @@ SYNOCOMMUNITY.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
             autoSave: false,
             fields: ["id", "name", "launch_script", "status_command", "status"],
             api: {
-                read: SYNOCOMMUNITY.DebianChroot.Remote.Services.read,
-                create: SYNOCOMMUNITY.DebianChroot.Remote.Services.create,
-                update: SYNOCOMMUNITY.DebianChroot.Remote.Services.update,
-                destroy: SYNOCOMMUNITY.DebianChroot.Remote.Services.destroy
+                read: FnOScommunity.DebianChroot.Remote.Services.read,
+                create: FnOScommunity.DebianChroot.Remote.Services.create,
+                update: FnOScommunity.DebianChroot.Remote.Services.update,
+                destroy: FnOScommunity.DebianChroot.Remote.Services.destroy
             },
             idProperty: "id",
             root: "data",
@@ -681,7 +681,7 @@ SYNOCOMMUNITY.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
                 }
             }]
         }, config);
-        SYNOCOMMUNITY.DebianChroot.PanelServices.superclass.constructor.call(this, config);
+        FnOScommunity.DebianChroot.PanelServices.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         if (!this.loaded) {
@@ -690,11 +690,11 @@ SYNOCOMMUNITY.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
         }
     },
     onClickAdd: function () {
-        var editor = new SYNOCOMMUNITY.DebianChroot.ServiceEditorWindow({}, this.store);
+        var editor = new FnOScommunity.DebianChroot.ServiceEditorWindow({}, this.store);
         editor.open()
     },
     onClickEdit: function () {
-        var editor = new SYNOCOMMUNITY.DebianChroot.ServiceEditorWindow({}, this.store, this.getSelectionModel().getSelected());
+        var editor = new FnOScommunity.DebianChroot.ServiceEditorWindow({}, this.store, this.getSelectionModel().getSelected());
         editor.open()
     },
     onClickDelete: function () {
@@ -706,7 +706,7 @@ SYNOCOMMUNITY.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
     },
     onClickStart: function () {
         this.getSelectionModel().each(function (record) {
-            SYNOCOMMUNITY.DebianChroot.Remote.Services.start(record.id, function (provider, response) {
+            FnOScommunity.DebianChroot.Remote.Services.start(record.id, function (provider, response) {
                 if (response.result) {
                     record.set("status", true);
                     record.commit();
@@ -716,7 +716,7 @@ SYNOCOMMUNITY.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
     },
     onClickStop: function () {
         this.getSelectionModel().each(function (record) {
-            SYNOCOMMUNITY.DebianChroot.Remote.Services.stop(record.id, function (provider, response) {
+            FnOScommunity.DebianChroot.Remote.Services.stop(record.id, function (provider, response) {
                 if (response.result) {
                     record.set("status", false);
                     record.commit();
@@ -730,12 +730,12 @@ SYNOCOMMUNITY.DebianChroot.PanelServices = Ext.extend(Ext.grid.GridPanel, {
 });
 
 // Service window
-SYNOCOMMUNITY.DebianChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
+FnOScommunity.DebianChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
     title: _V("ui", "service"),
     constructor: function (config, store, record) {
         this.store = store;
         this.record = record;
-        this.panel = new SYNOCOMMUNITY.DebianChroot.PanelServiceEditor({}, record);
+        this.panel = new FnOScommunity.DebianChroot.PanelServiceEditor({}, record);
         config = Ext.apply(config, {
             width: 550,
             height: 210,
@@ -752,7 +752,7 @@ SYNOCOMMUNITY.DebianChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow
                 handler: this.onClickClose
             }]
         })
-        SYNOCOMMUNITY.DebianChroot.ServiceEditorWindow.superclass.constructor.call(this, config);
+        FnOScommunity.DebianChroot.ServiceEditorWindow.superclass.constructor.call(this, config);
     },
     onClickApply: function () {
         if (this.record === undefined) {
@@ -778,7 +778,7 @@ SYNOCOMMUNITY.DebianChroot.ServiceEditorWindow = Ext.extend(SYNO.SDS.ModalWindow
 });
 
 // Service panel
-SYNOCOMMUNITY.DebianChroot.PanelServiceEditor = Ext.extend(SYNOCOMMUNITY.DebianChroot.FormPanel, {
+FnOScommunity.DebianChroot.PanelServiceEditor = Ext.extend(FnOScommunity.DebianChroot.FormPanel, {
     constructor: function (config, record) {
         this.record = record;
         config = Ext.apply({
@@ -801,7 +801,7 @@ SYNOCOMMUNITY.DebianChroot.PanelServiceEditor = Ext.extend(SYNOCOMMUNITY.DebianC
                 name: "status_command"
             }]
         }, config);
-        SYNOCOMMUNITY.DebianChroot.PanelServiceEditor.superclass.constructor.call(this, config);
+        FnOScommunity.DebianChroot.PanelServiceEditor.superclass.constructor.call(this, config);
         if (this.record !== undefined) {
             this.loadRecord();
         }

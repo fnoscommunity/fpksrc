@@ -11,7 +11,7 @@ ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 SPK_VERS = 0.20.18
 endif
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A modern replacement for 'ls'.
 STARTABLE = no
 

@@ -6,7 +6,7 @@ DEPENDS = cross/gdu
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Fast disk usage analyzer with console interface written in Go.
 STARTABLE = no
 

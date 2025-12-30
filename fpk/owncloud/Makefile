@@ -12,7 +12,7 @@ SPK_DEPENDS = WebStation:PHP7.4:MariaDB10:Apache2.4:redis
 # SRM is not supported due lacking webstation, php, mariadb and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = ownCloud is a personal cloud which runs on your own server and gives you freedom and control over your own data.
 DISPLAY_NAME = ownCloud
 CHANGELOG = "1. Update ownCloud to 10.16.0."

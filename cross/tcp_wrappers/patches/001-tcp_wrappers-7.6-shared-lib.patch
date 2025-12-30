@@ -1,5 +1,5 @@
 # inspired by  http://www.linuxfromscratch.org/patches/blfs/5.1/tcp_wrappers-7.6-shared-lib-plus-plus.patch
-# adjusted for SynoCommunity
+# adjusted for FnOScommunity
 # - relocate patch file ro source path
 # - avoid patch and installation of man pages
 # - limit patch to linux target

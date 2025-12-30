@@ -15,7 +15,7 @@ HELPURL = https://github.com/filebrowser/filebrowser/issues
 LICENSE = Apache 2.0
 CHANGELOG = "1. Update filebrowser to v2.32.0.<br/>2. Built with go v1.24 and node v22."
 
-GROUP = synocommunity
+GROUP = FnOScommunity
 
 WIZARDS_DIR = src/wizard/
 

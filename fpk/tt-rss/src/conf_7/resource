@@ -51,7 +51,7 @@
         "portals": [
             {
                 "alias": "tt-rss",
-                "app": "com.synocommunity.packages.tt-rss",
+                "app": "com.FnOScommunity.packages.tt-rss",
                 "name": "Tiny Tiny RSS",
                 "service": "tt-rss",
                 "type": "alias"

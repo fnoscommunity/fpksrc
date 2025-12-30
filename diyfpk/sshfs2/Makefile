@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/sshfs2
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = sshfs is a network filesystem client to connect to SSH servers.
 DISPLAY_NAME = sshfs
 STARTABLE = no

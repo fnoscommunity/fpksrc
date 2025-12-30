@@ -30,7 +30,7 @@
         "portals": [
             {
                 "alias": "roundcube",
-                "app": "com.synocommunity.packages.roundcube",
+                "app": "com.FnOScommunity.packages.roundcube",
                 "name": "Roundcube Webmail",
                 "service": "roundcube",
                 "type": "alias"

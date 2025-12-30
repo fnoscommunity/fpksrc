@@ -10,7 +10,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
 BETA = 1
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Monit is a small Open Source utility for managing and monitoring Unix systems. Monit conducts automatic maintenance and repair and can execute meaningful causal actions in error situations.
 DISPLAY_NAME = Monit
 CHANGELOG = "1. Update monit to v5.34.4 <br/>2. Update OpenSSL to v3.1.7."

@@ -1,7 +1,7 @@
 
 # Package
 SC_DNAME="MantisBT"
-SC_PKG_PREFIX="com-synocommunity-packages-"
+SC_PKG_PREFIX="com-FnOScommunity-packages-"
 SC_PKG_NAME="${SC_PKG_PREFIX}${SYNOPKG_PKGNAME}"
 
 # Others

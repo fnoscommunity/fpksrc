@@ -5,7 +5,7 @@ SPK_ICON = src/rmlint-logo.png
 
 DEPENDS = cross/rmlint
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = rmlint finds space waste and other broken things on your filesystem and offers to remove it.
 STARTABLE = no
 

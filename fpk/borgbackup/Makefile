@@ -37,7 +37,7 @@ WHEELS = src/requirements-crossenv.txt src/requirements-pure.txt
 # Force building pure-python wheels (issue #5204)
 WHEELS_PURE_PYTHON_PACKAGING_ENABLE = 1
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = BorgBackup \(short: Borg\) is a deduplicating backup program. Optionally, it supports compression and authenticated encryption. This package includes emborg \(a Borg frontend\) and borgmatic \(simple, configuration-driven backup software for servers and workstations\).
 
 DISPLAY_NAME = Borg

@@ -5,7 +5,7 @@ SPK_ICON = src/gnu-logo.png
 
 DEPENDS = cross/less
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Less is a terminal pager.
 DISPLAY_NAME = Less
 STARTABLE = no

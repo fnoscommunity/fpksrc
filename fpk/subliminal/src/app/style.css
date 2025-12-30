@@ -25,62 +25,62 @@ body.ext-ie6 .x-superboxselect-item {margin: 2px 1px 2px 1px; line-height: 1.2em
 .x-item-disabled .x-superboxselect-item-close{ background-position: left -36px}
 
 /* List view customized style */
-.synocommunity-subliminal-list {
+.FnOScommunity-subliminal-list {
 	background-color: #E1ECFA !important;
 }
 
-.synocommunity-subliminal-list .x-list-selected {
+.FnOScommunity-subliminal-list .x-list-selected {
 	background-image: url(images/list_item_active.png);
 	background-position: right top;
 	color: #FFF;
 }
-.synocommunity-subliminal-list .x-list-over {
+.FnOScommunity-subliminal-list .x-list-over {
 	background-image: url(images/list_item_hover.png);
 	background-position: right top;
 	color: #FFF;
 }
 
-.synocommunity-subliminal-list-column div {
+.FnOScommunity-subliminal-list-column div {
 	background-repeat: no-repeat;
 	padding-left: 20px;
 	height: 16px;
 	line-height: 16px;
 }
 
-.synocommunity-subliminal .synocommunity-subliminal-list .x-panel-body {
+.FnOScommunity-subliminal .FnOScommunity-subliminal-list .x-panel-body {
 	background-color: #E1ECFA;
-	background-image: url(images/synocommunity.png);
+	background-image: url(images/FnOScommunity.png);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 /* List view icons */
-.synocommunity-subliminal-list-parameters {
+.FnOScommunity-subliminal-list-parameters {
 	background-image: url(images/parameters.png);
 	margin-left: 16px;
 }
-.synocommunity-subliminal-list-directories {
+.FnOScommunity-subliminal-list-directories {
 	background-image: url(images/directories.png);
 	margin-left: 16px;
 }
 
 /* Titles */
-.synocommunity-subliminal-list-column div.synocommunity-subliminal-list-console_title {
+.FnOScommunity-subliminal-list-column div.FnOScommunity-subliminal-list-console_title {
 	margin-top: 8px;
 	padding-left: 0;
 	color: #003C66 !important;
 	font-weight: bold;
 }
 
-.x-list-over .synocommunity-subliminal-list-column div.synocommunity-subliminal-list-console_title {
+.x-list-over .FnOScommunity-subliminal-list-column div.FnOScommunity-subliminal-list-console_title {
 	cursor: default;
 }
 
-.synocommunity-subliminal-compositefield-button {
+.FnOScommunity-subliminal-compositefield-button {
     left: auto;
     right: 0;
 }
 
-.ext-ie8 .synocommunity-subliminal .x-toolbar-cell .x-form-field-trigger-wrap .x-form-trigger {
+.ext-ie8 .FnOScommunity-subliminal .x-toolbar-cell .x-form-field-trigger-wrap .x-form-trigger {
 	right: auto
 }

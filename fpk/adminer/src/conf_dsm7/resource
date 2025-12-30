@@ -31,7 +31,7 @@
         "type": "alias",
         "name": "Adminer",
         "alias": "adminer",
-        "app": "com.synocommunity.packages.adminer"
+        "app": "com.FnOScommunity.packages.adminer"
       }
     ],
     "pkg_dir_prepare": [

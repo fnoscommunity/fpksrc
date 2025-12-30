@@ -11,8 +11,8 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 # cross/mediainfo:
 UNSUPPORTED_ARCHS += $(ARMv5_ARCHS)
 
-MAINTAINER = SynoCommunity
-MAINTAINER_URL = https://synocommunity.com/
+MAINTAINER = FnOScommunity
+MAINTAINER_URL = https://FnOScommunity.com/
 DESCRIPTION = Sonarr is a PVR for newsgroup and torrent users. It can monitor multiple RSS feeds for new episodes of your favourite shows and will grab, sorts and rename them. It can also be configured to automatically upgrade the quality of files already downloaded if a better quality format becomes available.
 DESCRIPTION_FRE = Sonarr est un PVR pour les utilisateurs de groupes de discussion et torrents. Il peut surveiller plusieurs flux RSS pour les nouveaux épisodes de vos séries préférées et saisira, sortes et les renomme. Il peut également être configuré pour mettre à jour automatiquement la qualité des fichiers déjà téléchargés si un meilleur format de qualité devient disponible.
 DESCRIPTION_SPN = Sonarr es un PVR para los usuarios de grupos de noticias y torrents. Se puede controlar múltiples canales RSS para nuevos episodios de sus programas favoritos y se agarra, tipo y les cambia el nombre. También puede ser configurado para actualizar automáticamente la calidad de los archivos ya descargados si un formato de mejor calidad disponible.
@@ -42,7 +42,7 @@ USE_ALTERNATE_TMPDIR = 1
 include ../../mk/spksrc.spk.mk
 
 PACKAGE_VERSION = $(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
-PACKAGE_AUTHOR = [SynoCommunity](https://synocommunity.com)
+PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com)
 
 .PHONY: sonarr_extra_install
 sonarr_extra_install:

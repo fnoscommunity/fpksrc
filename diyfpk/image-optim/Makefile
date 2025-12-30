@@ -11,7 +11,7 @@ endif
 
 DEPENDS += cross/jpegoptim cross/pngcrush cross/advancecomp
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Several utilities for image optimization \(pngquant, jpegoptim, pngcrush, advancecomp\)
 DISPLAY_NAME = Image Optimizers
 STARTABLE = no

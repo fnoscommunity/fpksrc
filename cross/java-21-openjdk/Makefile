@@ -71,9 +71,9 @@ CONFIGURE_ARGS += --with-extra-ldflags="$(LDFLAGS) -Xlinker -z -Xlinker relro -X
 CONFIGURE_ARGS += --disable-manpages
 # Disable all GUI related
 CONFIGURE_ARGS += --enable-headless-only
-# customize for SynoCommunity
-CONFIGURE_ARGS += --with-vendor-name=SynoCommunity
-CONFIGURE_ARGS += --with-vendor-url=https://synocommunity.com/package/java-21-openjdk
+# customize for FnOScommunity
+CONFIGURE_ARGS += --with-vendor-name=FnOScommunity
+CONFIGURE_ARGS += --with-vendor-url=https://FnOScommunity.com/package/java-21-openjdk
 CONFIGURE_ARGS += --with-vendor-bug-url=https://github.com/fnoscommunity/fpksrc/issues
 CONFIGURE_ARGS += --with-vendor-vm-bug-url=https://github.com/fnoscommunity/fpksrc/issues
 

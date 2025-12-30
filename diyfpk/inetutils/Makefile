@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/inetutils
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = GNU network utilities.
 STARTABLE = no
 

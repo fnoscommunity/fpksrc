@@ -1,6 +1,6 @@
 {
     ".url": {
-        "com.synocommunity.packages.roundcube": {
+        "com.FnOScommunity.packages.roundcube": {
             "title": "Roundcube",
             "desc": "Roundcube Webmail",
             "icon": "images/roundcube-{0}.png",

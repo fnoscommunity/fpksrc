@@ -11,7 +11,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS) $(ARMv5_ARCHS) $(ARMv7L_ARCHS)
 # SRM 1.2 toolchains fail to build wheel pyzmq
 REQUIRED_MIN_SRM = 1.3
 
-MAINTAINER   = SynoCommunity
+MAINTAINER   = FnOScommunity
 DESCRIPTION  = Salt, a new approach to infrastructure management, is easy enough to get running in minutes, scalable enough to manage tens of thousands of servers, and fast enough to communicate with those servers in seconds.
 DISPLAY_NAME = Salt Minion
 CHANGELOG    = "1. Update to 3007.3"

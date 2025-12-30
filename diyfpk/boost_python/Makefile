@@ -5,7 +5,7 @@ SPK_REV = 1
 BUILD_DEPENDS = cross/python310
 DEPENDS = cross/boost
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Makefile to build boost-python library.
 STARTABLE = no
 

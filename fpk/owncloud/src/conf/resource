@@ -15,7 +15,7 @@
 		}],
 		"portals": [{
 			"alias": "owncloud",
-			"app": "com.synocommunity.packages.owncloud",
+			"app": "com.FnOScommunity.packages.owncloud",
 			"display_name": "ownCloud",
 			"name": "ownCloud",
 			"service": "ownCloud",

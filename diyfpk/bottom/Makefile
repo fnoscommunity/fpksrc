@@ -13,7 +13,7 @@ DEPENDS = cross/bottom
 endif
 
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A customizable cross-platform graphical process/system monitor for the terminal.
 STARTABLE = no
 

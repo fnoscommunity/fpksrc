@@ -12,7 +12,7 @@
     "portals": [
       {
         "alias": "phpmemcachedadmin",
-        "app": "com.synocommunity.packages.phpmemcachedadmin",
+        "app": "com.FnOScommunity.packages.phpmemcachedadmin",
         "name": "PHP Memcached Admin",
         "service": "phpmemcachedadmin",
         "type": "alias"

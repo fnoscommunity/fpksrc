@@ -6,7 +6,7 @@ DSM_UI_DIR = app
 
 DEPENDS  = cross/jappix
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Jappix, a full-featured XMPP web-client \(Jappix Desktop, Jappix Mobile \& Jappix Mini\). Jappix is a fresh new open social platform which enables you to create your own cloud, wherever you want to. People must be able to get in touch with all their friends on a free decentralized network!
 ADMIN_URL = /jappix/
 STARTABLE = no

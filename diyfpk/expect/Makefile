@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/expect
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect is also useful for testing these same applications.
 STARTABLE = no
 

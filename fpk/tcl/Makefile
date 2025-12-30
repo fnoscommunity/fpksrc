@@ -8,8 +8,8 @@ DEPENDS = cross/tcl
 
 MAINTAINER      = Tcl developer Xchange
 MAINTAINER_URL  = https://www.tcl.tk/
-DISTRIBUTOR     = SynoCommunity
-DISTRIBUTOR_URL = https://synocommunity.com/
+DISTRIBUTOR     = FnOScommunity
+DISTRIBUTOR_URL = https://FnOScommunity.com/
 HELPURL         = https://www.tcl.tk/doc/
 
 DESCRIPTION = "Tcl \(Tool Command Language\) is a very powerful but easy to learn dynamic programming language, suitable for a very wide range of uses, including web and desktop applications, networking, administration, testing and many more. Open source and business-friendly, Tcl is a mature yet evolving language that is truly cross platform, easily deployed and highly extensible."

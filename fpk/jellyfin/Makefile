@@ -13,7 +13,7 @@ SPK_DEPENDS = "ffmpeg7"
 # x64 and armv8 archs are supported only.
 UNSUPPORTED_ARCHS = $(32bit_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = "The Free Software Media System. It is an alternative to the proprietary Emby and Plex."
 DISPLAY_NAME = Jellyfin
 CHANGELOG = "1. Update jellyfin to 10.11.5<br/>2. Built with dotnet 9.0.10 and nodejs 22.21.1"

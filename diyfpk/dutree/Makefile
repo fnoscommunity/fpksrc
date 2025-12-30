@@ -6,7 +6,7 @@ DEPENDS = cross/dutree
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A tool to analyze file system usage written in Rust.
 DISPLAY_NAME = $(SPK_NAME)
 STARTABLE = no

@@ -6,7 +6,7 @@ DEPENDS = cross/sshfs3
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = sshfs is a network filesystem client to connect to SSH servers.
 DISPLAY_NAME = sshfs
 STARTABLE = no

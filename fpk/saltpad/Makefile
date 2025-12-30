@@ -8,7 +8,7 @@ DEPENDS =
 WHEELS = src/requirements.txt
 SPK_DEPENDS = "python>=2.7.9-12:salt-master"
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A gui and cli to manage saltstack deployments 
 CHANGELOG = "1. Use saltpad_v1 branch \(latest python version\)<br/>2. Update dependencies"
 

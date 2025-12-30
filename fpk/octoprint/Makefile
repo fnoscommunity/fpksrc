@@ -13,7 +13,7 @@ WHEELS = src/requirements-crossenv.txt src/requirements-pure.txt
 # Required for PyYAML
 DEPENDS += cross/libyaml
 
-MAINTAINER   = SynoCommunity
+MAINTAINER   = FnOScommunity
 DESCRIPTION  = The snappy web interface for your 3D printer.
 SERVICE_PORT = 8088
 ADMIN_PORT   = $(SERVICE_PORT)

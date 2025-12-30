@@ -5,7 +5,7 @@ SPK_ICON = src/memcached.png
 
 DEPENDS = cross/memcached
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Memcached is a high-performance, distributed memory object caching system, generic in nature, but originally intended for use in speeding up dynamic web applications by alleviating database load.
 DISPLAY_NAME = Memcached
 CHANGELOG = "1. Update Memcached to v1.6.39."

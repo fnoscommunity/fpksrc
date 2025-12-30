@@ -16,7 +16,7 @@ OPTIONAL_DEPENDS += cross/mergerfs
 OPTIONAL_DEPENDS += cross/gpart
 OPTIONAL_DEPENDS += cross/dar
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DISPLAY_NAME = SynoCli Disk Tools
 
 OPTIONAL_DESC =

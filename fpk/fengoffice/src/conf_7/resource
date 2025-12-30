@@ -30,7 +30,7 @@
         "portals": [
             {
                 "alias": "fengoffice",
-                "app": "com.synocommunity.packages.fengoffice",
+                "app": "com.FnOScommunity.packages.fengoffice",
                 "name": "Feng Office",
                 "service": "fengoffice",
                 "type": "alias"

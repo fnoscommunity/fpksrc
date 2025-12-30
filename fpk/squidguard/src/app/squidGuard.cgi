@@ -2,7 +2,7 @@
 #
 # Explain to the user that the URL is blocked and by which rule set
 #
-# Original by Pål Baltzersen 1999 (pal.baltzersen@ost.eltele.no)
+# Original by Pï¿½l Baltzersen 1999 (pal.baltzersen@ost.eltele.no)
 # French texts thanks to Fabrice Prigent (fabrice.prigent@univ-tlse1.fr)
 # Dutch texts thanks to Anneke Sicherer-Roetman (sicherer@sichemsoft.nl)
 # German texts thanks to Buergernetz Pfaffenhofen (http://www.bn-paf.de/filter/)
@@ -83,8 +83,8 @@ $autoinaddr  = 2;			# 0|1|2;
 					# 2 TO AUTORESOLVE & REDIRECT TO FIRST NAME
 
 # You may wish to enter your company link and logo to be displayed on the page
-my $company = "SynoCommunity";
-my $companylogo = "synocommunity.png";
+my $company = "FnOScommunity";
+my $companylogo = "FnOScommunity.png";
 
 my $squidguard = "http://www.squidguard.org";
 my $squidguardlogo = "http://www.squidguard.org/Logos/squidGuard.gif";

@@ -5,7 +5,7 @@ SPK_ICON = src/davfs2.png
 
 DEPENDS = cross/davfs2
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Mount a WebDAV resource as a regular file system.
 STARTABLE = no
 

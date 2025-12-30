@@ -11,7 +11,7 @@ REQUIRED_MIN_DSM = 5.0
 # For details see: https://github.com/fnoscommunity/fpksrc/issues/3470#issuecomment-469391052
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Cross platform, open source .NET development framework.
 DISPLAY_NAME = Mono
 STARTABLE = no

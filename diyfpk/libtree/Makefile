@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/libtree
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A tool that turns ldd into a tree and explains how shared libraries are found or why they cannot be located.
 DISPLAY_NAME = libtree
 STARTABLE = no

@@ -5,7 +5,7 @@ SPK_ICON = src/jupp.png
 
 DEPENDS = cross/jupp
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = text editor jupp comes with the editor flavours known from joe, specifically, jmacs, joe, jpico, jstar, and rjoe.
 DESCRIPTION_GER = jupp ist ein Editor mit den joe Benutzeroberflächen für emacs, joe, pico, Wordstar und jupp-Benutzeroberfläche.
 

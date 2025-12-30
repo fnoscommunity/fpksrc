@@ -10,7 +10,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS) $(ARMv5_ARCHS)
 PYTHON_PACKAGE = python312
 SPK_DEPENDS = "$(PYTHON_PACKAGE)"
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION =  Collection of programs for the Python 3.12 programming language.
 DESCRIPTION_FRE = Collection of programs for the Python 3.12 programming language.
 DESCRIPTION_SPN = Colección de programas para el lenguaje de programación Python 3.12.

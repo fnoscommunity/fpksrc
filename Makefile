@@ -177,9 +177,9 @@ dsm-%: local.mk
 	@echo "Setting default toolchain version to DSM-$*"
 	@grep -q "^DEFAULT_TC.*=.*$*.*" local.mk || sed -i "/^DEFAULT_TC =/s/$$/ $*/" local.mk
 
-setup-synocommunity: setup
-	@sed -i -e "s|PUBLISH_URL\s*=.*|PUBLISH_URL = https://api.synocommunity.com|" \
-		-e "s|DISTRIBUTOR\s*=.*|DISTRIBUTOR = SynoCommunity|" \
-		-e "s|DISTRIBUTOR_URL\s*=.*|DISTRIBUTOR_URL = https://synocommunity.com|" \
+setup-FnOScommunity: setup
+	@sed -i -e "s|PUBLISH_URL\s*=.*|PUBLISH_URL = https://api.FnOScommunity.com|" \
+		-e "s|DISTRIBUTOR\s*=.*|DISTRIBUTOR = FnOScommunity|" \
+		-e "s|DISTRIBUTOR_URL\s*=.*|DISTRIBUTOR_URL = https://FnOScommunity.com|" \
 		-e "s|REPORT_URL\s*=.*|REPORT_URL = https://github.com/fnoscommunity/fpksrc/issues|" \
 		local.mk

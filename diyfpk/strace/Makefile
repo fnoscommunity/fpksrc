@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/strace
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = strace is a diagnostic, debugging and instructional userspace utility for Linux.
 DISPLAY_NAME = strace
 STARTABLE = no

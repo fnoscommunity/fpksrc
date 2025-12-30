@@ -12,8 +12,8 @@ DOTNET_CORE_ARCHS = 1
 REQUIRED_MIN_DSM = 7.0
 REQUIRED_MIN_SRM = 1.3
 
-MAINTAINER = SynoCommunity
-MAINTAINER_URL = https://synocommunity.com/
+MAINTAINER = FnOScommunity
+MAINTAINER_URL = https://FnOScommunity.com/
 DESCRIPTION  = Kavita is a fast, feature rich, cross platform reading server. Built with a focus for being a full solution for all your reading needs.
 CHANGELOG = "Update Kavita to v0.8.8.3"
 DISPLAY_NAME = Kavita

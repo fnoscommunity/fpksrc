@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/lsof
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = lsof is a command listing open files.
 STARTABLE = no
 

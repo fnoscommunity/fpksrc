@@ -20,7 +20,7 @@
 #                               Note that all synocoummunity packages use lowercase names.
 #                               This enables to have concurrent packages with synology.com, that use
 #                               package names starting with upper case letters.
-#                               (e.g. Mono => synology.com, mono => synocommunity.com)
+#                               (e.g. Mono => synology.com, mono => FnOScommunity.com)
 #  SPK_FILE_NAME                The full spk name with folder, package name, arch, tc- and package version.
 #  SPK_CONTENT                  List of files and folders that are added to package.tgz within the spk file.
 #  DSM_SCRIPT_FILES             List of script files that are in the scripts folder within the spk file.
@@ -161,7 +161,7 @@ ifeq ($(strip $(DISABLE_GITHUB_MAINTAINER)),)
 get_github_maintainer_url = $(shell wget --quiet --spider https://github.com/$(1) && echo "https://github.com/$(1)" || echo "")
 get_github_maintainer_name = $(shell curl -s -H application/vnd.github.v3+json https://api.github.com/users/$(1) | jq -r '.name' | sed -e 's|null||g' | sed -e 's|^$$|$(1)|g' )
 else
-get_github_maintainer_url = "https://github.com/SynoCommunity"
+get_github_maintainer_url = "https://github.com/FnOScommunity"
 get_github_maintainer_name = $(MAINTAINER)
 endif
 
@@ -258,7 +258,7 @@ endif
 ifneq ($(strip $(DSM_APP_NAME)),)
 	@echo dsmappname=\"$(DSM_APP_NAME)\" >> $@
 else
-	@echo dsmappname=\"com.synocommunity.packages.$(SPK_NAME)\" >> $@
+	@echo dsmappname=\"com.FnOScommunity.packages.$(SPK_NAME)\" >> $@
 endif
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 ifneq ($(strip $(DSM_APP_PAGE)),)

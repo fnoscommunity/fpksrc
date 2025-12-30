@@ -10,7 +10,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 CHANGELOG = "1. Update to v3.4.5."
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Ruby Programming Language.
 DESCRIPTION_FRE = Langage de programmation Ruby.
 DESCRIPTION_SPN = Lenguaje de programación Ruby.

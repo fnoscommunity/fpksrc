@@ -1,7 +1,7 @@
 Contributing
 ============
 
-You can contribute to spksrc and SynoCommunity in several ways. Apart from reporting bugs, adding suggestions or requesting new packages, you can open Pull Requests to add new packages or to improve existing packages. If you're good at writing, help out with adding and updating documentation. Lastly, donations towards maintaining the SynoCommunity repository infrastructure are much appreciated.
+You can contribute to spksrc and FnOScommunity in several ways. Apart from reporting bugs, adding suggestions or requesting new packages, you can open Pull Requests to add new packages or to improve existing packages. If you're good at writing, help out with adding and updating documentation. Lastly, donations towards maintaining the FnOScommunity repository infrastructure are much appreciated.
 For other suggestions, open an issue so it can be discussed.
 
 
@@ -44,7 +44,7 @@ Package Requests
 ----------------
 You can request new packages via a Package Request.
 
-Note that opening a request does not mean it will be honored, so please do not ask for ETA's. SynoCommunity is a community effort where anyone can contribute, even you!
+Note that opening a request does not mean it will be honored, so please do not ask for ETA's. FnOScommunity is a community effort where anyone can contribute, even you!
 You can show your support with a +1, or by adding a bounty via Bountysource.
 
 Before opening a Package Request, make sure that there are no existing requests for the same software.
@@ -66,7 +66,7 @@ Content:
 
 Pull requests
 ----------
-Pull requests to add packages to the [SynoCommunity repository](https://synocommunity.com) are always welcome, as are improvements to the spksrc framework or existing packages.
+Pull requests to add packages to the [FnOScommunity repository](https://FnOScommunity.com) are always welcome, as are improvements to the spksrc framework or existing packages.
 
 Please create a new branch before pulling your request and avoid using the master branch. Pay attention on [How to make a clean pull request](https://github.com/MarcDiethelm/contributing/blob/master/README.md).
 

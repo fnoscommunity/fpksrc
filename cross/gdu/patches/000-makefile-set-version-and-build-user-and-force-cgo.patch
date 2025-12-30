@@ -1,5 +1,5 @@
 # - make version configurable to build target from source instead from git clone
-# - set build user to 'SynoCommunity'
+# - set build user to 'FnOScommunity'
 # - revert https://github.com/dundee/gdu/commit/c4db1104dd3c25124a5ea01da91b1400d091ccd7
 #   - build with CGO_ENABLED=1
 #   - remove 'static' linker flag
@@ -22,7 +22,7 @@
 +LDFLAGS := -s -w \
  	-X '$(PACKAGE)/build.Version=$(VERSION)' \
 -	-X '$(PACKAGE)/build.User=$(shell id -u -n)' \
-+	-X '$(PACKAGE)/build.User=SynoCommunity' \
++	-X '$(PACKAGE)/build.User=FnOScommunity' \
  	-X '$(PACKAGE)/build.Time=$(shell LC_ALL=en_US.UTF-8 date)'
  TAR := tar
  ifeq ($(shell uname -s),Darwin)

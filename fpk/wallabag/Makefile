@@ -12,7 +12,7 @@ REQUIRED_MIN_DSM = 6.0
 # SRM is not supported due lacking webstation, php, mariadb and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Wallabag is a self hostable application allowing you to save an offline copy of your favorite articles. Click, save, read it when you can. It extracts content so that you can read it when you have time.
 DISPLAY_NAME = Wallabag
 CHANGELOG = "1. Update to v2.6.14.<br/>2. Adjust PHP dependency per DSM version."

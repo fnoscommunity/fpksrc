@@ -9,7 +9,7 @@ SPK_ICON = src/java-11-openjdk.png
 
 DEPENDS = cross/java-11-openjdk
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = OpenJDK version $(JAVA_VERSION)+$(JAVA_RELEASE). OpenJDK 11 is the open-source reference implementation of version 11 of the Java SE Platform as specified by by JSR 384 in the Java Community Process.
 STARTABLE = no
 DISPLAY_NAME = Java 11 OpenJDK

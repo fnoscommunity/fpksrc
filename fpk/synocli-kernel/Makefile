@@ -11,7 +11,7 @@ DISPLAY_NAME  = SynoCli Kernel Tools
 STARTABLE     = no
 CHANGELOG     = "1. Add support for r1000 arch"
 
-HOMEPAGE = https://synocommunity.com/
+HOMEPAGE = https://FnOScommunity.com/
 LICENSE  = Each tool is licensed under it\'s respective license.
 
 SPK_LINKS     = /usr/local/bin/synocli-kernelmodule:bin/synocli-kernelmodule.sh

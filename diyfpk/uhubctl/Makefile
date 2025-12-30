@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/uhubctl
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = USB hub per-port power control.
 STARTABLE = no
 

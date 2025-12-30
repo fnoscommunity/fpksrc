@@ -6,8 +6,8 @@ DSM_UI_DIR = app
 
 OPTIONAL_DEPENDS = cross/jackett cross/jackett-mono cross/libstdc++ cross/curl 
 
-MAINTAINER = SynoCommunity
-MAINTAINER_URL = https://synocommunity.com/
+MAINTAINER = FnOScommunity
+MAINTAINER_URL = https://FnOScommunity.com/
 DESCRIPTION = "Jackett works as a proxy server. It translates queries from apps into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software. Jackett is a single repository of maintained indexer scraping and translation logic - removing the burden from other apps."
 CHANGELOG = "1. Update Jackett to 0.24.478."
 DISPLAY_NAME = Jackett

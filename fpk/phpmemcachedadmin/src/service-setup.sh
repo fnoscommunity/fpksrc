@@ -1,7 +1,7 @@
 
 # Package
 SC_DNAME="PHPMemcachedAdmin"
-SC_PKG_PREFIX="com-synocommunity-packages-"
+SC_PKG_PREFIX="com-FnOScommunity-packages-"
 SC_PKG_NAME="${SC_PKG_PREFIX}${SYNOPKG_PKGNAME}"
 SVC_KEEP_LOG=y
 SVC_BACKGROUND=y

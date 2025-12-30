@@ -1,6 +1,6 @@
 {
     "gentoo-chroot.js": {
-        "SYNOCOMMUNITY.GentooChroot.AppInstance": {
+        "FnOScommunity.GentooChroot.AppInstance": {
             "type": "app",
             "title": "app:app_name",
             "version": "0.1",
@@ -8,24 +8,24 @@
             "texts": "texts",
             "allowMultiInstance": false,
             "allUsers": false,
-            "appWindow": "SYNOCOMMUNITY.GentooChroot.AppWindow",
-            "depend": ["SYNOCOMMUNITY.GentooChroot.AppWindow"]
+            "appWindow": "FnOScommunity.GentooChroot.AppWindow",
+            "depend": ["FnOScommunity.GentooChroot.AppWindow"]
         },
-        "SYNOCOMMUNITY.GentooChroot.AppWindow": {
+        "FnOScommunity.GentooChroot.AppWindow": {
             "type": "lib",
             "title": "app:app_name",
             "icon": "images/gentoo-chroot-{0}.png",
             "texts": "texts",
-            "depend": ["SYNOCOMMUNITY.GentooChroot.ListView", "SYNOCOMMUNITY.GentooChroot.MainCardPanel"]
+            "depend": ["FnOScommunity.GentooChroot.ListView", "FnOScommunity.GentooChroot.MainCardPanel"]
         },
-        "SYNOCOMMUNITY.GentooChroot.ListView": [],
-        "SYNOCOMMUNITY.GentooChroot.MainCardPanel": {
-            "depend": ["SYNOCOMMUNITY.GentooChroot.PanelOverview", "SYNOCOMMUNITY.GentooChroot.PanelServices"]
+        "FnOScommunity.GentooChroot.ListView": [],
+        "FnOScommunity.GentooChroot.MainCardPanel": {
+            "depend": ["FnOScommunity.GentooChroot.PanelOverview", "FnOScommunity.GentooChroot.PanelServices"]
         },
-        "SYNOCOMMUNITY.GentooChroot.PanelOverview": [],
-        "SYNOCOMMUNITY.GentooChroot.PanelServices": {
-            "depend": ["SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow"]
+        "FnOScommunity.GentooChroot.PanelOverview": [],
+        "FnOScommunity.GentooChroot.PanelServices": {
+            "depend": ["FnOScommunity.GentooChroot.ServiceEditorWindow"]
         },
-        "SYNOCOMMUNITY.GentooChroot.ServiceEditorWindow": []
+        "FnOScommunity.GentooChroot.ServiceEditorWindow": []
     }
 }

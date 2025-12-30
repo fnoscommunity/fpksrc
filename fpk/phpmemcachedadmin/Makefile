@@ -13,7 +13,7 @@ SPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"
 # SRM is not supported due lacking webstation, php and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Graphic stand-alone administration for memcached to monitor and debug purpose.
 ADMIN_URL = /phpmemcachedadmin/
 DISPLAY_NAME = PHP Memcached Admin

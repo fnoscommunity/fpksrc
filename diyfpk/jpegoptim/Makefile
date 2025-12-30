@@ -4,7 +4,7 @@ SPK_REV = 1
 
 DEPENDS = cross/jpegoptim
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = utility to optimize/compress JPEG files 
 DISPLAY_NAME = jpegoptim
 STARTABLE = no

@@ -6,7 +6,7 @@ SPK_ICON = src/boxbackup.png
 DEPENDS = cross/boxbackup
 SPK_DEPENDS = "Perl"
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Box Backup is an open source, completely automatic, on-line backup system. This is the client part of Box Backup.
 DISPLAY_NAME = Box Backup Client
 CHANGELOG = "1. Update BoxBackup to 0.12.<br/>2. Update openssl to 1.1."

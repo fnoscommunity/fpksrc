@@ -5,7 +5,7 @@ human_logs = 1
 
 # required to be externally available
 host = "0.0.0.0"
-# defined by SynoCommunity Package
+# defined by FnOScommunity Package
 port = {{TCP_PORT}}
 
 syncstorage.database_url = "mysql://{{SQL_USER}}:{{SQL_PASS}}@{{DB_SERVER}}/syncstorage_rs?socket={{DB_SOCKET}}"

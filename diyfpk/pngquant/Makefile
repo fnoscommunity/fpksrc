@@ -3,7 +3,7 @@ SPK_VERS = 3.0.3
 SPK_REV = 1
 
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = pngquant is a command-line utility and a library for lossy compression of PNG images.
 DISPLAY_NAME = pngquant
 STARTABLE = no

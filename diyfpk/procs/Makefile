@@ -6,7 +6,7 @@ DEPENDS = cross/procs
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A modern replacement for ps written in Rust.
 STARTABLE = no
 

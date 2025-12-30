@@ -7,7 +7,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
 DEPENDS = cross/fzf
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = A command-line fuzzy finder.
 STARTABLE = no
 

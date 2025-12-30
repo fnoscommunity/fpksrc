@@ -5,7 +5,7 @@ SPK_ICON = src/gnu-logo.png
 
 DEPENDS = cross/bc
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = bc is an arbitrary precision numeric processing language.
 DISPLAY_NAME = bc
 STARTABLE = no

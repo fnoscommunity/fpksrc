@@ -6,7 +6,7 @@ DEPENDS = cross/xstow
 
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = XStow is a replacement of GNU Stow written in C++. It supports all features of Stow with some extensions.
 STARTABLE = no
 

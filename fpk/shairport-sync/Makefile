@@ -5,11 +5,11 @@ SPK_ICON = src/shairport-sync.png
 
 DEPENDS =  cross/busybox cross/shairport-sync
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Use Synology NAS as an AirPlay receiver. Requires USB soundcard or speakers.
 DISPLAY_NAME = Shairport Sync
 BETA = 1
-CHANGELOG = "Initial SynoCommunity Release"
+CHANGELOG = "Initial FnOScommunity Release"
 
 HOMEPAGE = https://github.com/mikebrady/shairport-sync
 LICENSE  =

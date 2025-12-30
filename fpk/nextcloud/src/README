@@ -1,4 +1,4 @@
-This SynoCommunity package downloads the corresponding Nextcloud release from
+This FnOScommunity package downloads the corresponding Nextcloud release from
 upstream during installation or upgrade.
 
 During installation the service scripts fetch the official archive into the

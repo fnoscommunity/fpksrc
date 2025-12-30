@@ -12,7 +12,7 @@ REQUIRED_MIN_DSM = 6.0
 # SRM is not supported due lacking webstation, php, mariadb and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Feng Office is a Collaboration Platform and Project Management System.
 DISPLAY_NAME = Feng Office
 CHANGELOG = "1. Update to v3.11.8.0.<br/>2. Adjust PHP dependency per DSM version."

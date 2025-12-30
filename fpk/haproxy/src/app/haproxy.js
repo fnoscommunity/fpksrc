@@ -1,15 +1,15 @@
 // Namespace
-Ext.ns("SYNOCOMMUNITY.HAProxy");
+Ext.ns("FnOScommunity.HAProxy");
 
 // Translator
 _V = function (category, element) {
-    return _TT("SYNOCOMMUNITY.HAProxy.AppInstance", category, element)
+    return _TT("FnOScommunity.HAProxy.AppInstance", category, element)
 }
 
 // Direct API
 Ext.Direct.addProvider({
     "url": "3rdparty/haproxy/haproxy.cgi/direct/router",
-    "namespace": "SYNOCOMMUNITY.HAProxy.Remote",
+    "namespace": "FnOScommunity.HAProxy.Remote",
     "type": "remoting",
     "actions": {
         "Frontends": [{
@@ -68,49 +68,49 @@ Ext.Direct.addProvider({
 });
 
 // Const
-SYNOCOMMUNITY.HAProxy.DEFAULT_HEIGHT = 400;
-SYNOCOMMUNITY.HAProxy.MAIN_WIDTH = 750;
-SYNOCOMMUNITY.HAProxy.LIST_WIDTH = 210;
+FnOScommunity.HAProxy.DEFAULT_HEIGHT = 400;
+FnOScommunity.HAProxy.MAIN_WIDTH = 750;
+FnOScommunity.HAProxy.LIST_WIDTH = 210;
 
 // Application
-SYNOCOMMUNITY.HAProxy.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
-    appWindowName: "SYNOCOMMUNITY.HAProxy.AppWindow",
+FnOScommunity.HAProxy.AppInstance = Ext.extend(SYNO.SDS.AppInstance, {
+    appWindowName: "FnOScommunity.HAProxy.AppWindow",
     constructor: function () {
-        SYNOCOMMUNITY.HAProxy.AppInstance.superclass.constructor.apply(this, arguments);
+        FnOScommunity.HAProxy.AppInstance.superclass.constructor.apply(this, arguments);
     }
 });
 
 // Main window
-SYNOCOMMUNITY.HAProxy.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
+FnOScommunity.HAProxy.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
     appInstance: null,
     mainPanel: null,
     constructor: function (config) {
         this.appInstance = config.appInstance;
-        this.mainPanel = new SYNOCOMMUNITY.HAProxy.MainPanel({
+        this.mainPanel = new FnOScommunity.HAProxy.MainPanel({
             owner: this
         });
         config = Ext.apply({
             resizable: true,
             maximizable: true,
             minimizable: true,
-            width: SYNOCOMMUNITY.HAProxy.MAIN_WIDTH,
-            height: SYNOCOMMUNITY.HAProxy.DEFAULT_HEIGHT,
+            width: FnOScommunity.HAProxy.MAIN_WIDTH,
+            height: FnOScommunity.HAProxy.DEFAULT_HEIGHT,
             layout: "fit",
             border: false,
-            cls: "synocommunity-haproxy",
+            cls: "FnOScommunity-haproxy",
             items: [this.mainPanel]
         }, config);
-        SYNOCOMMUNITY.HAProxy.AppWindow.superclass.constructor.call(this, config);
+        FnOScommunity.HAProxy.AppWindow.superclass.constructor.call(this, config);
     },
     onOpen: function (a) {
-        SYNOCOMMUNITY.HAProxy.AppWindow.superclass.onOpen.call(this, a);
+        FnOScommunity.HAProxy.AppWindow.superclass.onOpen.call(this, a);
         this.mainPanel.onActivate();
     },
     onRequest: function (a) {
-        SYNOCOMMUNITY.HAProxy.AppWindow.superclass.onRequest.call(this, a);
+        FnOScommunity.HAProxy.AppWindow.superclass.onRequest.call(this, a);
     },
     onClose: function () {
-        if (SYNOCOMMUNITY.HAProxy.AppWindow.superclass.onClose.apply(this, arguments)) {
+        if (FnOScommunity.HAProxy.AppWindow.superclass.onClose.apply(this, arguments)) {
             this.doClose();
             this.mainPanel.onDeactivate();
             return true;
@@ -129,19 +129,19 @@ SYNOCOMMUNITY.HAProxy.AppWindow = Ext.extend(SYNO.SDS.AppWindow, {
 });
 
 // Main panel
-SYNOCOMMUNITY.HAProxy.MainPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.HAProxy.MainPanel = Ext.extend(Ext.Panel, {
     listPanel: null,
     cardPanel: null,
     constructor: function (config) {
         this.owner = config.owner;
-        var a = new SYNOCOMMUNITY.HAProxy.ListView({
+        var a = new FnOScommunity.HAProxy.ListView({
             module: this
         });
         this.listPanel = new Ext.Panel({
             region: "west",
-            width: SYNOCOMMUNITY.HAProxy.LIST_WIDTH,
-            height: SYNOCOMMUNITY.HAProxy.DEFAULT_HEIGHT,
-            cls: "synocommunity-haproxy-list",
+            width: FnOScommunity.HAProxy.LIST_WIDTH,
+            height: FnOScommunity.HAProxy.DEFAULT_HEIGHT,
+            cls: "FnOScommunity-haproxy-list",
             items: [a],
             listeners: {
                 scope: this,
@@ -153,8 +153,8 @@ SYNOCOMMUNITY.HAProxy.MainPanel = Ext.extend(Ext.Panel, {
             }
         });
         this.listView = a;
-        this.curHeight = SYNOCOMMUNITY.HAProxy.DEFAULT_HEIGHT;
-        this.cardPanel = new SYNOCOMMUNITY.HAProxy.MainCardPanel({
+        this.curHeight = FnOScommunity.HAProxy.DEFAULT_HEIGHT;
+        this.cardPanel = new FnOScommunity.HAProxy.MainCardPanel({
             module: this,
             owner: config.owner,
             itemId: "grid",
@@ -166,10 +166,10 @@ SYNOCOMMUNITY.HAProxy.MainPanel = Ext.extend(Ext.Panel, {
             ["backends", this.cardPanel.PanelBackends],
             ["associations", this.cardPanel.PanelAssociations]
         ];
-        SYNOCOMMUNITY.HAProxy.MainPanel.superclass.constructor.call(this, {
+        FnOScommunity.HAProxy.MainPanel.superclass.constructor.call(this, {
             border: false,
             layout: "border",
-            height: SYNOCOMMUNITY.HAProxy.DEFAULT_HEIGHT,
+            height: FnOScommunity.HAProxy.DEFAULT_HEIGHT,
             monitorResize: true,
             items: [this.listPanel, this.cardPanel]
         });
@@ -200,7 +200,7 @@ SYNOCOMMUNITY.HAProxy.MainPanel = Ext.extend(Ext.Panel, {
         }
     },
     getPanelHeight: function (id_panel) {
-        return SYNOCOMMUNITY.HAProxy.DEFAULT_HEIGHT
+        return FnOScommunity.HAProxy.DEFAULT_HEIGHT
     },
     isPanelDirty: function (c) {
         var b;
@@ -269,7 +269,7 @@ SYNOCOMMUNITY.HAProxy.MainPanel = Ext.extend(Ext.Panel, {
 });
 
 // List view
-SYNOCOMMUNITY.HAProxy.ListView = Ext.extend(Ext.list.ListView, {
+FnOScommunity.HAProxy.ListView = Ext.extend(Ext.list.ListView, {
     constructor: function (config) {
         var store = new Ext.data.JsonStore({
             data: {
@@ -295,7 +295,7 @@ SYNOCOMMUNITY.HAProxy.ListView = Ext.extend(Ext.list.ListView, {
             fields: ["title", "id"]
         });
         config = Ext.apply({
-            cls: "synocommunity-haproxy-list",
+            cls: "FnOScommunity-haproxy-list",
             padding: 10,
             split: false,
             trackOver: false,
@@ -304,9 +304,9 @@ SYNOCOMMUNITY.HAProxy.ListView = Ext.extend(Ext.list.ListView, {
             store: store,
             columns: [{
                 dataIndex: "title",
-                cls: "synocommunity-haproxy-list-column",
+                cls: "FnOScommunity-haproxy-list-column",
                 sortable: false,
-                tpl: '<div class="synocommunity-haproxy-list-{id}">{title}</div>'
+                tpl: '<div class="FnOScommunity-haproxy-list-{id}">{title}</div>'
             }],
             listeners: {
                 scope: this,
@@ -328,7 +328,7 @@ SYNOCOMMUNITY.HAProxy.ListView = Ext.extend(Ext.list.ListView, {
             }
         }, config);
         this.addEvents("onbeforeclick");
-        SYNOCOMMUNITY.HAProxy.ListView.superclass.constructor.call(this, config)
+        FnOScommunity.HAProxy.ListView.superclass.constructor.call(this, config)
     },
     onBeforeClick: function (c, d, f, b) {
         var g = c.getRecord(f);
@@ -370,21 +370,21 @@ SYNOCOMMUNITY.HAProxy.ListView = Ext.extend(Ext.list.ListView, {
 });
 
 // Card panel
-SYNOCOMMUNITY.HAProxy.MainCardPanel = Ext.extend(Ext.Panel, {
+FnOScommunity.HAProxy.MainCardPanel = Ext.extend(Ext.Panel, {
     PanelConfiguration: null,
     constructor: function (config) {
         this.owner = config.owner;
         this.module = config.module;
-        this.PanelConfiguration = new SYNOCOMMUNITY.HAProxy.PanelConfiguration({
+        this.PanelConfiguration = new FnOScommunity.HAProxy.PanelConfiguration({
             owner: this.owner
         });
-        this.PanelFrontends = new SYNOCOMMUNITY.HAProxy.PanelFrontends({
+        this.PanelFrontends = new FnOScommunity.HAProxy.PanelFrontends({
             owner: this.owner
         });
-        this.PanelBackends = new SYNOCOMMUNITY.HAProxy.PanelBackends({
+        this.PanelBackends = new FnOScommunity.HAProxy.PanelBackends({
             owner: this.owner
         });
-        this.PanelAssociations = new SYNOCOMMUNITY.HAProxy.PanelAssociations({
+        this.PanelAssociations = new FnOScommunity.HAProxy.PanelAssociations({
             owner: this.owner
         });
         config = Ext.apply({
@@ -398,7 +398,7 @@ SYNOCOMMUNITY.HAProxy.MainCardPanel = Ext.extend(Ext.Panel, {
                 deactivate: this.onDeactivate
             }
         }, config);
-        SYNOCOMMUNITY.HAProxy.MainCardPanel.superclass.constructor.call(this, config)
+        FnOScommunity.HAProxy.MainCardPanel.superclass.constructor.call(this, config)
     },
     onActivate: function (panel) {
         if (this.PanelConfiguration) {
@@ -418,7 +418,7 @@ SYNOCOMMUNITY.HAProxy.MainCardPanel = Ext.extend(Ext.Panel, {
 });
 
 // FormPanel base
-SYNOCOMMUNITY.HAProxy.FormPanel = Ext.extend(Ext.FormPanel, {
+FnOScommunity.HAProxy.FormPanel = Ext.extend(Ext.FormPanel, {
     constructor: function (config) {
         config = Ext.apply({
             owner: null,
@@ -448,7 +448,7 @@ SYNOCOMMUNITY.HAProxy.FormPanel = Ext.extend(Ext.FormPanel, {
             }
         }, config);
         SYNO.LayoutConfig.fill(config);
-        SYNOCOMMUNITY.HAProxy.FormPanel.superclass.constructor.call(this, config);
+        FnOScommunity.HAProxy.FormPanel.superclass.constructor.call(this, config);
         if (!this.owner instanceof SYNO.SDS.BaseWindow) {
             throw Error("please set the owner window of form");
         }
@@ -487,7 +487,7 @@ SYNOCOMMUNITY.HAProxy.FormPanel = Ext.extend(Ext.FormPanel, {
 });
 
 // Configuration panel
-SYNOCOMMUNITY.HAProxy.PanelConfiguration = Ext.extend(SYNOCOMMUNITY.HAProxy.FormPanel, {
+FnOScommunity.HAProxy.PanelConfiguration = Ext.extend(FnOScommunity.HAProxy.FormPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         config = Ext.apply({
@@ -535,10 +535,10 @@ SYNOCOMMUNITY.HAProxy.PanelConfiguration = Ext.extend(SYNOCOMMUNITY.HAProxy.Form
                 }]
             }],
             api: {
-                load: SYNOCOMMUNITY.HAProxy.Remote.Configuration.load
+                load: FnOScommunity.HAProxy.Remote.Configuration.load
             }
         }, config);
-        SYNOCOMMUNITY.HAProxy.PanelConfiguration.superclass.constructor.call(this, config);
+        FnOScommunity.HAProxy.PanelConfiguration.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         this.getEl().mask(_T("common", "loading"), "x-mask-loading");
@@ -562,7 +562,7 @@ SYNOCOMMUNITY.HAProxy.PanelConfiguration = Ext.extend(SYNOCOMMUNITY.HAProxy.Form
     },
     onClickWriteConfiguration: function (button, event) {
         this.disableButtons();
-        SYNOCOMMUNITY.HAProxy.Remote.Configuration.write(true, function (provider, response) {
+        FnOScommunity.HAProxy.Remote.Configuration.write(true, function (provider, response) {
             if (response.result.success) {
                 this.owner.setStatusOK({
                     text: _V("msg", "write_configuration_successful")
@@ -582,7 +582,7 @@ SYNOCOMMUNITY.HAProxy.PanelConfiguration = Ext.extend(SYNOCOMMUNITY.HAProxy.Form
 	this.owner.getMsgBox().confirm(this.title, _V("msg", "confirm_reload"),
 	function (response) {
 	    if ("yes" === response) {
-	         SYNOCOMMUNITY.HAProxy.Remote.Configuration.reload(function (provider, response) {
+	         FnOScommunity.HAProxy.Remote.Configuration.reload(function (provider, response) {
 		    if (response.result) {
 		        this.owner.setStatusOK({
 		            text: _V("msg", "default_configuration_successful")
@@ -601,7 +601,7 @@ SYNOCOMMUNITY.HAProxy.PanelConfiguration = Ext.extend(SYNOCOMMUNITY.HAProxy.Form
 	this.owner.getMsgBox().confirm(this.title, _V("msg", "confirm_gen_certif"),
         function (response) {
             if ("yes" === response) {
-                SYNOCOMMUNITY.HAProxy.Remote.Configuration.generate_certificate(function (provider, response) {
+                FnOScommunity.HAProxy.Remote.Configuration.generate_certificate(function (provider, response) {
 		    if (response.result) {
 		        this.owner.setStatusOK({
 		            text: _V("msg", "generate_certificate_successful")
@@ -619,7 +619,7 @@ SYNOCOMMUNITY.HAProxy.PanelConfiguration = Ext.extend(SYNOCOMMUNITY.HAProxy.Form
 
 
 // Frontends panel
-SYNOCOMMUNITY.HAProxy.PanelFrontends = Ext.extend(Ext.grid.GridPanel, {
+FnOScommunity.HAProxy.PanelFrontends = Ext.extend(Ext.grid.GridPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -627,10 +627,10 @@ SYNOCOMMUNITY.HAProxy.PanelFrontends = Ext.extend(Ext.grid.GridPanel, {
             autoSave: false,
             fields: ["id", "name", "binds", "default_backend_id", "default_backend_name", "options"],
             api: {
-                read: SYNOCOMMUNITY.HAProxy.Remote.Frontends.read,
-                create: SYNOCOMMUNITY.HAProxy.Remote.Frontends.create,
-                update: SYNOCOMMUNITY.HAProxy.Remote.Frontends.update,
-                destroy: SYNOCOMMUNITY.HAProxy.Remote.Frontends.destroy
+                read: FnOScommunity.HAProxy.Remote.Frontends.read,
+                create: FnOScommunity.HAProxy.Remote.Frontends.create,
+                update: FnOScommunity.HAProxy.Remote.Frontends.update,
+                destroy: FnOScommunity.HAProxy.Remote.Frontends.destroy
             },
             idProperty: "id",
             root: "data",
@@ -685,7 +685,7 @@ SYNOCOMMUNITY.HAProxy.PanelFrontends = Ext.extend(Ext.grid.GridPanel, {
                 dataIndex: "options"
             }]
         }, config);
-        SYNOCOMMUNITY.HAProxy.PanelFrontends.superclass.constructor.call(this, config);
+        FnOScommunity.HAProxy.PanelFrontends.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         if (!this.loaded) {
@@ -694,14 +694,14 @@ SYNOCOMMUNITY.HAProxy.PanelFrontends = Ext.extend(Ext.grid.GridPanel, {
         }
     },
     onClickAdd: function () {
-        var editor = new SYNOCOMMUNITY.HAProxy.FrontendEditorWindow({
+        var editor = new FnOScommunity.HAProxy.FrontendEditorWindow({
             store: this.store,
             title: _V("ui", "frontend_add")
         });
         editor.open();
     },
     onClickEdit: function () {
-        var editor = new SYNOCOMMUNITY.HAProxy.FrontendEditorWindow({
+        var editor = new FnOScommunity.HAProxy.FrontendEditorWindow({
             store: this.store,
             record: this.getSelectionModel().getSelected(),
             title: _V("ui", "frontend_edit")
@@ -721,9 +721,9 @@ SYNOCOMMUNITY.HAProxy.PanelFrontends = Ext.extend(Ext.grid.GridPanel, {
 });
 
 // Frontend window
-SYNOCOMMUNITY.HAProxy.FrontendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
+FnOScommunity.HAProxy.FrontendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
     initComponent: function () {
-        this.panel = new SYNOCOMMUNITY.HAProxy.PanelFrontendEditor();
+        this.panel = new FnOScommunity.HAProxy.PanelFrontendEditor();
         var config = {
             width: 520,
             height: 210,
@@ -745,7 +745,7 @@ SYNOCOMMUNITY.HAProxy.FrontendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.HAProxy.FrontendEditorWindow.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.HAProxy.FrontendEditorWindow.superclass.initComponent.apply(this, arguments);
     },
     onAfterRender: function () {
         if (this.record) {
@@ -780,7 +780,7 @@ SYNOCOMMUNITY.HAProxy.FrontendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
 });
 
 // Frontend form panel
-SYNOCOMMUNITY.HAProxy.PanelFrontendEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.FormPanel, {
+FnOScommunity.HAProxy.PanelFrontendEditor = Ext.extend(FnOScommunity.HAProxy.FormPanel, {
     initComponent: function () {
         var config = {
             itemId: "frontend",
@@ -808,7 +808,7 @@ SYNOCOMMUNITY.HAProxy.PanelFrontendEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.For
                     autoSave: false,
                     fields: ["id", "name", "servers", "options"],
                     api: {
-                        read: SYNOCOMMUNITY.HAProxy.Remote.Backends.read
+                        read: FnOScommunity.HAProxy.Remote.Backends.read
                     },
                     idProperty: "id",
                     root: "data",
@@ -827,7 +827,7 @@ SYNOCOMMUNITY.HAProxy.PanelFrontendEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.For
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.HAProxy.PanelFrontendEditor.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.HAProxy.PanelFrontendEditor.superclass.initComponent.apply(this, arguments);
     },
     loadRecord: function (record) {
         this.getForm().findField("name").setValue(record.data.name);
@@ -840,7 +840,7 @@ SYNOCOMMUNITY.HAProxy.PanelFrontendEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.For
 
 
 // Backends panel
-SYNOCOMMUNITY.HAProxy.PanelBackends = Ext.extend(Ext.grid.GridPanel, {
+FnOScommunity.HAProxy.PanelBackends = Ext.extend(Ext.grid.GridPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -848,10 +848,10 @@ SYNOCOMMUNITY.HAProxy.PanelBackends = Ext.extend(Ext.grid.GridPanel, {
             autoSave: false,
             fields: ["id", "name", "servers", "options"],
             api: {
-                read: SYNOCOMMUNITY.HAProxy.Remote.Backends.read,
-                create: SYNOCOMMUNITY.HAProxy.Remote.Backends.create,
-                update: SYNOCOMMUNITY.HAProxy.Remote.Backends.update,
-                destroy: SYNOCOMMUNITY.HAProxy.Remote.Backends.destroy
+                read: FnOScommunity.HAProxy.Remote.Backends.read,
+                create: FnOScommunity.HAProxy.Remote.Backends.create,
+                update: FnOScommunity.HAProxy.Remote.Backends.update,
+                destroy: FnOScommunity.HAProxy.Remote.Backends.destroy
             },
             idProperty: "id",
             root: "data",
@@ -902,7 +902,7 @@ SYNOCOMMUNITY.HAProxy.PanelBackends = Ext.extend(Ext.grid.GridPanel, {
                 dataIndex: "options"
             }]
         }, config);
-        SYNOCOMMUNITY.HAProxy.PanelBackends.superclass.constructor.call(this, config);
+        FnOScommunity.HAProxy.PanelBackends.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         if (!this.loaded) {
@@ -911,14 +911,14 @@ SYNOCOMMUNITY.HAProxy.PanelBackends = Ext.extend(Ext.grid.GridPanel, {
         }
     },
     onClickAdd: function () {
-        var editor = new SYNOCOMMUNITY.HAProxy.BackendEditorWindow({
+        var editor = new FnOScommunity.HAProxy.BackendEditorWindow({
             store: this.store,
             title: _V("ui", "backend_add")
         });
         editor.open();
     },
     onClickEdit: function () {
-        var editor = new SYNOCOMMUNITY.HAProxy.BackendEditorWindow({
+        var editor = new FnOScommunity.HAProxy.BackendEditorWindow({
             store: this.store,
             record: this.getSelectionModel().getSelected(),
             title: _V("ui", "backend_edit")
@@ -938,9 +938,9 @@ SYNOCOMMUNITY.HAProxy.PanelBackends = Ext.extend(Ext.grid.GridPanel, {
 });
 
 // Backend window
-SYNOCOMMUNITY.HAProxy.BackendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
+FnOScommunity.HAProxy.BackendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
     initComponent: function () {
-        this.panel = new SYNOCOMMUNITY.HAProxy.PanelBackendEditor();
+        this.panel = new FnOScommunity.HAProxy.PanelBackendEditor();
         var config = {
             width: 520,
             height: 180,
@@ -962,7 +962,7 @@ SYNOCOMMUNITY.HAProxy.BackendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.HAProxy.BackendEditorWindow.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.HAProxy.BackendEditorWindow.superclass.initComponent.apply(this, arguments);
     },
     onAfterRender: function () {
         if (this.record) {
@@ -993,7 +993,7 @@ SYNOCOMMUNITY.HAProxy.BackendEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
 });
 
 // Backend form panel
-SYNOCOMMUNITY.HAProxy.PanelBackendEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.FormPanel, {
+FnOScommunity.HAProxy.PanelBackendEditor = Ext.extend(FnOScommunity.HAProxy.FormPanel, {
     initComponent: function () {
         var config = {
             itemId: "backend",
@@ -1018,7 +1018,7 @@ SYNOCOMMUNITY.HAProxy.PanelBackendEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.Form
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.HAProxy.PanelBackendEditor.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.HAProxy.PanelBackendEditor.superclass.initComponent.apply(this, arguments);
     },
     loadRecord: function (record) {
         this.getForm().findField("name").setValue(record.data.name);
@@ -1028,7 +1028,7 @@ SYNOCOMMUNITY.HAProxy.PanelBackendEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.Form
 });
 
 // Associations panel
-SYNOCOMMUNITY.HAProxy.PanelAssociations = Ext.extend(Ext.grid.GridPanel, {
+FnOScommunity.HAProxy.PanelAssociations = Ext.extend(Ext.grid.GridPanel, {
     constructor: function (config) {
         this.owner = config.owner;
         this.loaded = false;
@@ -1036,10 +1036,10 @@ SYNOCOMMUNITY.HAProxy.PanelAssociations = Ext.extend(Ext.grid.GridPanel, {
             autoSave: false,
             fields: ["id", "frontend_id", "backend_id", "frontend_name", "backend_name", "condition"],
             api: {
-                read: SYNOCOMMUNITY.HAProxy.Remote.Associations.read,
-                create: SYNOCOMMUNITY.HAProxy.Remote.Associations.create,
-                update: SYNOCOMMUNITY.HAProxy.Remote.Associations.update,
-                destroy: SYNOCOMMUNITY.HAProxy.Remote.Associations.destroy
+                read: FnOScommunity.HAProxy.Remote.Associations.read,
+                create: FnOScommunity.HAProxy.Remote.Associations.create,
+                update: FnOScommunity.HAProxy.Remote.Associations.update,
+                destroy: FnOScommunity.HAProxy.Remote.Associations.destroy
             },
             idProperty: "id",
             root: "data",
@@ -1092,7 +1092,7 @@ SYNOCOMMUNITY.HAProxy.PanelAssociations = Ext.extend(Ext.grid.GridPanel, {
                 dataIndex: "condition"
             }]
         }, config);
-        SYNOCOMMUNITY.HAProxy.PanelAssociations.superclass.constructor.call(this, config);
+        FnOScommunity.HAProxy.PanelAssociations.superclass.constructor.call(this, config);
     },
     onActivate: function () {
         if (!this.loaded) {
@@ -1101,14 +1101,14 @@ SYNOCOMMUNITY.HAProxy.PanelAssociations = Ext.extend(Ext.grid.GridPanel, {
         }
     },
     onClickAdd: function () {
-        var editor = new SYNOCOMMUNITY.HAProxy.AssociationEditorWindow({
+        var editor = new FnOScommunity.HAProxy.AssociationEditorWindow({
             store: this.store,
             title: _V("ui", "association_add")
         });
         editor.open();
     },
     onClickEdit: function () {
-        var editor = new SYNOCOMMUNITY.HAProxy.AssociationEditorWindow({
+        var editor = new FnOScommunity.HAProxy.AssociationEditorWindow({
             store: this.store,
             record: this.getSelectionModel().getSelected(),
             title: _V("ui", "association_edit")
@@ -1128,9 +1128,9 @@ SYNOCOMMUNITY.HAProxy.PanelAssociations = Ext.extend(Ext.grid.GridPanel, {
 });
 
 // Association window
-SYNOCOMMUNITY.HAProxy.AssociationEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
+FnOScommunity.HAProxy.AssociationEditorWindow = Ext.extend(SYNO.SDS.ModalWindow, {
     initComponent: function () {
-        this.panel = new SYNOCOMMUNITY.HAProxy.PanelAssociationEditor();
+        this.panel = new FnOScommunity.HAProxy.PanelAssociationEditor();
         var config = {
             width: 450,
             height: 180,
@@ -1152,7 +1152,7 @@ SYNOCOMMUNITY.HAProxy.AssociationEditorWindow = Ext.extend(SYNO.SDS.ModalWindow,
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.HAProxy.AssociationEditorWindow.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.HAProxy.AssociationEditorWindow.superclass.initComponent.apply(this, arguments);
     },
     onAfterRender: function () {
         if (this.record) {
@@ -1189,7 +1189,7 @@ SYNOCOMMUNITY.HAProxy.AssociationEditorWindow = Ext.extend(SYNO.SDS.ModalWindow,
 });
 
 // Association form panel
-SYNOCOMMUNITY.HAProxy.PanelAssociationEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.FormPanel, {
+FnOScommunity.HAProxy.PanelAssociationEditor = Ext.extend(FnOScommunity.HAProxy.FormPanel, {
     initComponent: function () {
         var config = {
             itemId: "association",
@@ -1211,7 +1211,7 @@ SYNOCOMMUNITY.HAProxy.PanelAssociationEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.
                     autoSave: false,
                     fields: ["id", "name", "binds", "default_backend_id", "default_backend_name", "options"],
                     api: {
-                        read: SYNOCOMMUNITY.HAProxy.Remote.Frontends.read
+                        read: FnOScommunity.HAProxy.Remote.Frontends.read
                     },
                     idProperty: "id",
                     root: "data",
@@ -1235,7 +1235,7 @@ SYNOCOMMUNITY.HAProxy.PanelAssociationEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.
                     autoSave: false,
                     fields: ["id", "name", "servers", "options"],
                     api: {
-                        read: SYNOCOMMUNITY.HAProxy.Remote.Backends.read
+                        read: FnOScommunity.HAProxy.Remote.Backends.read
                     },
                     idProperty: "id",
                     root: "data",
@@ -1255,7 +1255,7 @@ SYNOCOMMUNITY.HAProxy.PanelAssociationEditor = Ext.extend(SYNOCOMMUNITY.HAProxy.
             }]
         };
         Ext.apply(this, Ext.apply(this.initialConfig, config));
-        SYNOCOMMUNITY.HAProxy.PanelAssociationEditor.superclass.initComponent.apply(this, arguments);
+        FnOScommunity.HAProxy.PanelAssociationEditor.superclass.initComponent.apply(this, arguments);
     },
     loadRecord: function (record) {
         this.getForm().findField("frontend").setValue(record.data.frontend_id);

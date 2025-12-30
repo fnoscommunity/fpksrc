@@ -12,7 +12,7 @@ REQUIRED_MIN_DSM = 6.0
 # SRM is not supported due lacking webstation, php, mariadb and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Roundcube is a free and open source webmail solution with a desktop-like user interface which is easy to install/configure and that runs on a standard LAMPP server. It is the same software Synology offers as Mail Station except this does not depend on Mail Server package.
 DISPLAY_NAME = Roundcube Webmail
 CHANGELOG = "1. Adjust PHP dependency handling for DSM 6/7 (PHP 7.4/8.0/8.2)."

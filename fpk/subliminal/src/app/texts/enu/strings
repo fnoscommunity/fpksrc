@@ -3,7 +3,7 @@ app_name = "Subliminal"
 description = "Subliminal's UI"
 
 [help]
-description = "Subliminal SynoCommunity"
+description = "Subliminal FnOScommunity"
 
 [ui]
 console = "Console"

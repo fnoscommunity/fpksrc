@@ -18,7 +18,7 @@ CHANGELOG = "Update to Subliminal 0.7.5"
 HOMEPAGE   = https://github.com/Diaoul/subliminal
 LICENSE    = LGPL
 # Help URL is not reachable anymore!
-HELPURL    = https://synocommunity.com/help/subliminal
+HELPURL    = https://FnOScommunity.com/help/subliminal
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh

@@ -2,7 +2,7 @@
 
 #########################################################################
 # Written by: th0ma7@gmail.com
-# Part of SynoCommunity Developpers
+# Part of FnOScommunity Developpers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@ usage() {
    printf '%20s %s\n' "Optional :" "[-c|--config <file>:<option1>,<option2>,...]"
    printf '%20s %s\n' "" "[-u|--udev <file>]"
    echo
-   printf '%40s %s\n' "[-s|--spk <package>] : " "SynoCommunity package name containing kernel modules"
+   printf '%40s %s\n' "[-s|--spk <package>] : " "FnOScommunity package name containing kernel modules"
    printf '%40s %s\n' "[<insmod|rmmod|reload|status>] : " "Action to be performed"
    printf '%40s %s\n' "[-h|--help] : " "Print this help"
    printf '%40s %s\n' "[-v|--verbose] : " "Verbose mode"
@@ -45,10 +45,10 @@ usage() {
 #------------------------------------------------
 verbose() {
    printf '%20s %s\n' "" "$0 (verbose)"
-   printf '%60s %s\n' "SynoCommunity kernel driver package name (SPK)" "[${SPK}]"
-   printf '%60s %s\n' "SynoCommunity configuration file (SPK_CFG)" "[${SPK_CFG}]"
-   printf '%60s %s\n' "SynoCommunity configuration path (SPK_CFG_PATH)" "[${SPK_CFG_PATH}]"
-   printf '%60s %s\n' "SynoCommunity configuration option (SPK_CFG_OPT)" "[${SPK_CFG_OPT}]"
+   printf '%60s %s\n' "FnOScommunity kernel driver package name (SPK)" "[${SPK}]"
+   printf '%60s %s\n' "FnOScommunity configuration file (SPK_CFG)" "[${SPK_CFG}]"
+   printf '%60s %s\n' "FnOScommunity configuration path (SPK_CFG_PATH)" "[${SPK_CFG_PATH}]"
+   printf '%60s %s\n' "FnOScommunity configuration option (SPK_CFG_OPT)" "[${SPK_CFG_OPT}]"
    printf '%60s %s\n' "Synology NAS arch (ARCH)" "[${ARCH}]"
    printf '%60s %s\n' "Synology DSM version (DSM_VERSION)" "[${DSM_VERSION}]"
    printf '%60s %s\n' "Running kernel version (KVER)" "[${KVER}]"
@@ -158,10 +158,10 @@ fi
 ###
 ### Global variables
 ###
-SPK=""                                                                 # SynoCommunity kernel driver package name
-SPK_CFG=""                                                             # SynoCommunity configuration file
-SPK_CFG_OPT=""                                                         # SynoCommunity configuration option
-SPK_CFG_PATH=""                                                        # SynoCommunity configuration path
+SPK=""                                                                 # FnOScommunity kernel driver package name
+SPK_CFG=""                                                             # FnOScommunity configuration file
+SPK_CFG_OPT=""                                                         # FnOScommunity configuration option
+SPK_CFG_PATH=""                                                        # FnOScommunity configuration path
 ACTION=""                                                              # Module action insmod|rmmod|reload|status
 VERBOSE="FALSE"                                                        # Set verbose mode
 HELP="FALSE"                                                           # Print help

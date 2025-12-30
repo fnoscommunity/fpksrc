@@ -6,7 +6,7 @@ DEPENDS = cross/duf
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
-MAINTAINER = SynoCommunity
+MAINTAINER = FnOScommunity
 DESCRIPTION = Disk Usage/Free Utility - a better 'df' alternative.
 STARTABLE = no
 
