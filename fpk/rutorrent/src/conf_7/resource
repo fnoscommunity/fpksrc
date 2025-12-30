@@ -33,7 +33,7 @@
 			}]
 		},
 		"pkg_dir_prepare": [{
-			"source": "/var/packages/rutorrent/target/share/rutorrent",
+			"source": "/var/apps/rutorrent/target/share/rutorrent",
 			"target": "rutorrent",
 			"mode": "0755",
 			"user": "sc-rutorrent",

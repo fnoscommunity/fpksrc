@@ -48,7 +48,7 @@ ifneq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 DEPENDS += cross/smartmontools
 OPTIONAL_DESC := $(OPTIONAL_DESC)", smartmontools \(smartctl\)"
 # smartctl of this package will not be found by path, because /bin/smartctl is found first
-# you have to use smartctl7 (or /usr/local/bin/smartctl or /var/packages/synocli-disk/target/sbin/smartctl)
+# you have to use smartctl7 (or /usr/local/bin/smartctl or /var/apps/synocli-disk/target/sbin/smartctl)
 SPK_COMMANDS += sbin/smartctl7 sbin/smartctl sbin/smartd sbin/update-smart-drivedb
 endif
 

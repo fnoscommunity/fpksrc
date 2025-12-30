@@ -7170,8 +7170,8 @@ diff -uprN ../ffmpeg-4.2.1-orig-fix-vaapi_encode/SynoBuildConf/build-virtual-aud
 +	CFLAGS="${CFLAGS} ${ALPINE_EXTRA_CFLAGS} -DSYNO_AUDIOSTATION" \
 +	CHECK_CFLAG="gnu99" \
 +	LDFLAGS="${LDFLAGS} \
-+		-Wl,-rpath,/var/packages/AudioStation/target/lib/ffmpeg \
-+		-Wl,-rpath,/var/packages/AudioStation/target/lib" \
++		-Wl,-rpath,/var/apps/AudioStation/target/lib/ffmpeg \
++		-Wl,-rpath,/var/apps/AudioStation/target/lib" \
 +	bigendian_platform="${BIG_ENDIAN}" \
 +	${CONFIGURE} \
 +		${COMMON_CONFIG} \
@@ -7251,7 +7251,7 @@ diff -uprN ../ffmpeg-4.2.1-orig-fix-vaapi_encode/SynoBuildConf/build-virtual-med
 +	CUSTOM_CFLAGS=""
 +fi
 +
-+COMMON_RPATH="-Wl,-rpath=/var/packages/MediaServer/target/lib/ffmpeg -Wl,-rpath=/var/packages/MediaServer/target/lib -Wl,-rpath=/var/packages/MediaServer/target/lib/libva"
++COMMON_RPATH="-Wl,-rpath=/var/apps/MediaServer/target/lib/ffmpeg -Wl,-rpath=/var/apps/MediaServer/target/lib -Wl,-rpath=/var/apps/MediaServer/target/lib/libva"
 +CFLAGS="${CFLAGS} ${CUSTOM_CFLAGS} -DSYNO_MEDIASERVER"
 +LDFLAGS="${LDFLAGS} ${COMMON_RPATH}"
 +
@@ -7413,7 +7413,7 @@ diff -uprN ../ffmpeg-4.2.1-orig-fix-vaapi_encode/SynoBuildConf/build-virtual-sur
 +COMMON_LIB="${FDK_AAC_LIB} ${X264_LIB}"
 +
 +CFLAGS="${CFLAGS} -DSYNO_SURVEILLANCESTATION"
-+COMMON_RPATH="-Wl,-rpath=/var/packages/SurveillanceStation/target/lib/ffmpeg -Wl,-rpath=/var/packages/SurveillanceStation/target/lib"
++COMMON_RPATH="-Wl,-rpath=/var/apps/SurveillanceStation/target/lib/ffmpeg -Wl,-rpath=/var/apps/SurveillanceStation/target/lib"
 +
 +COMMON_CONFIG="
 +	--prefix=/usr/pkg
@@ -7459,8 +7459,8 @@ diff -uprN ../ffmpeg-4.2.1-orig-fix-vaapi_encode/SynoBuildConf/build-virtual-sur
 +CUDA_CONFIG="
 +	--extra-cflags=-I/source/GpuDriverPack/cuda-8.0/include
 +	--extra-ldflags=-L/source/GpuDriverPack/cuda-8.0/lib64
-+	--extra-ldflags=-Wl,-rpath=/var/packages/GpuDriverPack/target/cuda-8.0/lib64
-+	--extra-ldflags=-Wl,-rpath=/var/packages/GpuDriverPack/target/nvidia-lib.381.22
++	--extra-ldflags=-Wl,-rpath=/var/apps/GpuDriverPack/target/cuda-8.0/lib64
++	--extra-ldflags=-Wl,-rpath=/var/apps/GpuDriverPack/target/nvidia-lib.381.22
 +	--enable-cuda
 +	--enable-cuvid
 +	--enable-nvenc
@@ -7588,7 +7588,7 @@ diff -uprN ../ffmpeg-4.2.1-orig-fix-vaapi_encode/SynoBuildConf/build-virtual-vid
 +	CUSTOM_CFLAGS=""
 +fi
 +
-+COMMON_RPATH="-Wl,-rpath=/var/packages/VideoStation/target/lib/ffmpeg -Wl,-rpath=/var/packages/VideoStation/target/lib -Wl,-rpath=/var/packages/VideoStation/target/lib/libva"
++COMMON_RPATH="-Wl,-rpath=/var/apps/VideoStation/target/lib/ffmpeg -Wl,-rpath=/var/apps/VideoStation/target/lib -Wl,-rpath=/var/apps/VideoStation/target/lib/libva"
 +CFLAGS="${CFLAGS} ${CUSTOM_CFLAGS} -DSYNO_VIDEOSTATION"
 +LDFLAGS="${LDFLAGS} ${COMMON_RPATH}"
 +
@@ -8000,7 +8000,7 @@ diff -uprN ../ffmpeg-4.2.1-orig-fix-vaapi_encode/SynoBuildConf/install-virtual-l
 +	i965_drv_video \
 +"
 +for lib in $InstallDrivers; do
-+	# this /var/packages path should do something to avoid...
++	# this /var/apps path should do something to avoid...
 +	cp -d /source/libva-intel-driver-1.x$PROJECT_SUFFIX/src/.libs/${lib}.so  $INST_DIR/lib/libva/dri
 +	chmod 644 $INST_DIR/lib/libva/dri/${lib}.so
 +

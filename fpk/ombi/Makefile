@@ -43,4 +43,4 @@ ombi_custom_libe_sqlite3:
 # Set library path to use libstdc++ of dotnet-runtime package.
 ombi_patch_target:
 	@$(MSG) "Set library runpath in ombi executables."
-	@patchelf --set-rpath /var/packages/$(SPK_NAME)/target/lib $(STAGING_DIR)/shared/Ombi
+	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/shared/Ombi

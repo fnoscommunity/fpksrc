@@ -26,6 +26,6 @@ include ../../mk/fpksrc.fpk.mk
 # some plugins need rpath to find shared libraries (of openssl) in the lib folder of the package
 nushell_extra_install:
 	@$(MSG) "- Add library rpath to plugins."
-	patchelf --set-rpath /var/packages/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/nu_plugin_*
+	patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/nu_plugin_*
 	@$(MSG) "- Add plugin install script."
 	install -m 755 src/nu_install_plugins.sh $(STAGING_DIR)/bin/

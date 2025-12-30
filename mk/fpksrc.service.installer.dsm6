@@ -7,7 +7,7 @@
 INST_LOG="/var/log/apps/${SYNOPKG_PKGNAME}.log"
 
 # Optional FWPORTS file
-FWPORTS_FILE="/var/packages/${SYNOPKG_PKGNAME}/target/app/${SYNOPKG_PKGNAME}.sc"
+FWPORTS_FILE="/var/apps/${SYNOPKG_PKGNAME}/target/app/${SYNOPKG_PKGNAME}.sc"
 
 # Only DSM > 5 have this temp upgrade folder variable
 TMP_DIR="${SYNOPKG_TEMP_UPGRADE_FOLDER}/var"
@@ -235,7 +235,7 @@ postinst ()
     $LN "${SYNOPKG_PKGDEST}" "/usr/local/${SYNOPKG_PKGNAME}" 2>&1 | install_log
 
     # Link for DSM7 forward compatibility of var location
-    $LN "${SYNOPKG_PKGDEST}/var" "/var/packages/${SYNOPKG_PKGNAME}/var" 2>&1 | install_log
+    $LN "${SYNOPKG_PKGDEST}/var" "/var/apps/${SYNOPKG_PKGNAME}/var" 2>&1 | install_log
 
     # Service user management
     if [ -n "${EFF_USER}" ]; then

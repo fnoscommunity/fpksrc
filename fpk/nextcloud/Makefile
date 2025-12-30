@@ -49,6 +49,6 @@ include ../../mk/fpksrc.fpk.mk
 
 .PHONY: nextcloud_install
 nextcloud_install:
-	install -d -m 755 "$(INSTALL_DIR)/var/packages/$(SPK_NAME)/target/share/nextcloud"
-	install -m 644 "src/COPYING" "$(INSTALL_DIR)/var/packages/$(SPK_NAME)/target/share/nextcloud/COPYING"
-	install -m 644 "src/README" "$(INSTALL_DIR)/var/packages/$(SPK_NAME)/target/share/nextcloud/README"
+	install -d -m 755 "$(INSTALL_DIR)/var/apps/$(SPK_NAME)/target/share/nextcloud"
+	install -m 644 "src/COPYING" "$(INSTALL_DIR)/var/apps/$(SPK_NAME)/target/share/nextcloud/COPYING"
+	install -m 644 "src/README" "$(INSTALL_DIR)/var/apps/$(SPK_NAME)/target/share/nextcloud/README"

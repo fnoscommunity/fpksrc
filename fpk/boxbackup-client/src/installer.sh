@@ -6,7 +6,7 @@ DNAME="Box Backup Client"
 
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"
-SSS="/var/packages/${PACKAGE}/scripts/start-stop-status"
+SSS="/var/apps/${PACKAGE}/scripts/start-stop-status"
 TMP_DIR="${SYNOPKG_PKGDEST}/../../@tmp"
 
 

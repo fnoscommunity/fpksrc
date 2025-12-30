@@ -2,7 +2,7 @@
 PACKAGE="rutorrent"
 
 # Define python312 binary path
-PYTHON_DIR="/var/packages/python312/target/bin"
+PYTHON_DIR="/var/apps/python312/target/bin"
 # Add local bin, virtualenv along with python312 to the default PATH
 PATH="${SYNOPKG_PKGDEST}/env/bin:${SYNOPKG_PKGDEST}/bin:${SYNOPKG_PKGDEST}/usr/bin:${PYTHON_DIR}:${PATH}"
 
@@ -21,7 +21,7 @@ else
     PHP_BIN="/usr/local/bin/php82"
 fi
 
-MEDIAINFO_BIN="/var/packages/mediainfo/target/bin/mediainfo"
+MEDIAINFO_BIN="/var/apps/mediainfo/target/bin/mediainfo"
 
 SVC_BACKGROUND=y
 PID_FILE="${SYNOPKG_PKGVAR}/rtorrent.pid"

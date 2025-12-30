@@ -45,7 +45,7 @@ SERVICE_WIZARD_SHARE = wizard_download_dir
 DSM_UI_CONFIG = src/app/config
 
 # Required environment variables will be injected in service-setup.sh
-SERVICE_COMMAND = /var/packages/rutorrent/target/bin/rtorrent-daemon
+SERVICE_COMMAND = /var/apps/rutorrent/target/bin/rtorrent-daemon
 
 WIZARDS_DIR = $(WORK_DIR)/generated-wizards
 WIZARDS = install upgrade

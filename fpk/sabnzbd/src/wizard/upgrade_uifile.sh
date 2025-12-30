@@ -11,20 +11,20 @@ page_append ()
     fi
 }
 
-CFG_FILE="/var/packages/${SYNOPKG_PKGNAME}/var/config.ini"
+CFG_FILE="/var/apps/${SYNOPKG_PKGNAME}/var/config.ini"
 # Extract share path and name from application config
 CONFIGURED_SHARE_PATH=$(awk -F' = ' '/^download_dir/{split($2, path, "/"); print "/" path[2] "/" path[3]}' "${CFG_FILE}")
 CONFIGURED_SHARE_NAME=$(echo "${CONFIGURED_SHARE_PATH}" | awk -F'/' '{print $NF}')
 
-VAR_FILE="/var/packages/${SYNOPKG_PKGNAME}/etc/installer-variables"
+VAR_FILE="/var/apps/${SYNOPKG_PKGNAME}/etc/installer-variables"
 # Extract share path from installer variables or configured shares
 PACKAGE_SHARE_PATH=$(awk -F'=' '/^SHARE_PATH=/{print $2}' "${VAR_FILE}" 2>/dev/null || echo "")
-if [ -z "$PACKAGE_SHARE_PATH" ] && [ -d "/var/packages/${SYNOPKG_PKGNAME}/shares" ]; then
-    PACKAGE_SHARE_PATH=$(realpath "/var/packages/${SYNOPKG_PKGNAME}/shares/${CONFIGURED_SHARE_NAME}" 2>/dev/null || echo "")
+if [ -z "$PACKAGE_SHARE_PATH" ] && [ -d "/var/apps/${SYNOPKG_PKGNAME}/shares" ]; then
+    PACKAGE_SHARE_PATH=$(realpath "/var/apps/${SYNOPKG_PKGNAME}/shares/${CONFIGURED_SHARE_NAME}" 2>/dev/null || echo "")
 fi
 # Extract share name from installer variables or configured shares
 PACKAGE_SHARE_NAME=$(awk -F'=' '/^SHARE_NAME=/{print $2}' "${VAR_FILE}" 2>/dev/null || echo "")
-if [ -z "$PACKAGE_SHARE_NAME" ] && [ -d "/var/packages/${SYNOPKG_PKGNAME}/shares/${CONFIGURED_SHARE_NAME}" ]; then
+if [ -z "$PACKAGE_SHARE_NAME" ] && [ -d "/var/apps/${SYNOPKG_PKGNAME}/shares/${CONFIGURED_SHARE_NAME}" ]; then
     PACKAGE_SHARE_NAME=${CONFIGURED_SHARE_NAME}
 fi
 

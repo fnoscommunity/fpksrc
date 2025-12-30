@@ -15,9 +15,9 @@ countBytes() {
 
 setup() {
     mkdir -p test/bin test/var
-    #ln -sf $(pwd)/../../work-*/install/var/packages/dnscrypt-proxy/target/bin/dnscrypt-proxy test/bin/dnscrypt-proxy
+    #ln -sf $(pwd)/../../work-*/install/var/apps/dnscrypt-proxy/target/bin/dnscrypt-proxy test/bin/dnscrypt-proxy
     ln -sf $(which dnscrypt-proxy) test/bin/dnscrypt-proxy
-    cp ../../work-*/install/var/packages/dnscrypt-proxy/target/example-* test/var/
+    cp ../../work-*/install/var/apps/dnscrypt-proxy/target/example-* test/var/
     for file in test/var/example-*; do
         mv "${file}" "${file//example-/}"
     done

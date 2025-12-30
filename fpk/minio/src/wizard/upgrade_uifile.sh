@@ -1,6 +1,6 @@
 #!/bin/sh
 
-INST_ETC="/var/packages/${SYNOPKG_PKGNAME}/etc"
+INST_ETC="/var/apps/${SYNOPKG_PKGNAME}/etc"
 INST_VARIABLES="${INST_ETC}/installer-variables"
 MINIO_DATA_FORMAT="unknown"
 

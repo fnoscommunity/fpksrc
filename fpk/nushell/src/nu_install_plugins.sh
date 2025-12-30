@@ -2,7 +2,7 @@
 
 # install and activate nushell plugins for the current user
 
-SOURCE=/var/packages/nushell/target/bin
+SOURCE=/var/apps/nushell/target/bin
 if [ ! -d "${SOURCE}" ]; then
   "ERROR: ${SOURCE}"
   exit 1

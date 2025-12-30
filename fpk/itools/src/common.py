@@ -30,7 +30,7 @@ import subprocess
 from lockfile import locked
 from logging.handlers import RotatingFileHandler
 
-INSTALL_DIR = '/var/packages/itools'
+INSTALL_DIR = '/var/apps/itools'
 VOLUME_DIR = os.path.join(INSTALL_DIR, 'target/volume')
 LOGFILE = os.path.join(INSTALL_DIR, 'var/access.log')
 LOCKFILE = os.path.join(INSTALL_DIR, 'var/access.lock')

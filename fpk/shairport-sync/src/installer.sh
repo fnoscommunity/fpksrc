@@ -7,12 +7,12 @@ DNAME="Shairport Sync"
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"
 VAR_DIR="${INSTALL_DIR}/var"
-SSS="/var/packages/${PACKAGE}/scripts/start-stop-status"
+SSS="/var/apps/${PACKAGE}/scripts/start-stop-status"
 PATH="${INSTALL_DIR}/bin:${PATH}"
 TMP_DIR="${SYNOPKG_PKGDEST}/../../@tmp"
 
 SERVICETOOL="/usr/syno/bin/servicetool"
-FWPORTS="/var/packages/${PACKAGE}/scripts/${PACKAGE}.sc"
+FWPORTS="/var/apps/${PACKAGE}/scripts/${PACKAGE}.sc"
 CONFIG_FILE="${INSTALL_DIR}/var/shairport-sync.conf"
 
 preinst ()

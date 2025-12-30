@@ -1,9 +1,9 @@
 
 # ffsync service setup
-PYTHON_DIR="/var/packages/python312/target/bin"
+PYTHON_DIR="/var/apps/python312/target/bin"
 PATH="${SYNOPKG_PKGDEST}/env/bin:${SYNOPKG_PKGDEST}/bin:${PYTHON_DIR}:${PATH}"
 
-MARIADB_10_INSTALL_DIRECTORY="/var/packages/MariaDB10"
+MARIADB_10_INSTALL_DIRECTORY="/var/apps/MariaDB10"
 MARIADB_10_BIN_DIRECTORY="${MARIADB_10_INSTALL_DIRECTORY}/target/usr/local/mariadb10/bin"
 MYSQL="${MARIADB_10_BIN_DIRECTORY}/mysql"
 MYSQLDUMP="${MARIADB_10_BIN_DIRECTORY}/mysqldump"

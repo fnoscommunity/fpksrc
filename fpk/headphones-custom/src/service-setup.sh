@@ -1,5 +1,5 @@
-PYTHON_DIR="/var/packages/python/target/bin"
-GIT_DIR="/var/packages/git/target/bin"
+PYTHON_DIR="/var/apps/python/target/bin"
+GIT_DIR="/var/apps/git/target/bin"
 GIT="${GIT_DIR}/git"
 PATH="${SYNOPKG_PKGDEST}/bin:${SYNOPKG_PKGDEST}/env/bin:${PYTHON_DIR}:${GIT_DIR}:${PATH}"
 PYTHON="${SYNOPKG_PKGDEST}/env/bin/python"

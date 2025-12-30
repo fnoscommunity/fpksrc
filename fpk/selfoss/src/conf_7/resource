@@ -4,7 +4,7 @@
             {
                 "group": "http",
                 "mode": "0755",
-                "source": "/var/packages/selfoss/target/share/selfoss",
+                "source": "/var/apps/selfoss/target/share/selfoss",
                 "target": "selfoss",
                 "user": "sc-selfoss"
             }

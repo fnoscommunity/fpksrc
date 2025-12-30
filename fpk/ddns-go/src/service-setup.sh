@@ -5,7 +5,7 @@ SVC_BACKGROUND=yes
 SVC_WRITE_PID=yes
 
 # The following content refers to the service-setup.sh file in the minio package.
-INST_ETC="/var/packages/${SYNOPKG_PKGNAME}/etc"
+INST_ETC="/var/apps/${SYNOPKG_PKGNAME}/etc"
 INST_VARIABLES="${INST_ETC}/installer-variables"
 ENV_VARIABLES="${SYNOPKG_PKGVAR}/environment-variables"
 

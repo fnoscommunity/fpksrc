@@ -1,9 +1,9 @@
 # Define python312 binary path
-PYTHON_DIR="/var/packages/python312/target/bin"
+PYTHON_DIR="/var/apps/python312/target/bin"
 # Add local bin, virtualenv along with python312 to the default PATH
 PATH="${SYNOPKG_PKGDEST}/env/bin:${SYNOPKG_PKGDEST}/bin:${PYTHON_DIR}:${PATH}"
 LANGUAGE="env LANG=en_US.UTF-8"
-SYNOPKG_PKGETC=/var/packages/${SYNOPKG_PKGNAME}/etc
+SYNOPKG_PKGETC=/var/apps/${SYNOPKG_PKGNAME}/etc
 
 SERVICE_COMMAND="salt-minion --pid-file ${PID_FILE} -c ${SYNOPKG_PKGETC} -d"
 
@@ -21,7 +21,7 @@ service_postinst ()
            --directory=${SYNOPKG_PKGDEST}/env/lib/python3.12/site-packages/salt/utils \
            ${SYNOPKG_PKGDEST}/share/rsax931.py.patch
 
-    # Prepare salt-minion config in /var/packages/salt-minion/etc
+    # Prepare salt-minion config in /var/apps/salt-minion/etc
     test -d ${SYNOPKG_PKGETC}/minion.d || install -m 755 -d ${SYNOPKG_PKGETC}/minion.d
     test -f ${SYNOPKG_PKGETC}/minion || install -m 644 ${SYNOPKG_PKGDEST}/share/minion ${SYNOPKG_PKGETC}/minion
     test -f ${SYNOPKG_PKGETC}/proxy || install -m 644 ${SYNOPKG_PKGDEST}/share/proxy ${SYNOPKG_PKGETC}/proxy

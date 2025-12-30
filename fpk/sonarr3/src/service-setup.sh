@@ -1,7 +1,7 @@
 
 # Sonarr service setup
 PATH="${SYNOPKG_PKGDEST}/bin:${PATH}"
-MONO_PATH="/var/packages/mono/target/bin"
+MONO_PATH="/var/apps/mono/target/bin"
 MONO="${MONO_PATH}/mono"
 SONARR="${SYNOPKG_PKGDEST}/share/Sonarr/Sonarr.exe"
 

@@ -1,9 +1,9 @@
 # Define python312 binary path
-PYTHON_DIR="/var/packages/python312/target/bin"
+PYTHON_DIR="/var/apps/python312/target/bin"
 # Add local bin, virtualenv along with python312 to the default PATH
 PATH="${SYNOPKG_PKGDEST}/env/bin:${SYNOPKG_PKGDEST}/bin:${PYTHON_DIR}:${PATH}"
 LANGUAGE="env LANG=en_US.UTF-8"
-SYNOPKG_PKGETC=/var/packages/${SYNOPKG_PKGNAME}/etc
+SYNOPKG_PKGETC=/var/apps/${SYNOPKG_PKGNAME}/etc
 
 service_prestart ()
 {
@@ -62,7 +62,7 @@ service_postinst ()
            --directory=${SYNOPKG_PKGDEST}/env/lib/python3.12/site-packages/salt/utils \
            ${SYNOPKG_PKGDEST}/share/rsax931.py.patch
 
-    # Prepare salt-master config in /var/packages/salt-master/etc
+    # Prepare salt-master config in /var/apps/salt-master/etc
     test -d ${SYNOPKG_PKGETC}/master.d || install -m 755 -d ${SYNOPKG_PKGETC}/master.d
     test -f ${SYNOPKG_PKGETC}/master || install -m 644 ${SYNOPKG_PKGDEST}/share/master ${SYNOPKG_PKGETC}/master
     test -f ${SYNOPKG_PKGETC}/master.d/01_pidfile.conf || echo "pidfile: run" > ${SYNOPKG_PKGETC}/master.d/01_pidfile.conf

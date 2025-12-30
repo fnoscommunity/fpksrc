@@ -46,7 +46,7 @@ include ../../mk/fpksrc.fpk.mk
 demoservice_pre_copy:
 	@$(MSG) Create README and dummy files
 	mkdir -p $(STAGING_INSTALL_PREFIX_VAR)
-	echo "Test file for /var/packages/$(SPK_NAME)/var/README"  > $(STAGING_INSTALL_PREFIX_VAR)/README
+	echo "Test file for /var/apps/$(SPK_NAME)/var/README"  > $(STAGING_INSTALL_PREFIX_VAR)/README
 	echo "INSTALL_PREFIX_VAR     = $(INSTALL_PREFIX_VAR)"      >> $(STAGING_INSTALL_PREFIX_VAR)/README
 	echo "STAGING_INSTALL_PREFIX = $(STAGING_INSTALL_PREFIX)"  >> $(STAGING_INSTALL_PREFIX_VAR)/README
 	@$(MSG) Create dummy file to avoid empty target folder for DSM 7 packages

@@ -190,18 +190,18 @@
     <fileserve>1</fileserve>
 
     <!-- location of mime types file used for file serving -->
-    <mime-types>/var/packages/icecast/var/mime.types</mime-types>
+    <mime-types>/var/apps/icecast/var/mime.types</mime-types>
 
     <paths>
         <!-- basedir is only used if chroot is enabled -->
-        <basedir>/var/packages/icecast/target/share/icecast</basedir>
+        <basedir>/var/apps/icecast/target/share/icecast</basedir>
 
         <!-- Note that if <chroot> is turned on below, these paths must both
              be relative to the new root, not the original root -->
-        <logdir>/var/packages/icecast/var/log</logdir>
-        <webroot>/var/packages/icecast/target/share/icecast/web</webroot>
-        <adminroot>/var/packages/icecast/target/share/icecast/admin</adminroot>
-        <pidfile>/var/packages/icecast/var/icecast.pid</pidfile>
+        <logdir>/var/apps/icecast/var/log</logdir>
+        <webroot>/var/apps/icecast/target/share/icecast/web</webroot>
+        <adminroot>/var/apps/icecast/target/share/icecast/admin</adminroot>
+        <pidfile>/var/apps/icecast/var/icecast.pid</pidfile>
 
         <!-- Aliases: treat requests for 'source' path as being for 'dest' path
              May be made specific to a port or bound address using the "port"
@@ -217,7 +217,7 @@
         <alias source="/" destination="/status.xsl"/>
         <!-- The certificate file needs to contain both public and private part.
              Both should be PEM encoded.
-        <ssl-certificate>/var/packages/icecast/target/share/icecast/icecast.pem</ssl-certificate>
+        <ssl-certificate>/var/apps/icecast/target/share/icecast/icecast.pem</ssl-certificate>
         -->
     </paths>
 

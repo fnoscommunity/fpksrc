@@ -22,7 +22,7 @@
             {
                 "group": "http",
                 "mode": "0755",
-                "source": "/var/packages/roundcube/target/share/roundcube",
+                "source": "/var/apps/roundcube/target/share/roundcube",
                 "target": "roundcube",
                 "user": "sc-roundcube"
             }

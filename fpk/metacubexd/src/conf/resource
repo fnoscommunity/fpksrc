@@ -21,7 +21,7 @@
 		],
 		"pkg_dir_prepare": [
 			{
-				"source": "/var/packages/metacubexd/target/web",
+				"source": "/var/apps/metacubexd/target/web",
 				"target": "metacubexd",
 				"mode": "0755",
 				"group": "http",

@@ -9,7 +9,7 @@
 INST_LOG="/var/log/apps/${SYNOPKG_PKGNAME}.log"
 
 # Optional FWPORTS file
-FWPORTS_FILE="/var/packages/${SYNOPKG_PKGNAME}/config/${SYNOPKG_PKGNAME}.sc"
+FWPORTS_FILE="/var/apps/${SYNOPKG_PKGNAME}/config/${SYNOPKG_PKGNAME}.sc"
 
 # Temporary directory when the package is upgrading
 TMP_DIR="${SYNOPKG_TEMP_UPGRADE_FOLDER}"
@@ -79,7 +79,7 @@ call_func "initialize_variables"
 
 #
 # syncronize all files from var folder in spk (extracted to target/var)
-# (@appdata) /var/packages/<package>/target/var -> /var/packages/<package>/var
+# (@appdata) /var/apps/<package>/target/var -> /var/apps/<package>/var
 #
 syno_sync_var_folder () {
     # take all files that do not alredy exist and rename the other files to *.new to avoid overwriting
@@ -193,7 +193,7 @@ postuninst ()
             find ${SYNOPKG_PKGVAR} -mindepth 1 -delete | install_log
         fi
 
-        _etc_path=$(realpath /var/packages/${SYNOPKG_PKGNAME}/etc)
+        _etc_path=$(realpath /var/apps/${SYNOPKG_PKGNAME}/etc)
         if [ "$(ls -A ${_etc_path})" != "" ]; then
             find ${_etc_path} -mindepth 1 -delete | install_log
         fi

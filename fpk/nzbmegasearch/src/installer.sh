@@ -6,7 +6,7 @@ DNAME="NZBmegasearcH"
 
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"
-SSS="/var/packages/${PACKAGE}/scripts/start-stop-status"
+SSS="/var/apps/${PACKAGE}/scripts/start-stop-status"
 PYTHON_DIR="/usr/local/python"
 PATH="${INSTALL_DIR}/bin:${INSTALL_DIR}/env/bin:${PYTHON_DIR}/bin:${PATH}"
 VIRTUALENV="${PYTHON_DIR}/bin/virtualenv"

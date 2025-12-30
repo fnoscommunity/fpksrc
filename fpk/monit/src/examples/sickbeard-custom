@@ -1,8 +1,8 @@
 #default file provided by monit spk
 
-check process SickBeard-Custom with pidfile /var/packages/sickbeard-custom/var/sickbeard-custom.pid
-    start program = "/var/packages/sickbeard-custom/scripts/start-stop-status start"
-    stop program  = "/var/packages/sickbeard-custom/scripts/start-stop-status stop"
+check process SickBeard-Custom with pidfile /var/apps/sickbeard-custom/var/sickbeard-custom.pid
+    start program = "/var/apps/sickbeard-custom/scripts/start-stop-status start"
+    stop program  = "/var/apps/sickbeard-custom/scripts/start-stop-status stop"
     if failed host localhost port 8083 then restart
     if 3 restarts within 5 cycles then timeout
     #if memory > 110 MB then restart

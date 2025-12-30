@@ -203,10 +203,10 @@ SYNOLOG=${SYNOLOG_PATH}/synocli-kernelmodule.log                       # Default
 
 # If SPK is set reassign variables
 if [ -n "${SPK}" ]; then
-   SPK_CFG_PATH="/var/packages/${SPK}/target/etc"
-   FPATH="/var/packages/${SPK}/target/lib/firmware"
-   MPATH="/var/packages/${SPK}/target/lib/modules"
-   UPATH="/var/packages/${SPK}/target/rules.d"
+   SPK_CFG_PATH="/var/apps/${SPK}/target/etc"
+   FPATH="/var/apps/${SPK}/target/lib/firmware"
+   MPATH="/var/apps/${SPK}/target/lib/modules"
+   UPATH="/var/apps/${SPK}/target/rules.d"
    KPATH="${MPATH}/${ARCH}-${DSM_VERSION}/${KVER}"
    SYNOLOG="${SYNOLOG_PATH}/synocli-kernelmodule-${SPK}.log"
 fi

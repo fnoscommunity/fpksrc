@@ -1,4 +1,4 @@
-VIRTUALENV="/var/packages/python/target/bin/virtualenv"
+VIRTUALENV="/var/apps/python/target/bin/virtualenv"
 PATH="${SYNOPKG_PKGDEST}/bin:${PATH}"
 
 GROUP="sc-download"

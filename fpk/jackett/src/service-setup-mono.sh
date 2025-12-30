@@ -1,4 +1,4 @@
-MONO_PATH="/var/packages/mono/target/bin"
+MONO_PATH="/var/apps/mono/target/bin"
 PATH="${SYNOPKG_PKGDEST}/bin:${MONO_PATH}:${PATH}"
 MONO="${MONO_PATH}/mono"
 JACKETT="${SYNOPKG_PKGDEST}/share/JackettConsole.exe"

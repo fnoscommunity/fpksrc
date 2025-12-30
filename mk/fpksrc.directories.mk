@@ -36,7 +36,7 @@ endif
 
 ifndef INSTALL_PREFIX
 ifneq ($(strip $(SPK_NAME)),)
-INSTALL_PREFIX = /var/packages/$(SPK_NAME)/target
+INSTALL_PREFIX = /var/apps/$(SPK_NAME)/target
 else
 ifneq ($(strip $(PKG_NAME)),)
 INSTALL_PREFIX = /usr/local/$(PKG_NAME)

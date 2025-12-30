@@ -43,7 +43,7 @@
             {
                 "group": "http",
                 "mode": "0755",
-                "source": "/var/packages/tt-rss/target/share/tt-rss",
+                "source": "/var/apps/tt-rss/target/share/tt-rss",
                 "target": "tt-rss",
                 "user": "sc-tt-rss"
             }

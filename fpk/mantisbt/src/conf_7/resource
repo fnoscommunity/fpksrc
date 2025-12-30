@@ -22,7 +22,7 @@
             {
                 "group": "http",
                 "mode": "0755",
-                "source": "/var/packages/mantisbt/target/share/mantisbt",
+                "source": "/var/apps/mantisbt/target/share/mantisbt",
                 "target": "mantisbt",
                 "user": "sc-mantisbt"
             }

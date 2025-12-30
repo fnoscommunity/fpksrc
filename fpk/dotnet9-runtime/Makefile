@@ -37,4 +37,4 @@ include ../../mk/fpksrc.fpk.mk
 # Set library path to use bundled libstdc++
 dotnet_patch_target:
 	@$(MSG) "Set library runpath in dotnet executable."
-	@patchelf --set-rpath /var/packages/$(SPK_NAME)/target/lib $(STAGING_DIR)/share/dotnet/dotnet
+	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/share/dotnet/dotnet

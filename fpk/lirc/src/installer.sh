@@ -6,7 +6,7 @@ DNAME="LIRC"
 
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"
-SSS="/var/packages/${PACKAGE}/scripts/start-stop-status"
+SSS="/var/apps/${PACKAGE}/scripts/start-stop-status"
 PATH="${INSTALL_DIR}/bin:${PATH}"
 TMP_DIR="${SYNOPKG_PKGDEST}/../../@tmp"
 
@@ -129,6 +129,6 @@ fixpath ()
     # fix the global /etc/profile
     if [ $(grep "\$pack" /etc/profile | wc -l) -eq 0 ]; then
         echo fixing etc/profile
-        sed -i 's,export PATH,for pack in \$\(ls /var/packages\)\; do\n    PATH=\$\{PATH\}:/var/packages/\$pack/target/bin:/var/packages/\$pack/target/sbin\ndone\nexport PATH,' /etc/profile
+        sed -i 's,export PATH,for pack in \$\(ls /var/packages\)\; do\n    PATH=\$\{PATH\}:/var/apps/\$pack/target/bin:/var/apps/\$pack/target/sbin\ndone\nexport PATH,' /etc/profile
     fi
 }

@@ -7,8 +7,8 @@ if [ ${majorversion} -ge 7 ]; then
 fi
 
 CERT_DIR=/usr/local/etc/certificate/syncthing/syncthing_webui
-CONF_DIR=/var/packages/syncthing/var
-SYNCTHING=/var/packages/syncthing/target/bin/syncthing
+CONF_DIR=/var/apps/syncthing/var
+SYNCTHING=/var/apps/syncthing/target/bin/syncthing
 
 case $1 in
     syncthing_webui)

@@ -28,7 +28,7 @@
     ],
     "pkg_dir_prepare": [
       {
-        "source": "/var/packages/ariang/target/web",
+        "source": "/var/apps/ariang/target/web",
         "target": "ariang",
         "mode": "0755",
         "user": "sc-ariang",

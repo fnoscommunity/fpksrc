@@ -1,7 +1,7 @@
 # Define python312 binary path
-PYTHON_DIR="/var/packages/python312/target/bin"
+PYTHON_DIR="/var/apps/python312/target/bin"
 # Define ffmpeg binary path
-FFMPEG_DIR="/var/packages/ffmpeg7/target/bin"
+FFMPEG_DIR="/var/apps/ffmpeg7/target/bin"
 # Add local bin, virtualenv along with ffmpeg and python312 to the default PATH
 PATH="${SYNOPKG_PKGDEST}/env/bin:${SYNOPKG_PKGDEST}/bin:${PYTHON_DIR}:${FFMPEG_DIR}:${PATH}"
 

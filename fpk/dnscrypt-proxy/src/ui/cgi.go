@@ -296,7 +296,7 @@ func main() {
 		rootDir = pwd + "/test"
 	} else { // production environment
 		auth()
-		rootDir = "/var/packages/dnscrypt-proxy/target"
+		rootDir = "/var/apps/dnscrypt-proxy/target"
 	}
 
 	files = make(map[string]string)

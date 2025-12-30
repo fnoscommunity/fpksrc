@@ -1,8 +1,8 @@
 #default file provided by monit spk
 
-check process ZNC with pidfile /var/packages/znc/var/znc.pid
-    start program = "/var/packages/znc/scripts/start-stop-status start"
-    stop program  = "/var/packages/znc/scripts/start-stop-status stop"
+check process ZNC with pidfile /var/apps/znc/var/znc.pid
+    start program = "/var/apps/znc/scripts/start-stop-status start"
+    stop program  = "/var/apps/znc/scripts/start-stop-status stop"
     if failed host localhost port 8250 then restart
     if 3 restarts within 5 cycles then timeout
 

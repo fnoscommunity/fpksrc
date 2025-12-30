@@ -49,7 +49,7 @@ service_preupgrade ()
     if [ -e "${CFG_FILE}" ]; then
         if $(grep -q "/usr/local/umurmur/var/" "${CFG_FILE}"); then
             echo "Update var folder for DSM 7 compatibility in configuration file."
-            sed -e "s,/usr/local/umurmur/var/,/var/packages/umurmur/var/,g" -i "${CFG_FILE}"
+            sed -e "s,/usr/local/umurmur/var/,/var/apps/umurmur/var/,g" -i "${CFG_FILE}"
         fi
     fi
 

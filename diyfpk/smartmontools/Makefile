@@ -14,7 +14,7 @@ HOMEPAGE = https://www.smartmontools.org/
 LICENSE = GPLv2
 
 # smartctl of this package will not be found by path, because /bin/smartctl is found first
-# you have to use smartctl7 (or /usr/local/bin/smartctl or /var/packages/smartmontools/target/sbin/smartctl)
+# you have to use smartctl7 (or /usr/local/bin/smartctl or /var/apps/smartmontools/target/sbin/smartctl)
 SPK_COMMANDS = sbin/smartctl7 sbin/smartctl sbin/smartd sbin/update-smart-drivedb
 
 include ../../mk/fpksrc.fpk.mk

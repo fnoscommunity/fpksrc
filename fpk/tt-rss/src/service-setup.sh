@@ -33,7 +33,7 @@ else
 fi
 JQ="/bin/jq"
 SYNOSVC="/usr/syno/sbin/synoservice"
-MARIADB_10_INSTALL_DIRECTORY="/var/packages/MariaDB10"
+MARIADB_10_INSTALL_DIRECTORY="/var/apps/MariaDB10"
 MARIADB_10_BIN_DIRECTORY="${MARIADB_10_INSTALL_DIRECTORY}/target/usr/local/mariadb10/bin"
 MYSQL="${MARIADB_10_BIN_DIRECTORY}/mysql"
 MYSQLDUMP="${MARIADB_10_BIN_DIRECTORY}/mysqldump"
@@ -166,7 +166,7 @@ validate_preinst ()
 {
   # Check for modification to PHP template defaults on DSM 6
   if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
-    WS_TMPL_PATH="/var/packages/WebStation/target/misc"
+    WS_TMPL_PATH="/var/apps/WebStation/target/misc"
     WS_TMPL_FILE="php74_fpm.mustache"
     FULL_WS_TMPL_FILE="${WS_TMPL_PATH}/${WS_TMPL_FILE}"
     # Check for PHP template defaults

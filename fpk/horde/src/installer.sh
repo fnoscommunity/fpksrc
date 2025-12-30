@@ -7,7 +7,7 @@ PACKAGE_NAME="com.FnOScommunity.packages.${PACKAGE}"
 
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"
-SSS="/var/packages/${PACKAGE}/scripts/start-stop-status"
+SSS="/var/apps/${PACKAGE}/scripts/start-stop-status"
 WEB_DIR="/var/services/web"
 TMP_DIR="${SYNOPKG_PKGDEST}/../../@tmp"
 BUILDNUMBER="$(/bin/get_key_value /etc.defaults/VERSION buildnumber)"

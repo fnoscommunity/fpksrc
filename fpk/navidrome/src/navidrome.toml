@@ -8,7 +8,7 @@
 MusicFolder = "@@wizard_music_folder@@"
 
 # Folder to store application data (DB, cache...)
-DataFolder= "/var/packages/navidrome/var"
+DataFolder= "/var/apps/navidrome/var"
 
 # Configure periodic scans using "cron" syntax. To disable it altogether, set it to "0"
 # ScanSchedule = "@every 1m"

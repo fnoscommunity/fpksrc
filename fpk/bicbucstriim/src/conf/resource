@@ -3,7 +3,7 @@
 		"pkg_dir_prepare": [{
 			"group": "http",
 			"mode": "0755",
-			"source": "/var/packages/bicbucstriim/target/share/bbs",
+			"source": "/var/apps/bicbucstriim/target/share/bbs",
 			"target": "bbs",
 			"user": "sc-bicbucstriim"
 		}],
@@ -30,7 +30,7 @@
 				"group": "http",
 				"php_settings": {
 					"error_log": "/var/services/web_packages/bbs/php_errors.log",
-					"session.save_path": "/var/packages/bicbucstriim/tmp/",
+					"session.save_path": "/var/apps/bicbucstriim/tmp/",
 					"zend.assertions": "-1"
 				},
 				"profile_desc": "PHP Profile for bicbucstriim",

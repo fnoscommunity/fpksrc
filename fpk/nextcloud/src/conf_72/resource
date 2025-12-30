@@ -12,7 +12,7 @@
       {
         "group": "http",
         "mode": "0750",
-        "source": "/var/packages/nextcloud/target/share/nextcloud",
+        "source": "/var/apps/nextcloud/target/share/nextcloud",
         "target": "nextcloud",
         "user": "sc-nextcloud"
       }

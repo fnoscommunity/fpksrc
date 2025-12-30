@@ -10,7 +10,7 @@ fi
 
 X=0
 while [ $X -lt $REPEAT ]; do
-    /var/packages/lirc/target/bin/irsend SEND_ONCE $REMOTE_NAME $IRCOMMAND
+    /var/apps/lirc/target/bin/irsend SEND_ONCE $REMOTE_NAME $IRCOMMAND
     X=$((X+1))
     sleep 0.3
 done

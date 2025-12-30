@@ -1,7 +1,7 @@
 [{
     "step_title": "Configuration de dnscrypt-proxy",
     "items": [{
-        "desc": "Le fichier de configuration est: /var/packages/dnscrypt-proxy/target/var/dnscrypt-proxy.toml"
+        "desc": "Le fichier de configuration est: /var/apps/dnscrypt-proxy/target/var/dnscrypt-proxy.toml"
     }, {
         "type": "singleselect",
         "desc": "IPv6 servers:",

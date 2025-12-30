@@ -90,9 +90,9 @@ service_prestart () {
     # Install daily cron job (3 minutes past midnight), to update the block list
     if [ "$OS" = 'dsm' ]; then
         mkdir -p /etc/cron.d
-        echo "3       0       *       *       *       root    /var/packages/dnscrypt-proxy/target/var/update-blocklist.sh" >> /etc/cron.d/dnscrypt-proxy-update-blocklist
+        echo "3       0       *       *       *       root    /var/apps/dnscrypt-proxy/target/var/update-blocklist.sh" >> /etc/cron.d/dnscrypt-proxy-update-blocklist
     else # RSM
-        echo "3       0       *       *       *       root    /var/packages/dnscrypt-proxy/target/var/update-blocklist.sh" >> /etc/crontab
+        echo "3       0       *       *       *       root    /var/apps/dnscrypt-proxy/target/var/update-blocklist.sh" >> /etc/crontab
     fi
     synoservicectl --restart crond
 

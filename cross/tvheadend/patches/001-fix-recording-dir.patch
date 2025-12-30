@@ -6,7 +6,7 @@
  
    /* Try to figure out a good place to put them videos */
 -  snprintf(home_dir, sizeof(home_dir), "%s/Videos", getenv("HOME"));
-+  snprintf(home_dir, sizeof(home_dir), "%s/Videos", "/var/packages/tvheadend/var");
++  snprintf(home_dir, sizeof(home_dir), "%s/Videos", "/var/apps/tvheadend/var");
    xdg_dir = hts_settings_get_xdg_dir_with_fallback("VIDEOS", home_dir);
    if (xdg_dir != NULL) {
      if (stat(xdg_dir, &st) == 0) {

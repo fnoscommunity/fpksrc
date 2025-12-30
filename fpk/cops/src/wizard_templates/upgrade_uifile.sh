@@ -20,7 +20,7 @@ page_append ()
 
 PHP_FILE="${WEB_DIR}/cops/config_local.php"
 CONFIGURED_SHARE_NAME=$(sed -n "s/^\s*\$config\['calibre_directory'\] = '\([^']*\)';/\1/p" "$PHP_FILE" | xargs basename)
-PACKAGE_SHARE_NAME=$(grep "^SHARE_NAME=" "/var/packages/cops/etc/installer-variables" | cut -d '=' -f 2)
+PACKAGE_SHARE_NAME=$(grep "^SHARE_NAME=" "/var/apps/cops/etc/installer-variables" | cut -d '=' -f 2)
 SHARE_ERROR_TEXT="{{{UPGRADE_CALIBRE_DIRECTORY_VALIDATION_ERROR_TEXT}}}"
 
 # Check for data share

@@ -9,7 +9,7 @@
         "desc": "Please continue the update until the package fails to start and shows 'Manually Stopped' in the Package Center."
       },
       {
-        "desc": "Than you need to ssh into DSM and execute the command:<br/><code>sudo sed -i 's/package/root/g' /var/packages/ntopng/conf/privilege</code>"
+        "desc": "Than you need to ssh into DSM and execute the command:<br/><code>sudo sed -i 's/package/root/g' /var/apps/ntopng/conf/privilege</code>"
       },
       {
         "desc": "Finally press <strong>Run</strong> in the Package Center, or manually start the package in the ssh session with:<br/><code>sudo synopkg start ntopng</code>"

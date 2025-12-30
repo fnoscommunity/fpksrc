@@ -282,11 +282,11 @@ diff -uprN ../ffmpeg-4.2.2-patch105/libavcodec/synog1codecpatent.c ./libavcodec/
 +#include "synog1codecpatent.h"
 +
 +#if defined(SYNO_VIDEOSTATION)
-+#define SZ_BIN_SYNOCODECPATENT "/var/packages/VideoStation/target/bin/synocodectool"
++#define SZ_BIN_SYNOCODECPATENT "/var/apps/VideoStation/target/bin/synocodectool"
 +#elif defined(SYNO_AUDIOSTATION)
-+#define SZ_BIN_SYNOCODECPATENT "/var/packages/AudioStation/target/bin/synocodectool"
++#define SZ_BIN_SYNOCODECPATENT "/var/apps/AudioStation/target/bin/synocodectool"
 +#elif defined(SYNO_MEDIASERVER)
-+#define SZ_BIN_SYNOCODECPATENT "/var/packages/MediaServer/target/bin/synocodectool"
++#define SZ_BIN_SYNOCODECPATENT "/var/apps/MediaServer/target/bin/synocodectool"
 +#else
 +#define SZ_BIN_SYNOCODECPATENT "/usr/syno/bin/synocodectool"
 +#endif

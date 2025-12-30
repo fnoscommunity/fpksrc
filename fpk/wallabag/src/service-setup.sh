@@ -65,7 +65,7 @@ validate_preinst ()
 {
     # Check for modification to PHP template defaults on DSM 6
     if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
-        WS_TMPL_DIR="/var/packages/WebStation/target/misc"
+        WS_TMPL_DIR="/var/apps/WebStation/target/misc"
         WS_TMPL_FILE="php74_fpm.mustache"
         WS_TMPL_PATH="${WS_TMPL_DIR}/${WS_TMPL_FILE}"
         # Check for PHP template defaults

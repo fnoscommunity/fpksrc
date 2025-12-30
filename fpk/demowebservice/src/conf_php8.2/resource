@@ -44,7 +44,7 @@
       ],
       "pkg_dir_prepare": [
          {
-            "source": "/var/packages/demowebservice/target/web/demowebservice",
+            "source": "/var/apps/demowebservice/target/web/demowebservice",
             "target": "demowebservice",
             "mode": "0755",
             "user": "sc-demowebservice",

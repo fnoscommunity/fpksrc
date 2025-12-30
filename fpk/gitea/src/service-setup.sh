@@ -1,6 +1,6 @@
 GITEA="${SYNOPKG_PKGDEST}/bin/gitea"
 CFG_FILE="${SYNOPKG_PKGVAR}/conf.ini"
-PATH="/var/packages/git/target/bin:${PATH}"
+PATH="/var/apps/git/target/bin:${PATH}"
 
 if [ $SYNOPKG_DSM_VERSION_MAJOR -lt 7 ]; then
     SYNOPKG_PKGHOME="${SYNOPKG_PKGVAR}"

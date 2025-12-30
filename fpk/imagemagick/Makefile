@@ -43,7 +43,7 @@ imagemagick_patch_rpath:
 	    lib|bin) \
 	      if [ "$$(objdump -p $(STAGING_DIR)/$${file} 2>/dev/null | grep RPATH | grep spk/$(SPK_NAME))" ]; then \
 	         echo -n "Patch rpath in $${file}... " ; \
-	         patchelf --set-rpath /var/packages/$(SPK_NAME)/target/lib $(STAGING_DIR)/$${file} &> /dev/null && echo "ok." || echo "failed!" ; \
+	         patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/$${file} &> /dev/null && echo "ok." || echo "failed!" ; \
 	      fi \
 	      ;; \
 	  esac ; \

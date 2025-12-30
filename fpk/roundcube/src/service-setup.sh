@@ -25,7 +25,7 @@ validate_preinst ()
 {
     # Check for modification to PHP template defaults on DSM 6
     if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
-        WS_TMPL_DIR="/var/packages/WebStation/target/misc"
+        WS_TMPL_DIR="/var/apps/WebStation/target/misc"
         WS_TMPL_FILE="php74_fpm.mustache"
         WS_TMPL_PATH="${WS_TMPL_DIR}/${WS_TMPL_FILE}"
         # Check for PHP template defaults
@@ -236,8 +236,8 @@ service_preuninst ()
 {
     if [ "${SYNOPKG_PKG_STATUS}" = "UNINSTALL" ] && [ -n "${wizard_export_path}" ]; then
         # Prepare archive structure
-        if [ -f "/var/packages/${SYNOPKG_PKGNAME}/INFO" ]; then
-            SC_PKG_VER=$(awk -F'"' '/version=/ {split($2, v, "-"); print v[1]}' "/var/packages/${SYNOPKG_PKGNAME}/INFO")
+        if [ -f "/var/apps/${SYNOPKG_PKGNAME}/INFO" ]; then
+            SC_PKG_VER=$(awk -F'"' '/version=/ {split($2, v, "-"); print v[1]}' "/var/apps/${SYNOPKG_PKGNAME}/INFO")
         fi
         TEMPDIR="${SYNOPKG_PKGTMP}/${SYNOPKG_PKGNAME}_backup_v${SC_PKG_VER}_$(date +"%Y%m%d")"
         ${MKDIR} "${TEMPDIR}"

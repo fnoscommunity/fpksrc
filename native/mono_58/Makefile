@@ -24,6 +24,6 @@ include ../../mk/fpksrc.native-cc.mk
 .PHONY: mono_native_post_install
 mono_native_post_install:
 	# adjust path in shell scripts
-	file $(WORK_DIR)/install/usr/local/bin/* | grep ASCII | cut -d ':' -f1 | xargs sed -i -e 's# /usr/local# /var/packages/mono/target#g'
+	file $(WORK_DIR)/install/usr/local/bin/* | grep ASCII | cut -d ':' -f1 | xargs sed -i -e 's# /usr/local# /var/apps/mono/target#g'
 	# adjust path in config file
-	find $(WORK_DIR)/install/usr/local -name monodoc.dll.config | xargs sed -i -e 's#/usr/local#/var/packages/mono/target#g'
+	find $(WORK_DIR)/install/usr/local -name monodoc.dll.config | xargs sed -i -e 's#/usr/local#/var/apps/mono/target#g'

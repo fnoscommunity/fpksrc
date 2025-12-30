@@ -1,4 +1,4 @@
-PYTHON_DIR="/var/packages/python/target/bin"
+PYTHON_DIR="/var/apps/python/target/bin"
 PATH="${SYNOPKG_PKGDEST}/bin:${SYNOPKG_PKGDEST}/env/bin:${PYTHON_DIR}:${PATH}"
 PYTHON="${SYNOPKG_PKGDEST}/env/bin/python"
 VIRTUALENV="${PYTHON_DIR}/virtualenv"

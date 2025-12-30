@@ -16,7 +16,7 @@ ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 
 # Set videodriver installtion prefix directory variables
 ifeq ($(strip $(VIDEODRV_STAGING_PREFIX)),)
-export VIDEODRV_PREFIX = /var/packages/$(VIDEODRV_PACKAGE)/target
+export VIDEODRV_PREFIX = /var/apps/$(VIDEODRV_PACKAGE)/target
 export VIDEODRV_STAGING_PREFIX = $(realpath $(VIDEODRV_PACKAGE_ROOT)/install/$(VIDEODRV_PREFIX))
 endif
 

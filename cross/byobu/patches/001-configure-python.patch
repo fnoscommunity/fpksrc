@@ -17,7 +17,7 @@
 -	elif python -c "import snack" >/dev/null 2>&1; then
 -		export BYOBU_PYTHON="python"
 -	fi
-+	export BYOBU_PYTHON="/var/packages/python312/target/bin/python3"
++	export BYOBU_PYTHON="/var/apps/python312/target/bin/python3"
  fi
  
  export BYOBU_WINDOW_NAME="-"
@@ -31,6 +31,6 @@
 +if [ ! -d "$BYOBU_SITE_PACKAGES_DIR" ]; then
 +	# link snack into .local site-packages
 +	mkdir -p ${BYOBU_SITE_PACKAGES_DIR}
-+	ln -sf /var/packages/byobu/target/lib/python3.12/site-packages/_snack.so ${BYOBU_SITE_PACKAGES_DIR}/_snack.so
-+	ln -sf /var/packages/byobu/target/lib/python3.12/site-packages/snack.py  ${BYOBU_SITE_PACKAGES_DIR}/snack.py
++	ln -sf /var/apps/byobu/target/lib/python3.12/site-packages/_snack.so ${BYOBU_SITE_PACKAGES_DIR}/_snack.so
++	ln -sf /var/apps/byobu/target/lib/python3.12/site-packages/snack.py  ${BYOBU_SITE_PACKAGES_DIR}/snack.py
 +fi

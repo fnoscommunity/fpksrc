@@ -62,5 +62,5 @@ ffsync_extra_install:
 	@install -m 755 -d $(STAGING_DIR)/var
 	@install -m 644 src/var/local.toml $(STAGING_DIR)/var/
 	@$(MSG) Patch binaries built with rust to find shared libraries
-	@patchelf --set-rpath /var/packages/$(SPK_NAME)/target/lib:/var/packages/$(PYTHON_PACKAGE)/target/lib $(STAGING_DIR)/bin/syncserver
-	@patchelf --set-rpath /var/packages/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/diesel
+	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib:/var/apps/$(PYTHON_PACKAGE)/target/lib $(STAGING_DIR)/bin/syncserver
+	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/diesel

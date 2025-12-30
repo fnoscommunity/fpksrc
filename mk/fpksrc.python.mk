@@ -34,7 +34,7 @@ export SPK_NAME
 
 # Set Python installtion prefix directory variables
 ifeq ($(strip $(PYTHON_STAGING_INSTALL_PREFIX)),)
-export PYTHON_PREFIX = /var/packages/$(PYTHON_PACKAGE)/target
+export PYTHON_PREFIX = /var/apps/$(PYTHON_PACKAGE)/target
 export PYTHON_STAGING_INSTALL_PREFIX = $(realpath $(PYTHON_PACKAGE_WORK_DIR)/install/$(PYTHON_PREFIX))
 endif
 

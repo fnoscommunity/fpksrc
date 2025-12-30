@@ -35,7 +35,7 @@
             {
                 "group": "http",
                 "mode": "0755",
-                "source": "/var/packages/wallabag/target/share/wallabag",
+                "source": "/var/apps/wallabag/target/share/wallabag",
                 "target": "wallabag",
                 "user": "sc-wallabag"
             }

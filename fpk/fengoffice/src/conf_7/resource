@@ -22,7 +22,7 @@
             {
                 "group": "http",
                 "mode": "0755",
-                "source": "/var/packages/fengoffice/target/share/fengoffice",
+                "source": "/var/apps/fengoffice/target/share/fengoffice",
                 "target": "fengoffice",
                 "user": "sc-fengoffice"
             }

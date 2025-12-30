@@ -6,7 +6,7 @@
       },{
         "desc": "<b style=\"color: red\">WARNING:</b> This release includes database schema changes that are NOT reversible by simply downgrading to a previous version of Navidrome. Before installing this version: <b>BACKUP YOUR DATABASE</b> - Create a complete backup of your navidrome.db file."
       },{
-        "desc": "You find the database as <code>/var/packages/navidrome/var/navidrome.db</code>. Use the filebrowser package, or login by ssh, or create a manual scheduled task to make a backup copy of this database."
+        "desc": "You find the database as <code>/var/apps/navidrome/var/navidrome.db</code>. Use the filebrowser package, or login by ssh, or create a manual scheduled task to make a backup copy of this database."
       },{
         "desc": "Finally, after update, you must run a <b>Full Scan</b> of your folders."
       }

@@ -16,10 +16,10 @@ TEE="/usr/bin/tee -a"
 RSYNC="/bin/rsync -avh"
 TAR="/bin/tar"
 
-INST_ETC="/var/packages/${SYNOPKG_PKGNAME}/etc"
+INST_ETC="/var/apps/${SYNOPKG_PKGNAME}/etc"
 INST_VARIABLES="${INST_ETC}/installer-variables"
 # DSM7 only
-INST_SHARES="/var/packages/${SYNOPKG_PKGNAME}/shares"
+INST_SHARES="/var/apps/${SYNOPKG_PKGNAME}/shares"
 
 if [ -z "${SYNOPKG_PKGVAR}" ]; then
     # define SYNOPKG_PKGVAR for compatibility with DSM7 (replaces former INST_VAR)

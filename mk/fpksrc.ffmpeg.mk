@@ -18,7 +18,7 @@ ifneq ($(wildcard $(FFMPEG_PACKAGE_ROOT)),)
 
 # Set videodriver installtion prefix directory variables
 ifeq ($(strip $(FFMPEG_STAGING_PREFIX)),)
-export FFMPEG_PREFIX = /var/packages/$(FFMPEG_PACKAGE)/target
+export FFMPEG_PREFIX = /var/apps/$(FFMPEG_PACKAGE)/target
 export FFMPEG_STAGING_PREFIX = $(realpath $(FFMPEG_PACKAGE_ROOT)/install/$(FFMPEG_PREFIX))
 endif
 

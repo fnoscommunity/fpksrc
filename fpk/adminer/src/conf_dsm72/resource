@@ -36,7 +36,7 @@
     ],
     "pkg_dir_prepare": [
       {
-        "source": "/var/packages/adminer/target/web",
+        "source": "/var/apps/adminer/target/web",
         "target": "adminer",
         "mode": "0755",
         "user": "sc-adminer",

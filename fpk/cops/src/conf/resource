@@ -18,7 +18,7 @@
 		"pkg_dir_prepare": [{
 			"group": "http",
 			"mode": "0755",
-			"source": "/var/packages/cops/target/share/cops",
+			"source": "/var/apps/cops/target/share/cops",
 			"target": "cops",
 			"user": "sc-cops"
 		}],

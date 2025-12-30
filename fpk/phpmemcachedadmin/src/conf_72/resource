@@ -4,7 +4,7 @@
       {
         "group": "http",
         "mode": "0755",
-        "source": "/var/packages/phpmemcachedadmin/target/share/phpmemcachedadmin",
+        "source": "/var/apps/phpmemcachedadmin/target/share/phpmemcachedadmin",
         "target": "phpmemcachedadmin",
         "user": "sc-phpmemcachedadmin"
       }

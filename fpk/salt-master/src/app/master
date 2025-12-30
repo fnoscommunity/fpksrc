@@ -740,8 +740,8 @@ rest_cherrypy:
   port: 8282
   # listen on all interfaces
   host: 0.0.0.0
-  app: /var/packages/salt-master/var/saltgui/index.html
-  static: /var/packages/salt-master/var/saltgui/static
+  app: /var/apps/salt-master/var/saltgui/index.html
+  static: /var/apps/salt-master/var/saltgui/static
   static_path: /static
   disable_ssl: true
   thread_pool: 30

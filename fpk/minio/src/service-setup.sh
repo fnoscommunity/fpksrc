@@ -2,7 +2,7 @@
 PATH="${SYNOPKG_PKGDEST}/bin:${PATH}"
 GROUP="sc-minio"
 
-INST_ETC="/var/packages/${SYNOPKG_PKGNAME}/etc"
+INST_ETC="/var/apps/${SYNOPKG_PKGNAME}/etc"
 INST_VARIABLES="${INST_ETC}/installer-variables"
 ENV_VARIABLES="${SYNOPKG_PKGVAR}/environment-variables"
 
