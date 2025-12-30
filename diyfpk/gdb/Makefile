@@ -15,7 +15,7 @@ endif
 
 MAINTAINER = th0ma7
 DESCRIPTION = The GNU Debugger \(GDB\) is a portable debugger that runs on many Unix-like systems and works for many programming languages, including Ada, C, C++, Objective-C, Free Pascal, Fortran, Go and partially others.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.sourceware.org/gdb/
 LICENSE  = GPLv2

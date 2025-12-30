@@ -11,7 +11,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 DEPENDS = cross/comskip
 SPK_DEPENDS = $(FFMPEG_PACKAGE)
 
-STARTABLE = no
+STARTABLE = false
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Comskip is a free mpeg commercial detector. Read the wiki on how to use and configure it.

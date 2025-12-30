@@ -9,7 +9,7 @@ MAINTAINER = hgy59
 DESCRIPTION = "TestDisk is powerful free data recovery software."
 DISPLAY_NAME = TestDisk
 CHANGELOG = "Add support for ext, ntfs, reiserfs, ewf and jpeg"
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://www.cgsecurity.org/wiki/TestDisk
 LICENSE = GPLv2

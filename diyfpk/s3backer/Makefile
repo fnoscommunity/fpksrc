@@ -6,7 +6,7 @@ DEPENDS = cross/s3backer
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = FUSE-based single file backing store via Amazon S3.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/archiecobbs/s3backer/wiki/ManPage
 LICENSE  = GPLv2

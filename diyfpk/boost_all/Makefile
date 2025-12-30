@@ -6,7 +6,7 @@ DEPENDS = cross/boost
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Makefile to build all boost libraries (except boost-python).
-STARTABLE = no
+STARTABLE = false
 
 BOOST_LIBRARIES += all
 ENV += BOOST_LIBRARIES="$(BOOST_LIBRARIES)"

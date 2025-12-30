@@ -17,7 +17,7 @@ MAINTAINER = ymartin59
 DESCRIPTION = Beets is the media library management system for obsessive music geeks. The purpose of beets is to get your music collection right once and for all. It catalogs your collection, automatically improving its metadata as it goes. It then provides a bouquet of tools for manipulating and accessing your music.
 
 DISPLAY_NAME = beets
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "1. Update beets to 2.3.1.<br/>2. Migrate to Python 3.12.<br/>3. Fix wheel build issue with lap."
 
 HOMEPAGE = http://beets.io/

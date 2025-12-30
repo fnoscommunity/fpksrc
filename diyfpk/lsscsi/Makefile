@@ -7,7 +7,7 @@ DEPENDS = cross/lsscsi
 MAINTAINER = biyiklioglu
 DESCRIPTION = The lsscsi command lists information about SCSI devices in Linux.
 DISPLAY_NAME = lsscsi
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://sg.danny.cz/scsi/lsscsi.html
 LICENSE = GPLv2

@@ -19,7 +19,7 @@ endif
 MAINTAINER = FnOScommunity
 DESCRIPTION = n³ The unorthodox terminal file manager.
 DISPLAY_NAME = n³
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/jarun/nnn
 LICENSE = 2-clause BSD

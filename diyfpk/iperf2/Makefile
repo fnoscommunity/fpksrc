@@ -8,7 +8,7 @@ DEPENDS = cross/iperf2
 MAINTAINER = hgy59
 DESCRIPTION = A tool for measuring TCP and UDP network performance, based on iperf 2.0.5.
 DISPLAY_NAME = iperf2
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://sourceforge.net/projects/iperf2/
 LICENSE = BSD

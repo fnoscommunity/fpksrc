@@ -15,7 +15,7 @@ endif
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A customizable cross-platform graphical process/system monitor for the terminal.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://clementtsang.github.io/bottom
 LICENSE  = MIT

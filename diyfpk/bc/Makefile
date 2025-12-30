@@ -8,7 +8,7 @@ DEPENDS = cross/bc
 MAINTAINER = FnOScommunity
 DESCRIPTION = bc is an arbitrary precision numeric processing language.
 DISPLAY_NAME = bc
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.gnu.org/software/bc/
 LICENSE = GPLv3

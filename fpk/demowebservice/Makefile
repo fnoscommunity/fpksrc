@@ -57,7 +57,7 @@ endif
 #INSTUNINST_RESTART_SERVICES = apache-web
 
 SERVICE_SETUP = src/service-setup.sh
-STARTABLE = no
+STARTABLE = false
 
 COPY_TARGET = demowebservice_install
 POST_ICON_TARGET = demowebservice_post_icon

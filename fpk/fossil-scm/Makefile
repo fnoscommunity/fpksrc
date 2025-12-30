@@ -9,7 +9,7 @@ MAINTAINER = FnOScommunity
 DISPLAY_NAME = Fossil SCM
 
 DESCRIPTION = "Fossil is a simple, high-reliability, distributed software configuration management system."
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "1. Update fossil-scm to 2.17.<br/>2. Update openssl to 1.1.1l."
 
 HOMEPAGE = https://www.fossil-scm.org/

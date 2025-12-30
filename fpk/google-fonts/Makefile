@@ -8,7 +8,7 @@ DEPENDS = cross/google-fonts
 MAINTAINER = FnOScommunity
 DESCRIPTION = Collection of all available Google Fonts.
 DISPLAY_NAME = Google Fonts
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://fonts.google.com/
 LICENSE  = Most of the fonts in the collection use the SIL Open Font License, v1.1. Some fonts use the Apache 2 license. The Ubuntu fonts use the Ubuntu Font License v1.0.

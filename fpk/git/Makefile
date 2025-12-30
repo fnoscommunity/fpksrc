@@ -9,7 +9,7 @@ OPTIONAL_DEPENDS = cross/git-lfs
 MAINTAINER = FnOScommunity
 DESCRIPTION = Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 DESCRIPTION_FRE = Git est un système de gestion de révision rapide, extensible et distribué avec un ensemble de commandes inhabituellement riche qui fournit à la fois des opérations de haut niveau et un accès complet aux structures de bas niveau.
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = Git
 CHANGELOG = "1. Update git to v2.51.1. <br/>2. Update git-lfs to v3.7.1."
 

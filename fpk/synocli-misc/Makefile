@@ -13,7 +13,7 @@ MAINTAINER = FnOScommunity
 DISPLAY_NAME = SynoCli misc. Tools
 
 DESCRIPTION = "SynoCli misc. Tools provide a set of miscellaneous small command-line utilities: bc, errno, expect, ifdata, ifne, isutf8, lckdo, mispipe, parallel, pee, sponge, ts, cal, col, colcrt, colrm, column, hardlink, findmnt, hexdump, lsblk, lscpu, lsipc, lsirq, rev, wall, whereis, zramctl, uhubctl."
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "1. Add findmnt of util-linux. <br/>2. Update bc to v1.08.2. <br/>3. Update util-linux to v2.4.1. <br/>4. Update uhubctl to v2.6.0."
 
 HOMEPAGE = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SynoCliMisc

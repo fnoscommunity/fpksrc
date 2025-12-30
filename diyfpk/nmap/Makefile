@@ -8,7 +8,7 @@ OPTIONAL_DEPENDS = cross/nmap cross/nmap_7.92
 MAINTAINER = FnOScommunity
 DESCRIPTION = Nmap \(Network Mapper\) is a free and open source utility for network discovery and security auditing.
 DISPLAY_NAME = nmap
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://nmap.org/
 LICENSE  = https://svn.nmap.org/nmap/LICENSE

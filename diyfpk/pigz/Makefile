@@ -7,7 +7,7 @@ DEPENDS = cross/pigz
 MAINTAINER = FnOScommunity
 DESCRIPTION = A parallel implementation of gzip for modern multi-processor, multi-core machines.
 DISPLAY_NAME = pigz
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://zlib.net/pigz/
 LICENSE = zlib

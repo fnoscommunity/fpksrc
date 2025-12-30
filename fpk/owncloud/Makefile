@@ -45,7 +45,7 @@ OS_MAX_VER = 7.2-79999
 endif
 
 SERVICE_SETUP = src/service-setup.sh
-STARTABLE = no
+STARTABLE = false
 
 # TMPDIR is used for owncloud built in backup and update
 USE_ALTERNATE_TMPDIR = 1

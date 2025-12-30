@@ -7,7 +7,7 @@ DEPENDS = cross/mtr
 MAINTAINER = FnOScommunity
 DESCRIPTION = mtr \(My traceroute\) combines the functionality of the 'traceroute' and 'ping' programs in a single network diagnostic tool.
 DISPLAY_NAME = My traceroute
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.bitwizard.nl/mtr/
 LICENSE  = GPLv2

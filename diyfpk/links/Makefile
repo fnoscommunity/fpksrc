@@ -8,7 +8,7 @@ DEPENDS = cross/links
 MAINTAINER = FnOScommunity
 DESCRIPTION = Links is a web browser running in text mode.
 DISPLAY_NAME = Links
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://links.twibright.com/
 LICENSE = GPLv2

@@ -6,7 +6,7 @@ DEPENDS = cross/cpulimit
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = CPU usage limiter for Linux.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/opsengine/cpulimit
 LICENSE  = GPLv2+

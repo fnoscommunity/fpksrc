@@ -9,7 +9,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 MAINTAINER = FnOScommunity
 DESCRIPTION = A tool to analyze file system usage written in Rust.
 DISPLAY_NAME = $(SPK_NAME)
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://ownyourbits.com/2018/03/25/analyze-disk-usage-with-dutree/
 LICENSE  = GPLv3

@@ -14,7 +14,7 @@ DEPENDS += cross/jpegoptim cross/pngcrush cross/advancecomp
 MAINTAINER = FnOScommunity
 DESCRIPTION = Several utilities for image optimization \(pngquant, jpegoptim, pngcrush, advancecomp\)
 DISPLAY_NAME = Image Optimizers
-STARTABLE = no
+STARTABLE = false
 
 LICENSE = GPLv3
 

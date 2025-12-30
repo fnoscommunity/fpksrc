@@ -9,7 +9,7 @@ MAINTAINER = cytec
 DESCRIPTION = MKVToolNix - Ultimate Tool for Editing and Merging MKV Files. MKVToolNix is a powerful tool for editing, merging, and splitting MKV files. Easily manage video, audio, and subtitles, extract tracks, and modify metadata.
 CHANGELOG = "Update boost libraries. MKVToolNix v22.0 is the final version that is compatible with DSM 6."
 DISPLAY_NAME = MKVToolNix
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://mkvtoolnix.org/
 LICENSE  = GPLv2

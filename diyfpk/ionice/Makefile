@@ -6,7 +6,7 @@ DEPENDS = cross/ionice
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = ionice of util-linux (random collection of Linux utilities).
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/util-linux/util-linux
 LICENSE  = GPLv2

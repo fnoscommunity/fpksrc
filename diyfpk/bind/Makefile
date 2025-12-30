@@ -8,7 +8,7 @@ OPTIONAL_DEPENDS = cross/bind cross/bind_9.16
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = BIND \(Berkeley Internet Name Domain\) is a complete, highly portable implementation of the DNS \(Domain Name System\) protocol.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.isc.org/
 LICENSE = MPL 2.0

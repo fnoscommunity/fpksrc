@@ -9,7 +9,7 @@ MAINTAINER = FnOScommunity
 DESCRIPTION = Micro \(GNU\) Emacs-like text editor.
 
 DISPLAY_NAME = "mg (micro gnu)"
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://man.troglobit.com/man1/mg.1.html
 LICENSE  = UNLICENSE

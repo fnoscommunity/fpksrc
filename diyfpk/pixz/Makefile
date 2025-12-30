@@ -8,7 +8,7 @@ MAINTAINER = dotysan
 DESCRIPTION = Parallel, indexed xz compressor.
 DISPLAY_NAME = pixz
 
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/vasi/pixz
 LICENSE = 2-Clause BSD

@@ -13,7 +13,7 @@ endif
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A cat(1) clone with wings.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/sharkdp/bat
 LICENSE = MIT or Apache 2.0

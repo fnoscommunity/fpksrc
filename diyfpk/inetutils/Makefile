@@ -6,7 +6,7 @@ DEPENDS = cross/inetutils
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = GNU network utilities.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.gnu.org/software/inetutils/
 LICENSE = GPLv3

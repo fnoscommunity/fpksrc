@@ -10,7 +10,7 @@ BETA = 1
 MAINTAINER = hgy59
 DESCRIPTION = "Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs\' code."
 DISPLAY_NAME = stunnel TLS Proxy
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "1. Update stunnel to v5.60<br/>2. Update OpenSSL to v1.1.1l<br/><br/>This is an experimental release. Please provide issues and package improvements at <a href="https://github.com/fnoscommunity/fpksrc/issues">FnOScommunity</a>"
 
 HOMEPAGE = https://www.stunnel.org/

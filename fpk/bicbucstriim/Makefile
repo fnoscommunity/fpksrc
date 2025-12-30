@@ -31,6 +31,6 @@ DSM_UI_CONFIG = src/app/config
 CONF_DIR = src/conf/
 
 SERVICE_SETUP = src/service-setup.sh
-STARTABLE = no
+STARTABLE = false
 
 include ../../mk/fpksrc.fpk.mk

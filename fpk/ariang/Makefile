@@ -20,7 +20,7 @@ HOMEPAGE = https://ariang.mayswind.net/
 LICENSE  = MIT
 
 CONF_DIR = src/conf
-STARTABLE = no
+STARTABLE = false
 
 # Pure PHP package, make sure ARCH is noarch
 override ARCH=noarch

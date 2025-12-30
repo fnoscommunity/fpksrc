@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Disk Usage/Free Utility - a better 'df' alternative.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/muesli/duf
 LICENSE  = MIT

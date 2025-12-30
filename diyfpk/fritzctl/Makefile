@@ -8,7 +8,7 @@ DEPENDS = cross/fritzctl
 MAINTAINER = bpicode
 DESCRIPTION = A lightweight, easy to use console client for the AVM FRITZ!Box Home Automation.
 DISPLAY_NAME = fritzctl
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = Initial release
 
 HOMEPAGE = https://github.com/bpicode/fritzctl

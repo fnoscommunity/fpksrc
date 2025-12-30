@@ -6,7 +6,7 @@ DEPENDS = cross/e2fsprogs
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Ext2/3/4 filesystem userspace utilities.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://e2fsprogs.sourceforge.net/
 LICENSE = GPL

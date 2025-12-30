@@ -14,7 +14,7 @@ MAINTAINER = FnOScommunity
 DESCRIPTION =  Collection of programs for the Python 3.13 programming language.
 DESCRIPTION_FRE = Collection of programs for the Python 3.13 programming language.
 DESCRIPTION_SPN = Colección de programas para el lenguaje de programación Python 3.13.
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = Python 3.13 Wheels Collection
 CHANGELOG = "1. Initial package"
 

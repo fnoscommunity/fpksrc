@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Advanced Linux Sound Architecture provides audio and MIDI functionality to the Linux operating system.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.alsa-project.org/
 LICENSE = GPLv2

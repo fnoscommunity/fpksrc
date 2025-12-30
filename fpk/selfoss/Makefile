@@ -32,7 +32,7 @@ DSM_UI_CONFIG = src/app/config
 # Set user as 'auto' for DSM 6 privilege
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
-STARTABLE = no
+STARTABLE = false
 
 # TMPDIR is used for selfoss built in backup and update
 USE_ALTERNATE_TMPDIR = 1

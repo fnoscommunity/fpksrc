@@ -15,7 +15,7 @@ DEPENDS = cross/librsync cross/duply
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Encrypted bandwidth-efficient backup using the rsync algorithm. Also contains duply wrapper script (duply is supported only for DSM >= 6.0).
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = Duplicity
 CHANGELOG = "1. Update duplicity to v3.0.5.1."
 

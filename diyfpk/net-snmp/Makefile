@@ -7,7 +7,7 @@ DEPENDS = cross/net-snmp
 MAINTAINER = FnOScommunity
 DESCRIPTION = Net-SNMP is a suite of applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both IPv4 and IPv6.
 DISPLAY_NAME = Net-SNMP
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://www.net-snmp.org/
 LICENSE = BSD and CMU/UCD (BSD like)

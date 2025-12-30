@@ -13,7 +13,7 @@ endif
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A modern replacement for 'ls'.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://eza.rocks/
 LICENSE = MIT

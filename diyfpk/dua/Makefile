@@ -14,7 +14,7 @@ endif
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A tool to conveniently learn about the disk usage of directories, fast!
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://lib.rs/crates/dua-cli
 LICENSE  = MIT

@@ -7,7 +7,7 @@ DEPENDS = cross/davfs2
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Mount a WebDAV resource as a regular file system.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://savannah.nongnu.org/projects/davfs2
 LICENSE = GPLv3+

@@ -7,7 +7,7 @@ DEPENDS = cross/xz
 MAINTAINER = FnOScommunity
 DESCRIPTION = Free general-purpose data compression software with high compression ratio.
 DISPLAY_NAME = xz
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://tukaani.org
 LICENSE  = various

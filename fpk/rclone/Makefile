@@ -10,7 +10,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS) $(ARMv5_ARCHS)
 MAINTAINER = dotwee
 DESCRIPTION = Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces.
 DISPLAY_NAME = rclone
-STARTABLE = no
+STARTABLE = false
 
 CHANGELOG = "Update to v1.71.0."
 

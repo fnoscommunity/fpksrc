@@ -6,7 +6,7 @@ DEPENDS = cross/uhubctl
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = USB hub per-port power control.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/mvp/uhubctl
 LICENSE  = GPLv2

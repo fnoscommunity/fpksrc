@@ -51,7 +51,7 @@ START_DEP_SERVICES = apache-web
 INSTUNINST_RESTART_SERVICES = apache-web
 
 SERVICE_SETUP = src/service-setup.sh
-STARTABLE = no
+STARTABLE = false
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 WIZARDS_DIR = src/wizard7/
 else

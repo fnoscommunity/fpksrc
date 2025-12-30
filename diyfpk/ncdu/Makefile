@@ -6,7 +6,7 @@ DEPENDS = cross/ncdu
 
 MAINTAINER = yeled
 DESCRIPTION = Disk usage analyzer with an ncurses interface.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://dev.yorhel.nl/ncdu
 LICENSE = MIT

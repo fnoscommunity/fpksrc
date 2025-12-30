@@ -6,7 +6,7 @@ DEPENDS = cross/disktype
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Detects the content format of a disk or disk image by checking for signatures of file systems, partition tables, and boot codes.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://disktype.sourceforge.net/
 LICENSE = MIT

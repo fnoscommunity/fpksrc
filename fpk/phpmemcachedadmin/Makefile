@@ -25,7 +25,7 @@ LICENSE  = Apache-2.0
 SERVICE_USER = auto
 DSM_UI_CONFIG = src/app/config
 
-STARTABLE = no
+STARTABLE = false
 SERVICE_SETUP = src/service-setup.sh
 
 include ../../mk/fpksrc.common.mk

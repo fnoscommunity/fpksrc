@@ -104,7 +104,7 @@ DESCRIPTION = "SynoCli File Tools provide a set of small command-line utilities:
     pigz, \
     detox, iconv, dos2unix tools, \
     patch$(OPTIONAL_DESC)."
-STARTABLE = no
+STARTABLE = false
 
 CHANGELOG  = "1. Add pigz. <br/>"
 CHANGELOG += "2. Update bat from v0.25.0 to v0.26.1 (except for ARMv5, qoriq and evansport on DSM < 7). <br/>"

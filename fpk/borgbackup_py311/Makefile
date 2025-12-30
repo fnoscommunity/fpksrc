@@ -47,7 +47,7 @@ MAINTAINER = FnOScommunity
 DESCRIPTION = BorgBackup \(short: Borg\) is a deduplicating backup program. Optionally, it supports compression and authenticated encryption. This package includes emborg \(a Borg frontend\) and borgmatic \(simple, configuration-driven backup software for servers and workstations\).  This package depends on Python 3.11 for models without Python 3.12.
 
 DISPLAY_NAME = Borg
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "1. Borgbackup 1.4.1 with Python 3.11 dependency for ARMv5 (88f628x) and ARMv7L (hi3535) archs. <br/>2. Update borgmatic to v2.0.11. <br/>3. Update emborg to v1.42."
 
 HOMEPAGE = https://borgbackup.readthedocs.io

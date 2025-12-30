@@ -9,7 +9,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = CLI utility for displaying current network utilization by process, connection and remote IP/hostname.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/imsnif/bandwhich#readme
 LICENSE  = MIT

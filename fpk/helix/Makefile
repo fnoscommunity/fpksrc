@@ -10,7 +10,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(PPC_ARCHS) $(ARMv7L_ARCHS)
 MAINTAINER = FnOScommunity
 DESCRIPTION = A post-modern modal text editor.
 DISPLAY_NAME = helix
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "Initial package release"
 
 HOMEPAGE = https://helix-editor.com/

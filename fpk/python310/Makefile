@@ -10,7 +10,7 @@ MAINTAINER = FnOScommunity
 DESCRIPTION = Python Programming Language.
 DESCRIPTION_FRE = Language de programmation Python.
 DESCRIPTION_SPN = Lenguaje de programación Python.
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = Python 3.10
 CHANGELOG = "1. Update to Python 3.10.19"
 

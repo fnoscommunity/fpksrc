@@ -7,7 +7,7 @@ DEPENDS = cross/jdupes
 
 MAINTAINER = jbruchon
 DESCRIPTION = A powerful duplicate file finder and an enhanced fork of fdupes.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/jbruchon/jdupes/
 LICENSE = MIT

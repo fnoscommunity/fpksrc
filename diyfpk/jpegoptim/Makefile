@@ -7,7 +7,7 @@ DEPENDS = cross/jpegoptim
 MAINTAINER = FnOScommunity
 DESCRIPTION = utility to optimize/compress JPEG files 
 DISPLAY_NAME = jpegoptim
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/tjko/jpegoptim
 LICENSE  = GPLv2

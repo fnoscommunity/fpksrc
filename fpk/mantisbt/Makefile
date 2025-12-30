@@ -21,7 +21,7 @@ CHANGELOG = "1. Update to v2.27.3.<br/>2. Adjust PHP dependency per DSM version.
 HOMEPAGE   = https://www.mantisbt.org
 LICENSE    = GPL
 
-STARTABLE = no
+STARTABLE = false
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 

@@ -11,7 +11,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 MAINTAINER = FnOScommunity
 DESCRIPTION = ser2net provides a way for a user to connect from a network connection to a serial port.
 DISPLAY_NAME = ser2net
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://ser2net.sourceforge.net/
 LICENSE = GPLv2

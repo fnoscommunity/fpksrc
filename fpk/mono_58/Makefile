@@ -14,7 +14,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 MAINTAINER = FnOScommunity
 DESCRIPTION = Cross platform, open source .NET development framework.
 DISPLAY_NAME = Mono
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "Update to 5.8.0.108 (Release)"
 
 HOMEPAGE = https://mono-project.com

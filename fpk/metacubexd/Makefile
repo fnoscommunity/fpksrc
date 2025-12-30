@@ -40,7 +40,7 @@ CONF_DIR = src/conf_6/
 POST_STRIP_TARGET = metacubexd_custom_post_strip
 endif
 
-STARTABLE = no
+STARTABLE = false
 
 include ../../mk/fpksrc.fpk.mk
 

@@ -20,7 +20,7 @@ CHANGELOG = "1. Adjust PHP dependency handling for DSM 6/7 (PHP 7.4/8.0/8.2)."
 HOMEPAGE   = https://www.roundcube.net
 LICENSE    = GPLv3
 
-STARTABLE = no
+STARTABLE = false
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 

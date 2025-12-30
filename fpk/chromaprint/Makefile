@@ -10,7 +10,7 @@ SPK_DEPENDS = $(FFMPEG_PACKAGE)
 # ffmpeg7 requires c11 support
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
-STARTABLE = no
+STARTABLE = false
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Chromaprint is the core component of the AcoustID project. It\'s a client-side library that implements a custom algorithm for extracting fingerprints from any audio source.

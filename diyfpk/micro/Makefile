@@ -8,7 +8,7 @@ DEPENDS = cross/micro
 MAINTAINER = FnOScommunity
 DESCRIPTION = A modern and intuitive terminal-based text editor.
 DISPLAY_NAME = micro
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://micro-editor.github.io/
 LICENSE  = MIT

@@ -7,7 +7,7 @@ DEPENDS = cross/screen
 MAINTAINER = FnOScommunity
 DESCRIPTION = Screen is a full-screen window manager that multiplexes a physical terminal between several processes, typically interactive shells.
 DISPLAY_NAME = screen
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.gnu.org/software/screen/
 LICENSE = GPLv2

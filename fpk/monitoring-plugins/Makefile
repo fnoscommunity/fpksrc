@@ -10,7 +10,7 @@ SPK_DEPENDS = Perl
 MAINTAINER = Gagi2k
 DESCRIPTION = Standard plugins for Icinga, Naemon, Nagios, Shinken, Sensu, and other monitoring applications.
 CHANGELOG = "1. Update monitoring-plugins to v2.3.1<br/>2. Add Perl package as requirement.<br/>3. Link the check commands to /usr/local/bin."
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = Monitoring Plugins
 
 HOMEPAGE = https://www.monitoring-plugins.org

@@ -10,7 +10,7 @@ DESCRIPTION = aria2 is a lightweight multi-protocol and multi-source command-lin
 DESCRIPTION_CHS = Aria2是一个命令行下运行、多协议、多来源下载工具（HTTP/HTTPS、FTP、BitTorrent、Metalink）。
 DISPLAY_NAME = Aria2
 
-STARTABLE = no
+STARTABLE = false
 
 LICENSE  = GPLv2/GPLv3
 HOMEPAGE = http://aria2.github.io

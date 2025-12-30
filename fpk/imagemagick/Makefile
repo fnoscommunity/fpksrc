@@ -14,7 +14,7 @@ DESCRIPTION = ImageMagick is a software suite to create, edit, compose, or conve
 DISPLAY_NAME = ImageMagick
 CHANGELOG = "1. Update ImageMagick to v7.1.2-7. <br/>2. Update libheif to support HEIC format of iOS 18+. <br/>3. Add optiPNG png optimizer. "
 
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.imagemagick.org/
 LICENSE  = Apache 2.0

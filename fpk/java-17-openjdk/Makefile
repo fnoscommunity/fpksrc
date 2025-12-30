@@ -17,7 +17,7 @@ REQUIRED_MIN_SRM = 1.3
 MAINTAINER = FnOScommunity
 DESCRIPTION = OpenJDK version $(JAVA_VERSION)+$(JAVA_RELEASE). OpenJDK 17 is the open-source reference implementation of version 17 of the Java SE Platform as specified by JSR 390 in the Java Community Process.
 
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = Java 17 OpenJDK
 CHANGELOG = "Update to v17.0.16+7."
 

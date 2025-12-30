@@ -7,7 +7,7 @@ DEPENDS = cross/arp-scan
 MAINTAINER = hgy59
 DESCRIPTION = Command-line tool for system discovery and fingerprinting. It constructs and sends ARP requests to the specified IP addresses, and displays any responses that are received. 
 DISPLAY_NAME = arp-scan
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://www.royhills.co.uk/wiki/index.php/Arp-scan_User_Guide
 LICENSE  = MIT

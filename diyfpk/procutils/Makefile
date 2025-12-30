@@ -6,7 +6,7 @@ SPK_REV = 1
 DEPENDS = cross/busybox
 
 MAINTAINER = FnOScommunity
-STARTABLE = no
+STARTABLE = false
 SERVICE_SETUP = src/service-setup.sh
 
 include ../../mk/fpksrc.common.mk

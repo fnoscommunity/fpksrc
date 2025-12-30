@@ -11,7 +11,7 @@ export CURL_INCLUDE_EXECUTABLE=1
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Command line tool and library for transferring data with URLs.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://curl.haxx.se
 LICENSE = https://curl.haxx.se/docs/copyright.html

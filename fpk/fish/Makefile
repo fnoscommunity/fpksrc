@@ -10,7 +10,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(PPC_ARCHS)
 MAINTAINER = FnOScommunity
 DESCRIPTION = fish is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family.
 DISPLAY_NAME = fish
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "Update fish to v4.0.2"
 
 HOMEPAGE = https://fishshell.com

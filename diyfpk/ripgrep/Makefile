@@ -20,7 +20,7 @@ endif
 MAINTAINER = Hylen
 DESCRIPTION = ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern.
 DISPLAY_NAME = ripgrep
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/BurntSushi/ripgrep
 LICENSE  = public domain/Unlicense

@@ -6,7 +6,7 @@ DEPENDS = cross/lsof
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = lsof is a command listing open files.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://lsof.readthedocs.io/
 LICENSE  = https://github.com/lsof-org/lsof/blob/master/COPYING

@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Intuitive find & replace CLI (sed alternative).
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/chmln/sd#readme
 LICENSE  = MIT

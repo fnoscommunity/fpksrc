@@ -8,7 +8,7 @@ DEPENDS = cross/fdupes
 MAINTAINER = biyiklioglu
 DESCRIPTION = FDUPES is a program for identifying or deleting duplicate files residing within specified directories.
 DISPLAY_NAME = FDUPES
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/adrianlopezroche/fdupes/
 LICENSE = MIT

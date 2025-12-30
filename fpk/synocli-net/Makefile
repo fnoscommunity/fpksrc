@@ -93,7 +93,7 @@ endif
 MAINTAINER = ymartin59
 DESCRIPTION = "SynoCli Network Tools provides a set of small command-line utilities: screen, tmux, socat, nmap, arp-scan, mtr \(My traceroute\), links, rsync, xxhsum, autossh \(including openssh, sftp and scp\), etherwake, telnet, whois, sshfs, IMAPFilter$(OPTIONAL_DESC)."
 DISPLAY_NAME = SynoCli Network Tools
-STARTABLE = no
+STARTABLE = false
 CHANGELOG  = "1. Add IMAPFilter v2.8.3. <br/>"
 CHANGELOG += "2. Update bind to v9.20.11 (DSM 7); v9.18.38 (DSM 6); v9.16.50 (armv5 and armv7l). <br/>"
 CHANGELOG += "3. Update inetutils from v2.5 to v2.6. <br/>"

@@ -8,7 +8,7 @@ DEPENDS = cross/less
 MAINTAINER = FnOScommunity
 DESCRIPTION = Less is a terminal pager.
 DISPLAY_NAME = Less
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.gnu.org/software/less/
 LICENSE = GPLv3

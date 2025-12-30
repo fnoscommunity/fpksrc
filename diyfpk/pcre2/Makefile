@@ -7,7 +7,7 @@ DEPENDS = cross/pcre2
 MAINTAINER = FnOScommunity
 DESCRIPTION = The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API.
 DISPLAY_NAME = PCRE2
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.pcre.org
 LICENSE = BSD

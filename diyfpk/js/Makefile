@@ -8,7 +8,7 @@ MAINTAINER = FnOScommunity
 DESCRIPTION = Mozilla JavaScript Engine
 RELOAD_UI = no
 DISPLAY_NAME = OSSP JavaScript
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = Initial release
 
 HOMEPAGE = http://www.ossp.org/pkg/lib/js/

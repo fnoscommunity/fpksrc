@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A modern replacement for ps written in Rust.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/dalance/procs#readme
 LICENSE  = MIT

@@ -15,7 +15,7 @@ CHANGELOG = "Initial package release."
 HOMEPAGE = https://ghostscript.com
 LICENSE  = AGPL 3.0
 
-STARTABLE = no
+STARTABLE = false
 
 # binaries:
 SPK_COMMANDS  = bin/gs

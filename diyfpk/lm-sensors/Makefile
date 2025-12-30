@@ -9,7 +9,7 @@ SPK_DEPENDS = Perl
 MAINTAINER = hgy59
 DESCRIPTION = lm-sensors provides user-space support for the hardware monitoring drivers in Linux 2.6.5 and later.
 DISPLAY_NAME = lm-sensors
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://hwmon.wiki.kernel.org/
 LICENSE = GPLv2

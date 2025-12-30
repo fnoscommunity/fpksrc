@@ -8,7 +8,7 @@ DEPENDS = cross/mutt
 MAINTAINER = FnOScommunity
 DESCRIPTION = Mutt is a small but very powerful text-based mail client for Unix operating systems.
 DISPLAY_NAME = Mutt
-STARTABLE = no
+STARTABLE = false
 
 CHANGELOG = "1. Update mutt to v2.2.13.<br/>2. Update openssl to v3.1.7."
 

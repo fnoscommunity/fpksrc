@@ -16,7 +16,7 @@ DEPENDS += cross/libyaml
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Reverse differential backup tool, over a network or locally.
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = rdiff-backup
 CHANGELOG = "1. Migrate to Python 3.12."
 

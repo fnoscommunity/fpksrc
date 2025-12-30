@@ -17,7 +17,7 @@ endif
 MAINTAINER = hgy59
 DESCRIPTION = The iperf series of tools perform active measurements to determine the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, protocols, and buffers. For each test it reports the measured throughput, loss, and other parameters.
 DISPLAY_NAME = iperf3
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://iperf.fr/
 LICENSE = 3-clause BSD

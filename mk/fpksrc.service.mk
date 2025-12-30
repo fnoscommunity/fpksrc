@@ -34,7 +34,7 @@
 #                                "auto" is the only value supported with DSM 7 and defines sc-${SPK_NAME} as service user.
 #  SPK_GROUP                     (optional) defines the group to use in privilege resource file
 #  SYSTEM_GROUP                  (optional) defines an additional group to join in privilege resource file
-#  STARTABLE                     default = yes, must be "no" for packages that do not create a service (command line tools)
+#  STARTABLE                     default = true, must be "false" for packages that do not create a service (command line tools)
 #  SERVICE_COMMAND               service command, to be used with generic service support
 #  SERVICE_EXE                   (not supported anymore) service command, implemented with busybox start-stop-daemon
 #  SPK_COMMANDS                  (optional) list of "folder/command" to create links for in folder /usr/local
@@ -117,10 +117,10 @@ else ifneq ($(strip $(SERVICE_USER)),)
 $(error Only 'SERVICE_USER=auto' is supported since DSM7)
 endif
 
-# Recommend explicit STARTABLE=no
+# Recommend explicit STARTABLE=false
 ifeq ($(strip $(SSS_SCRIPT) $(SERVICE_COMMAND) $(STARTABLE)),)
 ifeq ($(strip $(SPK_COMMANDS) $(SPK_USR_LOCAL_LINKS)),)
-$(error Set STARTABLE=no or provide either SERVICE_COMMAND, SSS_SCRIPT, SPK_COMMANDS or SPK_USR_LOCAL_LINKS)
+$(error Set STARTABLE=false or provide either SERVICE_COMMAND, SSS_SCRIPT, SPK_COMMANDS or SPK_USR_LOCAL_LINKS)
 endif
 endif
 
@@ -182,7 +182,7 @@ ifneq ($(strip $(SERVICE_CERT)),)
 	@echo 'SERVICE_CERT="$(SERVICE_CERT)"' >> $@
 	@echo '' >> $@
 endif
-ifneq ($(STARTABLE),no)
+ifneq ($(STARTABLE),false)
 ifneq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@echo "# define SYNOPKG_PKGVAR for compatibility with DSM7" >> $@
 	@echo 'SYNOPKG_PKGVAR="$${SYNOPKG_PKGDEST}/var"' >> $@
@@ -327,7 +327,7 @@ endif
 # Control use of generic start-stop-status scripts
 ifeq ($(strip $(SSS_SCRIPT)),)
 DSM_SCRIPT_FILES += start-stop-status
-ifeq ($(STARTABLE),no)
+ifeq ($(STARTABLE),false)
 $(DSM_SCRIPTS_DIR)/start-stop-status: $(SPKSRC_MK)fpksrc.service.non-startable
 	@$(dsm_script_copy)
 else
@@ -463,7 +463,7 @@ $(STAGING_DIR)/$(DSM_UI_DIR)/config:
 	$(create_target_dir)
 	@echo '{}' | jq --arg name "${DISPLAY_NAME}" \
 		--arg desc "${SERVICE_DESC}" \
-		--arg id "com.FnOScommunity.packages.${SPK_NAME}" \
+		--arg id "com.fnoscomm.pkgs.${SPK_NAME}" \
 		--arg icon "images/${SPK_NAME}-{0}.png" \
 		--arg prot "${SERVICE_PORT_PROTOCOL}" \
 		--arg port "${SERVICE_PORT}" \

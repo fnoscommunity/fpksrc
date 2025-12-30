@@ -7,7 +7,7 @@ DEPENDS = cross/netcat
 MAINTAINER = FnOScommunity
 DESCRIPTION = Netcat is a featured networking utility which reads and writes data across network connections, using the TCP/IP protocol.
 DISPLAY_NAME = netcat
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://netcat.sourceforge.net/
 LICENSE = GPLv2

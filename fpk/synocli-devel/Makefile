@@ -7,7 +7,7 @@ CHANGELOG = "1. Fix autoconf to use installed m4 command.<br/>2. Update autoconf
 MAINTAINER = FnOScommunity
 DESCRIPTION = SynoCli Development Tools provides a set of command-line utilities for system development and debugging: automake 1.65.5, autoconf 2.71, binutils 2.40$(OPTIONAL_DESC), make 4.4.1, pkg-config 0.29.2, libtree 3.1.1, strace 6.5
 DISPLAY_NAME = SynoCli Development Tools
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SynoCliDevel
 LICENSE  = Each tool is licensed under it\'s respective license.

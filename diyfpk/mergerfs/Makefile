@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = mergerfs - a featureful union filesystem.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://trapexit.github.io/mergerfs/
 LICENSE = ISC

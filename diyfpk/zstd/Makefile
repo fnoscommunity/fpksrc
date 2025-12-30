@@ -8,7 +8,7 @@ DEPENDS = cross/zstd
 MAINTAINER = FnOScommunity
 DESCRIPTION = Zstandard is a fast compression algorithm, providing high compression ratios.
 DISPLAY_NAME = Zstandard
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://facebook.github.io/zstd/
 LICENSE  = GPLv2/BSD

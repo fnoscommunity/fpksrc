@@ -8,7 +8,7 @@ DEPENDS = cross/nmon
 MAINTAINER = biyiklioglu
 DESCRIPTION = nmon \(Nigel\'s performance Monitor\) is a performance monitoring tool for Linux
 DISPLAY_NAME = nmon
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = http://nmon.sourceforge.net/
 LICENSE = GPLv3

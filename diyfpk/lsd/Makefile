@@ -13,7 +13,7 @@ endif
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = The next gen ls command.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/lsd-rs/lsd
 LICENSE = Apache 2.0

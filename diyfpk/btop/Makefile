@@ -15,7 +15,7 @@ CHANGELOG = "Initial package release."
 LICENSE  = Apache 2.0
 HOMEPAGE = https://github.com/aristocratos/btop
 
-STARTABLE = no
+STARTABLE = false
 
 SPK_COMMANDS = bin/btop
 

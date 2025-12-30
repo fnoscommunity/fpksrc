@@ -7,7 +7,7 @@ DEPENDS = cross/rmlint
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = rmlint finds space waste and other broken things on your filesystem and offers to remove it.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/sahib/rmlint
 LICENSE = GPLv3

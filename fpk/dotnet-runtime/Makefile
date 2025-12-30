@@ -15,7 +15,7 @@ MAINTAINER = hgy59
 DESCRIPTION = Free. Cross-platform. Open source. A developer platform for building all apps. This package installs the dotnet runtime and the asp.net.core runtime.
 CHANGELOG = "Update to dotnet-runtime v6.0.36 (final dotnet 6 release)."
 
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = .NET 6 runtime
 
 HOMEPAGE = https://dotnet.microsoft.com/

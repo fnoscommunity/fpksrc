@@ -10,7 +10,7 @@ DESCRIPTION = text editor jupp comes with the editor flavours known from joe, sp
 DESCRIPTION_GER = jupp ist ein Editor mit den joe Benutzeroberflächen für emacs, joe, pico, Wordstar und jupp-Benutzeroberfläche.
 
 DISPLAY_NAME = jupp
-STARTABLE = no
+STARTABLE = false
 CHANGELOG = "Update to joe 3.1, jupp v40."
 
 HOMEPAGE = http://www.mirbsd.org/jupp.htm

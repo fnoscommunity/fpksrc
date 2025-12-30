@@ -6,7 +6,7 @@ DEPENDS = cross/imapfilter
 
 MAINTAINER = VanStratum
 DESCRIPTION = An IMAP mail filtering utility using the Lua programming language as a configuration and extension language.
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = IMAPFilter
 
 HOMEPAGE = http://github.com/lefcha/imapfilter

@@ -10,7 +10,7 @@ DESCRIPTION = Vim is a highly configurable text editor built to enable efficient
 DESCRIPTION_CSY = Vim je pokročilý textový editor, který usiluje o to poskytnout sílu de-facto Unixového editoru Vi, s komplexnější sadou vlastností.
 DESCRIPTION_FRE = Vim est un éditeur de texte avancé basé sur Vi \(unix\) avec des fonctions plus complètes.
 DISPLAY_NAME = Vim
-STARTABLE = no
+STARTABLE = false
 
 CHANGELOG = "1. Update vim to v9.1. <br/>2. Finally remove python feature."
 

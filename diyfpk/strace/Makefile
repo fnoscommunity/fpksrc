@@ -7,7 +7,7 @@ DEPENDS = cross/strace
 MAINTAINER = FnOScommunity
 DESCRIPTION = strace is a diagnostic, debugging and instructional userspace utility for Linux.
 DISPLAY_NAME = strace
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://strace.io/
 LICENSE = GPLv2+

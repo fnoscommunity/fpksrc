@@ -7,7 +7,7 @@ DEPENDS = cross/gnupg
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = GnuPG allows to encrypt and sign your data and communication, features a versatile key management system as well as access modules for all kinds of public key directories.
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = GnuPG
 CHANGELOG = "1. Update gnupg to 2.4.8<br/>2. Update shared libraries."
 

@@ -9,7 +9,7 @@ MAINTAINER = FnOScommunity
 DESCRIPTION = Midnight Commander is a console application with a text user interface. The main interface consists of two panels which display the file system.
 DESCRIPTION_FRE = Midnight Commander est une application en mode texte. L\'interface principale se compose de deux «panneaux» qui affichent les fichiers présents par rapport à leur emplacement sur le disque.
 DISPLAY_NAME = Midnight Commander
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.midnight-commander.org
 LICENSE = GPL

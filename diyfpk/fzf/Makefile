@@ -9,7 +9,7 @@ DEPENDS = cross/fzf
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A command-line fuzzy finder.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://junegunn.github.io/fzf/
 LICENSE = MIT

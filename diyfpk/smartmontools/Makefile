@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = smartmontools contains two utility programs \(smartctl and smartd\) to control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System \(SMART\).
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.smartmontools.org/
 LICENSE = GPLv2

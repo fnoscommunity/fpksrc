@@ -183,15 +183,16 @@ $(WORK_DIR)/manifest:
 	fi
 	@echo package=\"$(SPK_NAME)\" > $@
 	@echo version=\"$(SPK_VERS)-$(SPK_REV)\" >> $@
-	@/bin/echo -n "description=\"" >> $@
+	@/bin/echo -n "desc=\"" >> $@
 	@/bin/echo -n "${DESCRIPTION}" | sed -e 's/\\//g' -e 's/"/\\"/g' >> $@
 	@echo "\"" >> $@
 	@echo $(foreach LANGUAGE, $(LANGUAGES), \
 	  $(shell [ ! -z "$(DESCRIPTION_$(shell echo $(LANGUAGE) | tr [:lower:] [:upper:]))" ] && \
-	    /bin/echo -n "description_$(LANGUAGE)=\\\"" && \
+	    /bin/echo -n "desc_$(LANGUAGE)=\\\"" && \
 	    /bin/echo -n "$(DESCRIPTION_$(shell echo $(LANGUAGE) | tr [:lower:] [:upper:]))"  | sed -e 's/"/\\\\\\"/g' && \
-	    /bin/echo -n "\\\"\\\n")) | sed -e 's/ description_/description_/g' >> $@
-	@echo arch=\"$(SPK_ARCH)\" >> $@
+	    /bin/echo -n "\\\"\\\n")) | sed -e 's/ desc_/desc_/g' >> $@
+# TODO: aarch64 and noarch need
+	@echo arch=\"x86_64\" >> $@
 	@echo maintainer=\"$(call get_github_maintainer_name,$(MAINTAINER))\" >> $@
 ifeq ($(strip $(MAINTAINER_URL)),)
 	@echo maintainer_url=\"$(call get_github_maintainer_url,$(MAINTAINER))\" >> $@
@@ -203,9 +204,9 @@ endif
 ifeq ($(call version_lt, ${TC_OS_MIN_VER}, 6.1)$(call version_ge, ${TC_OS_MIN_VER}, 3.0),11)
 	@echo firmware=\"$(OS_MIN_VER)\" >> $@
 else
-	@echo os_min_ver=\"$(OS_MIN_VER)\" >> $@
+	@echo os_min_version=\"$(OS_MIN_VER)\" >> $@
 ifneq ($(strip $(OS_MAX_VER)),)
-	@echo os_max_ver=\"$(OS_MAX_VER)\" >> $@
+	@echo os_max_version=\"$(OS_MAX_VER)\" >> $@
 endif
 endif
 ifneq ($(strip $(BETA)),)
@@ -243,24 +244,20 @@ endif
 
 # for non startable (i.e. non service, cli tools only)
 # as default is 'yes' we only add this value for 'no'
-ifeq ($(STARTABLE),no)
-ifeq ($(call version_lt, ${TC_OS_MIN_VER}, 6.1)$(call version_ge, ${TC_OS_MIN_VER}, 3.0),11)
-	@echo startable=\"$(STARTABLE)\" >> $@
-else
+ifeq ($(STARTABLE),false)
 	@echo ctl_stop=\"$(STARTABLE)\" >> $@
-endif
 endif
 
 ifneq ($(strip $(DISPLAY_NAME)),)
-	@echo displayname=\"$(DISPLAY_NAME)\" >> $@
+	@echo display_name=\"$(DISPLAY_NAME)\" >> $@
 endif
 ifneq ($(strip $(DSM_UI_DIR)),)
-	@[ -d $(STAGING_DIR)/$(DSM_UI_DIR) ] && echo dsmuidir=\"$(DSM_UI_DIR)\" >> $@ || true
+	@[ -d $(STAGING_DIR)/$(DSM_UI_DIR) ] && echo desktop_uidir=\"$(DSM_UI_DIR)\" >> $@ || true
 endif
 ifneq ($(strip $(DSM_APP_NAME)),)
-	@echo dsmappname=\"$(DSM_APP_NAME)\" >> $@
+	@echo appname=\"$(DSM_APP_NAME)\" >> $@
 else
-	@echo dsmappname=\"com.FnOScommunity.packages.$(SPK_NAME)\" >> $@
+	@echo appname=\"com.fnoscomm.pkgs.$(SPK_NAME)\" >> $@
 endif
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 ifneq ($(strip $(DSM_APP_PAGE)),)
@@ -274,7 +271,7 @@ ifneq ($(strip $(ADMIN_PROTOCOL)),)
 	@echo adminprotocol=\"$(ADMIN_PROTOCOL)\" >> $@
 endif
 ifneq ($(strip $(ADMIN_PORT)),)
-	@echo adminport=\"$(ADMIN_PORT)\" >> $@
+	@echo service_port=\"$(ADMIN_PORT)\" >> $@
 endif
 ifneq ($(strip $(ADMIN_URL)),)
 	@echo adminurl=\"$(ADMIN_URL)\" >> $@
@@ -283,7 +280,7 @@ ifneq ($(strip $(CHANGELOG)),)
 	@echo changelog=\"$(CHANGELOG)\" >> $@
 endif
 ifneq ($(strip $(SPK_DEPENDS)),)
-	@echo install_dep_packages=\"$(SPK_DEPENDS)\" >> $@
+	@echo install_dep_apps=\"$(SPK_DEPENDS)\" >> $@
 endif
 ifneq ($(strip $(CONF_DIR)),)
 	@echo support_conf_folder=\"yes\" >> $@
@@ -292,6 +289,19 @@ ifneq ($(strip $(SPK_CONFLICT)),)
 	@echo install_conflict_packages=\"$(SPK_CONFLICT)\" >> $@
 endif
 	@echo checksum=\"$$(md5sum $(WORK_DIR)/app.tgz | cut -d" " -f1)\" >> $@
+	@echo source=\"thirdparty\" >> $@
+ifeq ($(ROOT_INSTALL),yes)
+	@echo install_type=\"root\" >> $@
+endif
+ifneq ($(strip $(APPSTORE_ENTRY)),)
+	@echo desktop_applaunchname=\"$(APPSTORE_ENTRY)\" >> $@
+endif
+ifeq ($(ROOT_INSTALL),yes)
+	@echo install_type=\"root\" >> $@
+endif
+ifeq ($(DISABLE_AUTHORIZATION_PATH),true)
+	@echo disable_authorization_path=\"true\" >> $@
+endif
 
 ifneq ($(strip $(DEBUG)),)
 INSTALLER_OUTPUT = >> /root/$${PACKAGE}-$${SYNOPKG_PKG_STATUS}.log 2>&1

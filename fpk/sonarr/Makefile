@@ -49,7 +49,7 @@ endif
 INSTALL_REPLACE_PACKAGES = "nzbdrone>=20210329-19"
 USE_DEPRECATED_REPLACE_MECHANISM = yes
 # disable checking for port conflicts
-CHECKPORT = no
+CHECKPORT = true
 
 include ../../mk/fpksrc.fpk.mk
 

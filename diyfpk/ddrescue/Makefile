@@ -12,7 +12,7 @@ DESCRIPTION_ITA = GNU ddrescue è uno strumento di recupero dati. Copia i dati d
 DESCRIPTION_SPN = GNU ddrescue es una herramienta de recuperación de datos. Copia los datos de un fichero o un dispositivo de bloques \(disco duro, cdrom, etc\) a otro, intentando recuperar primero las partes no dañadas en caso de producirse errores de lectura.
 
 DISPLAY_NAME = ddrescue
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.gnu.org/software/ddrescue/ddrescue.html
 LICENSE  = GPLv2/GPLv3

@@ -6,7 +6,7 @@ DEPENDS = cross/dos2unix
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Convert text files with DOS or Mac line breaks to Unix line breaks and vice versa.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://waterlan.home.xs4all.nl/dos2unix.html
 LICENSE = FreeBSD style

@@ -42,7 +42,7 @@ CONF_DIR = src/conf
 else
 
 # service needs root access and is not supported on DSM >= 7
-STARTABLE = no
+STARTABLE = false
 
 endif
 

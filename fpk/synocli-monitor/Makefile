@@ -52,7 +52,7 @@ WIKI_URL = "\<a target=\"_blank\" href=\"$(HOMEPAGE)\"\>FAQ SynoCliMonitor\</a\>
 # Remarks: html in DESCRIPTION is not supported
 DESCRIPTION = SynoCli Monitor Tools provides a set of command-line utilities for system monitoring: nmon, njmon, iperf2, iperf3, htop, ionice, cpulimit, net-snmp tools$(OPTIONAL_DESC).
 DISPLAY_NAME = SynoCli Monitor Tools
-STARTABLE = no
+STARTABLE = false
 CHANGELOG  = "1. Add btop 1.4.5. </br>"
 CHANGELOG += "2. Update bottom to v0.11.4. </br>"
 CHANGELOG += "3. Update iperf3 to v3.20. </br>"

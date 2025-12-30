@@ -6,7 +6,7 @@ DEPENDS = cross/binutils
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = GNU Binutils.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.gnu.org/software/binutils/
 LICENSE = GPLv2/LGPLv2

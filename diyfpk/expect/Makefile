@@ -6,7 +6,7 @@ DEPENDS = cross/expect
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect is also useful for testing these same applications.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://www.nist.gov/services-resources/software/expect
 LICENSE  = Public Domain

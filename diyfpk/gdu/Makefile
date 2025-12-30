@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Fast disk usage analyzer with console interface written in Go.
-STARTABLE = no
+STARTABLE = false
 
 HOMEPAGE = https://github.com/dundee/gdu
 LICENSE  = MIT

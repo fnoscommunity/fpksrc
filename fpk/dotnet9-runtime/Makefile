@@ -15,7 +15,7 @@ MAINTAINER = brice-fromentin
 DESCRIPTION = Free. Cross-platform. Open source. A developer platform for building all apps. This package installs the dotnet runtime and the asp.net.core runtime.
 CHANGELOG = "Update to dotnet-runtime v9.0.11."
 
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = .NET 9 runtime
 
 HOMEPAGE = https://dotnet.microsoft.com/

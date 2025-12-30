@@ -15,7 +15,7 @@ CHANGELOG = "Update to version 25.04."
 HOMEPAGE = https://mediaarea.net/en/MediaInfo
 LICENSE = 2-Clause BSD
 
-STARTABLE = no
+STARTABLE = false
 
 SPK_COMMANDS = bin/mediainfo
 

@@ -11,7 +11,7 @@ WHEELS = src/requirements-crossenv.txt src/requirements-pure.txt
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Mercurial is a free, distributed source control management tool
-STARTABLE = no
+STARTABLE = false
 DISPLAY_NAME = Mercurial
 CHANGELOG = "1. Update mercurial to 7.0.<br/>2. Update to Python 3.12."
 
