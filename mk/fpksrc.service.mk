@@ -1,11 +1,11 @@
 ### Service rules
 # Generate service support files in SPK:
-#   scripts/installer
-#   scripts/start-stop-status
-#   scripts/service-setup
-#   conf/privilege         if SERVICE_USER or DSM7
-#   conf/$(SPK_NAME).sc    if SERVICE_PORT and DSM<7
-#   conf/resource          if SERVICE_CERT or DSM7
+#   cmd/installer
+#   cmd/start-stop-status
+#   cmd/service-setup
+#   config/privilege         if SERVICE_USER or DSM7
+#   config/$(SPK_NAME).sc    if SERVICE_PORT and DSM<7
+#   config/resource          if SERVICE_CERT or DSM7
 #   app/$(SPK_NAME).sc     if SERVICE_PORT and DSM7
 #   app/config             if SPK_ICON and SERVICE_PORT but not NO_SERVICE_SHORTCUT (may be overwritten by DSM_UI_CONFIG)
 #
@@ -285,8 +285,8 @@ ifneq ($(strip $(VIDEODRIVER)),)
 endif
 
 SERVICE_FILES += $(DSM_CONF_DIR)/resource
-ifneq ($(findstring conf,$(FPK_CONTENT)),conf)
-FPK_CONTENT += conf
+ifneq ($(findstring config,$(FPK_CONTENT)),config)
+FPK_CONTENT += config
 endif
 
 # Less than DSM 6.0
@@ -362,8 +362,8 @@ else
 	@jq '."groupname" = "sc-$(SPK_USER)"' $@ | sponge $@
 endif
 endif
-ifneq ($(findstring conf,$(FPK_CONTENT)),conf)
-FPK_CONTENT += conf
+ifneq ($(findstring config,$(FPK_CONTENT)),config)
+FPK_CONTENT += config
 endif
 
 # DSM <= 6 and SERVICE_USER defined
@@ -381,8 +381,8 @@ endif
 ifneq ($(strip $(SPK_GROUP)),)
 	@jq '."groupname" = "$(SPK_GROUP)"' $@ | sponge $@
 endif
-ifneq ($(findstring conf,$(FPK_CONTENT)),conf)
-FPK_CONTENT += conf
+ifneq ($(findstring config,$(FPK_CONTENT)),config)
+FPK_CONTENT += config
 endif
 
 # DSM <= 6 and SERVICE_USER is NOT defined

@@ -68,7 +68,7 @@ start_daemon ()
                 fi
 
             else
-                # DSM 6 user is set by conf/privilege
+                # DSM 6 user is set by config/privilege
                 if [ -n "${SVC_CWD}" ]; then
                     cd "${SVC_CWD}"
                 fi
