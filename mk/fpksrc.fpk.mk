@@ -21,7 +21,7 @@
 #                               This enables to have concurrent packages with synology.com, that use
 #                               package names starting with upper case letters.
 #                               (e.g. Mono => synology.com, mono => FnOScommunity.com)
-#  SPK_FILE_NAME                The full spk name with folder, package name, arch, tc- and package version.
+#  FPK_FILE_NAME                The full fpk name with folder, package name, arch, tc- and package version.
 #  FPK_CONTENT                  List of files and folders that are added to app.tgz within the spk file.
 #  DSM_SCRIPT_FILES             List of script files that are in the cmd folder within the spk file.
 #
@@ -92,7 +92,7 @@ OS_MIN_VER = $(TC_OS_MIN_VER)
 endif
 endif
 
-SPK_FILE_NAME = $(PACKAGES_DIR)/$(SPK_NAME)_$(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV).spk
+FPK_FILE_NAME = $(PACKAGES_DIR)/$(SPK_NAME)_$(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV).fpk
 
 #####
 
@@ -493,11 +493,11 @@ ifneq ($(strip $(DSM_LICENSE)),)
 FPK_CONTENT += LICENSE
 endif
 
-$(SPK_FILE_NAME): $(WORK_DIR)/app.tgz $(WORK_DIR)/manifest info-checksum icons service $(DSM_SCRIPTS) wizards $(DSM_LICENSE) config
+$(FPK_FILE_NAME): $(WORK_DIR)/app.tgz $(WORK_DIR)/manifest info-checksum icons service $(DSM_SCRIPTS) wizards $(DSM_LICENSE) config
 	$(create_target_dir)
-	(cd $(WORK_DIR) && tar cpf $@ --group=root --owner=root $(FPK_CONTENT))
+	(cd $(WORK_DIR) && tar czpf $@ --group=root --owner=root $(FPK_CONTENT))
 
-package: $(SPK_FILE_NAME)
+package: $(FPK_FILE_NAME)
 
 all: package
 

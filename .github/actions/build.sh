@@ -92,8 +92,8 @@ do
     fi
     result=$?
 
-    # For a build to succeed a <package>_<arch>-<version>.spk must also be generated
-    if [ ${result} -eq 0 -a "$(ls -1 ./packages/$(sed -n -e '/^SPK_NAME/ s/.*= *//p' spk/${package}/Makefile)_*.spk 2> /dev/null)" ]; then
+    # For a build to succeed a <package>_<arch>-<version>.fpk must also be generated
+    if [ ${result} -eq 0 -a "$(ls -1 ./packages/$(sed -n -e '/^SPK_NAME/ s/.*= *//p' spk/${package}/Makefile)_*.fpk 2> /dev/null)" ]; then
         echo "$(date --date=now +"%Y.%m.%d %H:%M:%S") - ${package}: (${GH_ARCH}) DONE"   >> ${BUILD_SUCCESS_FILE}
     # Ensure it's not a false-positive due to pre-check
     elif tail -15 build.log | grep -viq 'fpksrc.pre-check.mk'; then

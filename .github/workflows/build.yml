@@ -105,7 +105,7 @@ jobs:
         id: dependencies
         run: ./.github/actions/prepare.sh
         env:
-          GH_SPK_PACKAGES: ${{ steps.getchanges_push.outputs.spk_packages }} ${{ steps.getchanges_pr.outputs.spk_packages }}
+          GH_SPK_PACKAGES: ${{ steps.getchanges_push.outputs.fpk_packages }} ${{ steps.getchanges_pr.outputs.fpk_packages }}
           GH_DEPENDENCY_FOLDERS: ${{ steps.getchanges_push.outputs.dependency_folders }} ${{ steps.getchanges_pr.outputs.dependency_folders }}
           USER_SPK_TO_BUILD: ${{ github.event.inputs.package }}
 
@@ -347,5 +347,5 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: Packages for ${{ matrix.arch }}
-          path: packages/*.spk
+          path: packages/*.fpk
           if-no-files-found: ignore
