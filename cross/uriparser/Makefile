@@ -14,4 +14,4 @@ CMAKE_ARGS += -DURIPARSER_BUILD_DOCS=OFF
 # Requires Gtest
 CMAKE_ARGS += -DURIPARSER_BUILD_TESTS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

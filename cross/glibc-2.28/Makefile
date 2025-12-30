@@ -13,7 +13,7 @@ LICENSE  = GPLv2/LGPLv2
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 CONFIGURE_TARGET = glibc_configure_target
 COMPILE_TARGET = glibc_compile_taget
@@ -32,7 +32,7 @@ CONFIGURE_ARGS += ac_cv_prog_MAKEINFO=false
 
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: glibc_configure_target
 glibc_configure_target:

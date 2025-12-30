@@ -13,7 +13,7 @@ HOMEPAGE = https://intel.github.io/libvpl/latest/index.html
 COMMENT  = Intel® Video Processing Library (Intel® VPL) provides access to hardware accelerated video decode, encode, and processing capabilities on Intel® GPUs to support AI visual inference, media delivery, cloud gaming, and virtual desktop infrastructure use cases.
 LICENSE  = MIT
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 ifeq ($(call version_lt, ${TC_GCC}, 5),1)
 ADDITIONAL_CXXFLAGS += -std=c++11

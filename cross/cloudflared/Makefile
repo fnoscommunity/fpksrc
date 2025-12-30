@@ -21,7 +21,7 @@ GO_SRC_DIR = $(WORK_DIR)/$(PKG_NAME)-$(PKG_VERS)
 GO_BIN_DIR = $(GO_SRC_DIR)/$(PKG_NAME)
 COMPILE_TARGET = cloudflared_compile
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 .PHONY: cloudflared_compile
 cloudflared_compile:

@@ -15,4 +15,4 @@ HOMEPAGE = https://github.com/oneapi-src/level-zero
 COMMENT  = This project is part of the larger oneAPI project and contains copies of the Level Zero Specification API C/C++ header files, Level Zero Loader, Level Zero Validation Layer and Level Zero Tracing Layer
 LICENSE  = MIT
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

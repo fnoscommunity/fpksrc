@@ -21,4 +21,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --disable-static --enable-lib-only
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

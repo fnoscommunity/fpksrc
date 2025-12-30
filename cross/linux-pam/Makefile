@@ -21,7 +21,7 @@ ADDITIONAL_CPPFLAGS = -O2
 # {sysroot}/usr/include/linux/prctl.h
 ADDITIONAL_CPPFLAGS += -DPR_SET_NO_NEW_PRIVS=36 -DPR_GET_NO_NEW_PRIVS=37
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: linux-pam_post_install_target
 # fix installation include folder

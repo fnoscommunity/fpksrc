@@ -18,4 +18,4 @@ CONFIGURE_ARGS += --with-curses=ncursesw
 CONFIGURE_ARGS += --with-shared-termcap-library=-lncursesw
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

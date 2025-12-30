@@ -33,7 +33,7 @@ endif
 
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Deactivate fstack-protect because we couldn't link to libspp on synology
 .PHONY: ruby_pre_configure

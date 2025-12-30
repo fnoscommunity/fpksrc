@@ -16,4 +16,4 @@ HOMEPAGE = https://host-oman.github.io/libraqm/
 COMMENT  = Raqm is a small library that encapsulates the logic for complex text layout and provides a convenient API.
 LICENSE  = MIT
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

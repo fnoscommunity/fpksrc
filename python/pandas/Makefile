@@ -18,4 +18,4 @@ UNSUPPORTED_ARCHS = comcerto2k
 # Allows compatibility with numpy API 1.x / 2.x
 DEPENDS  = python/numpy_1.26
 
-include ../../mk/spksrc.python-wheel-meson.mk
+include ../../mk/fpksrc.python-wheel-meson.mk

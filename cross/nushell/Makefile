@@ -23,7 +23,7 @@ NUSHELL_PLUGINS = inc polars gstat formats query
 
 POST_INSTALL_TARGET = nushell_install_plugins
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk
 
 
 .PHONY: nushell_install_plugins

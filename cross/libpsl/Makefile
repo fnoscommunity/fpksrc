@@ -11,4 +11,4 @@ HOMEPAGE = https://github.com/rockdaboot/libpsl
 COMMENT  = C library for the Public Suffix List.
 LICENSE  = MIT
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

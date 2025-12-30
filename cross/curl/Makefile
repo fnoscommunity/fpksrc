@@ -47,7 +47,7 @@ PLIST_TRANSFORM = sed -e '/bin:bin/d'
 endif
 
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifneq ($(ARCH),)
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 HTTP3_SUPPORTED = 0
@@ -146,8 +146,8 @@ endif
 
 POST_INSTALL_TARGET = curl_post_install
 
-include ../../mk/spksrc.cross-cc.mk
-#include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cc.mk
+#include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: curl_post_install
 curl_post_install: $(EXTRA_POST_INSTALL)

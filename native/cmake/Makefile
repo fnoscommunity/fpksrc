@@ -13,7 +13,7 @@ LICENSE  = OSI-approved BSD 3-Clause License
 EXTRACT_TARGET = cmake_native_extract
 INSTALL_TARGET = cmake_native_install
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk
 
 .PHONY: cmake_native_extract
 cmake_native_extract:

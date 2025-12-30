@@ -23,4 +23,4 @@ COMPILE_MAKE_OPTIONS += CPPFLAGS="$(CPPFLAGS)"
 COMPILE_MAKE_OPTIONS += LDFLAGS="$(LDFLAGS) -Wl,--rpath,$(INSTALL_PREFIX)/lib"
 COMPILE_MAKE_OPTIONS += MYLIBS="-lncursesw"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

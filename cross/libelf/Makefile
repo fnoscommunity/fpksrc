@@ -18,4 +18,4 @@ ADDITIONAL_CFLAGS = -O
 
 INSTALL_MAKE_OPTIONS = install instroot=$(INSTALL_DIR) prefix=$(INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -3,10 +3,10 @@
 #
 
 ### python wheel requirement processing
-include ../../mk/spksrc.python-requirement.mk
+include ../../mk/fpksrc.python-requirement.mk
 
 ##### rust specific configurations
-include ../../mk/spksrc.cross-rust-env.mk
+include ../../mk/fpksrc.cross-rust-env.mk
 
 # set PYTHON_*_PREFIX if unset
 ifeq ($(strip $(PYTHON_STAGING_INSTALL_PREFIX)),)

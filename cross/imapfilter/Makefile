@@ -20,13 +20,13 @@ ENV += SHAREDIR="$(INSTALL_PREFIX)/share/imapfilter"
 ENV += SSLCAPATH="/etc/ssl/certs"
 ENV += SSLCAFILE="/etc/ssl/certs/ca-certificates.crt"
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifeq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))
 ADDITIONAL_CFLAGS = -DLUA_USE_C89
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: imapfilter_post_install
 imapfilter_post_install:

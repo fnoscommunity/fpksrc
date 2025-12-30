@@ -18,7 +18,7 @@ LICENSE  = 2-Clause BSD
 PRE_CONFIGURE_TARGET = libmediainfo_pre_configure
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 libmediainfo_pre_configure:
 	$(RUN) ; ./autogen.sh

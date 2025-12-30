@@ -31,7 +31,7 @@ CONFIGURE_ARGS = --without-manpage
 # avoid check for src/pixz.1 with AC_CHECK_FILE (can't be used when cross-compiling)
 CONFIGURE_ARGS += ac_cv_file_src_pixz_1=no
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: pixz_pre_configure
 pixz_pre_configure:

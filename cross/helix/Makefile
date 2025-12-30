@@ -23,7 +23,7 @@ LICENSE  = MPL-2.0
 PATCH_TARGET = helix_patch
 INSTALL_TARGET = helix_install
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk
 
 # we can't build with --locked, since we patched the cc crate
 CARGO_BUILD_ARGS = --release --target=$(RUST_TARGET)

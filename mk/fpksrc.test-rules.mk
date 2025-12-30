@@ -1,6 +1,6 @@
 # Framework testing common rules, shared by all makefiles
 
-include mk/spksrc.common.mk
+include mk/fpksrc.common.mk
 
 ###
 

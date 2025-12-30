@@ -20,7 +20,7 @@ INSTALL_TARGET = libcap_install
 
 ADDITIONAL_CFLAGS = -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # empty and _makenames are run with "make libcap" and therefore must be compiled for the host (first)
 .PHONY: libcap_compile

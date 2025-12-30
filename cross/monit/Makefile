@@ -20,4 +20,4 @@ CONFIGURE_ARGS += --without-pam
 CONFIGURE_ARGS += --disable-static
 CONFIGURE_ARGS += --enable-optimized
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

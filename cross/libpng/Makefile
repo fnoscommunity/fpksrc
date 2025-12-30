@@ -24,4 +24,4 @@ ifeq ($(GCC_DEBUG_INFO),1)
     CMAKE_ARGS += -DPNG_DEBUG_POSTFIX=""
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

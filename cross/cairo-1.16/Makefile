@@ -26,7 +26,7 @@ ADDITIONAL_CPPFLAGS = -O
 COMPILE_TARGET = cairo_compile
 INSTALL_TARGET = cairo_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: cairo_compile
 cairo_compile:

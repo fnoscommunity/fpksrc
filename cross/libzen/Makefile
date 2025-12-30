@@ -18,7 +18,7 @@ LICENSE  = 3-Clause BSD
 PRE_CONFIGURE_TARGET = libzen_pre_configure
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: libzen_pre_configure
 libzen_pre_configure:

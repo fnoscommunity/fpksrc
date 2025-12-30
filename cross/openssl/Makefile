@@ -15,7 +15,7 @@ CONFIGURE_TARGET = openssl_configure
 
 INSTALL_MAKE_OPTIONS = install_sw DESTDIR=$(INSTALL_DIR)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Use CA certificates provided by DSM
 # OpenSSL data area, such as openssl.cnf, certificates and keys.
@@ -44,7 +44,7 @@ OPENSSL_ARCH = linux-ppc
 endif
 
 ifeq ($(strip $(OPENSSL_ARCH)),)
-# Unexpected CPU architecture. Please add arch to mk/spksrc.archs.mk
+# Unexpected CPU architecture. Please add arch to mk/fpksrc.archs.mk
 $(error Arch $(ARCH) not expected yet)
 endif
 

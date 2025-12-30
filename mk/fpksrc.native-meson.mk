@@ -19,10 +19,10 @@ DIST_FILE     = $(DISTRIB_DIR)/$(LOCAL_FILE)
 DIST_EXT      = $(PKG_EXT)
 
 # Setup common directories
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 #####
 
@@ -32,13 +32,13 @@ CONFIGURE_TARGET = meson_configure_target
 endif
 
 # Load native environment before meson-specific configs
-include ../../mk/spksrc.native-env.mk
+include ../../mk/fpksrc.native-env.mk
 
 # meson specific configurations
-include ../../mk/spksrc.native-meson-env.mk
+include ../../mk/fpksrc.native-meson-env.mk
 
 # call-up ninja build process
-include ../../mk/spksrc.ninja.mk
+include ../../mk/fpksrc.ninja.mk
 
 #####
 
@@ -57,4 +57,4 @@ meson_configure_target:
 #####
 
 # Include base native-cc makefile for common functionality
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk

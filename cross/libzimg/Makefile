@@ -17,7 +17,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS) $(ARMv5_ARCHS)
 GNU_CONFIGURE = 1
 PRE_CONFIGURE_TARGET = zimg_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(call version_lt, $(TCVERSION), 7.0),1)
 ifeq ($(findstring $(ARCH),$(ARMv8_ARCHS) $(i686_ARCHS) $(x64_ARCHS)),$(ARCH))

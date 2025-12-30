@@ -15,7 +15,7 @@ GNU_CONFIGURE = 1
 PRE_CONFIGURE_TARGET = screen_pre_configure
 INSTALL_TARGET = screen_install
  
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: screen_pre_configure
 screen_pre_configure:

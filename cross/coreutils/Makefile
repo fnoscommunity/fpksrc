@@ -13,7 +13,7 @@ LICENSE  = GPLv3
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # 32-bit archs require glibc >= 2.34 (i.e. DSM 7.2) to support 64 bit timestamps
 ifneq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))

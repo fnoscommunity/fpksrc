@@ -18,4 +18,4 @@ CONFIGURE_ARGS += -Dcache-build=disabled
 ADDITIONAL_CFLAGS  = -O
 ADDITIONAL_CFLAGS += -std=c99
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

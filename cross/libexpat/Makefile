@@ -23,4 +23,4 @@ CONFIGURE_ARGS += CFLAGS=-DXML_POOR_ENTROPY
 
 ADDITIONAL_CPPFLAGS = -Os
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

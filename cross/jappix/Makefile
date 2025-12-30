@@ -18,7 +18,7 @@ INSTALL_TARGET = jappix_install
 # Pure PHP package, make sure ARCH is not defined
 override ARCH=
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: jappix_install
 jappix_install:

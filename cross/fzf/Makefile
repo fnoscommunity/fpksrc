@@ -9,7 +9,7 @@ PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 BUILD_DEPENDS = native/go_1.23
 NATIVE_GO = native/go_1.23
@@ -27,4 +27,4 @@ GO_BIN_DIR = $(GO_SRC_DIR)/$(PKG_NAME)
 
 GO_BUILD_ARGS += -ldflags "-s -w -X main.version=$(PKG_VERS) -X main.revision=$(PKG_REVISION)"
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk

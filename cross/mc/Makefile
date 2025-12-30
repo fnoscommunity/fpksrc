@@ -17,4 +17,4 @@ CONFIGURE_ARGS += --with-screen=slang
 CONFIGURE_ARGS += --disable-tests
 ADDITIONAL_CFLAGS = -O3
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

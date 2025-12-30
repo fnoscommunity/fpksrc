@@ -14,7 +14,7 @@ LICENSE  = GPLv3+
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS += --with-utempter
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 NATIVE_PROTOC_DIR = $(realpath $(WORK_DIR)/../../../native/protoc/work-native)
 ENV += PATH=$(NATIVE_PROTOC_DIR)/bin:$$PATH

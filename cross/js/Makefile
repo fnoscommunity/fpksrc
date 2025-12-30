@@ -22,7 +22,7 @@ CONFIGURE_ARGS = ac_cv_va_copy=C99 --disable-dependency-tracking --disable-stati
 
 PRE_COMPILE_TARGET = js_pre_compile
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 PRE_COMPILE_HOST_CPU =
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
@@ -44,7 +44,7 @@ endif
 
 PRE_COMPILE_ARGS = -DCROSS_COMPILE=1 -DNDEBUG $(PRE_COMPILE_HOST_CPU)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: js_pre_compile
 # Compile jscpucfg executable for local cpu. 

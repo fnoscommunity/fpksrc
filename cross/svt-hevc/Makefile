@@ -17,4 +17,4 @@ UNSUPPORTED_ARCHS = $(ARM_ARCHS) $(PPC_ARCHS) $(i686_ARCHS)
 
 CMAKE_USE_NASM = 1
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

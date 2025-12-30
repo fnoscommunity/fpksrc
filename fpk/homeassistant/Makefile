@@ -83,7 +83,7 @@ ENV += SODIUM_INSTALL=system
 DEPENDS += cross/c-ares
 ENV += PYCARES_USE_SYSTEM_LIB=1
 
-include ../../mk/spksrc.python.mk
+include ../../mk/fpksrc.python.mk
 
 # [lxml]
 DEPENDS += cross/libxml2

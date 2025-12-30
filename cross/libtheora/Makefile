@@ -18,4 +18,4 @@ CONFIGURE_ARGS += --disable-examples
 CONFIGURE_ARGS += --disable-spec
 ADDITIONAL_CFLAGS = -Os
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

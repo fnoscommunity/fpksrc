@@ -13,4 +13,4 @@ LICENSE  = https://github.com/cyrusimap/cyrus-sasl/blob/master/COPYING
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

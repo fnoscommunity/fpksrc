@@ -14,4 +14,4 @@ LICENSE  = http://www.unicode.org/copyright.html#License
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS += --disable-samples --disable-tests
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk

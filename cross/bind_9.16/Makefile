@@ -17,7 +17,7 @@ OPTIONAL_DEPENDS = cross/libcap cross/libcap_2.51
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 DEPENDS += cross/libcap_2.51
 else
@@ -43,7 +43,7 @@ CONFIGURE_ARGS += BUILD_CPPFLAGS="$(CPPFLAGS) $(ADDITIONAL_CPPFLAGS)"
 CONFIGURE_ARGS += BUILD_LDFLAGS="$(LDFLAGS)"
 CONFIGURE_ARGS += BUILD_LIBS="$(LIBS)"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: bind_pre_compile
 # compile gen tool with host compiler to run in build environment

@@ -86,7 +86,7 @@ ADDITIONAL_CFLAGS = -Os
 DISABLE_PARALLEL_MAKE = 1
 COMPILE_MAKE_OPTIONS += JOBS=$(NCPUS)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: java-11-openjdk_configure
 # Use CONFIGURE_ARGS instead of REAL_CONFIGURE_ARGS to ignore TC_CONFIGURE_ARGS

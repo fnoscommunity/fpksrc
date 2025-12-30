@@ -21,7 +21,7 @@ GNU_CONFIGURE = 1
 # tesseract integration requires c++17, but fails to build...
 CONFIGURE_ARGS += --without-tesseract
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),comcerto2k),$(ARCH))
 CONFIGURE_ARGS += --disable-neon
 else ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
@@ -29,4 +29,4 @@ else ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --build=x86_64-pc-linux-gnu
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -30,7 +30,7 @@ CONFIGURE_ARGS += --without-tcl
 
 PRE_CONFIGURE_TARGET = newt_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: python_dependency
 python_dependency:

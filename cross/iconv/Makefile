@@ -10,7 +10,7 @@ DOWNLOAD_TARGET = nop
 CHECKSUM_TARGET = nop
 INSTALL_TARGET = iconv_install_from_toolchain
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: iconv_install_from_toolchain
 iconv_install_from_toolchain:

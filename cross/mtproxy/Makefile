@@ -22,7 +22,7 @@ COMPILE_MAKE_OPTIONS += ARCH=
 CONFIGURE_TARGET = nop
 INSTALL_TARGET = mtproxy_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: mtproxy_install
 mtproxy_install:

@@ -3,7 +3,7 @@ PKG_NAME = pngquant-main
 OPTIONAL_DEPENDS  = cross/pngquant3
 OPTIONAL_DEPENDS += cross/pngquant2
 
-include ../../mk/spksrc.main-depends.mk
+include ../../mk/fpksrc.main-depends.mk
 
 ifeq ($(findstring $(ARCH),$(OLD_PPC_ARCHS) $(ARMv5_ARCHS)),$(ARCH))
 # std=c11 not fully supported

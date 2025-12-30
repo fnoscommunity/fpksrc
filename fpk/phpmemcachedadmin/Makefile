@@ -28,7 +28,7 @@ DSM_UI_CONFIG = src/app/config
 STARTABLE = no
 SERVICE_SETUP = src/service-setup.sh
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_ge, ${TCVERSION}, 7.2),1)
 SPK_DEPENDS = "WebStation:PHP8.2:Apache2.4"

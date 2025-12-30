@@ -17,7 +17,7 @@ INSTALL_TARGET = ps3netsrv_install
 
 COMPILE_MAKE_OPTIONS = -f Makefile.linux
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: ps3netsrv_install
 ps3netsrv_install:

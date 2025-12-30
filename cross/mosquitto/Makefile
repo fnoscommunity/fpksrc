@@ -21,7 +21,7 @@ CMAKE_ARGS += -DWITH_WEBSOCKETS=ON
 CMAKE_ARGS += -DWITH_SRV=ON
 CMAKE_ARGS += -DDOCUMENTATION=OFF
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt,$(TC_GCC),5),1)
 ADDITIONAL_CFLAGS += -std=c99
 endif
@@ -30,4 +30,4 @@ ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 ADDITIONAL_LDFLAGS += -lrt
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

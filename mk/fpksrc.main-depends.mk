@@ -2,7 +2,7 @@
 #
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # nothing to download
 download:
@@ -21,7 +21,7 @@ endif
 endif
 
 # Common directories (must be set after ARCH_SUFFIX)
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 #####
 
@@ -32,25 +32,25 @@ endif
 #####
 
 # to check for supported archs and DSM versions
-include ../../mk/spksrc.pre-check.mk
+include ../../mk/fpksrc.pre-check.mk
 
 # for common env variables
-include ../../mk/spksrc.cross-env.mk
+include ../../mk/fpksrc.cross-env.mk
 
 # for dependency evaluation
-include ../../mk/spksrc.depend.mk
+include ../../mk/fpksrc.depend.mk
 
 
 install: depend
-include ../../mk/spksrc.install.mk
+include ../../mk/fpksrc.install.mk
 
 plist: install
-include ../../mk/spksrc.plist.mk
+include ../../mk/fpksrc.plist.mk
 
 all: install plist
 
 
 ### For managing make all-<supported|latest>
-include ../../mk/spksrc.supported.mk
+include ../../mk/fpksrc.supported.mk
 
 ####

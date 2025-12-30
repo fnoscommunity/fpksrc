@@ -30,4 +30,4 @@ ADDITIONAL_CFLAGS = -O
 # Reduce build-time binary size
 GCC_NO_DEBUG_INFO = 1
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

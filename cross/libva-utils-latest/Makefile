@@ -16,4 +16,4 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

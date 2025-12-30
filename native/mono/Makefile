@@ -24,7 +24,7 @@ POST_INSTALL_TARGET = mono_native_post_install
 
 ENV += PATH=$($(realpath work-native/install)):$${PATH}
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk
 
 .PHONY: mono_native_post_install
 mono_native_post_install:

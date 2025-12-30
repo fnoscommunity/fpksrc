@@ -20,7 +20,7 @@ ADDITONAL_CFLAGS = -O3 -Wall -Wextra -Wno-unknown-pragmas -Wcast-qual
 
 INSTALL_TARGET = pigz_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: pigz_install
 pigz_install:

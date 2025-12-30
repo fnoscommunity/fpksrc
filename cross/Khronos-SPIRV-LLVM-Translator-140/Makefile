@@ -51,4 +51,4 @@ ADDITIONAL_CXXFLAGS = -Wno-maybe-uninitialized
 # -----------------------------------------------------------------------------
 # Include the common cross-cmake rules
 # -----------------------------------------------------------------------------
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

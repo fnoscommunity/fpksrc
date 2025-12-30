@@ -5,4 +5,4 @@ KERNEL_EXT = txz
 KERNEL_DIST = linux-4.4.x
 KERNEL_BASE_ARCH = arm64
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

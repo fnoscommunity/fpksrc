@@ -25,7 +25,7 @@ CONFIGURE_ARGS += --without-python
 CONFIGURE_ARGS += --without-swig
 CONFIGURE_ARGS += --disable-doc
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(PPC_ARCHS)),$(ARCH))
 # archs/toolchains without compatible RS485 support (linux serial.h)

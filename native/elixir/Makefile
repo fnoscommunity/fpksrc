@@ -22,4 +22,4 @@ INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) PREFIX=$(INSTALL_PREFIX)
 # but succeeds in dependencies folders (i.e. cross/rabbitmq and spk/rabbitmq)
 ENV += PATH=$$PATH:$(ERLANG_BIN_DIR)
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk

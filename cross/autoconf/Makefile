@@ -14,7 +14,7 @@ LICENSE  = GPLv2
 GNU_CONFIGURE = 1
 POST_INSTALL_TARGET = autoconf_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: autoconf_post_install
 autoconf_post_install:

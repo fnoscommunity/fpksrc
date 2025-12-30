@@ -12,4 +12,4 @@ HOMEPAGE = https://github.com/nemtrif/utfcpp
 COMMENT  = UTF-8 with C++ in a Portable Way.
 LICENSE  = BSL 1.0
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

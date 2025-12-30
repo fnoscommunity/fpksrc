@@ -15,7 +15,7 @@ CONFIGURE_ARGS = --disable-install-doc --prefix=$(STAGING_INSTALL_PREFIX)
 
 INSTALL_TARGET = ruby_install_native
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk
 
 .PHONY: ruby_install_native
 # Ruby's configure remembers its own --prefix and uses it during `make install`,

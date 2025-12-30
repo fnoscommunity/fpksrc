@@ -25,7 +25,7 @@ DEPENDS  = cross/libva cross/libva-utils
 DEPENDS += cross/intel-vaapi-driver
 DEPENDS += cross/intel-media-driver cross/intel-mediasdk
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 CHANGELOG  = "1. Intel Media Driver Release 2024Q4 (Release 2022Q4 for DSM 6).<br/> "
 CHANGELOG += "2. Intel Level-Zero 1.17.42 (DSM 7.1+).<br/> "

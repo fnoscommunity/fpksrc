@@ -22,4 +22,4 @@ CONFIGURE_ARGS += --disable-nls
 CONFIGURE_ARGS += gl_cv_func_gettimeofday_clobber=no
 CONFIGURE_ARGS += gl_cv_func_signbit_gcc=no
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

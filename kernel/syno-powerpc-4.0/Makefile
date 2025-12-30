@@ -11,7 +11,7 @@ KERNEL_BASE_ARCH = ppc
 
 POST_EXTRACT_TARGET = copy_powerpc_makefile
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk
 
 copy_powerpc_makefile:
 	cp $(WORK_DIR)/$(KERNEL_DIST)/Makefile.powerpc $(WORK_DIR)/$(KERNEL_DIST)/Makefile

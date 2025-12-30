@@ -18,4 +18,4 @@ CONFIGURE_ARGS += ax_cv_gcc_atomic_builtins=yes
 # https://medium.com/swlh/the-complete-guide-to-benchmark-the-performance-of-memcached-on-ubuntu-16-04-71edeaf6e740
 CONFIGURE_ARGS += ax_cv_libevent=yes
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

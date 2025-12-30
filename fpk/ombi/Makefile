@@ -21,7 +21,7 @@ SERVICE_PORT = 8822
 STARTABLE = yes
 SERVICE_SETUP = src/service-setup.sh
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 POST_STRIP_TARGET = ombi_custom_libe_sqlite3
 

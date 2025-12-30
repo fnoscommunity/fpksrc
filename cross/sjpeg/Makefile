@@ -15,4 +15,4 @@ HOMEPAGE = https://github.com/webmproject/sjpeg/
 COMMENT  = SimpleJPEG: simple jpeg encoder.
 LICENSE  = Apache 2.0
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

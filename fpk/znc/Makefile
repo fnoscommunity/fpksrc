@@ -47,7 +47,7 @@ ENV += PATH=$(BOOST_BUILD_PATH):$(PATH)
 
 DEPENDS += cross/znc
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv7_ARCHS) $(ARMv7L_ARCHS)),$(ARCH))
 # bugfix for libicudata error, solution proposed by Steven R. Loomis
@@ -55,7 +55,7 @@ ifeq ($(findstring $(ARCH),$(ARMv7_ARCHS) $(ARMv7L_ARCHS)),$(ARCH))
 export LIBICU_DATA_PACKAGING_MODE=files
 endif
 
-include ../../mk/spksrc.python.mk
+include ../../mk/fpksrc.python.mk
 
 .PHONY: znc_extra_install
 znc_extra_install:

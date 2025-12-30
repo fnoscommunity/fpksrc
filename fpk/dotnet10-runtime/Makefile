@@ -21,7 +21,7 @@ DISPLAY_NAME = .NET 10 runtime
 HOMEPAGE = https://dotnet.microsoft.com/
 LICENSE  = MIT
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 SPK_COMMANDS = share/dotnet/dotnet
 

@@ -14,7 +14,7 @@ LICENSE  = GPLv2
 CONFIGURE_TARGET = moreutils_configure
 INSTALL_TARGET = moreutils_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: moreutils_configure
 # remove the x64 binaries in the package (and ignore configure)

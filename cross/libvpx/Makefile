@@ -24,7 +24,7 @@ CONFIGURE_ARGS += --enable-vp9-highbitdepth --enable-better-hw-compatibility
 CONFIGURE_ARGS += --enable-webm-io
 CONFIGURE_ARGS += --disable-multithread
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --target=generic-gnu
@@ -64,7 +64,7 @@ ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --target=x86_64-linux-gcc
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Disable NEON on armv7/armv7l/armv8 when using gcc-4.9 or lower
 ifeq ($(findstring $(ARCH),$(ARMv7_ARCHS) $(ARMv7L_ARCHS) $(ARMv8_ARCHS)),$(ARCH))

@@ -15,4 +15,4 @@ HOMEPAGE = http://libsigc.sourceforge.net/
 COMMENT  = libsigc++ implements a typesafe callback system for standard C++
 LICENSE  = LGPL
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

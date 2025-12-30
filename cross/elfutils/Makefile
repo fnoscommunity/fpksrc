@@ -18,4 +18,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS  = --disable-libdebuginfod
 CONFIGURE_ARGS += --disable-debuginfod
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

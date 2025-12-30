@@ -16,7 +16,7 @@ INSTALL_TARGET = disktype_install
 
 ADDITIONAL_CPPFLAGS = -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: disktype_install
 disktype_install:

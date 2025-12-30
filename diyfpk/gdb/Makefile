@@ -4,7 +4,7 @@ SPK_ICON = src/gdb.png
 
 DEPENDS = cross/gdb
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 SPK_VERS = 7.12.1
 else ifeq ($(call version_lt, $(TC_GCC), 4.8),1)

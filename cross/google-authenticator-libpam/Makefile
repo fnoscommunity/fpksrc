@@ -17,7 +17,7 @@ PRE_CONFIGURE_TARGET = google-authenticator-libpam_pre_configure
 
 ADDITIONAL_CPPFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: google-authenticator-libpam_pre_configure
 google-authenticator-libpam_pre_configure:

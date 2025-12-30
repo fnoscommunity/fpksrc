@@ -30,7 +30,7 @@ ENV += GO111MODULE=on
 export VERSION=$(PKG_VERS)
 export GIT_LFS_SHA=$(PKG_VERS)
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 .PHONY: git-lfs_configure
 # build mangen tool for the host arch

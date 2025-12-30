@@ -27,4 +27,4 @@ CONFIGURE_ARGS += --without-mcs-docs
 # Optimize compilation for size
 ADDITIONAL_CFLAGS = -Os
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -18,4 +18,4 @@ CONFIGURE_ARGS  = --disable-servers --disable-clients
 CONFIGURE_ARGS += --enable-telnet
 CONFIGURE_ARGS += --enable-whois
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -15,4 +15,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --disable-gcc-warnings --disable-static --disable-doc
 ADDITIONAL_CFLAGS = -std=gnu99 -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

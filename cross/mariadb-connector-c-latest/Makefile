@@ -60,4 +60,4 @@ CMAKE_ARGS += -DMARIADB_UNIX_ADDR=$(MYSQL_DB_SOCKET)
 # to avoid "SSL is required, but the server does not support it" on non-TLS servers.
 CMAKE_ARGS += -DDEFAULT_SSL_VERIFY_SERVER_CERT=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

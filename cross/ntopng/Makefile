@@ -26,7 +26,7 @@ LICENSE  = GPLv3
 ADDITIONAL_CXXFLAGS += -I$(STAGING_INSTALL_PREFIX)/include/mariadb
 ADDITIONAL_LDFLAGS  += -lmysqlclient
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 SYNOLOGY_OS = DSM
 ifeq ($(findstring $(ARCH),$(SRM_ARCHS)),$(ARCH))
@@ -78,7 +78,7 @@ NODE_BIN_FOLDER = $(realpath $(WORK_DIR)/../../../$(BUILD_DEPENDS)/work-native/n
 NPM_BIN_FOLDER = $(realpath $(WORK_DIR)/../../../$(BUILD_DEPENDS)/work-native/node/lib/node_modules/npm/bin)
 ENV += "PATH=$(PATH):$(NODE_BIN_FOLDER):$(NPM_BIN_FOLDER):$(STAGING_INSTALL_PREFIX)/bin"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: ntopng_pre_configure
 ntopng_pre_configure:

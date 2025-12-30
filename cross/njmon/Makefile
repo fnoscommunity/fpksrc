@@ -21,7 +21,7 @@ ADDITIONAL_CFLAGS = -g -O4 -lm -o $(PKG_NAME)
 # provide custom info for version string
 VERSION_CFLAGS = -DOSNAME=\"Synology\" -DOSVERSION=\"$(TC_VERS)\" -DHW=\"$(ARCH)\" -DNJMONVERSION=\"$(subst v,,$(PKG_VERS))\"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # HINT:
 # When building in spksrc/cross/njmon, the variable $(CC) might evaluate to "cc" instead of the cross compiler 

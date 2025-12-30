@@ -34,7 +34,7 @@ DSM_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 CONF_DIR = src/conf/
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Alternate conf dir for DSM 6
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)

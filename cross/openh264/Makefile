@@ -23,7 +23,7 @@ NASM_PATH = $(realpath $(WORK_DIR)/../../../native/nasm/work-native/install/usr/
 ENV += PATH=$(NASM_PATH):$$PATH
 ENV += AS=$(NASM_PATH)/nasm
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk
 
 .PHONY: openh264-post_install
 openh264-post_install:

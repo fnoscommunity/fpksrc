@@ -22,7 +22,7 @@ CONFIGURE_ARGS += --sysconfdir=$(INSTALL_PREFIX)/var
 
 INSTALL_TARGET = mutt_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: mutt_install
 mutt_install:

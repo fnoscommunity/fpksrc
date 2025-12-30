@@ -19,4 +19,4 @@ GNU_CONFIGURE = 1
 
 CMAKE_ARGS += -DBUILD_TESTING=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

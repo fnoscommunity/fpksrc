@@ -21,7 +21,7 @@ CONFIGURE_ARGS += --enable-cxx
 CONFIGURE_ARGS += --enable-dbm
 CONFIGURE_ARGS += --disable-static
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: db_configure
 db_configure: 

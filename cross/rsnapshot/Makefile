@@ -20,4 +20,4 @@ CONFIGURE_ARGS += ac_cv_path_SSH=/bin/ssh
 # use var folder for config file
 CONFIGURE_ARGS += --sysconfdir=$(INSTALL_PREFIX)/var
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

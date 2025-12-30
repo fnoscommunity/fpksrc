@@ -14,7 +14,7 @@ LICENSE  = GPLv2
 GNU_CONFIGURE = 1
 INSTALL_TARGET = dtach_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: dtach_install
 dtach_install:

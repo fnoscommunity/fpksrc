@@ -16,7 +16,7 @@ POST_INSTALL_TARGET = optipng_post_install
 CMAKE_ARGS += -DOPTIPNG_USE_SYSTEM_LIBS=ON
 CMAKE_ARGS += -DOPTIPNG_BUILD_TESTS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: optipng_post_install
 optipng_post_install:

@@ -18,4 +18,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = -Dtests=disabled
 ADDITIONAL_CPPFLAGS = -O
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

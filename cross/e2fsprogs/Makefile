@@ -15,7 +15,7 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --enable-elf-shlibs
 CONFIGURE_ARGS += --disable-uuidd
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 # This is more a toolchain than an arch limitation
 ifeq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))
@@ -28,4 +28,4 @@ ifneq ($(findstring $(ARCH),$(OLD_PPC_ARCHS) $(ARMv5_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --enable-lto
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

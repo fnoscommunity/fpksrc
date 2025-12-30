@@ -15,4 +15,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS  = --disable-desktopfiles
 CONFIGURE_ARGS += --disable-xmltools 
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

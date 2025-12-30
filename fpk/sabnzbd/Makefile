@@ -39,7 +39,7 @@ SERVICE_PORT_TITLE = $(DISPLAY_NAME)
 # Admin link for in DSM UI
 ADMIN_PORT = $(SERVICE_PORT)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TCVERSION), 7.0),1)
 DEPENDS += cross/unrar
 else ifeq ($(findstring $(ARCH),comcerto2k),$(ARCH))
@@ -64,7 +64,7 @@ else
 WHEELS += orjson==3.11.3
 endif
 
-include ../../mk/spksrc.python.mk
+include ../../mk/fpksrc.python.mk
 
 # prefer native python tools (pip, maturin, ...) used for orjson
 ENV += PATH=$(realpath $(WORK_DIR)/../../../native/$(PYTHON_PACKAGE)/work-native/install/usr/local/bin):$(PATH)

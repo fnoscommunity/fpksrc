@@ -20,7 +20,7 @@ CONFIGURE_ARGS += --enable-ssl
 CONFIGURE_ARGS += --enable-arp-acl
 CONFIGURE_ARGS += --enable-delay-pools
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Toolchains lacking c++11 in conjunction with
 # march=native compiler are not supported
@@ -38,7 +38,7 @@ ENV += BUILDCXXFLAGS=-march=native
 
 PRE_CONFIGURE_TARGET = squid_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: squid_pre_configure
 squid_pre_configure:

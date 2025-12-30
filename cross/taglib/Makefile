@@ -16,4 +16,4 @@ CMAKE_ARGS += -DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS += -Wno-dev
 ADDITIONAL_CXXFLAGS = -Wno-deprecated-declarations -Wno-sign-compare
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

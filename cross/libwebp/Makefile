@@ -12,7 +12,7 @@ HOMEPAGE = https://developers.google.com/speed/webp
 COMMENT  = WebP codec: library to encode and decode images in WebP format.
 LICENSE  = 3-Clause BSD
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # gcc version below 5.x requires enforcing c11
 # fallback to default for armv5 using older gcc

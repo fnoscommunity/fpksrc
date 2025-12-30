@@ -21,7 +21,7 @@ CONFIGURE_ARGS += --enable-host-shared
 CONFIGURE_ARGS += --with-system-zlib
 CONFIGURE_ARGS += --enable-gold=yes
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 # gprofng fails to build for i686 
 # ./../common/core_pcbe.c:2698:33: error: ‘PERF_COUNT_HW_REF_CPU_CYCLES’ undeclared here
@@ -36,4 +36,4 @@ CONFIGURE_ARGS += --includedir=$(INSTALL_PREFIX)/include/binutils
 
 ADDITIONAL_CXXFLAGS = -std=c++11
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

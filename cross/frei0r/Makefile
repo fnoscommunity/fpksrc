@@ -22,4 +22,4 @@ CMAKE_ARGS  = -DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS += -DURIPARSER_BUILD_DOCS=OFF
 CMAKE_ARGS += -DURIPARSER_BUILD_TESTS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

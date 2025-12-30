@@ -17,4 +17,4 @@ CONFIGURE_ARGS += --with-freetype=$(STAGING_INSTALL_PREFIX)
 CONFIGURE_ARGS += --with-libxml2=$(STAGING_INSTALL_PREFIX)
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -21,7 +21,7 @@ ADDITIONAL_LDFLAGS = -lrt
 
 CONFIGURE_ARGS = --disable-thorough-tests --disable-doxygen-docs --disable-oggtest
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(PPC_ARCHS)),$(ARCH))
 # avoid error: AltiVec and SPE instructions cannot coexist

@@ -19,7 +19,7 @@ NMON_TARGET = $(PKG_NAME)
 
 ADDITIONAL_CFLAGS = -g -O3 -Wall -D JFS -D GETUSER -D LARGEMEM -lncursesw -lm -o $(NMON_TARGET)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: nmon_configure
 nmon_configure:

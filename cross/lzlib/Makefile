@@ -13,4 +13,4 @@ LICENSE  = GPLv2
 
 CONFIGURE_ARGS = CC=$(TC_PATH)$(TC_PREFIX)gcc
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

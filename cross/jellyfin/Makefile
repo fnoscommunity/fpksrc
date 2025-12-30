@@ -21,4 +21,4 @@ DOTNET_PACKAGE_NAME = Jellyfin.Server
 # avoid the creation of pdb files
 DOTNET_BUILD_PROPERTIES = -p:DebugSymbols=false -p:DebugType=none
 
-include ../../mk/spksrc.cross-dotnet.mk
+include ../../mk/fpksrc.cross-dotnet.mk

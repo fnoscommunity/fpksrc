@@ -19,4 +19,4 @@ CMAKE_ARGS += -DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS += -DHWY_ENABLE_TESTS=OFF
 CMAKE_ARGS += -DHWY_ENABLE_EXAMPLES=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

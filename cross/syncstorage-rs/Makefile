@@ -38,7 +38,7 @@ ENV += MYSQLCLIENT_VERSION=$(lastword $(subst -, ,$(wildcard $(WORK_DIR)/mariadb
 
 POST_INSTALL_TARGET = syncstorage-rs_post_install
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk
 
 .PHONY: syncstorage-rs_post_install
 syncstorage-rs_post_install:

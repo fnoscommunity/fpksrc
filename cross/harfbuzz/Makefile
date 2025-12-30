@@ -19,7 +19,7 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = -Dtests=disabled
 CONFIGURE_ARGS += -Dutilities=disabled
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TCVERSION), 7),1)
 ADDITIONAL_CFLAGS = -std=c11
 endif
@@ -27,4 +27,4 @@ endif
 # let it find glib-mkenums
 ENV += "PATH=$(PATH):$(STAGING_INSTALL_PREFIX)/bin"
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

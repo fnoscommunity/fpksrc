@@ -8,4 +8,4 @@ KERNEL_BASE_ARCH = ppc
 
 KERNEL_ENV = $(TC_ENV) LDFLAGS=""
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

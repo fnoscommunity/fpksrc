@@ -20,7 +20,7 @@ GNU_CONFIGURE = 1
 
 INSTALL_TARGET = screen_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: screen_install
 screen_install:

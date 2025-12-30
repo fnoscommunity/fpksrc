@@ -23,7 +23,7 @@ POST_STRIP_TARGET = $(SPK_NAME)_extra_install
 SPK_COMMANDS  = bin/ffprobe
 SPK_COMMANDS += bin/$(SPK_NAME)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_ge, $(TCVERSION), 7.0),1)
 SERVICE_USER = auto
@@ -34,7 +34,7 @@ ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 SPK_DEPENDS = "synocli-videodriver"
 endif
 
-include ../../mk/spksrc.videodriver.mk
+include ../../mk/fpksrc.videodriver.mk
 
 .PHONY: $(SPK_NAME)_extra_install
 $(SPK_NAME)_extra_install:

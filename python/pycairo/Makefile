@@ -15,7 +15,7 @@ CONFIGURE_ARGS = --cross-file=$(WORK_DIR)/$(PKG_DIR)/pycairo.meson
 
 POST_CONFIGURE_TARGET = pycairo_post_configure
 
-include ../../mk/spksrc.python-wheel-meson.mk
+include ../../mk/fpksrc.python-wheel-meson.mk
 
 .PHONY: pycairo_post_configure
 

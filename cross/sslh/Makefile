@@ -29,7 +29,7 @@ ADDITIONAL_CFLAGS = -std=c11
 # __USE_MISC is defined in features.h when _DEFAULT_SOURCE is defined (otherwise __USE_MISC is undefined)
 ADDITIONAL_CFLAGS += -D_DEFAULT_SOURCE
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: sslh_install
 sslh_install:

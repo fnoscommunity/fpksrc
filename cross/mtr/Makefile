@@ -10,7 +10,7 @@ DEPENDS = cross/ncursesw
 
 OPTIONAL_DEPENDS = cross/libcap cross/libcap_2.51
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 DEPENDS += cross/libcap_2.51
 else
@@ -27,7 +27,7 @@ PRE_CONFIGURE_TARGET = mtr_pre_configure
 # avoid creation of exec hooks
 INSTALL_MAKE_OPTIONS = install-sbinPROGRAMS DESTDIR=$(INSTALL_DIR)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: mtr_pre_configure
 mtr_pre_configure:

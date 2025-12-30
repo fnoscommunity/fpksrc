@@ -24,7 +24,7 @@ COMPILE_MAKE_OPTIONS = -f makefile.gcc
 PATCH_TARGET = 7z_patch
 INSTALL_TARGET = 7z_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # disable unsupported HW capabilities:
 ifeq ($(findstring $(ARCH),$(ARMv7_ARCHS) $(ARMv7L_ARCHS)),$(ARCH))

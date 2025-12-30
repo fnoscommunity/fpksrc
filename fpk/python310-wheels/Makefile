@@ -35,7 +35,7 @@ OPTIONAL_DEPENDS += python/numpy
 OPTIONAL_DEPENDS += python/pandas
 OPTIONAL_DEPENDS += python/scipy
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # [borgbackup]
 # Use OpenSSL path as defined by either
@@ -128,7 +128,7 @@ WHEELS += rpds_py==0.25.1
 endif
 endif
 
-include ../../mk/spksrc.python.mk
+include ../../mk/fpksrc.python.mk
 
 # [atom]
 # Requires

@@ -18,4 +18,4 @@ CONFIGURE_ARGS = --without-doc --with-urw-fonts-dir=$(STAGING_INSTALL_PREFIX)/sh
 ENV += PATH=$(WORK_DIR)/../../../native/ghostscript/work-native/install/usr/local/bin/:$$PATH 
 
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

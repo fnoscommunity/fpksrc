@@ -19,7 +19,7 @@ CONFIGURE_ARGS += --disable-fusefs
 CONFIGURE_ARGS += --with-th1-docs --with-th1-hooks 
 CONFIGURE_ARGS += --with-openssl=auto
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: fossil-scm_pre_configure
 fossil-scm_pre_configure:

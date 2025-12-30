@@ -7,7 +7,7 @@ KERNEL_URL_VERSION = 7.1.1
 
 PRE_COMPILE_TARGET = kernel_platv2_pre_compile
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk
 
 PHONY: kernel_platv2_pre_compile
 kernel_platv2_pre_compile:

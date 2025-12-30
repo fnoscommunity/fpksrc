@@ -7,7 +7,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 DEPENDS = cross/nnn
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TC_GCC), 5.0),1)
 ifeq ($(findstring $(ARCH),$(64bit_ARCHS)),$(ARCH))
 SPK_VERS = 4.8

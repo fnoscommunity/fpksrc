@@ -22,24 +22,24 @@ WHEEL_GOAL := $(if $(MAKECMDGOALS),$(MAKECMDGOALS),wheel)
 WHEEL_COOKIE = $(WORK_DIR)/.wheel_done
 
 ## python wheel specific configurations
-include ../../mk/spksrc.wheel-env.mk
+include ../../mk/fpksrc.wheel-env.mk
 
 ## python wheel specific configurations
-include ../../mk/spksrc.crossenv.mk
+include ../../mk/fpksrc.crossenv.mk
 
 ## meson specific configurations
-include ../../mk/spksrc.cross-cmake-env.mk
+include ../../mk/fpksrc.cross-cmake-env.mk
 
 ## meson specific configurations
-#include ../../mk/spksrc.cross-meson-env.mk
+#include ../../mk/fpksrc.cross-meson-env.mk
 
-include ../../mk/spksrc.wheel-download.mk
+include ../../mk/fpksrc.wheel-download.mk
 
 wheel_compile: wheel_download
-include ../../mk/spksrc.wheel-compile.mk
+include ../../mk/fpksrc.wheel-compile.mk
 
 wheel_install: wheel_compile
-include ../../mk/spksrc.wheel-install.mk
+include ../../mk/fpksrc.wheel-install.mk
 
 ##
 

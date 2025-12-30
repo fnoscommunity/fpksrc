@@ -31,7 +31,7 @@ UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 DSM7_ARMv7_ARCHS_DEPENDING_ON_MONO = armada370 alpine alpine4k
 
 # Use Mono for unsupported .NET archs
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(i686_ARCHS) $(ARMv7L_ARCHS) $(ARMv7_ARCHS)),$(ARCH))
 DEPENDS = cross/curl cross/jackett-mono

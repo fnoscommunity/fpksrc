@@ -6,4 +6,4 @@ KERNEL_BASE_ARCH = arm
 KERNEL_URL_DIR = 6281
 KERNEL_URL_VERSION = 6.2
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

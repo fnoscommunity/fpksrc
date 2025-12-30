@@ -19,4 +19,4 @@ CONFIGURE_ARGS += -Ddefault_library=shared
 CONFIGURE_ARGS += -Dselinux=disabled
 CONFIGURE_ARGS += -Diconv=external
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

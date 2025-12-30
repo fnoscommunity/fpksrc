@@ -11,7 +11,7 @@ LICENSE  = MIT
 EXTRACT_TARGET = pnpm-extract
 INSTALL_TARGET = nop
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk
 
 .PHONY: pnpm-extract
 pnpm-extract:

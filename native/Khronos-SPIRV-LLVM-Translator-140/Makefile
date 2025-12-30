@@ -48,4 +48,4 @@ NATIVE_CXXFLAGS = -Wno-maybe-uninitialized
 # -----------------------------------------------------------------------------
 # Include the common cross-cmake rules
 # -----------------------------------------------------------------------------
-include ../../mk/spksrc.native-cmake.mk
+include ../../mk/fpksrc.native-cmake.mk

@@ -21,4 +21,4 @@ export VC_INTRINSICS_IN_TREE_INSTALL=FALSE
 CMAKE_ARGS += -DLLVM_DIR=$(WORK_DIR)/../../llvm-14.0-build/work-native/install/usr/local/lib/cmake/llvm
 CMAKE_ARGS += -DBUILD_SHARED_LIBS=ON
 
-include ../../mk/spksrc.native-cmake.mk
+include ../../mk/fpksrc.native-cmake.mk

@@ -17,4 +17,4 @@ GNU_CONFIGURE = 1
 CMAKE_ARGS += -DBUILD_PYTHON=OFF
 CMAKE_ARGS += -DBUILD_EXAMPLES=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

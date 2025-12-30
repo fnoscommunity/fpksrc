@@ -13,4 +13,4 @@ LICENSE  = GPLv2
 
 CONFIGURE_ARGS += -Ddocs=false
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

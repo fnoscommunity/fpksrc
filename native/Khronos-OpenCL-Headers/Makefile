@@ -14,7 +14,7 @@ LICENSE = Copyright (c) 2015-2024 The Khronos Group Inc.
 
 POST_EXTRACT_TARGET = SPIRV-Headers_post_extract_target
 
-include ../../mk/spksrc.native-cmake.mk
+include ../../mk/fpksrc.native-cmake.mk
 
 .PHONY: SPIRV-Headers_post_extract_target
 SPIRV-Headers_post_extract_target:

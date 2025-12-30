@@ -27,7 +27,7 @@ ADDITIONAL_CFLAGS = -O2
 
 PRE_CONFIGURE_TARGET = expect_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: expect_pre_configure
 expect_pre_configure:

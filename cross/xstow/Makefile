@@ -18,4 +18,4 @@ GNU_CONFIGURE = 1
 
 CONFIGURE_ARGS = --with-curses
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

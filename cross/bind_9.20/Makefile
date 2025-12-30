@@ -43,7 +43,7 @@ CONFIGURE_ARGS += BUILD_CPPFLAGS="$(CPPFLAGS) $(ADDITIONAL_CPPFLAGS)"
 CONFIGURE_ARGS += BUILD_LDFLAGS="$(LDFLAGS)"
 CONFIGURE_ARGS += BUILD_LIBS="$(LIBS)"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: bind_pre_compile
 # libns and libisccfg must be available in the install location at compile time

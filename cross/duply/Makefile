@@ -14,7 +14,7 @@ LICENSE  = GPLv2
 
 INSTALL_TARGET = duply_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: duply_install
 duply_install:

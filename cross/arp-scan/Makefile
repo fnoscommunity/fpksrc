@@ -20,7 +20,7 @@ CONFIGURE_ARGS = pgac_cv_snprintf_long_long_int_format="%lld"
 # needed for compilation to avoid warning "_FORTIFY_SOURCE requires compiling with optimization (-O)"
 ADDITIONAL_CPPFLAGS = -O3
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: arp-scan_pre_configure
 arp-scan_pre_configure:

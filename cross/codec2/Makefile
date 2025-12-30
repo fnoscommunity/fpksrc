@@ -14,4 +14,4 @@ LICENSE  = LGPL 2.1
 
 CMAKE_ARGS = -DUNITTEST=FALSE
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

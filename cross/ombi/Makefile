@@ -10,7 +10,7 @@ EXTRACT_PATH = $(INSTALL_DIR)/$(INSTALL_PREFIX)/shared
 # use digests with multiple files
 PKG_DIST_ARCH_LIST = linux-x64 linux-arm linux-arm64
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifeq ($(findstring $(ARCH), $(x64_ARCHS)),$(ARCH))
 PKG_DIST_ARCH = linux-x64
@@ -29,4 +29,4 @@ LICENSE  = GPLv2
 # source is extracted directly to the install folder
 INSTALL_TARGET = nop
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk

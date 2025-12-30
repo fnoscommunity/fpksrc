@@ -26,7 +26,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 UNSUPPORTED_ARCHS += comcerto2k
 
 # 32 bit archs require DSM >= 7
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 UNSUPPORTED_ARCHS += $(32bit_ARCHS)
 endif
@@ -38,4 +38,4 @@ LICENSE  = 2-clause BSD
 CONFIGURE_TARGET = nop
 INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) PREFIX=$(INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

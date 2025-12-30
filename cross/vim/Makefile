@@ -35,7 +35,7 @@ INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR)
 
 POST_INSTALL_TARGET = vim_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: vim_post_install
 vim_post_install:

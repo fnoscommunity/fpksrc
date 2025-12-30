@@ -23,7 +23,7 @@ ADDITIONAL_CPPFLAGS = -O
 
 POST_INSTALL_TARGET = smartmontools_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: smartmontools_post_install
 smartmontools_post_install:

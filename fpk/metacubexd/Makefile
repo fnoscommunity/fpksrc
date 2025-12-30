@@ -32,7 +32,7 @@ DSM_UI_CONFIG = src/app/config
 
 CONF_DIR = src/conf/
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 DSM_UI_CONFIG = src/app_6/config

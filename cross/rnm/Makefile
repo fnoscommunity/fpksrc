@@ -16,7 +16,7 @@ GNU_CONFIGURE = 1
 
 PRE_CONFIGURE_TARGET = rnm_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(call version_lt, $(TC_GCC), 4.8.1),1)
 # A compiler with support for C++11 language features is required.

@@ -14,7 +14,7 @@ LICENSE  = Apache License 2.0
 
 INSTALL_TARGET = tessdata-eng_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: tessdata-eng_install
 tessdata-eng_install:

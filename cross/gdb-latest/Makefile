@@ -15,7 +15,7 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS  = --enable-host-shared
 CONFIGURE_ARGS += --with-system-zlib
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifeq ($(findstring $(ARCH),$(PPC_ARCHS)),$(ARCH))
 # sim/ppc is broken
@@ -40,7 +40,7 @@ ifneq ($(strip $(PLIST_TRANSFORM_SED_ARGS)),)
 PLIST_TRANSFORM = sed $(PLIST_TRANSFORM_SED_ARGS)
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(call version_lt, $(TC_GCC), 4.8.1),1)
 # archs without C++11 support are not supported:

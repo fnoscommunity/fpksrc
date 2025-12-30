@@ -15,7 +15,7 @@ CONFIGURE_TARGET = nop
 COMPILE_TARGET = squidguardmgr_compile
 INSTALL_TARGET = squidguardmgr_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: squidguardmgr_compile
 squidguardmgr_compile: $(SRC_DIR)squid_wrapper/squid_wrapper

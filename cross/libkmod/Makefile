@@ -17,7 +17,7 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --disable-manpages
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: kmod_pre_configure
 kmod_pre_configure:

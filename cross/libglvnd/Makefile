@@ -18,4 +18,4 @@ POST_EXTRACT_TARGET = libglvnd_post_extract_target
 libglvnd_post_extract_target:
 	@cd $(WORK_DIR) && ln -s $(PKG_DIR) OpenGL-Headers
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

@@ -22,7 +22,7 @@ CONFIGURE_ARGS += --enable-dynamic-ssl-lib
 CONFIGURE_ARGS += --prefix=$(INSTALL_DIR)$(INSTALL_PREFIX)
 CONFIGURE_ARGS += CFLAGS="-O2 -g -D_GNU_SOURCE"
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk
 
 .PHONY: erlang_configure
 erlang_configure:

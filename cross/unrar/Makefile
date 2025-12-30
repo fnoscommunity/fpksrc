@@ -17,4 +17,4 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 CONFIGURE_TARGET = nop
 INSTALL_MAKE_OPTIONS = install DESTDIR=$(STAGING_INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

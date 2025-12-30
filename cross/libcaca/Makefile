@@ -29,7 +29,7 @@ CONFIGURE_ARGS += --disable-examples
 CONFIGURE_ARGS += --disable-doc
 CONFIGURE_ARGS += --disable-static
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: libcaca_pre_configure
 libcaca_pre_configure:

@@ -36,7 +36,7 @@ POST_STRIP_TARGET = readarr_extra_install
 # TMPDIR is used for readarr built in backup and update
 USE_ALTERNATE_TMPDIR = 1
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 # dotnet requires libstdc++ version >= 6.0.22
 DEPENDS += cross/libstdc++

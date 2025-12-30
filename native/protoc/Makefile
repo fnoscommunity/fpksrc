@@ -11,4 +11,4 @@ LICENSE  = https://github.com/protocolbuffers/protobuf/blob/master/LICENSE
 # extract only to $(WORK_DIR)
 INSTALL_TARGET = nop
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk

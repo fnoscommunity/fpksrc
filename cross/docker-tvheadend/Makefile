@@ -14,7 +14,7 @@ LICENSE  = GPL-3.0
 
 INSTALL_TARGET = docker-tvheadend_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: docker-tvheadend_install
 docker-tvheadend_install:

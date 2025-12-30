@@ -22,4 +22,4 @@ LICENSE  = GPLv2
 # let it find glib-mkenums
 ENV += "PATH=$(PATH):$(STAGING_INSTALL_PREFIX)/bin"
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

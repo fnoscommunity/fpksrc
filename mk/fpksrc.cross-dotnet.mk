@@ -34,13 +34,13 @@ endif
 endif
 
 # Common directories (must be set after ARCH_SUFFIX)
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ##### dotnet specific configurations
-include ../../mk/spksrc.cross-dotnet-env.mk
+include ../../mk/fpksrc.cross-dotnet-env.mk
 
 # avoid run of make configure & make install
 CONFIGURE_TARGET = nop
@@ -73,4 +73,4 @@ dotnet_compile_target:
 ###
 
 # Include base cross-cc makefile for common functionality
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

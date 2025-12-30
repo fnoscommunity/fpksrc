@@ -18,7 +18,7 @@ CONFIGURE_ARGS = --with-xslt-config=$(STAGING_INSTALL_PREFIX)/bin/xslt-config
 ADDITIONAL_CFLAGS = -Os
 ADDITIONAL_CFLAGS += -I$(STAGING_INSTALL_PREFIX)/include/libxml2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: icecast_extra_install
 icecast_extra_install:

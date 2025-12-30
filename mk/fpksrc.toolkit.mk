@@ -6,10 +6,10 @@ default: all
 WORK_DIR := $(CURDIR)/work
 
 # Setup common directories
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Configure the included makefiles
 URLS          = $(TK_DIST_SITE)/$(TK_DIST_NAME)
@@ -31,24 +31,24 @@ EXTRACT_CMD   = $(EXTRACT_CMD.$(DIST_EXT)) --skip-old-files --strip-components=$
 
 RUN = cd $(WORK_DIR)/$(TK_TARGET) && env $(ENV)
 
-include ../../mk/spksrc.download.mk
+include ../../mk/fpksrc.download.mk
 
 checksum: download
-include ../../mk/spksrc.checksum.mk
+include ../../mk/fpksrc.checksum.mk
 
 extract: checksum
-include ../../mk/spksrc.extract.mk
+include ../../mk/fpksrc.extract.mk
 
 patch: extract
-include ../../mk/spksrc.patch.mk
+include ../../mk/fpksrc.patch.mk
 
 flags: patch
-include ../../mk/spksrc.toolkit-flags.mk
+include ../../mk/fpksrc.toolkit-flags.mk
 
 toolkit_fix: flags
-include ../../mk/spksrc.toolkit-fix.mk
+include ../../mk/fpksrc.toolkit-fix.mk
 
 all: toolkit_fix
 
 ### For make digests
-include ../../mk/spksrc.generate-digests.mk
+include ../../mk/fpksrc.generate-digests.mk

@@ -14,4 +14,4 @@ LICENSE  = MIT
 
 CMAKE_ARGS += -DENABLE_CJSON_TEST=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

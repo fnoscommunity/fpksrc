@@ -56,7 +56,7 @@ MYSQL_DB_SOCKET = /run/mysqld/mysqld.sock
 endif
 CMAKE_ARGS += -DMARIADB_UNIX_ADDR=$(MYSQL_DB_SOCKET)
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 ifeq ($(call version_gt, $(TC_GCC), 4.9),1)
 ADDITIONAL_CFLAGS += -Wno-error=maybe-uninitialized

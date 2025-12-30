@@ -17,7 +17,7 @@ INSTALL_TARGET = busybox_install
 
 ENV += CROSS_COMPILE=$(TC_PATH)$(TC_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # WARNING: without BUSYBOX_CONFIG definitions, the build does not work
 # Activate at least one config to build in cross/busybox

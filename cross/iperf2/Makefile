@@ -19,7 +19,7 @@ GNU_CONFIGURE = 1
 
 POST_INSTALL_TARGET = iperf2_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: iperf2_post_install
 iperf2_post_install:

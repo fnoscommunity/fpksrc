@@ -14,4 +14,4 @@ LICENSE  = MIT
 
 CMAKE_ARGS += -DRUN_TEST_SUITE=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

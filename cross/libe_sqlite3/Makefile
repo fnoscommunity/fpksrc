@@ -43,7 +43,7 @@ ADDITIONAL_CFLAGS += -DSQLITE_OS_UNIX
 ADDITIONAL_CFLAGS += -DNDEBUG
 ADDITIONAL_CFLAGS += -o libe_sqlite3.so
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 ADDITIONAL_CFLAGS += -m64 -msse4.2 -maes

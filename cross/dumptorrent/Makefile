@@ -13,7 +13,7 @@ COMMENT  = DumpTorrent is a non-interactive text mode program which displays Bit
 CONFIGURE_TARGET = nop
 INSTALL_TARGET = install-binaries
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 install-binaries: $(STAGING_INSTALL_PREFIX)/bin/dumptorrent $(STAGING_INSTALL_PREFIX)/bin/scrapec
 

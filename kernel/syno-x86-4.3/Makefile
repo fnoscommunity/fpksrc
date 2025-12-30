@@ -7,4 +7,4 @@ KERNEL_DIST_NAME = synogpl-$(KERNEL_BUILD)-x64.$(KERNEL_EXT)
 KERNEL_CONFIG = synoconfigs/x86_64
 KERNEL_BASE_ARCH = x86
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

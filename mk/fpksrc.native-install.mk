@@ -18,10 +18,10 @@ DIST_FILE     = $(DISTRIB_DIR)/$(LOCAL_FILE)
 DIST_EXT      = $(PKG_EXT)
 
 # Setup common directories
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 #####
 
@@ -46,4 +46,4 @@ endif
 #####
 
 # Include base native-cc makefile for common functionality
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk

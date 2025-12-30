@@ -21,7 +21,7 @@ CMAKE_ARGS += -DHAVE_LIBREADLINE=0
 # adjust prefix in xml2-config
 POST_INSTALL_TARGET = libxml2_post_install
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: libxml2_post_install
 libxml2_post_install:

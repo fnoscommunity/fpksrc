@@ -15,7 +15,7 @@ GNU_CONFIGURE = 1
 
 PRE_CONFIGURE_TARGET = psmisc_preconfigure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: psmisc_preconfigure
 psmisc_preconfigure:

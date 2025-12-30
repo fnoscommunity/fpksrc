@@ -26,18 +26,18 @@ endif
 endif
 
 # Common directories (must be set after ARCH_SUFFIX)
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ###
 
 # meson specific configurations
-include ../../mk/spksrc.cross-meson-env.mk
+include ../../mk/fpksrc.cross-meson-env.mk
 
 # meson cross-file usage definition
-include ../../mk/spksrc.cross-meson-crossfile.mk
+include ../../mk/fpksrc.cross-meson-crossfile.mk
 
 # configure using meson
 ifeq ($(strip $(CONFIGURE_TARGET)),)
@@ -45,7 +45,7 @@ CONFIGURE_TARGET = meson_configure_target
 endif
 
 # call-up ninja build process
-include ../../mk/spksrc.ninja.mk
+include ../../mk/fpksrc.ninja.mk
 
 ###
 
@@ -65,4 +65,4 @@ meson_configure_target: $(MESON_CROSS_FILE_PKG)
 ###
 
 # Include base cross-cc makefile for common functionality
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

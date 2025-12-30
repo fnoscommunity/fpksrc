@@ -17,7 +17,7 @@ LICENSE  = GPLv2
 GNU_CONFIGURE = 1
 PRE_CONFIGURE_TARGET = gpart_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: gpart_pre_configure
 gpart_pre_configure:

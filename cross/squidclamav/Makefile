@@ -18,7 +18,7 @@ ADDITIONAL_CFLAGS = -I$(INSTALL_DIR)/$(INSTALL_PREFIX)/include/c_icap
 
 POST_INSTALL_TARGET = squidclamav_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: squidclamav_post_install
 squidclamav_post_install:

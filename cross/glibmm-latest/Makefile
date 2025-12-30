@@ -15,4 +15,4 @@ LICENSE  = LGPLv2.1
 CONFIGURE_ARGS += -Dbuild-documentation=false
 CONFIGURE_ARGS += -Ddefault_library=shared
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

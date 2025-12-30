@@ -15,7 +15,7 @@ INSTALL_TARGET = dotnet_native_install
 
 NUGET_PACKAGES_DIR = $(DISTRIB_DIR)/nuget/packages
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk
 
 .PHONY: dotnet_native_install
 dotnet_native_install:

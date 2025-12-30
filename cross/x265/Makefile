@@ -29,7 +29,7 @@ CMAKE_ARGS_BITLIB += -DCMAKE_TOOLCHAIN_FILE=$(CMAKE_TOOLCHAIN_FILE_PKG)
 ADDITIONAL_CMAKE_ARGS += -DEXTRA_LIB="x265_main10.a;x265_main12.a" -DEXTRA_LINK_FLAGS="-ldl -L."
 ADDITIONAL_CMAKE_ARGS += -DLINKED_10BIT=ON -DLINKED_12BIT=ON -DENABLE_SHARED=ON
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv8_ARCHS)),$(ARCH))
 ifeq ($(call version_ge, $(TCVERSION), 7.1),1)
@@ -59,7 +59,7 @@ CMAKE_ARGS += -DCMAKE_ASM_NASM_FLAGS=-w-macro-params-legacy
 endif
 
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # gcc version above 4.8 required to support hdr10plus
 ifeq ($(call version_le, $(TC_GCC), 4.8),1)

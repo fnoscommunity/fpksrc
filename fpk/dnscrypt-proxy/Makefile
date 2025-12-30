@@ -33,14 +33,14 @@ SERVICE_URL = /webman/3rdparty/dnscrypt-proxy/index.cgi
 PRE_COPY_TARGET = dnscrypt_extra_install
 
 GO_LDFLAGS = -s -w
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 NATIVE_GO = native/go_1.23
 else
 NATIVE_GO = native/go
 endif
 
-include ../../mk/spksrc.cross-go-env.mk
+include ../../mk/fpksrc.cross-go-env.mk
 
 include ../../mk/fpksrc.fpk.mk
 

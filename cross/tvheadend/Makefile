@@ -64,7 +64,7 @@ CONFIGURE_ARGS += --disable-libx264_static --enable-libx264
 CONFIGURE_ARGS += --disable-libx265_static --enable-libx265
 CONFIGURE_ARGS += --disable-ffmpeg_static --enable-libav
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --enable-vaapi
@@ -110,7 +110,7 @@ CONFIGURE_ARGS += --nowerror
 ADDITIONAL_CFLAGS += -std=gnu99
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: tvheadend_pre_configure
 tvheadend_pre_configure:

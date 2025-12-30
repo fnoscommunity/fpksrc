@@ -20,7 +20,7 @@ POST_INSTALL_TARGET = rust-qoriq-postinstall
 CARGO_PATH=$(abspath $(BASE_DISTRIB_DIR)/cargo/bin)
 RUSTUP_HOME=$(abspath $(BASE_DISTRIB_DIR)/rustup)
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk
 
 .PHONY: rust-qoriq-postinstall
 rust-qoriq-postinstall:

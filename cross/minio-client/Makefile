@@ -12,7 +12,7 @@ EXTRACT_PATH = $(WORK_DIR)/src/github.com/$(REAL_PKG_NAME)
 PKG_DIR = $(REAL_PKG_NAME)-$(PKG_DIST_PREFIX)
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 BUILD_DEPENDS = native/go_1.23
 NATIVE_GO = native/go_1.23
@@ -41,7 +41,7 @@ GO_LDFLAGS += -X github.com/minio/mc/cmd.ReleaseTag=$(PKG_RELEASE_TAG)
 GO_LDFLAGS += -X github.com/minio/mc/cmd.CommitID=$(PKG_COMMIT_ID)
 GO_LDFLAGS += -X github.com/minio/mc/cmd.CopyrightYear=$(firstword $(subst -, ,$(PKG_VERS)))
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 # rename extracted folder to make imports work when used as GOPATH
 .PHONY: minio-client_post_extract

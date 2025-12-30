@@ -13,4 +13,4 @@ LICENSE  = https://gitlab.freedesktop.org/xorg/lib/libpciaccess/-/blob/master/CO
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

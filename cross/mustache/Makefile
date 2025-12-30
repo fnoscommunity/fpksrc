@@ -15,7 +15,7 @@ LICENSE  = BSL 1.0
 GNU_CONFIGURE = 1
 INSTALL_TARGET = mustache_install
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: mustache_install
 mustache_install:

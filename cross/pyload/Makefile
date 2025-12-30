@@ -14,7 +14,7 @@ LICENSE  = GPLv3
 
 INSTALL_TARGET = pyload_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: pyload_install
 pyload_install:

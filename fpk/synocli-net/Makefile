@@ -22,7 +22,7 @@ OPTIONAL_DEPENDS += cross/bind_9.20 cross/bind_9.18 cross/bind_9.16
 OPTIONAL_DEPENDS += cross/aria2
 OPTIONAL_DEPENDS += cross/nmap cross/nmap_7.92
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 OPTIONAL_DESC =
 

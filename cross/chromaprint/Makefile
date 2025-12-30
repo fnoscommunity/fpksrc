@@ -49,4 +49,4 @@ DEPENDS = cross/ffmpeg7
 CMAKE_RPATH =
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

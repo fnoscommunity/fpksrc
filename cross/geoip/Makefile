@@ -14,4 +14,4 @@ LICENSE  = LGPL
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = ac_cv_func_malloc_0_nonnull=yes ac_cv_func_realloc_0_nonnull=yes
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

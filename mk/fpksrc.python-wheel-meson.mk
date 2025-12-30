@@ -13,10 +13,10 @@
 #
 
 # Setup common directories
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ###
 
@@ -24,10 +24,10 @@ include ../../mk/spksrc.common.mk
 MESON_PYTHON = 1
 
 # meson specific configurations
-include ../../mk/spksrc.cross-meson-env.mk
+include ../../mk/fpksrc.cross-meson-env.mk
 
 # meson cross-file usage definition
-include ../../mk/spksrc.cross-meson-crossfile.mk
+include ../../mk/fpksrc.cross-meson-crossfile.mk
 
 # 1- Prepare the crossenv
 # 2- Generate the per-dependency cross-file definition
@@ -120,15 +120,15 @@ install_meson_python_wheel:
 ###
 
 # Use crossenv
-include ../../mk/spksrc.crossenv.mk
+include ../../mk/fpksrc.crossenv.mk
 
 ## python wheel specific configurations
-include ../../mk/spksrc.wheel-env.mk
+include ../../mk/fpksrc.wheel-env.mk
 
 ## install wheel specific routines
-include ../../mk/spksrc.wheel-install.mk
+include ../../mk/fpksrc.wheel-install.mk
 
 ###
 
 # call-up regular build process
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

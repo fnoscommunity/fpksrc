@@ -13,4 +13,4 @@ LICENSE = GPL v2 with Classpath Exception
 # use the jdk-11 folder (i.e. PKG_DIR)
 INSTALL_TARGET = nop
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk

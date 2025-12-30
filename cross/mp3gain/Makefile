@@ -16,4 +16,4 @@ LICENSE  = LGPLv2
 CONFIGURE_TARGET = nop
 ENV += INSTALL_PATH=$(STAGING_INSTALL_PREFIX)/bin
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

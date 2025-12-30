@@ -14,4 +14,4 @@ UNSUPPORTED_ARCHS = comcerto2k
 
 DEPENDS += python/pycairo
 
-include ../../mk/spksrc.python-wheel-meson.mk
+include ../../mk/fpksrc.python-wheel-meson.mk

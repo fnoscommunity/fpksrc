@@ -17,7 +17,7 @@ CONFIGURE_ARGS = --with-neon=$(STAGING_INSTALL_PREFIX)
 CONFIGURE_ARGS += ac_cv_func_malloc_0_nonnull=yes ac_cv_func_realloc_0_nonnull=yes
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # patch Makefile.in for gcc -lt 4.9
 # see https://savannah.nongnu.org/bugs/?51004
@@ -28,7 +28,7 @@ ifeq ($(call version_lt,${TCVERSION},6.0)$(call version_gt,${TCVERSION},2.0),11)
 POST_CONFIGURE_TARGET = davfs2_post_configure
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: davfs2_post_configure
 davfs2_post_configure:

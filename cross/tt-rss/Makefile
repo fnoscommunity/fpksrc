@@ -17,7 +17,7 @@ INSTALL_TARGET = tt-rss_install
 
 PATCHES_LEVEL = 1
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: tt-rss_install
 tt-rss_install:

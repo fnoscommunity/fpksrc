@@ -24,7 +24,7 @@ CONFIGURE_ARGS  = --cross-file=$(WORK_DIR)/$(PKG_DIR)/scipy.meson
 
 POST_CONFIGURE_TARGET = scipy_post_configure
 
-include ../../mk/spksrc.python-wheel-meson.mk
+include ../../mk/fpksrc.python-wheel-meson.mk
 
 .PHONY: scipy_post_configure
 

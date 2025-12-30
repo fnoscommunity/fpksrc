@@ -17,4 +17,4 @@ LICENSE  = MIT
 
 CARGO_BUILD_ARGS = --locked
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk

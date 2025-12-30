@@ -17,7 +17,7 @@ COMPILE_MAKE_OPTIONS += linux
 POST_EXTRACT_TARGET = tcp_wrappers_post_extract
 CONFIGURE_TARGET = nop
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: tcp_wrappers_post_extract
 tcp_wrappers_post_extract:

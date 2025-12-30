@@ -29,7 +29,7 @@ GO_BIN_DIR = $(WORK_DIR)/$(PKG_DIR)/$(PKG_NAME)
 # ui/embed.go:9:5: embed build/index.html: open ui/build/index.html: no such file or directory
 .NOTPARALLEL:
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 PATH := $(WORK_DIR)/../../../native/nodejs/work-native/node/bin:$(PATH)
 

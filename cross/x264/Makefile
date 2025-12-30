@@ -21,7 +21,7 @@ CONFIGURE_ARGS += --disable-opencl
 CONFIGURE_ARGS += --prefix=$(INSTALL_PREFIX)
 CONFIGURE_ARGS += --cross-prefix=$(TC_PATH)$(TC_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(ARMv7_ARCHS) $(ARMv7L_ARCHS)),$(ARCH))
 ENV += x264_ARCH=ARM

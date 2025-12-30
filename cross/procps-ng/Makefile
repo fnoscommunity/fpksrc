@@ -25,7 +25,7 @@ CONFIGURE_ARGS += --disable-modern-top
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: procps_pre_configure
 procps_pre_configure:

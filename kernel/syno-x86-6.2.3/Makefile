@@ -6,4 +6,4 @@ KERNEL_URL_DIR = x64-source
 KERNEL_CONFIG = synoconfigs/x86_64
 KERNEL_BASE_ARCH = x86
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

@@ -24,4 +24,4 @@ CONFIGURE_ARGS += -Dtest_data_dir=none
 # instead of passing additional LD flags
 #ADDITIONAL_LDFLAGS = -licui18n -licuuc -licudata
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

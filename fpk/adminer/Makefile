@@ -19,7 +19,7 @@ CHANGELOG = "1. Update to v5.4.1. <br/>This package depends on Apache 2.4 (DSM >
 HOMEPAGE = https://www.adminer.org
 LICENSE  = Apache 2.0 or GPLv2
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ##
 ## This package can be built for DSM <6.0, DSM >=6.1;<7.0, DSM >=7.0;<7.2 and DSM >=7.2
 ## To build all versions call:

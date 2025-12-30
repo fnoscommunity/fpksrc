@@ -12,13 +12,13 @@ LICENSE  = Eclipse Public License 1.0
 
 PRE_CONFIGURE_TARGET = dtlssocket_pre_configure
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_le, $(TC_GCC), 5),1)
 ADDITIONAL_CFLAGS = -std=c99
 endif
 
-include ../../mk/spksrc.python-wheel.mk
+include ../../mk/fpksrc.python-wheel.mk
 
 .PHONY: dtlssocket_pre_configure
 dtlssocket_pre_configure:

@@ -16,4 +16,4 @@ CONFIGURE_TARGET = nop
 # Applying Debian patches
 PATCHES_LEVEL = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -4,4 +4,4 @@ KERNEL_BUILD = 25426
 KERNEL_DIST = linux-3.4.x
 KERNEL_BASE_ARCH = arm
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

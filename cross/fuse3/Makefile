@@ -15,7 +15,7 @@ OPTIONAL_DEPENDS = cross/libudev_204 cross/libudev_219
 # libudev:
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 DEPENDS = cross/libudev_219
@@ -34,7 +34,7 @@ LICENSE  = GPLv2, LGPLv2.1 (libfuse.so, libulockmgr.so)
 CONFIGURE_ARGS  = -Dexamples=false
 CONFIGURE_ARGS += -Duseroot=false
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk
 
 .PHONY: fuse3_add_missing_toolchain_file
 # workaround for arch-qoriq-6.2.4 and arch-88f6281-5.2

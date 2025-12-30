@@ -16,4 +16,4 @@ CONFIGURE_ARGS = --with-ssl=$(STAGING_INSTALL_PREFIX)
 # needed for compilation to avoid warning "_FORTIFY_SOURCE requires compiling with optimization (-O)"
 ADDITIONAL_CPPFLAGS = -O3
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

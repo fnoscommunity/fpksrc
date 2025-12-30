@@ -18,4 +18,4 @@ CONFIGURE_ARGS += --disable-static
 CONFIGURE_ARGS += --without-xmlto
 CONFIGURE_ARGS += --without-fop
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

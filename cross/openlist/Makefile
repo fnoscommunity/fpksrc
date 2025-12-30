@@ -39,7 +39,7 @@ GO_LDFLAGS = -w -s \
   -X 'github.com/OpenListTeam/OpenList/internal/conf.Version=$(PKG_VERS)' \
   -X 'github.com/OpenListTeam/OpenList/internal/conf.WebVersion=$(WEB_VERSION)'
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 .PHONY: openlist_pre_compile
 openlist_pre_compile:

@@ -14,7 +14,7 @@ HOMEPAGE = https://redis.io
 COMMENT  = Redis is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
 LICENSE  = BSD
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 # Link to atomic library for QorIQ architecture
 ifneq ($(findstring $(ARCH),qoriq),)
@@ -32,7 +32,7 @@ else
 ENV += USE_JEMALLOC=no
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: redis_patch_makefile_to_use_atomic_library
 redis_patch_makefile_to_use_atomic_library:

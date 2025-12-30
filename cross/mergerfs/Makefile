@@ -18,7 +18,7 @@ PRE_COMPILE_TARGET = mergerfs_pre_compile
 # needs uppercase PREFIX
 INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) PREFIX=$(INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # when package is not already built:
 ifeq ($(wildcard $(COMPILE_COOKIE)),)

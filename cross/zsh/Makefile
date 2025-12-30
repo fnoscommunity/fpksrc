@@ -16,7 +16,7 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS  = --enable-gdbm
 CONFIGURE_ARGS += --enable-pcre
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifneq ($(findstring $(ARCH),$(OLD_PPC_ARCHS) $(ARMv5_ARCHS)),$(ARCH))
 DEPENDS += cross/libcap
@@ -34,7 +34,7 @@ endif
 
 INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: link-zsh-modules
 link-zsh-modules:

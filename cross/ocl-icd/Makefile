@@ -18,7 +18,7 @@ PRE_CONFIGURE_TARGET = ocl-icd_pre_configure
 CONFIGURE_ARGS  = --enable-custom-vendordir=$(INSTALL_PREFIX)/etc/OpenCL/vendors
 CONFIGURE_ARGS += --enable-custom-layerdir=$(INSTALL_PREFIX)/etc/OpenCL/layers
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: ocl-icd_pre_configure
 ocl-icd_pre_configure:

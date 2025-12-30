@@ -21,4 +21,4 @@ CONFIGURE_ARGS += --with-libassuan-prefix=$(STAGING_INSTALL_PREFIX)
 CONFIGURE_ARGS += --with-gpg-error-prefix=$(STAGING_INSTALL_PREFIX) 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

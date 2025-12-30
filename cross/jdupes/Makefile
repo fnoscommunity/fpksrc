@@ -17,4 +17,4 @@ INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) PREFIX=$(INSTALL_PREFIX)
 
 ADDITIONAL_CFLAGS = -DENABLE_DEDUPE -DIGNORE_NEARBY_JC -O2 -g
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

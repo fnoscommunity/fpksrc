@@ -13,7 +13,7 @@ LICENSE  = GPL Ghostscript, AGPL
 
 INSTALL_TARGET = ghostscript_install
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk
 
 .PHONY: ghostscript_install
 ghostscript_install:

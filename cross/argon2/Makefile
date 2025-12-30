@@ -19,7 +19,7 @@ ENV += PREFIX=$(INSTALL_PREFIX)
 # avoid host machine specific library path:
 ENV += LIBRARY_REL=lib
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # To ensure compatibility with Denverton celeron CPU
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
@@ -36,4 +36,4 @@ ADDITIONAL_CFLAGS += -DARGON2_NO_INTRINSICS -DBLAKE2_USE_PORTABLE
 ADDITIONAL_CFLAGS += -march=core2 -mtune=core2
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

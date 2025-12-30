@@ -57,7 +57,7 @@ ifneq ($(wildcard modules/*),)
 POST_INSTALL_TARGET = znc_post_install
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 EXTRA_MODULES  = colloquy.cpp
 EXTRA_MODULES += identd.cpp

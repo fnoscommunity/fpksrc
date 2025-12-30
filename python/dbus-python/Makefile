@@ -15,7 +15,7 @@ CONFIGURE_ARGS  = --cross-file=$(WORK_DIR)/$(PKG_DIR)/dbus-python.meson
 
 POST_CONFIGURE_TARGET = dbus-python_post_configure
 
-include ../../mk/spksrc.python-wheel-meson.mk
+include ../../mk/fpksrc.python-wheel-meson.mk
 
 .PHONY: dbus-python_post_configure
 

@@ -14,4 +14,4 @@ LICENSE  = MIT
 
 CMAKE_ARGS += -DBROTLI_DISABLE_TESTS=true
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

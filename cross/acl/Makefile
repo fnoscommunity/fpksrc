@@ -15,4 +15,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --disable-static
 ADDITIONAL_CPPFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

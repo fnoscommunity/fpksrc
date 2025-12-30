@@ -24,4 +24,4 @@ ifneq ($(strip $(OPENLDAP_INCLUDE_EXECUTABLES)),1)
 PLIST_TRANSFORM = sed -e '/bin:bin/d' -e '/rsc:etc/d'
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

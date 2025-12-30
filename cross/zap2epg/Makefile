@@ -14,7 +14,7 @@ LICENSE  = GPLv3
 
 INSTALL_TARGET = zap2epg_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: zap2epg_install
 zap2epg_install:

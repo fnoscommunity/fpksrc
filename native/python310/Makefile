@@ -23,7 +23,7 @@ COMPILE_MAKE_OPTIONS += all
 
 POST_INSTALL_TARGET = python310_native_post_install
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk
 
 PYTHON = $(WORK_DIR)/install/usr/local/bin/python3
 PIP = $(WORK_DIR)/install/usr/local/bin/pip

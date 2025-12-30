@@ -16,7 +16,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
 CMAKE_BUILD_DIR = $(WORK_DIR)/$(PKG_DIR)
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 CMAKE_ARGS += -DBUILD_TOOLS=OFF
 CMAKE_ARGS += -DBUILD_TESTS=OFF

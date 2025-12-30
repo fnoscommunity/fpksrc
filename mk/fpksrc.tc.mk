@@ -3,10 +3,10 @@
 SHELL := $(SHELL) -e
 default: all
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ### Include common rules
-include ../../mk/spksrc.common-rules.mk
+include ../../mk/fpksrc.common-rules.mk
 
 # Configure the included makefiles
 URLS                       = $(TC_DIST_SITE)/$(TC_DIST_NAME)
@@ -35,46 +35,46 @@ endif
 
 #####
 
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Include ross-rust-env.mk to generate install its toolchain
-include ../../mk/spksrc.cross-rust-env.mk
+include ../../mk/fpksrc.cross-rust-env.mk
 
 # Include cross-cmake-env.mk to generate its toolchain file
-include ../../mk/spksrc.cross-cmake-env.mk
+include ../../mk/fpksrc.cross-cmake-env.mk
 
 # Include cross-meson-env.mk to generate its toolchain file
-include ../../mk/spksrc.cross-meson-env.mk
+include ../../mk/fpksrc.cross-meson-env.mk
 
 #####
 
 RUN = cd $(WORK_DIR)/$(TC_TARGET) && env $(ENV)
 
-include ../../mk/spksrc.depend.mk
+include ../../mk/fpksrc.depend.mk
 
 download:
-include ../../mk/spksrc.download.mk
+include ../../mk/fpksrc.download.mk
 
 checksum: download
-include ../../mk/spksrc.checksum.mk
+include ../../mk/fpksrc.checksum.mk
 
 extract: checksum
-include ../../mk/spksrc.extract.mk
+include ../../mk/fpksrc.extract.mk
 
 fix: extract
-include ../../mk/spksrc.tc-fix.mk
+include ../../mk/fpksrc.tc-fix.mk
 
 patch: fix
-include ../../mk/spksrc.patch.mk
+include ../../mk/fpksrc.patch.mk
 
 vers: patch
-include ../../mk/spksrc.tc-vers.mk
+include ../../mk/fpksrc.tc-vers.mk
 
 flag: vers
-include ../../mk/spksrc.tc-flags.mk
+include ../../mk/fpksrc.tc-flags.mk
 
 rustc: flag
-include ../../mk/spksrc.tc-rust.mk
+include ../../mk/fpksrc.tc-rust.mk
 
 # Define _all as a real target that does the work
 .PHONY: _all
@@ -335,4 +335,4 @@ else
 endif
 
 ### For make digests
-include ../../mk/spksrc.generate-digests.mk
+include ../../mk/fpksrc.generate-digests.mk

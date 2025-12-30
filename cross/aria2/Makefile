@@ -10,7 +10,7 @@ DEPENDS = cross/openssl3 cross/libssh2 cross/libexpat cross/c-ares cross/sqlite
 # A compiler with support for C++11 language features is required.
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt,${TCVERSION},6.0)$(call version_gt,${TCVERSION},2.0),11)
 # compiler too old
 UNSUPPORTED_ARCHS += $(ARCH)
@@ -29,4 +29,4 @@ CONFIGURE_ARGS += --with-sqlite3
 CONFIGURE_ARGS += --without-gnutls
 CONFIGURE_ARGS += --without-libgcrypt
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

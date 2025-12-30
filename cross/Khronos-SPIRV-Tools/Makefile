@@ -18,7 +18,7 @@ CMAKE_ARGS += -DSPIRV_WERROR=OFF
 CMAKE_ARGS += -DSPIRV_TOOLS_BUILD_STATIC=OFF
 CMAKE_ARGS += -DSPIRV-Headers_SOURCE_DIR=$(WORK_DIR)/SPIRV-Headers
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # Using gcc-8 we must use: make LDLIBS=-lstdc++fs
 # or by adding the following

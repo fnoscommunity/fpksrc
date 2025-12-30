@@ -16,7 +16,7 @@ CONFIGURE_TARGET = nop
 COMPILE_TARGET = clinfo_compile_target
 INSTALL_TARGET = clinfo_install_target
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: clinfo_compile_target
 clinfo_compile_target:

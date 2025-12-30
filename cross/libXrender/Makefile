@@ -16,4 +16,4 @@ CONFIGURE_ARGS  = --datarootdir=$(INSTALL_PREFIX)/lib
 CONFIGURE_ARGS += --enable-malloc0returnsnull
 CONFIGURE_ARGS += --disable-static
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

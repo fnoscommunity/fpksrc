@@ -26,4 +26,4 @@ CONFIGURE_ARGS += --disable-glibtest --disable-gpg-test --disable-gpgsm-test
 
 ADDITIONAL_CPPFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

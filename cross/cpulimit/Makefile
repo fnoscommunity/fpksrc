@@ -15,7 +15,7 @@ HOMEPAGE = https://github.com/opsengine/cpulimit
 COMMENT  = CPU usage limiter for Linux.
 LICENSE  = GPLv2+
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: cpulimit_configure
 cpulimit_configure:

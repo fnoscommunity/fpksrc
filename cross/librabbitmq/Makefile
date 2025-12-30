@@ -17,4 +17,4 @@ CMAKE_ARGS += -DBUILD_EXAMPLES=OFF
 CMAKE_ARGS += -DBUILD_TESTING=OFF
 CMAKE_ARGS += -DBUILD_STATIC_LIBS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

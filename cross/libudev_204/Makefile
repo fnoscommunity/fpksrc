@@ -19,7 +19,7 @@ COMMENT = The systemd System and Service Manager provides an array of system com
 # we take libraries only (tools are GPLv2)
 LICENSE = LGPLv2.1
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 DEPENDS += cross/libcap_2.51
 else
@@ -69,7 +69,7 @@ CONFIGURE_ARGS += --with-dbussessionservicedir=/usr/share/dbus-1/services
 CONFIGURE_ARGS += --with-dbussystemservicedir=/usr/share/dbus-1/system-services
 CONFIGURE_ARGS += --with-dbusinterfacedir=/usr/share/dbus-1/interfaces
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: libudev_pre_configure
 libudev_pre_configure:

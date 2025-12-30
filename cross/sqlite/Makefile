@@ -19,4 +19,4 @@ ADDITIONAL_CFLAGS  = -O
 ADDITIONAL_CFLAGS += -DSQLITE_ENABLE_COLUMN_METADATA
 ADDITIONAL_CFLAGS += -DSQLITE_ENABLE_UNLOCK_NOTIFY
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -19,7 +19,7 @@ CMAKE_ARGS += -DLIBXSLT_WITH_XSLT_DEBUG=OFF
 # adjust prefix in xslt-config (initialy added for libgcrypt)
 POST_INSTALL_TARGET = libxslt_post_install
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: libxslt_post_install
 libxslt_post_install:

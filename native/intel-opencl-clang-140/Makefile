@@ -59,4 +59,4 @@ CMAKE_ARGS += -DAPPLY_PATCHES='OFF'
 # -----------------------------------------------------------------------------
 # Include the common cross-cmake rules
 # -----------------------------------------------------------------------------
-include ../../mk/spksrc.native-cmake.mk
+include ../../mk/fpksrc.native-cmake.mk

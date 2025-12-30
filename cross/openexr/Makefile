@@ -25,10 +25,10 @@ CMAKE_ARGS += -DOPENEXR_BUILD_UTILS=OFF
 CMAKE_ARGS += -DINSTALL_OPENEXR_EXAMPLES=OFF
 CMAKE_ARGS += -DINSTALL_OPENEXR_DOCS=OFF
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TCVERSION), 7.0),1)
 # default is c++14, supported by DSM >= 7 only
 CMAKE_ARGS += -DCMAKE_CXX_STANDARD=11
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

@@ -4,7 +4,7 @@ PKG_NAME = iperf3-main
 OPTIONAL_DEPENDS  = cross/iperf3-latest
 OPTIONAL_DEPENDS += cross/iperf3-3.15
 
-include ../../mk/spksrc.main-depends.mk
+include ../../mk/fpksrc.main-depends.mk
 
 ifeq ($(call version_lt, ${TCVERSION}, 6.0)$(call version_ge, ${TCVERSION}, 3.0),11)
 DEPENDS = cross/iperf3-3.15

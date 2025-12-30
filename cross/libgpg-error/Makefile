@@ -15,4 +15,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --enable-install-gpg-error-config
 ADDITIONAL_CPPFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

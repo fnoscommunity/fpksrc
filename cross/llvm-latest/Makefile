@@ -76,7 +76,7 @@ CMAKE_ARGS += -DLLVM_LINK_LLVM_DYLIB=ON
 # enabled and still inherit from LLVM classes
 CMAKE_ARGS += -DLLVM_ENABLE_RTTI=ON
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 #
 # https://llvm.org/docs/HowToCrossCompileBuiltinsOnArm.html
@@ -110,7 +110,7 @@ CMAKE_ARGS += -DLLVM_TARGETS_TO_BUILD=X86
 CMAKE_ARGS += -DLLVM_ENABLE_PROJECTS='clang;compiler-rt;lld'
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: llvm_post_install
 llvm_post_install:

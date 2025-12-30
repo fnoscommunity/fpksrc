@@ -18,7 +18,7 @@ INSTALL_TARGET = mantisbt_install
 # Pure PHP package, make sure ARCH is not defined
 override ARCH=
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: mantisbt_install
 mantisbt_install:

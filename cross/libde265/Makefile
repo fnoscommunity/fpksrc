@@ -22,4 +22,4 @@ CONFIGURE_ARGS += --disable-sherlock265
 
 ADDITIONAL_CPPFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

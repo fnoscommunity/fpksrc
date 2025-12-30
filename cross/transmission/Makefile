@@ -19,4 +19,4 @@ REQUIRED_MIN_SRM = 1.3
 CMAKE_ARGS = -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
 CMAKE_ARGS += -DENABLE_TESTS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

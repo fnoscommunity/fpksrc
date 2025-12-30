@@ -14,7 +14,7 @@ INSTALL_TARGET = install_python_module
 endif
 
 # Resume with standard spksrc.cross-cc.mk
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Define where is located the crossenv
 CROSSENV_MODULE_PATH = $(firstword $(wildcard $(WORK_DIR)/crossenv-$(or $(PKG_REAL_NAME),$(PKG_NAME))-$(PKG_VERS) $(WORK_DIR)/crossenv-$(or $(PKG_REAL_NAME),$(PKG_NAME)) $(WORK_DIR)/crossenv-default))
@@ -79,7 +79,7 @@ all: install fix_shebang_python_module
 ###
 
 # Allow generating per-wheel crossenv
-include ../../mk/spksrc.crossenv.mk
+include ../../mk/fpksrc.crossenv.mk
 
 ## python wheel specific configurations
-include ../../mk/spksrc.wheel-env.mk
+include ../../mk/fpksrc.wheel-env.mk

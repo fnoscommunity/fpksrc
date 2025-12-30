@@ -19,4 +19,4 @@ CMAKE_ARGS += -DOPENJP2_COMPILE_OPTIONS="-O"
 # deactivate build of tools (we use the library only)
 CMAKE_ARGS += -DBUILD_CODEC=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

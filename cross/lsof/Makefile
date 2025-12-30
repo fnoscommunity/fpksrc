@@ -16,11 +16,11 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS  = --disable-static
 CONFIGURE_ARGS += --disable-liblsof
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(i686_ARCHS) $(x64_ARCHS)),$(ARCH))
 # avoid error: 'NETLINK_SOCK_DIAG' undeclared for evansport-6.2.4
 # evansport-7.1 does not find/use sock_diag anyway
 CONFIGURE_ARGS += ac_cv_header_linux_sock_diag_h=no
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

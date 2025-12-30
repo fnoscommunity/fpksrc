@@ -57,7 +57,7 @@ SERVICE_SETUP = src/service-setup.sh
 
 SPK_USR_LOCAL_LINKS = bin:env/bin/borg bin:env/bin/borgmatic bin:env/bin/emborg
 
-include ../../mk/spksrc.python.mk
+include ../../mk/fpksrc.python.mk
 
 # [borgbackup]
 # Use OpenSSL path as defined by either

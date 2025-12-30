@@ -24,4 +24,4 @@ CONFIGURE_ARGS += --enable-jasper
 CONFIGURE_ARGS += ac_cv_lib_jasper_jas_init=yes
 ADDITIONAL_CXXFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

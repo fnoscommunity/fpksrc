@@ -13,7 +13,7 @@ LICENSE  = MIT
 
 INSTALL_TARGET = stockfish-webgui_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 
 .PHONY: stockfish-webgui_install

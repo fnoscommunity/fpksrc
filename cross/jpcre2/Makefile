@@ -17,7 +17,7 @@ CONFIGURE_ARGS = --disable-test
 
 PRE_CONFIGURE_TARGET = jpcre2_pre_configure_target
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: jpcre2_pre_configure_target
 jpcre2_pre_configure_target:

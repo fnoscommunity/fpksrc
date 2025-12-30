@@ -15,7 +15,7 @@ PRE_CONFIGURE_TARGET = fdk-aac_configure
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: fdk-aac_configure
 fdk-aac_configure:

@@ -17,4 +17,4 @@ GNU_CONFIGURE = 1
 # Compiled magic version [546] does not match with shared library magic version [544]
 CONFIGURE_ARGS += --enable-static --disable-shared
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk

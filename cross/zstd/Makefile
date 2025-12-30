@@ -13,7 +13,7 @@ LICENSE  = GPLv2/BSD
 
 MESON_BASE_DIR = $(WORK_DIR)/$(PKG_DIR)/build/meson
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_lt, ${TC_GCC}, 5),1)  
 ADDITIONAL_CFLAGS = -std=gnu99
@@ -23,4 +23,4 @@ ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 ADDITIONAL_LDFLAGS = -lrt 
 endif
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

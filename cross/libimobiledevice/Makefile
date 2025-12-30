@@ -18,4 +18,4 @@ CONFIGURE_ARGS  = --disable-static
 CONFIGURE_ARGS += --without-cython
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

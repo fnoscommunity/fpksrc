@@ -14,7 +14,7 @@ LICENSE  = https://tcl.tk/software/tcltk/license.html
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 # Enable 64-bit support in Tcl for 64-bit architectures
 ifeq ($(findstring $(ARCH),$(64bit_ARCHS)),$(ARCH))
@@ -23,7 +23,7 @@ endif
 
 POST_INSTALL_TARGET = tcl_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Create a symlink libtcl so that any other packages which are compiled by
 # spksrc may link to a library without a version number in the filename

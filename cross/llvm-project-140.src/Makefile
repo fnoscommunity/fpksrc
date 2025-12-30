@@ -24,7 +24,7 @@ INSTALL_TARGET = nop
 
 PATCHES_LEVEL = 1
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: clang_post_extract_target
 clang_post_extract_target:

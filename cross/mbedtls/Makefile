@@ -16,4 +16,4 @@ CMAKE_ARGS += -DUSE_STATIC_MBEDTLS_LIBRARY=OFF
 CMAKE_ARGS += -DENABLE_TESTING=OFF
 CMAKE_ARGS += -DENABLE_PROGRAMS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

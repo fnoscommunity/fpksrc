@@ -33,7 +33,7 @@ SYSTEM_GROUP = http
 DSM_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Default to PHP 7.4 on DSM 6.x
 SPK_DEPENDS = "WebStation:PHP7.4:MariaDB10:Apache2.4"

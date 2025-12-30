@@ -20,4 +20,4 @@ ADDITIONAL_CPPFLAGS = -Os
 NATIVE_FILE = $(abspath $(WORK_DIR)/../../../native/file/work-native/install/usr/local/bin/file)
 ENV += NATIVE_FILE=$(NATIVE_FILE)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -30,13 +30,13 @@ endif
 endif
 
 # Common directories (must be set after ARCH_SUFFIX)
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ##### rust specific configurations
-include ../../mk/spksrc.cross-rust-env.mk
+include ../../mk/fpksrc.cross-rust-env.mk
 
 # configure is used to install rust targets
 CONFIGURE_TARGET = nop
@@ -81,4 +81,4 @@ rust_install_target:
 ###
 
 # Include base cross-cc makefile for common functionality
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

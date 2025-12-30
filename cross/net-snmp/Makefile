@@ -34,4 +34,4 @@ ADDITIONAL_CFLAGS = -DNETSNMP_CAN_USE_SYSCTL
 
 ADDITIONAL_CFLAGS += -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

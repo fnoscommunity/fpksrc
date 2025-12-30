@@ -20,7 +20,7 @@ ADDITIONAL_CFLAGS = -Wno-unused-value
 
 PRE_CONFIGURE_TARGET = glib_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(PPC_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --host=ppc-linux

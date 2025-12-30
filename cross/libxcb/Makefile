@@ -18,4 +18,4 @@ CONFIGURE_ARGS += --enable-xinput
 CONFIGURE_ARGS += --enable-xkb
 CONFIGURE_ARGS += --without-doxygen
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

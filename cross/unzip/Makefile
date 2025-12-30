@@ -16,4 +16,4 @@ CONFIGURE_TARGET = nop
 COMPILE_MAKE_OPTIONS = -f unix/Makefile generic CC="$(TC_PATH)$(TC_PREFIX)gcc"
 INSTALL_MAKE_OPTIONS = -f unix/Makefile install prefix=$(INSTALL_DIR)$(INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

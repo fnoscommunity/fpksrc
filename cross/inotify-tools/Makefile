@@ -20,7 +20,7 @@ CONFIGURE_ARGS  = --disable-static
 
 PRE_CONFIGURE_TARGET = inotify_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 inotify_pre_configure:
 	$(RUN) ./autogen.sh

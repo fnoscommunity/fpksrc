@@ -21,7 +21,7 @@ DISPLAY_NAME = .NET 6 runtime
 HOMEPAGE = https://dotnet.microsoft.com/
 LICENSE  = MIT
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 # we do not only need the updated libstdc++ library, we also need to
 # adjust the library search path for dotnet to use this version.

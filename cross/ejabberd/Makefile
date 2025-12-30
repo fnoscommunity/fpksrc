@@ -34,7 +34,7 @@ POST_INSTALL_TARGET = ejabberd_post_install
 # let configure find the host erlang executables
 ENV += PATH=$(NATIVE_ERLANG_BIN):$$PATH
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: ejabberd_pre_configure
 # fix cross compile of dependent packages

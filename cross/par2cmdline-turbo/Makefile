@@ -23,7 +23,7 @@ ADDITIONAL_CPPFLAGS = -O2
 # ignore some compiler warnings
 ADDITIONAL_CPPFLAGS += -Wno-unused-variable -Wno-unused-function
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: par2cmdline-turbo_pre_configure
 par2cmdline-turbo_pre_configure:

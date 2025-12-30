@@ -76,7 +76,7 @@ CONFIGURE_ARGS += --with-dbuspolicydir=/usr/share/dbus-1/system.d
 CONFIGURE_ARGS += --with-dbussessionservicedir=/usr/share/dbus-1/services
 CONFIGURE_ARGS += --with-dbussystemservicedir=/usr/share/dbus-1/system-services
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Build fix for aarch64 and x64 for DSM-7.2:
 #   error: static declaration of 'renameat2' follows non-static declaration
@@ -87,7 +87,7 @@ else ifeq ($(strip $(TCVERSION)),1.3)
 CONFIGURE_ARGS += ac_cv_have_decl_renameat2=yes
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: libudev_pre_configure
 libudev_pre_configure:

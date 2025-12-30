@@ -59,7 +59,7 @@ SERVICE_PORT_TITLE = ruTorrent RPC
 
 SUPPORTED_LANGUAGES = fre
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_ge, ${TCVERSION}, 7.2),1)
 # Default to PHP 8.2 on DSM 7.2+ (PHP 8.0 not supported)
@@ -72,7 +72,7 @@ OS_MAX_VER = 7.1-59999
 CONF_DIR = src/conf_7
 endif
 
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 wizards: generated-wizards
 

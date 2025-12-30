@@ -21,7 +21,7 @@ GNU_CONFIGURE = 1
 PRE_CONFIGURE_TARGET = ser2net_pre_configure
 POST_INSTALL_TARGET = ser2net_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(ARMv7L_ARCHS)),$(ARCH))
 DEPENDS += cross/gensio_2.6.8

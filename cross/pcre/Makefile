@@ -23,4 +23,4 @@ CONFIGURE_ARGS = --enable-utf
 CONFIGURE_ARGS += --enable-unicode-properties
 CONFIGURE_ARGS += --disable-static
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

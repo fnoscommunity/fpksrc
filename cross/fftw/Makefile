@@ -18,7 +18,7 @@ CONFIGURE_ARGS += --disable-doc
 CONFIGURE_ARGS += --disable-fortran
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv8_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --enable-neon
@@ -28,4 +28,4 @@ ifeq ($(findstring $(ARCH),$(i686_ARCHS) $(x64_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --enable-sse2
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -29,7 +29,7 @@ LICENSE = LGPL 2.1
 
 SERVICE_SETUP = src/service-setup.sh
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TCVERSION), 7.0),1)
 
 STARTABLE = yes

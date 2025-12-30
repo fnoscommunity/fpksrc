@@ -14,4 +14,4 @@ LICENSE  = 3-Clause BSD
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

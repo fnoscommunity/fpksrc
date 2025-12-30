@@ -20,7 +20,7 @@ LICENSE  = MIT
 
 CMAKE_USE_DESTDIR = 0
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # intel-media-driver specific args
 # for succesfull build

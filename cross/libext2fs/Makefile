@@ -21,4 +21,4 @@ CONFIGURE_ARGS += --disable-libuuid
 COMPILE_MAKE_OPTIONS = libs
 INSTALL_MAKE_OPTIONS = install-libs DESTDIR=$(INSTALL_DIR) prefix=$(INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

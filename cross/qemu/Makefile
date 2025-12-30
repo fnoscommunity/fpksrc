@@ -5,7 +5,7 @@ PKG_DIST_NAME = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://download.qemu.org
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifneq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 UNSUPPORTED_ARCHS = $(ARCH)
 endif
@@ -20,4 +20,4 @@ LICENSE  = GPLv2
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --target-list=x86_64-softmmu
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

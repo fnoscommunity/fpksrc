@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 DEPENDS = cross/ripgrep
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 SPK_VERS = 14.1.1
 else ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))

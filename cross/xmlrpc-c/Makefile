@@ -23,7 +23,7 @@ ENV += PATH=$(INSTALL_DIR)/$(INSTALL_PREFIX)/bin:$$PATH
 
 POST_INSTALL_TARGET = xmlrpc_c_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: xmlrpc_c_post_install
 xmlrpc_c_post_install:

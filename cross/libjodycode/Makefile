@@ -20,4 +20,4 @@ ifeq ($(findstring $(ARCH),x86),$(ARCH))
 ADDITIONAL_CFLAGS = -DNO_SSE2 -DNO_AVX2
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

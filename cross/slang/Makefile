@@ -15,4 +15,4 @@ GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --with-z=$(INSTALL_DIR)/$(INSTALL_PREFIX)
 CONFIGURE_ARGS += --with-pcre=$(INSTALL_DIR)/$(INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

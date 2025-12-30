@@ -17,7 +17,7 @@ POST_INSTALL_TARGET = svt-av1_post_install_target
 
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(PPC_ARCHS)
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv8_ARCHS)),$(ARCH))
 ifeq ($(call version_lt, ${TC_GCC}, 5),1)

@@ -25,4 +25,4 @@ CONFIGURE_ARGS += --disable-bsdunzip
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

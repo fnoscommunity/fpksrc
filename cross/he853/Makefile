@@ -18,7 +18,7 @@ export LIBUSB_ENABLE_STATIC=1
 
 INSTALL_TARGET = he853_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: he853_install
 he853_install:

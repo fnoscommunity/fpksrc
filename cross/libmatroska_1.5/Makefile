@@ -13,4 +13,4 @@ LICENSE  = LGPL
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

@@ -6,4 +6,4 @@ KERNEL_DIST_NAME = x64-source.txz
 KERNEL_CONFIG = synoconfigs/x86_64
 KERNEL_BASE_ARCH = x86
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

@@ -14,4 +14,4 @@ LICENSE  = Apache License v2.0 with LLVM Exceptions
 # extracted directly into install folder
 INSTALL_TARGET = nop
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk

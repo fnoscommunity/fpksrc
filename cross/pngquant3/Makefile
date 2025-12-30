@@ -21,7 +21,7 @@ ADDITIONAL_CFLAGS = -O3 -std=c11
 
 PRE_COMPILE_TARGET = pngquant_pre_compile
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk
 
 # The archive of pngquant source does not contain libimagequant.
 # libimagequant is linked into pngquant source as git submodule.

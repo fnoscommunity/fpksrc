@@ -47,7 +47,7 @@ COMPILE_TARGET       = python314_compile
 INSTALL_TARGET       = python314_install
 POST_INSTALL_TARGET  = python314_post_install
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # optionally generate optimized code
 ifeq ($(strip $(PYTHON_OPTIMIZE)),1)
@@ -83,7 +83,7 @@ CONFIGURE_ARGS += --with-system-expat
 # libffi is no longer bundled with python
 DEPENDS += cross/libffi
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 PYTHON_NATIVE = $(abspath $(WORK_DIR)/../../../native/$(PKG_NAME)/work-native/install/usr/local/bin/python$(PKG_VERS_MAJOR_MINOR))
 HOSTPYTHON = $(WORK_DIR)/$(PKG_DIR)/hostpython

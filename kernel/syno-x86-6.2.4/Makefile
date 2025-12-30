@@ -7,4 +7,4 @@ KERNEL_BASE_ARCH = x86
 KERNEL_URL_DIR = x64
 KERNEL_URL_VERSION = 6.2
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

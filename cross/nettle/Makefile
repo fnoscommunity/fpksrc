@@ -14,7 +14,7 @@ LICENSE  = LGPLv3
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --disable-static
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt,${TCVERSION},6.0)$(call version_gt,${TCVERSION},2.0),11) 
 # older compilers to not support x86/x64 assembler code
 CONFIGURE_ARGS += --disable-assembler
@@ -22,4 +22,4 @@ endif
 
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

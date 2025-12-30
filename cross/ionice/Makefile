@@ -21,7 +21,7 @@ CONFIGURE_ARGS += --without-ncurses
 CONFIGURE_ARGS += --without-python
 CONFIGURE_ARGS += --disable-asciidoc
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifneq ($(findstring $(ARCH),$(64bit_ARCHS)),$(ARCH))
 CONFIGURE_ARGS += --disable-year2038
 endif
@@ -32,4 +32,4 @@ CONFIGURE_ARGS += --disable-all-programs --enable-schedutils
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

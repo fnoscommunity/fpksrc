@@ -68,7 +68,7 @@ CONFIGURE_ARGS += --disable-lsfd
 ADDITIONAL_CFLAGS += -DFIEMAP_EXTENT_SHARED=0x00002000
 ### disk-utils/mkswap.c:294:22: error: 'FIEMAP_EXTENT_SHARED' undeclared (first use in this function)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(findstring $(ARCH),$(32bit_ARCHS)),$(ARCH))
 ifeq ($(call version_lt, $(TCVERSION), 7.2),1) 
@@ -96,7 +96,7 @@ endif
 # - still required for util-linux v2.41.1
 COMPILE_MAKE_OPTIONS = NCURSES_LIBS="-lncursesw"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: misc-util-linux_post_install
 misc-util-linux_post_install:

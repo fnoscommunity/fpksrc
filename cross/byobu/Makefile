@@ -13,7 +13,7 @@ PRE_COMPILE_TARGET = byobu_pre_compile
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: byobu_pre_compile
 byobu_pre_compile:

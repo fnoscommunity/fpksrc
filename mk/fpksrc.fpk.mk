@@ -27,7 +27,7 @@
 #
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Configure the included makefiles
 NAME = $(SPK_NAME)
@@ -54,7 +54,7 @@ endif
 endif
 
 # Common directories (must be set after ARCH_SUFFIX)
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 ifeq ($(ARCH),noarch)
 ifneq ($(strip $(TCVERSION)),)
@@ -96,21 +96,21 @@ SPK_FILE_NAME = $(PACKAGES_DIR)/$(SPK_NAME)_$(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK
 
 #####
 
-include ../../mk/spksrc.pre-check.mk
+include ../../mk/fpksrc.pre-check.mk
 
 # Even though this makefile doesn't cross compile, we need this to setup the cross environment.
-include ../../mk/spksrc.cross-env.mk
+include ../../mk/fpksrc.cross-env.mk
 
-include ../../mk/spksrc.depend.mk
+include ../../mk/fpksrc.depend.mk
 
 copy: depend
-include ../../mk/spksrc.wheel.mk
+include ../../mk/fpksrc.wheel.mk
 
 copy: wheel
-include ../../mk/spksrc.copy.mk
+include ../../mk/fpksrc.copy.mk
 
 strip: copy
-include ../../mk/spksrc.strip.mk
+include ../../mk/fpksrc.strip.mk
 
 
 # Scripts
@@ -146,11 +146,11 @@ SPK_CONF_DIR = $(CONF_DIR)
 endif
 
 # Generic service scripts
-include ../../mk/spksrc.service.mk
+include ../../mk/fpksrc.service.mk
 
 icon: strip
 ifneq ($(strip $(SPK_ICON)),)
-include ../../mk/spksrc.icon.mk
+include ../../mk/fpksrc.icon.mk
 endif
 
 ifeq ($(strip $(MAINTAINER)),)
@@ -580,9 +580,9 @@ pythoncleanall: pythonclean
 	rm -fr work-*/[Pp]ython* work-*/.python*
 
 ### For managing make all-<supported|latest>
-include ../../mk/spksrc.supported.mk
+include ../../mk/fpksrc.supported.mk
 
 ### For managing make publish-all-<supported|latest>
-include ../../mk/spksrc.publish.mk
+include ../../mk/fpksrc.publish.mk
 
 ###

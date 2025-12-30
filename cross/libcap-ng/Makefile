@@ -19,7 +19,7 @@ CONFIGURE_ARGS = --disable-static
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: libcap-ng_pre_configure
 libcap-ng_pre_configure: 

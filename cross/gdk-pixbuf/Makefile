@@ -20,4 +20,4 @@ ADDITIONAL_CFLAGS = -O
 # let it find glib-compile-resources
 ENV += "PATH=$(PATH):$(STAGING_INSTALL_PREFIX)/bin"
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

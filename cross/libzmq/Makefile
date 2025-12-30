@@ -12,7 +12,7 @@ HOMEPAGE = https://zeromq.org/
 COMMENT  = ZeroMQ (also known as ØMQ, 0MQ, or zmq) looks like an embeddable networking library but acts like a concurrency framework. It gives you sockets that carry atomic messages across various transports like in-process, inter-process, TCP, and multicast. 
 LICENSE  = GPLv3
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # Flags to be added to CMake toolchain file
 ifeq ($(findstring $(ARCH), 88f6281 ppc853x),$(ARCH))

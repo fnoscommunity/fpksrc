@@ -22,7 +22,7 @@ GO_BIN_DIR = $(WORK_DIR)/$(PKG_DIR)/$(PKG_NAME)
 
 export EXTRA_GOFLAGS=-buildvcs=false
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 # PATH must be defined after include of spksrc.cross-go.mk,
 # otherwise WORK_DIR is not defined when building in cross/gitea folder

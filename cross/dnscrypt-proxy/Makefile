@@ -8,7 +8,7 @@ EXTRACT_PATH = $(WORK_DIR)/src/github.com/$(PKG_NAME)
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 BUILD_DEPENDS = native/go_1.23
 NATIVE_GO = native/go_1.23
@@ -27,7 +27,7 @@ GO_SRC_DIR = $(EXTRACT_PATH)/$(PKG_NAME)-$(PKG_VERS)/$(PKG_NAME)
 GO_BIN_DIR = $(GO_SRC_DIR)/$(PKG_NAME)
 GO_LDFLAGS = -s -w
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 dnscrypt_post_install:
 	install -m 755 -d $(STAGING_INSTALL_PREFIX)/blocklist

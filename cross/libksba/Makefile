@@ -14,4 +14,4 @@ LICENSE  = LGPL
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --with-libgpg-error-prefix=$(STAGING_INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

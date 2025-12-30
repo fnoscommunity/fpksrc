@@ -18,4 +18,4 @@ GCC_NO_DEBUG_INFO = 1
 
 CMAKE_ARGS += -DRUN_TEST_SUITE=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

@@ -12,7 +12,7 @@ HOMEPAGE = https://github.com/mvp/uhubctl
 COMMENT  = USB hub per-port power control.
 LICENSE  = GPLv2
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(ARMv7L_ARCHS) $(PPC_ARCHS)),$(ARCH))
 DEPENDS += cross/libusb_1.0.23
 else ifeq ($(call version_lt, ${TCVERSION}, 6.0)$(call version_ge, ${TCVERSION}, 3.0),11)
@@ -29,7 +29,7 @@ POST_INSTALL_TARGET = uhubctl_post_install
 # and can be ignored, because we are not in uhubctl repo and GIT_VERSION is taken from VERSION file instead:
 # fatal: No names found, cannot describe anything.
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: uhubctl_post_install
 uhubctl_post_install:

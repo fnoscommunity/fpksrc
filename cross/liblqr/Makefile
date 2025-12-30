@@ -14,4 +14,4 @@ HOMEPAGE = https://github.com/carlobaldassi/liblqr
 COMMENT  = Liquid Rescale library.
 LICENSE  = LGPLv3
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

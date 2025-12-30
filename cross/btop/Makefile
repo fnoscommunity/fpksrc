@@ -18,7 +18,7 @@ INSTALL_TARGET = btop_install
 # use digests with multiple files
 PKG_DIST_ARCH_LIST = x86_64-linux-musl i686-linux-musl arm-linux-musleabi aarch64-linux-musl
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 PKG_DIST_ARCH = x86_64-linux-musl
 else ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
@@ -29,7 +29,7 @@ else ifeq ($(findstring $(ARCH),$(ARMv8_ARCHS)),$(ARCH))
 PKG_DIST_ARCH = aarch64-linux-musl
 endif
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: btop_install
 btop_install:

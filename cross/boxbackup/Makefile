@@ -22,7 +22,7 @@ PRE_CONFIGURE_TARGET = boxbackup_pre_configure
 
 INSTALL_MAKE_OPTIONS = install-backup-client install-backup-server DESTDIR=$(INSTALL_DIR)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: boxbackup_pre_configure
 boxbackup_pre_configure:

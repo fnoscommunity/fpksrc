@@ -21,4 +21,4 @@ CONFIGURE_ARGS += -Dlibmount=disabled
 CONFIGURE_ARGS += -Ddefault_library=shared
 CONFIGURE_ARGS += -Dselinux=disabled
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

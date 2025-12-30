@@ -17,4 +17,4 @@ CMAKE_ARGS += -DEVENT__DISABLE_TESTS=ON
 CMAKE_ARGS += -DEVENT__DISABLE_REGRESS=ON
 CMAKE_ARGS += -DEVENT__DISABLE_SAMPLES=ON
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

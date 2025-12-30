@@ -22,7 +22,7 @@ CONFIGURE_ARGS += --enable-pcre2grep-callout
 CONFIGURE_ARGS += --enable-pcre2test-libreadline
 
 CONFIGURE_ARGS += --enable-jit
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
 ifeq ($(call version_lt, $(TC_GCC), 5),1)
 # asm in jit code (for 32-bit x86) does not work with gcc < 5.0 when position independent code (aka PIC) is created.
@@ -45,4 +45,4 @@ GNU_CONFIGURE = 1
 
 ADDITIONAL_CPPFLAGS = -Os
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

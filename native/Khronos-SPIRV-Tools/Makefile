@@ -19,7 +19,7 @@ CMAKE_ARGS += -DSPIRV_TOOLS_BUILD_STATIC=OFF
 CMAKE_ARGS += -DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS += -DSPIRV-Headers_SOURCE_DIR=$(STAGING_INSTALL_PREFIX)
 
-include ../../mk/spksrc.native-cmake.mk
+include ../../mk/fpksrc.native-cmake.mk
 
 .PHONY: SPIRV-Tools_post_extract_target
 

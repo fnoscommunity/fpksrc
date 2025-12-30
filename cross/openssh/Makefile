@@ -22,7 +22,7 @@ CONFIGURE_ARGS += --disable-wtmp --disable-wtmpx
 # need to disable use of system getentropy for kernels < 3.17
 CONFIGURE_ARGS += ac_cv_func_getentropy=no
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: openssh_post_install
 openssh_post_install:

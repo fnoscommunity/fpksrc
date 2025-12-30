@@ -19,7 +19,7 @@ GNU_CONFIGURE = 1
 # Limit compile/link-time storage space (and faster build-time)
 GCC_NO_DEBUG_INFO = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Enforce install prefix because of make install DESTDIR
 ENV += LIBVA_DRIVERS_PATH=$(INSTALL_PREFIX)/lib

@@ -14,4 +14,4 @@ LICENSE  = 2-Clause BSD
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --disable-protoc
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

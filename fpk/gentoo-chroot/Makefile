@@ -25,7 +25,7 @@ INSTALL_PREFIX = /usr/local/$(SPK_NAME)
 
 POST_STRIP_TARGET = gentoo-chroot_extra_install
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 UNSUPPORTED_ARCHS = $(ARMv8_ARCHS)
 

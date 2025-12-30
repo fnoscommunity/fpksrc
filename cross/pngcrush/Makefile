@@ -20,4 +20,4 @@ INSTALL_MAKE_OPTIONS = -f Makefile-nolib install DESTDIR=$(INSTALL_DIR) prefix=$
 # pngcrush.c:5523:46: error: ‘PNG_IGNORE_ADLER32’ undeclared (first use in this function)
 ADDITIONAL_CFLAGS = -DPNG_SET_OPTION_SUPPORTED  -DPNG_DISABLE_ADLER32_CHECK_SUPPORTED
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

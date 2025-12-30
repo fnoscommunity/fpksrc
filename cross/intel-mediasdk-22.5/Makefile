@@ -12,7 +12,7 @@ HOMEPAGE = http://mediasdk.intel.com
 COMMENT  = Intel Media SDK provides a plain C API to access hardware-accelerated video decode, encode and filtering on Intel® Gen graphics hardware platforms. Implementation written in C++ 11 with parts in C-for-Media (CM).
 LICENSE  = MIT
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # intel-mediasdk specific args
 # for succesfull build

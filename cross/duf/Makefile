@@ -7,7 +7,7 @@ PKG_DIST_FILE = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 BUILD_DEPENDS = native/go_1.23
 NATIVE_GO = native/go_1.23
@@ -25,7 +25,7 @@ PRE_COMPILE_TARGET = duf_pre_compile
 GO_SRC_DIR = $(WORK_DIR)/$(PKG_DIR)
 GO_BIN_DIR = $(GO_SRC_DIR)/$(PKG_NAME)
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 .PHONY: duf_pre_compile
 duf_pre_compile:

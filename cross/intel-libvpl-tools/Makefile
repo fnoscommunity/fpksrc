@@ -16,4 +16,4 @@ LICENSE  = MIT
 
 CMAKE_ARGS += -DTOOLS_ENABLE_X11=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

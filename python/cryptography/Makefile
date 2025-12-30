@@ -11,4 +11,4 @@ HOMEPAGE = https://github.com/pyca/cryptography
 COMMENT  = Provide cryptographic recipes and primitives to Python developers
 LICENSE  = BSD/ASL2
 
-include ../../mk/spksrc.python-wheel.mk
+include ../../mk/fpksrc.python-wheel.mk

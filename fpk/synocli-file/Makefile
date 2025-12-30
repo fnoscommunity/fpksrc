@@ -42,7 +42,7 @@ POST_STRIP_TARGET = synocli-file_extra_install
 
 OPTIONAL_DESC =
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # PPC archs except QorIQ
 ifneq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))

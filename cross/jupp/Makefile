@@ -14,7 +14,7 @@ CONFIGURE_ARGS = --disable-termidx
 
 PRE_CONFIGURE_TARGET = jupp_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: jupp_pre_configure
 jupp_pre_configure:

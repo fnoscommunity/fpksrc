@@ -25,7 +25,7 @@ LICENSE  = NumPy Developers
 REQUIRED_MIN_DSM = 7.2
 REQUIRED_MIN_SRM = 1.3
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # numpy badly detects CPU on x86_64
 # CPU flags below are "apollolake" compatible
@@ -34,7 +34,7 @@ CONFIGURE_ARGS += -Dcpu-baseline="sse2,ssse3,sse41,sse42"
 CONFIGURE_ARGS += -Dcpu-dispatch="popcnt"
 endif
 
-include ../../mk/spksrc.python-wheel-meson.mk
+include ../../mk/fpksrc.python-wheel-meson.mk
 
 .PHONY: numpy_post_configure
 

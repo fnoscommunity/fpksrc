@@ -24,7 +24,7 @@ CONFIGURE_ARGS += --extra-cflags="-Wno-pointer-sign -Wno-array-bounds -Wno-maybe
 
 PRE_COMPILE_TARGET = gpac_pre_compile
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: gpac_pre_compile 
 gpac_pre_compile:

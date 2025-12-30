@@ -26,7 +26,7 @@ CONFIGURE_TARGET = nop
 COMPILE_TARGET = rmlint_compile
 INSTALL_TARGET = rmlint_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: rmlint_compile rmlint_install
 rmlint_compile:

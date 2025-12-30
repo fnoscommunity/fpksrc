@@ -23,7 +23,7 @@ ENV += FISH_BUILD_DOCS=0
 # for fish_test_helper.c
 ADDITIONAL_CFLAGS = -D_DEFAULT_SOURCE
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TC_GCC), 5),1)
 ADDITIONAL_CFLAGS += -std=c11
 endif
@@ -67,7 +67,7 @@ endif
 #   setting `Rust_CARGO_TARGET`.
 CMAKE_ARGS += -DRust_CARGO_TARGET=$(RUST_TARGET)
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: fish_post_install
 fish_post_install:

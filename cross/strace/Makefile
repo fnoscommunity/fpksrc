@@ -15,7 +15,7 @@ GNU_CONFIGURE = 1
 
 # strace uses its own ARCH definition
 # ARCH is `x86_64', `i386', `aarch64', `powerpc64le', etc.
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 STRACE_ARCH =
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
@@ -50,4 +50,4 @@ CONFIGURE_ARGS += ARCH=$(STRACE_ARCH)
 COMPILE_MAKE_OPTIONS = ARCH=$(STRACE_ARCH)
 INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) prefix=$(INSTALL_PREFIX) ARCH=$(STRACE_ARCH)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

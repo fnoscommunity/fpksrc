@@ -8,7 +8,7 @@
 PYTHON_PACKAGE_DIR = $(realpath $(CURDIR)/../../spk/$(PYTHON_PACKAGE))
 PYTHON_PACKAGE_WORK_DIR = $(PYTHON_PACKAGE_DIR)/work-$(ARCH)-$(TCVERSION))
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # armv5 no longer supported with python >= 3.12
 ifeq ($(call version_ge, $(subst python,,$(PYTHON_PACKAGE)), 312), 1)
@@ -79,7 +79,7 @@ PRE_DEPEND_TARGET += python_pre_depend
 endif
 
 ifneq ($(FFMPEG_PACKAGE),)
-include ../../mk/spksrc.ffmpeg.mk
+include ../../mk/fpksrc.ffmpeg.mk
 else
 include ../../mk/fpksrc.fpk.mk
 endif

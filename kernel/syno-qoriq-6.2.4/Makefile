@@ -7,7 +7,7 @@ KERNEL_BASE_ARCH = powerpc
 KERNEL_URL_VERSION = 6.2
 PRE_COMPILE_TARGET = kernel_ppc_premake
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk
 .PHONY: kernel_ppc_premake
 kernel_ppc_premake:
 	$(RUN) $(MAKE) LDFLAGS="" arch/powerpc/lib/crtsavres.o

@@ -15,7 +15,7 @@ LICENSE  = https://github.com/nodejs/node/blob/master/LICENSE
 
 INSTALL_TARGET = nodejs-install
 
-include ../../mk/spksrc.native-install.mk
+include ../../mk/fpksrc.native-install.mk
 
 .PHONY: nodejs-install
 nodejs-install:

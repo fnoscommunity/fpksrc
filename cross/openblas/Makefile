@@ -27,7 +27,7 @@ ifeq ($(GCC_DEBUG_INFO),1)
   CMAKE_ARGS += -DOPENBLAS_DEBUG_SUFFIX=OFF
 endif
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv7_ARCHS)),$(ARCH))
 # From Debian rule file:
@@ -68,4 +68,4 @@ else
 CMAKE_ARGS += -DBINARY=32
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

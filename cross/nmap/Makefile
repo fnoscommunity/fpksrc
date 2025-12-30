@@ -25,4 +25,4 @@ endif
 
 ADDITIONAL_CPPFLAGS = -O3
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

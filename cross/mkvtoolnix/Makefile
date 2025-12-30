@@ -46,7 +46,7 @@ ENV += PATH=$(NATIVE_RUBY_DIR):$$PATH
 
 ADDITIONAL_CXXFLAGS += -Os
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: mkvtoolnix_compile
 mkvtoolnix_compile:

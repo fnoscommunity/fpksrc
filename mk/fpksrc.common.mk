@@ -83,7 +83,7 @@ AVAILABLE_KERNEL = $(subst syno-,,$(sort $(notdir $(wildcard $(BASEDIR)kernel/sy
 AVAILABLE_KERNEL_VERSIONS = $(sort $(foreach arch,$(AVAILABLE_KERNEL),$(shell echo ${arch} | cut -f2 -d'-')))
 
 # Global arch definitions
-include $(BASEDIR)mk/spksrc.archs.mk
+include $(BASEDIR)mk/fpksrc.archs.mk
 
 # Load local configuration
 LOCAL_CONFIG_MK = $(BASEDIR)local.mk

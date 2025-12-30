@@ -31,13 +31,13 @@ endif
 endif
 
 # Common directories (must be set after ARCH_SUFFIX)
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ##### golang specific configurations
-include ../../mk/spksrc.cross-go-env.mk
+include ../../mk/fpksrc.cross-go-env.mk
 
 # avoid run of make configure
 ifeq ($(strip $(CONFIGURE_TARGET)),)
@@ -83,4 +83,4 @@ go_install_target:
 ###
 
 # Include base cross-cc makefile for common functionality
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

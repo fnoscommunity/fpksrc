@@ -11,4 +11,4 @@ HOMEPAGE = https://duplicity.us/
 COMMENT  = Duplicity backs directories by producing encrypted tar-format volumes and uploading them to a remote or local file server.
 LICENSE  = GPLv2
 
-include ../../mk/spksrc.python-wheel.mk
+include ../../mk/fpksrc.python-wheel.mk

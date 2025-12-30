@@ -5,7 +5,7 @@ SPK_ICON = src/iperf3.png
 
 DEPENDS = cross/iperf3
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_lt, ${TCVERSION}, 6.0)$(call version_ge, ${TCVERSION}, 3.0),11)
 SPK_VERS = 3.15

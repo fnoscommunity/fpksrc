@@ -34,7 +34,7 @@ CONFIGURE_ARGS += --extra-cflags=-O3
 # Remove some of the noise while compiling
 CONFIGURE_ARGS += --extra-cflags=-Wno-deprecated-declarations
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 OPTIONAL_DEPENDS  = native/nasm
 OPTIONAL_DEPENDS += cross/chromaprint-fftw
@@ -243,7 +243,7 @@ ifeq ($(findstring $(ARCH),evansport),$(ARCH))
 CONFIGURE_ARGS += --arch=x86 --cpu=atom
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ##
 ## GCC SPECIFIC

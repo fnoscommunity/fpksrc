@@ -22,7 +22,7 @@ CMAKE_USE_NINJA = 0
 
 POST_INSTALL_TARGET = mympd_post_install
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: mympd_post_install
 mympd_post_install:

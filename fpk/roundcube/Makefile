@@ -32,7 +32,7 @@ SYSTEM_GROUP = http
 DSM_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # DSM-specific PHP profiles
 ifeq ($(call version_ge, ${TCVERSION}, 7.2),1)

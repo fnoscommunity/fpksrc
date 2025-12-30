@@ -19,7 +19,7 @@ HOMEPAGE = https://github.com/BurntSushi/ripgrep
 COMMENT  = ripgrep recursively searches directories for a regex pattern.
 LICENSE  = public domain/Unlicense
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_le, $(TC_GCC), 5.0),1)
 # upstream/src/pcre2_script_run.c - error: .... only allowed in C99 or C11 mode
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
@@ -35,4 +35,4 @@ CARGO_BUILD_ARGS += --features pcre2
 # let rg find libpcre2-* at runtime
 ENV += RUSTFLAGS="-Clink-arg=-Wl,--rpath,$(INSTALL_PREFIX)/lib -Clink-arg=-Wl,--rpath-link,$(STAGING_INSTALL_PREFIX)/lib"  
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk

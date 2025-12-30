@@ -14,7 +14,7 @@ LICENSE  = GPLv2
 
 INSTALL_TARGET = cops_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: cops_install
 cops_install:

@@ -34,7 +34,7 @@ CONFIGURE_ARGS += --enable-minimal=profiler
 # Optimize compilation for minimal size
 ADDITIONAL_CFLAGS  = -Os
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 PLIST_TRANSFORM = cat
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
@@ -58,7 +58,7 @@ AG_ARGS += --disable-mcs-build
 AG_ARGS += --disable-boehm
 AG_ARGS += --without-ikvm-native
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: mono_pre_configure
 mono_pre_configure:

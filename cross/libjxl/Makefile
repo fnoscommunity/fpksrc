@@ -29,7 +29,7 @@ CMAKE_ARGS += -DJPEGXL_ENABLE_MANPAGES=FALSE
 CMAKE_ARGS += -DJPEGXL_ENABLE_BENCHMARK=FALSE
 CMAKE_ARGS += -DJPEGXL_ENABLE_EXAMPLES=FALSE
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: libjxl_pre_configure
 # libjxl requires sjpeg as submodule in third_party folder (doesn't search for, doesn't use cross/sjpeg):

@@ -15,11 +15,11 @@ GNU_CONFIGURE = 1
 
 CONFIGURE_ARGS = --enable-unicode
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 # use clock_gettime of librt
 ADDITIONAL_LDFLAGS = -lrt
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

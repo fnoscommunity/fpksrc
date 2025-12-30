@@ -13,4 +13,4 @@ LICENSE  = BSD
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.native-cc.mk
+include ../../mk/fpksrc.native-cc.mk

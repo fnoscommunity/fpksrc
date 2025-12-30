@@ -6,7 +6,7 @@ SPK_ICON = src/qemu.png
 DEPENDS = cross/qemu
 
 REQUIRED_MIN_DSM = 7.1
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifneq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 UNSUPPORTED_ARCHS = $(ARCH)
 endif

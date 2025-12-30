@@ -25,11 +25,11 @@ CONFIGURE_ARGS += --disable-all-programs --enable-libmount --enable-libblkid
 
 ADDITIONAL_CFLAGS = -O -Wno-unused-parameter
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(32bit_ARCHS)),$(ARCH))
 ifeq ($(call version_lt, $(TCVERSION), 7.2),1) 
 CONFIGURE_ARGS += --disable-year2038
 endif
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

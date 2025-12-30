@@ -33,7 +33,7 @@ CONFIGURE_ARGS += --extra-cflags=-O3
 # Remove some of the noise while compiling
 CONFIGURE_ARGS += --extra-cflags=-Wno-deprecated-declarations
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 OPTIONAL_DEPENDS  = cross/chromaprint-fftw
 OPTIONAL_DEPENDS += cross/dav1d
@@ -249,7 +249,7 @@ CONFIGURE_ARGS += --enable-libmfx
 CONFIGURE_ARGS += --enable-vaapi
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ##
 ## GCC SPECIFIC

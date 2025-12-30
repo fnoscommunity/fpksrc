@@ -15,7 +15,7 @@ CONFIGURE_TARGET = nop
 COMPILE_MAKE_OPTIONS = shared-lib
 INSTALL_MAKE_OPTIONS = PREFIX=$(INSTALL_DIR)$(INSTALL_PREFIX) install-shared-lib
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(call version_ge, $(TC_GCC), 4.6),1)
 # add CFLAGS not supported by older compilers

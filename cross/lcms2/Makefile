@@ -13,10 +13,10 @@ LICENSE  = MIT
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))
 # meson/ninja build does not evaluate this (while regular build with configure does).
 ADDITIONAL_CFLAGS += -std=gnu99
 endif
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

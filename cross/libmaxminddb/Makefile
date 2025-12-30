@@ -19,4 +19,4 @@ ADDITIONAL_CFLAGS = -DMAP_ANONYMOUS=0x20
 endif
 
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

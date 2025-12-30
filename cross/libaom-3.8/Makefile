@@ -28,7 +28,7 @@ CMAKE_ARGS += -DENABLE_DOCS=0
 CMAKE_ARGS += -DAOM_EXTRA_C_FLAGS=-O
 CMAKE_ARGS += -DAOM_EXTRA_CXX_FLAGS=-O
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 CMAKE_ARGS += -DAOM_TARGET_CPU=arm
@@ -60,7 +60,7 @@ ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
 CMAKE_ARGS += -DAOM_TARGET_CPU=x86
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # Fix compilation with newer compilers
 # Flags to be added to CMake toolchain file

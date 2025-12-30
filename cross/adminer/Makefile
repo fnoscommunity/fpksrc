@@ -24,7 +24,7 @@ PKG_DESIGN = rmsoft_blue
 INSTALL_DESIGNS = 0
 
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: adminer_install
 adminer_install:

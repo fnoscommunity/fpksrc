@@ -13,7 +13,7 @@ LICENSE  = BSD 2-Clause "Simplified" License
 
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # evansport-6.1: error: PIC register clobbered by ‘ebx’ in ‘asm’
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
@@ -22,4 +22,4 @@ ADDITIONAL_CFLAGS = -O0
 endif
 endif
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

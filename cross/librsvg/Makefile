@@ -24,4 +24,4 @@ ADDITIONAL_CFLAGS = -O
 # let it find gdk-pixbuf-query-loaders
 ENV += "PATH=$(PATH):$(STAGING_INSTALL_PREFIX)/bin"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

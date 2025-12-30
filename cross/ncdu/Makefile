@@ -17,4 +17,4 @@ LICENSE  = MIT
 GNU_CONFIGURE = 1
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -17,4 +17,4 @@ CMAKE_ARGS += -DBUILD_TESTING=OFF
 CMAKE_ARGS += -DXZ_DOC=OFF
 CMAKE_ARGS += -DXZ_TOOL_SCRIPTS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

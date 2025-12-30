@@ -97,7 +97,7 @@ PATCHES_LEVEL = 1
 DISABLE_PARALLEL_MAKE = 1
 COMPILE_MAKE_OPTIONS += JOBS=$(NCPUS)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
 # force cross compilation

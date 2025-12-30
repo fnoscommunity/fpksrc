@@ -25,4 +25,4 @@ CONFIGURE_ARGS += --with-zlib=$(STAGING_INSTALL_PREFIX)
 ADDITIONAL_CXXFLAGS = -Wno-deprecated-declarations -Wno-deprecated -Wno-terminate -Wno-sign-compare
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

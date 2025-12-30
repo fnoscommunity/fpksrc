@@ -15,7 +15,7 @@ LICENSE = GPLv3
 GNU_CONFIGURE = 1
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))
 CONFIGURE_ARGS = ac_cv_func_utimensat=no

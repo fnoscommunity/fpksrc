@@ -12,4 +12,4 @@ HOMEPAGE = https://github.com/redis/hiredis
 COMMENT = Minimalistic C client for Redis >= 1.2.
 LICENSE = 3-Clause BSD
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

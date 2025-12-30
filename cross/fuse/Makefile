@@ -18,7 +18,7 @@ PRE_CONFIGURE_TARGET = fuse_pre_configure
 
 ENV += MOUNT_FUSE_PATH=/$(INSTALL_PREFIX)/sbin
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: fuse_pre_configure
 fuse_pre_configure:

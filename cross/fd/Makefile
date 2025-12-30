@@ -23,4 +23,4 @@ LICENSE  = Apache 2.0 / MIT
 
 CARGO_BUILD_ARGS = --locked --verbose
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk

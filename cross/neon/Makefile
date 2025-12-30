@@ -24,7 +24,7 @@ POST_INSTALL_TARGET = neon_post_install
 
 INSTALL_MAKE_OPTIONS = install-lib install-headers install-config DESTDIR=$(INSTALL_DIR) prefix=$(INSTALL_PREFIX)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: neon_pre_configure
 neon_pre_configure:

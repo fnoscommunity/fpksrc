@@ -21,7 +21,7 @@ ADDITIONAL_CXXFLAGS = -fPIC
 
 ENV += PATH=$(WORK_DIR)/../../../native/protoc/work-native/bin:$$PATH  
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: curaengine_post_install
 curaengine_post_install:

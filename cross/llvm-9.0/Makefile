@@ -78,7 +78,7 @@ CMAKE_ARGS += -DLLVM_CONFIG=$(abspath $(PWD)/../../native/llvm-9.0/work-native/i
 CMAKE_ARGS += -DLLVM_TABLEGEN=$(abspath $(PWD)/../../native/llvm-9.0/work-native/install/usr/local/bin/llvm-tblgen)
 CMAKE_ARGS += -DCLANG_TABLEGEN=$(abspath $(PWD)/../../native/llvm-9.0/work-native/install/usr/local/bin/clang-tblgen)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 #
 # https://llvm.org/docs/HowToCrossCompileBuiltinsOnArm.html
@@ -129,7 +129,7 @@ CMAKE_ARGS += -DLLVM_TARGETS_TO_BUILD=PowerPC
 CMAKE_ARGS += -DLLVM_ENABLE_PROJECTS='clang;compiler-rt;lld'
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 ifeq ($(call version_lt, $(TC_GCC), 5.1),1)
 CMAKE_ARGS += -DLLVM_TEMPORARILY_ALLOW_OLD_TOOLCHAIN=ON

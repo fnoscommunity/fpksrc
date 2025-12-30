@@ -30,7 +30,7 @@ ifeq ($(strip $(GCC_DEBUG_INFO)),1)
   GCC_DEBUG_FLAGS = -ggdb3 -g3 -O1 -gz
 endif
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(findstring $(ARCH),$(ARMv7_ARCHS)),$(ARCH))
 CMAKE_ARGS += -DAOM_TARGET_CPU=arm
@@ -51,7 +51,7 @@ CMAKE_ARGS += -DAOM_TARGET_CPU=x86
 CMAKE_ARGS += -DENABLE_NASM=ON
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # Fix compilation with newer compilers
 # Flags to be added to CMake toolchain file

@@ -37,7 +37,7 @@ else
 PLIST_TRANSFORM = sed -e '/libtinfow/d'
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Known issues:
 #   1) PKG_CONFIG_LIBDIR needs to be relative to DESTDIR (ref.: export below)

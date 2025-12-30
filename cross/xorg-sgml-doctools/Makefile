@@ -14,4 +14,4 @@ LICENSE  = GPLv2/GPLv3
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --datarootdir=$(INSTALL_PREFIX)/lib
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

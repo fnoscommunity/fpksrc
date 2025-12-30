@@ -4,7 +4,7 @@ OPTIONAL_DEPENDS  = cross/binutils-latest
 OPTIONAL_DEPENDS += cross/binutils-2.41
 OPTIONAL_DEPENDS += cross/binutils-2.32
 
-include ../../mk/spksrc.main-depends.mk
+include ../../mk/fpksrc.main-depends.mk
 
 ifeq ($(call version_lt, $(TC_GCC), 4.4),1)
 DEPENDS = cross/binutils-2.32

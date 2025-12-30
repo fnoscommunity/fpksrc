@@ -25,4 +25,4 @@ ADDITIONAL_CFLAGS = -DENABLE_NLS=0
 # let it find glib-mkenums
 ENV += "PATH=$(PATH):$(STAGING_INSTALL_PREFIX)/bin"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

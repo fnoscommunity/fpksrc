@@ -26,7 +26,7 @@ SPK_COMMANDS = bin/comskip
 
 POST_STRIP_TARGET = comskip_extra_install
 
-include ../../mk/spksrc.ffmpeg.mk
+include ../../mk/fpksrc.ffmpeg.mk
 
 .PHONY: comskip_extra_install
 

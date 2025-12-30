@@ -24,4 +24,4 @@ ifeq ($(findstring $(ARCH)-$(TCVERSION), ppc853x-5.2 qoriq-5.2),$(ARCH)-$(TCVERS
 ADDITIONAL_CFLAGS = -D_GNU_SOURCE
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

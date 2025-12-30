@@ -26,4 +26,4 @@ CMAKE_ARGS += -DBUILD_TESTING=OFF
 
 ADDITIONAL_CXXFLAGS = -O
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

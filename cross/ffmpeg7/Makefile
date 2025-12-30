@@ -12,7 +12,7 @@ LICENSE  = GPLv2
 # requires c11 support
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 CONFIGURE_ARGS  = --target-os=linux --cross-prefix=$(TC_PATH)$(TC_PREFIX) --prefix=$(INSTALL_PREFIX)
 CONFIGURE_ARGS += --pkg-config=/usr/bin/pkg-config
@@ -259,7 +259,7 @@ CONFIGURE_ARGS += --enable-vaapi
 endif
 
 # Evaluation of TC_GCC works only after the following include
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ##
 ## x64  & GCC SPECIFIC

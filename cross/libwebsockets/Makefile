@@ -24,4 +24,4 @@ CMAKE_ARGS += -DLWS_WITH_STATIC=OFF
 # warning "libwebsockets is not compiled with LWS_WITH_EXTERNAL_POLL support. Websocket performance will be unusable." [-Wcpp]
 CMAKE_ARGS += -DLWS_WITH_EXTERNAL_POLL=ON
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

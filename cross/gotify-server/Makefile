@@ -16,7 +16,7 @@ INSTALL_TARGET = gotify-server_install
 # use digests with multiple files
 PKG_DIST_ARCH_LIST = amd64 386 arm-7 arm64
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 PKG_DIST_ARCH = amd64
 else ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
@@ -27,7 +27,7 @@ else ifeq ($(findstring $(ARCH),$(ARMv8_ARCHS)),$(ARCH))
 PKG_DIST_ARCH = arm64
 endif
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: gotify-server_install
 gotify-server_install:

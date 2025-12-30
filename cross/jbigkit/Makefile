@@ -17,7 +17,7 @@ PRE_CONFIGURE_TARGET = jbigkit_pre_configure
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: jbigkit_pre_configure
 jbigkit_pre_configure:

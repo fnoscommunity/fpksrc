@@ -18,7 +18,7 @@ CONFIGURE_ARGS += --disable-static
 
 GNU_CONFIGURE = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: shine_pre_configure
 shine_pre_configure: 

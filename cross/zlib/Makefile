@@ -17,4 +17,4 @@ ADDITIONAL_CFLAGS = -Os -fPIC
 CMAKE_ARGS += -DINSTALL_PKGCONFIG_DIR=$(INSTALL_PREFIX)/lib/pkgconfig
 CMAKE_ARGS += -DZLIB_BUILD_EXAMPLES=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

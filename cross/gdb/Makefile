@@ -3,7 +3,7 @@ PKG_NAME = gdb-main
 OPTIONAL_DEPENDS  = cross/gdb-latest
 OPTIONAL_DEPENDS += cross/gdb-7.12
 
-include ../../mk/spksrc.main-depends.mk
+include ../../mk/fpksrc.main-depends.mk
 
 ifeq ($(call version_lt, $(TC_GCC), 4.8.1),1)
 DEPENDS += cross/gdb-7.12

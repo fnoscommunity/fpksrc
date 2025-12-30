@@ -16,7 +16,7 @@ CONFIGURE_ARGS = --disable-client --without-libwrap --without-bsdauth --without-
 
 PRE_CONFIGURE_TARGET = dante_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: dante_pre_configure
 dante_pre_configure:

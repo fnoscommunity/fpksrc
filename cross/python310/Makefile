@@ -30,7 +30,7 @@ CONFIGURE_ARGS += --with-build-python
 CONFIGURE_ARGS += --with-computed-gotos=yes
 CONFIGURE_ARGS += --disable-test-modules
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 # optionally generate optimized code
 ifeq ($(strip $(PYTHON_OPTIMIZE)),1)
@@ -76,7 +76,7 @@ PRE_CONFIGURE_TARGET = python310_pre_configure
 COMPILE_TARGET       = python310_compile
 INSTALL_TARGET       = python310_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 PYTHON_NATIVE = $(abspath $(WORK_DIR)/../../../native/$(PKG_NAME)/work-native/install/usr/local/bin/python$(PKG_VERS_MAJOR_MINOR))
 HOSTPYTHON = $(WORK_DIR)/$(PKG_DIR)/hostpython

@@ -32,7 +32,7 @@ ENV += BOOST_LIBRARIES="$(BOOST_LIBRARIES)"
 NATIVE_RUBY_DIR = $(realpath $(WORK_DIR)/../../../native/ruby/work-native/install/usr/local/bin)
 ENV += PATH=$(NATIVE_RUBY_DIR):$$PATH
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 # fix compilation with newer compilers
 ADDITIONAL_CXXFLAGS = -D_GLIBCXX_USE_C99_MATH=1
@@ -42,7 +42,7 @@ endif
 
 ADDITIONAL_CXXFLAGS += -Os
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: mkvtoolnix_compile
 mkvtoolnix_compile:

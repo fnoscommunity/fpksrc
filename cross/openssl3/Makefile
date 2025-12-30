@@ -24,7 +24,7 @@ CONFIGURE_ARGS += no-tests
 # avoid multilib postfix (like lib64 for 64-bit archs):
 CONFIGURE_ARGS += --libdir=lib
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 # Use CA certificates provided by DSM
 # OpenSSL data area, such as openssl.cnf, certificates and keys.
@@ -64,7 +64,7 @@ ifeq ($(findstring $(ARCH),$(OLD_PPC_ARCHS) $(ARMv5_ARCHS)),$(ARCH))
 endif
 
 ifeq ($(strip $(OPENSSL_PLATFORM)),)
-# Unexpected CPU architecture. Please add arch to mk/spksrc.archs.mk
+# Unexpected CPU architecture. Please add arch to mk/fpksrc.archs.mk
 $(error Arch $(ARCH) not expected yet)
 endif
 

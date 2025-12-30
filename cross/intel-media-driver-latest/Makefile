@@ -26,7 +26,7 @@ CMAKE_USE_DESTDIR = 0
 # Limit compile/link-time storage space (and faster build-time)
 GCC_NO_DEBUG_INFO = 1
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 # intel-media-driver specific args
 # for succesfull build

@@ -37,7 +37,7 @@ STARTABLE = no
 # TMPDIR is used for selfoss built in backup and update
 USE_ALTERNATE_TMPDIR = 1
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Default to PHP 7.4 on DSM 6.x
 SPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"

@@ -20,7 +20,7 @@ CONFIGURE_ARGS += --enable-gold=yes
 # Avoid conflicts with gdb
 CONFIGURE_ARGS += --includedir=$(INSTALL_PREFIX)/include/binutils
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 # embedspu is a tool to "Embed an SPU ELF executable into a PowerPC object file"
 # and hence built only for PPC_ARCHS.
@@ -28,4 +28,4 @@ ifneq ($(findstring $(ARCH),$(PPC_ARCHS)),$(ARCH))
 PLIST_TRANSFORM = sed -e '/bin\/embedspu/d'
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

@@ -24,10 +24,10 @@ WHEELS_BUILD_ARGS += -C zlib=enable
 #WHEELS_BUILD_ARGS += -C jpeg2000=enable
 #WHEELS_BUILD_ARGS += -C xcb=enable
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_le, $(TC_GCC), 5),1)
 ADDITIONAL_CFLAGS = -std=c99
 endif
 
-include ../../mk/spksrc.python-wheel.mk
+include ../../mk/fpksrc.python-wheel.mk

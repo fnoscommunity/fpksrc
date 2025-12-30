@@ -16,7 +16,7 @@ EXTRACT_PATH = $(WORK_DIR)/$(PKG_DIR)
 
 INSTALL_TARGET = metacubexd_custom_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: metacubexd_custom_install
 metacubexd_custom_install:

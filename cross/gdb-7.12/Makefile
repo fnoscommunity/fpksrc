@@ -20,7 +20,7 @@ INSTALL_TARGET = gdb_install
 CONFIGURE_ARGS  = --enable-host-shared
 CONFIGURE_ARGS += --with-system-zlib
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 PLIST_TRANSFORM_SED_ARGS =
 
@@ -40,7 +40,7 @@ ifneq ($(strip $(PLIST_TRANSFORM_SED_ARGS)),)
 PLIST_TRANSFORM = sed $(PLIST_TRANSFORM_SED_ARGS)
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: gdb_configure
 gdb_configure:

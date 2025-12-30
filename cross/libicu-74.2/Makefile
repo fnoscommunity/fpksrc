@@ -15,7 +15,7 @@ HOMEPAGE = http://site.icu-project.org/home
 COMMENT  = International Components for Unicode.
 LICENSE  = https://www.unicode.org/copyright.html#License
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 
 # Compiler too old, stdc++11 is required.
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
@@ -69,7 +69,7 @@ CONFIGURE_ARGS += --disable-tests
 
 ADDITIONAL_CFLAGS = -O3
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: libicu_install_with_data_files
 libicu_install_with_data_files:

@@ -18,4 +18,4 @@ CONFIGURE_ARGS = --disable-static
 
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

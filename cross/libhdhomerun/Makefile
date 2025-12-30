@@ -14,7 +14,7 @@ LICENSE = LGPL v2.1
 CONFIGURE_TARGET = nop
 INSTALL_TARGET = libhdhomerun_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 COMPILE_MAKE_OPTIONS = CROSS_COMPILE=$(abspath $(CURDIR)/../../toolchain/syno-$(ARCH)-$(TCVERSION)/work/$(TC_TARGET)/bin/$(TC_PREFIX))
 

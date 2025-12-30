@@ -17,4 +17,4 @@ CONFIGURE_ARGS  = CXX=$(TC_PATH)$(TC_PREFIX)g++
 CONFIGURE_ARGS += AR=$(TC_PATH)$(TC_PREFIX)ar
 CONFIGURE_ARGS += RANTLIB=$(TC_PATH)$(TC_PREFIX)ranlib
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

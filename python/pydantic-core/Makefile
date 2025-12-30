@@ -12,4 +12,4 @@ HOMEPAGE = https://github.com/pydantic/pydantic-core
 COMMENT  = Provides the core functionality for pydantic validation and serialization.
 LICENSE  = MIT license
 
-include ../../mk/spksrc.python-wheel.mk
+include ../../mk/fpksrc.python-wheel.mk

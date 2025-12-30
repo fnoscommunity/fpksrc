@@ -9,7 +9,7 @@ KERNEL_BASE_ARCH = powerpc
 
 PRE_COMPILE_TARGET = kernel_ppc_premake
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk
 
 .PHONY: kernel_ppc_premake
 

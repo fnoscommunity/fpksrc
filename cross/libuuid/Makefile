@@ -21,4 +21,4 @@ CONFIGURE_ARGS += --disable-all-programs --enable-libuuid
 
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

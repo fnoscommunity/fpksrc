@@ -18,4 +18,4 @@ CONFIGURE_TARGET = nop
 COMPILE_TARGET = nop
 INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) PREFIX=$(INSTALL_PREFIX) ETCDIR=$(INSTALL_PREFIX_VAR) BUILD_STATIC_LIB=0
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

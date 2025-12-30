@@ -22,7 +22,7 @@ CONFIGURE_ARGS += --enable-page-logging
 CONFIGURE_ARGS += --with-components=core
 CONFIGURE_ARGS += --libdir=$(INSTALL_PREFIX)/lib
 
-include ../../mk/spksrc.archs.mk
+include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 ADDITIONAL_LDFLAGS += -lrt
 endif
@@ -32,7 +32,7 @@ endif
 
 PATCHES_LEVEL = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: cups_pre_configure
 cups_pre_configure:

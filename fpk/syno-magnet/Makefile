@@ -39,11 +39,11 @@ override ARCH=noarch
 
 include ../../mk/fpksrc.fpk.mk
 
-include ../../mk/spksrc.download.mk
+include ../../mk/fpksrc.download.mk
 checksum: download
-include ../../mk/spksrc.checksum.mk
+include ../../mk/fpksrc.checksum.mk
 extract: checksum
-include ../../mk/spksrc.extract.mk
+include ../../mk/fpksrc.extract.mk
 
 .PHONY: syno_magnet_copy
 

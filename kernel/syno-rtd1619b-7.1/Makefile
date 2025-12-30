@@ -6,4 +6,4 @@ KERNEL_BASE_ARCH = arm64
 KERNEL_URL_VERSION = 7.1.1
 KERNEL_CONFIG = synology/synoconfigs/$(KERNEL_ARCH)
 
-include ../../mk/spksrc.kernel.mk
+include ../../mk/fpksrc.kernel.mk

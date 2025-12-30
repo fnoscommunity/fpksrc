@@ -28,7 +28,7 @@ SERVICE_PORT_TITLE = ntopng (HTTP)
 # generate app/config and app/images/*.png
 DSM_UI_DIR = app
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 # On DSM 6: package runs as root

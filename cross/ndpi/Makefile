@@ -20,7 +20,7 @@ INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR)
 
 PRE_CONFIGURE_TARGET = nDPI_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: nDPI_pre_configure
 nDPI_pre_configure:

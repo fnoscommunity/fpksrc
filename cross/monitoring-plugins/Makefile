@@ -18,4 +18,4 @@ CONFIGURE_ARGS += --with-rpcinfo-command=/sbin/rpcinfo
 CONFIGURE_ARGS += --with-smbclient-command=/bin/smbclient
 CONFIGURE_ARGS += --without-apt-get-command
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

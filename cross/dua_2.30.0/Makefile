@@ -20,4 +20,4 @@ HOMEPAGE = https://lib.rs/crates/dua-cli
 COMMENT  = A tool to conveniently learn about the disk usage of directories, fast!
 LICENSE  = MIT
 
-include ../../mk/spksrc.cross-rust.mk
+include ../../mk/fpksrc.cross-rust.mk

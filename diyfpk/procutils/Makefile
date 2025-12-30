@@ -9,7 +9,7 @@ MAINTAINER = FnOScommunity
 STARTABLE = no
 SERVICE_SETUP = src/service-setup.sh
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt,${TCVERSION},6.0)$(call version_gt,${TCVERSION},2.0),11)
 # include process utilities including pstree for DSM<6 and DSM>2
 BUSYBOX_CONFIG = procutils.dsm5

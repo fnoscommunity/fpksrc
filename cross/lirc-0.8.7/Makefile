@@ -25,7 +25,7 @@ ifeq ($(ARCH),ppc854x)
 KILL_DRIVERS += lirc_i2c
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: lirc_kill_drivers
 lirc_kill_drivers:

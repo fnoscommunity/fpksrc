@@ -15,4 +15,4 @@ HOMEPAGE = https://github.com/libfuse/sshfs
 COMMENT  = sshfs is a network filesystem client to connect to SSH servers.
 LICENSE  = GPLv2
 
-include ../../mk/spksrc.cross-meson.mk
+include ../../mk/fpksrc.cross-meson.mk

@@ -6,7 +6,7 @@ PKG_DIST_SITE = https://github.com/dundee/gdu/releases/download/v$(PKG_VERS)
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
 BUILD_DEPENDS = native/go_1.23
 NATIVE_GO = native/go_1.23
@@ -22,7 +22,7 @@ LICENSE  = MIT
 COMPILE_TARGET = gdu_compile
 INSTALL_TARGET = gdu_install
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 .PHONY: gdu_compile
 gdu_compile:

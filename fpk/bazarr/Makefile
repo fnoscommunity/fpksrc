@@ -42,7 +42,7 @@ USE_ALTERNATE_TMPDIR = 1
 # [Pillow]
 DEPENDS += python/pillow
 
-include ../../mk/spksrc.python.mk
+include ../../mk/fpksrc.python.mk
 
 # [lxml]
 DEPENDS += cross/libxml2

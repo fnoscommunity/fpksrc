@@ -15,7 +15,7 @@ POST_CONFIGURE_TARGET = cares_post_configure
 
 CMAKE_ARGS += -DCARES_BUILD_TOOLS=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk
 
 .PHONY: cares_post_configure
 cares_post_configure:

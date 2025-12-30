@@ -17,7 +17,7 @@ CHANGELOG = "Use service port 18889 instead of 8889"
 
 LICENSE = MIT
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 # use the latest php version
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 PHP_VERSION = 8.2

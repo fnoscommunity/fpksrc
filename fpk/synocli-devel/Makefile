@@ -16,7 +16,7 @@ SPK_DEPENDS = "Perl"
 
 OPTIONAL_DEPENDS = cross/llvm
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 ifneq ($(call version_lt, $(TC_GCC), 4.8.1),1)
 DEPENDS += cross/llvm

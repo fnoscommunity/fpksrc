@@ -25,4 +25,4 @@ CMAKE_ARGS += -DOPENSSL_SSL_LIBRARY=$(STAGING_INSTALL_PREFIX)/lib/libssl.so
 CMAKE_ARGS += -DOPENSSL_CRYPTO_LIBRARY=$(STAGING_INSTALL_PREFIX)/lib/libcrypto.so
 endif
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

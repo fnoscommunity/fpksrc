@@ -43,7 +43,7 @@ CMAKE_ARGS += -DCMAKE_POLICY_DEFAULT_CMP0116='OLD'
 
 PATCHES_LEVEL = 1
 
-include ../../mk/spksrc.native-cmake.mk
+include ../../mk/fpksrc.native-cmake.mk
 
 .PHONY: llvm_post_install
 llvm_post_install:

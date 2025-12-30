@@ -19,7 +19,7 @@ GNU_CONFIGURE = 1
 PRE_CONFIGURE_TARGET = squidguard_pre_configure
 POST_INSTALL_TARGET = squidguard_post_install
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 CONFIGURE_ARGS = --with-db=$(INSTALL_PREFIX)
 CONFIGURE_ARGS += --prefix=$(INSTALL_PREFIX)

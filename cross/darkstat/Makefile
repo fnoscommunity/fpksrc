@@ -16,7 +16,7 @@ ENV += HOSTCC=gcc HOSTCFLAGS=
 GNU_CONFIGURE = 1
 PRE_CONFIGURE_TARGET = darkstat_pre_configure
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: darkstat_pre_configure
 darkstat_pre_configure:

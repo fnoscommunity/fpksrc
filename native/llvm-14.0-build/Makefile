@@ -43,7 +43,7 @@ NATIVE_DEPENDS += native/intel-opencl-clang-140
 # -----------------------------------------------------------------------------
 # Include the common native-cmake rules
 # -----------------------------------------------------------------------------
-include ../../mk/spksrc.native-cmake.mk
+include ../../mk/fpksrc.native-cmake.mk
 
 # -----------------------------------------------------------------------------
 # Recipe to generate an archive of installed directories

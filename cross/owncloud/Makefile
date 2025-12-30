@@ -14,7 +14,7 @@ LICENSE  = AGPLv3
 
 INSTALL_TARGET = owncloud_install
 
-include ../../mk/spksrc.install-resources.mk
+include ../../mk/fpksrc.install-resources.mk
 
 .PHONY: owncloud_install
 owncloud_install:

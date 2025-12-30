@@ -14,7 +14,7 @@ LICENSE  = GPLv2
 
 CONFIGURE_TARGET = nop
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ENV += XCFLAGS="$(CFLAGS)"
 ENV += XLDFLAGS="$(LDFLAGS)"

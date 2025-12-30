@@ -17,7 +17,7 @@ POST_INSTALL_TARGET = c_icap_post_install
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --enable-large-files --disable-static --with-zlib=$(INSTALL_DIR)/$(INSTALL_PREFIX)/lib -C
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: c_icap_pre_configure
 c_icap_pre_configure:

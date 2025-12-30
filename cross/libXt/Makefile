@@ -20,7 +20,7 @@ CONFIGURE_ARGS += --without-xmlto
 CONFIGURE_ARGS += --without-fop
 CONFIGURE_ARGS += --disable-static
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 .PHONY: libXt_post_configure_target
 libXt_post_configure_target:

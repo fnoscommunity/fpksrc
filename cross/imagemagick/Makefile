@@ -36,7 +36,7 @@ CONFIGURE_ARGS += --without-perl --without-x
 # magick *++* files fail to add to package by PLIST
 CONFIGURE_ARGS += --without-magick-plus-plus
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 SUPPORT_CPP11 = 1
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(OLD_PPC_ARCHS)),$(ARCH))
 SUPPORT_CPP11 = 0
@@ -84,7 +84,7 @@ endif
 
 ADDITIONAL_CFLAGS = -O2
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifeq ($(call version_gt, $(TC_GCC), 5),1)
 DEPENDS += cross/libjxl

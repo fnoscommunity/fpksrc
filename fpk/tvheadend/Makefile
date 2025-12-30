@@ -50,7 +50,7 @@ OPTIONAL_DEPENDS += python/pandas
 
 WHEELS += src/requirements-pure.txt
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # Optional gracenote2epg dependencies
 ifeq ($(call version_ge, $(TC_GCC), 8.5),1)
@@ -66,4 +66,4 @@ endif
 # 000-fix-version.patch from cross/tvheadend
 export TVH_VERS
 
-include ../../mk/spksrc.python.mk
+include ../../mk/fpksrc.python.mk

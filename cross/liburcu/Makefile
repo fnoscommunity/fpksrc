@@ -18,7 +18,7 @@ GNU_CONFIGURE = 1
 
 CONFIGURE_ARGS = --disable-static
 
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 # for hi3535-6.2.4 and x86-5.2
 ifeq ($(findstring $(ARCH),$(ARMv7L_ARCHS)),$(ARCH))
@@ -37,4 +37,4 @@ else
 ADDITIONAL_CFLAGS += -O2
 endif
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

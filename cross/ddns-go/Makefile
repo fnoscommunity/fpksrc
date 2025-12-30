@@ -21,7 +21,7 @@ LICENSE = MIT
 COMPILE_TARGET = ddns-go_compile_target
 INSTALL_TARGET = ddns-go_install
 
-include ../../mk/spksrc.cross-go.mk
+include ../../mk/fpksrc.cross-go.mk
 
 .PHONY: ddns-go_compile_target
 ddns-go_compile_target:

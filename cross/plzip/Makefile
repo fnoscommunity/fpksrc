@@ -20,4 +20,4 @@ CONFIGURE_ARGS += RANTLIB=$(TC_PATH)$(TC_PREFIX)ranlib
 CONFIGURE_ARGS += CPPFLAGS="-I $(STAGING_INSTALL_PREFIX)/include"
 CONFIGURE_ARGS += LDFLAGS="-L $(STAGING_INSTALL_PREFIX)/lib"
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

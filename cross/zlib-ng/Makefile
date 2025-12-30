@@ -19,4 +19,4 @@ HOMEPAGE = https://github.com/zlib-ng/zlib-ng
 COMMENT  = zlib replacement with optimizations for "next generation" systems.
 LICENSE  = zlib-license
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

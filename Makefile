@@ -1,6 +1,6 @@
 
 # Include framework self-test
-include mk/spksrc.test-rules.mk
+include mk/fpksrc.test-rules.mk
 
 AVAILABLE_TCS = $(notdir $(wildcard toolchain/syno-*))
 AVAILABLE_ARCHS = $(notdir $(subst syno-,/,$(AVAILABLE_TCS)))

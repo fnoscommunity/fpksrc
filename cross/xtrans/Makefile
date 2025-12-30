@@ -16,4 +16,4 @@ CONFIGURE_ARGS  = --datarootdir=$(INSTALL_PREFIX)/lib
 CONFIGURE_ARGS += --disable-docs
 PATCHES_LEVEL = 1
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

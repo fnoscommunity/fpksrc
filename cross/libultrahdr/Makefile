@@ -18,4 +18,4 @@ LICENSE  = Apache 2.0
 
 CMAKE_ARGS += -DUHDR_BUILD_EXAMPLES=OFF
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

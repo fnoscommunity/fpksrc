@@ -16,4 +16,4 @@ CONFIGURE_ARGS  = --disable-static
 CONFIGURE_ARGS += enable_multi_os_directory=no
 ADDITIONAL_CFLAGS = -O
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk

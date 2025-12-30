@@ -22,43 +22,43 @@ endif
 endif
 
 # Common directories (must be set after ARCH_SUFFIX)
-include ../../mk/spksrc.directories.mk
+include ../../mk/fpksrc.directories.mk
 
 # Common makefiles
-include ../../mk/spksrc.common.mk
+include ../../mk/fpksrc.common.mk
 
 #####
 
-include ../../mk/spksrc.pre-check.mk
+include ../../mk/fpksrc.pre-check.mk
 
-include ../../mk/spksrc.cross-env.mk
+include ../../mk/fpksrc.cross-env.mk
 
-include ../../mk/spksrc.download.mk
+include ../../mk/fpksrc.download.mk
 
-include ../../mk/spksrc.depend.mk
+include ../../mk/fpksrc.depend.mk
 
-include ../../mk/spksrc.status.mk
+include ../../mk/fpksrc.status.mk
 
 checksum: download
-include ../../mk/spksrc.checksum.mk
+include ../../mk/fpksrc.checksum.mk
 
 extract: checksum depend status
-include ../../mk/spksrc.extract.mk
+include ../../mk/fpksrc.extract.mk
 
 patch: extract
-include ../../mk/spksrc.patch.mk
+include ../../mk/fpksrc.patch.mk
 
 configure: patch
-include ../../mk/spksrc.configure.mk
+include ../../mk/fpksrc.configure.mk
 
 compile: configure
-include ../../mk/spksrc.compile.mk
+include ../../mk/fpksrc.compile.mk
 
 install: compile
-include ../../mk/spksrc.install.mk
+include ../../mk/fpksrc.install.mk
 
 plist: install
-include ../../mk/spksrc.plist.mk
+include ../../mk/fpksrc.plist.mk
 
 ###
 
@@ -90,6 +90,6 @@ all:
 ####
 
 ### For arch-* and all-<supported|latest>
-include ../../mk/spksrc.supported.mk
+include ../../mk/fpksrc.supported.mk
 
 ####

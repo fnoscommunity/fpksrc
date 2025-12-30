@@ -26,4 +26,4 @@ POST_EXTRACT_TARGET = vc-intrinsics_post_extract_target
 vc-intrinsics_post_extract_target:
 	@cd $(WORK_DIR) && ln -s $(PKG_DIR) $(PKG_NAME)
 
-include ../../mk/spksrc.cross-cmake.mk
+include ../../mk/fpksrc.cross-cmake.mk

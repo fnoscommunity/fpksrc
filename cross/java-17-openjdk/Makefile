@@ -96,7 +96,7 @@ ADDITIONAL_CFLAGS = -O2
 DISABLE_PARALLEL_MAKE = 1
 COMPILE_MAKE_OPTIONS += JOBS=$(NCPUS)
 
-include ../../mk/spksrc.cross-cc.mk
+include ../../mk/fpksrc.cross-cc.mk
 
 ifneq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 # "Intel Short Vector Math Library (SVML)" is built for x64 only
