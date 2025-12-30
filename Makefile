@@ -85,11 +85,11 @@ dependency-list:
 
 # define a template that instantiates a 'python3-avoton-6.1' -style target for
 # every ($2) arch, every ($1) spk
-define SPK_ARCH_template =
+define FPK_ARCH_template =
 spk-$(1)-$(2): spk/$(1)/Makefile setup
 	cd spk/$(1) && env $(MAKE) arch-$(2)
 endef
-$(foreach arch,$(AVAILABLE_ARCHS),$(foreach spk,$(SUPPORTED_SPKS),$(eval $(call SPK_ARCH_template,$(spk),$(arch)))))
+$(foreach arch,$(AVAILABLE_ARCHS),$(foreach spk,$(SUPPORTED_SPKS),$(eval $(call FPK_ARCH_template,$(spk),$(arch)))))
 
 prepare: downloads
 	@for tc in $(dir $(wildcard toolchain/*/Makefile)) ; \
