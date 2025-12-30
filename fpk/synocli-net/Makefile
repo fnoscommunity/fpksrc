@@ -104,7 +104,7 @@ CHANGELOG += "7. Update ser2net from v4.6.3 to v4.6.5. <br/>"
 CHANGELOG += "8. Update socat from v1.8.0.2 to v1.8.0.3."
 
 
-HOMEPAGE = https://github.com/SynoCommunity/spksrc/wiki/FAQ-SynoCliNet
+HOMEPAGE = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SynoCliNet
 LICENSE  = Each tool is licensed under it\'s respective license.
 
 SPK_COMMANDS  = bin/screen

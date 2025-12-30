@@ -96,9 +96,9 @@ service_prestart () {
     fi
     synoservicectl --restart crond
 
-    # This fixes https://github.com/SynoCommunity/spksrc/issues/3468
+    # This fixes https://github.com/fnoscommunity/fpksrc/issues/3468
     # This can't be done at install time. see:
-    #  https://github.com/SynoCommunity/spksrc/blob/e914a32600e65f80131ae09913f1b6f6a2dd8b13/mk/spksrc.service.installer#L307-L319
+    #  https://github.com/fnoscommunity/fpksrc/blob/e914a32600e65f80131ae09913f1b6f6a2dd8b13/mk/spksrc.service.installer#L307-L319
     chown root:root "${SYNOPKG_PKGDEST}/ui/index.cgi"
     forward_dns_dhcpd "yes"
     cd "$SVC_CWD" || exit 1

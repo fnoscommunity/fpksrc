@@ -3,7 +3,7 @@ PKG_VERS = 1.35.0
 PKG_EXT = tar.bz2
 PKG_DIST_NAME = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
 # use own source (busybox.net is slow and often unavailable)
-PKG_DIST_SITE = https://github.com/SynoCommunity/spksrc/releases/download/sources
+PKG_DIST_SITE = https://github.com/fnoscommunity/fpksrc/releases/download/sources
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
 DEPENDS =

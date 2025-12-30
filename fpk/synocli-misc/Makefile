@@ -16,7 +16,7 @@ DESCRIPTION = "SynoCli misc. Tools provide a set of miscellaneous small command-
 STARTABLE = no
 CHANGELOG = "1. Add findmnt of util-linux. <br/>2. Update bc to v1.08.2. <br/>3. Update util-linux to v2.4.1. <br/>4. Update uhubctl to v2.6.0."
 
-HOMEPAGE = https://github.com/SynoCommunity/spksrc/wiki/FAQ-SynoCliMisc
+HOMEPAGE = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SynoCliMisc
 LICENSE  = Each tool is licensed under it's respective license.
 
 # gnu:

@@ -26,7 +26,7 @@ LICENSE  = GPLv2
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 
-# https://github.com/SynoCommunity/spksrc/issues/4427
+# https://github.com/fnoscommunity/fpksrc/issues/4427
 USE_ALTERNATE_TMPDIR = 1
 
 SPK_USR_LOCAL_LINKS = bin:env/bin/rdiff-backup bin:env/bin/rdiff-backup-statistics

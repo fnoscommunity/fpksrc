@@ -1,4 +1,4 @@
-# See https://github.com/SynoCommunity/spksrc/issues/2662
+# See https://github.com/fnoscommunity/fpksrc/issues/2662
 # Remove the extension pgsql because the extension pgsql does not work with the
 # PostgreSQL server from DSM. The Extension pdo_pgsql works perfectly.
 --- adminer/drivers/pgsql.inc.php.orig	2025-09-26 15:38:02.000000000 +0000

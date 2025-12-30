@@ -78,7 +78,7 @@ PAGE_FFSYNC_SETUP=$(/bin/cat<<EOF
             "desc": "Desktop Config"
         }]
     }, {
-        "desc": "<b>Additional Configuration:</b> For SSL setup with a reverse proxy and Firefox mobile configuration, visit our <a href=\"https://github.com/SynoCommunity/spksrc/wiki/Mozilla-Sync-Server\" target=\"_blank\">Mozilla Sync Server wiki</a>."
+        "desc": "<b>Additional Configuration:</b> For SSL setup with a reverse proxy and Firefox mobile configuration, visit our <a href=\"https://github.com/fnoscommunity/fpksrc/wiki/Mozilla-Sync-Server\" target=\"_blank\">Mozilla Sync Server wiki</a>."
     }]
 }
 EOF

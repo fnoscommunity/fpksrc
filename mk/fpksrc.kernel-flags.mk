@@ -124,7 +124,7 @@ endif
 else ifeq ($(strip $(TC_TYPE)),SRM)
 
 ifeq ($(strip $(KERNEL_DIST_SITE)),)
-KERNEL_DIST_SITE = https://github.com/SynoCommunity/spksrc/releases/download/kernels/srm$(KERNEL_VERS)
+KERNEL_DIST_SITE = https://github.com/fnoscommunity/fpksrc/releases/download/kernels/srm$(KERNEL_VERS)
 endif
 
 ifeq ($(strip $(KERNEL_DIST_NAME)),)

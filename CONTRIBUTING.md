@@ -11,10 +11,10 @@ If you have questions, suggestions or you believe you have found a bug, we'd lik
 
 Do:
 
-* Check the [FAQ](https://github.com/SynoCommunity/spksrc/wiki/Frequently-Asked-Questions);
-* Search the [bug tracker](https://github.com/SynoCommunity/spksrc/issues) to see if the issue has not already been reported;
-* Check if the package has specific documentation related to it via the [Package Documentation Index](https://github.com/SynoCommunity/spksrc/wiki/Package-Documentation-Index);
-* if you're reporting a bug, make sure you include sufficient information. See [Issue Content](https://github.com/SynoCommunity/spksrc/blob/master/CONTRIBUTING.md#issue-content).
+* Check the [FAQ](https://github.com/fnoscommunity/fpksrc/wiki/Frequently-Asked-Questions);
+* Search the [bug tracker](https://github.com/fnoscommunity/fpksrc/issues) to see if the issue has not already been reported;
+* Check if the package has specific documentation related to it via the [Package Documentation Index](https://github.com/fnoscommunity/fpksrc/wiki/Package-Documentation-Index);
+* if you're reporting a bug, make sure you include sufficient information. See [Issue Content](https://github.com/fnoscommunity/fpksrc/blob/master/CONTRIBUTING.md#issue-content).
 
 Don't:
 
@@ -34,10 +34,10 @@ Content:
 
 * Describe what you did, what you expected to happen and what actually happened;
 * Which steps to perform to reproduce what happened;
-* Model, arch and DSM version of your NAS. See [Architecture per Synology model](https://github.com/SynoCommunity/spksrc/wiki/Architecture-per-Synology-model);
+* Model, arch and DSM version of your NAS. See [Architecture per Synology model](https://github.com/fnoscommunity/fpksrc/wiki/Architecture-per-Synology-model);
 * Provide log files if available. Sometimes a log is shown in Package Center for that package. There might be a log available at `/usr/local/{package}/var/`;
 * Wrap larger logs between triple backticks (```). Log files over ten lines should be placed on gist.github.com, Pastebin etc., and linked in the issue;
-* If the package doesn't start, try to start the package [via the command line](https://github.com/SynoCommunity/spksrc/wiki/Frequently-Asked-Questions#how-to-query-package-status-or-start-from-command-line)  and provide the output.
+* If the package doesn't start, try to start the package [via the command line](https://github.com/fnoscommunity/fpksrc/wiki/Frequently-Asked-Questions#how-to-query-package-status-or-start-from-command-line)  and provide the output.
 
 
 Package Requests
@@ -48,7 +48,7 @@ Note that opening a request does not mean it will be honored, so please do not a
 You can show your support with a +1, or by adding a bounty via Bountysource.
 
 Before opening a Package Request, make sure that there are no existing requests for the same software.
-As part of your request, some basic information should be included. Contributors use that information as a starting point for packaging. Use the format as shown below or use the following link: [Package Request](https://github.com/SynoCommunity/spksrc/issues/new?title=[Package%20Request]%20&body=Name%3A%0ADescription%3A%0AWebsite%3A%0ASoftware%20documentation%3A%0ABuild%2FInstallation%20documentation%3A%0ASource%20Code%3A%0ALicense%3A)
+As part of your request, some basic information should be included. Contributors use that information as a starting point for packaging. Use the format as shown below or use the following link: [Package Request](https://github.com/fnoscommunity/fpksrc/issues/new?title=[Package%20Request]%20&body=Name%3A%0ADescription%3A%0AWebsite%3A%0ASoftware%20documentation%3A%0ABuild%2FInstallation%20documentation%3A%0ASource%20Code%3A%0ALicense%3A)
 
 Title:
 
@@ -70,7 +70,7 @@ Pull requests to add packages to the [SynoCommunity repository](https://synocomm
 
 Please create a new branch before pulling your request and avoid using the master branch. Pay attention on [How to make a clean pull request](https://github.com/MarcDiethelm/contributing/blob/master/README.md).
 
-Once you have a development environment set up, you can start building packages, create new ones, or improve upon existing packages while making your changes available to other people. See the [Developers HOW-TO](https://github.com/SynoCommunity/spksrc/wiki/Developers-HOW-TO) for information on how to use spksrc.
+Once you have a development environment set up, you can start building packages, create new ones, or improve upon existing packages while making your changes available to other people. See the [Developers HOW-TO](https://github.com/fnoscommunity/fpksrc/wiki/Developers-HOW-TO) for information on how to use spksrc.
 
 #### When creating a Pull Request you get a description from a template like this:
 

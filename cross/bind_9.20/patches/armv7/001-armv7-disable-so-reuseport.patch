@@ -3,7 +3,7 @@
 # SO_REUSEPORT is not supported in all ARMv7 cpu toolchains 
 # provided in toolchain .../usr/include/asm-generic/socket.h
 # 
-# see issue https://github.com/SynoCommunity/spksrc/issues/6441
+# see issue https://github.com/fnoscommunity/fpksrc/issues/6441
 # 
 --- lib/isc/include/isc/netmgr.h.orig	2025-07-04 09:42:08.427330300 +0000
 +++ lib/isc/include/isc/netmgr.h	2025-08-02 20:41:00.271752545 +0000

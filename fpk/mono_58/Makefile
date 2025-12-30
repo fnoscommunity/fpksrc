@@ -8,7 +8,7 @@ DEPENDS = cross/mono_58
 REQUIRED_MIN_DSM = 5.0
 
 # Although qoriq can be compiled successfully it won't run as classic floating point unit not available
-# For details see: https://github.com/SynoCommunity/spksrc/issues/3470#issuecomment-469391052
+# For details see: https://github.com/fnoscommunity/fpksrc/issues/3470#issuecomment-469391052
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
 MAINTAINER = SynoCommunity

@@ -74,8 +74,8 @@ CONFIGURE_ARGS += --enable-headless-only
 # customize for SynoCommunity
 CONFIGURE_ARGS += --with-vendor-name=SynoCommunity
 CONFIGURE_ARGS += --with-vendor-url=https://synocommunity.com/package/java-21-openjdk
-CONFIGURE_ARGS += --with-vendor-bug-url=https://github.com/SynoCommunity/spksrc/issues
-CONFIGURE_ARGS += --with-vendor-vm-bug-url=https://github.com/SynoCommunity/spksrc/issues
+CONFIGURE_ARGS += --with-vendor-bug-url=https://github.com/fnoscommunity/fpksrc/issues
+CONFIGURE_ARGS += --with-vendor-vm-bug-url=https://github.com/fnoscommunity/fpksrc/issues
 
 # arguments not taken from environment
 CONFIGURE_ARGS += READELF=$(READELF)

@@ -7,7 +7,7 @@ PKG_VERS = 14.0.5
 # It also has one additional target to build the archive (make build-archive)
 #
 # Since it takes a huge amount of resources to build we are hosting ouput on
-#     https://github.com/SynoCommunity/spksrc/releases/tag/native%2Fllvm
+#     https://github.com/fnoscommunity/fpksrc/releases/tag/native%2Fllvm
 # And later referring to it using DEPENDS = native/llvm-14.0
 #
 # Usage of native LLVM tools and librairies is needed in order to avoid circular

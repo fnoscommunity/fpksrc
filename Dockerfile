@@ -1,8 +1,8 @@
 FROM debian:trixie
 LABEL description="Framework for maintaining and compiling native community packages for Synology devices"
-LABEL maintainer="SynoCommunity <https://github.com/SynoCommunity/spksrc/graphs/contributors>"
+LABEL maintainer="SynoCommunity <https://github.com/fnoscommunity/fpksrc/graphs/contributors>"
 LABEL url="https://synocommunity.com"
-LABEL vcs-url="https://github.com/SynoCommunity/spksrc"
+LABEL vcs-url="https://github.com/fnoscommunity/fpksrc"
 
 ENV LANG C.UTF-8
 

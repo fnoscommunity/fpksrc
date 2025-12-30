@@ -40,4 +40,4 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         with:
           push: true
-          tags: ghcr.io/synocommunity/spksrc:latest
+          tags: ghcr.io/fnoscommunity/fpksrc:latest

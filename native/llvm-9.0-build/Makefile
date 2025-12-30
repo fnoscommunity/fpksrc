@@ -8,7 +8,7 @@ PKG_DIR = $(PKG_NAME)-project-$(PKG_VERS)
 # REMARKS:
 # This was the original native/llvm-9.0/Makefile
 # Since it takes a huge amount of resources to build this, we started to host the 
-# output on https://github.com/SynoCommunity/spksrc/releases/tag/native%2Fllvm
+# output on https://github.com/fnoscommunity/fpksrc/releases/tag/native%2Fllvm
 # 
 # This Makefile is kept to build it again
 # and has one additional target to build the archive (make build-archive)

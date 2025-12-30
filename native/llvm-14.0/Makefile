@@ -3,12 +3,12 @@ PKG_VERS = 14.0.5
 PKG_VERS_MAJ = $(firstword $(subst ., ,$(PKG_VERS)))
 PKG_EXT = txz
 PKG_DIST_NAME = native-$(PKG_NAME)-$(PKG_VERS)_2025.12.06.$(PKG_EXT)
-PKG_DIST_SITE = https://github.com/SynoCommunity/spksrc/releases/download/native%2Fllvm
+PKG_DIST_SITE = https://github.com/fnoscommunity/fpksrc/releases/download/native%2Fllvm
 EXTRACT_PATH = $(WORK_DIR)
 
 # REMARKS:
 # Since it takes a huge amount of resources to build this, we started to host the 
-# output on https://github.com/SynoCommunity/spksrc/releases/tag/native%2Fllvm
+# output on https://github.com/fnoscommunity/fpksrc/releases/tag/native%2Fllvm
 # 
 # This Makefile is to install the prebuilt native llvm.
 # 

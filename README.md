@@ -30,17 +30,17 @@ If you can't find an answer, or if you want to open a package request, read [CON
 
 1. [Fork and clone] spksrc: `git clone https://github.com/YOUR-USERNAME/spksrc`
 2. Install Docker on your host OS (see [Docker installation], or use a `wget`-based alternative for linux [Install Docker with wget]).
-3. Download the spksrc Docker container: `docker pull ghcr.io/synocommunity/spksrc`
+3. Download the spksrc Docker container: `docker pull ghcr.io/fnoscommunity/fpksrc`
 4. Run the container with the repository mounted into the `/spksrc` directory with the appropriate command for your host Operating System:
 
 ```bash
 cd spksrc # Go to the cloned repository's root folder.
 
 # If running on Linux:
-docker run -it --platform=linux/amd64 -v $(pwd):/spksrc -w /spksrc ghcr.io/synocommunity/spksrc /bin/bash
+docker run -it --platform=linux/amd64 -v $(pwd):/spksrc -w /spksrc ghcr.io/fnoscommunity/fpksrc /bin/bash
 
 # If running on macOS:
-docker run -it --platform=linux/amd64 -v $(pwd):/spksrc -w /spksrc -e TAR_CMD="fakeroot tar" ghcr.io/synocommunity/spksrc /bin/bash
+docker run -it --platform=linux/amd64 -v $(pwd):/spksrc -w /spksrc -e TAR_CMD="fakeroot tar" ghcr.io/fnoscommunity/fpksrc /bin/bash
 ```
 5. From there, follow the instructions in the [Developers HOW TO].
 
@@ -182,12 +182,12 @@ See the [Developers HOW TO] for information on how to use spksrc.
 When not explicitly set, files are placed under a [3 clause BSD license]
 
 [3 clause BSD license]: http://www.opensource.org/licenses/BSD-3-Clause
-[#4524]: https://github.com/SynoCommunity/spksrc/issues/4524
-[bug tracker]: https://github.com/SynoCommunity/spksrc/issues
-[CONTRIBUTING]: https://github.com/SynoCommunity/spksrc/blob/master/CONTRIBUTING.md
+[#4524]: https://github.com/fnoscommunity/fpksrc/issues/4524
+[bug tracker]: https://github.com/fnoscommunity/fpksrc/issues
+[CONTRIBUTING]: https://github.com/fnoscommunity/fpksrc/blob/master/CONTRIBUTING.md
 [Fork and clone]: https://docs.github.com/en/github/getting-started-with-github/fork-a-repo
-[Developers HOW TO]: https://github.com/SynoCommunity/spksrc/wiki/Developers-HOW-TO
+[Developers HOW TO]: https://github.com/fnoscommunity/fpksrc/wiki/Developers-HOW-TO
 [Docker installation]: https://docs.docker.com/engine/installation
-[FAQ]: https://github.com/SynoCommunity/spksrc/wiki/Frequently-Asked-Questions
+[FAQ]: https://github.com/fnoscommunity/fpksrc/wiki/Frequently-Asked-Questions
 [Install Docker with wget]: https://docs.docker.com/linux/step_one
 [SynoCommunity repository]: http://www.synocommunity.com

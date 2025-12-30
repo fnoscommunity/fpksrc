@@ -4,7 +4,7 @@ PKG_VERS = 1.82.0
 PKG_EXT = txz
 PKG_DIST_TARGET = stable-$(PKG_VERS)-powerpc-unknown-linux-gnuspe
 PKG_DIST_NAME = $(PKG_DIST_TARGET).$(PKG_EXT)
-PKG_DIST_SITE = https://github.com/SynoCommunity/spksrc/releases/download/rust/qoriq
+PKG_DIST_SITE = https://github.com/fnoscommunity/fpksrc/releases/download/rust/qoriq
 EXTRACT_PATH = $(INSTALL_DIR)/$(INSTALL_PREFIX)
 
 DEPENDS =

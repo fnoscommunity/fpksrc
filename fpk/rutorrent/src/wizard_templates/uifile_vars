@@ -14,7 +14,7 @@ DSM_PERMISSIONS_STEP_DESC="Permissions are no longer managed with the group 'sc-
 
 WATCH_DIR_DESC="Watch a directory for torrent files and add them to ruTorrent. Path will be relative to downloads share. Leave empty to disable."
 WATCH_DIR_INPUT_DESC="Watch directory"
-PERMISSION_MANAGEMENT="Package user and group will not appear on most UI settings. Please read <a target=\"_blank\" href=\"https://github.com/SynoCommunity/spksrc/wiki/Permission-Management\">Permission Management</a> for details."
+PERMISSION_MANAGEMENT="Package user and group will not appear on most UI settings. Please read <a target=\"_blank\" href=\"https://github.com/fnoscommunity/fpksrc/wiki/Permission-Management\">Permission Management</a> for details."
 
 ADDITIONAL_CONFIGURATION_STEP_TITLE="Additional configuration"
 WEB_INTERFACE_ITEM_DESC="Some features in web interface require disabling open_basedir (PHP restriction). Some tasks do not run as http user and therefore system wide master settings need to be modified. Do you want to disable open_basedir automatically? (Previous open_basedir settings won't be restored after ruTorrent uninstallation.)"

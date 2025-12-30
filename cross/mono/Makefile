@@ -13,7 +13,7 @@ COMMENT  = Cross platform, open source .NET development framework.
 LICENSE  = https://www.mono-project.com/docs/faq/licensing
 
 # Although qoriq can be compiled successfully it won't run as a classic floating point unit is not available
-# For details see: https://github.com/SynoCommunity/spksrc/issues/3470#issuecomment-469391052
+# For details see: https://github.com/fnoscommunity/fpksrc/issues/3470#issuecomment-469391052
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
 PRE_CONFIGURE_TARGET = mono_pre_configure
@@ -48,7 +48,7 @@ endif
 ifeq ($(findstring $(ARCH),$(ARMv8_ARCHS)),$(ARCH))
 	AG_ARGS = --host=aarch64-linux
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
-	# fix for https://github.com/SynoCommunity/spksrc/issues/3666
+	# fix for https://github.com/fnoscommunity/fpksrc/issues/3666
 	ADDITIONAL_CFLAGS += -fno-split-wide-types
 endif
 endif

@@ -14,7 +14,7 @@ CHANGELOG = "Integrate with DSM5+6 Generic Service support for correct permissio
 
 HOMEPAGE   = https://sickbeard.com
 LICENSE    = GPL
-HELPURL    = https://github.com/SynoCommunity/spksrc/wiki/FAQ-SickBeard-custom
+HELPURL    = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SickBeard-custom
 
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh

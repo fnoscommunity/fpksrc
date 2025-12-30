@@ -25,8 +25,8 @@ PRE_COMPILE_TARGET = openlist_pre_compile
 
 BUILT_AT = $(shell date +'%F %T %z')
 # set SynoCommunity as git author
-GIT_AUTHOR = "SynoCommunity/spksrc"
-# git commit of SynoCommunity/spksrc repo
+GIT_AUTHOR = "fnoscommunity/fpksrc"
+# git commit of fnoscommunity/fpksrc repo
 GIT_COMMIT = $(shell git log --pretty=format:"%h" -1)
 
 CGO_ENABLED = 1

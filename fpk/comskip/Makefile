@@ -20,7 +20,7 @@ CHANGELOG = "1. Update to version 0.83<br/>2. Migrate to using ffmpeg7"
 
 HOMEPAGE = https://www.kaashoek.com/comskip/
 LICENSE = LGPL
-HELPURL = https://github.com/SynoCommunity/spksrc/wiki/Comskip
+HELPURL = https://github.com/fnoscommunity/fpksrc/wiki/Comskip
 
 SPK_COMMANDS = bin/comskip
 

@@ -13,7 +13,7 @@ DEPENDS = cross/acl cross/attr cross/fuse cross/libb2 cross/lz4 cross/openssl3 c
 # 
 # # 1. Set up the development environment
 # # If you don't have an spksrc environment set up, run the following in your target folder:
-# git clone https://github.com/SynoCommunity/spksrc.git
+# git clone https://github.com/fnoscommunity/fpksrc.git
 # 
 # # 2. Install required dependencies for Borg
 # sudo apt-get update

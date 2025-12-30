@@ -48,8 +48,8 @@ endif
 
 
 # Fixes:
-#    https://github.com/SynoCommunity/spksrc/issues/5314
-#    https://github.com/SynoCommunity/spksrc/issues/6597
+#    https://github.com/fnoscommunity/fpksrc/issues/5314
+#    https://github.com/fnoscommunity/fpksrc/issues/6597
 ifeq ($(findstring $(ARCH),$(PPC_ARCHS)),$(ARCH))
 CMAKE_ARGS += -DENABLE_PIC=ON
 endif

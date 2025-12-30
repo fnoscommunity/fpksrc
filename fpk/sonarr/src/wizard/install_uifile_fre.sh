@@ -36,7 +36,7 @@ function upgrade_with_config
 }, {
 	"step_title": "Permissions DSM",
 	"items": [{
-		"desc": "Merci de lire <a target=\"_blank\" href=\"https://github.com/SynoCommunity/spksrc/wiki/Permission-Management\">Permission Management</a> pour plus de détails."
+		"desc": "Merci de lire <a target=\"_blank\" href=\"https://github.com/fnoscommunity/fpksrc/wiki/Permission-Management\">Permission Management</a> pour plus de détails."
 	}]
 }]
 EOF
@@ -58,7 +58,7 @@ function upgrade_no_config
 }, {
 	"step_title": "Permissions DSM",
 	"items": [{
-		"desc": "Merci de lire <a target=\"_blank\" href=\"https://github.com/SynoCommunity/spksrc/wiki/Permission-Management\">Permission Management</a> pour plus de détails."
+		"desc": "Merci de lire <a target=\"_blank\" href=\"https://github.com/fnoscommunity/fpksrc/wiki/Permission-Management\">Permission Management</a> pour plus de détails."
 	}]
 }]
 EOF
@@ -75,7 +75,7 @@ function new_installation
 }, {
 	"step_title": "Permissions DSM",
 	"items": [{
-		"desc": "Merci de lire <a target=\"_blank\" href=\"https://github.com/SynoCommunity/spksrc/wiki/Permission-Management\">Permission Management</a> pour plus de détails."
+		"desc": "Merci de lire <a target=\"_blank\" href=\"https://github.com/fnoscommunity/fpksrc/wiki/Permission-Management\">Permission Management</a> pour plus de détails."
 	}]
 }]
 EOF
