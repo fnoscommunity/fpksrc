@@ -18,7 +18,7 @@ endif
 # SRM - Synology Router Manager
 SRM_ARMv7_ARCHS = northstarplus ipq806x dakota hawkeye
 SRM_ARMv8_ARCHS = cypress
-# required in spksrc.pre-check.mk
+# required in fpksrc.pre-check.mk
 SRM_ARCHS = $(SRM_ARMv7_ARCHS) $(SRM_ARMv8_ARCHS)
 
 # DSM - all ARMv7 except SRM specific archs

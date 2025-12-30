@@ -34,14 +34,14 @@ CMAKE_ARGS = -DWITH_GETTEXT=OFF
 # fish >= 4.0.0 requires rust
 # IMPORTANT:
 # fish must still be built with cmake
-# direct builds with cargo/rust (using spksrc.cross-rust.mk) create
+# direct builds with cargo/rust (using fpksrc.cross-rust.mk) create
 # experimental static versions without data files
 
 # keep cross tools in ENV for cargo to find CC and LD of toolchain
 CMAKE_USE_TOOLCHAIN_FILE = OFF
 
-# define RUST_TARGET similar to spksrc.cross-rust-env.mk
-# REMARKS: including spksrc.cross-rust-env.mk would break the build
+# define RUST_TARGET similar to fpksrc.cross-rust-env.mk
+# REMARKS: including fpksrc.cross-rust-env.mk would break the build
 ifeq ($(findstring $(ARCH), $(ARMv7_ARCHS)),$(ARCH))
 RUST_TARGET = armv7-unknown-linux-gnueabihf
 endif

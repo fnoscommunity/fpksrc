@@ -1,6 +1,6 @@
 # Build dotnet programs
 #
-# This makefile extends spksrc.cross-cc.mk with .NET-specific functionality
+# This makefile extends fpksrc.cross-cc.mk with .NET-specific functionality
 #
 # prerequisites:
 # - cross/module depends on native/dotnet only

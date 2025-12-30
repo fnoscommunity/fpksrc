@@ -1,6 +1,6 @@
 # Build go programs
 #
-# This makefile extends spksrc.cross-cc.mk with Go-specific functionality
+# This makefile extends fpksrc.cross-cc.mk with Go-specific functionality
 # 
 # prerequisites:
 # - cross/module depends on native/go or native/go_1.23 only

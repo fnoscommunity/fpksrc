@@ -13,7 +13,7 @@ ifeq ($(strip $(INSTALL_TARGET)),)
 INSTALL_TARGET = install_python_module
 endif
 
-# Resume with standard spksrc.cross-cc.mk
+# Resume with standard fpksrc.cross-cc.mk
 include ../../mk/fpksrc.cross-cc.mk
 
 # Define where is located the crossenv

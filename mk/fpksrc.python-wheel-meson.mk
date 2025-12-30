@@ -48,7 +48,7 @@ endif
 # Define where is located the crossenv
 CROSSENV_WHEEL_PATH = $(firstword $(wildcard $(WORK_DIR)/crossenv-$(or $(PKG_REAL_NAME),$(PKG_NAME))-$(PKG_VERS) $(WORK_DIR)/crossenv-$(or $(PKG_REAL_NAME),$(PKG_NAME)) $(WORK_DIR)/crossenv-default))
 
-# If using spksrc.python.mk with PYTHON_STAGING_PREFIX defined
+# If using fpksrc.python.mk with PYTHON_STAGING_PREFIX defined
 # then redirect STAGING_INSTALL_PREFIX so rust
 # wheels can find openssl and other libraries
 ifneq ($(wildcard $(PYTHON_STAGING_PREFIX)),)

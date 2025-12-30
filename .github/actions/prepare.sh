@@ -65,9 +65,9 @@ for i in {5..7}; do
 done
 
 # for synocli-videodriver that ffmpeg v5-7 depends on
-videodrv_dependent_packages=$(find spk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "spksrc.videodriver.mk" {} \; | grep -Po ".*spk/\K[^/]*" | sort | tr '\n' ' ')
+videodrv_dependent_packages=$(find spk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "fpksrc.videodriver.mk" {} \; | grep -Po ".*spk/\K[^/]*" | sort | tr '\n' ' ')
 
-# If packages contain a package that depends on spksrc.videodriver.mk,
+# If packages contain a package that depends on fpksrc.videodriver.mk,
 # then ensure synocli-videodriver spk is first in list
 for package in ${packages}
 do

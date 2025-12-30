@@ -1,6 +1,6 @@
 # Build native Meson programs
 #
-# This makefile extends spksrc.native-cc.mk with Meson-specific functionality
+# This makefile extends fpksrc.native-cc.mk with Meson-specific functionality
 #
 # prerequisites:
 # - native/module depends on meson + ninja

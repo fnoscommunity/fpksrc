@@ -88,7 +88,7 @@ generated-wizards:
 				echo "";\
 				cat src/wizard_templates/uifile_vars$${suffix} | sed -e 's/\\/\\\\/g' -e 's/\"/\\\"/g' -e 's/^\([^=]*\)=\\"\(.*\)\\"$$/\1="\2"/g';\
 				echo "";\
-				cat "$(SPKSRC_MK)spksrc.service.installer.functions";\
+				cat "$(SPKSRC_MK)fpksrc.service.installer.functions";\
 				echo "";\
 				cat src/wizard_templates/shared_uifile_setup.sh;\
 				echo "";\

@@ -96,7 +96,7 @@ python_pre_depend:
 	@# EXCEPTION: Do not symlink cross/* wheel builds
 	@make --no-print-directory dependency-flat | sort -u | grep cross/ | while read depend ; do \
 	   makefile="../../$${depend}/Makefile" ; \
-	   if grep -q spksrc.python-wheel.mk $${makefile} ; then \
+	   if grep -q fpksrc.python-wheel.mk $${makefile} ; then \
 	      pkgstr=$$(grep ^PKG_NAME $${makefile}) ; \
 	      pkgname=$$(echo $${pkgstr#*=} | xargs) ; \
 	      find $(WORK_DIR)/$${pkgname}* $(WORK_DIR)/.$${pkgname}* -maxdepth 0 -type l -exec rm -fr {} \; 2>/dev/null || true ; \

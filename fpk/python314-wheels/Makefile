@@ -24,7 +24,7 @@ LICENSE  = PSF
 # Enable debug_info symbols
 #GCC_DEBUG_INFO := 1
 
-# IMPORTANT: WHEELS must be initialized before include of spksrc.python.mk
+# IMPORTANT: WHEELS must be initialized before include of fpksrc.python.mk
 # later additions are ok, but WHEELS must not be empty at this point,
 # otherwise the build of WHEELS is skipped
 WHEELS += src/requirements-abi3.txt
@@ -99,7 +99,7 @@ include ../../mk/fpksrc.python.mk
 
 # [borgbackup]
 # Use OpenSSL path as defined by either
-# spksrc.wheel-env.mk or spksrc.python.mk
+# fpksrc.wheel-env.mk or fpksrc.python.mk
 ENV += BORG_OPENSSL_PREFIX="$(OPENSSL_STAGING_PREFIX)"
 ENV += BORG_LIBACL_PREFIX="$(STAGING_INSTALL_PREFIX)"
 ENV += BORG_LIBB2_PREFIX="$(STAGING_INSTALL_PREFIX)"

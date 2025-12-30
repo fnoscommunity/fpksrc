@@ -24,7 +24,7 @@ export EXTRA_GOFLAGS=-buildvcs=false
 
 include ../../mk/fpksrc.cross-go.mk
 
-# PATH must be defined after include of spksrc.cross-go.mk,
+# PATH must be defined after include of fpksrc.cross-go.mk,
 # otherwise WORK_DIR is not defined when building in cross/gitea folder
 PATH := $(WORK_DIR)/../../../native/nodejs/work-native/node/bin:$(WORK_DIR)/../../../native/pnpm/work-native/bin:$(PATH)
 

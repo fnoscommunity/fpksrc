@@ -1,5 +1,5 @@
 ### Rules to create the spk package
-#   Most of the rules are imported from spksrc.*.mk files
+#   Most of the rules are imported from fpksrc.*.mk files
 #
 # Variables:
 #  ARCH                         A dedicated arch, a generic arch or 'noarch' for arch independent packages

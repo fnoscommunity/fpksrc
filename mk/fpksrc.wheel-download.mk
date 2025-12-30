@@ -1,7 +1,7 @@
 ### Wheel rules
 # Download wheels for modules listed in WHEELS.
-# These are being pre-processed thru spksrc.wheel.mk
-# along with spksrc.requirement.mk so 1 wheel at
+# These are being pre-processed thru fpksrc.wheel.mk
+# along with fpksrc.requirement.mk so 1 wheel at
 # a time gets submitted to download.
 #
 # Targets are executed in the following order:

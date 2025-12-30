@@ -1,6 +1,6 @@
 # Build CMake programs
 #
-# This makefile extends spksrc.cross-cc.mk with CMake-specific functionality
+# This makefile extends fpksrc.cross-cc.mk with CMake-specific functionality
 #
 # prerequisites:
 # - cross/module depends on cmake

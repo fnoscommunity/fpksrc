@@ -23,7 +23,7 @@ CMAKE_ARGS += -DCMAKE_INSTALL_LOCALSTATEDIR=$(INSTALL_PREFIX_VAR)
 endif
 
 # Necessary variables for the toolchain file
-# used at generation from spksrc.tc.mk that
+# used at generation from fpksrc.tc.mk that
 # will define the cross-compiled environment
 # for the target build
 CMAKE_SYSTEM_NAME = Linux

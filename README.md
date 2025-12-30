@@ -175,7 +175,7 @@ EOF"
 
 ## Usage
 Once you have a development environment set up, you can start building packages, create new ones, or improve upon existing packages while making your changes available to other people.
-See the [Developers HOW TO] for information on how to use spksrc.
+See the [Developers HOW TO] for information on how to use fpksrc.
 
 
 ## License

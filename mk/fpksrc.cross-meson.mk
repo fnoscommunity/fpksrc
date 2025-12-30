@@ -1,6 +1,6 @@
 # Build Meson programs
 #
-# This makefile extends spksrc.cross-cc.mk with Meson-specific functionality
+# This makefile extends fpksrc.cross-cc.mk with Meson-specific functionality
 #
 # prerequisites:
 # - cross/module depends on meson + ninja

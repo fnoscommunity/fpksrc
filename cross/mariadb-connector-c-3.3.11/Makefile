@@ -28,7 +28,7 @@ CMAKE_ARGS += -DWITH_MYSQLCOMPAT=ON
 
 # Does not handle pkgconfig well and fails to
 # find openssl3 include and libraries using
-# spksrc.python.mk thus using OPENSSL_STAGING_PREFIX
+# fpksrc.python.mk thus using OPENSSL_STAGING_PREFIX
 DEPENDS += cross/openssl3
 CMAKE_ARGS += -DWITH_SSL=ON
 ifneq ($(wildcard $(OPENSSL_STAGING_PREFIX)),)

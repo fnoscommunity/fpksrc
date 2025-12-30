@@ -61,7 +61,7 @@ include ../../mk/fpksrc.python.mk
 
 # [borgbackup]
 # Use OpenSSL path as defined by either
-# spksrc.wheel-env.mk or spksrc.python.mk
+# fpksrc.wheel-env.mk or fpksrc.python.mk
 ENV += BORG_LIBACL_PREFIX="$(STAGING_INSTALL_PREFIX)"
 ENV += BORG_LIBB2_PREFIX="$(STAGING_INSTALL_PREFIX)"
 ENV += BORG_LIBLZ4_PREFIX="$(STAGING_INSTALL_PREFIX)"

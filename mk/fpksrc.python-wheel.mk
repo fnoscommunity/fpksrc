@@ -16,13 +16,13 @@ ifeq ($(strip $(POST_INSTALL_TARGET)),)
 POST_INSTALL_TARGET = install_python_wheel
 endif
 
-# Resume with standard spksrc.cross-cc.mk
+# Resume with standard fpksrc.cross-cc.mk
 include ../../mk/fpksrc.cross-cc.mk
 
 # Define where is located the crossenv
 CROSSENV_WHEEL_PATH = $(firstword $(wildcard $(WORK_DIR)/crossenv-$(or $(PKG_REAL_NAME),$(PKG_NAME))-$(PKG_VERS) $(WORK_DIR)/crossenv-$(or $(PKG_REAL_NAME),$(PKG_NAME)) $(WORK_DIR)/crossenv-default))
 
-# If using spksrc.python.mk with PYTHON_STAGING_PREFIX defined
+# If using fpksrc.python.mk with PYTHON_STAGING_PREFIX defined
 # then redirect STAGING_INSTALL_PREFIX so rust
 # wheels can find openssl and other libraries
 ifneq ($(wildcard $(PYTHON_STAGING_PREFIX)),)
@@ -89,7 +89,7 @@ include ../../mk/fpksrc.wheel-install.mk
 
 post_compile_target: $(COMPILE_TARGET)
 
-# Call spksrc.compile.mk cookie creation recipe
+# Call fpksrc.compile.mk cookie creation recipe
 ifeq ($(wildcard $(COMPILE_COOKIE)),)
 compile: $(COMPILE_COOKIE)
 endif
@@ -98,7 +98,7 @@ endif
 
 post_install_target: $(INSTALL_TARGET)
 
-# Call spksrc.install.mk cookie creation recipe
+# Call fpksrc.install.mk cookie creation recipe
 ifeq ($(wildcard $(INSTALL_COOKIE)),)
 install: $(INSTALL_COOKIE)
 

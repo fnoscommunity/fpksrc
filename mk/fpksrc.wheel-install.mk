@@ -6,7 +6,7 @@
 #   2c) Copy all $(WHEELHOUSE)/*.whl to $(STAGING_INSTALL_WHEELHOUSE) directory
 #
 # Note: Code can be improved to avoid doing step 2a-b-c) for every wheel.
-#       May be possible to move this last step into spksrc.wheel.mk + .wheel_install-done
+#       May be possible to move this last step into fpksrc.wheel.mk + .wheel_install-done
 #       OR by checking if wheel_compile-done exists only then do the copying (or similar check)
 #
 # Targets are executed in the following order:

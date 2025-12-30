@@ -16,7 +16,7 @@
 #  WHEEL_NAME              Name of wheel to process
 #  WHEEL_VERSION           Version of wheel to process (can be empty)
 
-# Defined using PYTHON_PACKAGE_WORK_DIR from spksrc.python.mk or use local work directory
+# Defined using PYTHON_PACKAGE_WORK_DIR from fpksrc.python.mk or use local work directory
 PYTHON_WORK_DIR = $(or $(wildcard $(PYTHON_PACKAGE_WORK_DIR)),$(wildcard $(WORK_DIR)))
 
 # Other Python spk/python* related variables
@@ -32,7 +32,7 @@ PYTHON_LIB_NATIVE           = $(abspath $(PYTHON_WORK_DIR)/$(PYTHON_PKG_DIR)/bui
 PYTHON_LIB_CROSS            = $(abspath $(PYTHON_WORK_DIR)/$(PYTHON_PKG_DIR)/build/lib.linux-$(shell expr "$(TC_TARGET)" : '\([^-]*\)' )-$(PYTHON_PKG_VERS_MAJOR_MINOR))
 
 # wheel crossenv definitions: 
-#   Use PYTHON_PACKAGE_DIR from spksrc.python.mk
+#   Use PYTHON_PACKAGE_DIR from fpksrc.python.mk
 #   OR if empty then we are building spk/python3*
 CROSSENV_CONFIG_PATH = $(realpath $(or $(PYTHON_PACKAGE_DIR),$(WORK_DIR)/..)/crossenv)
 CROSSENV_CONFIG_DEFAULT = $(CROSSENV_CONFIG_PATH)/requirements-default.txt
@@ -125,7 +125,7 @@ crossenv-%:
 ####
 
 # Defined using current install prefix by replacing package name using
-# PYTHON_PACKAGE from spksrc.python.mk, else use local install prefix
+# PYTHON_PACKAGE from fpksrc.python.mk, else use local install prefix
 ifneq ($(PYTHON_PACKAGE),)
 PYTHON_INSTALL_PREFIX = $(subst $(SPK_NAME),$(PYTHON_PACKAGE),$(INSTALL_PREFIX))
 else
@@ -152,7 +152,7 @@ export PYO3_CROSS_INCLUDE_DIR = $(PYTHON_STAGING_INSTALL_PREFIX)/include/
 export OPENSSL_LIB_DIR = $(OPENSSL_STAGING_PREFIX)/lib/
 export OPENSSL_INCLUDE_DIR = $(OPENSSL_STAGING_PREFIX)/include/
 
-# set PYTHONPATH for spksrc.python-module.mk
+# set PYTHONPATH for fpksrc.python-module.mk
 export PYTHONPATH = $(PYTHON_LIB_NATIVE):$(PYTHON_STAGING_INSTALL_PREFIX)/lib/python$(PYTHON_PKG_VERS_MAJOR_MINOR)/site-packages/
 
 ###

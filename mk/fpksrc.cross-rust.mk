@@ -1,6 +1,6 @@
 # Build rust programs
 #
-# This makefile extends spksrc.cross-cc.mk with Rust-specific functionality
+# This makefile extends fpksrc.cross-cc.mk with Rust-specific functionality
 # 
 # prerequisites:
 # - module does not require kernel (REQUIRE_KERNEL)

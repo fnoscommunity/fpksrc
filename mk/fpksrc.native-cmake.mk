@@ -1,6 +1,6 @@
 # Build native CMake programs
 #
-# This makefile extends spksrc.native-cc.mk with CMake-specific functionality
+# This makefile extends fpksrc.native-cc.mk with CMake-specific functionality
 #
 
 # Package dependent (same as native-cc.mk)

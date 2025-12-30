@@ -1,6 +1,6 @@
 # Install arch independent resources
 #
-# This makefile extends spksrc.cross-cc.mk but skips configure and compile steps
+# This makefile extends fpksrc.cross-cc.mk but skips configure and compile steps
 #
 # packages using this have to:
 # - implement a custom INSTALL_TARGET to copy the required files to the 
