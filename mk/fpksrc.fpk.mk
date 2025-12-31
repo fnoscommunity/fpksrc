@@ -307,7 +307,7 @@ endif
 ifneq ($(strip $(DEBUG)),)
 INSTALLER_OUTPUT = >> /root/$${PACKAGE}-$${SYNOPKG_PKG_STATUS}.log 2>&1
 else
-INSTALLER_OUTPUT = > $$SYNOPKG_TEMP_LOGFILE
+INSTALLER_OUTPUT = > $$TRIM_TEMP_LOGFILE
 endif
 
 # Wizard

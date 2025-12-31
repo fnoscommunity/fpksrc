@@ -134,9 +134,9 @@ $(DSM_SCRIPTS_DIR)/service-setup:
 	@echo "### Generic variables and functions" > $@
 	@echo '### -------------------------------' >> $@
 	@echo '' >> $@
-	@echo 'if [ -z "$${SYNOPKG_PKGNAME}" ] || [ -z "$${SYNOPKG_DSM_VERSION_MAJOR}" ]; then' >> $@
+	@echo 'if [ -z "$${TRIM_APPNAME}" ] || [ -z "$${TRIM_SYS_VERSION_MAJOR}" ]; then' >> $@
 	@echo '  echo "Error: Environment variables are not set." 1>&2;' >> $@
-	@echo '  echo "Please run me using synopkg instead. Example: \"synopkg start [packagename]\"" 1>&2;' >> $@
+	@echo '  echo "Please run me using appcenter-cli instead. Example: \"appcenter-cli start [packagename]\"" 1>&2;' >> $@
 	@echo '  exit 1' >> $@
 	@echo 'fi' >> $@
 	@echo '' >> $@
@@ -156,7 +156,7 @@ ifneq ($(strip $(SERVICE_WIZARD_SHARENAME)),)
 	@echo "# DSM name of shared folder from UI if provided" >> $@
 	@echo 'if [ -n "$${$(SERVICE_WIZARD_SHARENAME)}" ]; then' >> $@
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-	@echo '   SHARE_PATH=$$(realpath "/var/apps/$${SYNOPKG_PKGNAME}/shares/$${$(SERVICE_WIZARD_SHARENAME)}" 2> /dev/null)' >> $@
+	@echo '   SHARE_PATH=$$(realpath "/var/apps/$${TRIM_APPNAME}/shares/$${$(SERVICE_WIZARD_SHARENAME)}" 2> /dev/null)' >> $@
 	@echo '   install_log "SHARE_PATH from share [$${SHARE_PATH}], variable [$(SERVICE_WIZARD_SHARENAME)=$${$(SERVICE_WIZARD_SHARENAME)}]"' >> $@
 else
 	@echo '   if synoshare --get "$${$(SERVICE_WIZARD_SHARENAME)}" &> /dev/null; then ' >> $@
@@ -184,15 +184,15 @@ ifneq ($(strip $(SERVICE_CERT)),)
 endif
 ifneq ($(STARTABLE),false)
 ifneq ($(call version_ge, ${TCVERSION}, 7.0),1)
-	@echo "# define SYNOPKG_PKGVAR for compatibility with DSM7" >> $@
-	@echo 'SYNOPKG_PKGVAR="$${SYNOPKG_PKGDEST}/var"' >> $@
+	@echo "# define TRIM_PKGVAR for compatibility with DSM7" >> $@
+	@echo 'TRIM_PKGVAR="$${TRIM_APPDEST}/var"' >> $@
 	@echo '' >> $@
 endif
 	@echo "# start-stop-status script redirect stdout/stderr to LOG_FILE" >> $@
-	@echo 'LOG_FILE="$${SYNOPKG_PKGVAR}/$${SYNOPKG_PKGNAME}.log"' >> $@
+	@echo 'LOG_FILE="$${TRIM_PKGVAR}/$${TRIM_APPNAME}.log"' >> $@
 	@echo '' >> $@
 	@echo "# Service command has to deliver its pid into PID_FILE" >> $@
-	@echo 'PID_FILE="$${SYNOPKG_PKGVAR}/$${SYNOPKG_PKGNAME}.pid"' >> $@
+	@echo 'PID_FILE="$${TRIM_PKGVAR}/$${TRIM_APPNAME}.pid"' >> $@
 	@echo '' >> $@
 endif
 ifneq ($(strip $(SERVICE_COMMAND)),)

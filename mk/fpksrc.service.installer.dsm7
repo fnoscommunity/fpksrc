@@ -25,7 +25,9 @@ install_log ()
     else
         # stderr goes to /var/log/apps/{package}.log
         # stdout goes to dialog in package manager ui.
-        echo -e "$(date +'%Y/%m/%d %H:%M:%S')\t${_msg_}" 1>&2
+        # echo -e "$(date +'%Y/%m/%d %H:%M:%S')\t${_msg_}" 1>&2
+        # 使用printf代替echo -e
+        printf "%s\t%s\n" "$(date +'%Y/%m/%d %H:%M:%S')" "${_msg_}" 1>&2
     fi
 }
 
@@ -77,34 +79,6 @@ call_func "initialize_variables"
 
 ### Functions library
 
-#
-# syncronize all files from var folder in spk (extracted to target/var)
-# (@appdata) /var/apps/<package>/target/var -> /var/apps/<package>/var
-#
-syno_sync_var_folder () {
-    # take all files that do not alredy exist and rename the other files to *.new to avoid overwriting
-    # existing configuration files.
-    # finally remove the target/var folder that is not used under DSM 7.
-    if [ -d ${TRIM_APPDEST}/var -a "$(ls -A ${TRIM_APPDEST}/var 2>/dev/null)" ]; then
-    
-        echo "Install files from var folder"
-    
-        # Move all files except existing
-        echo "$RSYNC --ignore-existing --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}"
-        $RSYNC --ignore-existing --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}
-
-        # Rename any remaining (thus pre-existing) files with .new suffix
-        find ${TRIM_APPDEST}/var -type f -exec sh -c 'x="{}"; mv "$x" "${x}.new"' \;
-
-        # Move .new files (overwrite existing)
-        echo "$RSYNC --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}"
-        $RSYNC --remove-source-files ${TRIM_APPDEST}/var/ ${TRIM_PKGVAR}
-
-        # Remove var folder extraced from spk
-        $RM ${TRIM_APPDEST}/var
-    fi
-}
-
 set_unix_permissions ()
 {
     echo "Notice: set_unix_permissions() is no longer required on DSM7."
@@ -155,11 +129,6 @@ install_callback ()
 {
     log_step "install_callback"
     call_func "save_wizard_variables" install_log
-
-    # copy target/var data to permanent storage
-    # and don't override old configurations
-    call_func "syno_sync_var_folder" install_log
-
     call_func "service_install_callback" install_log
 
     if [ -n "${LOG_FILE}" ]; then
@@ -181,7 +150,7 @@ uninstall_init ()
 uninstall_callback ()
 {
     log_step "uninstall_callback"
-    call_func "uninstall_callback" install_log
+    call_func "service_uninstall_callback" install_log
 
     if [ "$wizard_data_action" = "delete" ]; then
         echo "Removing files..." | install_log
@@ -214,7 +183,6 @@ upgrade_callback ()
     log_step "upgrade_callback"
 
     call_func "service_restore" install_log
-    call_func "syno_sync_var_folder" install_log
     call_func "service_postupgrade" install_log
 
     exit 0
@@ -231,4 +199,11 @@ config_callback ()
 {
     log_step "config_callback"
     call_func "service_config_callback" install_log
+}
+
+main ()
+{
+    log_step "main"
+    call_func "validate_main"
+    call_func "service_main" install_log
 }
