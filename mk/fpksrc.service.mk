@@ -1,7 +1,7 @@
 ### Service rules
 # Generate service support files in SPK:
 #   cmd/installer
-#   cmd/start-stop-status
+#   cmd/main
 #   cmd/service-setup
 #   config/privilege         if SERVICE_USER or DSM7
 #   config/$(SPK_NAME).sc    if SERVICE_PORT and DSM<7
@@ -85,7 +85,7 @@ endif
 
 .PHONY: service_target service_msg_target
 .PHONY: $(PRE_SERVICE_TARGET) $(SERVICE_TARGET) $(POST_SERVICE_TARGET)
-.PHONY: $(DSM_SCRIPTS_DIR)/service-setup $(DSM_SCRIPTS_DIR)/start-stop-status
+.PHONY: $(DSM_SCRIPTS_DIR)/service-setup $(DSM_SCRIPTS_DIR)/main
 .PHONY: $(DSM_CONF_DIR)/privilege $(DSM_CONF_DIR)/resource
 .PHONY: $(STAGING_DIR)/$(DSM_UI_DIR)/$(SPK_NAME).sc $(STAGING_DIR)/$(DSM_UI_DIR)/config
 
@@ -188,7 +188,7 @@ ifneq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@echo 'TRIM_PKGVAR="$${TRIM_APPDEST}/var"' >> $@
 	@echo '' >> $@
 endif
-	@echo "# start-stop-status script redirect stdout/stderr to LOG_FILE" >> $@
+	@echo "# main script redirect stdout/stderr to LOG_FILE" >> $@
 	@echo 'LOG_FILE="$${TRIM_PKGVAR}/$${TRIM_APPNAME}.log"' >> $@
 	@echo '' >> $@
 	@echo "# Service command has to deliver its pid into PID_FILE" >> $@
@@ -324,14 +324,14 @@ endif
 endif
 
 
-# Control use of generic start-stop-status scripts
+# Control use of generic main scripts
 ifeq ($(strip $(SSS_SCRIPT)),)
-DSM_SCRIPT_FILES += start-stop-status
+DSM_SCRIPT_FILES += main
 ifeq ($(STARTABLE),false)
-$(DSM_SCRIPTS_DIR)/start-stop-status: $(SPKSRC_MK)fpksrc.service.non-startable
+$(DSM_SCRIPTS_DIR)/main: $(SPKSRC_MK)fpksrc.service.non-startable
 	@$(dsm_script_copy)
 else
-$(DSM_SCRIPTS_DIR)/start-stop-status: $(SPKSRC_MK)fpksrc.service.start-stop-status
+$(DSM_SCRIPTS_DIR)/main: $(SPKSRC_MK)fpksrc.service.start-stop-status
 	@$(dsm_script_copy)
 endif
 endif

@@ -125,9 +125,9 @@ DSM_SCRIPT_FILES += main
 
 # SPK specific scripts
 ifneq ($(strip $(SSS_SCRIPT)),)
-DSM_SCRIPT_FILES += start-stop-status
+DSM_SCRIPT_FILES += main
 
-$(DSM_SCRIPTS_DIR)/start-stop-status: $(SSS_SCRIPT)
+$(DSM_SCRIPTS_DIR)/main: $(SSS_SCRIPT)
 	@$(dsm_script_copy)
 endif
 
@@ -379,8 +379,6 @@ $(DSM_SCRIPTS_DIR)/upgrade_callback:
 $(DSM_SCRIPTS_DIR)/config_init:
 	@$(dsm_script_redirect)
 $(DSM_SCRIPTS_DIR)/config_callback:
-	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/main:
 	@$(dsm_script_redirect)
 
 # Package Icons
