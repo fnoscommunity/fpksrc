@@ -1,6 +1,6 @@
 FPK_NAME = procs
 FPK_VERS = 0.14.10
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/procs
 

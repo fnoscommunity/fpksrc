@@ -2,7 +2,7 @@ FPK_NAME = java-21-openjdk
 JAVA_RELEASE = 11
 JAVA_VERSION = 21.0.5
 FPK_VERS = $(JAVA_VERSION).$(JAVA_RELEASE)
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/java-openjdk.png
 
 DEPENDS = cross/java-21-openjdk

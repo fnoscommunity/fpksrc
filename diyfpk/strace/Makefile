@@ -1,6 +1,6 @@
 FPK_NAME = strace
 FPK_VERS = 6.9
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/strace
 

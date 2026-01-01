@@ -1,6 +1,6 @@
 FPK_NAME = etherwake
 FPK_VERS = 1.09
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/etherwake
 

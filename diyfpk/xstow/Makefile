@@ -1,6 +1,6 @@
 FPK_NAME = xstow
 FPK_VERS = 1.1.1
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/xstow
 

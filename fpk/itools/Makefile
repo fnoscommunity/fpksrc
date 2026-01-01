@@ -1,6 +1,6 @@
 FPK_NAME = itools
 FPK_VERS = 2.0
-SPK_REV = 5
+FPK_REV = 5
 SPK_ICON = src/itools.png
 
 # since cross/libplist 2.3.0

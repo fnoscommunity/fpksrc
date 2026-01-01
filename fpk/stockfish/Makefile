@@ -1,6 +1,6 @@
 FPK_NAME = stockfish
 FPK_VERS = 11
-SPK_REV = 3
+FPK_REV = 3
 SPK_ICON= src/stockfish.png
 DSM_UI_DIR = app
 

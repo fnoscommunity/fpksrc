@@ -1,6 +1,6 @@
 FPK_NAME = ripgrep
 FPK_VERS = 15.1.0
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/ripgrep.png
 
 # powerpc archs (except qoriq) are not supported

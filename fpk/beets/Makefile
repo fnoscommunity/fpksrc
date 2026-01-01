@@ -1,6 +1,6 @@
 FPK_NAME = beets
 FPK_VERS = 2.3.1
-SPK_REV = 12
+FPK_REV = 12
 SPK_ICON = src/beets.png
 
 PYTHON_PACKAGE = python312

@@ -1,6 +1,6 @@
 FPK_NAME = salt-master
 FPK_VERS = 3007.3
-SPK_REV = 13
+FPK_REV = 13
 SPK_ICON = src/salt-master.png
 
 PYTHON_PACKAGE = python312

@@ -1,6 +1,6 @@
 FPK_NAME = screen
 FPK_VERS = 4.9.1
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/screen
 

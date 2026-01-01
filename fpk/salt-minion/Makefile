@@ -1,6 +1,6 @@
 FPK_NAME = salt-minion
 FPK_VERS = 3007.3
-SPK_REV = 6
+FPK_REV = 6
 SPK_ICON = src/salt-minion.png
 
 PYTHON_PACKAGE = python312

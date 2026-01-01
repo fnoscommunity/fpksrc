@@ -1,6 +1,6 @@
 FPK_NAME = nzbmegasearch
 FPK_VERS = $(shell date +%Y%m%d)
-SPK_REV = 3
+FPK_REV = 3
 SPK_ICON = src/nzbmegasearch.png
 DSM_UI_DIR = app
 

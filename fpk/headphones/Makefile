@@ -1,6 +1,6 @@
 FPK_NAME = headphones
 FPK_VERS = $(shell date +%Y%m%d)
-SPK_REV = 13
+FPK_REV = 13
 SPK_ICON = src/headphones.png
 
 DEPENDS =

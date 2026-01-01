@@ -1,6 +1,6 @@
 FPK_NAME = testdisk
 FPK_VERS = 7.1
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/testdisk.png
 
 DEPENDS = cross/testdisk

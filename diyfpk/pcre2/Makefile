@@ -1,6 +1,6 @@
 FPK_NAME = pcre2
 FPK_VERS = 10.46
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/pcre2
 

@@ -1,6 +1,6 @@
 FPK_NAME = mercurial
 FPK_VERS = 7.0
-SPK_REV = 10
+FPK_REV = 10
 SPK_ICON = src/mercurial.png
 
 PYTHON_PACKAGE = python312

@@ -1,6 +1,6 @@
 FPK_NAME = debian-chroot
 FPK_VERS = 8.4
-SPK_REV = 7
+FPK_REV = 7
 SPK_ICON = src/debian.png
 DSM_UI_DIR = app
 

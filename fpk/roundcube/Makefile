@@ -1,6 +1,6 @@
 FPK_NAME = roundcube
 FPK_VERS = 1.6.11
-SPK_REV = 8
+FPK_REV = 8
 SPK_ICON = src/roundcube.png
 
 DEPENDS  = cross/roundcube

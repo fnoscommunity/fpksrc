@@ -1,6 +1,6 @@
 FPK_NAME = dotnet8-runtime
 FPK_VERS = 8.0.22
-SPK_REV = 14
+FPK_REV = 14
 SPK_ICON = src/dotnet.png
 
 OPTIONAL_DEPENDS = cross/libstdc++

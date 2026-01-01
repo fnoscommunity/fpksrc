@@ -38,8 +38,8 @@ else
   endif
 endif
 
-# Must match $(SPK_REV) from spk/ffmpeg7/Makefile
-CONFIGURE_ARGS += --extra-version=$(shell sed -n 's/^SPK_REV = \(.*\)/\1/p' $(WORK_DIR)/../../../spk/ffmpeg7/Makefile)
+# Must match $(FPK_REV) from spk/ffmpeg7/Makefile
+CONFIGURE_ARGS += --extra-version=$(shell sed -n 's/^FPK_REV = \(.*\)/\1/p' $(WORK_DIR)/../../../spk/ffmpeg7/Makefile)
 
 # Enable Synology specific -hls_seek_time option and other optimizations
 CONFIGURE_ARGS += --extra-cflags=-DSYNO_VIDEOSTATION

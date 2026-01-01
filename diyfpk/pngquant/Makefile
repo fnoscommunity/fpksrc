@@ -1,6 +1,6 @@
 FPK_NAME = pngquant
 FPK_VERS = 3.0.3
-SPK_REV = 1
+FPK_REV = 1
 
 
 MAINTAINER = FnOScommunity

@@ -1,6 +1,6 @@
 FPK_NAME = lsof
 FPK_VERS = 4.99.5
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/lsof
 

@@ -1,6 +1,6 @@
 FPK_NAME = duplicity
 FPK_VERS = 3.0.5.1
-SPK_REV = 13
+FPK_REV = 13
 SPK_ICON = src/duplicity.png
 
 # protobuf: missing atomics support 

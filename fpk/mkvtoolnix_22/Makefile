@@ -1,6 +1,6 @@
 FPK_NAME = mkvtoolnix
 FPK_VERS = 22.0.0
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/mkvtoolnix.png
 
 DEPENDS = cross/mkvtoolnix_22

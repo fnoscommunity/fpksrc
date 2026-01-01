@@ -1,6 +1,6 @@
 FPK_NAME = boost_python
 FPK_VERS = 1.78.0
-SPK_REV = 1
+FPK_REV = 1
 
 BUILD_DEPENDS = cross/python310
 DEPENDS = cross/boost

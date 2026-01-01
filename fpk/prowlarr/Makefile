@@ -1,6 +1,6 @@
 FPK_NAME = prowlarr
 FPK_VERS = $(shell date +%Y%m%d)
-SPK_REV = 11
+FPK_REV = 11
 SPK_ICON = src/prowlarr.png
 
 OPTIONAL_DEPENDS = cross/libstdc++ cross/libe_sqlite3
@@ -53,7 +53,7 @@ POST_STRIP_TARGET += prowlarr_extra_install
 
 include ../../mk/fpksrc.fpk.mk
 
-PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(SPK_REV)
+PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(FPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: prowlarr_custom_libe_sqlite3

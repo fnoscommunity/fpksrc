@@ -1,7 +1,7 @@
 FPK_NAME = python311
 FPK_VERS = 3.11.14
 FPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(FPK_VERS))).$(word 2,$(subst ., ,$(FPK_VERS)))
-SPK_REV = 14
+FPK_REV = 14
 SPK_ICON = src/python3.png
 
 # Platform "powerpc-none-linux-gnuspe" with compiler "gcc" is not supported by the

@@ -1,6 +1,6 @@
 FPK_NAME = filebrowser
 FPK_VERS = 2.32.0
-SPK_REV = 7
+FPK_REV = 7
 SPK_ICON = src/filebrowser.png
 
 DEPENDS = cross/filebrowser

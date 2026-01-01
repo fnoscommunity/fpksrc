@@ -1,6 +1,6 @@
 FPK_NAME = gpac
 FPK_VERS = 2.2.1
-SPK_REV = 1
+FPK_REV = 1
 
 SPK_ICON = src/gpac.png
 

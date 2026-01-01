@@ -1,6 +1,6 @@
 FPK_NAME = curaengine
 FPK_VERS = 2.1.3
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/curaengine.png
 
 DEPENDS = cross/curaengine

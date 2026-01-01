@@ -1,6 +1,6 @@
 FPK_NAME = tdu
 FPK_VERS = 1.36
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/tdu
 

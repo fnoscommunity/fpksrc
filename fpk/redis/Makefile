@@ -1,6 +1,6 @@
 FPK_NAME = redis
 FPK_VERS = 7.4.5
-SPK_REV = 16
+FPK_REV = 16
 SPK_ICON = src/redis.png
 
 DEPENDS = cross/redis

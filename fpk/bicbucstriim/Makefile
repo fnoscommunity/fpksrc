@@ -1,6 +1,6 @@
 FPK_NAME = bicbucstriim
 FPK_VERS = 3.6.7
-SPK_REV = 11
+FPK_REV = 11
 SPK_ICON = src/bicbucstriim.png
 
 DEPENDS = cross/bicbucstriim

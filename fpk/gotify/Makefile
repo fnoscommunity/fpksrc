@@ -1,6 +1,6 @@
 FPK_NAME = gotify
 FPK_VERS = 2.1.4
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/gotify.png
 
 DEPENDS = cross/gotify-server cross/gotify-cli

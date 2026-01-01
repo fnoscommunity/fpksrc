@@ -1,6 +1,6 @@
 FPK_NAME = ombi
 FPK_VERS = 4.47.1
-SPK_REV = 6
+FPK_REV = 6
 SPK_ICON = src/ombi.png
 
 # Arch exclusions for dotnet 6.0

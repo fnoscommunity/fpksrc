@@ -1,6 +1,6 @@
 FPK_NAME = lua
 FPK_VERS = 5.4.8
-SPK_REV = 6
+FPK_REV = 6
 SPK_ICON = src/lua.png
 
 DEPENDS = cross/lua

@@ -1,6 +1,6 @@
 FPK_NAME = radarr
 FPK_VERS = $(shell date +%Y%m%d)
-SPK_REV = 24
+FPK_REV = 24
 SPK_ICON = src/radarr.png
 
 OPTIONAL_DEPENDS = cross/libstdc++ cross/libe_sqlite3
@@ -53,7 +53,7 @@ POST_STRIP_TARGET += radarr_extra_install
 
 include ../../mk/fpksrc.fpk.mk
 
-PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(SPK_REV)
+PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(FPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: radarr_custom_libe_sqlite3

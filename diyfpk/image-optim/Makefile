@@ -1,6 +1,6 @@
 FPK_NAME = image-optim
 FPK_VERS = 1.0
-SPK_REV = 1
+FPK_REV = 1
 
 # pngquant (pngquant3) must be built first
 OPTIONAL_DEPENDS = cross/pngquant

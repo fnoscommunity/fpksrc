@@ -1,6 +1,6 @@
 FPK_NAME = demowebservice
 FPK_VERS = 1.0
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/demowebservice.png
 
 DEPENDS =

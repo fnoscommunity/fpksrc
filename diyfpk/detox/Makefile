@@ -1,6 +1,6 @@
 FPK_NAME = detox
 FPK_VERS = 3.0.1
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/detox_logo.png
 
 DEPENDS = cross/detox

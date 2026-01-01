@@ -1,6 +1,6 @@
 FPK_NAME = rmlint
 FPK_VERS = 2.10.3
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/rmlint-logo.png
 
 DEPENDS = cross/rmlint

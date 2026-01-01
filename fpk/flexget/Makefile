@@ -1,6 +1,6 @@
 FPK_NAME = flexget
 FPK_VERS = 3.16.3
-SPK_REV = 17
+FPK_REV = 17
 SPK_ICON = src/flexget.png
 
 # Python 3.12 not supported for:

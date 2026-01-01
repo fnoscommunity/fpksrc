@@ -1,6 +1,6 @@
 FPK_NAME = synocli-net
 FPK_VERS = 2.6
-SPK_REV = 21
+FPK_REV = 21
 SPK_ICON = src/synocli-net.png
 
 DEPENDS  = cross/tmux

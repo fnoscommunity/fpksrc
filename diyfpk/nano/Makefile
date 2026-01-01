@@ -1,6 +1,6 @@
 FPK_NAME = nano
 FPK_VERS = 8.7
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/nano.png
 
 DEPENDS = cross/nano

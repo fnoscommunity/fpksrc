@@ -1,6 +1,6 @@
 FPK_NAME = imapfilter
 FPK_VERS = 2.8.3
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/imapfilter
 

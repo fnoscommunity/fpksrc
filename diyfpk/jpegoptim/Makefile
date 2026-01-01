@@ -1,6 +1,6 @@
 FPK_NAME = jpegoptim
 FPK_VERS = 1.4.6
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/jpegoptim
 

@@ -1,6 +1,6 @@
 FPK_NAME = vim
 FPK_VERS = 9.1
-SPK_REV = 8
+FPK_REV = 8
 SPK_ICON = src/vim.png
 
 DEPENDS = cross/vim

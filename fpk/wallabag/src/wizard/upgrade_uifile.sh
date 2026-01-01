@@ -19,8 +19,8 @@ page_append ()
 checkDatabaseUpgrade()
 {
     if [[ "${SYNOPKG_OLD_PKGVER}" =~ ^[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+-[[:digit:]]+$ ]]; then
-        SPK_REV="${SYNOPKG_OLD_PKGVER##*-}"
-        if [[ "${SPK_REV}" -le 3 ]]; then
+        FPK_REV="${SYNOPKG_OLD_PKGVER##*-}"
+        if [[ "${FPK_REV}" -le 3 ]]; then
             return 0  # true
         else
             return 1  # false

@@ -1,6 +1,6 @@
 FPK_NAME = nzbhydra
 FPK_VERS = 0.2.233
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/nzbhydra.png
 
 DEPENDS =

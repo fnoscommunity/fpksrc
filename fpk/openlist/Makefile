@@ -1,6 +1,6 @@
 FPK_NAME = openlist
 FPK_VERS = 4.1.8
-SPK_REV = 6
+FPK_REV = 6
 SPK_ICON = src/openlist.png
 
 DEPENDS = cross/openlist

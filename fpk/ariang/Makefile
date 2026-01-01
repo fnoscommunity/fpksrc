@@ -1,6 +1,6 @@
 FPK_NAME = ariang
 FPK_VERS = 1.3.7
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/ariang.png
 DSM_UI_DIR = app
 

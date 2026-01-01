@@ -1,6 +1,6 @@
 FPK_NAME = rhash
 FPK_VERS = 1.4.6
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/rhash
 

@@ -1,6 +1,6 @@
 FPK_NAME = pixz
 FPK_VERS = 1.0.7
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/pixz
 

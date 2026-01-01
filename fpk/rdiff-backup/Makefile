@@ -1,6 +1,6 @@
 FPK_NAME = rdiff-backup
 FPK_VERS = 2.2.6
-SPK_REV = 7
+FPK_REV = 7
 SPK_ICON = src/rdiff-backup.png
 
 PYTHON_PACKAGE = python312

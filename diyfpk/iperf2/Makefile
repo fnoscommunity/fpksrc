@@ -1,6 +1,6 @@
 FPK_NAME = iperf2
 FPK_VERS = 2.2.1
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/iperf2.png
 
 DEPENDS = cross/iperf2

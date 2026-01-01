@@ -1,6 +1,6 @@
 FPK_NAME = htpcmanager
 FPK_VERS = $(shell date +%Y%m%d)
-SPK_REV = 4
+FPK_REV = 4
 SPK_ICON = src/htpcmanager.png
 DSM_UI_DIR = app
 

@@ -1,6 +1,6 @@
 FPK_NAME = nmap
 FPK_VERS = 7.97
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/nmap.png
 
 OPTIONAL_DEPENDS = cross/nmap cross/nmap_7.92

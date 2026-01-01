@@ -1,6 +1,6 @@
 FPK_NAME = procutils
 FPK_VERS = 1.35.0
-SPK_REV = 1
+FPK_REV = 1
 
 # procutils of busybox, according to synocli-monitor package
 DEPENDS = cross/busybox

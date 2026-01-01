@@ -1,6 +1,6 @@
 FPK_NAME = duf
 FPK_VERS = 0.9.1
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/duf
 

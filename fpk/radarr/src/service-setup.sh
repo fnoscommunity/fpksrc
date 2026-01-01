@@ -9,7 +9,7 @@ RADARR_CONFIG_DIR="${CONFIG_DIR}/Radarr"
 PID_FILE="${RADARR_CONFIG_DIR}/radarr.pid"
 CMD_ARGS="-nobrowser -data=${RADARR_CONFIG_DIR}"
 
-# SPK_REV 15 has it in the wrong place for DSM 7
+# FPK_REV 15 has it in the wrong place for DSM 7
 LEGACY_CONFIG_DIR="${SYNOPKG_PKGDEST}/var/.config"
 
 if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then

@@ -1,7 +1,7 @@
 FPK_NAME = python311-wheels
 FPK_VERS = 1.0
 FPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(FPK_VERS))).$(word 2,$(subst ., ,$(FPK_VERS)))
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/python3-pip.png
 
 # Platform "powerpc-none-linux-gnuspe" with compiler "gcc" is not supported by the

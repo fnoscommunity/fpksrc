@@ -1,6 +1,6 @@
 FPK_NAME = squidguard
 FPK_VERS = 1.6
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/squidguard.png
 BETA = 1
 

@@ -1,6 +1,6 @@
 FPK_NAME = sshfs2
 FPK_VERS = 2.10
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/sshfs2
 

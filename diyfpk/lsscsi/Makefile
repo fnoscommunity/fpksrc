@@ -1,6 +1,6 @@
 FPK_NAME = lsscsi
 FPK_VERS = 0.31
-SPK_REV = 2
+FPK_REV = 2
 
 DEPENDS = cross/lsscsi
 

@@ -1,6 +1,6 @@
 FPK_NAME = mtr
 FPK_VERS = 0.96
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/mtr
 

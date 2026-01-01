@@ -1,6 +1,6 @@
 FPK_NAME = wallabag
 FPK_VERS = 2.6.14
-SPK_REV = 9
+FPK_REV = 9
 SPK_ICON = src/wallabag.png
 
 DEPENDS  = cross/wallabag

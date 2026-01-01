@@ -1,6 +1,6 @@
 FPK_NAME = borgbackup
 FPK_VERS = 1.4.3
-SPK_REV = 20
+FPK_REV = 20
 SPK_ICON = src/borgbackup.png
 
 PYTHON_PACKAGE = python312

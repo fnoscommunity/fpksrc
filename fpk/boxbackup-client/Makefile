@@ -1,6 +1,6 @@
 FPK_NAME = boxbackup-client
 FPK_VERS = 0.12
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/boxbackup.png
 
 DEPENDS = cross/boxbackup

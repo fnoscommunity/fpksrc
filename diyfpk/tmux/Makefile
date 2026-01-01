@@ -1,6 +1,6 @@
 FPK_NAME = tmux
 FPK_VERS = 3.5a
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/tmux.png
 
 DEPENDS = cross/tmux

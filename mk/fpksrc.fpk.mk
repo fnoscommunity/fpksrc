@@ -92,7 +92,7 @@ OS_MIN_VER = $(TC_OS_MIN_VER)
 endif
 endif
 
-FPK_FILE_NAME = $(PACKAGES_DIR)/$(FPK_NAME)_$(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(SPK_REV).fpk
+FPK_FILE_NAME = $(PACKAGES_DIR)/$(FPK_NAME)_$(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(FPK_REV).fpk
 
 #####
 
@@ -182,7 +182,7 @@ $(WORK_DIR)/manifest:
 	   fi; \
 	fi
 	@echo package=\"$(FPK_NAME)\" > $@
-	@echo version=\"$(FPK_VERS)-$(SPK_REV)\" >> $@
+	@echo version=\"$(FPK_VERS)-$(FPK_REV)\" >> $@
 	@/bin/echo -n "desc=\"" >> $@
 	@/bin/echo -n "${DESCRIPTION}" | sed -e 's/\\//g' -e 's/"/\\"/g' >> $@
 	@echo "\"" >> $@

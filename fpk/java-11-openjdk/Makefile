@@ -4,7 +4,7 @@ JAVA_NAME = jdk
 JAVA_RELEASE = 7
 JAVA_VERSION = 11.0.12
 FPK_VERS = $(JAVA_VERSION).$(JAVA_RELEASE)
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/java-11-openjdk.png
 
 DEPENDS = cross/java-11-openjdk

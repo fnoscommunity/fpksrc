@@ -1,6 +1,6 @@
 FPK_NAME = chromaprint
 FPK_VERS = 1.6.0
-SPK_REV = 24
+FPK_REV = 24
 SPK_ICON = src/chromaprint.png
 
 FFMPEG_PACKAGE = ffmpeg7

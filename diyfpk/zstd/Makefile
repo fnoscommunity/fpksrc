@@ -1,6 +1,6 @@
 FPK_NAME = zstd
 FPK_VERS = 1.5.7
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/zstd.png
 
 DEPENDS = cross/zstd

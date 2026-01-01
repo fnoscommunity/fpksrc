@@ -1,6 +1,6 @@
 FPK_NAME = helix
 FPK_VERS = 25.07.1
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/helix.png
 
 DEPENDS = cross/helix

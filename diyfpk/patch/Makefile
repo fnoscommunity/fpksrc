@@ -1,6 +1,6 @@
 FPK_NAME = patch
 FPK_VERS = 2.8
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/patch
 

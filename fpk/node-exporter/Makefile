@@ -1,6 +1,6 @@
 FPK_NAME = node-exporter
 FPK_VERS = 1.8.2
-SPK_REV = 5
+FPK_REV = 5
 SPK_ICON = src/node-exporter.png
 
 DEPENDS = cross/node-exporter

@@ -1,6 +1,6 @@
 FPK_NAME = dos2unix
 FPK_VERS = 7.5.3
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/dos2unix
 

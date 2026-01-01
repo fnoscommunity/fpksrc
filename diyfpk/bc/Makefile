@@ -1,6 +1,6 @@
 FPK_NAME = bc
 FPK_VERS = 1.06
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/gnu-logo.png
 
 DEPENDS = cross/bc

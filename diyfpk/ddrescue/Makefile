@@ -1,6 +1,6 @@
 FPK_NAME = ddrescue
 FPK_VERS = 1.29
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/gnu-logo.png
 
 DEPENDS = cross/ddrescue

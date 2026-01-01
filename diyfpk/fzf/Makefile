@@ -1,6 +1,6 @@
 FPK_NAME = fzf
 FPK_VERS = 0.67.0
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/fzf.png
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)

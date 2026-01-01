@@ -1,6 +1,6 @@
 FPK_NAME = mg
 FPK_VERS = 3.7
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/unix.png
 
 DEPENDS = cross/mg

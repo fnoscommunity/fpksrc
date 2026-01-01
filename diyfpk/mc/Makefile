@@ -1,6 +1,6 @@
 FPK_NAME = mc
 FPK_VERS = 4.8.33
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/mc.png
 
 DEPENDS = cross/mc

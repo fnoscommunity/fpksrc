@@ -1,6 +1,6 @@
 FPK_NAME = expect
 FPK_VERS = 5.45.4
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/expect
 

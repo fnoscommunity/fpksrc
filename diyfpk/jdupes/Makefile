@@ -1,6 +1,6 @@
 FPK_NAME = jdupes
 FPK_VERS = 1.30.0
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/jdupes.png
 
 DEPENDS = cross/jdupes

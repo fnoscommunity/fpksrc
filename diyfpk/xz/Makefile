@@ -1,6 +1,6 @@
 FPK_NAME = xz
 FPK_VERS = 5.6.3
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/xz
 

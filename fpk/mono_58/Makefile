@@ -1,6 +1,6 @@
 FPK_NAME = mono
 FPK_VERS = 5.8.0.108
-SPK_REV = 11
+FPK_REV = 11
 SPK_ICON = src/mono.png
 
 DEPENDS = cross/mono_58

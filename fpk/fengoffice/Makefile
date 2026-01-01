@@ -1,6 +1,6 @@
 FPK_NAME = fengoffice
 FPK_VERS = 3.11.8.0
-SPK_REV = 8
+FPK_REV = 8
 SPK_ICON = src/fengoffice.png
 
 DEPENDS = cross/fengoffice

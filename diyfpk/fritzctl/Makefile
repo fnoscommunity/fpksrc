@@ -1,6 +1,6 @@
 FPK_NAME = fritzctl
 FPK_VERS = 1.4.23
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/fritzctl.png
 
 DEPENDS = cross/fritzctl

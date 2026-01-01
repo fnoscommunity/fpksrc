@@ -1,6 +1,6 @@
 FPK_NAME = ffmpeg5
 FPK_VERS = 5.1.6
-SPK_REV = 6
+FPK_REV = 6
 SPK_ICON = src/ffmpeg.png
 CHANGELOG = "1. Update to version 5.1.6"
 

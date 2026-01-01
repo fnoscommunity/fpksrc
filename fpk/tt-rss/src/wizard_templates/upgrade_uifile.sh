@@ -84,8 +84,8 @@ EOF
 
 
 if [[ "${SYNOPKG_OLD_PKGVER}" =~ [[:digit:]]{8}-[[:digit:]]+ ]]; then
-  SPK_REV="${SYNOPKG_OLD_PKGVER//[0-9]*-}"
-  if [[ "${SPK_REV}" -lt 15 ]]; then
+  FPK_REV="${SYNOPKG_OLD_PKGVER//[0-9]*-}"
+  if [[ "${FPK_REV}" -lt 15 ]]; then
       with_migration
   else
       without_migration

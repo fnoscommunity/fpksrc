@@ -1,6 +1,6 @@
 FPK_NAME = sshfs3
 FPK_VERS = 3.7.3
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/sshfs3
 

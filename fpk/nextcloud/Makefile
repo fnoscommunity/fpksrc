@@ -1,6 +1,6 @@
 FPK_NAME = nextcloud
 FPK_VERS = 32.0.2
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/nextcloud.png
 
 DEPENDS =

@@ -1,6 +1,6 @@
 FPK_NAME = readarr
 FPK_VERS = $(shell date +%Y%m%d)
-SPK_REV = 5
+FPK_REV = 5
 SPK_ICON = src/readarr.png
 
 OPTIONAL_DEPENDS = cross/libstdc++
@@ -44,7 +44,7 @@ endif
 
 include ../../mk/fpksrc.fpk.mk
 
-PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(SPK_REV)
+PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(FPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: readarr_extra_install

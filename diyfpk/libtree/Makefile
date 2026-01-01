@@ -1,6 +1,6 @@
 FPK_NAME = libtree
 FPK_VERS = 3.1.1
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/libtree
 

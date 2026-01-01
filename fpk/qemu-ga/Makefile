@@ -1,6 +1,6 @@
 FPK_NAME = qemu-ga
 FPK_VERS = 9.2.0
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/qemu.png
 
 DEPENDS = cross/qemu

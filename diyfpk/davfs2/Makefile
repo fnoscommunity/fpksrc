@@ -1,6 +1,6 @@
 FPK_NAME = davfs2
 FPK_VERS = 1.7.2
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/davfs2.png
 
 DEPENDS = cross/davfs2

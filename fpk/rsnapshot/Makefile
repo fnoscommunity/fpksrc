@@ -1,6 +1,6 @@
 FPK_NAME = rsnapshot
 FPK_VERS = 1.4.4
-SPK_REV = 4
+FPK_REV = 4
 SPK_ICON = src/rsnapshot.png
 
 DEPENDS = cross/rsnapshot

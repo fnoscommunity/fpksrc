@@ -1,6 +1,6 @@
 FPK_NAME = uhubctl
 FPK_VERS = 2.5.0
-SPK_REV = 1
+FPK_REV = 1
 
 DEPENDS = cross/uhubctl
 

@@ -1,6 +1,6 @@
 FPK_NAME = byobu
 FPK_VERS = 5.133
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/byobu.png
 
 PYTHON_PACKAGE = python312

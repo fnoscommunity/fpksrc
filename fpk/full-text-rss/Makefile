@@ -1,6 +1,6 @@
 FPK_NAME = full-text-rss
 FPK_VERS = 3.3.$(shell date +%Y%m%d)
-SPK_REV = 4
+FPK_REV = 4
 SPK_ICON = src/full-text-rss.png
 DSM_UI_DIR = app
 

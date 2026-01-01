@@ -1,6 +1,6 @@
 FPK_NAME = stunnel
 FPK_VERS = 5.60
-SPK_REV = 2
+FPK_REV = 2
 SPK_ICON = src/stunnel.png
 
 DEPENDS = cross/stunnel

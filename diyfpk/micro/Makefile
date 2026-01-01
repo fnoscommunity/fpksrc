@@ -1,6 +1,6 @@
 FPK_NAME = micro
 FPK_VERS = 2.0.14
-SPK_REV = 1
+FPK_REV = 1
 SPK_ICON = src/micro.png
 
 DEPENDS = cross/micro
