@@ -4,7 +4,7 @@ SPK_REV = 5
 SPK_ICON = src/dnscrypt-proxy.png
 
 DEPENDS = cross/dnscrypt-proxy
-SPK_CONFLICT = DNSServer
+FPK_CONFLICT = DNSServer
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 
 MAINTAINER = publicarray

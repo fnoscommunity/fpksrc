@@ -286,8 +286,8 @@ endif
 ifneq ($(strip $(CONF_DIR)),)
 	@echo support_conf_folder=\"yes\" >> $@
 endif
-ifneq ($(strip $(SPK_CONFLICT)),)
-	@echo install_conflict_packages=\"$(SPK_CONFLICT)\" >> $@
+ifneq ($(strip $(FPK_CONFLICT)),)
+	@echo install_conflict_packages=\"$(FPK_CONFLICT)\" >> $@
 endif
 	@echo checksum=\"$$(md5sum $(WORK_DIR)/app.tgz | cut -d" " -f1)\" >> $@
 	@echo source=\"thirdparty\" >> $@

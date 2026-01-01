@@ -1,5 +1,5 @@
 FPK_NAME = zsh-static
-SPK_CONFLICT = zsh
+FPK_CONFLICT = zsh
 SPK_REV = 10
 
 export ZSH_STATIC_MODULES=true
