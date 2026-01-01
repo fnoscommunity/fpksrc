@@ -1,4 +1,4 @@
-SPK_NAME = pixz
+FPK_NAME = pixz
 SPK_VERS = 1.0.7
 SPK_REV = 1
 

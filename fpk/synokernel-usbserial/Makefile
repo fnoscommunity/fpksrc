@@ -1,4 +1,4 @@
-SPK_NAME = synokernel-usbserial
+FPK_NAME = synokernel-usbserial
 SPK_VERS = 1.2
 SPK_REV = 10
 SPK_ICON = src/synokernel-usbserial.png
@@ -44,6 +44,6 @@ usbserial_strip:
 .PHONY: usbserial_extra_install
 usbserial_extra_install:
 	install -m 755 -d $(STAGING_DIR)/rules.d
-	install -m 644 src/60-$(SPK_NAME).rules $(STAGING_DIR)/rules.d/60-$(SPK_NAME).rules
+	install -m 644 src/60-$(FPK_NAME).rules $(STAGING_DIR)/rules.d/60-$(FPK_NAME).rules
 	install -m 755 -d $(STAGING_DIR)/etc
-	install -m 644 src/$(SPK_NAME).cfg $(STAGING_DIR)/etc/$(SPK_NAME).cfg
+	install -m 644 src/$(FPK_NAME).cfg $(STAGING_DIR)/etc/$(FPK_NAME).cfg

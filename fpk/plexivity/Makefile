@@ -1,4 +1,4 @@
-SPK_NAME = plexivity
+FPK_NAME = plexivity
 SPK_VERS = 0.9.9
 SPK_REV = 4
 SPK_ICON = src/plexivity.png
@@ -20,10 +20,10 @@ LICENSE    = GPL
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
-FWPORTS          = src/${SPK_NAME}.sc
+FWPORTS          = src/${FPK_NAME}.sc
 CONF_DIR         = src/conf/
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = plexivity_extra_install
 

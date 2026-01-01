@@ -1,4 +1,4 @@
-SPK_NAME = rnm
+FPK_NAME = rnm
 SPK_VERS = 4.0.9
 SPK_REV = 1
 

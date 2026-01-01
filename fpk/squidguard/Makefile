@@ -1,4 +1,4 @@
-SPK_NAME = squidguard
+FPK_NAME = squidguard
 SPK_VERS = 1.6
 SPK_REV = 2
 SPK_ICON = src/squidguard.png
@@ -22,7 +22,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
-FWPORTS          = src/${SPK_NAME}.sc
+FWPORTS          = src/${FPK_NAME}.sc
 CONF_DIR         = src/conf/
 
 POST_STRIP_TARGET = xz-compress

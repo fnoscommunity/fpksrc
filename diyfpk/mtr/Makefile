@@ -1,4 +1,4 @@
-SPK_NAME = mtr
+FPK_NAME = mtr
 SPK_VERS = 0.96
 SPK_REV = 1
 

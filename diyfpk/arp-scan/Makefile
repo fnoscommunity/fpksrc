@@ -1,4 +1,4 @@
-SPK_NAME = arp-scan
+FPK_NAME = arp-scan
 SPK_VERS = 1.9.8
 SPK_REV = 1
 

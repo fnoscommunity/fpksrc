@@ -1,4 +1,4 @@
-SPK_NAME = gotify
+FPK_NAME = gotify
 SPK_VERS = 2.1.4
 SPK_REV = 1
 SPK_ICON = src/gotify.png

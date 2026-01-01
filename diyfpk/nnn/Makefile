@@ -1,4 +1,4 @@
-SPK_NAME = nnn
+FPK_NAME = nnn
 SPK_VERS = 5.1
 SPK_REV = 1
 SPK_ICON = src/nnn.png

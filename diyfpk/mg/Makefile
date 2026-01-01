@@ -1,4 +1,4 @@
-SPK_NAME = mg
+FPK_NAME = mg
 SPK_VERS = 3.7
 SPK_REV = 1
 SPK_ICON = src/unix.png

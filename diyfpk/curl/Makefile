@@ -1,4 +1,4 @@
-SPK_NAME = curl
+FPK_NAME = curl
 SPK_VERS = 8.4.0
 SPK_REV = 1
 

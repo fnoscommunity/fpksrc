@@ -1,4 +1,4 @@
-SPK_NAME = subliminal
+FPK_NAME = subliminal
 SPK_VERS = 0.7.5
 SPK_REV = 12
 SPK_ICON = src/subliminal.png
@@ -25,7 +25,7 @@ SSS_SCRIPT       = src/dsm-control.sh
 CONF_DIR         = src/conf/
 WIZARDS_DIR      = src/wizard/
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = subliminal_extra_install
 

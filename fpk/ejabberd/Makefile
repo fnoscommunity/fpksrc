@@ -1,4 +1,4 @@
-SPK_NAME = ejabberd
+FPK_NAME = ejabberd
 SPK_VERS = 21.07
 SPK_REV = 2
 SPK_ICON = src/ejabberd.png
@@ -26,7 +26,7 @@ SERVICE_SETUP = src/service-setup.sh
 # as SERVICE_COMMAND is not a single command
 SSS_SCRIPT = src/service-start-stop.sh
 
-FWPORTS = src/${SPK_NAME}.sc
+FWPORTS = src/${FPK_NAME}.sc
 
 SPK_COMMANDS = bin/ejabberdctl
 

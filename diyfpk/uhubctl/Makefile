@@ -1,4 +1,4 @@
-SPK_NAME = uhubctl
+FPK_NAME = uhubctl
 SPK_VERS = 2.5.0
 SPK_REV = 1
 

@@ -1,4 +1,4 @@
-SPK_NAME   = octoprint
+FPK_NAME   = octoprint
 SPK_VERS   = 1.11.5
 SPK_REV    = 15
 SPK_ICON   = src/octoprint.png

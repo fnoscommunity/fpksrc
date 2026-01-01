@@ -1,4 +1,4 @@
-SPK_NAME = tcl
+FPK_NAME = tcl
 SPK_VERS = 8.6.14
 SPK_MAIN_VERS=$(word 1,$(subst ., ,$(SPK_VERS))).$(word 2,$(subst ., ,$(SPK_VERS)))
 SPK_REV = 8

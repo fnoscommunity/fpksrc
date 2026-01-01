@@ -1,4 +1,4 @@
-SPK_NAME = dnscrypt-proxy
+FPK_NAME = dnscrypt-proxy
 SPK_VERS = 2.0.44
 SPK_REV = 5
 SPK_ICON = src/dnscrypt-proxy.png
@@ -19,7 +19,7 @@ STARTABLE = yes
 WIZARDS_DIR = src/wizard/
 DSM_UI_DIR = ui
 CONF_DIR = src/conf
-FWPORTS = src/${SPK_NAME}.sc
+FWPORTS = src/${FPK_NAME}.sc
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 SERVICE_PORT = 53

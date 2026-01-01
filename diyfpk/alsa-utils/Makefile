@@ -1,4 +1,4 @@
-SPK_NAME = alsa-utils
+FPK_NAME = alsa-utils
 SPK_VERS = 1.2.9
 SPK_REV = 1
 

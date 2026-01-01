@@ -1,4 +1,4 @@
-SPK_NAME = kopia
+FPK_NAME = kopia
 SPK_VERS = 0.21.1
 SPK_REV = 5
 SPK_ICON = src/kopia.png

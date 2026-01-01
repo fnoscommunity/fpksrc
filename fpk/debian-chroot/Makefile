@@ -1,4 +1,4 @@
-SPK_NAME = debian-chroot
+FPK_NAME = debian-chroot
 SPK_VERS = 8.4
 SPK_REV = 7
 SPK_ICON = src/debian.png
@@ -23,7 +23,7 @@ HELPURL  = https://github.com/fnoscommunity/fpksrc/wiki/Debian-Chroot
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = debian-chroot_extra_install
 

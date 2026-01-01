@@ -1,4 +1,4 @@
-SPK_NAME = rhash
+FPK_NAME = rhash
 SPK_VERS = 1.4.6
 SPK_REV = 1
 
@@ -32,4 +32,4 @@ include ../../mk/fpksrc.fpk.mk
 .PHONY: rhash_extra_install
 rhash_extra_install:
 	@$(MSG) "Set library runpath in rhash executable."
-	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/rhash
+	@patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib $(STAGING_DIR)/bin/rhash

@@ -1,4 +1,4 @@
-SPK_NAME = fish
+FPK_NAME = fish
 SPK_VERS = 4.0.2
 SPK_REV = 8
 SPK_ICON = src/fish.png
@@ -15,7 +15,7 @@ CHANGELOG = "Update fish to v4.0.2"
 
 HOMEPAGE = https://fishshell.com
 LICENSE = GPL-2.0
-LICENSE_FILE = $(WORK_DIR)/$(SPK_NAME)-$(SPK_VERS)/COPYING
+LICENSE_FILE = $(WORK_DIR)/$(FPK_NAME)-$(SPK_VERS)/COPYING
 
 SERVICE_SETUP = src/service-setup.sh
 

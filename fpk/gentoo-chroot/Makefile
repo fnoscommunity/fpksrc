@@ -1,4 +1,4 @@
-SPK_NAME = gentoo-chroot
+FPK_NAME = gentoo-chroot
 SPK_VERS = 13.0
 SPK_REV = 1
 SPK_ICON = src/gentoo.png
@@ -21,7 +21,7 @@ SUPPORTURL = https://www.gentoo.org/main/en/support.xml
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = gentoo-chroot_extra_install
 

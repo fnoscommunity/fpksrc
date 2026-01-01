@@ -1,4 +1,4 @@
-SPK_NAME = file
+FPK_NAME = file
 SPK_VERS = 5.46
 SPK_REV = 1
 

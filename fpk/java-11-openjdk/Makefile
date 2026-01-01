@@ -1,4 +1,4 @@
-SPK_NAME = java-11-openjdk
+FPK_NAME = java-11-openjdk
 JAVA_REPO_NAME = jdk11u
 JAVA_NAME = jdk
 JAVA_RELEASE = 7

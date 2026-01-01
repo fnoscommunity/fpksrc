@@ -1,4 +1,4 @@
-SPK_NAME = fengoffice
+FPK_NAME = fengoffice
 SPK_VERS = 3.11.8.0
 SPK_REV = 8
 SPK_ICON = src/fengoffice.png

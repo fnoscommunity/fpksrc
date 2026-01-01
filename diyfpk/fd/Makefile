@@ -1,4 +1,4 @@
-SPK_NAME = fd
+FPK_NAME = fd
 SPK_VERS = 10.3.0
 SPK_REV = 1
 

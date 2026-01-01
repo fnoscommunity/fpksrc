@@ -1,4 +1,4 @@
-SPK_NAME = headphones-custom
+FPK_NAME = headphones-custom
 SPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 7
 SPK_ICON = src/headphones-custom.png

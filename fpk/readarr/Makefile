@@ -1,4 +1,4 @@
-SPK_NAME = readarr
+FPK_NAME = readarr
 SPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 5
 SPK_ICON = src/readarr.png
@@ -44,7 +44,7 @@ endif
 
 include ../../mk/fpksrc.fpk.mk
 
-PACKAGE_VERSION = $(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
+PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: readarr_extra_install

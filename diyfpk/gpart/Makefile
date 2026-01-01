@@ -1,4 +1,4 @@
-SPK_NAME = gpart
+FPK_NAME = gpart
 SPK_VERS = 0.3
 SPK_REV = 1
 

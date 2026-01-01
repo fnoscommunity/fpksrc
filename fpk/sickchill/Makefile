@@ -1,4 +1,4 @@
-SPK_NAME = sickchill
+FPK_NAME = sickchill
 SPK_VERS = 20240301
 SPK_REV = 12
 SPK_ICON = src/sickchill.png

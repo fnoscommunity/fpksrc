@@ -1,4 +1,4 @@
-SPK_NAME = ffsync
+FPK_NAME = ffsync
 SPK_VERS = 0.21.1
 SPK_REV = 9
 SPK_ICON = src/ffsync.png
@@ -62,5 +62,5 @@ ffsync_extra_install:
 	@install -m 755 -d $(STAGING_DIR)/var
 	@install -m 644 src/var/local.toml $(STAGING_DIR)/var/
 	@$(MSG) Patch binaries built with rust to find shared libraries
-	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib:/var/apps/$(PYTHON_PACKAGE)/target/lib $(STAGING_DIR)/bin/syncserver
-	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/diesel
+	@patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib:/var/apps/$(PYTHON_PACKAGE)/target/lib $(STAGING_DIR)/bin/syncserver
+	@patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib $(STAGING_DIR)/bin/diesel

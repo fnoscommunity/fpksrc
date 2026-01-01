@@ -1,4 +1,4 @@
-SPK_NAME = monitoring-plugins
+FPK_NAME = monitoring-plugins
 SPK_VERS = 2.3.1
 SPK_REV = 2
 SPK_ICON = src/monitoring-plugins.png

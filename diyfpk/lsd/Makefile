@@ -1,4 +1,4 @@
-SPK_NAME = lsd
+FPK_NAME = lsd
 SPK_VERS = 1.2.0
 SPK_REV = 1
 

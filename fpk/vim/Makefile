@@ -1,4 +1,4 @@
-SPK_NAME = vim
+FPK_NAME = vim
 SPK_VERS = 9.1
 SPK_REV = 8
 SPK_ICON = src/vim.png

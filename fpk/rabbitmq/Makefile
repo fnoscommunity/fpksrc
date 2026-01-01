@@ -1,4 +1,4 @@
-SPK_NAME = rabbitmq
+FPK_NAME = rabbitmq
 SPK_VERS = 3.10.24
 SPK_REV = 8
 SPK_ICON = src/rabbitmq.png

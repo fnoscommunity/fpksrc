@@ -1,4 +1,4 @@
-SPK_NAME = zstd
+FPK_NAME = zstd
 SPK_VERS = 1.5.7
 SPK_REV = 1
 SPK_ICON = src/zstd.png

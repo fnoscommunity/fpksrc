@@ -55,7 +55,7 @@ PIP ?= pip
 PIP_SYSTEM = $(shell which pip)
 
 # System default pip outside from build environment
-PIP_NATIVE = $(WORK_DIR)/../../../native/$(or $(PYTHON_PACKAGE),$(SPK_NAME))/work-native/install/usr/local/bin/pip
+PIP_NATIVE = $(WORK_DIR)/../../../native/$(or $(PYTHON_PACKAGE),$(FPK_NAME))/work-native/install/usr/local/bin/pip
 
 # Why ask for the same thing twice? Always cache downloads
 PIP_CACHE_OPT ?= --find-links $(PIP_DISTRIB_DIR) --cache-dir $(PIP_CACHE_DIR)

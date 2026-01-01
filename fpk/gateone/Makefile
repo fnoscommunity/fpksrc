@@ -1,4 +1,4 @@
-SPK_NAME = gateone
+FPK_NAME = gateone
 SPK_VERS = 20171125
 SPK_REV = 9
 SPK_ICON = src/gateone.png
@@ -17,7 +17,7 @@ CHANGELOG = "1. Update Gateone to revision 6ae1d01, 2. Update dtach to v0.9, 3. 
 HOMEPAGE = http://liftoffsoftware.com/Products/GateOne
 LICENSE = AGPLv3
 
-# 'auto' reserved value grabs SPK_NAME
+# 'auto' reserved value grabs FPK_NAME
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 

@@ -1,4 +1,4 @@
-SPK_NAME = ionice
+FPK_NAME = ionice
 SPK_VERS = 2.41.2
 SPK_REV = 1
 

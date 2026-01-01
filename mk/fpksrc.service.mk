@@ -4,9 +4,9 @@
 #   cmd/main
 #   cmd/service-setup
 #   config/privilege         if SERVICE_USER or DSM7
-#   config/$(SPK_NAME).sc    if SERVICE_PORT and DSM<7
+#   config/$(FPK_NAME).sc    if SERVICE_PORT and DSM<7
 #   config/resource          if SERVICE_CERT or DSM7
-#   app/$(SPK_NAME).sc     if SERVICE_PORT and DSM7
+#   app/$(FPK_NAME).sc     if SERVICE_PORT and DSM7
 #   app/config             if SPK_ICON and SERVICE_PORT but not NO_SERVICE_SHORTCUT (may be overwritten by DSM_UI_CONFIG)
 #
 # Targets are executed in the following order:
@@ -31,7 +31,7 @@
 #                                SERVICE_WIZARD_GROUP is not supported anymore (not compatible with DSM 7 and DSM 6 using resource worker)
 # 
 #  SERVICE_USER                  (optional) runtime user account for generic service support.
-#                                "auto" is the only value supported with DSM 7 and defines sc-${SPK_NAME} as service user.
+#                                "auto" is the only value supported with DSM 7 and defines sc-${FPK_NAME} as service user.
 #  SPK_GROUP                     (optional) defines the group to use in privilege resource file
 #  SYSTEM_GROUP                  (optional) defines an additional group to join in privilege resource file
 #  STARTABLE                     default = true, must be "false" for packages that do not create a service (command line tools)
@@ -87,7 +87,7 @@ endif
 .PHONY: $(PRE_SERVICE_TARGET) $(SERVICE_TARGET) $(POST_SERVICE_TARGET)
 .PHONY: $(DSM_SCRIPTS_DIR)/service-setup $(DSM_SCRIPTS_DIR)/main
 .PHONY: $(DSM_CONF_DIR)/privilege $(DSM_CONF_DIR)/resource
-.PHONY: $(STAGING_DIR)/$(DSM_UI_DIR)/$(SPK_NAME).sc $(STAGING_DIR)/$(DSM_UI_DIR)/config
+.PHONY: $(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc $(STAGING_DIR)/$(DSM_UI_DIR)/config
 
 service_msg_target:
 	@$(MSG) "Generating service scripts for $(NAME)"
@@ -110,9 +110,9 @@ SERVICE_USER = auto
 endif
 endif
 
-# SERVICE_USER=auto uses SPK_NAME
+# SERVICE_USER=auto uses FPK_NAME
 ifeq ($(SERVICE_USER),auto)
-SPK_USER = $(SPK_NAME)
+SPK_USER = $(FPK_NAME)
 else ifneq ($(strip $(SERVICE_USER)),)
 $(error Only 'SERVICE_USER=auto' is supported since DSM7)
 endif
@@ -232,7 +232,7 @@ $(DSM_CONF_DIR)/resource:
 	@$(MSG) "Creating $@"
 	@echo '{}' > $@
 ifneq ($(strip $(SERVICE_PORT)),)
-	@jq '."port-config"."protocol-file" = "$(DSM_UI_DIR)/$(SPK_NAME).sc"' $@ | sponge $@
+	@jq '."port-config"."protocol-file" = "$(DSM_UI_DIR)/$(FPK_NAME).sc"' $@ | sponge $@
 endif
 ifneq ($(strip $(FWPORTS)),)
 # e.g. FWPORTS=src/foo.sc
@@ -394,28 +394,28 @@ SERVICE_FILES += $(DSM_CONF_DIR)/privilege
 # Generate service configuration for admin port
 ifeq ($(strip $(FWPORTS)),)
 ifneq ($(strip $(SERVICE_PORT)),)
-$(STAGING_DIR)/$(DSM_UI_DIR)/$(SPK_NAME).sc:
+$(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc:
 	$(create_target_dir)
-	@echo "[$(SPK_NAME)]" > $@
+	@echo "[$(FPK_NAME)]" > $@
 ifneq ($(strip $(SERVICE_PORT_TITLE)),)
 	@echo "title=\"$(SERVICE_PORT_TITLE)\"" >> $@
 else
-	@echo "title=\"$(SPK_NAME)\"" >> $@
+	@echo "title=\"$(FPK_NAME)\"" >> $@
 endif
 ifneq ($(strip $(DISPLAY_NAME)),)
 	@echo "desc=\"$(DISPLAY_NAME)\"" >> $@
 else
-	@echo "desc=\"$(SPK_NAME)\"" >> $@
+	@echo "desc=\"$(FPK_NAME)\"" >> $@
 endif
 	@echo "port_forward=\"yes\"" >> $@
 	@echo "dst.ports=\"${SERVICE_PORT}/tcp\"" >> $@
-SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/$(SPK_NAME).sc
+SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc
 endif
 else
-$(STAGING_DIR)/$(DSM_UI_DIR)/$(SPK_NAME).sc: $(filter %.sc,$(FWPORTS))
+$(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc: $(filter %.sc,$(FWPORTS))
 	@$(dsm_resource_copy)
 
-SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/$(SPK_NAME).sc
+SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc
 endif
 
 # Generate DSM UI configuration (app/config)
@@ -458,8 +458,8 @@ $(STAGING_DIR)/$(DSM_UI_DIR)/config:
 	$(create_target_dir)
 	@echo '{}' | jq --arg name "${DISPLAY_NAME}" \
 		--arg desc "${SERVICE_DESC}" \
-		--arg id "com.fnoscomm.pkgs.${SPK_NAME}" \
-		--arg icon "images/${SPK_NAME}-{0}.png" \
+		--arg id "com.fnoscomm.pkgs.${FPK_NAME}" \
+		--arg icon "images/${FPK_NAME}-{0}.png" \
 		--arg prot "${SERVICE_PORT_PROTOCOL}" \
 		--arg port "${SERVICE_PORT}" \
 		--arg url "${SERVICE_URL}" \

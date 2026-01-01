@@ -1,4 +1,4 @@
-SPK_NAME = etherwake
+FPK_NAME = etherwake
 SPK_VERS = 1.09
 SPK_REV = 1
 

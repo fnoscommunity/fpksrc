@@ -1,4 +1,4 @@
-SPK_NAME = ddrescue
+FPK_NAME = ddrescue
 SPK_VERS = 1.29
 SPK_REV = 1
 SPK_ICON = src/gnu-logo.png

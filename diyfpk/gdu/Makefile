@@ -1,4 +1,4 @@
-SPK_NAME = gdu
+FPK_NAME = gdu
 SPK_VERS = 5.31.0
 SPK_REV = 1
 

@@ -1,4 +1,4 @@
-SPK_NAME = ffmpeg6
+FPK_NAME = ffmpeg6
 SPK_VERS = 6.0.1
 SPK_REV = 5
 SPK_ICON = src/ffmpeg.png
@@ -15,10 +15,10 @@ STARTABLE = false
 HOMEPAGE = https://www.ffmpeg.org/
 LICENSE  = GPLv3
 
-POST_STRIP_TARGET = $(SPK_NAME)_extra_install
+POST_STRIP_TARGET = $(FPK_NAME)_extra_install
 
 SPK_COMMANDS  = bin/ffprobe
-SPK_COMMANDS += bin/$(SPK_NAME)
+SPK_COMMANDS += bin/$(FPK_NAME)
 
 include ../../mk/fpksrc.common.mk
 
@@ -34,6 +34,6 @@ endif
 
 include ../../mk/fpksrc.videodriver.mk
 
-.PHONY: $(SPK_NAME)_extra_install
-$(SPK_NAME)_extra_install:
-	cd $(STAGING_DIR)/bin && ln -sf ffmpeg $(SPK_NAME)
+.PHONY: $(FPK_NAME)_extra_install
+$(FPK_NAME)_extra_install:
+	cd $(STAGING_DIR)/bin && ln -sf ffmpeg $(FPK_NAME)

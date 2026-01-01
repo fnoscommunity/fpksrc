@@ -1,4 +1,4 @@
-SPK_NAME = autossh
+FPK_NAME = autossh
 SPK_VERS = 1.4g
 SPK_REV = 1
 

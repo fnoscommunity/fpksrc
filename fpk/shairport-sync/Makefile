@@ -1,4 +1,4 @@
-SPK_NAME = shairport-sync
+FPK_NAME = shairport-sync
 SPK_VERS = 2.3.11
 SPK_REV = 2
 SPK_ICON = src/shairport-sync.png
@@ -17,9 +17,9 @@ LICENSE  =
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
 
-FWPORTS          = src/${SPK_NAME}.sc
+FWPORTS          = src/${FPK_NAME}.sc
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = shairport_extra_install
 

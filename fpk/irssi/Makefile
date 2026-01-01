@@ -1,4 +1,4 @@
-SPK_NAME = irssi
+FPK_NAME = irssi
 SPK_VERS = 1.2.3
 SPK_REV = 3
 SPK_ICON = src/irssi.png

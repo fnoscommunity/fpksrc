@@ -1,4 +1,4 @@
-SPK_NAME = full-text-rss
+FPK_NAME = full-text-rss
 SPK_VERS = 3.3.$(shell date +%Y%m%d)
 SPK_REV = 4
 SPK_ICON = src/full-text-rss.png
@@ -21,7 +21,7 @@ SSS_SCRIPT       = src/dsm-control.sh
 
 INSTALL_DEP_SERVICES = apache-web
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 COPY_TARGET = nop
 POST_STRIP_TARGET = full-text-rss_extra_install

@@ -1,4 +1,4 @@
-SPK_NAME = testdisk
+FPK_NAME = testdisk
 SPK_VERS = 7.1
 SPK_REV = 1
 SPK_ICON = src/testdisk.png

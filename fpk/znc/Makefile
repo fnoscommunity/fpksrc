@@ -1,4 +1,4 @@
-SPK_NAME = znc
+FPK_NAME = znc
 SPK_VERS = 1.10.1
 SPK_REV = 27
 SPK_ICON = src/znc.png
@@ -26,7 +26,7 @@ REQUIRED_MIN_SRM = 1.3
 WIZARDS_DIR = src/wizard
 CONF_DIR = src/conf
 
-# 'auto' reserved value grabs SPK_NAME
+# 'auto' reserved value grabs FPK_NAME
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 

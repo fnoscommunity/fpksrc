@@ -1,4 +1,4 @@
-SPK_NAME = cloudflared
+FPK_NAME = cloudflared
 SPK_VERS = 2025.10.0
 SPK_REV = 20
 SPK_ICON = src/cloudflared.png

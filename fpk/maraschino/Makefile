@@ -1,4 +1,4 @@
-SPK_NAME = maraschino
+FPK_NAME = maraschino
 SPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 5
 SPK_ICON = src/maraschino.png
@@ -19,10 +19,10 @@ LICENSE    = MIT
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
-FWPORTS          = src/${SPK_NAME}.sc
+FWPORTS          = src/${FPK_NAME}.sc
 CONF_DIR         = src/conf/
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 COPY_TARGET = nop
 POST_STRIP_TARGET = maraschino_extra_install

@@ -1,4 +1,4 @@
-SPK_NAME = mergerfs
+FPK_NAME = mergerfs
 SPK_VERS = 2.40.2
 SPK_REV = 1
 

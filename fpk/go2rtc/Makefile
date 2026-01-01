@@ -1,4 +1,4 @@
-SPK_NAME = go2rtc
+FPK_NAME = go2rtc
 SPK_VERS = 1.9.13
 SPK_REV = 8
 SPK_ICON = src/go2rtc.png

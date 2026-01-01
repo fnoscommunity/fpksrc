@@ -1,4 +1,4 @@
-SPK_NAME = htpcmanager
+FPK_NAME = htpcmanager
 SPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 4
 SPK_ICON = src/htpcmanager.png
@@ -17,11 +17,11 @@ HOMEPAGE   = https://htpc.io
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
-FWPORTS          = src/${SPK_NAME}.sc
+FWPORTS          = src/${FPK_NAME}.sc
 CONF_DIR         = src/conf/
 WIZARDS_DIR      = src/wizard/
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 COPY_TARGET = nop
 
 POST_STRIP_TARGET = htpcmanager_extra_install

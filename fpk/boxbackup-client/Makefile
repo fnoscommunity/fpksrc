@@ -1,4 +1,4 @@
-SPK_NAME = boxbackup-client
+FPK_NAME = boxbackup-client
 SPK_VERS = 0.12
 SPK_REV = 2
 SPK_ICON = src/boxbackup.png
@@ -17,7 +17,7 @@ LICENSE  = BSD/GPL
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = boxbackup-client_extra_install
 

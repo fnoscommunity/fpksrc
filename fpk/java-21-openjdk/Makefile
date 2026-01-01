@@ -1,4 +1,4 @@
-SPK_NAME = java-21-openjdk
+FPK_NAME = java-21-openjdk
 JAVA_RELEASE = 11
 JAVA_VERSION = 21.0.5
 SPK_VERS = $(JAVA_VERSION).$(JAVA_RELEASE)

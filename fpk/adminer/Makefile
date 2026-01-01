@@ -1,4 +1,4 @@
-SPK_NAME = adminer
+FPK_NAME = adminer
 SPK_VERS = 5.4.1
 SPK_REV = 8
 SPK_ICON = src/adminer.png

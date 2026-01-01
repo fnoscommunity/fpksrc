@@ -1,4 +1,4 @@
-SPK_NAME = navidrome
+FPK_NAME = navidrome
 SPK_VERS = 0.58.5
 SPK_REV = 6
 SPK_ICON = src/navidrome.png
@@ -34,7 +34,7 @@ include ../../mk/fpksrc.fpk.mk
 .PHONY: navidrome_extra_install
 navidrome_extra_install:
 	@$(MSG) Add rpath to navidrome to find package libraries
-	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/navidrome
+	@patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib $(STAGING_DIR)/bin/navidrome
 	@$(MSG) Install navidrome.toml
 	@install -d -m 755 $(STAGING_DIR)/var
 	@install -m 644 src/navidrome.toml $(STAGING_DIR)/var/

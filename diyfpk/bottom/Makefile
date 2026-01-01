@@ -1,4 +1,4 @@
-SPK_NAME = bottom
+FPK_NAME = bottom
 SPK_VERS = 0.11.4
 SPK_REV = 1
 

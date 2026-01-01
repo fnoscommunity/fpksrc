@@ -1,4 +1,4 @@
-SPK_NAME = memaslap
+FPK_NAME = memaslap
 SPK_VERS = 1.0
 SPK_REV = 1
 

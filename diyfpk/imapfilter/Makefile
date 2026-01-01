@@ -1,4 +1,4 @@
-SPK_NAME = imapfilter
+FPK_NAME = imapfilter
 SPK_VERS = 2.8.3
 SPK_REV = 1
 

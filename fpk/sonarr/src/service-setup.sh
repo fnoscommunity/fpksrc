@@ -10,11 +10,11 @@ SONARR_CONFIG_DIR="${CONFIG_DIR}/Sonarr"
 PID_FILE="${SONARR_CONFIG_DIR}/sonarr.pid"
 CMD_ARGS="-nobrowser -data=${SONARR_CONFIG_DIR}"
 
-LEGACY_SPK_NAME="nzbdrone"
-LEGACY_SYNOPKG_PKGDEST="/var/apps/${LEGACY_SPK_NAME}/target"
+LEGACY_FPK_NAME="nzbdrone"
+LEGACY_SYNOPKG_PKGDEST="/var/apps/${LEGACY_FPK_NAME}/target"
 # check for legacy package data storage location
-if [ -d /var/apps/${LEGACY_SPK_NAME}/var ]; then
-    LEGACY_SYNOPKG_PKGVAR="/var/apps/${LEGACY_SPK_NAME}/var"
+if [ -d /var/apps/${LEGACY_FPK_NAME}/var ]; then
+    LEGACY_SYNOPKG_PKGVAR="/var/apps/${LEGACY_FPK_NAME}/var"
 else
     LEGACY_SYNOPKG_PKGVAR="${LEGACY_SYNOPKG_PKGDEST}/var"
 fi

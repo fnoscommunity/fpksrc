@@ -1,4 +1,4 @@
-SPK_NAME = iperf3
+FPK_NAME = iperf3
 SPK_VERS = 3.20
 SPK_REV = 1
 SPK_ICON = src/iperf3.png

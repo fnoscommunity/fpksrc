@@ -1,4 +1,4 @@
-SPK_NAME = nzbget
+FPK_NAME = nzbget
 SPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 30
 SPK_ICON = src/nzbget.png

@@ -1,4 +1,4 @@
-SPK_NAME = synocli-file
+FPK_NAME = synocli-file
 SPK_VERS = 4.0.2
 SPK_REV = 29
 SPK_ICON = src/synocli-file.png
@@ -177,4 +177,4 @@ endif
 .PHONY: synocli-file_extra_install
 synocli-file_extra_install:
 	@$(MSG) "Set library runpath in rhash executable."
-	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/bin/rhash
+	@patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib $(STAGING_DIR)/bin/rhash

@@ -1,7 +1,7 @@
-SPK_NAME = mtproxy
+FPK_NAME = mtproxy
 SPK_VERS = 1
 SPK_REV = 4
-SPK_ICON = src/${SPK_NAME}.jpg
+SPK_ICON = src/${FPK_NAME}.jpg
 
 REQUIRED_MIN_DSM = 5.2
 BETA = 1

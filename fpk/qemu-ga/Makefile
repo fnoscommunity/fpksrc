@@ -1,4 +1,4 @@
-SPK_NAME = qemu-ga
+FPK_NAME = qemu-ga
 SPK_VERS = 9.2.0
 SPK_REV = 1
 SPK_ICON = src/qemu.png

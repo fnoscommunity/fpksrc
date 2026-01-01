@@ -1,4 +1,4 @@
-SPK_NAME = lsscsi
+FPK_NAME = lsscsi
 SPK_VERS = 0.31
 SPK_REV = 2
 

@@ -1,4 +1,4 @@
-SPK_NAME = nmon
+FPK_NAME = nmon
 SPK_VERS = 16s
 SPK_REV = 1
 SPK_ICON = src/nmon.png

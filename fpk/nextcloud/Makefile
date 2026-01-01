@@ -1,4 +1,4 @@
-SPK_NAME = nextcloud
+FPK_NAME = nextcloud
 SPK_VERS = 32.0.2
 SPK_REV = 1
 SPK_ICON = src/nextcloud.png
@@ -49,6 +49,6 @@ include ../../mk/fpksrc.fpk.mk
 
 .PHONY: nextcloud_install
 nextcloud_install:
-	install -d -m 755 "$(INSTALL_DIR)/var/apps/$(SPK_NAME)/target/share/nextcloud"
-	install -m 644 "src/COPYING" "$(INSTALL_DIR)/var/apps/$(SPK_NAME)/target/share/nextcloud/COPYING"
-	install -m 644 "src/README" "$(INSTALL_DIR)/var/apps/$(SPK_NAME)/target/share/nextcloud/README"
+	install -d -m 755 "$(INSTALL_DIR)/var/apps/$(FPK_NAME)/target/share/nextcloud"
+	install -m 644 "src/COPYING" "$(INSTALL_DIR)/var/apps/$(FPK_NAME)/target/share/nextcloud/COPYING"
+	install -m 644 "src/README" "$(INSTALL_DIR)/var/apps/$(FPK_NAME)/target/share/nextcloud/README"

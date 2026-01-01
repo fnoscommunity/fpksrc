@@ -1,0 +1,19 @@
+[
+{
+    "stepTitle": "基本设置2",
+    "items": [{
+            "type": "text",
+            "helpText": "Web管理界面用户名，默认 admin",
+                "field": "wizard_username",
+                "label": "用户名"
+            
+        },
+        {
+            "type": "password",
+            "helpText": "Web管理界面密码，默认 admin",
+                "field": "wizard_password",
+                "label": "密码"
+        }
+    ]
+}
+]

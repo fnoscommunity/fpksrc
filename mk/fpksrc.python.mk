@@ -30,7 +30,7 @@ else
 export PYTHON_PACKAGE
 export PYTHON_PACKAGE_DIR
 export PYTHON_PACKAGE_WORK_DIR
-export SPK_NAME
+export FPK_NAME
 
 # Set Python installtion prefix directory variables
 ifeq ($(strip $(PYTHON_STAGING_INSTALL_PREFIX)),)

@@ -1,4 +1,4 @@
-SPK_NAME = fossil-scm
+FPK_NAME = fossil-scm
 SPK_VERS = 2.17
 SPK_REV = 3
 SPK_ICON = src/fossil-scm.png

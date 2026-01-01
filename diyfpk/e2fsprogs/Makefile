@@ -1,4 +1,4 @@
-SPK_NAME = e2fsprogs
+FPK_NAME = e2fsprogs
 SPK_VERS = 1.47.3
 SPK_REV = 1
 

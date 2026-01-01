@@ -1,4 +1,4 @@
-SPK_NAME = lm-sensors
+FPK_NAME = lm-sensors
 SPK_VERS = 3.6.0
 SPK_REV = 1
 

@@ -1,4 +1,4 @@
-SPK_NAME = iperf2
+FPK_NAME = iperf2
 SPK_VERS = 2.2.1
 SPK_REV = 1
 SPK_ICON = src/iperf2.png

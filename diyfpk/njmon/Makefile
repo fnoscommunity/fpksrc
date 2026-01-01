@@ -1,4 +1,4 @@
-SPK_NAME = njmon
+FPK_NAME = njmon
 SPK_VERS = 90
 SPK_REV = 1
 

@@ -1,4 +1,4 @@
-SPK_NAME = boost_python
+FPK_NAME = boost_python
 SPK_VERS = 1.78.0
 SPK_REV = 1
 

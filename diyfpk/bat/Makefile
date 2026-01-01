@@ -1,4 +1,4 @@
-SPK_NAME = bat
+FPK_NAME = bat
 SPK_VERS = 0.26.1
 SPK_REV = 1
 

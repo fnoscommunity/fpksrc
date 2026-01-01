@@ -1,4 +1,4 @@
-SPK_NAME = icecast
+FPK_NAME = icecast
 SPK_VERS = 2.4.4
 SPK_REV = 9
 SPK_ICON = src/icecast.png

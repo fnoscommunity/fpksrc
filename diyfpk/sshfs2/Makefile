@@ -1,4 +1,4 @@
-SPK_NAME = sshfs2
+FPK_NAME = sshfs2
 SPK_VERS = 2.10
 SPK_REV = 1
 

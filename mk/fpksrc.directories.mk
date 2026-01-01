@@ -37,8 +37,8 @@ endif
 ifndef INSTALL_PREFIX
 ifneq ($(strip $(DSM_APP_NAME)),)
 INSTALL_PREFIX = /var/apps/$(DSM_APP_NAME)/target
-else ifneq ($(strip $(SPK_NAME)),)
-INSTALL_PREFIX = /var/apps/com.fnoscomm.pkgs.$(SPK_NAME)/target
+else ifneq ($(strip $(FPK_NAME)),)
+INSTALL_PREFIX = /var/apps/com.fnoscomm.pkgs.$(FPK_NAME)/target
 else
 ifneq ($(strip $(PKG_NAME)),)
 INSTALL_PREFIX = /usr/local/$(PKG_NAME)

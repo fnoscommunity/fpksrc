@@ -1,4 +1,4 @@
-SPK_NAME = bandwhich
+FPK_NAME = bandwhich
 SPK_VERS = 0.23.1
 SPK_REV = 1
 

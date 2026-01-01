@@ -1,4 +1,4 @@
-SPK_NAME = js
+FPK_NAME = js
 SPK_VERS = 1.6.20070208
 SPK_REV = 1
 

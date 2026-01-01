@@ -1,4 +1,4 @@
-SPK_NAME = rsync
+FPK_NAME = rsync
 SPK_VERS = 3.4.1
 SPK_REV = 1
 

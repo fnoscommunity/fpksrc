@@ -1,4 +1,4 @@
-SPK_NAME = homeassistant
+FPK_NAME = homeassistant
 SPK_VERS = 2024.12.5
 SPK_REV = 24
 SPK_ICON = src/homeassistant.png

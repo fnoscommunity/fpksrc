@@ -1,4 +1,4 @@
-SPK_NAME = stunnel
+FPK_NAME = stunnel
 SPK_VERS = 5.60
 SPK_REV = 2
 SPK_ICON = src/stunnel.png

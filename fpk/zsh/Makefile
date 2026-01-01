@@ -1,5 +1,5 @@
 # Allow overriding the name, used by spk/zsh-static.
-SPK_NAME ?= zsh
+FPK_NAME ?= zsh
 SPK_VERS = 5.9
 SPK_CONFLICT ?= zsh-static
 # Allow overriding the revision, used by spk/zsh-static.

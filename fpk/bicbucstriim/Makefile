@@ -1,4 +1,4 @@
-SPK_NAME = bicbucstriim
+FPK_NAME = bicbucstriim
 SPK_VERS = 3.6.7
 SPK_REV = 11
 SPK_ICON = src/bicbucstriim.png
@@ -19,7 +19,7 @@ CHANGELOG = "Update to v3.6.7 (Requires PHP 8.2 and DSM 7.2)"
 
 HOMEPAGE = https://github.com/mikespub-org/rvolz-BicBucStriim/
 LICENSE = MIT
-LICENSE_FILE = $(WORK_DIR)/$(SPK_NAME)/LICENSE
+LICENSE_FILE = $(WORK_DIR)/$(FPK_NAME)/LICENSE
 
 SYSTEM_GROUP = http
 

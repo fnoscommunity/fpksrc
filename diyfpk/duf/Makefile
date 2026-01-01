@@ -1,4 +1,4 @@
-SPK_NAME = duf
+FPK_NAME = duf
 SPK_VERS = 0.9.1
 SPK_REV = 1
 

@@ -1,4 +1,4 @@
-SPK_NAME = eza
+FPK_NAME = eza
 SPK_VERS = 0.23.4
 SPK_REV = 1
 

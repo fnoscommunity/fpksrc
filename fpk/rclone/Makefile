@@ -1,4 +1,4 @@
-SPK_NAME = rclone
+FPK_NAME = rclone
 SPK_VERS = 1.71.0
 SPK_REV = 2
 SPK_ICON = src/rclone.png

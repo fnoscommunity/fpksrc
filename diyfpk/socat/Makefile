@@ -1,4 +1,4 @@
-SPK_NAME = socat
+FPK_NAME = socat
 SPK_VERS = 1.8.0.3
 SPK_REV = 1
 

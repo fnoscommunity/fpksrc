@@ -1,4 +1,4 @@
-SPK_NAME = haproxy
+FPK_NAME = haproxy
 SPK_VERS = 2.2.4
 SPK_REV = 22
 SPK_ICON = src/haproxy.png
@@ -23,11 +23,11 @@ HELPURL    = https://FnOScommunity.com/help/haproxy
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
-FWPORTS          = src/${SPK_NAME}.sc
+FWPORTS          = src/${FPK_NAME}.sc
 CONF_DIR         = src/conf/
 WIZARDS_DIR      = src/wizard/
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = haproxy_extra_install
 

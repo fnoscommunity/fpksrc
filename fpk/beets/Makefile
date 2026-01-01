@@ -1,4 +1,4 @@
-SPK_NAME = beets
+FPK_NAME = beets
 SPK_VERS = 2.3.1
 SPK_REV = 12
 SPK_ICON = src/beets.png

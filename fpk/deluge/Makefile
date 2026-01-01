@@ -1,4 +1,4 @@
-SPK_NAME = deluge
+FPK_NAME = deluge
 SPK_VERS = 2.2.0
 SPK_REV = 25
 SPK_ICON = src/deluge.png

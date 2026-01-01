@@ -1,4 +1,4 @@
-SPK_NAME = autoconf
+FPK_NAME = autoconf
 SPK_VERS = 2.72
 SPK_REV = 1
 

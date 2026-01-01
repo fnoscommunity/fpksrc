@@ -1,4 +1,4 @@
-SPK_NAME = boost_all
+FPK_NAME = boost_all
 SPK_VERS = 1.78.0
 SPK_REV = 1
 

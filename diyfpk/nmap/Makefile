@@ -1,4 +1,4 @@
-SPK_NAME = nmap
+FPK_NAME = nmap
 SPK_VERS = 7.97
 SPK_REV = 1
 SPK_ICON = src/nmap.png

@@ -1,4 +1,4 @@
-SPK_NAME = pngquant
+FPK_NAME = pngquant
 SPK_VERS = 3.0.3
 SPK_REV = 1
 

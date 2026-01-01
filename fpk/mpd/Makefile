@@ -1,4 +1,4 @@
-SPK_NAME = mpd
+FPK_NAME = mpd
 SPK_VERS = 0.23.15
 SPK_REV = 2
 SPK_ICON = src/mpd.png

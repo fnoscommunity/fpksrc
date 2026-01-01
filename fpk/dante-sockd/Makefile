@@ -1,4 +1,4 @@
-SPK_NAME = dante-sockd
+FPK_NAME = dante-sockd
 SPK_VERS = 1.4.3
 SPK_REV = 1
 SPK_ICON = src/dante.png

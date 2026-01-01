@@ -1,4 +1,4 @@
-SPK_NAME = inetutils
+FPK_NAME = inetutils
 SPK_VERS = 2.6
 SPK_REV = 1
 

@@ -1,4 +1,4 @@
-SPK_NAME = smartmontools
+FPK_NAME = smartmontools
 SPK_VERS = 7.5
 SPK_REV = 1
 

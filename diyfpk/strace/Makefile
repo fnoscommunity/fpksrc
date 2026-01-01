@@ -1,4 +1,4 @@
-SPK_NAME = strace
+FPK_NAME = strace
 SPK_VERS = 6.9
 SPK_REV = 1
 

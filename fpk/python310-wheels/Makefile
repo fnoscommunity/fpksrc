@@ -1,4 +1,4 @@
-SPK_NAME = python310-wheels
+FPK_NAME = python310-wheels
 SPK_VERS = 1.0
 SPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(SPK_VERS))).$(word 2,$(subst ., ,$(SPK_VERS)))
 SPK_REV = 1

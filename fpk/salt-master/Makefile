@@ -1,4 +1,4 @@
-SPK_NAME = salt-master
+FPK_NAME = salt-master
 SPK_VERS = 3007.3
 SPK_REV = 13
 SPK_ICON = src/salt-master.png

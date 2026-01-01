@@ -1,4 +1,4 @@
-SPK_NAME = s3backer
+FPK_NAME = s3backer
 SPK_VERS = 2.1.6
 SPK_REV = 1
 

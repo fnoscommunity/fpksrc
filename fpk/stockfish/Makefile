@@ -1,4 +1,4 @@
-SPK_NAME = stockfish
+FPK_NAME = stockfish
 SPK_VERS = 11
 SPK_REV = 3
 SPK_ICON= src/stockfish.png

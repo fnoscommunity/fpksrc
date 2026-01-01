@@ -1,4 +1,4 @@
-SPK_NAME = inotify-tools
+FPK_NAME = inotify-tools
 SPK_VERS = 4.25.9.0
 SPK_REV = 4
 SPK_ICON = src/inotify-tools.png

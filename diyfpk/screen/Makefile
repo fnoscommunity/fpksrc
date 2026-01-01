@@ -1,4 +1,4 @@
-SPK_NAME = screen
+FPK_NAME = screen
 SPK_VERS = 4.9.1
 SPK_REV = 1
 

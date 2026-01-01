@@ -1,4 +1,4 @@
-SPK_NAME = dutree
+FPK_NAME = dutree
 SPK_VERS = 0.2.18
 SPK_REV = 1
 
@@ -8,7 +8,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A tool to analyze file system usage written in Rust.
-DISPLAY_NAME = $(SPK_NAME)
+DISPLAY_NAME = $(FPK_NAME)
 STARTABLE = false
 
 HOMEPAGE = https://ownyourbits.com/2018/03/25/analyze-disk-usage-with-dutree/

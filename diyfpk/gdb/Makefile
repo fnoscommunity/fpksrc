@@ -1,4 +1,4 @@
-SPK_NAME = gdb
+FPK_NAME = gdb
 SPK_REV = 1
 SPK_ICON = src/gdb.png
 

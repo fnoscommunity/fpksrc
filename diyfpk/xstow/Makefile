@@ -1,4 +1,4 @@
-SPK_NAME = xstow
+FPK_NAME = xstow
 SPK_VERS = 1.1.1
 SPK_REV = 1
 

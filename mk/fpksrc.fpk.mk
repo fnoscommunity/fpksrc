@@ -3,10 +3,10 @@
 #
 # Variables:
 #  ARCH                         A dedicated arch, a generic arch or 'noarch' for arch independent packages
-#  SPK_NAME                     Package name
+#  FPK_NAME                     Package name
 #  MAINTAINER                   Package maintainer (mandatory)
 #  MAINTAINER_URL               URL of package maintainer (optional when MAINTAINER is a valid github user)
-#  SPK_NAME_ARCH                (optional) arch specific spk file name (default: $(ARCH))
+#  FPK_NAME_ARCH                (optional) arch specific spk file name (default: $(ARCH))
 #  SPK_PACKAGE_ARCHS            (optional) list of archs in the spk file (default: $(ARCH) or list of archs when generic arch)
 #  UNSUPPORTED_ARCHS            (optional) Unsupported archs are removed from gemeric arch list (ignored when SPK_PACKAGE_ARCHS is used)
 #  REMOVE_FROM_GENERIC_ARCHS    (optional) A list of archs to be excluded from generic archs (ignored when SPK_PACKAGE_ARCHS is used)
@@ -30,7 +30,7 @@
 include ../../mk/fpksrc.common.mk
 
 # Configure the included makefiles
-NAME = $(SPK_NAME)
+NAME = $(FPK_NAME)
 
 ifneq ($(ARCH),)
 ARCH_SUFFIX = -$(ARCH)-$(TCVERSION)
@@ -45,8 +45,8 @@ else
 SPK_ARCH = $(filter-out $(UNSUPPORTED_ARCHS),$(TC_ARCH))
 endif
 endif
-ifeq ($(SPK_NAME_ARCH),)
-SPK_NAME_ARCH = $(ARCH)
+ifeq ($(FPK_NAME_ARCH),)
+FPK_NAME_ARCH = $(ARCH)
 endif
 SPK_TCVERS = $(TCVERSION)
 TC = syno$(ARCH_SUFFIX)
@@ -60,7 +60,7 @@ ifeq ($(ARCH),noarch)
 ifneq ($(strip $(TCVERSION)),)
 # different noarch packages
 SPK_ARCH = noarch
-SPK_NAME_ARCH = noarch
+FPK_NAME_ARCH = noarch
 ifeq ($(call version_ge, $(TCVERSION), 7.0),1)
 ifeq ($(call version_ge, $(TCVERSION), 7.2),1)
 SPK_TCVERS = dsm72
@@ -92,7 +92,7 @@ OS_MIN_VER = $(TC_OS_MIN_VER)
 endif
 endif
 
-FPK_FILE_NAME = $(PACKAGES_DIR)/$(SPK_NAME)_$(SPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV).fpk
+FPK_FILE_NAME = $(PACKAGES_DIR)/$(FPK_NAME)_$(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV).fpk
 
 #####
 
@@ -156,7 +156,7 @@ include ../../mk/fpksrc.icon.mk
 endif
 
 ifeq ($(strip $(MAINTAINER)),)
-$(error Add MAINTAINER for '$(SPK_NAME)' in spk Makefile or set default MAINTAINER in local.mk.)
+$(error Add MAINTAINER for '$(FPK_NAME)' in spk Makefile or set default MAINTAINER in local.mk.)
 endif
 
 ifeq ($(strip $(DISABLE_GITHUB_MAINTAINER)),)
@@ -170,7 +170,7 @@ endif
 $(WORK_DIR)/manifest: SHELL:=/bin/sh
 $(WORK_DIR)/manifest:
 	$(create_target_dir)
-	@$(MSG) "Creating manifest file for $(SPK_NAME)"
+	@$(MSG) "Creating manifest file for $(FPK_NAME)"
 	@if [ -z "$(SPK_ARCH)" ]; then \
 	   if [ "$(ARCH)" = "noarch" ]; then \
 	      echo "ERROR: 'noarch' package without TCVERSION is not supported" ; \
@@ -181,7 +181,7 @@ $(WORK_DIR)/manifest:
 	      exit 1; \
 	   fi; \
 	fi
-	@echo package=\"$(SPK_NAME)\" > $@
+	@echo package=\"$(FPK_NAME)\" > $@
 	@echo version=\"$(SPK_VERS)-$(SPK_REV)\" >> $@
 	@/bin/echo -n "desc=\"" >> $@
 	@/bin/echo -n "${DESCRIPTION}" | sed -e 's/\\//g' -e 's/"/\\"/g' >> $@
@@ -258,7 +258,7 @@ endif
 ifneq ($(strip $(DSM_APP_NAME)),)
 	@echo appname=\"$(DSM_APP_NAME)\" >> $@
 else
-	@echo appname=\"com.fnoscomm.pkgs.$(SPK_NAME)\" >> $@
+	@echo appname=\"com.fnoscomm.pkgs.$(FPK_NAME)\" >> $@
 endif
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 ifneq ($(strip $(DSM_APP_PAGE)),)
@@ -386,20 +386,20 @@ $(DSM_SCRIPTS_DIR)/config_callback:
 icons:
 ifneq ($(strip $(SPK_ICON)),)
 	$(create_target_dir)
-	@$(MSG) "Creating ICON.PNG for $(SPK_NAME)"
+	@$(MSG) "Creating ICON.PNG for $(FPK_NAME)"
 ifneq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	(convert $(SPK_ICON) -resize 72x72 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON.PNG)
 else
 	(convert $(SPK_ICON) -resize 64x64 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON.PNG)
 endif
-	@$(MSG) "Creating ICON_256.PNG for $(SPK_NAME)"
+	@$(MSG) "Creating ICON_256.PNG for $(FPK_NAME)"
 	(convert $(SPK_ICON) -resize 256x256 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON_256.PNG)
 	$(eval FPK_CONTENT += ICON.PNG ICON_256.PNG)
 endif
 
 .PHONY: info-checksum
 info-checksum:
-	@$(MSG) "Creating checksum for $(SPK_NAME)"
+	@$(MSG) "Creating checksum for $(FPK_NAME)"
 	@sed -i -e "s|checksum=\".*|checksum=\"$$(md5sum $(WORK_DIR)/app.tgz | cut -d" " -f1)\"|g" $(WORK_DIR)/manifest
 
 

@@ -1,4 +1,4 @@
-SPK_NAME = mympd
+FPK_NAME = mympd
 SPK_VERS = 14.1.0
 SPK_REV = 2
 SPK_ICON = src/mympd.png

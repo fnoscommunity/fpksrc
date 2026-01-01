@@ -127,7 +127,7 @@ crossenv-%:
 # Defined using current install prefix by replacing package name using
 # PYTHON_PACKAGE from fpksrc.python.mk, else use local install prefix
 ifneq ($(PYTHON_PACKAGE),)
-PYTHON_INSTALL_PREFIX = $(subst $(SPK_NAME),$(PYTHON_PACKAGE),$(INSTALL_PREFIX))
+PYTHON_INSTALL_PREFIX = $(subst $(FPK_NAME),$(PYTHON_PACKAGE),$(INSTALL_PREFIX))
 else
 PYTHON_INSTALL_PREFIX = $(INSTALL_PREFIX)
 endif

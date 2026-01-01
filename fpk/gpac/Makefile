@@ -1,4 +1,4 @@
-SPK_NAME = gpac
+FPK_NAME = gpac
 SPK_VERS = 2.2.1
 SPK_REV = 1
 

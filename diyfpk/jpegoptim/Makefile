@@ -1,4 +1,4 @@
-SPK_NAME = jpegoptim
+FPK_NAME = jpegoptim
 SPK_VERS = 1.4.6
 SPK_REV = 1
 

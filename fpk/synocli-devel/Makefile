@@ -1,4 +1,4 @@
-SPK_NAME = synocli-devel
+FPK_NAME = synocli-devel
 SPK_VERS = 1.3
 SPK_REV = 4
 SPK_ICON = src/synocli-devel.png

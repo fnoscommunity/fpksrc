@@ -1,4 +1,4 @@
-SPK_NAME = ffmpeg
+FPK_NAME = ffmpeg
 SPK_VERS = 4.4.4
 SPK_REV = 50
 SPK_ICON = src/ffmpeg.png

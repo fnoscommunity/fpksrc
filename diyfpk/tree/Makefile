@@ -1,4 +1,4 @@
-SPK_NAME = tree
+FPK_NAME = tree
 SPK_VERS = 2.2.1
 SPK_REV = 1
 

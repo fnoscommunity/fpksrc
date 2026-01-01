@@ -1,4 +1,4 @@
-SPK_NAME = synocli-disk
+FPK_NAME = synocli-disk
 SPK_VERS = 4.1
 SPK_REV = 16
 SPK_ICON = src/synocli-disk.png

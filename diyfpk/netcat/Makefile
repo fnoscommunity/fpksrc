@@ -1,4 +1,4 @@
-SPK_NAME = netcat
+FPK_NAME = netcat
 SPK_VERS = 0.7.1
 SPK_REV = 1
 

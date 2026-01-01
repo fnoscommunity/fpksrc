@@ -1,4 +1,4 @@
-SPK_NAME = ariang
+FPK_NAME = ariang
 SPK_VERS = 1.3.7
 SPK_REV = 1
 SPK_ICON = src/ariang.png

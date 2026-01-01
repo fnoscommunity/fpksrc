@@ -1,4 +1,4 @@
-SPK_NAME = imagemagick
+FPK_NAME = imagemagick
 SPK_VERS = 7.1.2
 SPK_REV = 14
 SPK_ICON = src/imagemagick.png
@@ -36,14 +36,14 @@ include ../../mk/fpksrc.fpk.mk
 # this might be caused by incomplete implementation of install_correct_lib_files target in fpksrc.install.mk
 # or false paths in generated pkgconfig files
 imagemagick_patch_rpath:
-	@$(MSG) "Patching binaries and libraries of $(SPK_NAME) (some have bad library rpath)."
+	@$(MSG) "Patching binaries and libraries of $(FPK_NAME) (some have bad library rpath)."
 	@cat $(INSTALL_PLIST) | sed 's/:/ /' | while read type file ; \
 	do \
 	  case $${type} in \
 	    lib|bin) \
-	      if [ "$$(objdump -p $(STAGING_DIR)/$${file} 2>/dev/null | grep RPATH | grep spk/$(SPK_NAME))" ]; then \
+	      if [ "$$(objdump -p $(STAGING_DIR)/$${file} 2>/dev/null | grep RPATH | grep spk/$(FPK_NAME))" ]; then \
 	         echo -n "Patch rpath in $${file}... " ; \
-	         patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/$${file} &> /dev/null && echo "ok." || echo "failed!" ; \
+	         patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib $(STAGING_DIR)/$${file} &> /dev/null && echo "ok." || echo "failed!" ; \
 	      fi \
 	      ;; \
 	  esac ; \

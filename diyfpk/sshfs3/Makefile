@@ -1,4 +1,4 @@
-SPK_NAME = sshfs3
+FPK_NAME = sshfs3
 SPK_VERS = 3.7.3
 SPK_REV = 1
 

@@ -1,4 +1,4 @@
-SPK_NAME = image-optim
+FPK_NAME = image-optim
 SPK_VERS = 1.0
 SPK_REV = 1
 

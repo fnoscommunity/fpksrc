@@ -1,4 +1,4 @@
-SPK_NAME = mosquitto
+FPK_NAME = mosquitto
 SPK_VERS = 2.0.22
 SPK_REV = 17
 SPK_ICON = src/mosquitto.png

@@ -1,4 +1,4 @@
-SPK_NAME = borgbackup
+FPK_NAME = borgbackup
 SPK_VERS = 1.4.3
 SPK_REV = 20
 SPK_ICON = src/borgbackup.png

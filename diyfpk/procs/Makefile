@@ -1,4 +1,4 @@
-SPK_NAME = procs
+FPK_NAME = procs
 SPK_VERS = 0.14.10
 SPK_REV = 1
 

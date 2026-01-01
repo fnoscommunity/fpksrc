@@ -1,4 +1,4 @@
-SPK_NAME = disktype
+FPK_NAME = disktype
 SPK_VERS = 9
 SPK_REV = 1
 

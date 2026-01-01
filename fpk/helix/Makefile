@@ -1,4 +1,4 @@
-SPK_NAME = helix
+FPK_NAME = helix
 SPK_VERS = 25.07.1
 SPK_REV = 1
 SPK_ICON = src/helix.png

@@ -1,4 +1,4 @@
-SPK_NAME = jackett
+FPK_NAME = jackett
 SPK_VERS = 0.24.478
 SPK_REV = 19
 SPK_ICON = src/jackett.png
@@ -17,7 +17,7 @@ LICENSE_FILE = $(WORK_DIR)/Jackett/LICENSE
 HELPURL = https://github.com/Jackett/Jackett/wiki/Troubleshooting
 
 STARTABLE = yes
-# 'auto' reserved value grabs SPK_NAME
+# 'auto' reserved value grabs FPK_NAME
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 # Service configuration

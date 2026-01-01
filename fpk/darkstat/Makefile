@@ -1,4 +1,4 @@
-SPK_NAME = darkstat
+FPK_NAME = darkstat
 SPK_VERS = 3.0.721
 SPK_REV = 5
 SPK_ICON = src/darkstat.png

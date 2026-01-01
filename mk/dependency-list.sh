@@ -12,7 +12,7 @@
 # - it is much faster (typ. 15 s instead of 180 s)
 # - it does not require "OPTIONAL_DEPENDS" defitions anymore
 # caveats
-# - makefile variables like $(SPK_NAME) are not allowed in dependency definitions anymore
+# - makefile variables like $(FPK_NAME) are not allowed in dependency definitions anymore
 # - definition of dependencies in included make files are not evaluated.
 #   Those are 
 #   - native/cmake, native/cmake-legacy, native/nasm for cmake/rust packages (^1)
@@ -25,14 +25,14 @@
 #       So far we did not want to trigger the build of all related packages when only the prebuilt package had changes
 #       Otherwise we could introduce a new OPTIONAL_DEPENDS (ADDITIONAL_DEPENDS) variable for this
 
-# get SPK_NAME of a package
+# get FPK_NAME of a package
 # since the spk name might be different to the (spk/){package} folder
 # we need to parse the variable in the Makefile
 # param1: package folder
 function get_spk_name ()
 {
    if [ -f ${1}/Makefile ]; then
-      grep "^SPK_NAME" ${1}/Makefile | cut -d= -f2 | xargs
+      grep "^FPK_NAME" ${1}/Makefile | cut -d= -f2 | xargs
    fi
 }
 

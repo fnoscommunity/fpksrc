@@ -1,4 +1,4 @@
-SPK_NAME = dotnet8-runtime
+FPK_NAME = dotnet8-runtime
 SPK_VERS = 8.0.22
 SPK_REV = 14
 SPK_ICON = src/dotnet.png
@@ -37,4 +37,4 @@ include ../../mk/fpksrc.fpk.mk
 # Set library path to use bundled libstdc++
 dotnet_patch_target:
 	@$(MSG) "Set library runpath in dotnet executable."
-	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/share/dotnet/dotnet
+	@patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib $(STAGING_DIR)/share/dotnet/dotnet

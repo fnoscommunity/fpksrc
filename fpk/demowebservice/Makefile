@@ -1,4 +1,4 @@
-SPK_NAME = demowebservice
+FPK_NAME = demowebservice
 SPK_VERS = 1.0
 SPK_REV = 2
 SPK_ICON = src/demowebservice.png
@@ -67,13 +67,13 @@ include ../../mk/fpksrc.fpk.mk
 .PHONY: demowebservice_install
 demowebservice_install:
 	@$(MSG) Install the web application
-	@install -d -m 755 $(STAGING_DIR)/web/$(SPK_NAME)/
-	@install -m 755 src/web/index.php $(STAGING_DIR)/web/$(SPK_NAME)/
+	@install -d -m 755 $(STAGING_DIR)/web/$(FPK_NAME)/
+	@install -m 755 src/web/index.php $(STAGING_DIR)/web/$(FPK_NAME)/
 
 .PHONY: demowebservice_post_icon
 demowebservice_post_icon:
 	@$(MSG) Add some package icons to the web application
-	@install -d -m 755 $(STAGING_DIR)/web/$(SPK_NAME)/images
+	@install -d -m 755 $(STAGING_DIR)/web/$(FPK_NAME)/images
 	@for image_size in 16 32; do \
-	  install -m 755 $(STAGING_DIR)/app/images/$(SPK_NAME)-$${image_size}.png $(STAGING_DIR)/web/$(SPK_NAME)/images/ ; \
+	  install -m 755 $(STAGING_DIR)/app/images/$(FPK_NAME)-$${image_size}.png $(STAGING_DIR)/web/$(FPK_NAME)/images/ ; \
 	done

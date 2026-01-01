@@ -1,4 +1,4 @@
-SPK_NAME = procutils
+FPK_NAME = procutils
 SPK_VERS = 1.35.0
 SPK_REV = 1
 

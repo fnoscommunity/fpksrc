@@ -1,4 +1,4 @@
-SPK_NAME = ombi
+FPK_NAME = ombi
 SPK_VERS = 4.47.1
 SPK_REV = 6
 SPK_ICON = src/ombi.png
@@ -43,4 +43,4 @@ ombi_custom_libe_sqlite3:
 # Set library path to use libstdc++ of dotnet-runtime package.
 ombi_patch_target:
 	@$(MSG) "Set library runpath in ombi executables."
-	@patchelf --set-rpath /var/apps/$(SPK_NAME)/target/lib $(STAGING_DIR)/shared/Ombi
+	@patchelf --set-rpath /var/apps/$(FPK_NAME)/target/lib $(STAGING_DIR)/shared/Ombi

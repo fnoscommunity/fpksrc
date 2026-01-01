@@ -1,4 +1,4 @@
-SPK_NAME = rsnapshot
+FPK_NAME = rsnapshot
 SPK_VERS = 1.4.4
 SPK_REV = 4
 SPK_ICON = src/rsnapshot.png

@@ -1,4 +1,4 @@
-SPK_NAME = lsof
+FPK_NAME = lsof
 SPK_VERS = 4.99.5
 SPK_REV = 1
 

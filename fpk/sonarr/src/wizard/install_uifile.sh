@@ -82,11 +82,11 @@ EOF
 }
 
 # Set up variables to identify legacy Sonarr versions
-LEGACY_SPK_NAME="nzbdrone"
-LEGACY_SYNOPKG_PKGDEST="/var/apps/${LEGACY_SPK_NAME}/target"
+LEGACY_FPK_NAME="nzbdrone"
+LEGACY_SYNOPKG_PKGDEST="/var/apps/${LEGACY_FPK_NAME}/target"
 # Check for legacy package data storage location
-if [ -d "/var/apps/${LEGACY_SPK_NAME}/var" ]; then
-    LEGACY_SYNOPKG_PKGVAR="/var/apps/${LEGACY_SPK_NAME}/var"
+if [ -d "/var/apps/${LEGACY_FPK_NAME}/var" ]; then
+    LEGACY_SYNOPKG_PKGVAR="/var/apps/${LEGACY_FPK_NAME}/var"
 else
     LEGACY_SYNOPKG_PKGVAR="${LEGACY_SYNOPKG_PKGDEST}/var"
 fi

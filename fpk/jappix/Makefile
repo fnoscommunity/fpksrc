@@ -1,4 +1,4 @@
-SPK_NAME = jappix
+FPK_NAME = jappix
 SPK_VERS = 1.0.1
 SPK_REV = 2
 SPK_ICON = src/jappix.png
@@ -23,7 +23,7 @@ SSS_SCRIPT       = src/dsm-control.sh
 INSTALL_DEP_SERVICES = apache-web
 START_DEP_SERVICES = apache-web
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = jappix_extra_install
 

@@ -1,4 +1,4 @@
-SPK_NAME = syncthing
+FPK_NAME = syncthing
 SPK_VERS = 1.30.0
 SPK_REV = 32
 SPK_ICON = src/syncthing.png

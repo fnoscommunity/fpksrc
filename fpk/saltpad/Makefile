@@ -1,4 +1,4 @@
-SPK_NAME = saltpad
+FPK_NAME = saltpad
 SPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 5
 SPK_ICON = src/saltpad.png
@@ -21,7 +21,7 @@ LICENSE    = GPL
 
 INSTALLER_SCRIPT = src/installer.sh
 SSS_SCRIPT       = src/dsm-control.sh
-FWPORTS          = src/${SPK_NAME}.sc
+FWPORTS          = src/${FPK_NAME}.sc
 CONF_DIR         = src/conf/
 
 POST_STRIP_TARGET = saltpad_extra_install

@@ -1,4 +1,4 @@
-SPK_NAME = python314
+FPK_NAME = python314
 SPK_VERS = 3.14.2
 SPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(SPK_VERS))).$(word 2,$(subst ., ,$(SPK_VERS)))
 SPK_REV = 2

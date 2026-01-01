@@ -1,4 +1,4 @@
-SPK_NAME = bind
+FPK_NAME = bind
 SPK_VERS = 9.20.11
 SPK_REV = 1
 

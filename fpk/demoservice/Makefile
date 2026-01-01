@@ -1,4 +1,4 @@
-SPK_NAME = demoservice
+FPK_NAME = demoservice
 SPK_VERS = 1.3
 SPK_REV = 9
 SPK_ICON = src/demoservice.png
@@ -14,7 +14,7 @@ LICENSE = GPLv2
 
 WIZARDS_DIR = src/wizard/
 
-# 'auto' reserved value grabs SPK_NAME (only auto is supported)
+# 'auto' reserved value grabs FPK_NAME (only auto is supported)
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 # The fpksrc framework does not parse the service-setup.sh file for valid SERVICE_COMMAND
@@ -46,7 +46,7 @@ include ../../mk/fpksrc.fpk.mk
 demoservice_pre_copy:
 	@$(MSG) Create README and dummy files
 	mkdir -p $(STAGING_INSTALL_PREFIX_VAR)
-	echo "Test file for /var/apps/$(SPK_NAME)/var/README"  > $(STAGING_INSTALL_PREFIX_VAR)/README
+	echo "Test file for /var/apps/$(FPK_NAME)/var/README"  > $(STAGING_INSTALL_PREFIX_VAR)/README
 	echo "INSTALL_PREFIX_VAR     = $(INSTALL_PREFIX_VAR)"      >> $(STAGING_INSTALL_PREFIX_VAR)/README
 	echo "STAGING_INSTALL_PREFIX = $(STAGING_INSTALL_PREFIX)"  >> $(STAGING_INSTALL_PREFIX_VAR)/README
 	@$(MSG) Create dummy file to avoid empty target folder for DSM 7 packages

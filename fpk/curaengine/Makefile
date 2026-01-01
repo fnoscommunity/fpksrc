@@ -1,4 +1,4 @@
-SPK_NAME = curaengine
+FPK_NAME = curaengine
 SPK_VERS = 2.1.3
 SPK_REV = 2
 SPK_ICON = src/curaengine.png

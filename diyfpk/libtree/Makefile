@@ -1,4 +1,4 @@
-SPK_NAME = libtree
+FPK_NAME = libtree
 SPK_VERS = 3.1.1
 SPK_REV = 1
 

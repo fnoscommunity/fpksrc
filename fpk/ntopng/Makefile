@@ -1,4 +1,4 @@
-SPK_NAME = ntopng
+FPK_NAME = ntopng
 SPK_VERS = 6.4
 SPK_REV = 6
 SPK_ICON = src/ntopng.png
@@ -17,7 +17,7 @@ DISPLAY_NAME = ntopng
 HELPURL = https://www.ntop.org/guides/ntopng/index.html
 LICENSE = GPLv3
 
-# 'auto' (reserved value) grabs SPK_NAME
+# 'auto' (reserved value) grabs FPK_NAME
 SERVICE_USER = auto
 SSS_SCRIPT = src/start-stop-status.sh
 STARTABLE = yes

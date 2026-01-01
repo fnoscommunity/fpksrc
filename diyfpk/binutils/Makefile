@@ -1,4 +1,4 @@
-SPK_NAME = binutils
+FPK_NAME = binutils
 SPK_VERS = 2.42
 SPK_REV = 1
 

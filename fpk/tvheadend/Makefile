@@ -1,4 +1,4 @@
-SPK_NAME = tvheadend
+FPK_NAME = tvheadend
 SPK_SHORT_VERS = 4.3
 SPK_GIT_HASH = 0b23983f
 SPK_GIT_DATE = 20251114
@@ -23,7 +23,7 @@ LICENSE = GPL v3
 
 CONF_DIR = src/conf/
 
-# 'auto' reserved value grabs SPK_NAME
+# 'auto' reserved value grabs FPK_NAME
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 

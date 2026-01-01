@@ -1,5 +1,5 @@
 # Remember to also update jellyfin-web
-SPK_NAME = jellyfin
+FPK_NAME = jellyfin
 SPK_VERS = 10.11.5
 SPK_REV = 33
 SPK_ICON = src/jellyfin.png
@@ -22,11 +22,11 @@ HELPURL = https://jellyfin.org/docs/general/server/settings.html
 SUPPORTURL = https://jellyfin.org/docs/general/getting-help.html
 
 LICENSE = GPLv2
-LICENSE_FILE = $(WORK_DIR)/$(SPK_NAME)-$(SPK_VERS)/LICENSE
+LICENSE_FILE = $(WORK_DIR)/$(FPK_NAME)-$(SPK_VERS)/LICENSE
 
 WIZARDS_DIR = src/wizard/
 
-# 'auto' reserved value grabs SPK_NAME
+# 'auto' reserved value grabs FPK_NAME
 SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 STARTABLE = yes

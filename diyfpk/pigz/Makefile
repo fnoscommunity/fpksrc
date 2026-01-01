@@ -1,4 +1,4 @@
-SPK_NAME = pigz
+FPK_NAME = pigz
 SPK_VERS = 2.8
 SPK_REV = 1
 

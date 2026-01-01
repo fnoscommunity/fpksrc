@@ -1,4 +1,4 @@
-SPK_NAME = sickbeard-custom
+FPK_NAME = sickbeard-custom
 SPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 8
 SPK_ICON = src/sickbeard-custom.png

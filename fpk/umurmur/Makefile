@@ -1,4 +1,4 @@
-SPK_NAME = umurmur
+FPK_NAME = umurmur
 SPK_VERS = 0.3.1
 SPK_REV = 10
 SPK_ICON = src/umurmur.png

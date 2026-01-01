@@ -1,4 +1,4 @@
-SPK_NAME = horde
+FPK_NAME = horde
 SPK_VERS = 5.1.0
 SPK_REV = 2
 SPK_ICON = src/horde.png
@@ -26,7 +26,7 @@ INSTALL_DEP_SERVICES = apache-web mysql
 START_DEP_SERVICES = apache-web mysql
 INSTUNINST_RESTART_SERVICES = apache-web
 
-INSTALL_PREFIX = /usr/local/$(SPK_NAME)
+INSTALL_PREFIX = /usr/local/$(FPK_NAME)
 
 POST_STRIP_TARGET = horde_extra_install
 

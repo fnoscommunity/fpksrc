@@ -1,4 +1,4 @@
-SPK_NAME = ghostscript
+FPK_NAME = ghostscript
 SPK_VERS = 10.05.0
 SPK_REV = 1
 SPK_ICON = src/ghostscript.png
