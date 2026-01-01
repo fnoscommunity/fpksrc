@@ -10,11 +10,11 @@ kernel/*/work*
 python/*/work*
 python/*/build*
 python/*/status*
-spk/*/work*
-spk/*/build*
-spk/*/publish*
-spk/*/status*
-spk/*/wheel*
+fpk/*/work*
+fpk/*/build*
+fpk/*/publish*
+fpk/*/status*
+fpk/*/wheel*
 diyspk/*/work*
 diyspk/*/build*
 diyspk/*/status*
