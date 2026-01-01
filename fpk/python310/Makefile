@@ -2,7 +2,7 @@ FPK_NAME = python310
 FPK_VERS = 3.10.19
 FPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(FPK_VERS))).$(word 2,$(subst ., ,$(FPK_VERS)))
 FPK_REV = 25
-SPK_ICON = src/python3.png
+FPK_ICON = src/python3.png
 
 DEPENDS  = cross/python310
 

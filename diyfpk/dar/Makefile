@@ -1,7 +1,7 @@
 FPK_NAME = dar
 FPK_VERS = 2.8.1
 FPK_REV = 1
-SPK_ICON = src/dar.png
+FPK_ICON = src/dar.png
 
 DEPENDS = cross/dar
 

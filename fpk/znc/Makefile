@@ -1,7 +1,7 @@
 FPK_NAME = znc
 FPK_VERS = 1.10.1
 FPK_REV = 27
-SPK_ICON = src/znc.png
+FPK_ICON = src/znc.png
 DSM_UI_DIR = app
 
 PYTHON_PACKAGE = python312

@@ -1,7 +1,7 @@
 FPK_NAME = google-fonts
 FPK_VERS = 20221223
 FPK_REV = 1
-SPK_ICON = src/google-fonts.png
+FPK_ICON = src/google-fonts.png
 
 DEPENDS = cross/google-fonts
 

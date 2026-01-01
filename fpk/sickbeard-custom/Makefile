@@ -1,7 +1,7 @@
 FPK_NAME = sickbeard-custom
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 8
-SPK_ICON = src/sickbeard-custom.png
+FPK_ICON = src/sickbeard-custom.png
 
 SPK_DEPENDS = "python>2.7.3-3:git"
 

@@ -1,7 +1,7 @@
 FPK_NAME = nextcloud
 FPK_VERS = 32.0.2
 FPK_REV = 1
-SPK_ICON = src/nextcloud.png
+FPK_ICON = src/nextcloud.png
 
 DEPENDS =
 # Pure PHP package, make sure ARCH is noarch

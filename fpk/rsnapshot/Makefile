@@ -1,7 +1,7 @@
 FPK_NAME = rsnapshot
 FPK_VERS = 1.4.4
 FPK_REV = 4
-SPK_ICON = src/rsnapshot.png
+FPK_ICON = src/rsnapshot.png
 
 DEPENDS = cross/rsnapshot
 SPK_DEPENDS = "Perl"

@@ -1,7 +1,7 @@
 FPK_NAME = jupp
 FPK_VERS = 40
 FPK_REV = 2
-SPK_ICON = src/jupp.png
+FPK_ICON = src/jupp.png
 
 DEPENDS = cross/jupp
 

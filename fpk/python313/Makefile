@@ -2,7 +2,7 @@ FPK_NAME = python313
 FPK_VERS = 3.13.11
 FPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(FPK_VERS))).$(word 2,$(subst ., ,$(FPK_VERS)))
 FPK_REV = 9
-SPK_ICON = src/python3.png
+FPK_ICON = src/python3.png
 
 # Compiler must support std=c++11
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS) $(ARMv5_ARCHS)

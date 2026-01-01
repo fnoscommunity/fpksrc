@@ -1,7 +1,7 @@
 FPK_NAME = mympd
 FPK_VERS = 14.1.0
 FPK_REV = 2
-SPK_ICON = src/mympd.png
+FPK_ICON = src/mympd.png
 DSM_UI_DIR = app
 
 DEPENDS = cross/mympd

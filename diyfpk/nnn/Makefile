@@ -1,7 +1,7 @@
 FPK_NAME = nnn
 FPK_VERS = 5.1
 FPK_REV = 1
-SPK_ICON = src/nnn.png
+FPK_ICON = src/nnn.png
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 

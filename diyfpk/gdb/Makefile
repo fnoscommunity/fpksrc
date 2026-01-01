@@ -1,6 +1,6 @@
 FPK_NAME = gdb
 FPK_REV = 1
-SPK_ICON = src/gdb.png
+FPK_ICON = src/gdb.png
 
 DEPENDS = cross/gdb
 

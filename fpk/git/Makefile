@@ -1,7 +1,7 @@
 FPK_NAME = git
 FPK_VERS = 2.51.1
 FPK_REV = 39
-SPK_ICON = src/git.png
+FPK_ICON = src/git.png
 
 DEPENDS = cross/git
 OPTIONAL_DEPENDS = cross/git-lfs

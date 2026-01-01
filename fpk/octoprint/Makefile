@@ -1,7 +1,7 @@
 FPK_NAME   = octoprint
 FPK_VERS   = 1.11.5
 FPK_REV    = 15
-SPK_ICON   = src/octoprint.png
+FPK_ICON   = src/octoprint.png
 DSM_UI_DIR = app
 
 PYTHON_PACKAGE = python312

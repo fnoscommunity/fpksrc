@@ -1,7 +1,7 @@
 FPK_NAME = metacubexd
 FPK_VERS = 1.186.1
 FPK_REV = 1
-SPK_ICON = src/metacubexd.png
+FPK_ICON = src/metacubexd.png
 
 DEPENDS = cross/metacubexd
 

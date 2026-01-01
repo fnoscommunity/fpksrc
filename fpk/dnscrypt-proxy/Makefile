@@ -1,7 +1,7 @@
 FPK_NAME = dnscrypt-proxy
 FPK_VERS = 2.0.44
 FPK_REV = 5
-SPK_ICON = src/dnscrypt-proxy.png
+FPK_ICON = src/dnscrypt-proxy.png
 
 DEPENDS = cross/dnscrypt-proxy
 FPK_CONFLICT = DNSServer

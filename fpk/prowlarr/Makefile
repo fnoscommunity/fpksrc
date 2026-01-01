@@ -1,7 +1,7 @@
 FPK_NAME = prowlarr
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 11
-SPK_ICON = src/prowlarr.png
+FPK_ICON = src/prowlarr.png
 
 OPTIONAL_DEPENDS = cross/libstdc++ cross/libe_sqlite3
 DEPENDS = cross/prowlarr

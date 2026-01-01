@@ -1,7 +1,7 @@
 FPK_NAME = selfoss
 FPK_VERS = 2.19
 FPK_REV = 9
-SPK_ICON = src/selfoss.png
+FPK_ICON = src/selfoss.png
 
 DEPENDS  = cross/selfoss
 # Pure PHP package, make sure ARCH is noarch

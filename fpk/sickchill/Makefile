@@ -1,7 +1,7 @@
 FPK_NAME = sickchill
 FPK_VERS = 20240301
 FPK_REV = 12
-SPK_ICON = src/sickchill.png
+FPK_ICON = src/sickchill.png
 
 PYTHON_PACKAGE = python312
 SPK_DEPENDS = "${PYTHON_PACKAGE}"

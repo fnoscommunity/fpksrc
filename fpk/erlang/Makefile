@@ -1,7 +1,7 @@
 FPK_NAME = erlang
 FPK_VERS = 24.3.4.13
 FPK_REV = 4
-SPK_ICON = src/erlang.png
+FPK_ICON = src/erlang.png
 
 DEPENDS = cross/erlang
 

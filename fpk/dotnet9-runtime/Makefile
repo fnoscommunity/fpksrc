@@ -1,7 +1,7 @@
 FPK_NAME = dotnet9-runtime
 FPK_VERS = 9.0.11
 FPK_REV = 12
-SPK_ICON = src/dotnet.png
+FPK_ICON = src/dotnet.png
 
 OPTIONAL_DEPENDS = cross/libstdc++
 DEPENDS = cross/dotnet9-runtime

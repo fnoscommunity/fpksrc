@@ -1,7 +1,7 @@
 FPK_NAME = readarr
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 5
-SPK_ICON = src/readarr.png
+FPK_ICON = src/readarr.png
 
 OPTIONAL_DEPENDS = cross/libstdc++
 DEPENDS = cross/readarr

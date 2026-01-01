@@ -1,7 +1,7 @@
 FPK_NAME = synocli-disk
 FPK_VERS = 4.1
 FPK_REV = 16
-SPK_ICON = src/synocli-disk.png
+FPK_ICON = src/synocli-disk.png
 
 # ATTENTION: build order of dependent packages matters
 # more DEPENDS further down...

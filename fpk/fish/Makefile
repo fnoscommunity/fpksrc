@@ -1,7 +1,7 @@
 FPK_NAME = fish
 FPK_VERS = 4.0.2
 FPK_REV = 8
-SPK_ICON = src/fish.png
+FPK_ICON = src/fish.png
 
 DEPENDS = cross/fish
 

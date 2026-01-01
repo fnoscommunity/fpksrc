@@ -1,7 +1,7 @@
 FPK_NAME = sabnzbd
 FPK_VERS = 4.5.4
 FPK_REV = 79
-SPK_ICON = src/sabnzbd.png
+FPK_ICON = src/sabnzbd.png
 
 PYTHON_PACKAGE = python312
 

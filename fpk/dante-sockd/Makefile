@@ -1,7 +1,7 @@
 FPK_NAME = dante-sockd
 FPK_VERS = 1.4.3
 FPK_REV = 1
-SPK_ICON = src/dante.png
+FPK_ICON = src/dante.png
 
 DEPENDS = cross/dante-sockd
 

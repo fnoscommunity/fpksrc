@@ -1,7 +1,7 @@
 FPK_NAME = couchpotatoserver-custom
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 6
-SPK_ICON = src/couchpotatoserver-custom.png
+FPK_ICON = src/couchpotatoserver-custom.png
 
 DEPENDS =
 SPK_DEPENDS = "python>2.7.3-3:git"

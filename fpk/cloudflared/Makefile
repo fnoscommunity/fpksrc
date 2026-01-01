@@ -1,7 +1,7 @@
 FPK_NAME = cloudflared
 FPK_VERS = 2025.10.0
 FPK_REV = 20
-SPK_ICON = src/cloudflared.png
+FPK_ICON = src/cloudflared.png
 
 DEPENDS = cross/cloudflared
 

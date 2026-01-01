@@ -1,7 +1,7 @@
 FPK_NAME = sonarr
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 6
-SPK_ICON = src/sonarr.png
+FPK_ICON = src/sonarr.png
 
 OPTIONAL_DEPENDS = cross/libstdc++
 DEPENDS = cross/sonarr cross/sqlite

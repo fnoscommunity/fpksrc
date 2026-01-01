@@ -1,7 +1,7 @@
 FPK_NAME = lirc
 FPK_VERS = 0.9.0
 FPK_REV = 3
-SPK_ICON = src/lirc.png
+FPK_ICON = src/lirc.png
 FIRMWARE = 4.3-3776
 
 LIRC_SUPPORTED_DRIVERS =

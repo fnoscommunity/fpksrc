@@ -1,7 +1,7 @@
 FPK_NAME = byobu
 FPK_VERS = 5.133
 FPK_REV = 1
-SPK_ICON = src/byobu.png
+FPK_ICON = src/byobu.png
 
 PYTHON_PACKAGE = python312
 SPK_DEPENDS = "$(PYTHON_PACKAGE):synocli-net"

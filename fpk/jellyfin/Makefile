@@ -2,7 +2,7 @@
 FPK_NAME = jellyfin
 FPK_VERS = 10.11.5
 FPK_REV = 33
-SPK_ICON = src/jellyfin.png
+FPK_ICON = src/jellyfin.png
 
 DEPENDS = cross/jellyfin cross/jellyfin-web
 

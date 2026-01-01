@@ -1,7 +1,7 @@
 FPK_NAME = sslh
 FPK_VERS = 2.1.4
 FPK_REV = 8
-SPK_ICON = src/sslh.png
+FPK_ICON = src/sslh.png
 
 DEPENDS = cross/sslh
 

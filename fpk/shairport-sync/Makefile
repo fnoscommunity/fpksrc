@@ -1,7 +1,7 @@
 FPK_NAME = shairport-sync
 FPK_VERS = 2.3.11
 FPK_REV = 2
-SPK_ICON = src/shairport-sync.png
+FPK_ICON = src/shairport-sync.png
 
 DEPENDS =  cross/busybox cross/shairport-sync
 

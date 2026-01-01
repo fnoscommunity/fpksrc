@@ -1,7 +1,7 @@
 FPK_NAME = synocli-kernel
 FPK_VERS = 1.2
 FPK_REV = 9
-SPK_ICON = src/synocli-kernel.png
+FPK_ICON = src/synocli-kernel.png
 
 DEPENDS = cross/usbutils cross/psmisc
 

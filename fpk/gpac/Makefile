@@ -2,7 +2,7 @@ FPK_NAME = gpac
 FPK_VERS = 2.2.1
 FPK_REV = 1
 
-SPK_ICON = src/gpac.png
+FPK_ICON = src/gpac.png
 
 DEPENDS = cross/gpac
 

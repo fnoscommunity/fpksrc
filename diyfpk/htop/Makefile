@@ -1,7 +1,7 @@
 FPK_NAME = htop
 FPK_VERS = 3.4.1
 FPK_REV = 1
-SPK_ICON = src/htop.png
+FPK_ICON = src/htop.png
 
 DEPENDS = cross/htop
 

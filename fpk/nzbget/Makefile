@@ -1,7 +1,7 @@
 FPK_NAME = nzbget
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 30
-SPK_ICON = src/nzbget.png
+FPK_ICON = src/nzbget.png
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = NZBGet is a command-line based binary newsgrabber for nzb files, written in C++. It supports client/server mode, automatic par-check/-repair, unpack and web-interface. NZBGet requires low system resources.

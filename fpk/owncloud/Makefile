@@ -1,7 +1,7 @@
 FPK_NAME = owncloud
 FPK_VERS = 10.16.0
 FPK_REV = 24
-SPK_ICON = src/owncloud.png
+FPK_ICON = src/owncloud.png
 
 DEPENDS = cross/owncloud
 # Pure PHP package, make sure ARCH is noarch

@@ -1,7 +1,7 @@
 FPK_NAME = roundcube
 FPK_VERS = 1.6.11
 FPK_REV = 8
-SPK_ICON = src/roundcube.png
+FPK_ICON = src/roundcube.png
 
 DEPENDS  = cross/roundcube
 # Pure PHP package, make sure ARCH is noarch

@@ -1,7 +1,7 @@
 FPK_NAME = comskip
 FPK_VERS = 0.83
 FPK_REV = 13
-SPK_ICON = src/comskip.png
+FPK_ICON = src/comskip.png
 
 FFMPEG_PACKAGE = ffmpeg7
 

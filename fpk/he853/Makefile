@@ -1,7 +1,7 @@
 FPK_NAME = he853
 FPK_VERS = 1.0.3
 FPK_REV  = 2
-SPK_ICON = src/HE853.png
+FPK_ICON = src/HE853.png
 
 DEPENDS = cross/he853
 REQUIRED_MIN_DSM = 5.0

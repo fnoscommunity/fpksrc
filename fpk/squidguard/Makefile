@@ -1,7 +1,7 @@
 FPK_NAME = squidguard
 FPK_VERS = 1.6
 FPK_REV = 2
-SPK_ICON = src/squidguard.png
+FPK_ICON = src/squidguard.png
 BETA = 1
 
 DEPENDS = cross/busybox cross/unrar cross/squidclamav cross/squidguard cross/squid cross/squidguardmanager

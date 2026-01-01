@@ -1,7 +1,7 @@
 FPK_NAME = lazylibrarian
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 7
-SPK_ICON = src/lazylibrarian.png
+FPK_ICON = src/lazylibrarian.png
 
 DEPENDS =
 SPK_DEPENDS = "python>2.7.3-3:git"

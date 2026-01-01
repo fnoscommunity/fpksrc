@@ -1,7 +1,7 @@
 FPK_NAME = bicbucstriim
 FPK_VERS = 3.6.7
 FPK_REV = 11
-SPK_ICON = src/bicbucstriim.png
+FPK_ICON = src/bicbucstriim.png
 
 DEPENDS = cross/bicbucstriim
 # Pure PHP package, make sure ARCH is noarch

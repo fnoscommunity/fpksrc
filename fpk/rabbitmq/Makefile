@@ -1,7 +1,7 @@
 FPK_NAME = rabbitmq
 FPK_VERS = 3.10.24
 FPK_REV = 8
-SPK_ICON = src/rabbitmq.png
+FPK_ICON = src/rabbitmq.png
 
 DEPENDS = cross/rabbitmq
 

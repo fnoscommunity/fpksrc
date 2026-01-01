@@ -1,7 +1,7 @@
 FPK_NAME = ejabberd
 FPK_VERS = 21.07
 FPK_REV = 2
-SPK_ICON = src/ejabberd.png
+FPK_ICON = src/ejabberd.png
 DSM_UI_DIR = app
 
 DEPENDS = cross/ejabberd

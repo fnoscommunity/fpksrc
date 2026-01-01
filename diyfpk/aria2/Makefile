@@ -1,7 +1,7 @@
 FPK_NAME = aria2
 FPK_VERS = 1.37.0
 FPK_REV = 1
-SPK_ICON = src/aria2.png
+FPK_ICON = src/aria2.png
 
 DEPENDS = cross/aria2
 

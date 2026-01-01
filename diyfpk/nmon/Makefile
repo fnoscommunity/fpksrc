@@ -1,7 +1,7 @@
 FPK_NAME = nmon
 FPK_VERS = 16s
 FPK_REV = 1
-SPK_ICON = src/nmon.png
+FPK_ICON = src/nmon.png
 
 DEPENDS = cross/nmon
 

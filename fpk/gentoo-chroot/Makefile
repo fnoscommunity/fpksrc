@@ -1,7 +1,7 @@
 FPK_NAME = gentoo-chroot
 FPK_VERS = 13.0
 FPK_REV = 1
-SPK_ICON = src/gentoo.png
+FPK_ICON = src/gentoo.png
 DSM_UI_DIR = app
 
 DEPENDS =

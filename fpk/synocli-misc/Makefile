@@ -1,7 +1,7 @@
 FPK_NAME = synocli-misc
 FPK_VERS = 1.3
 FPK_REV = 7
-SPK_ICON = src/synocli-misc.png
+FPK_ICON = src/synocli-misc.png
 
 DEPENDS  = cross/bc
 DEPENDS += cross/moreutils

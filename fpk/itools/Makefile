@@ -1,7 +1,7 @@
 FPK_NAME = itools
 FPK_VERS = 2.0
 FPK_REV = 5
-SPK_ICON = src/itools.png
+FPK_ICON = src/itools.png
 
 # since cross/libplist 2.3.0
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)

@@ -1,7 +1,7 @@
 FPK_NAME = synocli-file
 FPK_VERS = 4.0.2
 FPK_REV = 29
-SPK_ICON = src/synocli-file.png
+FPK_ICON = src/synocli-file.png
 
 # cross/libblkid must be built before cross/e2fsprogs or cross/libext2fs
 # otherwise rmlint does not use libblkid and is missing the "Optimize non-rotational disks" feature.

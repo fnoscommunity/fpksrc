@@ -7,7 +7,7 @@
 #   config/$(FPK_NAME).sc    if SERVICE_PORT and DSM<7
 #   config/resource          if SERVICE_CERT or DSM7
 #   app/$(FPK_NAME).sc     if SERVICE_PORT and DSM7
-#   app/config             if SPK_ICON and SERVICE_PORT but not NO_SERVICE_SHORTCUT (may be overwritten by DSM_UI_CONFIG)
+#   app/config             if FPK_ICON and SERVICE_PORT but not NO_SERVICE_SHORTCUT (may be overwritten by DSM_UI_CONFIG)
 #
 # Targets are executed in the following order:
 #  service_msg_target
@@ -420,7 +420,7 @@ endif
 
 # Generate DSM UI configuration (app/config)
 # prerequisites:
-# - SPK_ICON is required and NO_SERVICE_SHORTCUT is not defined
+# - FPK_ICON is required and NO_SERVICE_SHORTCUT is not defined
 # - if DSM_UI_CONFIG is defined, it is used as config file
 # - else SERVICE_PORT is defined:
 #   - the config file is generated with the SERVICE_PORT and the following variables
@@ -430,7 +430,7 @@ endif
 #     - SERVICE_PORT_ALL_USERS
 #     - SERVICE_TYPE
 # default values are documentent at the top of this file
-ifneq ($(strip $(SPK_ICON)),)
+ifneq ($(strip $(FPK_ICON)),)
 ifeq ($(strip $(NO_SERVICE_SHORTCUT)),)
 ifneq ($(wildcard $(DSM_UI_CONFIG)),)
 $(STAGING_DIR)/$(DSM_UI_DIR)/config:

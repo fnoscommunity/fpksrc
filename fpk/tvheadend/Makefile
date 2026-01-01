@@ -5,7 +5,7 @@ SPK_GIT_DATE = 20251114
 FPK_VERS = $(SPK_SHORT_VERS).$(SPK_GIT_DATE)
 TVH_VERS = $(SPK_SHORT_VERS)~$(SPK_GIT_HASH)
 FPK_REV = 45
-SPK_ICON = src/tvheadend.png
+FPK_ICON = src/tvheadend.png
 DSM_UI_DIR = app
 
 FFMPEG_PACKAGE = ffmpeg7

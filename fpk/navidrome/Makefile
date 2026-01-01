@@ -1,7 +1,7 @@
 FPK_NAME = navidrome
 FPK_VERS = 0.58.5
 FPK_REV = 6
-SPK_ICON = src/navidrome.png
+FPK_ICON = src/navidrome.png
 
 DEPENDS = cross/navidrome
 

@@ -1,7 +1,7 @@
 FPK_NAME = lzip
 FPK_VERS = 1.25
 FPK_REV = 1
-SPK_ICON = src/lzip.png
+FPK_ICON = src/lzip.png
 
 DEPENDS = cross/lzip cross/plzip
 

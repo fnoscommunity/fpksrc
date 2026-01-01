@@ -1,7 +1,7 @@
 FPK_NAME = kopia
 FPK_VERS = 0.21.1
 FPK_REV = 5
-SPK_ICON = src/kopia.png
+FPK_ICON = src/kopia.png
 
 DEPENDS = cross/kopia
 

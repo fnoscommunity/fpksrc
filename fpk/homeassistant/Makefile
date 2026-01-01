@@ -1,7 +1,7 @@
 FPK_NAME = homeassistant
 FPK_VERS = 2024.12.5
 FPK_REV = 24
-SPK_ICON = src/homeassistant.png
+FPK_ICON = src/homeassistant.png
 
 HACS_VERS = 2.0.5
 

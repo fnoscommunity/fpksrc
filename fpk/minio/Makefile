@@ -1,7 +1,7 @@
 FPK_NAME = minio
 FPK_VERS = 2022.10.24
 FPK_REV = 16
-SPK_ICON = src/minio.png
+FPK_ICON = src/minio.png
 DSM_UI_DIR = app
 
 DEPENDS = cross/minio cross/minio-client

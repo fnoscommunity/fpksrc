@@ -1,7 +1,7 @@
 FPK_NAME = go2rtc
 FPK_VERS = 1.9.13
 FPK_REV = 8
-SPK_ICON = src/go2rtc.png
+FPK_ICON = src/go2rtc.png
 
 DEPENDS = cross/go2rtc
 

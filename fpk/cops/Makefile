@@ -1,7 +1,7 @@
 FPK_NAME = cops
 FPK_VERS = 3.8.2
 FPK_REV = 17
-SPK_ICON = src/cops.png
+FPK_ICON = src/cops.png
 
 DEPENDS  = cross/cops
 # Pure PHP package, make sure ARCH is noarch

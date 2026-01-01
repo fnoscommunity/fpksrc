@@ -1,7 +1,7 @@
 FPK_NAME = links
 FPK_VERS = 2.30
 FPK_REV = 1
-SPK_ICON = src/links.png
+FPK_ICON = src/links.png
 
 DEPENDS = cross/links
 

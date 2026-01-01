@@ -1,7 +1,7 @@
 FPK_NAME = gnupg
 FPK_VERS = 2.4.8
 FPK_REV = 7
-SPK_ICON = src/gnupg.png
+FPK_ICON = src/gnupg.png
 
 DEPENDS = cross/gnupg
 

@@ -1,7 +1,7 @@
 FPK_NAME = deluge
 FPK_VERS = 2.2.0
 FPK_REV = 25
-SPK_ICON = src/deluge.png
+FPK_ICON = src/deluge.png
 
 PYTHON_PACKAGE = python312
 SPK_DEPENDS = "${PYTHON_PACKAGE}"

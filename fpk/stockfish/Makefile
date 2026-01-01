@@ -1,7 +1,7 @@
 FPK_NAME = stockfish
 FPK_VERS = 11
 FPK_REV = 3
-SPK_ICON= src/stockfish.png
+FPK_ICON= src/stockfish.png
 DSM_UI_DIR = app
 
 DEPENDS = cross/stockfish cross/stockfish-webgui

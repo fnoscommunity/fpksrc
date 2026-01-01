@@ -1,7 +1,7 @@
 FPK_NAME = fdupes
 FPK_VERS = 2.4.0
 FPK_REV = 1
-SPK_ICON = src/fdupes.png
+FPK_ICON = src/fdupes.png
 
 DEPENDS = cross/fdupes
 

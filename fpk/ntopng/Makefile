@@ -1,7 +1,7 @@
 FPK_NAME = ntopng
 FPK_VERS = 6.4
 FPK_REV = 6
-SPK_ICON = src/ntopng.png
+FPK_ICON = src/ntopng.png
 
 DEPENDS = cross/ntopng
 

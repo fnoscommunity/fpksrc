@@ -1,7 +1,7 @@
 FPK_NAME = nzbdrone
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 22
-SPK_ICON = src/sonarr.png
+FPK_ICON = src/sonarr.png
 
 DEPENDS = cross/curl cross/mediainfo cross/sqlite cross/sonarr3
 SPK_DEPENDS = "mono>=5.8"

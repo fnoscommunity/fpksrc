@@ -1,7 +1,7 @@
 FPK_NAME = mosquitto
 FPK_VERS = 2.0.22
 FPK_REV = 17
-SPK_ICON = src/mosquitto.png
+FPK_ICON = src/mosquitto.png
 
 DEPENDS = cross/mosquitto
 

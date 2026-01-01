@@ -1,7 +1,7 @@
 FPK_NAME = umurmur
 FPK_VERS = 0.3.1
 FPK_REV = 10
-SPK_ICON = src/umurmur.png
+FPK_ICON = src/umurmur.png
 
 DEPENDS = cross/umurmur
 

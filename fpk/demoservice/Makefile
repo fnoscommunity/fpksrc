@@ -1,7 +1,7 @@
 FPK_NAME = demoservice
 FPK_VERS = 1.3
 FPK_REV = 9
-SPK_ICON = src/demoservice.png
+FPK_ICON = src/demoservice.png
 
 override ARCH=noarch
 

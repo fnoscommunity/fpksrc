@@ -1,7 +1,7 @@
 FPK_NAME = ghostscript
 FPK_VERS = 10.05.0
 FPK_REV = 1
-SPK_ICON = src/ghostscript.png
+FPK_ICON = src/ghostscript.png
 
 DEPENDS = cross/ghostscript
 

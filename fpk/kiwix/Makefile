@@ -1,7 +1,7 @@
 FPK_NAME = kiwix
 FPK_VERS = 3.7.0
 FPK_REV  = 8
-SPK_ICON = src/kiwix.png
+FPK_ICON = src/kiwix.png
 
 DEPENDS = cross/kiwix-tools
 

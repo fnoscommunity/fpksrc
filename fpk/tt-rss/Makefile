@@ -1,7 +1,7 @@
 FPK_NAME = tt-rss
 FPK_VERS = 20230828
 FPK_REV = 19
-SPK_ICON = src/tt-rss.png
+FPK_ICON = src/tt-rss.png
 
 DEPENDS  = cross/tt-rss
 # Pure PHP package, make sure ARCH is noarch

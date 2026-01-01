@@ -1,7 +1,7 @@
 FPK_NAME = ps3netsrv
 FPK_VERS = 20240709
 FPK_REV = 10
-SPK_ICON = src/${FPK_NAME}.png
+FPK_ICON = src/${FPK_NAME}.png
 
 DEPENDS = cross/ps3netsrv
 

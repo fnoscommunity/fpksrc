@@ -1,7 +1,7 @@
 FPK_NAME = nushell
 FPK_VERS = 0.108.0
 FPK_REV = 1
-SPK_ICON = src/nushell.png
+FPK_ICON = src/nushell.png
 
 DEPENDS = cross/nushell
 

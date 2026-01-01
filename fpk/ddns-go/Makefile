@@ -1,7 +1,7 @@
 FPK_NAME = ddns-go
 FPK_VERS = 6.13.3
 FPK_REV = 1
-SPK_ICON = src/ddns-go.png
+FPK_ICON = src/ddns-go.png
 
 DEPENDS = cross/ddns-go
 

@@ -1,7 +1,7 @@
 FPK_NAME = darkstat
 FPK_VERS = 3.0.721
 FPK_REV = 5
-SPK_ICON = src/darkstat.png
+FPK_ICON = src/darkstat.png
 DSM_UI_DIR = app
 
 DEPENDS = cross/darkstat

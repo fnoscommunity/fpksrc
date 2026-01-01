@@ -1,7 +1,7 @@
 FPK_NAME = irssi
 FPK_VERS = 1.2.3
 FPK_REV = 3
-SPK_ICON = src/irssi.png
+FPK_ICON = src/irssi.png
 
 DEPENDS = cross/irssi
 

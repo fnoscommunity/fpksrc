@@ -1,7 +1,7 @@
 FPK_NAME = iperf3
 FPK_VERS = 3.20
 FPK_REV = 1
-SPK_ICON = src/iperf3.png
+FPK_ICON = src/iperf3.png
 
 DEPENDS = cross/iperf3
 

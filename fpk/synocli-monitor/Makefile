@@ -1,7 +1,7 @@
 FPK_NAME = synocli-monitor
 FPK_VERS = 1.8
 FPK_REV = 13
-SPK_ICON = src/synocli-monitor.png
+FPK_ICON = src/synocli-monitor.png
 
 DEPENDS  = cross/nmon cross/njmon
 DEPENDS += cross/iperf2 cross/iperf3

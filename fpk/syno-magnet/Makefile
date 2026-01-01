@@ -1,7 +1,7 @@
 FPK_NAME = syno-magnet
 FPK_VERS = 1.0
 FPK_REV = 3
-SPK_ICON = src/magnet.png
+FPK_ICON = src/magnet.png
 
 PKG_NAME = $(FPK_NAME)
 PKG_VERS = $(FPK_VERS)

@@ -1,7 +1,7 @@
 FPK_NAME = btop
 FPK_VERS = 1.4.5
 FPK_REV = 1
-SPK_ICON = src/btop.png
+FPK_ICON = src/btop.png
 
 DEPENDS = cross/btop
 

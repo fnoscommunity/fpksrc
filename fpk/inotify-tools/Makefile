@@ -1,7 +1,7 @@
 FPK_NAME = inotify-tools
 FPK_VERS = 4.25.9.0
 FPK_REV = 4
-SPK_ICON = src/inotify-tools.png
+FPK_ICON = src/inotify-tools.png
 
 DEPENDS = cross/inotify-tools
 

@@ -1,7 +1,7 @@
 FPK_NAME = jackett
 FPK_VERS = 0.24.478
 FPK_REV = 19
-SPK_ICON = src/jackett.png
+FPK_ICON = src/jackett.png
 DSM_UI_DIR = app
 
 OPTIONAL_DEPENDS = cross/jackett cross/jackett-mono cross/libstdc++ cross/curl 

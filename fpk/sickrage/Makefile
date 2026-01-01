@@ -1,7 +1,7 @@
 FPK_NAME = sickrage
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 5
-SPK_ICON = src/${FPK_NAME}.png
+FPK_ICON = src/${FPK_NAME}.png
 
 SPK_DEPENDS = "python>=2.7.6-8:git"
 

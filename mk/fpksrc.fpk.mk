@@ -151,7 +151,7 @@ endif
 include ../../mk/fpksrc.service.mk
 
 icon: strip
-ifneq ($(strip $(SPK_ICON)),)
+ifneq ($(strip $(FPK_ICON)),)
 include ../../mk/fpksrc.icon.mk
 endif
 
@@ -384,16 +384,16 @@ $(DSM_SCRIPTS_DIR)/config_callback:
 # Package Icons
 .PHONY: icons
 icons:
-ifneq ($(strip $(SPK_ICON)),)
+ifneq ($(strip $(FPK_ICON)),)
 	$(create_target_dir)
 	@$(MSG) "Creating ICON.PNG for $(FPK_NAME)"
 ifneq ($(call version_ge, ${TCVERSION}, 7.0),1)
-	(convert $(SPK_ICON) -resize 72x72 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON.PNG)
+	(convert $(FPK_ICON) -resize 72x72 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON.PNG)
 else
-	(convert $(SPK_ICON) -resize 64x64 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON.PNG)
+	(convert $(FPK_ICON) -resize 64x64 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON.PNG)
 endif
 	@$(MSG) "Creating ICON_256.PNG for $(FPK_NAME)"
-	(convert $(SPK_ICON) -resize 256x256 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON_256.PNG)
+	(convert $(FPK_ICON) -resize 256x256 -strip -sharpen 0x2 - > $(WORK_DIR)/ICON_256.PNG)
 	$(eval FPK_CONTENT += ICON.PNG ICON_256.PNG)
 endif
 

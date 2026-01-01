@@ -1,7 +1,7 @@
 FPK_NAME = kavita
 FPK_VERS = 0.8.8.3
 FPK_REV = 14
-SPK_ICON = src/kavita.png
+FPK_ICON = src/kavita.png
 
 DEPENDS = cross/kavita cross/libe_sqlite3
 

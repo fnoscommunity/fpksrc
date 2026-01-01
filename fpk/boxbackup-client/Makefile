@@ -1,7 +1,7 @@
 FPK_NAME = boxbackup-client
 FPK_VERS = 0.12
 FPK_REV = 2
-SPK_ICON = src/boxbackup.png
+FPK_ICON = src/boxbackup.png
 
 DEPENDS = cross/boxbackup
 SPK_DEPENDS = "Perl"

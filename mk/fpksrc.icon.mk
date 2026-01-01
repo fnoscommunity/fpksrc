@@ -13,7 +13,7 @@ ICON_COOKIE = $(WORK_DIR)/.$(COOKIE_PREFIX)icon_done
 
 # Icons are only needed with "DSM UI configuration" (see fpksrc.service.mk)
 ifneq ($(strip $(DSM_UI_DIR)),)
-ifneq ($(strip $(SPK_ICON)),)
+ifneq ($(strip $(FPK_ICON)),)
 ifneq ($(strip $(DSM_UI_CONFIG)),)
 ICON_DIR = $(STAGING_DIR)/$(DSM_UI_DIR)/images
 else ifneq ($(or $(strip $(SERVICE_PORT)), $(strip $(ADMIN_URL))),)
@@ -51,7 +51,7 @@ pre_icon_target: icon_msg
 $(ICON_DIR): $(PRE_ICON_TARGET)
 	@mkdir -p $@
 	@for size in 16 24 32 48 64 72 256; do \
-	  convert $(SPK_ICON) -thumbnail $${size}x$${size} -strip \
+	  convert $(FPK_ICON) -thumbnail $${size}x$${size} -strip \
 	          $@/$(FPK_NAME)-$${size}.png ; \
 	done ; \
 

@@ -1,7 +1,7 @@
 FPK_NAME = mantisbt
 FPK_VERS = 2.27.3
 FPK_REV = 10
-SPK_ICON = src/mantisbt.png
+FPK_ICON = src/mantisbt.png
 
 DEPENDS  = cross/mantisbt
 # Pure PHP package, make sure ARCH is noarch

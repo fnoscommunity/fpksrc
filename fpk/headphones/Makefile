@@ -1,7 +1,7 @@
 FPK_NAME = headphones
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 13
-SPK_ICON = src/headphones.png
+FPK_ICON = src/headphones.png
 
 DEPENDS =
 PYTHON_PACKAGE = python312

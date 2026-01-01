@@ -1,7 +1,7 @@
 FPK_NAME = mutt
 FPK_VERS = 2.2.13
 FPK_REV = 9
-SPK_ICON = src/mutt.png
+FPK_ICON = src/mutt.png
 
 DEPENDS = cross/mutt
 

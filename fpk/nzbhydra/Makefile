@@ -1,7 +1,7 @@
 FPK_NAME = nzbhydra
 FPK_VERS = 0.2.233
 FPK_REV = 2
-SPK_ICON = src/nzbhydra.png
+FPK_ICON = src/nzbhydra.png
 
 DEPENDS =
 SPK_DEPENDS = "python>2.7.9:git"

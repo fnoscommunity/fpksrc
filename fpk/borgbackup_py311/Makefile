@@ -2,7 +2,7 @@ FPK_NAME = borgbackup
 FPK_VERS = 1.4.1
 # reuse former FPK_REV to separate from python312 dependent packages
 FPK_REV = 17
-SPK_ICON = src/borgbackup.png
+FPK_ICON = src/borgbackup.png
 
 # REMARKS
 # Python 3.11 compatible version for ARMv5 archs

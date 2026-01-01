@@ -1,7 +1,7 @@
 FPK_NAME = haproxy
 FPK_VERS = 2.2.4
 FPK_REV = 22
-SPK_ICON = src/haproxy.png
+FPK_ICON = src/haproxy.png
 DSM_UI_DIR = app
 DSM_APP_NAME = FnOScommunity.HAProxy.AppInstance
 

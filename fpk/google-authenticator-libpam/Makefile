@@ -1,7 +1,7 @@
 FPK_NAME = google-authenticator-libpam
 FPK_VERS = 1.09
 FPK_REV = 1
-SPK_ICON = src/google-authenticator.png
+FPK_ICON = src/google-authenticator.png
 
 DEPENDS = cross/google-authenticator-libpam
 

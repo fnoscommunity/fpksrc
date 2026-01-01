@@ -1,7 +1,7 @@
 FPK_NAME = fossil-scm
 FPK_VERS = 2.17
 FPK_REV = 3
-SPK_ICON = src/fossil-scm.png
+FPK_ICON = src/fossil-scm.png
 
 DEPENDS = cross/fossil-scm
 

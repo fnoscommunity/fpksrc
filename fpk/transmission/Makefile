@@ -1,7 +1,7 @@
 FPK_NAME = transmission
 FPK_VERS = 4.0.6
 FPK_REV = 27
-SPK_ICON = src/transmission.png
+FPK_ICON = src/transmission.png
 
 DEPENDS = cross/transmission
 

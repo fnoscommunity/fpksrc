@@ -1,7 +1,7 @@
 FPK_NAME = mylar
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 7
-SPK_ICON = src/mylar.png
+FPK_ICON = src/mylar.png
 
 DEPENDS =
 SPK_DEPENDS = "python>2.7.3-3:git"

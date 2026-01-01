@@ -1,7 +1,7 @@
 FPK_NAME = lidarr
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 17
-SPK_ICON = src/lidarr.png
+FPK_ICON = src/lidarr.png
 
 OPTIONAL_DEPENDS = cross/libstdc++ cross/libe_sqlite3
 DEPENDS = cross/lidarr

@@ -1,7 +1,7 @@
 FPK_NAME = ruby
 FPK_VERS = 3.4.5
 FPK_REV = 13
-SPK_ICON = src/ruby.png
+FPK_ICON = src/ruby.png
 
 DEPENDS = cross/ruby
 

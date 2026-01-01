@@ -1,7 +1,7 @@
 FPK_NAME = gitea
 FPK_VERS = 1.25.0
 FPK_REV = 26
-SPK_ICON = src/gitea.png
+FPK_ICON = src/gitea.png
 
 MAINTAINER = wkobiela
 DESCRIPTION  = Gitea is a community managed lightweight code hosting solution written in Go.
