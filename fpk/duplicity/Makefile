@@ -1,5 +1,5 @@
 FPK_NAME = duplicity
-SPK_VERS = 3.0.5.1
+FPK_VERS = 3.0.5.1
 SPK_REV = 13
 SPK_ICON = src/duplicity.png
 

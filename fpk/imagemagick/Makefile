@@ -1,5 +1,5 @@
 FPK_NAME = imagemagick
-SPK_VERS = 7.1.2
+FPK_VERS = 7.1.2
 SPK_REV = 14
 SPK_ICON = src/imagemagick.png
 
@@ -56,7 +56,7 @@ imagemagick_extra_install: imagemagick_patch_rpath
 	@install -m 644 src/type-windows.xml $(STAGING_DIR)/etc/ImageMagick-7/
 	@install -m 644 src/type-urw-base35.xml $(STAGING_DIR)/etc/ImageMagick-7/
 	@$(MSG) "Adjust included libtool files (remove $(INSTALL_DIR) in paths)"
-	@for la_file in $(wildcard $(STAGING_DIR)/lib/ImageMagick-${SPK_VERS}/modules-Q16HDRI/*/*.la) ; do \
+	@for la_file in $(wildcard $(STAGING_DIR)/lib/ImageMagick-${FPK_VERS}/modules-Q16HDRI/*/*.la) ; do \
 	  sed -e 's#$(INSTALL_DIR)//#/#g' -i $${la_file} ; \
 	  sed -e 's#$(INSTALL_DIR)##g' -i $${la_file} ; \
 	done

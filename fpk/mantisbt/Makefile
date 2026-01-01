@@ -1,5 +1,5 @@
 FPK_NAME = mantisbt
-SPK_VERS = 2.27.3
+FPK_VERS = 2.27.3
 SPK_REV = 10
 SPK_ICON = src/mantisbt.png
 

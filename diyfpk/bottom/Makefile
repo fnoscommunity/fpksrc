@@ -1,5 +1,5 @@
 FPK_NAME = bottom
-SPK_VERS = 0.11.4
+FPK_VERS = 0.11.4
 SPK_REV = 1
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
@@ -7,7 +7,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 DEPENDS = cross/bottom_0.10
-SPK_VERS = 0.10.2
+FPK_VERS = 0.10.2
 else
 DEPENDS = cross/bottom
 endif

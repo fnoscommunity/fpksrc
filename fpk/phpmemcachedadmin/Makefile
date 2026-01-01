@@ -1,5 +1,5 @@
 FPK_NAME = phpmemcachedadmin
-SPK_VERS = 1.3.0
+FPK_VERS = 1.3.0
 SPK_REV = 3
 SPK_ICON = src/phpmemcachedadmin.png
 DSM_UI_DIR = app

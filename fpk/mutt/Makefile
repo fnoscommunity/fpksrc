@@ -1,5 +1,5 @@
 FPK_NAME = mutt
-SPK_VERS = 2.2.13
+FPK_VERS = 2.2.13
 SPK_REV = 9
 SPK_ICON = src/mutt.png
 

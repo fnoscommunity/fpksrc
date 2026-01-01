@@ -1,5 +1,5 @@
 FPK_NAME = owncloud
-SPK_VERS = 10.16.0
+FPK_VERS = 10.16.0
 SPK_REV = 24
 SPK_ICON = src/owncloud.png
 

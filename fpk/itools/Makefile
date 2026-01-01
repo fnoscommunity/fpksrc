@@ -1,5 +1,5 @@
 FPK_NAME = itools
-SPK_VERS = 2.0
+FPK_VERS = 2.0
 SPK_REV = 5
 SPK_ICON = src/itools.png
 

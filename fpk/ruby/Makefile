@@ -1,5 +1,5 @@
 FPK_NAME = ruby
-SPK_VERS = 3.4.5
+FPK_VERS = 3.4.5
 SPK_REV = 13
 SPK_ICON = src/ruby.png
 

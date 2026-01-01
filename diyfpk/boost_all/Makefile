@@ -1,5 +1,5 @@
 FPK_NAME = boost_all
-SPK_VERS = 1.78.0
+FPK_VERS = 1.78.0
 SPK_REV = 1
 
 DEPENDS = cross/boost

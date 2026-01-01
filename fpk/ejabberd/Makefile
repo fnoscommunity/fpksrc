@@ -1,5 +1,5 @@
 FPK_NAME = ejabberd
-SPK_VERS = 21.07
+FPK_VERS = 21.07
 SPK_REV = 2
 SPK_ICON = src/ejabberd.png
 DSM_UI_DIR = app

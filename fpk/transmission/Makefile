@@ -1,5 +1,5 @@
 FPK_NAME = transmission
-SPK_VERS = 4.0.6
+FPK_VERS = 4.0.6
 SPK_REV = 27
 SPK_ICON = src/transmission.png
 

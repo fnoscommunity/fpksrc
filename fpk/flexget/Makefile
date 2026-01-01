@@ -1,5 +1,5 @@
 FPK_NAME = flexget
-SPK_VERS = 3.16.3
+FPK_VERS = 3.16.3
 SPK_REV = 17
 SPK_ICON = src/flexget.png
 

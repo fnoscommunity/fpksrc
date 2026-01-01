@@ -1,5 +1,5 @@
 FPK_NAME = nushell
-SPK_VERS = 0.108.0
+FPK_VERS = 0.108.0
 SPK_REV = 1
 SPK_ICON = src/nushell.png
 

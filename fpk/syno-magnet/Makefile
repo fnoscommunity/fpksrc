@@ -1,10 +1,10 @@
 FPK_NAME = syno-magnet
-SPK_VERS = 1.0
+FPK_VERS = 1.0
 SPK_REV = 3
 SPK_ICON = src/magnet.png
 
 PKG_NAME = $(FPK_NAME)
-PKG_VERS = $(SPK_VERS)
+PKG_VERS = $(FPK_VERS)
 PKG_EXT = tar.gz
 PKG_DIST_NAME = v$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/neykov/syno-magnet/archive

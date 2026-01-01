@@ -1,5 +1,5 @@
 FPK_NAME = pigz
-SPK_VERS = 2.8
+FPK_VERS = 2.8
 SPK_REV = 1
 
 DEPENDS = cross/pigz

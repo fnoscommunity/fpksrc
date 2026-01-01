@@ -1,5 +1,5 @@
 FPK_NAME = dutree
-SPK_VERS = 0.2.18
+FPK_VERS = 0.2.18
 SPK_REV = 1
 
 DEPENDS = cross/dutree

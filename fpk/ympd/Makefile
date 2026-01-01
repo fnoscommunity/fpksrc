@@ -1,5 +1,5 @@
 FPK_NAME = ympd
-SPK_VERS = 1.3.0
+FPK_VERS = 1.3.0
 SPK_REV = 2
 SPK_ICON = src/ympd.png
 DSM_UI_DIR = app

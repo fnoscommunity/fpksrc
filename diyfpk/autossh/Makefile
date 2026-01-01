@@ -1,5 +1,5 @@
 FPK_NAME = autossh
-SPK_VERS = 1.4g
+FPK_VERS = 1.4g
 SPK_REV = 1
 
 DEPENDS = cross/autossh

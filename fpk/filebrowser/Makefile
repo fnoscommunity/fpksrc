@@ -1,5 +1,5 @@
 FPK_NAME = filebrowser
-SPK_VERS = 2.32.0
+FPK_VERS = 2.32.0
 SPK_REV = 7
 SPK_ICON = src/filebrowser.png
 

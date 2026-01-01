@@ -1,5 +1,5 @@
 FPK_NAME = bicbucstriim
-SPK_VERS = 3.6.7
+FPK_VERS = 3.6.7
 SPK_REV = 11
 SPK_ICON = src/bicbucstriim.png
 

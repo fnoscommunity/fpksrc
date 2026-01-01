@@ -1,5 +1,5 @@
 FPK_NAME = arp-scan
-SPK_VERS = 1.9.8
+FPK_VERS = 1.9.8
 SPK_REV = 1
 
 DEPENDS = cross/arp-scan

@@ -1,5 +1,5 @@
 FPK_NAME = mkvtoolnix
-SPK_VERS = 58.0.0
+FPK_VERS = 58.0.0
 SPK_REV = 4
 SPK_ICON = src/mkvtoolnix.png
 

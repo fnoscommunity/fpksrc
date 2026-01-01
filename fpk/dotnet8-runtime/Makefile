@@ -1,5 +1,5 @@
 FPK_NAME = dotnet8-runtime
-SPK_VERS = 8.0.22
+FPK_VERS = 8.0.22
 SPK_REV = 14
 SPK_ICON = src/dotnet.png
 

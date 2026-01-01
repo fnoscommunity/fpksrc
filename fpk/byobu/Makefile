@@ -1,5 +1,5 @@
 FPK_NAME = byobu
-SPK_VERS = 5.133
+FPK_VERS = 5.133
 SPK_REV = 1
 SPK_ICON = src/byobu.png
 

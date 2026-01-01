@@ -1,5 +1,5 @@
 FPK_NAME = alsa-utils
-SPK_VERS = 1.2.9
+FPK_VERS = 1.2.9
 SPK_REV = 1
 
 DEPENDS = cross/alsa-utils

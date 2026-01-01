@@ -1,5 +1,5 @@
 FPK_NAME = mergerfs
-SPK_VERS = 2.40.2
+FPK_VERS = 2.40.2
 SPK_REV = 1
 
 DEPENDS = cross/mergerfs

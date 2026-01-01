@@ -1,5 +1,5 @@
 FPK_NAME = boxbackup-client
-SPK_VERS = 0.12
+FPK_VERS = 0.12
 SPK_REV = 2
 SPK_ICON = src/boxbackup.png
 

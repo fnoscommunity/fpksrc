@@ -1,5 +1,5 @@
 FPK_NAME = e2fsprogs
-SPK_VERS = 1.47.3
+FPK_VERS = 1.47.3
 SPK_REV = 1
 
 DEPENDS = cross/e2fsprogs

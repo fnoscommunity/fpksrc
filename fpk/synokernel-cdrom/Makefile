@@ -1,5 +1,5 @@
 FPK_NAME = synokernel-cdrom
-SPK_VERS = 1.3
+FPK_VERS = 1.3
 SPK_REV = 4
 SPK_ICON = src/synokernel-cdrom.png
 

@@ -1,5 +1,5 @@
 FPK_NAME = gateone
-SPK_VERS = 20171125
+FPK_VERS = 20171125
 SPK_REV = 9
 SPK_ICON = src/gateone.png
 DSM_UI_DIR = app

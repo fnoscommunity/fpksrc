@@ -1,5 +1,5 @@
 FPK_NAME = rdiff-backup
-SPK_VERS = 2.2.6
+FPK_VERS = 2.2.6
 SPK_REV = 7
 SPK_ICON = src/rdiff-backup.png
 

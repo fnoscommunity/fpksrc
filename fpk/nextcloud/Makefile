@@ -1,5 +1,5 @@
 FPK_NAME = nextcloud
-SPK_VERS = 32.0.2
+FPK_VERS = 32.0.2
 SPK_REV = 1
 SPK_ICON = src/nextcloud.png
 

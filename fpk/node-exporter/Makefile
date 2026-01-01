@@ -1,5 +1,5 @@
 FPK_NAME = node-exporter
-SPK_VERS = 1.8.2
+FPK_VERS = 1.8.2
 SPK_REV = 5
 SPK_ICON = src/node-exporter.png
 

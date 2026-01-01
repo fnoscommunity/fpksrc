@@ -1,5 +1,5 @@
 FPK_NAME = aria2
-SPK_VERS = 1.37.0
+FPK_VERS = 1.37.0
 SPK_REV = 1
 SPK_ICON = src/aria2.png
 

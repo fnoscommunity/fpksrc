@@ -1,5 +1,5 @@
 FPK_NAME = socat
-SPK_VERS = 1.8.0.3
+FPK_VERS = 1.8.0.3
 SPK_REV = 1
 
 DEPENDS = cross/socat

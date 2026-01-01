@@ -1,5 +1,5 @@
 FPK_NAME = lm-sensors
-SPK_VERS = 3.6.0
+FPK_VERS = 3.6.0
 SPK_REV = 1
 
 DEPENDS = cross/lm-sensors

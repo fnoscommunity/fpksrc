@@ -1,5 +1,5 @@
 FPK_NAME = ntopng
-SPK_VERS = 6.4
+FPK_VERS = 6.4
 SPK_REV = 6
 SPK_ICON = src/ntopng.png
 

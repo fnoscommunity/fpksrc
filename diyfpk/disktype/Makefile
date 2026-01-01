@@ -1,5 +1,5 @@
 FPK_NAME = disktype
-SPK_VERS = 9
+FPK_VERS = 9
 SPK_REV = 1
 
 DEPENDS = cross/disktype

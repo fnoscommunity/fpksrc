@@ -1,5 +1,5 @@
 FPK_NAME = gitea
-SPK_VERS = 1.25.0
+FPK_VERS = 1.25.0
 SPK_REV = 26
 SPK_ICON = src/gitea.png
 

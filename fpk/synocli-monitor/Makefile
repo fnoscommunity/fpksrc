@@ -1,5 +1,5 @@
 FPK_NAME = synocli-monitor
-SPK_VERS = 1.8
+FPK_VERS = 1.8
 SPK_REV = 13
 SPK_ICON = src/synocli-monitor.png
 

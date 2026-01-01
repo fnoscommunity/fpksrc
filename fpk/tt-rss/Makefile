@@ -1,5 +1,5 @@
 FPK_NAME = tt-rss
-SPK_VERS = 20230828
+FPK_VERS = 20230828
 SPK_REV = 19
 SPK_ICON = src/tt-rss.png
 

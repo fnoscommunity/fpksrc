@@ -1,5 +1,5 @@
 FPK_NAME = ffmpeg7
-SPK_VERS = 7.0.3
+FPK_VERS = 7.0.3
 SPK_REV = 5
 SPK_ICON = src/ffmpeg.png
 CHANGELOG = "1. Update to using updated synocli-videodriver package."
@@ -12,7 +12,7 @@ UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 MAINTAINER = th0ma7
 DESCRIPTION = FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec - the leading audio/video codec library.  More information from FnOScommunity FFmpeg package available at https://github.com/fnoscommunity/fpksrc/wiki/FAQ-FFmpeg
 DESCRIPTION_FRE = FFmpeg est une solution complète multiplateforme pour enregistrer, convertir et diffuser du contenu audio et vidéo. Il comprend libavcodec - la principale bibliothèque de codecs audio/vidéo.  Informations additionnelles concernant le paquet FFmpeg de FnOScommunity disponibles à https://github.com/fnoscommunity/fpksrc/wiki/FAQ-FFmpeg
-DISPLAY_NAME = FFmpeg $(firstword $(subst ., ,$(SPK_VERS)))
+DISPLAY_NAME = FFmpeg $(firstword $(subst ., ,$(FPK_VERS)))
 STARTABLE = false
 
 HOMEPAGE = https://www.ffmpeg.org/

@@ -1,5 +1,5 @@
 FPK_NAME = adminer
-SPK_VERS = 5.4.1
+FPK_VERS = 5.4.1
 SPK_REV = 8
 SPK_ICON = src/adminer.png
 DSM_UI_DIR = app

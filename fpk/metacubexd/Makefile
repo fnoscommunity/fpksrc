@@ -1,5 +1,5 @@
 FPK_NAME = metacubexd
-SPK_VERS = 1.186.1
+FPK_VERS = 1.186.1
 SPK_REV = 1
 SPK_ICON = src/metacubexd.png
 

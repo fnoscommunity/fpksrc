@@ -1,5 +1,5 @@
 FPK_NAME = image-optim
-SPK_VERS = 1.0
+FPK_VERS = 1.0
 SPK_REV = 1
 
 # pngquant (pngquant3) must be built first

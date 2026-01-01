@@ -1,5 +1,5 @@
 FPK_NAME = shairport-sync
-SPK_VERS = 2.3.11
+FPK_VERS = 2.3.11
 SPK_REV = 2
 SPK_ICON = src/shairport-sync.png
 

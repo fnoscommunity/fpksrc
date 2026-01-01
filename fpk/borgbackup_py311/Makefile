@@ -1,5 +1,5 @@
 FPK_NAME = borgbackup
-SPK_VERS = 1.4.1
+FPK_VERS = 1.4.1
 # reuse former SPK_REV to separate from python312 dependent packages
 SPK_REV = 17
 SPK_ICON = src/borgbackup.png

@@ -1,5 +1,5 @@
 FPK_NAME = sd
-SPK_VERS = 1.0.0
+FPK_VERS = 1.0.0
 SPK_REV = 1
 
 DEPENDS = cross/sd

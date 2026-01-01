@@ -1,5 +1,5 @@
 FPK_NAME = selfoss
-SPK_VERS = 2.19
+FPK_VERS = 2.19
 SPK_REV = 9
 SPK_ICON = src/selfoss.png
 

@@ -1,5 +1,5 @@
 FPK_NAME = salt-master
-SPK_VERS = 3007.3
+FPK_VERS = 3007.3
 SPK_REV = 13
 SPK_ICON = src/salt-master.png
 
@@ -20,7 +20,7 @@ CHANGELOG    = "1. Update to 3007.3"
 
 HOMEPAGE     = https://repo.saltproject.io/
 LICENSE      = Apache v2
-#LICENSE_FILE = $(WORK_DIR)/salt-$(SPK_VERS)/LICENSE
+#LICENSE_FILE = $(WORK_DIR)/salt-$(FPK_VERS)/LICENSE
 
 POST_STRIP_TARGET = salt-master_extra_install
 

@@ -1,5 +1,5 @@
 FPK_NAME = net-snmp
-SPK_VERS = 5.9.4
+FPK_VERS = 5.9.4
 SPK_REV = 1
 
 DEPENDS = cross/net-snmp

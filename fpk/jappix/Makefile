@@ -1,5 +1,5 @@
 FPK_NAME = jappix
-SPK_VERS = 1.0.1
+FPK_VERS = 1.0.1
 SPK_REV = 2
 SPK_ICON = src/jappix.png
 DSM_UI_DIR = app

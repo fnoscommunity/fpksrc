@@ -1,5 +1,5 @@
 FPK_NAME = mtproxy
-SPK_VERS = 1
+FPK_VERS = 1
 SPK_REV = 4
 SPK_ICON = src/${FPK_NAME}.jpg
 

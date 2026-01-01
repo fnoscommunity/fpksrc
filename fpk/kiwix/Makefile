@@ -1,5 +1,5 @@
 FPK_NAME = kiwix
-SPK_VERS = 3.7.0
+FPK_VERS = 3.7.0
 SPK_REV  = 8
 SPK_ICON = src/kiwix.png
 

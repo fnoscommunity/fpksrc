@@ -1,5 +1,5 @@
 FPK_NAME = ripgrep
-SPK_VERS = 15.1.0
+FPK_VERS = 15.1.0
 SPK_REV = 1
 SPK_ICON = src/ripgrep.png
 
@@ -10,10 +10,10 @@ DEPENDS = cross/ripgrep
 
 include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
-SPK_VERS = 14.1.1
+FPK_VERS = 14.1.1
 else ifeq ($(findstring $(ARCH),$(i686_ARCHS)),$(ARCH))
 ifeq ($(call version_le, $(TC_GCC), 5.0),1)
-SPK_VERS = 14.1.1
+FPK_VERS = 14.1.1
 endif
 endif
 

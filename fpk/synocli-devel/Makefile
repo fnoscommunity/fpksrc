@@ -1,5 +1,5 @@
 FPK_NAME = synocli-devel
-SPK_VERS = 1.3
+FPK_VERS = 1.3
 SPK_REV = 4
 SPK_ICON = src/synocli-devel.png
 CHANGELOG = "1. Fix autoconf to use installed m4 command.<br/>2. Update autoconf to v2.72.<br/>3. Update binutils to v2.42.<br/>4. Update gdb to v14.2.<br/>5. Update strace to v6.9."

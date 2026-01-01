@@ -1,5 +1,5 @@
 FPK_NAME = google-authenticator-libpam
-SPK_VERS = 1.09
+FPK_VERS = 1.09
 SPK_REV = 1
 SPK_ICON = src/google-authenticator.png
 
@@ -14,7 +14,7 @@ CHANGELOG = "Initial package release."
 HOMEPAGE = https://github.com/google/google-authenticator-libpam
 SUPPORTURL = https://github.com/fnoscommunity/fpksrc/wiki/Google-Authenticator-PAM
 LICENSE = Apache-2.0
-LICENSE_FILE = $(WORK_DIR)/$(FPK_NAME)-$(SPK_VERS)/LICENSE
+LICENSE_FILE = $(WORK_DIR)/$(FPK_NAME)-$(FPK_VERS)/LICENSE
 
 WIZARDS_DIR = src/wizard/
 

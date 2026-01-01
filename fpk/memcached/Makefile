@@ -1,5 +1,5 @@
 FPK_NAME = memcached
-SPK_VERS = 1.6.39
+FPK_VERS = 1.6.39
 SPK_REV = 9
 SPK_ICON = src/memcached.png
 

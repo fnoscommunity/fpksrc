@@ -1,5 +1,5 @@
 FPK_NAME = mosh
-SPK_VERS = 1.4.0
+FPK_VERS = 1.4.0
 SPK_REV = 4
 SPK_ICON = src/mosh.png
 

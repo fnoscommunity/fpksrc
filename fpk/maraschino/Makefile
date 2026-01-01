@@ -1,5 +1,5 @@
 FPK_NAME = maraschino
-SPK_VERS = $(shell date +%Y%m%d)
+FPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 5
 SPK_ICON = src/maraschino.png
 DSM_UI_DIR = app

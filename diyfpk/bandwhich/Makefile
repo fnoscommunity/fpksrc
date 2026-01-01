@@ -1,5 +1,5 @@
 FPK_NAME = bandwhich
-SPK_VERS = 0.23.1
+FPK_VERS = 0.23.1
 SPK_REV = 1
 
 DEPENDS = cross/bandwhich

@@ -1,5 +1,5 @@
 FPK_NAME = btop
-SPK_VERS = 1.4.5
+FPK_VERS = 1.4.5
 SPK_REV = 1
 SPK_ICON = src/btop.png
 

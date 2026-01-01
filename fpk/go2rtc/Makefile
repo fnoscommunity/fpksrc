@@ -1,5 +1,5 @@
 FPK_NAME = go2rtc
-SPK_VERS = 1.9.13
+FPK_VERS = 1.9.13
 SPK_REV = 8
 SPK_ICON = src/go2rtc.png
 
@@ -11,7 +11,7 @@ MAINTAINER = skrashevich
 DESCRIPTION = Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.
 DISPLAY_NAME = go2rtc
 CHANGELOG = "Update go2rtc to v1.9.13."
-LICENSE_FILE = $(WORK_DIR)/src/github.com/go2rtc-$(SPK_VERS)/LICENSE
+LICENSE_FILE = $(WORK_DIR)/src/github.com/go2rtc-$(FPK_VERS)/LICENSE
 HOMEPAGE = https://github.com/AlexxIT/go2rtc
 LICENSE = MIT
 

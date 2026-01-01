@@ -1,5 +1,5 @@
 FPK_NAME = lirc
-SPK_VERS = 0.9.0
+FPK_VERS = 0.9.0
 SPK_REV = 3
 SPK_ICON = src/lirc.png
 FIRMWARE = 4.3-3776
@@ -14,7 +14,7 @@ include ../../mk/fpksrc.archs.mk
 
 # Use older LIRC build for ARCHs with kernel < 2.6.36
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
-SPK_VERS = 0.8.7
+FPK_VERS = 0.8.7
 DEPENDS = cross/lirc-0.8.7
 LIRC_SUPPORTED_DRIVERS = mceusb uirt uirt2
 else
@@ -47,7 +47,7 @@ lirc_extra_install:
 	install -m 755 src/send_ir.sh $(STAGING_DIR)/etc/lirc/scripts/send_ir.sh
 	install -m 644 src/lircrc $(STAGING_DIR)/etc/lirc/lircrc
 	install -m 644 src/lircd.conf $(STAGING_DIR)/etc/lirc/lircd.conf
-	cp -R $(WORK_DIR)/$(FPK_NAME)-$(SPK_VERS)/remotes $(STAGING_DIR)/
+	cp -R $(WORK_DIR)/$(FPK_NAME)-$(FPK_VERS)/remotes $(STAGING_DIR)/
 	install -m 755 -d $(WIZARDS_DIR)
 	install src/install.tmpl $(WIZARDS_DIR)/install
 	@for DRIVER in $(LIRC_SUPPORTED_DRIVERS); do \

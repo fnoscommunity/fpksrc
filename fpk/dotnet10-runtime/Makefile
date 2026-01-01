@@ -1,5 +1,5 @@
 FPK_NAME = dotnet10-runtime
-SPK_VERS = 10.0.1
+FPK_VERS = 10.0.1
 SPK_REV = 2
 SPK_ICON = src/dotnet.png
 

@@ -1,5 +1,5 @@
 FPK_NAME = nnn
-SPK_VERS = 5.1
+FPK_VERS = 5.1
 SPK_REV = 1
 SPK_ICON = src/nnn.png
 
@@ -10,9 +10,9 @@ DEPENDS = cross/nnn
 include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TC_GCC), 5.0),1)
 ifeq ($(findstring $(ARCH),$(64bit_ARCHS)),$(ARCH))
-SPK_VERS = 4.8
+FPK_VERS = 4.8
 else
-SPK_VERS = 4.0
+FPK_VERS = 4.0
 endif
 endif
 

@@ -1,5 +1,5 @@
 FPK_NAME = bazarr
-SPK_VERS = 1.5.3
+FPK_VERS = 1.5.3
 SPK_REV = 18
 SPK_ICON = src/bazarr.png
 

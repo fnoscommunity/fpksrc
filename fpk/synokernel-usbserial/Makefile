@@ -1,5 +1,5 @@
 FPK_NAME = synokernel-usbserial
-SPK_VERS = 1.2
+FPK_VERS = 1.2
 SPK_REV = 10
 SPK_ICON = src/synokernel-usbserial.png
 

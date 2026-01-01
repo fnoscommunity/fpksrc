@@ -1,5 +1,5 @@
 FPK_NAME = sabnzbd
-SPK_VERS = 4.5.4
+FPK_VERS = 4.5.4
 SPK_REV = 79
 SPK_ICON = src/sabnzbd.png
 

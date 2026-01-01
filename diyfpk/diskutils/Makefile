@@ -1,5 +1,5 @@
 FPK_NAME = diskutils
-SPK_VERS = 1.46.5
+FPK_VERS = 1.46.5
 SPK_REV = 1
 SPK_ICON = src/diskutils.png
 

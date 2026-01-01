@@ -1,5 +1,5 @@
 FPK_NAME = couchpotatoserver
-SPK_VERS = $(shell date +%Y%m%d)
+FPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 8
 SPK_ICON = src/couchpotatoserver.png
 

@@ -1,5 +1,5 @@
 FPK_NAME = ombi
-SPK_VERS = 4.47.1
+FPK_VERS = 4.47.1
 SPK_REV = 6
 SPK_ICON = src/ombi.png
 

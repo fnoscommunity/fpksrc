@@ -1,5 +1,5 @@
 FPK_NAME = gnupg
-SPK_VERS = 2.4.8
+FPK_VERS = 2.4.8
 SPK_REV = 7
 SPK_ICON = src/gnupg.png
 

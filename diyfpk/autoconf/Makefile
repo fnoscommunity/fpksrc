@@ -1,5 +1,5 @@
 FPK_NAME = autoconf
-SPK_VERS = 2.72
+FPK_VERS = 2.72
 SPK_REV = 1
 
 DEPENDS = cross/autoconf

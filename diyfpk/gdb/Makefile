@@ -6,11 +6,11 @@ DEPENDS = cross/gdb
 
 include ../../mk/fpksrc.common.mk
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS)),$(ARCH))
-SPK_VERS = 7.12.1
+FPK_VERS = 7.12.1
 else ifeq ($(call version_lt, $(TC_GCC), 4.8),1)
-SPK_VERS = 7.12.1
+FPK_VERS = 7.12.1
 else
-SPK_VERS = 14.2
+FPK_VERS = 14.2
 endif
 
 MAINTAINER = th0ma7

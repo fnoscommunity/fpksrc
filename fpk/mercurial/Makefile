@@ -1,5 +1,5 @@
 FPK_NAME = mercurial
-SPK_VERS = 7.0
+FPK_VERS = 7.0
 SPK_REV = 10
 SPK_ICON = src/mercurial.png
 

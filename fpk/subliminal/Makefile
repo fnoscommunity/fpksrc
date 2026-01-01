@@ -1,5 +1,5 @@
 FPK_NAME = subliminal
-SPK_VERS = 0.7.5
+FPK_VERS = 0.7.5
 SPK_REV = 12
 SPK_ICON = src/subliminal.png
 DSM_UI_DIR = app

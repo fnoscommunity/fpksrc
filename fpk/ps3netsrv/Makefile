@@ -1,5 +1,5 @@
 FPK_NAME = ps3netsrv
-SPK_VERS = 20240709
+FPK_VERS = 20240709
 SPK_REV = 10
 SPK_ICON = src/${FPK_NAME}.png
 

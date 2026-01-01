@@ -1,5 +1,5 @@
 FPK_NAME = ffsync
-SPK_VERS = 0.21.1
+FPK_VERS = 0.21.1
 SPK_REV = 9
 SPK_ICON = src/ffsync.png
 

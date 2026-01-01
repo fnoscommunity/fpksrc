@@ -1,5 +1,5 @@
 FPK_NAME = chromaprint
-SPK_VERS = 1.6.0
+FPK_VERS = 1.6.0
 SPK_REV = 24
 SPK_ICON = src/chromaprint.png
 

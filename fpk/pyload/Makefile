@@ -1,5 +1,5 @@
 FPK_NAME = pyload
-SPK_VERS = 0.4.20
+FPK_VERS = 0.4.20
 SPK_REV = 4
 SPK_ICON = src/pyload.png
 DSM_UI_DIR = app

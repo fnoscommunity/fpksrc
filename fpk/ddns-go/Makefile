@@ -1,5 +1,5 @@
 FPK_NAME = ddns-go
-SPK_VERS = 6.13.3
+FPK_VERS = 6.13.3
 SPK_REV = 1
 SPK_ICON = src/ddns-go.png
 

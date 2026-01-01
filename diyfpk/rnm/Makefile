@@ -1,5 +1,5 @@
 FPK_NAME = rnm
-SPK_VERS = 4.0.9
+FPK_VERS = 4.0.9
 SPK_REV = 1
 
 DEPENDS = cross/rnm

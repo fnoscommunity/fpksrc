@@ -1,5 +1,5 @@
 FPK_NAME = salt-minion
-SPK_VERS = 3007.3
+FPK_VERS = 3007.3
 SPK_REV = 6
 SPK_ICON = src/salt-minion.png
 
@@ -18,7 +18,7 @@ CHANGELOG    = "1. Update to 3007.3"
 
 HOMEPAGE     = https://repo.saltproject.io/
 LICENSE      = Apache
-#LICENSE_FILE = $(WORK_DIR)/salt-$(SPK_VERS)/LICENSE
+#LICENSE_FILE = $(WORK_DIR)/salt-$(FPK_VERS)/LICENSE
 
 POST_STRIP_TARGET = salt-minion_extra_install
 

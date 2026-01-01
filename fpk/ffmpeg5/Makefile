@@ -1,5 +1,5 @@
 FPK_NAME = ffmpeg5
-SPK_VERS = 5.1.6
+FPK_VERS = 5.1.6
 SPK_REV = 6
 SPK_ICON = src/ffmpeg.png
 CHANGELOG = "1. Update to version 5.1.6"
@@ -9,7 +9,7 @@ DEPENDS = cross/ffmpeg5
 MAINTAINER = th0ma7
 DESCRIPTION = FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec - the leading audio/video codec library.  More information from FnOScommunity FFmpeg package available at https://github.com/fnoscommunity/fpksrc/wiki/FAQ-FFmpeg
 DESCRIPTION_FRE = FFmpeg est une solution complète multiplateforme pour enregistrer, convertir et diffuser du contenu audio et vidéo. Il comprend libavcodec - la principale bibliothèque de codecs audio/vidéo.  Informations additionnelles concernant le paquet FFmpeg de FnOScommunity disponibles à https://github.com/fnoscommunity/fpksrc/wiki/FAQ-FFmpeg
-DISPLAY_NAME = FFmpeg $(firstword $(subst ., ,$(SPK_VERS)))
+DISPLAY_NAME = FFmpeg $(firstword $(subst ., ,$(FPK_VERS)))
 STARTABLE = false
 
 HOMEPAGE = https://www.ffmpeg.org/

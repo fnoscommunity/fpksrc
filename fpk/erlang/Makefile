@@ -1,5 +1,5 @@
 FPK_NAME = erlang
-SPK_VERS = 24.3.4.13
+FPK_VERS = 24.3.4.13
 SPK_REV = 4
 SPK_ICON = src/erlang.png
 

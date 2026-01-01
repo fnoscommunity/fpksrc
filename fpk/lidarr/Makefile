@@ -1,5 +1,5 @@
 FPK_NAME = lidarr
-SPK_VERS = $(shell date +%Y%m%d)
+FPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 17
 SPK_ICON = src/lidarr.png
 
@@ -53,7 +53,7 @@ POST_STRIP_TARGET += lidarr_extra_install
 
 include ../../mk/fpksrc.fpk.mk
 
-PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(SPK_VERS)-$(SPK_REV)
+PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(SPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: lidarr_custom_libe_sqlite3

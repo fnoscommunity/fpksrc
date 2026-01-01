@@ -1,5 +1,5 @@
 FPK_NAME = bc
-SPK_VERS = 1.06
+FPK_VERS = 1.06
 SPK_REV = 1
 SPK_ICON = src/gnu-logo.png
 

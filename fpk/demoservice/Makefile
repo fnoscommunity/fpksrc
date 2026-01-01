@@ -1,5 +1,5 @@
 FPK_NAME = demoservice
-SPK_VERS = 1.3
+FPK_VERS = 1.3
 SPK_REV = 9
 SPK_ICON = src/demoservice.png
 

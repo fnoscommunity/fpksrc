@@ -1,6 +1,6 @@
 FPK_NAME = python312
-SPK_VERS = 3.12.12
-SPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(SPK_VERS))).$(word 2,$(subst ., ,$(SPK_VERS)))
+FPK_VERS = 3.12.12
+FPK_VERS_MAJOR_MINOR = $(word 1,$(subst ., ,$(FPK_VERS))).$(word 2,$(subst ., ,$(FPK_VERS)))
 SPK_REV = 6
 SPK_ICON = src/python3.png
 
@@ -29,7 +29,7 @@ WHEELS = src/requirements-pure.txt
 
 SERVICE_SETUP = src/service-setup.sh
 
-PYTHON_LIB_DIR = lib/python$(SPK_VERS_MAJOR_MINOR)
+PYTHON_LIB_DIR = lib/python$(FPK_VERS_MAJOR_MINOR)
 
 POST_STRIP_TARGET = python312_extra_install
 

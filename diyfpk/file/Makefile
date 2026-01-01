@@ -1,5 +1,5 @@
 FPK_NAME = file
-SPK_VERS = 5.46
+FPK_VERS = 5.46
 SPK_REV = 1
 
 DEPENDS = cross/file

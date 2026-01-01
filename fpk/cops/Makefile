@@ -1,5 +1,5 @@
 FPK_NAME = cops
-SPK_VERS = 3.8.2
+FPK_VERS = 3.8.2
 SPK_REV = 17
 SPK_ICON = src/cops.png
 

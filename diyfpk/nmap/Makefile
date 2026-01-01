@@ -1,5 +1,5 @@
 FPK_NAME = nmap
-SPK_VERS = 7.97
+FPK_VERS = 7.97
 SPK_REV = 1
 SPK_ICON = src/nmap.png
 
@@ -16,7 +16,7 @@ LICENSE  = https://svn.nmap.org/nmap/LICENSE
 include ../../mk/fpksrc.archs.mk
 ifeq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))
 DEPENDS = cross/nmap_7.92
-SPK_VERS = 7.92
+FPK_VERS = 7.92
 else
 DEPENDS = cross/nmap
 endif

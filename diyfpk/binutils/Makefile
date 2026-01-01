@@ -1,5 +1,5 @@
 FPK_NAME = binutils
-SPK_VERS = 2.42
+FPK_VERS = 2.42
 SPK_REV = 1
 
 DEPENDS = cross/binutils

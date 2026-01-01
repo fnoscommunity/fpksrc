@@ -1,5 +1,5 @@
 FPK_NAME = dar
-SPK_VERS = 2.8.1
+FPK_VERS = 2.8.1
 SPK_REV = 1
 SPK_ICON = src/dar.png
 

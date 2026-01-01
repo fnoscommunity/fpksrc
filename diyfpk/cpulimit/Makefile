@@ -1,5 +1,5 @@
 FPK_NAME = cpulimit
-SPK_VERS = 0.2
+FPK_VERS = 0.2
 SPK_REV = 1
 
 DEPENDS = cross/cpulimit

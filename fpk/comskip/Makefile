@@ -1,5 +1,5 @@
 FPK_NAME = comskip
-SPK_VERS = 0.83
+FPK_VERS = 0.83
 SPK_REV = 13
 SPK_ICON = src/comskip.png
 

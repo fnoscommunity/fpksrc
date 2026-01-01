@@ -1,5 +1,5 @@
 FPK_NAME = gpart
-SPK_VERS = 0.3
+FPK_VERS = 0.3
 SPK_REV = 1
 
 DEPENDS = cross/gpart

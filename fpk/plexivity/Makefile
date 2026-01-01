@@ -1,5 +1,5 @@
 FPK_NAME = plexivity
-SPK_VERS = 0.9.9
+FPK_VERS = 0.9.9
 SPK_REV = 4
 SPK_ICON = src/plexivity.png
 DSM_UI_DIR = app
@@ -42,4 +42,4 @@ plexivity_extra_install: $(STAGING_DIR)/share/plexivity
 $(STAGING_DIR)/share/plexivity:
 	install -m 755 -d $(STAGING_DIR)/share
 	cd $(STAGING_DIR)/share && git clone https://github.com/mutschler/plexivity.git plexivity 
-	cd $(STAGING_DIR)/share/plexivity && git checkout $(SPK_VERS) && rm -rf .git && rm .gitignore
+	cd $(STAGING_DIR)/share/plexivity && git checkout $(FPK_VERS) && rm -rf .git && rm .gitignore

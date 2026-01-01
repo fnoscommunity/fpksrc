@@ -1,5 +1,5 @@
 FPK_NAME = icecast
-SPK_VERS = 2.4.4
+FPK_VERS = 2.4.4
 SPK_REV = 9
 SPK_ICON = src/icecast.png
 DSM_UI_DIR = app

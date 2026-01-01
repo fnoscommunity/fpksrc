@@ -1,5 +1,5 @@
 FPK_NAME = mediainfo
-SPK_VERS = 25.04
+FPK_VERS = 25.04
 SPK_REV = 14
 SPK_ICON = src/mediainfo.png
 

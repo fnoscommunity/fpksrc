@@ -1,5 +1,5 @@
 FPK_NAME = netcat
-SPK_VERS = 0.7.1
+FPK_VERS = 0.7.1
 SPK_REV = 1
 
 DEPENDS = cross/netcat

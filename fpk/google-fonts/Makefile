@@ -1,5 +1,5 @@
 FPK_NAME = google-fonts
-SPK_VERS = 20221223
+FPK_VERS = 20221223
 SPK_REV = 1
 SPK_ICON = src/google-fonts.png
 

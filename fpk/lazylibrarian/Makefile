@@ -1,5 +1,5 @@
 FPK_NAME = lazylibrarian
-SPK_VERS = $(shell date +%Y%m%d)
+FPK_VERS = $(shell date +%Y%m%d)
 SPK_REV = 7
 SPK_ICON = src/lazylibrarian.png
 

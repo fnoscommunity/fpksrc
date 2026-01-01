@@ -1,5 +1,5 @@
 FPK_NAME = pixz
-SPK_VERS = 1.0.7
+FPK_VERS = 1.0.7
 SPK_REV = 1
 
 DEPENDS = cross/pixz

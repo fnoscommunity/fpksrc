@@ -1,5 +1,5 @@
 FPK_NAME = procutils
-SPK_VERS = 1.35.0
+FPK_VERS = 1.35.0
 SPK_REV = 1
 
 # procutils of busybox, according to synocli-monitor package

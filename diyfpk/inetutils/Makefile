@@ -1,5 +1,5 @@
 FPK_NAME = inetutils
-SPK_VERS = 2.6
+FPK_VERS = 2.6
 SPK_REV = 1
 
 DEPENDS = cross/inetutils
