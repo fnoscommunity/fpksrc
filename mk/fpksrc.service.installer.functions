@@ -21,12 +21,6 @@ INST_VARIABLES="${INST_ETC}/installer-variables"
 # DSM7 only
 INST_SHARES="/var/apps/${TRIM_APPNAME}/shares"
 
-if [ -z "${TRIM_PKGVAR}" ]; then
-    # define TRIM_PKGVAR for compatibility with DSM7 (replaces former INST_VAR)
-    TRIM_PKGVAR="${TRIM_APPDEST}/var"
-fi
-
-
 ### Functions library
 
 log_step ()

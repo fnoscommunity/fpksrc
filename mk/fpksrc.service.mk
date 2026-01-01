@@ -183,11 +183,6 @@ ifneq ($(strip $(SERVICE_CERT)),)
 	@echo '' >> $@
 endif
 ifneq ($(STARTABLE),false)
-ifneq ($(call version_ge, ${TCVERSION}, 7.0),1)
-	@echo "# define TRIM_PKGVAR for compatibility with DSM7" >> $@
-	@echo 'TRIM_PKGVAR="$${TRIM_APPDEST}/var"' >> $@
-	@echo '' >> $@
-endif
 	@echo "# main script redirect stdout/stderr to LOG_FILE" >> $@
 	@echo 'LOG_FILE="$${TRIM_PKGVAR}/$${TRIM_APPNAME}.log"' >> $@
 	@echo '' >> $@

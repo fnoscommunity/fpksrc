@@ -2,16 +2,16 @@
 
 case $1 in
     start)
+        # start service,  return 0 if success, 1 if fail
         exit 0
         ;;
     stop)
+        # stop service,  return 0 if success, 1 if fail
         exit 0
         ;;
     status)
+        # check service status,  return 0 if running, 3 if not running
         exit 0
-        ;;
-    log)
-        exit 1
         ;;
     *)
         exit 1

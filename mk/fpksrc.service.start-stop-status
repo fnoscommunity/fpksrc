@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Default display name
 DNAME="${TRIM_PKGHOME}"
@@ -6,7 +6,7 @@ DNAME="${TRIM_PKGHOME}"
 if [ "$TRIM_SYS_VERSION_MAJOR" -lt 7 ]; then
     # define TRIM_PKGVAR for forward compatibility
     TRIM_PKGVAR="${TRIM_APPDEST}/var"
- fi
+fi
 
 # Source package specific variable and functions
 SVC_SETUP=$(dirname $0)"/service-setup"
@@ -50,33 +50,13 @@ start_daemon ()
             else
                 OUT="${LOG_FILE}"
             fi
-            if [ -n "${USER}" -a -n "${TRIM_SYS_VERSION_MAJOR}" -a "$TRIM_SYS_VERSION_MAJOR" -lt 6 ]; then
-                if [ -z "${SVC_CWD}" ]; then
-                    SVC_CD=""
-                else
-                    SVC_CD="cd ${SVC_CWD}; "
-                fi
-                if [ -n "${TRIM_SYS_VERSION_MAJOR}" ] && [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-                    SU="su ${EFF_USER} -s"
-                else
-                    SU=""
-                fi
-                if [ -z "${SVC_BACKGROUND}" ]; then
-                    $SU /bin/sh -c "${SVC_CD}${service}" >> ${OUT} 2>&1
-                else
-                    $SU /bin/sh -c "${SVC_CD}${service}" >> ${OUT} 2>&1 &
-                fi
-
+            if [ -n "${SVC_CWD}" ]; then
+                cd "${SVC_CWD}"
+            fi
+            if [ -z "${SVC_BACKGROUND}" ]; then
+                ${service} >> ${OUT} 2>&1
             else
-                # DSM 6 user is set by config/privilege
-                if [ -n "${SVC_CWD}" ]; then
-                    cd "${SVC_CWD}"
-                fi
-                if [ -z "${SVC_BACKGROUND}" ]; then
-                    ${service} >> ${OUT} 2>&1
-                else
-                    ${service} >> ${OUT} 2>&1 &
-                fi
+                ${service} >> ${OUT} 2>&1 &
             fi
             if [ -n "${SVC_WRITE_PID}" -a -n "${SVC_BACKGROUND}" -a -n "${PID_FILE}" ]; then
                 [ $i -eq 1 ] && echo -ne "$!" > ${PID_FILE} || echo -ne " $!" >> ${PID_FILE}
@@ -158,11 +138,12 @@ wait_for_status ()
         let counter=counter-1
         sleep 1
     done
-    return 3
+    return 1
 }
 
 case $1 in
     start)
+        # start service,  return 0 if success, 1 if fail
         if daemon_status; then
             echo "${DNAME} is already running" >> ${LOG_FILE}
             exit 0
@@ -173,6 +154,7 @@ case $1 in
         fi
         ;;
     stop)
+        # stop service,  return 0 if success, 1 if fail
         if daemon_status; then
             echo "Stopping ${DNAME} ..." >> ${LOG_FILE}
             stop_daemon
@@ -183,6 +165,7 @@ case $1 in
         fi
         ;;
     status)
+        # check service status,  return 0 if running, 3 if not running
         if daemon_status; then
             echo "${DNAME} is running"
             exit 0
@@ -190,18 +173,6 @@ case $1 in
             echo "${DNAME} is not running"
             exit 3
         fi
-        ;;
-    log)
-        # log output for DSM < 6
-        if [ -n "${LOG_FILE}" -a -r "${LOG_FILE}" ]; then
-            # Shorten long logs to last 100 lines
-            TEMP_LOG_FILE="${TRIM_PKGVAR}/${TRIM_PKGHOME}_temp.log"
-            # Clear any previous log
-            echo "Full log: ${LOG_FILE}" > "${TEMP_LOG_FILE}"
-            tail -n100 "${LOG_FILE}" >> "${TEMP_LOG_FILE}"
-            echo "${TEMP_LOG_FILE}"
-        fi
-        exit 0
         ;;
     *)
         exit 1

@@ -351,7 +351,7 @@ DSM_SCRIPTS = $(addprefix $(DSM_SCRIPTS_DIR)/,$(DSM_SCRIPT_FILES))
 define dsm_script_redirect
 $(create_target_dir)
 $(MSG) "Creating $@"
-echo '#!/bin/sh' > $@
+echo '#!/bin/bash' > $@
 echo '. $$(dirname $$0)/installer' >> $@
 echo '$$(basename $$0) $(INSTALLER_OUTPUT)' >> $@
 chmod 755 $@
