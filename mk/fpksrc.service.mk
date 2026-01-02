@@ -364,7 +364,7 @@ endif
 # DSM <= 6 and SERVICE_USER defined
 else ifneq ($(strip $(SERVICE_USER)),)
 $(FNOS_CONFIG_DIR)/privilege: $(SPKSRC_MK)fpksrc.service.privilege-installasroot
-	@$(dsm_resource_copy)
+	@$(fnos_resource_copy)
 	@$(MSG) "(privilege) fpksrc.service.privilege-installasroot"
 ifneq ($(strip $(SYSTEM_GROUP)),)
 # options: http, system
@@ -413,7 +413,7 @@ SERVICE_FILES += $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc
 endif
 else
 $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc: $(filter %.sc,$(FWPORTS))
-	@$(dsm_resource_copy)
+	@$(fnos_resource_copy)
 
 SERVICE_FILES += $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc
 endif

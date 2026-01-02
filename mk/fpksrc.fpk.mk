@@ -329,7 +329,7 @@ ifneq ($(LICENSE_FILE),)
 FNOS_LICENSE = $(FNOS_LICENSE_FILE)
 endif
 
-define dsm_resource_copy
+define fnos_resource_copy
 $(create_target_dir)
 $(MSG) "Creating $@"
 cp $< $@
@@ -338,7 +338,7 @@ endef
 
 $(FNOS_LICENSE_FILE): $(LICENSE_FILE)
 	@echo $@
-	@$(dsm_resource_copy)
+	@$(fnos_resource_copy)
 
 ### Packaging rules
 $(WORK_DIR)/app.tgz: icon service
