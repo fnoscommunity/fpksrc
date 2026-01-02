@@ -17,6 +17,6 @@ STARTABLE = false
 HOMEPAGE = https://www.gnu.org/software/ddrescue/ddrescue.html
 LICENSE  = GPLv2/GPLv3
 
-SPK_COMMANDS = bin/ddrescue bin/ddrescuelog
+FPK_COMMANDS = bin/ddrescue bin/ddrescuelog
 
 include ../../mk/fpksrc.fpk.mk

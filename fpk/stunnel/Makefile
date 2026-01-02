@@ -18,6 +18,6 @@ LICENSE  = GPLv2+
 
 SERVICE_USER = auto
 
-SPK_COMMANDS = bin/stunnel bin/stunnel3
+FPK_COMMANDS = bin/stunnel bin/stunnel3
 
 include ../../mk/fpksrc.fpk.mk

@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://www.gnu.org/software/less/
 LICENSE = GPLv3
 
-SPK_COMMANDS = bin/less bin/lessecho bin/lesskey
+FPK_COMMANDS = bin/less bin/lessecho bin/lesskey
 
 include ../../mk/fpksrc.fpk.mk

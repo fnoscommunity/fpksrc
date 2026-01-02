@@ -24,7 +24,7 @@ POST_STRIP_TARGET = mono_extra_install
 
 MONO_NATIVE_INSTALL = $(realpath $(WORK_DIR)/../../../native/mono/work-native/install)
 
-SPK_COMMANDS = bin/mono bin/mcs bin/gacutil bin/gacutil2 bin/makecert
+FPK_COMMANDS = bin/mono bin/mcs bin/gacutil bin/gacutil2 bin/makecert
 
 include ../../mk/fpksrc.fpk.mk
 

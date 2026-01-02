@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://sourceforge.net/projects/iperf2/
 LICENSE = BSD
 
-SPK_COMMANDS = bin/iperf2
+FPK_COMMANDS = bin/iperf2
 
 include ../../mk/fpksrc.fpk.mk

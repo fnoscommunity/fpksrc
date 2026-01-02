@@ -16,6 +16,6 @@ STARTABLE = false
 HOMEPAGE = https://curl.haxx.se
 LICENSE = https://curl.haxx.se/docs/copyright.html
 
-SPK_COMMANDS = bin/curl
+FPK_COMMANDS = bin/curl
 
 include ../../mk/fpksrc.fpk.mk

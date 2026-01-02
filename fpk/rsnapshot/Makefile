@@ -20,6 +20,6 @@ SERVICE_SETUP = src/service-setup.sh
 # Pure Perl package, make sure ARCH is noarch
 override ARCH=noarch
 
-SPK_COMMANDS = bin/rsnapshot bin/rsnapshot-diff
+FPK_COMMANDS = bin/rsnapshot bin/rsnapshot-diff
 
 include ../../mk/fpksrc.fpk.mk

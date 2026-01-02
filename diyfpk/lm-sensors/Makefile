@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://hwmon.wiki.kernel.org/
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/sensors bin/sensors-conf-convert sbin/fancontrol sbin/sensors-detect
+FPK_COMMANDS = bin/sensors bin/sensors-conf-convert sbin/fancontrol sbin/sensors-detect
 
 include ../../mk/fpksrc.fpk.mk

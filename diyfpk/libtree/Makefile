@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/haampie/libtree
 LICENSE = MIT
 
-SPK_COMMANDS = bin/libtree
+FPK_COMMANDS = bin/libtree
 
 include ../../mk/fpksrc.fpk.mk

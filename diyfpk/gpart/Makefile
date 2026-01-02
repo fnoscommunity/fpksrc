@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/baruch/gpart
 LICENSE = GPLv2
 
-SPK_COMMANDS = sbin/gpart
+FPK_COMMANDS = sbin/gpart
 
 include ../../mk/fpksrc.fpk.mk

@@ -19,6 +19,6 @@ LICENSE_FILE = $(WORK_DIR)/$(FPK_NAME)-$(FPK_VERS)/COPYING
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_COMMANDS = bin/fish bin/fish_indent bin/fish_key_reader
+FPK_COMMANDS = bin/fish bin/fish_indent bin/fish_key_reader
 
 include ../../mk/fpksrc.fpk.mk

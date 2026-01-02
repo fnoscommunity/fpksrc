@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://www.nist.gov/services-resources/software/expect
 LICENSE  = Public Domain
 
-SPK_COMMANDS = bin/expect
+FPK_COMMANDS = bin/expect
 
 include ../../mk/fpksrc.fpk.mk

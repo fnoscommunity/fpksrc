@@ -11,9 +11,9 @@ STARTABLE = false
 
 HOMEPAGE = https://www.harding.motd.ca/autossh/
 
-SPK_COMMANDS = bin/autossh
-SPK_COMMANDS += bin/scp bin/sftp bin/slogin bin/ssh bin/ssh-add bin/ssh-agent bin/ssh-keygen bin/ssh-keyscan
-SPK_COMMANDS += libexec/sftp-server libexec/ssh-keysign libexec/ssh-pkcs11-helper libexec/ssh-sk-helper
-SPK_COMMANDS += sbin/sshd
+FPK_COMMANDS = bin/autossh
+FPK_COMMANDS += bin/scp bin/sftp bin/slogin bin/ssh bin/ssh-add bin/ssh-agent bin/ssh-keygen bin/ssh-keyscan
+FPK_COMMANDS += libexec/sftp-server libexec/ssh-keysign libexec/ssh-pkcs11-helper libexec/ssh-sk-helper
+FPK_COMMANDS += sbin/sshd
 
 include ../../mk/fpksrc.fpk.mk

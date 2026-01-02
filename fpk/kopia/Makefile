@@ -25,7 +25,7 @@ WIZARDS_DIR = src/wizard/
 
 POST_STRIP_TARGET = kopia_extra_install
 
-SPK_COMMANDS = bin/kopia
+FPK_COMMANDS = bin/kopia
 
 include ../../mk/fpksrc.fpk.mk
 

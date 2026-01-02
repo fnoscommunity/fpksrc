@@ -14,18 +14,18 @@ POST_STRIP_TARGET = rhash_extra_install
 HOMEPAGE = http://rhash.sourceforge.net/
 LICENSE = MIT
 
-SPK_COMMANDS  = bin/rhash
-SPK_COMMANDS += bin/ed2k-link
-SPK_COMMANDS += bin/edonr256-hash
-SPK_COMMANDS += bin/edonr512-hash
-SPK_COMMANDS += bin/gost12-256-hash
-SPK_COMMANDS += bin/gost12-512-hash
-SPK_COMMANDS += bin/has160-hash
-SPK_COMMANDS += bin/magnet-link
-SPK_COMMANDS += bin/sfv-hash
-SPK_COMMANDS += bin/tiger-hash
-SPK_COMMANDS += bin/tth-hash
-SPK_COMMANDS += bin/whirlpool-hash
+FPK_COMMANDS  = bin/rhash
+FPK_COMMANDS += bin/ed2k-link
+FPK_COMMANDS += bin/edonr256-hash
+FPK_COMMANDS += bin/edonr512-hash
+FPK_COMMANDS += bin/gost12-256-hash
+FPK_COMMANDS += bin/gost12-512-hash
+FPK_COMMANDS += bin/has160-hash
+FPK_COMMANDS += bin/magnet-link
+FPK_COMMANDS += bin/sfv-hash
+FPK_COMMANDS += bin/tiger-hash
+FPK_COMMANDS += bin/tth-hash
+FPK_COMMANDS += bin/whirlpool-hash
 
 include ../../mk/fpksrc.fpk.mk
 

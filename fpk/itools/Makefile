@@ -48,27 +48,27 @@ endif
 
 POST_STRIP_TARGET = itools_extra_install
 
-SPK_COMMANDS  = bin/idevicebackup
-SPK_COMMANDS += bin/idevicebackup2
-SPK_COMMANDS += bin/idevicecrashreport
-SPK_COMMANDS += bin/idevicedate
-SPK_COMMANDS += bin/idevicedebug
-SPK_COMMANDS += bin/idevicedebugserverproxy
-SPK_COMMANDS += bin/idevicediagnostics
-SPK_COMMANDS += bin/ideviceenterrecovery
-SPK_COMMANDS += bin/idevice_id
-SPK_COMMANDS += bin/ideviceimagemounter
-SPK_COMMANDS += bin/ideviceinfo
-SPK_COMMANDS += bin/idevicename
-SPK_COMMANDS += bin/idevicenotificationproxy
-SPK_COMMANDS += bin/idevicepair
-SPK_COMMANDS += bin/ideviceprovision
-SPK_COMMANDS += bin/idevicescreenshot
-SPK_COMMANDS += bin/idevicesyslog
-SPK_COMMANDS += bin/ifuse
-SPK_COMMANDS += bin/inetcat
-SPK_COMMANDS += bin/iproxy
-SPK_COMMANDS += bin/plistutil
+FPK_COMMANDS  = bin/idevicebackup
+FPK_COMMANDS += bin/idevicebackup2
+FPK_COMMANDS += bin/idevicecrashreport
+FPK_COMMANDS += bin/idevicedate
+FPK_COMMANDS += bin/idevicedebug
+FPK_COMMANDS += bin/idevicedebugserverproxy
+FPK_COMMANDS += bin/idevicediagnostics
+FPK_COMMANDS += bin/ideviceenterrecovery
+FPK_COMMANDS += bin/idevice_id
+FPK_COMMANDS += bin/ideviceimagemounter
+FPK_COMMANDS += bin/ideviceinfo
+FPK_COMMANDS += bin/idevicename
+FPK_COMMANDS += bin/idevicenotificationproxy
+FPK_COMMANDS += bin/idevicepair
+FPK_COMMANDS += bin/ideviceprovision
+FPK_COMMANDS += bin/idevicescreenshot
+FPK_COMMANDS += bin/idevicesyslog
+FPK_COMMANDS += bin/ifuse
+FPK_COMMANDS += bin/inetcat
+FPK_COMMANDS += bin/iproxy
+FPK_COMMANDS += bin/plistutil
 
 include ../../mk/fpksrc.fpk.mk
 

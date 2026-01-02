@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/jbruchon/jdupes/
 LICENSE = MIT
 
-SPK_COMMANDS = bin/jdupes
+FPK_COMMANDS = bin/jdupes
 
 include ../../mk/fpksrc.fpk.mk

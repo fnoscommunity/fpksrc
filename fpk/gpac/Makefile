@@ -16,6 +16,6 @@ STARTABLE = false
 HOMEPAGE = https://gpac.io
 LICENSE  = LGPLv2
 
-SPK_COMMANDS = bin/gpac bin/MP4Box
+FPK_COMMANDS = bin/gpac bin/MP4Box
 
 include ../../mk/fpksrc.fpk.mk

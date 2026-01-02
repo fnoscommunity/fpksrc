@@ -14,7 +14,7 @@ CHANGELOG = Initial release
 HOMEPAGE = https://github.com/bpicode/fritzctl
 LICENSE = MIT
 
-SPK_COMMANDS = bin/fritzctl
+FPK_COMMANDS = bin/fritzctl
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)
 

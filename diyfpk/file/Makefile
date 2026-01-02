@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = http://www.darwinsys.com/file/
 LICENSE = https://github.com/file/file/blob/master/COPYING
 
-SPK_COMMANDS = bin/file
+FPK_COMMANDS = bin/file
 
 include ../../mk/fpksrc.fpk.mk

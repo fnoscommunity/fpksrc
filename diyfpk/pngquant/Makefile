@@ -21,6 +21,6 @@ DEPENDS = cross/pngquant3
 endif
 
 
-SPK_COMMANDS = bin/pngquant
+FPK_COMMANDS = bin/pngquant
 
 include ../../mk/fpksrc.fpk.mk

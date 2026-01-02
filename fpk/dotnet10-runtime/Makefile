@@ -23,6 +23,6 @@ LICENSE  = MIT
 
 include ../../mk/fpksrc.common.mk
 
-SPK_COMMANDS = share/dotnet/dotnet
+FPK_COMMANDS = share/dotnet/dotnet
 
 include ../../mk/fpksrc.fpk.mk

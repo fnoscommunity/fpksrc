@@ -15,6 +15,6 @@ LICENSE = GPLv2
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_COMMANDS = bin/nano bin/rnano
+FPK_COMMANDS = bin/nano bin/rnano
 
 include ../../mk/fpksrc.fpk.mk

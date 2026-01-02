@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://oldmanprogrammer.net/source.php?dir=projects/tree
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/tree
+FPK_COMMANDS = bin/tree
 
 include ../../mk/fpksrc.fpk.mk

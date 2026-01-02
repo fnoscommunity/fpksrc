@@ -40,53 +40,53 @@ DEPENDS += cross/automake
 ##
 ## autoconf
 ##
-SPK_COMMANDS += bin/autoconf
-SPK_COMMANDS += bin/autoheader
-SPK_COMMANDS += bin/autom4te
-SPK_COMMANDS += bin/autoreconf
-SPK_COMMANDS += bin/autoscan
-SPK_COMMANDS += bin/autoupdate
-SPK_COMMANDS += bin/ifnames
+FPK_COMMANDS += bin/autoconf
+FPK_COMMANDS += bin/autoheader
+FPK_COMMANDS += bin/autom4te
+FPK_COMMANDS += bin/autoreconf
+FPK_COMMANDS += bin/autoscan
+FPK_COMMANDS += bin/autoupdate
+FPK_COMMANDS += bin/ifnames
 ## m4 dependency
-SPK_COMMANDS += bin/m4
+FPK_COMMANDS += bin/m4
 
 ##
 ## automake
 ##
-SPK_COMMANDS += bin/aclocal
-SPK_COMMANDS += bin/aclocal-1.16
-SPK_COMMANDS += bin/automake
-SPK_COMMANDS += bin/automake-1.16
+FPK_COMMANDS += bin/aclocal
+FPK_COMMANDS += bin/aclocal-1.16
+FPK_COMMANDS += bin/automake
+FPK_COMMANDS += bin/automake-1.16
 
 ##
 ## binutils
 ##
-SPK_COMMANDS += bin/addr2line
-SPK_COMMANDS += bin/ar
-SPK_COMMANDS += bin/as
-SPK_COMMANDS += bin/c++filt
-SPK_COMMANDS += bin/dwp
-SPK_COMMANDS += bin/elfedit
+FPK_COMMANDS += bin/addr2line
+FPK_COMMANDS += bin/ar
+FPK_COMMANDS += bin/as
+FPK_COMMANDS += bin/c++filt
+FPK_COMMANDS += bin/dwp
+FPK_COMMANDS += bin/elfedit
 ifeq ($(findstring $(ARCH),$(64bit_ARCHS)),$(ARCH))
-SPK_COMMANDS += bin/gp-archive
-SPK_COMMANDS += bin/gp-collect-app
-SPK_COMMANDS += bin/gp-display-html
-SPK_COMMANDS += bin/gp-display-src
-SPK_COMMANDS += bin/gp-display-text
-SPK_COMMANDS += bin/gprofng
+FPK_COMMANDS += bin/gp-archive
+FPK_COMMANDS += bin/gp-collect-app
+FPK_COMMANDS += bin/gp-display-html
+FPK_COMMANDS += bin/gp-display-src
+FPK_COMMANDS += bin/gp-display-text
+FPK_COMMANDS += bin/gprofng
 endif
-SPK_COMMANDS += bin/gprof
-SPK_COMMANDS += bin/ld
-SPK_COMMANDS += bin/ld.bfd
-SPK_COMMANDS += bin/ld.gold
-SPK_COMMANDS += bin/nm
-SPK_COMMANDS += bin/objcopy
-SPK_COMMANDS += bin/objdump
-SPK_COMMANDS += bin/ranlib
-SPK_COMMANDS += bin/readelf
-SPK_COMMANDS += bin/size
-SPK_COMMANDS += bin/strings
-SPK_COMMANDS += bin/strip
+FPK_COMMANDS += bin/gprof
+FPK_COMMANDS += bin/ld
+FPK_COMMANDS += bin/ld.bfd
+FPK_COMMANDS += bin/ld.gold
+FPK_COMMANDS += bin/nm
+FPK_COMMANDS += bin/objcopy
+FPK_COMMANDS += bin/objdump
+FPK_COMMANDS += bin/ranlib
+FPK_COMMANDS += bin/readelf
+FPK_COMMANDS += bin/size
+FPK_COMMANDS += bin/strings
+FPK_COMMANDS += bin/strip
 
 ##
 ## gdb
@@ -96,12 +96,12 @@ OPTIONAL_DESC += ", gdb 7.12.1"
 else
 OPTIONAL_DESC += ", gdb 13.2"
 endif
-SPK_COMMANDS += bin/gcore
-SPK_COMMANDS += bin/gdb
-SPK_COMMANDS += bin/gdb-add-index
-SPK_COMMANDS += bin/gdbserver
+FPK_COMMANDS += bin/gcore
+FPK_COMMANDS += bin/gdb
+FPK_COMMANDS += bin/gdb-add-index
+FPK_COMMANDS += bin/gdbserver
 ifeq ($(findstring $(ARCH),$(ARM_ARCHS)),$(ARCH))
-SPK_COMMANDS += bin/run
+FPK_COMMANDS += bin/run
 endif
 
 ##
@@ -110,64 +110,64 @@ endif
 ifneq ($(call version_lt, $(TC_GCC), 4.8.1),1)
 ifeq ($(call version_ge, $(TC_GCC), 5.1),1)
 OPTIONAL_DESC += ", LLVM 16.0.6"
-SPK_COMMANDS += bin/clang-16
+FPK_COMMANDS += bin/clang-16
 else
 OPTIONAL_DESC += ", LLVM 9.0.1"
-SPK_COMMANDS += bin/clang-9
+FPK_COMMANDS += bin/clang-9
 endif
-SPK_COMMANDS += bin/clang
-SPK_COMMANDS += bin/clang++
-SPK_COMMANDS += bin/clang-check
-SPK_COMMANDS += bin/clang-cl
-SPK_COMMANDS += bin/clang-cpp
-SPK_COMMANDS += bin/clang-extdef-mapping
-SPK_COMMANDS += bin/clang-format
-SPK_COMMANDS += bin/clang-refactor
-SPK_COMMANDS += bin/clang-rename
-SPK_COMMANDS += bin/clang-scan-deps
-SPK_COMMANDS += bin/git-clang-format
-SPK_COMMANDS += bin/hmaptool
-SPK_COMMANDS += bin/lld
-SPK_COMMANDS += bin/lld-link
-SPK_COMMANDS += bin/llvm-ar
-SPK_COMMANDS += bin/llvm-lib
-SPK_COMMANDS += bin/llvm-nm
-SPK_COMMANDS += bin/llvm-objcopy
-SPK_COMMANDS += bin/llvm-objdump
-SPK_COMMANDS += bin/llvm-profdata
-SPK_COMMANDS += bin/llvm-ranlib
-SPK_COMMANDS += bin/llvm-rc
-SPK_COMMANDS += bin/llvm-readelf
-SPK_COMMANDS += bin/llvm-readobj
-SPK_COMMANDS += bin/llvm-size
-SPK_COMMANDS += bin/llvm-strings
-SPK_COMMANDS += bin/llvm-strip
-SPK_COMMANDS += bin/llvm-symbolizer
-SPK_COMMANDS += bin/scan-build
-SPK_COMMANDS += bin/scan-view
-SPK_COMMANDS += bin/wasm-ld
+FPK_COMMANDS += bin/clang
+FPK_COMMANDS += bin/clang++
+FPK_COMMANDS += bin/clang-check
+FPK_COMMANDS += bin/clang-cl
+FPK_COMMANDS += bin/clang-cpp
+FPK_COMMANDS += bin/clang-extdef-mapping
+FPK_COMMANDS += bin/clang-format
+FPK_COMMANDS += bin/clang-refactor
+FPK_COMMANDS += bin/clang-rename
+FPK_COMMANDS += bin/clang-scan-deps
+FPK_COMMANDS += bin/git-clang-format
+FPK_COMMANDS += bin/hmaptool
+FPK_COMMANDS += bin/lld
+FPK_COMMANDS += bin/lld-link
+FPK_COMMANDS += bin/llvm-ar
+FPK_COMMANDS += bin/llvm-lib
+FPK_COMMANDS += bin/llvm-nm
+FPK_COMMANDS += bin/llvm-objcopy
+FPK_COMMANDS += bin/llvm-objdump
+FPK_COMMANDS += bin/llvm-profdata
+FPK_COMMANDS += bin/llvm-ranlib
+FPK_COMMANDS += bin/llvm-rc
+FPK_COMMANDS += bin/llvm-readelf
+FPK_COMMANDS += bin/llvm-readobj
+FPK_COMMANDS += bin/llvm-size
+FPK_COMMANDS += bin/llvm-strings
+FPK_COMMANDS += bin/llvm-strip
+FPK_COMMANDS += bin/llvm-symbolizer
+FPK_COMMANDS += bin/scan-build
+FPK_COMMANDS += bin/scan-view
+FPK_COMMANDS += bin/wasm-ld
 endif
 
 ##
 ## make
 ##
-SPK_COMMANDS += bin/make
+FPK_COMMANDS += bin/make
 
 ##
 ## pkg-config
 ##
-SPK_COMMANDS += bin/pkg-config
+FPK_COMMANDS += bin/pkg-config
 
 ##
 ## libtree
 ##
-SPK_COMMANDS += bin/libtree
+FPK_COMMANDS += bin/libtree
 
 ##
 ## strace
 ##
-SPK_COMMANDS += bin/strace
-SPK_COMMANDS += bin/strace-log-merge
+FPK_COMMANDS += bin/strace
+FPK_COMMANDS += bin/strace-log-merge
 
 
 include ../../mk/fpksrc.fpk.mk

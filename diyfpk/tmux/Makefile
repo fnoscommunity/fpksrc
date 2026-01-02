@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/tmux/tmux/wiki
 LICENSE  = BSD License
 
-SPK_COMMANDS = bin/tmux
+FPK_COMMANDS = bin/tmux
 
 include ../../mk/fpksrc.fpk.mk

@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/archiecobbs/s3backer/wiki/ManPage
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/s3backer
+FPK_COMMANDS = bin/s3backer
 
 include ../../mk/fpksrc.fpk.mk

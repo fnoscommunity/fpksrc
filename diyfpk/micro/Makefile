@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://micro-editor.github.io/
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/micro
+FPK_COMMANDS = bin/micro
 
 include ../../mk/fpksrc.fpk.mk

@@ -30,11 +30,11 @@ NO_SERVICE_SHORTCUT = yes
 POST_STRIP_TARGET = redis_extra_install
 
 # add links for tools
-SPK_COMMANDS  = bin/redis-benchmark
-SPK_COMMANDS += bin/redis-check-aof
-SPK_COMMANDS += bin/redis-check-rdb
-SPK_COMMANDS += bin/redis-cli
-SPK_COMMANDS += bin/redis-sentinel
+FPK_COMMANDS  = bin/redis-benchmark
+FPK_COMMANDS += bin/redis-check-aof
+FPK_COMMANDS += bin/redis-check-rdb
+FPK_COMMANDS += bin/redis-cli
+FPK_COMMANDS += bin/redis-sentinel
 
 include ../../mk/fpksrc.fpk.mk
 

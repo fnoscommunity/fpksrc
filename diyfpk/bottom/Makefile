@@ -20,6 +20,6 @@ STARTABLE = false
 HOMEPAGE = https://clementtsang.github.io/bottom
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/btm
+FPK_COMMANDS = bin/btm
 
 include ../../mk/fpksrc.fpk.mk

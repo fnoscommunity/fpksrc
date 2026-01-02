@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://lsof.readthedocs.io/
 LICENSE  = https://github.com/lsof-org/lsof/blob/master/COPYING
 
-SPK_COMMANDS = bin/lsof
+FPK_COMMANDS = bin/lsof
 
 include ../../mk/fpksrc.fpk.mk

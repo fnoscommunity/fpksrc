@@ -16,6 +16,6 @@ HOMEPAGE = https://ultimaker.com/software/ultimaker-cura
 LICENSE  = AGPLv3
 
 STARTABLE = false
-SPK_COMMANDS = bin/CuraEngine
+FPK_COMMANDS = bin/CuraEngine
 
 include ../../mk/fpksrc.fpk.mk

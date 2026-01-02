@@ -30,7 +30,7 @@ SERVICE_WIZARD_SHARENAME = wizard_data_folder
 
 POST_STRIP_TARGET = kiwix_extra_install
 
-SPK_COMMANDS = bin/kiwix-manage bin/kiwix-search bin/kiwix-serve
+FPK_COMMANDS = bin/kiwix-manage bin/kiwix-search bin/kiwix-serve
 
 include ../../mk/fpksrc.fpk.mk
 

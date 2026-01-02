@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://www.midnight-commander.org
 LICENSE = GPL
 
-SPK_COMMANDS = bin/mc bin/mcdiff bin/mcview bin/mcedit
+FPK_COMMANDS = bin/mc bin/mcdiff bin/mcview bin/mcedit
 
 include ../../mk/fpksrc.fpk.mk

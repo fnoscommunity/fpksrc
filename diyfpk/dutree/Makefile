@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://ownyourbits.com/2018/03/25/analyze-disk-usage-with-dutree/
 LICENSE  = GPLv3
 
-SPK_COMMANDS = bin/dutree
+FPK_COMMANDS = bin/dutree
 
 include ../../mk/fpksrc.fpk.mk

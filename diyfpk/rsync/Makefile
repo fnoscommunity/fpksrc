@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://rsync.samba.org/
 LICENSE = GPLv3
 
-SPK_COMMANDS = bin/rsync bin/rsync-ssl
+FPK_COMMANDS = bin/rsync bin/rsync-ssl
 
 include ../../mk/fpksrc.fpk.mk

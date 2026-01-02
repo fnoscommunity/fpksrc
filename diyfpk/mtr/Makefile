@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://www.bitwizard.nl/mtr/
 LICENSE  = GPLv2
 
-SPK_COMMANDS = sbin/mtr sbin/mtr-packet
+FPK_COMMANDS = sbin/mtr sbin/mtr-packet
 
 include ../../mk/fpksrc.fpk.mk

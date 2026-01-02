@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://savannah.gnu.org/projects/patch/
 LICENSE  = GPLv3+
 
-SPK_COMMANDS = bin/patch
+FPK_COMMANDS = bin/patch
 
 include ../../mk/fpksrc.fpk.mk

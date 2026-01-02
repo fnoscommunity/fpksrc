@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = http://www.cgsecurity.org/wiki/TestDisk
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/fidentify bin/photorec bin/testdisk
+FPK_COMMANDS = bin/fidentify bin/photorec bin/testdisk
 
 include ../../mk/fpksrc.fpk.mk

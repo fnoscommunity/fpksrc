@@ -21,13 +21,13 @@ LICENSE  = Apache 2.0
 
 POST_STRIP_TARGET = imagemagick_extra_install
 
-SPK_COMMANDS  = bin/magick bin/magick-script bin/animate bin/compare bin/composite bin/conjure
-SPK_COMMANDS += bin/convert bin/display bin/identify bin/import bin/mogrify bin/montage bin/stream
+FPK_COMMANDS  = bin/magick bin/magick-script bin/animate bin/compare bin/composite bin/conjure
+FPK_COMMANDS += bin/convert bin/display bin/identify bin/import bin/mogrify bin/montage bin/stream
 # additional tools:
-SPK_COMMANDS += bin/jpegoptim
-SPK_COMMANDS += bin/optipng
-SPK_COMMANDS += bin/pngcrush
-SPK_COMMANDS += bin/pngquant
+FPK_COMMANDS += bin/jpegoptim
+FPK_COMMANDS += bin/optipng
+FPK_COMMANDS += bin/pngcrush
+FPK_COMMANDS += bin/pngquant
 
 include ../../mk/fpksrc.fpk.mk
 

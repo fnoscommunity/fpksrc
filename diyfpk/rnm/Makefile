@@ -11,7 +11,7 @@ STARTABLE = false
 HOMEPAGE = https://neurobin.org/projects/softwares/unix/rnm/
 LICENSE = GPL v3.0
 
-SPK_COMMANDS = bin/rnm
+FPK_COMMANDS = bin/rnm
 
 include ../../mk/fpksrc.fpk.mk
 

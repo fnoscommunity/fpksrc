@@ -18,6 +18,6 @@ STARTABLE = false
 
 LICENSE = GPLv3
 
-SPK_COMMANDS = bin/pngquant bin/jpegoptim bin/pngcrush bin/advmng bin/advpng
+FPK_COMMANDS = bin/pngquant bin/jpegoptim bin/pngcrush bin/advmng bin/advpng
 
 include ../../mk/fpksrc.fpk.mk

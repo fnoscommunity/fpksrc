@@ -12,8 +12,8 @@ STARTABLE = false
 HOMEPAGE = http://www.royhills.co.uk/wiki/index.php/Arp-scan_User_Guide
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/arp-scan 
+FPK_COMMANDS = bin/arp-scan
 # perl script (works only when perl package is installed)
-SPK_COMMANDS += bin/arp-fingerprint
+FPK_COMMANDS += bin/arp-fingerprint
 
 include ../../mk/fpksrc.fpk.mk

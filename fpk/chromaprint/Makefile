@@ -20,6 +20,6 @@ CHANGELOG = "1. Version 1.6.0<br/>2. Update to FFMPEG 7.0.3"
 HOMEPAGE   = https://acoustid.org/chromaprint
 LICENSE    = LGPL2.1+
 
-SPK_COMMANDS = bin/fpcalc
+FPK_COMMANDS = bin/fpcalc
 
 include ../../mk/fpksrc.ffmpeg.mk

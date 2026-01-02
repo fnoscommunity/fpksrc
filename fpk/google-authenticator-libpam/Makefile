@@ -21,7 +21,7 @@ WIZARDS_DIR = src/wizard/
 # As DSM has google-authenticator installed, create a FnOScommunity specific link
 CUSTOM_AUTHENTICATOR_NAME = sc-google-authenticator
 POST_STRIP_TARGET = google-authenticator-libpam_extra_install
-SPK_COMMANDS = bin/$(CUSTOM_AUTHENTICATOR_NAME)
+FPK_COMMANDS = bin/$(CUSTOM_AUTHENTICATOR_NAME)
 
 include ../../mk/fpksrc.fpk.mk
 

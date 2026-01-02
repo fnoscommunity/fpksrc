@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/chmln/sd#readme
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/sd
+FPK_COMMANDS = bin/sd
 
 include ../../mk/fpksrc.fpk.mk

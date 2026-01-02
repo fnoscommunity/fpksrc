@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/mvp/uhubctl
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/uhubctl
+FPK_COMMANDS = bin/uhubctl
 
 include ../../mk/fpksrc.fpk.mk

@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/dalance/procs#readme
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/procs
+FPK_COMMANDS = bin/procs
 
 include ../../mk/fpksrc.fpk.mk

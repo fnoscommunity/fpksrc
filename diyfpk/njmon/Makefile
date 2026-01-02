@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = http://nmon.sourceforge.net/
 LICENSE = GPLv3
 
-SPK_COMMANDS = bin/njmon
+FPK_COMMANDS = bin/njmon
 
 include ../../mk/fpksrc.fpk.mk

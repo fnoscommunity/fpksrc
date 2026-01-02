@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/sahib/rmlint
 LICENSE = GPLv3
 
-SPK_COMMANDS = bin/rmlint
+FPK_COMMANDS = bin/rmlint
 
 include ../../mk/fpksrc.fpk.mk

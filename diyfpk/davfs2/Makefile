@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = http://savannah.nongnu.org/projects/davfs2
 LICENSE = GPLv3+
 
-SPK_COMMANDS = sbin/mount.davfs sbin/umount.davfs
+FPK_COMMANDS = sbin/mount.davfs sbin/umount.davfs
 
 include ../../mk/fpksrc.fpk.mk

@@ -50,7 +50,7 @@ endif
 
 POST_STRIP_TARGET = sabnzbd_extra_install
 
-SPK_COMMANDS = bin/7zz
+FPK_COMMANDS = bin/7zz
 
 # [cryptography]
 DEPENDS += cross/openssl3

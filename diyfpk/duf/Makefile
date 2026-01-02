@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/muesli/duf
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/duf
+FPK_COMMANDS = bin/duf
 
 include ../../mk/fpksrc.fpk.mk

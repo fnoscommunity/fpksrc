@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://man.troglobit.com/man1/mg.1.html
 LICENSE  = UNLICENSE
 
-SPK_COMMANDS = bin/mg
+FPK_COMMANDS = bin/mg
 
 include ../../mk/fpksrc.fpk.mk

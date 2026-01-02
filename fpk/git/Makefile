@@ -16,17 +16,17 @@ CHANGELOG = "1. Update git to v2.51.1. <br/>2. Update git-lfs to v3.7.1."
 HOMEPAGE = https://git-scm.com
 LICENSE  = GPLv2
 
-SPK_COMMANDS  = bin/git
-SPK_COMMANDS += bin/git-cvsserver
-SPK_COMMANDS += bin/git-receive-pack
-SPK_COMMANDS += bin/git-shell
-SPK_COMMANDS += bin/git-upload-archive
-SPK_COMMANDS += bin/git-upload-pack
-SPK_COMMANDS += bin/scalar
+FPK_COMMANDS  = bin/git
+FPK_COMMANDS += bin/git-cvsserver
+FPK_COMMANDS += bin/git-receive-pack
+FPK_COMMANDS += bin/git-shell
+FPK_COMMANDS += bin/git-upload-archive
+FPK_COMMANDS += bin/git-upload-pack
+FPK_COMMANDS += bin/scalar
 
 include ../../mk/fpksrc.fpk.mk
 
 ifneq ($(findstring $(ARCH),$(PPC_ARCHS) $(ARMv5_ARCHS) $(ARMv7L_ARCHS)),$(ARCH))
 DEPENDS += cross/git-lfs
-SPK_COMMANDS += bin/git-lfs
+FPK_COMMANDS += bin/git-lfs
 endif

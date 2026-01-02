@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/vasi/pixz
 LICENSE = 2-Clause BSD
 
-SPK_COMMANDS = bin/pixz
+FPK_COMMANDS = bin/pixz
 
 include ../../mk/fpksrc.fpk.mk

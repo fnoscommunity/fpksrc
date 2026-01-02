@@ -17,7 +17,7 @@ CHANGELOG = "1. Update vim to v9.1. <br/>2. Finally remove python feature."
 HOMEPAGE = https://www.vim.org/
 LICENSE  = Charityware
 
-SPK_COMMANDS = bin/vim bin/vim$(firstword $(subst ., ,$(FPK_VERS)))
-SPK_COMMANDS += bin/view bin/vimdiff bin/rvim bin/rview bin/vimtutor
+FPK_COMMANDS = bin/vim bin/vim$(firstword $(subst ., ,$(FPK_VERS)))
+FPK_COMMANDS += bin/view bin/vimdiff bin/rvim bin/rview bin/vimtutor
 
 include ../../mk/fpksrc.fpk.mk

@@ -15,10 +15,10 @@ HOMEPAGE = https://FnOScommunity.com/
 LICENSE  = Each tool is licensed under it\'s respective license.
 
 SPK_LINKS     = /usr/local/bin/synocli-kernelmodule:bin/synocli-kernelmodule.sh
-SPK_COMMANDS  = bin/fuser
-SPK_COMMANDS += bin/usb-devices
-SPK_COMMANDS += bin/usbhid-dump
-SPK_COMMANDS += bin/lsusb.py
+FPK_COMMANDS  = bin/fuser
+FPK_COMMANDS += bin/usb-devices
+FPK_COMMANDS += bin/usbhid-dump
+FPK_COMMANDS += bin/lsusb.py
 
 POST_STRIP_TARGET = synocli-kernel_extra_install
 

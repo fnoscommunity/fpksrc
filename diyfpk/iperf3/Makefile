@@ -22,6 +22,6 @@ STARTABLE = false
 HOMEPAGE = https://iperf.fr/
 LICENSE = 3-clause BSD
 
-SPK_COMMANDS = bin/iperf3
+FPK_COMMANDS = bin/iperf3
 
 include ../../mk/fpksrc.fpk.mk

@@ -16,6 +16,6 @@ CHANGELOG = "Initial package release"
 HOMEPAGE = https://helix-editor.com/
 LICENSE = MPL-2.0
 
-SPK_COMMANDS = bin/hx
+FPK_COMMANDS = bin/hx
 
 include ../../mk/fpksrc.fpk.mk

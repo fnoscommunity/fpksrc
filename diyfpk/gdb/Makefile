@@ -20,12 +20,12 @@ STARTABLE = false
 HOMEPAGE = https://www.sourceware.org/gdb/
 LICENSE  = GPLv2
 
-SPK_COMMANDS  = bin/gcore
-SPK_COMMANDS += bin/gdb
-SPK_COMMANDS += bin/gdb-add-index
-SPK_COMMANDS += bin/gdbserver
+FPK_COMMANDS  = bin/gcore
+FPK_COMMANDS += bin/gdb
+FPK_COMMANDS += bin/gdb-add-index
+FPK_COMMANDS += bin/gdbserver
 ifeq ($(findstring $(ARCH),$(ARM_ARCHS)),$(ARCH))
-SPK_COMMANDS += bin/run
+FPK_COMMANDS += bin/run
 endif
 
 include ../../mk/fpksrc.fpk.mk

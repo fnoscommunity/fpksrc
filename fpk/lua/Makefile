@@ -17,6 +17,6 @@ CHANGELOG = "Update lua to v5.4.8"
 HOMEPAGE = https://www.lua.org
 LICENSE = MIT
 
-SPK_COMMANDS = bin/lua bin/luac
+FPK_COMMANDS = bin/lua bin/luac
 
 include ../../mk/fpksrc.fpk.mk

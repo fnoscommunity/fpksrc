@@ -24,6 +24,6 @@ SYSTEM_GROUP = system
 STARTABLE = yes
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_COMMANDS = bin/qemu-ga
+FPK_COMMANDS = bin/qemu-ga
 
 include ../../mk/fpksrc.fpk.mk

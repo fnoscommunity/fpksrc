@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/imsnif/bandwhich#readme
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/bandwhich
+FPK_COMMANDS = bin/bandwhich
 
 include ../../mk/fpksrc.fpk.mk

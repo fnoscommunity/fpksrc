@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://strace.io/
 LICENSE = GPLv2+
 
-SPK_COMMANDS = bin/strace bin/strace-log-merge
+FPK_COMMANDS = bin/strace bin/strace-log-merge
 
 include ../../mk/fpksrc.fpk.mk

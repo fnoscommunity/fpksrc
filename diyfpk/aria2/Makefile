@@ -15,6 +15,6 @@ STARTABLE = false
 LICENSE  = GPLv2/GPLv3
 HOMEPAGE = http://aria2.github.io
 
-SPK_COMMANDS = bin/aria2c
+FPK_COMMANDS = bin/aria2c
 
 include ../../mk/fpksrc.fpk.mk

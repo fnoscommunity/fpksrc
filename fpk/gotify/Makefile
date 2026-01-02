@@ -24,7 +24,7 @@ SERVICE_PORT_TITLE = Gotify (HTTP)
 
 POST_STRIP_TARGET = gotify_extra_install
 
-SPK_COMMANDS = bin/gotify-cli
+FPK_COMMANDS = bin/gotify-cli
 
 include ../../mk/fpksrc.fpk.mk
 

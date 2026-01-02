@@ -20,8 +20,8 @@ LICENSE  = GPLv3
 
 POST_STRIP_TARGET = $(FPK_NAME)_extra_install
 
-SPK_COMMANDS  = bin/ffprobe
-SPK_COMMANDS += bin/$(FPK_NAME)
+FPK_COMMANDS  = bin/ffprobe
+FPK_COMMANDS += bin/$(FPK_NAME)
 
 include ../../mk/fpksrc.common.mk
 

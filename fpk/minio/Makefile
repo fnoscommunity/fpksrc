@@ -29,7 +29,7 @@ ADMIN_PORT = 9001
 POST_STRIP_TARGET = minio_extra_install
 
 # official binary is "mc" not "minio-client", but "mc" is already used for midnight-commander
-SPK_COMMANDS = bin/minio-client
+FPK_COMMANDS = bin/minio-client
 
 include ../../mk/fpksrc.fpk.mk
 

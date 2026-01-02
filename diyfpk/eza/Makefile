@@ -18,6 +18,6 @@ STARTABLE = false
 HOMEPAGE = https://eza.rocks/
 LICENSE = MIT
 
-SPK_COMMANDS = bin/eza
+FPK_COMMANDS = bin/eza
 
 include ../../mk/fpksrc.fpk.mk

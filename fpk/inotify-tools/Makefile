@@ -20,6 +20,6 @@ CHANGELOG = "Update inotify-tools to 4.25.9.0."
 HOMEPAGE = https://github.com/inotify-tools/inotify-tools/
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/inotifywait bin/inotifywatch
+FPK_COMMANDS = bin/inotifywait bin/inotifywatch
 
 include ../../mk/fpksrc.fpk.mk

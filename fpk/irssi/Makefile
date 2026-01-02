@@ -16,6 +16,6 @@ LICENSE = GPLv2
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_COMMANDS = bin/irssi
+FPK_COMMANDS = bin/irssi
 
 include ../../mk/fpksrc.fpk.mk

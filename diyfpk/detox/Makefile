@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = http://detox.sourceforge.net/
 LICENSE = 3-clause BSD
 
-SPK_COMMANDS = bin/detox bin/inline-detox
+FPK_COMMANDS = bin/detox bin/inline-detox
 
 include ../../mk/fpksrc.fpk.mk

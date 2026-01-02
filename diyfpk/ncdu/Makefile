@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://dev.yorhel.nl/ncdu
 LICENSE = MIT
 
-SPK_COMMANDS = bin/ncdu
+FPK_COMMANDS = bin/ncdu
 
 include ../../mk/fpksrc.fpk.mk

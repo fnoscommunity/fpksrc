@@ -21,6 +21,6 @@ else
 DEPENDS = cross/nmap
 endif
 
-SPK_COMMANDS = bin/ncat bin/nmap bin/nping
+FPK_COMMANDS = bin/ncat bin/nmap bin/nping
 
 include ../../mk/fpksrc.fpk.mk

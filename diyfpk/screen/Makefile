@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://www.gnu.org/software/screen/
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/screen
+FPK_COMMANDS = bin/screen
 
 include ../../mk/fpksrc.fpk.mk

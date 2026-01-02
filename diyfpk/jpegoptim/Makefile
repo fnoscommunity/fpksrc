@@ -14,6 +14,6 @@ LICENSE  = GPLv2
 
 HELP_URL = https://www.kokkonen.net/tjko/src/man/jpegoptim.txt
 
-SPK_COMMANDS = bin/jpegoptim
+FPK_COMMANDS = bin/jpegoptim
 
 include ../../mk/fpksrc.fpk.mk

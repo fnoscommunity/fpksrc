@@ -29,7 +29,7 @@ DEPENDS += cross/libstdc++
 POST_STRIP_TARGET = dotnet_patch_target
 endif
 
-SPK_COMMANDS = share/dotnet/dotnet
+FPK_COMMANDS = share/dotnet/dotnet
 
 include ../../mk/fpksrc.fpk.mk
 

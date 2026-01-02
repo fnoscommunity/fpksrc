@@ -17,7 +17,7 @@ LICENSE    = GPLv2
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_COMMANDS = bin/mutt
+FPK_COMMANDS = bin/mutt
 
 POST_STRIP_TARGET = mutt_extra_install
 

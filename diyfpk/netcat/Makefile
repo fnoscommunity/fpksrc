@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://netcat.sourceforge.net/
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/nc bin/netcat
+FPK_COMMANDS = bin/nc bin/netcat
 
 include ../../mk/fpksrc.fpk.mk

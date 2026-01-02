@@ -19,6 +19,6 @@ STARTABLE = false
 HOMEPAGE = https://lib.rs/crates/dua-cli
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/dua
+FPK_COMMANDS = bin/dua
 
 include ../../mk/fpksrc.fpk.mk

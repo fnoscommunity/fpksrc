@@ -26,7 +26,7 @@ SERVICE_SETUP = src/service-setup.sh
 
 POST_STRIP_TARGET = icecast_extra_install
 
-SPK_COMMANDS = bin/ezstream bin/ezstream-cfgmigrate bin/ezstream-file.sh
+FPK_COMMANDS = bin/ezstream bin/ezstream-cfgmigrate bin/ezstream-file.sh
 
 include ../../mk/fpksrc.fpk.mk
 

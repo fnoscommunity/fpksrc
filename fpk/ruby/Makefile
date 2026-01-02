@@ -20,7 +20,7 @@ DISPLAY_NAME = Ruby
 HOMEPAGE = http://www.ruby-lang.org/
 LICENSE  = 2-clause BSDL
 
-SPK_COMMANDS  = bin/bundle bin/bundler bin/erb bin/gem bin/irb bin/racc
-SPK_COMMANDS += bin/rake bin/rbs bin/rdbg bin/rdoc bin/ri bin/ruby bin/typeprof
+FPK_COMMANDS  = bin/bundle bin/bundler bin/erb bin/gem bin/irb bin/racc
+FPK_COMMANDS += bin/rake bin/rbs bin/rdbg bin/rdoc bin/ri bin/ruby bin/typeprof
 
 include ../../mk/fpksrc.fpk.mk

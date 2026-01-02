@@ -14,6 +14,6 @@ CHANGELOG = Initial release
 HOMEPAGE = http://www.ossp.org/pkg/lib/js/
 LICENSE = MPL/GPL/LGPL tri-license
 
-SPK_COMMANDS = "bin/js bin/jslint bin/jspack"
+FPK_COMMANDS = "bin/js bin/jslint bin/jspack"
 
 include ../../mk/fpksrc.fpk.mk

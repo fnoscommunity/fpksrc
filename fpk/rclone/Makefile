@@ -19,6 +19,6 @@ HELPURL = https://rclone.org/docs/
 
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/rclone
+FPK_COMMANDS = bin/rclone
 
 include ../../mk/fpksrc.fpk.mk

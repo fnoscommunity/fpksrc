@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://www.gnu.org/software/inetutils/
 LICENSE = GPLv3
 
-SPK_COMMANDS = bin/telnet bin/whois
+FPK_COMMANDS = bin/telnet bin/whois
 
 include ../../mk/fpksrc.fpk.mk

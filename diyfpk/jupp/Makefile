@@ -16,6 +16,6 @@ CHANGELOG = "Update to joe 3.1, jupp v40."
 HOMEPAGE = http://www.mirbsd.org/jupp.htm
 LICENSE = GPLv1
 
-SPK_COMMANDS = bin/jmacs bin/joe bin/jpico bin/jstar bin/jupp bin/rjoe
+FPK_COMMANDS = bin/jmacs bin/joe bin/jpico bin/jstar bin/jupp bin/rjoe
 
 include ../../mk/fpksrc.fpk.mk

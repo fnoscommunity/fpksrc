@@ -13,7 +13,7 @@ STARTABLE = false
 HOMEPAGE = https://www.isc.org/
 LICENSE = MPL 2.0
 
-SPK_COMMANDS = bin/arpaname bin/delv bin/dig bin/mdig
+FPK_COMMANDS = bin/arpaname bin/delv bin/dig bin/mdig
 
 include ../../mk/fpksrc.fpk.mk
 

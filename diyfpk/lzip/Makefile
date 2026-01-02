@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = http://lzip.nongnu.org/plzip.html
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/lzip bin/plzip
+FPK_COMMANDS = bin/lzip bin/plzip
 
 include ../../mk/fpksrc.fpk.mk

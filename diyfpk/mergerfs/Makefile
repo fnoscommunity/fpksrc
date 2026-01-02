@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://trapexit.github.io/mergerfs/
 LICENSE = ISC
 
-SPK_COMMANDS = bin/mergerfs bin/mergerfs-fusermount sbin/mount.mergerfs
+FPK_COMMANDS = bin/mergerfs bin/mergerfs-fusermount sbin/mount.mergerfs
 
 include ../../mk/fpksrc.fpk.mk

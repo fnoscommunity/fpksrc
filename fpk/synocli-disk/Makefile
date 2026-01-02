@@ -20,7 +20,7 @@ MAINTAINER = FnOScommunity
 DISPLAY_NAME = SynoCli Disk Tools
 
 OPTIONAL_DESC =
-SPK_COMMANDS =
+FPK_COMMANDS =
 
 include ../../mk/fpksrc.archs.mk
 
@@ -28,13 +28,13 @@ ifneq ($(findstring $(ARCH),$(PPC_ARCHS)),$(ARCH))
 # Tools built with go are not supported on PPC archs
 DEPENDS += cross/duf cross/gdu cross/tdu
 OPTIONAL_DESC := $(OPTIONAL_DESC)", duf, gdu, tdu"
-SPK_COMMANDS += bin/duf bin/gdu bin/tdu
+FPK_COMMANDS += bin/duf bin/gdu bin/tdu
 endif
 
 ifneq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))
 # not supported on old PPC archs
 OPTIONAL_DESC := $(OPTIONAL_DESC)", dua, dutree"
-SPK_COMMANDS += bin/dua bin/dutree
+FPK_COMMANDS += bin/dua bin/dutree
 ifneq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 DEPENDS += cross/dua cross/dutree
 else
@@ -49,24 +49,24 @@ DEPENDS += cross/smartmontools
 OPTIONAL_DESC := $(OPTIONAL_DESC)", smartmontools \(smartctl\)"
 # smartctl of this package will not be found by path, because /bin/smartctl is found first
 # you have to use smartctl7 (or /usr/local/bin/smartctl or /var/apps/synocli-disk/target/sbin/smartctl)
-SPK_COMMANDS += sbin/smartctl7 sbin/smartctl sbin/smartd sbin/update-smart-drivedb
+FPK_COMMANDS += sbin/smartctl7 sbin/smartctl sbin/smartd sbin/update-smart-drivedb
 endif
 
 ifneq ($(findstring $(ARCH),$(OLD_PPC_ARCHS)),$(ARCH))
 DEPENDS += cross/gpart
 OPTIONAL_DESC := $(OPTIONAL_DESC)", gpart"
-SPK_COMMANDS += sbin/gpart
+FPK_COMMANDS += sbin/gpart
 
 DEPENDS += cross/fuse3
 DEPENDS += cross/s3backer
 OPTIONAL_DESC := $(OPTIONAL_DESC)", fuse3, s3backer"
-SPK_COMMANDS += bin/fusermount3 sbin/mount.fuse3
-SPK_COMMANDS += bin/s3backer
+FPK_COMMANDS += bin/fusermount3 sbin/mount.fuse3
+FPK_COMMANDS += bin/s3backer
 
 else
 DEPENDS += cross/fuse
 OPTIONAL_DESC := $(OPTIONAL_DESC)", fuse"
-SPK_COMMANDS += bin/fusermount bin/ulockmgr_server
+FPK_COMMANDS += bin/fusermount bin/ulockmgr_server
 endif
 
 HOMEPAGE = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SynoCliDisk
@@ -85,23 +85,23 @@ CHANGELOG += "5. Update s3backer from v2.1.5 to v2.1.6. <br/>"
 CHANGELOG += "<br/>For package details and specific licences see $(WIKI_URL)".
 
 
-SPK_COMMANDS += bin/chattr bin/compile_et bin/lsattr bin/mk_cmds
-SPK_COMMANDS += sbin/badblocks sbin/blkid sbin/debugfs
-SPK_COMMANDS += sbin/dumpe2fs sbin/e2freefrag sbin/e2fsck sbin/e2image sbin/e2label
-SPK_COMMANDS += sbin/e2mmpstatus sbin/e2scrub sbin/e2scrub_all sbin/e2undo sbin/e4crypt sbin/filefrag sbin/findfs
-SPK_COMMANDS += sbin/fsck sbin/fsck.ext2 sbin/fsck.ext3 sbin/fsck.ext4
-SPK_COMMANDS += sbin/logsave sbin/mke2fs sbin/mkfs.ext2 sbin/mkfs.ext3 sbin/mkfs.ext4
-SPK_COMMANDS += sbin/mklost+found sbin/resize2fs sbin/tune2fs
-SPK_COMMANDS += sbin/mkntfs sbin/ntfsclone sbin/ntfscp sbin/ntfslabel sbin/ntfsresize sbin/ntfsundelete
-SPK_COMMANDS += bin/ntfs-3g.probe bin/ntfscat bin/ntfscluster bin/ntfscmp bin/ntfsfix bin/ntfsinfo bin/ntfsls
-SPK_COMMANDS += bin/lowntfs-3g bin/ntfs-3g
+FPK_COMMANDS += bin/chattr bin/compile_et bin/lsattr bin/mk_cmds
+FPK_COMMANDS += sbin/badblocks sbin/blkid sbin/debugfs
+FPK_COMMANDS += sbin/dumpe2fs sbin/e2freefrag sbin/e2fsck sbin/e2image sbin/e2label
+FPK_COMMANDS += sbin/e2mmpstatus sbin/e2scrub sbin/e2scrub_all sbin/e2undo sbin/e4crypt sbin/filefrag sbin/findfs
+FPK_COMMANDS += sbin/fsck sbin/fsck.ext2 sbin/fsck.ext3 sbin/fsck.ext4
+FPK_COMMANDS += sbin/logsave sbin/mke2fs sbin/mkfs.ext2 sbin/mkfs.ext3 sbin/mkfs.ext4
+FPK_COMMANDS += sbin/mklost+found sbin/resize2fs sbin/tune2fs
+FPK_COMMANDS += sbin/mkntfs sbin/ntfsclone sbin/ntfscp sbin/ntfslabel sbin/ntfsresize sbin/ntfsundelete
+FPK_COMMANDS += bin/ntfs-3g.probe bin/ntfscat bin/ntfscluster bin/ntfscmp bin/ntfsfix bin/ntfsinfo bin/ntfsls
+FPK_COMMANDS += bin/lowntfs-3g bin/ntfs-3g
 
-SPK_COMMANDS += bin/testdisk bin/photorec bin/fidentify
-SPK_COMMANDS += bin/ncdu
-SPK_COMMANDS += sbin/mount.davfs sbin/umount.davfs
-SPK_COMMANDS += bin/lsscsi
-SPK_COMMANDS += bin/ddrescue bin/ddrescuelog
-SPK_COMMANDS += bin/disktype
+FPK_COMMANDS += bin/testdisk bin/photorec bin/fidentify
+FPK_COMMANDS += bin/ncdu
+FPK_COMMANDS += sbin/mount.davfs sbin/umount.davfs
+FPK_COMMANDS += bin/lsscsi
+FPK_COMMANDS += bin/ddrescue bin/ddrescuelog
+FPK_COMMANDS += bin/disktype
 
 include ../../mk/fpksrc.fpk.mk
 
@@ -109,7 +109,7 @@ ifneq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 ifeq ($(call version_ge, $(TC_GCC), 4.8),1)
 DEPENDS += cross/mergerfs
 OPTIONAL_DESC := $(OPTIONAL_DESC)", mergerfs"
-SPK_COMMANDS += bin/mergerfs bin/mergerfs-fusermount sbin/mount.mergerfs
+FPK_COMMANDS += bin/mergerfs bin/mergerfs-fusermount sbin/mount.mergerfs
 endif
 endif
 
@@ -117,5 +117,5 @@ ifeq ($(call version_ge, $(TC_GCC), 4.9.3),1)
 # DAR: Only archs with C++ compiler support for c++14 standard are supported
 DEPENDS += cross/dar
 OPTIONAL_DESC := $(OPTIONAL_DESC)", dar"
-SPK_COMMANDS += bin/dar bin/dar_cp bin/dar_manager bin/dar_slave bin/dar_split bin/dar_xform
+FPK_COMMANDS += bin/dar bin/dar_cp bin/dar_manager bin/dar_slave bin/dar_split bin/dar_xform
 endif

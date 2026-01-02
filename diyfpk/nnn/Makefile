@@ -24,6 +24,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/jarun/nnn
 LICENSE = 2-clause BSD
 
-SPK_COMMANDS = bin/nnn
+FPK_COMMANDS = bin/nnn
 
 include ../../mk/fpksrc.fpk.mk

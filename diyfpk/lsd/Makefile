@@ -18,6 +18,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/lsd-rs/lsd
 LICENSE = Apache 2.0
 
-SPK_COMMANDS = bin/lsd
+FPK_COMMANDS = bin/lsd
 
 include ../../mk/fpksrc.fpk.mk

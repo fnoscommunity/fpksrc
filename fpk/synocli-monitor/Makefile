@@ -62,19 +62,19 @@ CHANGELOG += "<br/>For package details and specific licences see $(WIKI_URL)".
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_COMMANDS  = bin/htop
-SPK_COMMANDS += bin/btop
-SPK_COMMANDS += bin/nmon bin/njmon
-SPK_COMMANDS += bin/iperf2 bin/iperf3
-SPK_COMMANDS += bin/ionice
-SPK_COMMANDS += bin/iostat bin/pgrep bin/pmap bin/watch bin/pstree
-SPK_COMMANDS += bin/lsof
-SPK_COMMANDS += bin/cpulimit
-SPK_COMMANDS += bin/bandwhich
-SPK_COMMANDS += bin/btm
-SPK_COMMANDS += bin/procs
-SPK_COMMANDS += bin/snmpget bin/snmpgetnext bin/snmpbulkget bin/snmpwalk bin/snmpbulkwalk bin/snmpdelta bin/snmpdf
-SPK_COMMANDS += bin/snmpinform bin/snmpnetstat bin/snmpps bin/snmpstatus bin/snmptable bin/snmptest bin/snmptranslate
-SPK_COMMANDS += bin/sensors bin/sensors-conf-convert sbin/fancontrol sbin/sensors-detect
+FPK_COMMANDS  = bin/htop
+FPK_COMMANDS += bin/btop
+FPK_COMMANDS += bin/nmon bin/njmon
+FPK_COMMANDS += bin/iperf2 bin/iperf3
+FPK_COMMANDS += bin/ionice
+FPK_COMMANDS += bin/iostat bin/pgrep bin/pmap bin/watch bin/pstree
+FPK_COMMANDS += bin/lsof
+FPK_COMMANDS += bin/cpulimit
+FPK_COMMANDS += bin/bandwhich
+FPK_COMMANDS += bin/btm
+FPK_COMMANDS += bin/procs
+FPK_COMMANDS += bin/snmpget bin/snmpgetnext bin/snmpbulkget bin/snmpwalk bin/snmpbulkwalk bin/snmpdelta bin/snmpdf
+FPK_COMMANDS += bin/snmpinform bin/snmpnetstat bin/snmpps bin/snmpstatus bin/snmptable bin/snmptest bin/snmptranslate
+FPK_COMMANDS += bin/sensors bin/sensors-conf-convert sbin/fancontrol sbin/sensors-detect
 
 include ../../mk/fpksrc.fpk.mk

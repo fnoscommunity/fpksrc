@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = http://docs.libmemcached.org/bin/memaslap.html
 LICENSE = 3-Clause BSD
 
-SPK_COMMANDS = bin/memaslap
+FPK_COMMANDS = bin/memaslap
 
 include ../../mk/fpksrc.fpk.mk

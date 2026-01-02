@@ -27,11 +27,11 @@ NO_SERVICE_SHORTCUT = yes
 
 POST_STRIP_TARGET = mosquitto_extra_install
 
-SPK_COMMANDS  = bin/mosquitto_ctrl
-SPK_COMMANDS += bin/mosquitto_passwd
-SPK_COMMANDS += bin/mosquitto_rr
-SPK_COMMANDS += bin/mosquitto_pub
-SPK_COMMANDS += bin/mosquitto_sub
+FPK_COMMANDS  = bin/mosquitto_ctrl
+FPK_COMMANDS += bin/mosquitto_passwd
+FPK_COMMANDS += bin/mosquitto_rr
+FPK_COMMANDS += bin/mosquitto_pub
+FPK_COMMANDS += bin/mosquitto_sub
 
 include ../../mk/fpksrc.fpk.mk
 

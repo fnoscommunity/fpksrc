@@ -17,9 +17,9 @@ UNSUPPORTED_ARCHS = $(ARM_ARCHS) $(PPC_ARCHS) $(i686_ARCHS)
 SERVICE_USER = auto
 VIDEODRIVER = on
 
-SPK_COMMANDS  = bin/clinfo
-SPK_COMMANDS += bin/vainfo
-SPK_COMMANDS += bin/lsgpu
+FPK_COMMANDS  = bin/clinfo
+FPK_COMMANDS += bin/vainfo
+FPK_COMMANDS += bin/lsgpu
 
 DEPENDS  = cross/libva cross/libva-utils
 DEPENDS += cross/intel-vaapi-driver

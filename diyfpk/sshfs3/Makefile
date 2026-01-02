@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/libfuse/sshfs
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/sshfs
+FPK_COMMANDS = bin/sshfs
 
 include ../../mk/fpksrc.fpk.mk

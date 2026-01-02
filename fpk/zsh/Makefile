@@ -21,6 +21,6 @@ CHANGELOG = "1. Update to v5.9. For incompatiblities with former version please 
 HOMEPAGE = https://www.zsh.org
 LICENSE = Custom
 
-SPK_COMMANDS = bin/zsh
+FPK_COMMANDS = bin/zsh
 
 include ../../mk/fpksrc.fpk.mk

@@ -17,8 +17,8 @@ LICENSE  = GPLv3
 
 POST_STRIP_TARGET = ffmpeg4_extra_install
 
-SPK_COMMANDS  = bin/ffmpeg
-SPK_COMMANDS += bin/ffmpeg4
+FPK_COMMANDS  = bin/ffmpeg
+FPK_COMMANDS += bin/ffmpeg4
 
 include ../../mk/fpksrc.archs.mk
 
@@ -29,7 +29,7 @@ endif
 
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
 SERVICE_SETUP = src/service-setup.sh
-SPK_COMMANDS += bin/vainfo
+FPK_COMMANDS += bin/vainfo
 endif
 
 include ../../mk/fpksrc.fpk.mk

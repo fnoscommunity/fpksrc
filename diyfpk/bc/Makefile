@@ -14,6 +14,6 @@ HOMEPAGE = https://www.gnu.org/software/bc/
 LICENSE = GPLv3
 HELP_URL = https://www.gnu.org/software/bc/manual/html_mono/bc.html
 
-SPK_COMMANDS = bin/bc bin/dc
+FPK_COMMANDS = bin/bc bin/dc
 
 include ../../mk/fpksrc.fpk.mk

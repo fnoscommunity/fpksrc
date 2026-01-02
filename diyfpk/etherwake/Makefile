@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = www.scyld.com/wakeonlan.html
 LICENSE  = GPL
 
-SPK_COMMANDS = bin/etherwake
+FPK_COMMANDS = bin/etherwake
 
 include ../../mk/fpksrc.fpk.mk

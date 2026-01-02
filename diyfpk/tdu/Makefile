@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/josephpaul0/tdu
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/tdu
+FPK_COMMANDS = bin/tdu
 
 include ../../mk/fpksrc.fpk.mk

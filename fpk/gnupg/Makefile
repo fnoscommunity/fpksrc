@@ -14,21 +14,21 @@ CHANGELOG = "1. Update gnupg to 2.4.8<br/>2. Update shared libraries."
 HOMEPAGE = https://www.gnupg.org/
 LICENSE  = GPLv3
 
-SPK_COMMANDS = bin/gpg
-SPK_COMMANDS += bin/gpg-agent
-SPK_COMMANDS += bin/gpg-card
-SPK_COMMANDS += bin/gpg-connect-agent
-SPK_COMMANDS += bin/gpgconf
-SPK_COMMANDS += bin/gpgsm
-SPK_COMMANDS += bin/gpgscm
-SPK_COMMANDS += bin/gpgtar
-SPK_COMMANDS += bin/gpgsplit
-SPK_COMMANDS += bin/gpgparsemail
-SPK_COMMANDS += bin/gpgv
-SPK_COMMANDS += bin/gpg-error
-SPK_COMMANDS += bin/gpg-wks-client
-SPK_COMMANDS += bin/gpg-wks-server
-SPK_COMMANDS += bin/kbxutil
-SPK_COMMANDS += bin/watchgnupg
+FPK_COMMANDS = bin/gpg
+FPK_COMMANDS += bin/gpg-agent
+FPK_COMMANDS += bin/gpg-card
+FPK_COMMANDS += bin/gpg-connect-agent
+FPK_COMMANDS += bin/gpgconf
+FPK_COMMANDS += bin/gpgsm
+FPK_COMMANDS += bin/gpgscm
+FPK_COMMANDS += bin/gpgtar
+FPK_COMMANDS += bin/gpgsplit
+FPK_COMMANDS += bin/gpgparsemail
+FPK_COMMANDS += bin/gpgv
+FPK_COMMANDS += bin/gpg-error
+FPK_COMMANDS += bin/gpg-wks-client
+FPK_COMMANDS += bin/gpg-wks-server
+FPK_COMMANDS += bin/kbxutil
+FPK_COMMANDS += bin/watchgnupg
 
 include ../../mk/fpksrc.fpk.mk

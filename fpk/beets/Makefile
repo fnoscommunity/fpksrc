@@ -25,8 +25,8 @@ LICENSE  = GPL
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_COMMANDS = env/bin/beet
-SPK_COMMANDS += bin/mp3gain
+FPK_COMMANDS = env/bin/beet
+FPK_COMMANDS += bin/mp3gain
 
 # NOTE: Built with support for the following plugins:
 # beatport, chroma, discogs, embedart, embyupdate, fetchart, kodiupdate, lastgenre, lastimport, lyrics, metasync, plexupdate, replaygain, scrub, sonosupdate.

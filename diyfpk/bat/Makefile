@@ -18,6 +18,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/sharkdp/bat
 LICENSE = MIT or Apache 2.0
 
-SPK_COMMANDS = bin/bat
+FPK_COMMANDS = bin/bat
 
 include ../../mk/fpksrc.fpk.mk

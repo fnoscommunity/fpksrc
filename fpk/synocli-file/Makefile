@@ -121,49 +121,49 @@ SERVICE_SETUP = src/service-setup.sh
 HOMEPAGE = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SynoCliFile
 LICENSE  = Each tool is licensed under it's respective license.
 
-SPK_COMMANDS  = bin/less bin/lessecho bin/lesskey
-SPK_COMMANDS += bin/tree
-SPK_COMMANDS += bin/jdupes
-SPK_COMMANDS += bin/mc bin/mcdiff bin/mcview bin/mcedit
-SPK_COMMANDS += bin/nano bin/rnano
-SPK_COMMANDS += bin/file
-SPK_COMMANDS += bin/detox
-SPK_COMMANDS += bin/pcre2grep bin/pcre2test
-SPK_COMMANDS += bin/rmlint
-SPK_COMMANDS += bin/zstd bin/unzstd bin/zstdcat bin/zstdmt bin/zstdgrep bin/zstdless
-SPK_COMMANDS += bin/lzip bin/plzip
-SPK_COMMANDS += bin/pixz
-SPK_COMMANDS += bin/pigz bin/unpigz
-SPK_COMMANDS += bin/fdupes
-SPK_COMMANDS += bin/micro
-SPK_COMMANDS += bin/fzf
-SPK_COMMANDS += bin/rg
-SPK_COMMANDS += bin/fd
-SPK_COMMANDS += bin/sd
-SPK_COMMANDS += bin/mg
-SPK_COMMANDS += bin/bat
-SPK_COMMANDS += bin/eza
-SPK_COMMANDS += bin/lsd
-SPK_COMMANDS += bin/jmacs bin/joe bin/jpico bin/jstar bin/jupp bin/rjoe
-SPK_COMMANDS += bin/nnn
-SPK_COMMANDS += bin/iconv
-SPK_COMMANDS += bin/dos2unix bin/unix2dos bin/mac2unix bin/unix2mac
+FPK_COMMANDS  = bin/less bin/lessecho bin/lesskey
+FPK_COMMANDS += bin/tree
+FPK_COMMANDS += bin/jdupes
+FPK_COMMANDS += bin/mc bin/mcdiff bin/mcview bin/mcedit
+FPK_COMMANDS += bin/nano bin/rnano
+FPK_COMMANDS += bin/file
+FPK_COMMANDS += bin/detox
+FPK_COMMANDS += bin/pcre2grep bin/pcre2test
+FPK_COMMANDS += bin/rmlint
+FPK_COMMANDS += bin/zstd bin/unzstd bin/zstdcat bin/zstdmt bin/zstdgrep bin/zstdless
+FPK_COMMANDS += bin/lzip bin/plzip
+FPK_COMMANDS += bin/pixz
+FPK_COMMANDS += bin/pigz bin/unpigz
+FPK_COMMANDS += bin/fdupes
+FPK_COMMANDS += bin/micro
+FPK_COMMANDS += bin/fzf
+FPK_COMMANDS += bin/rg
+FPK_COMMANDS += bin/fd
+FPK_COMMANDS += bin/sd
+FPK_COMMANDS += bin/mg
+FPK_COMMANDS += bin/bat
+FPK_COMMANDS += bin/eza
+FPK_COMMANDS += bin/lsd
+FPK_COMMANDS += bin/jmacs bin/joe bin/jpico bin/jstar bin/jupp bin/rjoe
+FPK_COMMANDS += bin/nnn
+FPK_COMMANDS += bin/iconv
+FPK_COMMANDS += bin/dos2unix bin/unix2dos bin/mac2unix bin/unix2mac
 
-SPK_COMMANDS += bin/rhash
-SPK_COMMANDS += bin/ed2k-link
-SPK_COMMANDS += bin/edonr256-hash
-SPK_COMMANDS += bin/edonr512-hash
-SPK_COMMANDS += bin/gost12-256-hash
-SPK_COMMANDS += bin/gost12-512-hash
-SPK_COMMANDS += bin/has160-hash
-SPK_COMMANDS += bin/magnet-link
-SPK_COMMANDS += bin/sfv-hash
-SPK_COMMANDS += bin/tiger-hash
-SPK_COMMANDS += bin/tth-hash
-SPK_COMMANDS += bin/whirlpool-hash
+FPK_COMMANDS += bin/rhash
+FPK_COMMANDS += bin/ed2k-link
+FPK_COMMANDS += bin/edonr256-hash
+FPK_COMMANDS += bin/edonr512-hash
+FPK_COMMANDS += bin/gost12-256-hash
+FPK_COMMANDS += bin/gost12-512-hash
+FPK_COMMANDS += bin/has160-hash
+FPK_COMMANDS += bin/magnet-link
+FPK_COMMANDS += bin/sfv-hash
+FPK_COMMANDS += bin/tiger-hash
+FPK_COMMANDS += bin/tth-hash
+FPK_COMMANDS += bin/whirlpool-hash
 
-SPK_COMMANDS += bin/xstow bin/merge-info
-SPK_COMMANDS += bin/patch
+FPK_COMMANDS += bin/xstow bin/merge-info
+FPK_COMMANDS += bin/patch
 
 include ../../mk/fpksrc.fpk.mk
 
@@ -171,7 +171,7 @@ ifeq ($(call version_ge, $(TC_GCC), 4.8.1),1)
 # A compiler with support for C++11 language features is required.
 DEPENDS += cross/rnm
 OPTIONAL_DESC := $(OPTIONAL_DESC)", rnm"
-SPK_COMMANDS += bin/rnm
+FPK_COMMANDS += bin/rnm
 endif
 
 .PHONY: synocli-file_extra_install

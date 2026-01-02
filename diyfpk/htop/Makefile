@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = http://hisham.hm/htop/
 LICENSE = GPLv2+
 
-SPK_COMMANDS = bin/htop
+FPK_COMMANDS = bin/htop
 
 include ../../mk/fpksrc.fpk.mk

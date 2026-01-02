@@ -17,6 +17,6 @@ HOMEPAGE = https://github.com/aristocratos/btop
 
 STARTABLE = false
 
-SPK_COMMANDS = bin/btop
+FPK_COMMANDS = bin/btop
 
 include ../../mk/fpksrc.fpk.mk

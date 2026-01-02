@@ -14,6 +14,6 @@ HOMEPAGE = http://nmon.sourceforge.net/
 LICENSE = GPLv3
 HELP_URL = http://nmon.sourceforge.net/pmwiki.php
 
-SPK_COMMANDS = bin/nmon
+FPK_COMMANDS = bin/nmon
 
 include ../../mk/fpksrc.fpk.mk

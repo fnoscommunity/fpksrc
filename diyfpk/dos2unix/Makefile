@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://waterlan.home.xs4all.nl/dos2unix.html
 LICENSE = FreeBSD style
 
-SPK_COMMANDS = bin/dos2unix bin/unix2dos bin/mac2unix bin/unix2mac 
+FPK_COMMANDS = bin/dos2unix bin/unix2dos bin/mac2unix bin/unix2mac 
 
 include ../../mk/fpksrc.fpk.mk

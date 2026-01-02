@@ -15,6 +15,6 @@ CHANGELOG = "1. Update fossil-scm to 2.17.<br/>2. Update openssl to 1.1.1l."
 HOMEPAGE = https://www.fossil-scm.org/
 LICENSE  = 2-clause BSD
 
-SPK_COMMANDS = bin/fossil
+FPK_COMMANDS = bin/fossil
 
 include ../../mk/fpksrc.fpk.mk

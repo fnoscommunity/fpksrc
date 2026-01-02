@@ -13,7 +13,7 @@ STARTABLE = false
 HOMEPAGE = http://www.dest-unreach.org/socat/
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/socat bin/socat1 bin/filan bin/procan
-SPK_COMMANDS += bin/socat-broker.sh bin/socat-chain.sh bin/socat-mux.sh
+FPK_COMMANDS = bin/socat bin/socat1 bin/filan bin/procan
+FPK_COMMANDS += bin/socat-broker.sh bin/socat-chain.sh bin/socat-mux.sh
 
 include ../../mk/fpksrc.fpk.mk

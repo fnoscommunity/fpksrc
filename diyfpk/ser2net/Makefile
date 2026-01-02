@@ -16,6 +16,6 @@ STARTABLE = false
 HOMEPAGE = http://ser2net.sourceforge.net/
 LICENSE = GPLv2
 
-SPK_COMMANDS = sbin/ser2net
+FPK_COMMANDS = sbin/ser2net
 
 include ../../mk/fpksrc.fpk.mk

@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = http://sg.danny.cz/scsi/lsscsi.html
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/lsscsi
+FPK_COMMANDS = bin/lsscsi
 
 include ../../mk/fpksrc.fpk.mk

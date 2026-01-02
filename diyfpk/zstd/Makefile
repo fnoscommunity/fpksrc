@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://facebook.github.io/zstd/
 LICENSE  = GPLv2/BSD
 
-SPK_COMMANDS = bin/zstd bin/unzstd bin/zstdcat bin/zstdmt bin/zstdgrep bin/zstdless bin/zstd-frugal
+FPK_COMMANDS = bin/zstd bin/unzstd bin/zstdcat bin/zstdmt bin/zstdgrep bin/zstdless bin/zstd-frugal
 
 include ../../mk/fpksrc.fpk.mk

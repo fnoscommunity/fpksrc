@@ -18,7 +18,7 @@ LICENSE = MIT
 
 POST_STRIP_TARGET = nushell_extra_install
 
-SPK_COMMANDS = bin/nu bin/nu_install_plugins.sh
+FPK_COMMANDS = bin/nu bin/nu_install_plugins.sh
 
 include ../../mk/fpksrc.fpk.mk
 

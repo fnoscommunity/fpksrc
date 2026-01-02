@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://disktype.sourceforge.net/
 LICENSE = MIT
 
-SPK_COMMANDS = bin/disktype
+FPK_COMMANDS = bin/disktype
 
 include ../../mk/fpksrc.fpk.mk

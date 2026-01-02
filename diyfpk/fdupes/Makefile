@@ -14,6 +14,6 @@ HOMEPAGE = https://github.com/adrianlopezroche/fdupes/
 LICENSE = MIT
 HELP_URL = https://github.com/adrianlopezroche/fdupes/wiki
 
-SPK_COMMANDS = bin/fdupes
+FPK_COMMANDS = bin/fdupes
 
 include ../../mk/fpksrc.fpk.mk

@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://tukaani.org
 LICENSE  = various
 
-SPK_COMMANDS = bin/xz bin/xzcat bin/xzdec bin/lzcat bin/unxz bin/lzma bin/lzmadec bin/lzmainfo bin/unlzma
+FPK_COMMANDS = bin/xz bin/xzcat bin/xzdec bin/lzcat bin/unxz bin/lzma bin/lzmadec bin/lzmainfo bin/unlzma
 
 include ../../mk/fpksrc.fpk.mk

@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/majorkingleo/xstow#readme
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/xstow bin/merge-info
+FPK_COMMANDS = bin/xstow bin/merge-info
 
 include ../../mk/fpksrc.fpk.mk

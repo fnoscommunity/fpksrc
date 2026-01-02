@@ -12,12 +12,12 @@ STARTABLE = false
 
 HOMEPAGE = https://www.gnu.org/software/autoconf/
 
-SPK_COMMANDS  = bin/autoconf
-SPK_COMMANDS += bin/autoheader
-SPK_COMMANDS += bin/autom4te
-SPK_COMMANDS += bin/autoreconf
-SPK_COMMANDS += bin/autoscan
-SPK_COMMANDS += bin/autoupdate
-SPK_COMMANDS += bin/ifnames
+FPK_COMMANDS  = bin/autoconf
+FPK_COMMANDS += bin/autoheader
+FPK_COMMANDS += bin/autom4te
+FPK_COMMANDS += bin/autoreconf
+FPK_COMMANDS += bin/autoscan
+FPK_COMMANDS += bin/autoupdate
+FPK_COMMANDS += bin/ifnames
 
 include ../../mk/fpksrc.fpk.mk

@@ -11,6 +11,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/util-linux/util-linux
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/ionice
+FPK_COMMANDS = bin/ionice
 
 include ../../mk/fpksrc.fpk.mk

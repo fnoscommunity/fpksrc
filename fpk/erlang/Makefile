@@ -14,6 +14,6 @@ DISPLAY_NAME = Erlang
 HOMEPAGE = https://www.erlang.org
 LICENSE  = Apache 2.0
 
-SPK_COMMANDS = bin/erl bin/erlc
+FPK_COMMANDS = bin/erl bin/erlc
 
 include ../../mk/fpksrc.fpk.mk

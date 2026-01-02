@@ -12,6 +12,6 @@ STARTABLE = false
 HOMEPAGE = https://zlib.net/pigz/
 LICENSE = zlib
 
-SPK_COMMANDS = bin/pigz bin/unpigz
+FPK_COMMANDS = bin/pigz bin/unpigz
 
 include ../../mk/fpksrc.fpk.mk

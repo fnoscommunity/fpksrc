@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = http://links.twibright.com/
 LICENSE = GPLv2
 
-SPK_COMMANDS = bin/links
+FPK_COMMANDS = bin/links
 
 include ../../mk/fpksrc.fpk.mk

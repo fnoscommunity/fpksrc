@@ -12,6 +12,6 @@ DISPLAY_NAME = IMAPFilter
 HOMEPAGE = http://github.com/lefcha/imapfilter
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/imapfilter
+FPK_COMMANDS = bin/imapfilter
 
 include ../../mk/fpksrc.fpk.mk

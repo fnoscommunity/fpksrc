@@ -18,6 +18,6 @@ HOMEPAGE   = https://github.com/hphde/he853-cli
 LICENSE    = GPLv2
 
 SERVICE_SETUP = src/service-setup.sh
-SPK_COMMANDS = bin/he853
+FPK_COMMANDS = bin/he853
 
 include ../../mk/fpksrc.fpk.mk

@@ -20,6 +20,6 @@ CHANGELOG = "Update tcl to 8.6.14 released 2024-02-28."
 HOMEPAGE = https://www.tcl.tk
 LICENSE = Tcl/Tk License
 
-SPK_COMMANDS = bin/tclsh bin/tclsh$(SPK_MAIN_VERS)
+FPK_COMMANDS = bin/tclsh bin/tclsh$(SPK_MAIN_VERS)
 
 include ../../mk/fpksrc.fpk.mk

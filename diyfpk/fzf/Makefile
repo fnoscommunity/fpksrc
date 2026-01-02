@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://junegunn.github.io/fzf/
 LICENSE = MIT
 
-SPK_COMMANDS = bin/fzf
+FPK_COMMANDS = bin/fzf
 
 include ../../mk/fpksrc.fpk.mk

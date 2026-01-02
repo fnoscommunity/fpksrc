@@ -14,6 +14,6 @@ STARTABLE = false
 HOMEPAGE = https://mkvtoolnix.org/
 LICENSE  = GPLv2
 
-SPK_COMMANDS = bin/mkvextract bin/mkvinfo bin/mkvmerge bin/mkvpropedit
+FPK_COMMANDS = bin/mkvextract bin/mkvinfo bin/mkvmerge bin/mkvpropedit
 
 include ../../mk/fpksrc.fpk.mk

@@ -22,7 +22,7 @@ HOMEPAGE = https://www.kaashoek.com/comskip/
 LICENSE = LGPL
 HELPURL = https://github.com/fnoscommunity/fpksrc/wiki/Comskip
 
-SPK_COMMANDS = bin/comskip
+FPK_COMMANDS = bin/comskip
 
 POST_STRIP_TARGET = comskip_extra_install
 

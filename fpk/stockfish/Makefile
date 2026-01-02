@@ -27,7 +27,7 @@ POST_STRIP_TARGET = stockfish_extra_install
 # Toolchains lacking c++11 compiler ar not supported
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
 
-SPK_COMMANDS  = bin/stockfish
+FPK_COMMANDS  = bin/stockfish
 
 include ../../mk/fpksrc.fpk.mk
 

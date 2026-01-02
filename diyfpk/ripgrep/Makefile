@@ -25,6 +25,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/BurntSushi/ripgrep
 LICENSE  = public domain/Unlicense
 
-SPK_COMMANDS = bin/rg
+FPK_COMMANDS = bin/rg
 
 include ../../mk/fpksrc.fpk.mk

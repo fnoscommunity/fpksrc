@@ -13,6 +13,6 @@ STARTABLE = false
 HOMEPAGE = https://github.com/dundee/gdu
 LICENSE  = MIT
 
-SPK_COMMANDS = bin/gdu
+FPK_COMMANDS = bin/gdu
 
 include ../../mk/fpksrc.fpk.mk

@@ -28,7 +28,7 @@ SSS_SCRIPT = src/service-start-stop.sh
 
 FWPORTS = src/${FPK_NAME}.sc
 
-SPK_COMMANDS = bin/ejabberdctl
+FPK_COMMANDS = bin/ejabberdctl
 
 POST_STRIP_TARGET = ejabberd_extra_install
 

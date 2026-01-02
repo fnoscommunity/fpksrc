@@ -16,6 +16,6 @@ LICENSE = BSD
 PCRE2_CLI_FULL = 1
 export PCRE2_CLI_FULL
 
-SPK_COMMANDS = bin/pcre2grep bin/pcre2test
+FPK_COMMANDS = bin/pcre2grep bin/pcre2test
 
 include ../../mk/fpksrc.fpk.mk

@@ -17,6 +17,6 @@ LICENSE = 2-Clause BSD
 
 STARTABLE = false
 
-SPK_COMMANDS = bin/mediainfo
+FPK_COMMANDS = bin/mediainfo
 
 include ../../mk/fpksrc.fpk.mk

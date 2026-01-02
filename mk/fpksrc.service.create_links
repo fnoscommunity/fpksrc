@@ -2,7 +2,7 @@
 # Create links for cli binaries
 service_create_links ()
 {
-    for cmd in ${SPK_COMMANDS}
+    for cmd in ${FPK_COMMANDS}
     do
         if [ -e "${SYNOPKG_PKGDEST}/${cmd}" ]; then
             mkdir -p "$(dirname /usr/local/${cmd})"
@@ -26,7 +26,7 @@ service_create_links ()
 # Remove links created for cli binaries
 service_remove_links ()
 {
-    for cmd in ${SPK_COMMANDS}
+    for cmd in ${FPK_COMMANDS}
     do
         if [ -L "/usr/local/${cmd}" ]; then
             if [ "$(readlink /usr/local/${cmd})" == "${SYNOPKG_PKGDEST}/${cmd}" ]; then

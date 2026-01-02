@@ -17,6 +17,6 @@ CHANGELOG = "1. Update openssl library to v3.1.5."
 HOMEPAGE = https://mosh.org
 LICENSE  = GPLv3+
 
-SPK_COMMANDS = bin/mosh bin/mosh-client bin/mosh-server
+FPK_COMMANDS = bin/mosh bin/mosh-client bin/mosh-server
 
 include ../../mk/fpksrc.fpk.mk
