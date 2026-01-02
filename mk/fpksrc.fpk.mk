@@ -264,8 +264,8 @@ ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 ifneq ($(strip $(FNOS_APP_PAGE)),)
 	@echo dsmapppage=\"$(FNOS_APP_PAGE)\" >> $@
 endif
-ifneq ($(strip $(DSM_APP_LAUNCH_NAME)),)
-	@echo dsmapplaunchname=\"$(DSM_APP_LAUNCH_NAME)\" >> $@
+ifneq ($(strip $(FNOS_APP_LAUNCH_NAME)),)
+	@echo dsmapplaunchname=\"$(FNOS_APP_LAUNCH_NAME)\" >> $@
 endif
 endif
 ifneq ($(strip $(ADMIN_PROTOCOL)),)
