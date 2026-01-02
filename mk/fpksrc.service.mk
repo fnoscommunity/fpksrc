@@ -85,7 +85,7 @@ endif
 
 .PHONY: service_target service_msg_target
 .PHONY: $(PRE_SERVICE_TARGET) $(SERVICE_TARGET) $(POST_SERVICE_TARGET)
-.PHONY: $(DSM_SCRIPTS_DIR)/service-setup $(DSM_SCRIPTS_DIR)/main
+.PHONY: $(FNOS_CMD_DIR)/service-setup $(FNOS_CMD_DIR)/main
 .PHONY: $(FNOS_CONFIG_DIR)/privilege $(FNOS_CONFIG_DIR)/resource
 .PHONY: $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc $(STAGING_DIR)/$(FNOS_UI_DIR)/config
 
@@ -129,7 +129,7 @@ SPKSRC_MK = $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 SERVICE_FILES =
 
 # Generate service-setup from SERVICE variables
-$(DSM_SCRIPTS_DIR)/service-setup:
+$(FNOS_CMD_DIR)/service-setup:
 	$(create_target_dir)
 	@echo "### Generic variables and functions" > $@
 	@echo '### -------------------------------' >> $@
@@ -296,24 +296,24 @@ endif
 
 
 FNOS_SCRIPT_FILES += service-setup
-SERVICE_FILES += $(DSM_SCRIPTS_DIR)/service-setup
+SERVICE_FILES += $(FNOS_CMD_DIR)/service-setup
 
 
 # Control use of generic installer
 ifeq ($(strip $(INSTALLER_SCRIPT)),)
 FNOS_SCRIPT_FILES += functions
-$(DSM_SCRIPTS_DIR)/functions: $(SPKSRC_MK)fpksrc.service.installer.functions
+$(FNOS_CMD_DIR)/functions: $(SPKSRC_MK)fpksrc.service.installer.functions
 	@$(dsm_script_copy)
 
 FNOS_SCRIPT_FILES += installer
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-$(DSM_SCRIPTS_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm7
+$(FNOS_CMD_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm7
 	@$(dsm_script_copy)
 else ifeq ($(call version_ge, ${TCVERSION}, 6.0),1)
-$(DSM_SCRIPTS_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm6
+$(FNOS_CMD_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm6
 	@$(dsm_script_copy)
 else
-$(DSM_SCRIPTS_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm5
+$(FNOS_CMD_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm5
 	@$(dsm_script_copy)
 endif
 endif
@@ -323,10 +323,10 @@ endif
 ifeq ($(strip $(SSS_SCRIPT)),)
 FNOS_SCRIPT_FILES += main
 ifeq ($(STARTABLE),false)
-$(DSM_SCRIPTS_DIR)/main: $(SPKSRC_MK)fpksrc.service.non-startable
+$(FNOS_CMD_DIR)/main: $(SPKSRC_MK)fpksrc.service.non-startable
 	@$(dsm_script_copy)
 else
-$(DSM_SCRIPTS_DIR)/main: $(SPKSRC_MK)fpksrc.service.start-stop-status
+$(FNOS_CMD_DIR)/main: $(SPKSRC_MK)fpksrc.service.start-stop-status
 	@$(dsm_script_copy)
 endif
 endif

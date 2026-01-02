@@ -114,7 +114,7 @@ include ../../mk/fpksrc.strip.mk
 
 
 # Scripts
-DSM_SCRIPTS_DIR = $(WORK_DIR)/cmd
+FNOS_CMD_DIR = $(WORK_DIR)/cmd
 
 # Generated scripts
 FNOS_SCRIPT_FILES  = install_init   install_callback
@@ -127,14 +127,14 @@ FNOS_SCRIPT_FILES += main
 ifneq ($(strip $(SSS_SCRIPT)),)
 FNOS_SCRIPT_FILES += main
 
-$(DSM_SCRIPTS_DIR)/main: $(SSS_SCRIPT)
+$(FNOS_CMD_DIR)/main: $(SSS_SCRIPT)
 	@$(dsm_script_copy)
 endif
 
 ifneq ($(strip $(INSTALLER_SCRIPT)),)
 FNOS_SCRIPT_FILES += installer
 
-$(DSM_SCRIPTS_DIR)/installer: $(INSTALLER_SCRIPT)
+$(FNOS_CMD_DIR)/installer: $(INSTALLER_SCRIPT)
 	@$(dsm_script_copy)
 endif
 
@@ -346,7 +346,7 @@ $(WORK_DIR)/app.tgz: icon service
 	@[ -f $@ ] && rm $@ || true
 	(cd $(STAGING_DIR) && find . -mindepth 1 -maxdepth 1 -not -empty | tar cpzf $@ --owner=root --group=root --files-from=/dev/stdin)
 
-DSM_SCRIPTS = $(addprefix $(DSM_SCRIPTS_DIR)/,$(FNOS_SCRIPT_FILES))
+DSM_SCRIPTS = $(addprefix $(FNOS_CMD_DIR)/,$(FNOS_SCRIPT_FILES))
 
 define dsm_script_redirect
 $(create_target_dir)
@@ -364,21 +364,21 @@ cp $< $@
 chmod 755 $@
 endef
 
-$(DSM_SCRIPTS_DIR)/install_init:
+$(FNOS_CMD_DIR)/install_init:
 	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/install_callback:
+$(FNOS_CMD_DIR)/install_callback:
 	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/uninstall_init:
+$(FNOS_CMD_DIR)/uninstall_init:
 	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/uninstall_callback:
+$(FNOS_CMD_DIR)/uninstall_callback:
 	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/upgrade_init:
+$(FNOS_CMD_DIR)/upgrade_init:
 	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/upgrade_callback:
+$(FNOS_CMD_DIR)/upgrade_callback:
 	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/config_init:
+$(FNOS_CMD_DIR)/config_init:
 	@$(dsm_script_redirect)
-$(DSM_SCRIPTS_DIR)/config_callback:
+$(FNOS_CMD_DIR)/config_callback:
 	@$(dsm_script_redirect)
 
 # Package Icons
