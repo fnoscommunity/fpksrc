@@ -86,7 +86,7 @@ endif
 .PHONY: service_target service_msg_target
 .PHONY: $(PRE_SERVICE_TARGET) $(SERVICE_TARGET) $(POST_SERVICE_TARGET)
 .PHONY: $(DSM_SCRIPTS_DIR)/service-setup $(DSM_SCRIPTS_DIR)/main
-.PHONY: $(DSM_CONF_DIR)/privilege $(DSM_CONF_DIR)/resource
+.PHONY: $(FNOS_CONFIG_DIR)/privilege $(FNOS_CONFIG_DIR)/resource
 .PHONY: $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc $(STAGING_DIR)/$(FNOS_UI_DIR)/config
 
 service_msg_target:
@@ -227,7 +227,7 @@ endif
 # for DSM<6.0 link creation is provided by fpksrc.service.create_links
 # and other facilities are defined in the generic installer (fpksrc.service.installer.dsm5)
 ifeq ($(call version_ge, ${TCVERSION}, 6.0),1)
-$(DSM_CONF_DIR)/resource:
+$(FNOS_CONFIG_DIR)/resource:
 	$(create_target_dir)
 	@$(MSG) "Creating $@"
 	@echo '{}' > $@
@@ -279,7 +279,7 @@ ifneq ($(strip $(VIDEODRIVER)),)
 	@jq '."video-driver" = {}' $@ | sponge $@
 endif
 
-SERVICE_FILES += $(DSM_CONF_DIR)/resource
+SERVICE_FILES += $(FNOS_CONFIG_DIR)/resource
 ifneq ($(findstring config,$(FPK_CONTENT)),config)
 FPK_CONTENT += config
 endif
@@ -334,12 +334,12 @@ endif
 
 # Generate privilege file for service user (prefixed to avoid collision with busybox account)
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-$(DSM_CONF_DIR)/privilege:
+$(FNOS_CONFIG_DIR)/privilege:
 	$(create_target_dir)
 	@jq -n '."defaults" = {"run-as": "package"}' > $@
 	@$(MSG) "Creating $@"
 	@$(MSG) '(privilege) run-as: package'
-	@$(MSG) "(privilege) DSM >= 7 $(DSM_CONF_DIR)/privilege"
+	@$(MSG) "(privilege) DSM >= 7 $(FNOS_CONFIG_DIR)/privilege"
 # Apply variables to privilege file
 ifneq ($(strip $(SYSTEM_GROUP)),)
 # options: http, system
@@ -363,7 +363,7 @@ endif
 
 # DSM <= 6 and SERVICE_USER defined
 else ifneq ($(strip $(SERVICE_USER)),)
-$(DSM_CONF_DIR)/privilege: $(SPKSRC_MK)fpksrc.service.privilege-installasroot
+$(FNOS_CONFIG_DIR)/privilege: $(SPKSRC_MK)fpksrc.service.privilege-installasroot
 	@$(dsm_resource_copy)
 	@$(MSG) "(privilege) fpksrc.service.privilege-installasroot"
 ifneq ($(strip $(SYSTEM_GROUP)),)
@@ -382,13 +382,13 @@ endif
 
 # DSM <= 6 and SERVICE_USER is NOT defined
 else
-$(DSM_CONF_DIR)/privilege:
+$(FNOS_CONFIG_DIR)/privilege:
 	@$(MSG) "NOT creating $@"
 	@$(MSG) "(privilege) DSM <= 6 and SERVICE_USER undefined"
 endif
 
-# Call $(DSM_CONF_DIR)/privilege:
-SERVICE_FILES += $(DSM_CONF_DIR)/privilege
+# Call $(FNOS_CONFIG_DIR)/privilege:
+SERVICE_FILES += $(FNOS_CONFIG_DIR)/privilege
 
 
 # Generate service configuration for admin port

@@ -141,7 +141,7 @@ endif
 FPK_CONTENT = app.tgz manifest cmd
 
 # config
-DSM_CONF_DIR = $(WORK_DIR)/config
+FNOS_CONFIG_DIR = $(WORK_DIR)/config
 
 ifneq ($(CONF_DIR),)
 FPK_CONF_DIR = $(CONF_DIR)
@@ -494,9 +494,9 @@ endif
 config:
 ifneq ($(strip $(CONF_DIR)),)
 	@$(MSG) "Preparing config"
-	@mkdir -p $(DSM_CONF_DIR)
-	@find $(FPK_CONF_DIR) -maxdepth 1 -type f -print -exec cp -f {} $(DSM_CONF_DIR) \;
-	@find $(DSM_CONF_DIR) -maxdepth 1 -type f -print -exec chmod 0644 {} \;
+	@mkdir -p $(FNOS_CONFIG_DIR)
+	@find $(FPK_CONF_DIR) -maxdepth 1 -type f -print -exec cp -f {} $(FNOS_CONFIG_DIR) \;
+	@find $(FNOS_CONFIG_DIR) -maxdepth 1 -type f -print -exec chmod 0644 {} \;
 ifneq ($(findstring config,$(FPK_CONTENT)),config)
 FPK_CONTENT += config
 endif
