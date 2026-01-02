@@ -5,7 +5,7 @@
 # Evaluate packages to build and referenced source files to download.
 #
 # Functions:
-# - Build all packages defined by ${USER_FPK_TO_BUILD} and ${GH_SPK_PACKAGES}
+# - Build all packages defined by ${USER_FPK_TO_BUILD} and ${GH_FPK_PACKAGES}
 # - Evaluate additional packages to build depending on changed folders defined in ${GH_DEPENDENT_PACKAGES}.
 # - synocli-videodriver is moved to head of packages to build first if triggered by its ffmpeg5-7
 # - python310-313 and ffmpeg5-7 are moved to head of remaining packages to build when triggered by its own or a dependent.
@@ -20,7 +20,7 @@ make setup-FnOScommunity
 DEFAULT_TC=$(grep DEFAULT_TC local.mk | cut -f2 -d= | xargs)
 
 # all packages to build from changes or manual definition
-SPK_TO_BUILD="${USER_FPK_TO_BUILD} ${GH_SPK_PACKAGES} "
+SPK_TO_BUILD="${USER_FPK_TO_BUILD} ${GH_FPK_PACKAGES} "
 
 # get dependency list
 # dependencies in this list include the cross or native folder (i.e. native/python cross/glib)
