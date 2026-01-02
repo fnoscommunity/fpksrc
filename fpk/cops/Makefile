@@ -29,7 +29,7 @@ SYSTEM_GROUP = http
 ADMIN_URL = /cops/
 
 FNOS_UI_DIR = app
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 CONF_DIR = src/conf/
 
 SERVICE_SETUP = src/service-setup.sh

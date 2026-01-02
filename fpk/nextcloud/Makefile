@@ -33,7 +33,7 @@ ADMIN_URL = /nextcloud/
 ADMIN_PROTOCOL = https
 
 FNOS_UI_DIR = app
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 
 SERVICE_SETUP = src/service-setup.sh
 STARTABLE = yes

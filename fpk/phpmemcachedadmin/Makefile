@@ -23,7 +23,7 @@ HOMEPAGE = https://github.com/elijaa/phpmemcachedadmin
 LICENSE  = Apache-2.0
 
 SERVICE_USER = auto
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 
 STARTABLE = false
 SERVICE_SETUP = src/service-setup.sh

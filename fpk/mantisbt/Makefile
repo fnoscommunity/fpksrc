@@ -31,7 +31,7 @@ WIZARDS_DIR = src/wizard/
 SYSTEM_GROUP = http
 
 FNOS_UI_DIR = app
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 
 include ../../mk/fpksrc.common.mk
 

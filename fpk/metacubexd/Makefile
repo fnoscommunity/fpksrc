@@ -28,14 +28,14 @@ SYSTEM_GROUP = http
 SERVICE_SETUP = src/service-setup.sh
 
 FNOS_UI_DIR = app
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 
 CONF_DIR = src/conf/
 
 include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
-DSM_UI_CONFIG = src/app_6/config
+FNOS_UI_CONFIG = src/app_6/config
 CONF_DIR = src/conf_6/
 POST_STRIP_TARGET = metacubexd_custom_post_strip
 endif

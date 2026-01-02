@@ -42,7 +42,7 @@ SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 SERVICE_WIZARD_SHARE = wizard_download_dir
 
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 
 # Required environment variables will be injected in service-setup.sh
 SERVICE_COMMAND = /var/apps/rutorrent/target/bin/rtorrent-daemon

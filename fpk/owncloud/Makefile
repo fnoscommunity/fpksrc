@@ -31,7 +31,7 @@ ADMIN_URL = /owncloud/
 ADMIN_PROTOCOL = https
 
 FNOS_UI_DIR = app
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 CONF_DIR = src/conf/
 
 include ../../mk/fpksrc.common.mk

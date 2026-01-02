@@ -14,7 +14,7 @@ ICON_COOKIE = $(WORK_DIR)/.$(COOKIE_PREFIX)icon_done
 # Icons are only needed with "DSM UI configuration" (see fpksrc.service.mk)
 ifneq ($(strip $(FNOS_UI_DIR)),)
 ifneq ($(strip $(FPK_ICON)),)
-ifneq ($(strip $(DSM_UI_CONFIG)),)
+ifneq ($(strip $(FNOS_UI_CONFIG)),)
 ICON_DIR = $(STAGING_DIR)/$(FNOS_UI_DIR)/images
 else ifneq ($(or $(strip $(SERVICE_PORT)), $(strip $(ADMIN_URL))),)
 ifeq ($(strip $(NO_SERVICE_SHORTCUT)),)

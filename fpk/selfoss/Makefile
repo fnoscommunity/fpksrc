@@ -27,7 +27,7 @@ SYSTEM_GROUP = http
 ADMIN_URL = /selfoss/
 
 FNOS_UI_DIR = app
-DSM_UI_CONFIG = src/app/config
+FNOS_UI_CONFIG = src/app/config
 
 # Set user as 'auto' for DSM 6 privilege
 SERVICE_USER = auto
