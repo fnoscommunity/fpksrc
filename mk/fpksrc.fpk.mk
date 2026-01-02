@@ -322,11 +322,11 @@ export SPKSRC_WIZARDS_DIR=$(WIZARDS_DIR)
 endif
 
 # License
-DSM_LICENSE_FILE = $(WORK_DIR)/LICENSE
+FNOS_LICENSE_FILE = $(WORK_DIR)/LICENSE
 
-DSM_LICENSE =
+FNOS_LICENSE =
 ifneq ($(LICENSE_FILE),)
-DSM_LICENSE = $(DSM_LICENSE_FILE)
+FNOS_LICENSE = $(FNOS_LICENSE_FILE)
 endif
 
 define dsm_resource_copy
@@ -336,7 +336,7 @@ cp $< $@
 chmod 644 $@
 endef
 
-$(DSM_LICENSE_FILE): $(LICENSE_FILE)
+$(FNOS_LICENSE_FILE): $(LICENSE_FILE)
 	@echo $@
 	@$(dsm_resource_copy)
 
@@ -502,11 +502,11 @@ FPK_CONTENT += config
 endif
 endif
 
-ifneq ($(strip $(DSM_LICENSE)),)
+ifneq ($(strip $(FNOS_LICENSE)),)
 FPK_CONTENT += LICENSE
 endif
 
-$(FPK_FILE_NAME): $(WORK_DIR)/app.tgz $(WORK_DIR)/manifest info-checksum icons service $(DSM_SCRIPTS) wizards $(DSM_LICENSE) config
+$(FPK_FILE_NAME): $(WORK_DIR)/app.tgz $(WORK_DIR)/manifest info-checksum icons service $(DSM_SCRIPTS) wizards $(FNOS_LICENSE) config
 	$(create_target_dir)
 	(cd $(WORK_DIR) && tar czpf $@ --group=root --owner=root $(FPK_CONTENT))
 
