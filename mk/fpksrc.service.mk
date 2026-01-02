@@ -32,7 +32,7 @@
 # 
 #  SERVICE_USER                  (optional) runtime user account for generic service support.
 #                                "auto" is the only value supported with DSM 7 and defines sc-${FPK_NAME} as service user.
-#  SPK_GROUP                     (optional) defines the group to use in privilege resource file
+#  FPK_GROUP                     (optional) defines the group to use in privilege resource file
 #  SYSTEM_GROUP                  (optional) defines an additional group to join in privilege resource file
 #  STARTABLE                     default = true, must be "false" for packages that do not create a service (command line tools)
 #  SERVICE_COMMAND               service command, to be used with generic service support
@@ -373,8 +373,8 @@ endif
 ifneq ($(strip $(SPK_USER)),)
 	@jq '."username" = "sc-$(SPK_USER)"' $@ | sponge $@
 endif
-ifneq ($(strip $(SPK_GROUP)),)
-	@jq '."groupname" = "$(SPK_GROUP)"' $@ | sponge $@
+ifneq ($(strip $(FPK_GROUP)),)
+	@jq '."groupname" = "$(FPK_GROUP)"' $@ | sponge $@
 endif
 ifneq ($(findstring config,$(FPK_CONTENT)),config)
 FPK_CONTENT += config
