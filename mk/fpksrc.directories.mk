@@ -35,8 +35,8 @@ INSTALL_DIR = $(WORK_DIR)/install
 endif
 
 ifndef INSTALL_PREFIX
-ifneq ($(strip $(DSM_APP_NAME)),)
-INSTALL_PREFIX = /var/apps/$(DSM_APP_NAME)/target
+ifneq ($(strip $(FNOS_APP_NAME)),)
+INSTALL_PREFIX = /var/apps/$(FNOS_APP_NAME)/target
 else ifneq ($(strip $(FPK_NAME)),)
 INSTALL_PREFIX = /var/apps/com.fnoscomm.pkgs.$(FPK_NAME)/target
 else

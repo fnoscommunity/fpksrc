@@ -3,7 +3,7 @@ FPK_VERS = 2.2.4
 FPK_REV = 22
 FPK_ICON = src/haproxy.png
 FNOS_UI_DIR = app
-DSM_APP_NAME = FnOScommunity.HAProxy.AppInstance
+FNOS_APP_NAME = FnOScommunity.HAProxy.AppInstance
 
 DEPENDS = cross/haproxy
 WHEELS = src/requirements.txt

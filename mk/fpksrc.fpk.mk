@@ -255,8 +255,8 @@ endif
 ifneq ($(strip $(FNOS_UI_DIR)),)
 	@[ -d $(STAGING_DIR)/$(FNOS_UI_DIR) ] && echo desktop_uidir=\"$(FNOS_UI_DIR)\" >> $@ || true
 endif
-ifneq ($(strip $(DSM_APP_NAME)),)
-	@echo appname=\"$(DSM_APP_NAME)\" >> $@
+ifneq ($(strip $(FNOS_APP_NAME)),)
+	@echo appname=\"$(FNOS_APP_NAME)\" >> $@
 else
 	@echo appname=\"com.fnoscomm.pkgs.$(FPK_NAME)\" >> $@
 endif
