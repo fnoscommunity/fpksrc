@@ -107,7 +107,7 @@ jobs:
         env:
           GH_SPK_PACKAGES: ${{ steps.getchanges_push.outputs.fpk_packages }} ${{ steps.getchanges_pr.outputs.fpk_packages }}
           GH_DEPENDENCY_FOLDERS: ${{ steps.getchanges_push.outputs.dependency_folders }} ${{ steps.getchanges_pr.outputs.dependency_folders }}
-          USER_SPK_TO_BUILD: ${{ github.event.inputs.package }}
+          USER_FPK_TO_BUILD: ${{ github.event.inputs.package }}
 
       - name: Restore distrib cache
         id: cache-restore
