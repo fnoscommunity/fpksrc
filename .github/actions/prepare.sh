@@ -20,7 +20,7 @@ make setup-FnOScommunity
 DEFAULT_TC=$(grep DEFAULT_TC local.mk | cut -f2 -d= | xargs)
 
 # all packages to build from changes or manual definition
-SPK_TO_BUILD="${USER_FPK_TO_BUILD} ${GH_FPK_PACKAGES} "
+FPK_TO_BUILD="${USER_FPK_TO_BUILD} ${GH_FPK_PACKAGES} "
 
 # get dependency list
 # dependencies in this list include the cross or native folder (i.e. native/python cross/glib)
@@ -34,19 +34,19 @@ do
     echo "===> Searching for dependent package: ${package}"
     packages=$(cat "${DEPENDENCY_LIST}" | grep -w "${package}" | grep -o ".*:" | tr ':' ' ' | sort -u | tr '\n' ' ')
     echo "===> Found: ${packages}"
-    SPK_TO_BUILD+=" ${packages}"
+    FPK_TO_BUILD+=" ${packages}"
 done
 
 # fix for packages with different names
-if [ "$(echo ${SPK_TO_BUILD} | grep -o ' nzbdrone ')" != "" ]; then
-    SPK_TO_BUILD=$(echo "${SPK_TO_BUILD}" | tr ' ' '\n' | grep -v "^nzbdrone$" | tr '\n' ' ')" sonarr3"
+if [ "$(echo ${FPK_TO_BUILD} | grep -o ' nzbdrone ')" != "" ]; then
+    FPK_TO_BUILD=$(echo "${FPK_TO_BUILD}" | tr ' ' '\n' | grep -v "^nzbdrone$" | tr '\n' ' ')" sonarr3"
 fi
-if [ "$(echo ${SPK_TO_BUILD} | grep -o ' python ')" != "" ]; then
-    SPK_TO_BUILD=$(echo "${SPK_TO_BUILD}" | tr ' ' '\n' | grep -v "^python$" | tr '\n' ' ')" python2"
+if [ "$(echo ${FPK_TO_BUILD} | grep -o ' python ')" != "" ]; then
+    FPK_TO_BUILD=$(echo "${FPK_TO_BUILD}" | tr ' ' '\n' | grep -v "^python$" | tr '\n' ' ')" python2"
 fi
 
 # remove duplicate packages
-packages=$(printf %s "${SPK_TO_BUILD}" | tr ' ' '\n' | sort -u | tr '\n' ' ')
+packages=$(printf %s "${FPK_TO_BUILD}" | tr ' ' '\n' | sort -u | tr '\n' ' ')
 
 # for ffmpeg v5-7 find all packages that depend on them
 for i in {5..7}; do
