@@ -23,7 +23,7 @@ if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
 fi
 
 if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
-    if [ "${SYNOPKG_DSM_VERSION_MINOR}" -ge 2 ]; then
+    if [ "${TRIM_SYS_VERSION_MINOR}" -ge 2 ]; then
         PHP="/usr/local/bin/php82"
     else
         PHP="/usr/local/bin/php80"

@@ -15,7 +15,7 @@ RUTORRENT_WEB_DIR="/var/services/web_packages/${PACKAGE}"
 RTORRENT_RC=${RUTORRENT_WEB_DIR}/conf/rtorrent.rc
 
 # Determine PHP binary path based on DSM version (rutorrent requires DSM >= 7)
-if [ "${TRIM_SYS_VERSION_MAJOR}" -eq 7 ] && [ "${SYNOPKG_DSM_VERSION_MINOR}" -lt 2 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -eq 7 ] && [ "${TRIM_SYS_VERSION_MINOR}" -lt 2 ]; then
     PHP_BIN="/usr/local/bin/php80"
 else
     PHP_BIN="/usr/local/bin/php82"
