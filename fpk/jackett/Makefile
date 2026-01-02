@@ -36,7 +36,7 @@ ifeq ($(call version_lt, ${TCVERSION}, 7.0),1)
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(i686_ARCHS) $(ARMv7L_ARCHS) $(ARMv7_ARCHS)),$(ARCH))
 DEPENDS = cross/curl cross/jackett-mono
 SERVICE_SETUP = src/service-setup-mono.sh
-SPK_DEPENDS = "mono>=5.8"
+FPK_DEPENDS = "mono>=5.8"
 else
 DEPENDS = cross/jackett
 # dotnet requires libstdc++ version >= 6.0.22
@@ -46,7 +46,7 @@ else
 ifeq ($(findstring $(ARCH),$(i686_ARCHS) $(DSM7_ARMv7_ARCHS_DEPENDING_ON_MONO)),$(ARCH))
 DEPENDS = cross/curl cross/jackett-mono
 SERVICE_SETUP = src/service-setup-mono.sh
-SPK_DEPENDS = "mono>=5.8"
+FPK_DEPENDS = "mono>=5.8"
 # create one package for all ARMv7 archs that depend on mono
 SPK_PACKAGE_ARCHS = $(DSM7_ARMv7_ARCHS_DEPENDING_ON_MONO)
 else

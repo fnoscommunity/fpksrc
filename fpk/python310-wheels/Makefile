@@ -5,7 +5,7 @@ FPK_REV = 1
 FPK_ICON = src/python3-pip.png
 
 PYTHON_PACKAGE = python310
-SPK_DEPENDS = "$(PYTHON_PACKAGE)"
+FPK_DEPENDS = "$(PYTHON_PACKAGE)"
 
 MAINTAINER = FnOScommunity
 DESCRIPTION =  Collection of programs for the Python 3.10 programming language.

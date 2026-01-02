@@ -27,18 +27,18 @@ include ../../mk/fpksrc.common.mk
 ##
 ifeq ($(call version_ge, ${TCVERSION}, 6.0),1)
 ifeq ($(call version_ge, ${TCVERSION}, 7.2),1)
-SPK_DEPENDS = "WebStation:PHP8.2:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.2:Apache2.4"
 # DSM >= 7.2
 CONF_DIR = src/conf_dsm72
 else ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-SPK_DEPENDS = "WebStation:PHP8.0:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.0:Apache2.4"
 # DSM >= 7.3 does not support PHP8.0
 OS_MAX_VER = 7.1-59999
 # DSM 7.0 and 7.1
 CONF_DIR = src/conf_dsm7
 else
 # DSM 6
-SPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"
 endif
 APACHE_VERSION = 2.4
 SYSTEM_GROUP = http

@@ -4,7 +4,7 @@ FPK_REV = 7
 FPK_ICON = src/mylar.png
 
 DEPENDS =
-SPK_DEPENDS = "python>2.7.3-3:git"
+FPK_DEPENDS = "python>2.7.3-3:git"
 
 MAINTAINER = Diaoul
 DESCRIPTION = Mylar is an automatic Comic Book downloader \(cbr/cbz\)

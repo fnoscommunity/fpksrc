@@ -4,7 +4,7 @@ FPK_REV = 2
 FPK_ICON = src/boxbackup.png
 
 DEPENDS = cross/boxbackup
-SPK_DEPENDS = "Perl"
+FPK_DEPENDS = "Perl"
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Box Backup is an open source, completely automatic, on-line backup system. This is the client part of Box Backup.

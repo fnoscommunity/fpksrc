@@ -6,7 +6,7 @@ DSM_UI_DIR = app
 
 DEPENDS =
 WHEELS = src/requirements.txt
-SPK_DEPENDS = "python>=2.7.9-12:salt-master"
+FPK_DEPENDS = "python>=2.7.9-12:salt-master"
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = A gui and cli to manage saltstack deployments 

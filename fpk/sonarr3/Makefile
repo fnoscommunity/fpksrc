@@ -4,7 +4,7 @@ FPK_REV = 22
 FPK_ICON = src/sonarr.png
 
 DEPENDS = cross/curl cross/mediainfo cross/sqlite cross/sonarr3
-SPK_DEPENDS = "mono>=5.8"
+FPK_DEPENDS = "mono>=5.8"
 
 # Mono is not supported on ppc platforms. See cross/mono/Makefile for details.
 UNSUPPORTED_ARCHS = $(PPC_ARCHS)

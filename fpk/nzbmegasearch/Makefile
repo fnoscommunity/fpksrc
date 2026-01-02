@@ -5,7 +5,7 @@ FPK_ICON = src/nzbmegasearch.png
 DSM_UI_DIR = app
 
 DEPENDS =
-SPK_DEPENDS = "python>2.7.3-3:git"
+FPK_DEPENDS = "python>2.7.3-3:git"
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = Aggregate automatically NZB search results. Easy. Quick. Clean. NZBmegasearcH collects all your \(not only\) newznab-based accounts to one place. It is your meta-search engine and your SB, CP unique NZB provider.

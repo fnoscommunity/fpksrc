@@ -9,7 +9,7 @@ DEPENDS = cross/phpmemcachedadmin
 override ARCH=noarch
 
 REQUIRED_MIN_DSM = 6.0
-SPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"
 # SRM is not supported due lacking webstation, php and apache packages
 REQUIRED_MIN_SRM = 3.0
 
@@ -31,10 +31,10 @@ SERVICE_SETUP = src/service-setup.sh
 include ../../mk/fpksrc.common.mk
 
 ifeq ($(call version_ge, ${TCVERSION}, 7.2),1)
-SPK_DEPENDS = "WebStation:PHP8.2:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.2:Apache2.4"
 CONF_DIR = src/conf_72
 else ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-SPK_DEPENDS = "WebStation:PHP8.0:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.0:Apache2.4"
 OS_MAX_VER = 7.1-59999
 CONF_DIR = src/conf_7
 endif

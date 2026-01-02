@@ -4,7 +4,7 @@ FPK_REV = 12
 FPK_ICON = src/sickchill.png
 
 PYTHON_PACKAGE = python312
-SPK_DEPENDS = "${PYTHON_PACKAGE}"
+FPK_DEPENDS = "${PYTHON_PACKAGE}"
 
 # archs without C++11 support are not supported [greenlet]
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS) $(ARMv5_ARCHS) $(ARMv7L_ARCHS)

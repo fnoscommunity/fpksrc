@@ -5,7 +5,7 @@ FPK_ICON = src/bazarr.png
 
 PYTHON_PACKAGE = python312
 
-SPK_DEPENDS = "${PYTHON_PACKAGE}:ffmpeg7"
+FPK_DEPENDS = "${PYTHON_PACKAGE}:ffmpeg7"
 
 WHEELS = src/requirements-crossenv.txt src/requirements-pure.txt
 

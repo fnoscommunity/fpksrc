@@ -28,7 +28,7 @@ VIDEODRIVER = on
 endif
 
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
-SPK_DEPENDS = "synocli-videodriver"
+FPK_DEPENDS = "synocli-videodriver"
 SERVICE_SETUP = src/service-setup.sh
 endif
 

@@ -6,7 +6,7 @@ DSM_UI_DIR = app
 
 DEPENDS  = cross/busybox cross/dtach cross/gateone
 WHEELS = src/requirements.txt
-SPK_DEPENDS = "python>=2.7.11-15"
+FPK_DEPENDS = "python>=2.7.11-15"
 
 MAINTAINER = M4tt075
 DESCRIPTION = Gate One is an HTML5-powered terminal emulator and SSH client

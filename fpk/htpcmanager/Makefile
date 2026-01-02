@@ -5,7 +5,7 @@ FPK_ICON = src/htpcmanager.png
 DSM_UI_DIR = app
 
 DEPENDS  =
-SPK_DEPENDS = "python>2.7.3-3:git"
+FPK_DEPENDS = "python>2.7.3-3:git"
 
 
 MAINTAINER = FnOScommunity

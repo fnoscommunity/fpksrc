@@ -4,7 +4,7 @@ FPK_REV = 7
 FPK_ICON = src/lazylibrarian.png
 
 DEPENDS =
-SPK_DEPENDS = "python>2.7.3-3:git"
+FPK_DEPENDS = "python>2.7.3-3:git"
 
 MAINTAINER = Diaoul
 DESCRIPTION = LazyLibrarian is a program to follow authors and grab metadata for all your digital reading needs. It uses Goodreads.com for author info and book info websites as a source.

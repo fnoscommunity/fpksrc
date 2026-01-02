@@ -29,7 +29,7 @@ DISPLAY_NAME = SynoKernel USB Serial drivers
 HOMEPAGE = https://www.kernel.org/
 LICENSE  = GPLv2
 
-SPK_DEPENDS = synocli-kernel
+FPK_DEPENDS = synocli-kernel
 
 STRIP_TARGET = usbserial_strip
 POST_STRIP_TARGET = usbserial_extra_install

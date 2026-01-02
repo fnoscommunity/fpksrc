@@ -24,7 +24,7 @@ DISPLAY_NAME = SynoKernel USB CD-ROM drivers
 HOMEPAGE = https://www.kernel.org/
 LICENSE  = GPLv2
 
-SPK_DEPENDS = synocli-kernel
+FPK_DEPENDS = synocli-kernel
 
 STRIP_TARGET = synokernel-cdrom_strip
 POST_STRIP_TARGET = synokernel-cdrom_extra_install

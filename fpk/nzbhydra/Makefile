@@ -4,7 +4,7 @@ FPK_REV = 2
 FPK_ICON = src/nzbhydra.png
 
 DEPENDS =
-SPK_DEPENDS = "python>2.7.9:git"
+FPK_DEPENDS = "python>2.7.9:git"
 
 MAINTAINER = adchevrier
 DESCRIPTION = NZBHydra is a meta search for NZB indexers and the "spiritual successor" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.

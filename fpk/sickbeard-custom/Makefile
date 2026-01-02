@@ -3,7 +3,7 @@ FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 8
 FPK_ICON = src/sickbeard-custom.png
 
-SPK_DEPENDS = "python>2.7.3-3:git"
+FPK_DEPENDS = "python>2.7.3-3:git"
 
 MAINTAINER = Diaoul
 DESCRIPTION = SickBeard Custom allows you to run the fork of your choice of SickBeard. You will be asked for the fork\'s git URL during install.

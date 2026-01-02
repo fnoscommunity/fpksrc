@@ -5,7 +5,7 @@ FPK_ICON = src/pyload.png
 DSM_UI_DIR = app
 
 DEPENDS = cross/pyload
-SPK_DEPENDS = "python>2.7.3-3"
+FPK_DEPENDS = "python>2.7.3-3"
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links.

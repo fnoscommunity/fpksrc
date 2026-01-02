@@ -37,14 +37,14 @@ include ../../mk/fpksrc.common.mk
 
 # DSM-specific PHP profiles
 ifeq ($(call version_ge, ${TCVERSION}, 7.2),1)
-SPK_DEPENDS = "WebStation:PHP8.2:MariaDB10:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.2:MariaDB10:Apache2.4"
 CONF_DIR = src/conf_72/
 else ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-SPK_DEPENDS = "WebStation:PHP8.0:MariaDB10:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.0:MariaDB10:Apache2.4"
 OS_MAX_VER = 7.1-59999
 CONF_DIR = src/conf_7/
 else
-SPK_DEPENDS = "WebStation:PHP7.4:MariaDB10:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP7.4:MariaDB10:Apache2.4"
 CONF_DIR = src/conf_6/
 endif
 

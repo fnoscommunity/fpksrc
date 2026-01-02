@@ -8,7 +8,7 @@ DEPENDS = cross/jellyfin cross/jellyfin-web
 
 # GLIBC >= 2.27 required
 REQUIRED_MIN_DSM = 7.2
-SPK_DEPENDS = "ffmpeg7"
+FPK_DEPENDS = "ffmpeg7"
 
 # x64 and armv8 archs are supported only.
 UNSUPPORTED_ARCHS = $(32bit_ARCHS)

@@ -5,7 +5,7 @@ FPK_ICON = src/monitoring-plugins.png
 
 DEPENDS = cross/monitoring-plugins
 
-SPK_DEPENDS = Perl
+FPK_DEPENDS = Perl
 
 MAINTAINER = Gagi2k
 DESCRIPTION = Standard plugins for Icinga, Naemon, Nagios, Shinken, Sensu, and other monitoring applications.

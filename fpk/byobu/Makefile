@@ -4,7 +4,7 @@ FPK_REV = 1
 FPK_ICON = src/byobu.png
 
 PYTHON_PACKAGE = python312
-SPK_DEPENDS = "$(PYTHON_PACKAGE):synocli-net"
+FPK_DEPENDS = "$(PYTHON_PACKAGE):synocli-net"
 
 # Python 3.12 not supported
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS) $(ARMv5_ARCHS)

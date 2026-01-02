@@ -31,7 +31,7 @@ VIDEODRIVER = on
 endif
 
 ifeq ($(findstring $(ARCH),$(x64_ARCHS)),$(ARCH))
-SPK_DEPENDS = "synocli-videodriver"
+FPK_DEPENDS = "synocli-videodriver"
 endif
 
 include ../../mk/fpksrc.videodriver.mk

@@ -40,15 +40,15 @@ USE_ALTERNATE_TMPDIR = 1
 include ../../mk/fpksrc.common.mk
 
 # Default to PHP 7.4 on DSM 6.x
-SPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP7.4:Apache2.4"
 
 ifeq ($(call version_ge, ${TCVERSION}, 7.2),1)
 # Use PHP 8.2 on DSM 7.2+
-SPK_DEPENDS = "WebStation:PHP8.2:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.2:Apache2.4"
 CONF_DIR = src/conf_72/
 else ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 # Use PHP 8.0 on DSM 7.0/7.1
-SPK_DEPENDS = "WebStation:PHP8.0:Apache2.4"
+FPK_DEPENDS = "WebStation:PHP8.0:Apache2.4"
 OS_MAX_VER = 7.1-59999
 CONF_DIR = src/conf_7/
 endif

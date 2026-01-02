@@ -11,7 +11,7 @@ CHANGELOG = "1. Update to v1.25.0."
 LICENSE = MIT
 
 DEPENDS = cross/gitea
-SPK_DEPENDS = "git>=2"
+FPK_DEPENDS = "git>=2"
 
 SERVICE_USER         		= auto
 SERVICE_SETUP        		= src/service-setup.sh

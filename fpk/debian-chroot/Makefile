@@ -6,7 +6,7 @@ DSM_UI_DIR = app
 
 DEPENDS =
 WHEELS = pyextdirect==0.3.1 flask Werkzeug Jinja2 itsdangerous
-SPK_DEPENDS = "python>=2.7.6-8"
+FPK_DEPENDS = "python>=2.7.6-8"
 
 UNSUPPORTED_ARCHS = $(PPC_ARCHS) $(ARMv8_ARCHS)
 

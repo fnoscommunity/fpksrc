@@ -5,7 +5,7 @@ FPK_ICON = src/chromaprint.png
 
 FFMPEG_PACKAGE = ffmpeg7
 DEPENDS = cross/chromaprint
-SPK_DEPENDS = $(FFMPEG_PACKAGE)
+FPK_DEPENDS = $(FFMPEG_PACKAGE)
 
 # ffmpeg7 requires c11 support
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)

@@ -6,7 +6,7 @@ DSM_UI_DIR = app
 
 DEPENDS = cross/ariang
 
-SPK_DEPENDS = "WebStation>=2.1.0"
+FPK_DEPENDS = "WebStation>=2.1.0"
 
 # SRM is not supported due lacking webstation package
 REQUIRED_MIN_SRM = 3.0

@@ -6,7 +6,7 @@ FPK_ICON = src/homeassistant.png
 HACS_VERS = 2.0.5
 
 PYTHON_PACKAGE = python312
-SPK_DEPENDS = $(PYTHON_PACKAGE)
+FPK_DEPENDS = $(PYTHON_PACKAGE)
 
 # unsupported wheels: deebot_client, numpy, pymicro_vad, pyspeex_noise, and others
 REQUIRED_MIN_DSM = 7.0

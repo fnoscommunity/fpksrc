@@ -5,7 +5,7 @@ FPK_ICON = src/ntopng.png
 
 DEPENDS = cross/ntopng
 
-SPK_DEPENDS = "redis"
+FPK_DEPENDS = "redis"
 
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS) $(ARMv5_ARCHS)
 

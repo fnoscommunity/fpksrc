@@ -4,7 +4,7 @@ FPK_REV = 1
 
 DEPENDS = cross/lm-sensors
 
-SPK_DEPENDS = Perl
+FPK_DEPENDS = Perl
 
 MAINTAINER = hgy59
 DESCRIPTION = lm-sensors provides user-space support for the hardware monitoring drivers in Linux 2.6.5 and later.

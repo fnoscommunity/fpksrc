@@ -12,7 +12,7 @@ STARTABLE = false
 HOMEPAGE = https://github.com/fnoscommunity/fpksrc/wiki/FAQ-SynoCliDevel
 LICENSE  = Each tool is licensed under it\'s respective license.
 
-SPK_DEPENDS = "Perl"
+FPK_DEPENDS = "Perl"
 
 OPTIONAL_DEPENDS = cross/llvm
 

@@ -6,7 +6,7 @@ DSM_UI_DIR = app
 BETA = 1
 
 DEPENDS  =
-SPK_DEPENDS = "python>=2.7.6-8"
+FPK_DEPENDS = "python>=2.7.6-8"
 
 WHEELS = src/requirements.txt
 

@@ -25,10 +25,10 @@ endif
 
 # only for DSM 7 we have dedicated dependencies (must match the configuration in conf/resource)
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-SPK_DEPENDS = WebStation:PHP$(PHP_VERSION):Apache2.4
+FPK_DEPENDS = WebStation:PHP$(PHP_VERSION):Apache2.4
 else ifeq ($(call version_ge, ${TCVERSION}, 6.0),1)
 # on DSM 6 the default web server and PHP version are used
-SPK_DEPENDS = WebStation
+FPK_DEPENDS = WebStation
 endif
 
 WIZARDS_DIR = src/wizard/

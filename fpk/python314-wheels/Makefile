@@ -8,7 +8,7 @@ FPK_ICON = src/python3-pip.png
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS) $(ARMv5_ARCHS)
 
 PYTHON_PACKAGE = python314
-SPK_DEPENDS = "$(PYTHON_PACKAGE)"
+FPK_DEPENDS = "$(PYTHON_PACKAGE)"
 
 MAINTAINER = FnOScommunity
 DESCRIPTION =  Collection of programs for the Python 3.14 programming language.

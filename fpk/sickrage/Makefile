@@ -3,7 +3,7 @@ FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 5
 FPK_ICON = src/${FPK_NAME}.png
 
-SPK_DEPENDS = "python>=2.7.6-8:git"
+FPK_DEPENDS = "python>=2.7.6-8:git"
 
 MAINTAINER = echel0n
 DESCRIPTION = Video File Manager for TV Shows. It watches for new episodes of your favorite shows and when they are posted it does its magic.

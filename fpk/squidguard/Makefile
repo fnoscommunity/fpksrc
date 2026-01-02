@@ -6,7 +6,7 @@ BETA = 1
 
 DEPENDS = cross/busybox cross/unrar cross/squidclamav cross/squidguard cross/squid cross/squidguardmanager
 
-SPK_DEPENDS = "AntiVirus>1.2"
+FPK_DEPENDS = "AntiVirus>1.2"
 
 MAINTAINER = FnOScommunity
 DESCRIPTION = SquidGuard is a URL redirector used to use blacklists with the proxysoftware Squid. This package also includes SquidClamav for viruses protection and SquidGuard Manager.

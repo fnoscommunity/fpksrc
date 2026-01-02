@@ -20,7 +20,7 @@ REQUIRED_MIN_DSM = 6.0
 # SRM is not supported due lacking webstation and apache packages
 REQUIRED_MIN_SRM = 3.0
 
-SPK_DEPENDS = WebStation:Apache2.4
+FPK_DEPENDS = WebStation:Apache2.4
 
 SERVICE_USER = auto
 SYSTEM_GROUP = http

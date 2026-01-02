@@ -280,8 +280,8 @@ endif
 ifneq ($(strip $(CHANGELOG)),)
 	@echo changelog=\"$(CHANGELOG)\" >> $@
 endif
-ifneq ($(strip $(SPK_DEPENDS)),)
-	@echo install_dep_apps=\"$(SPK_DEPENDS)\" >> $@
+ifneq ($(strip $(FPK_DEPENDS)),)
+	@echo install_dep_apps=\"$(FPK_DEPENDS)\" >> $@
 endif
 ifneq ($(strip $(CONF_DIR)),)
 	@echo support_conf_folder=\"yes\" >> $@

@@ -8,7 +8,7 @@ FPK_ICON = src/borgbackup.png
 # Python 3.11 compatible version for ARMv5 archs
 
 PYTHON_PACKAGE = python311
-SPK_DEPENDS = $(PYTHON_PACKAGE)
+FPK_DEPENDS = $(PYTHON_PACKAGE)
 
 # Python 3.11 not supported:
 UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
