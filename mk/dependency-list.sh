@@ -2,13 +2,13 @@
 
 # Build dependency list
 #
-# list dependencies for all spk packages
+# list dependencies for all fpk packages
 # - used by github prepare action to evaluate packages to build, regarding the modified files
 # - broken packages are excluded
 # This script must be called in the top folder (fpksrc) of the repository
 # It is called by the dependency-list target of the toplevel Makefile 
 # 
-# This script has benefits over iterating all spk folders and call "make dependency-list"
+# This script has benefits over iterating all fpk folders and call "make dependency-list"
 # - it is much faster (typ. 15 s instead of 180 s)
 # - it does not require "OPTIONAL_DEPENDS" defitions anymore
 # caveats
@@ -26,18 +26,18 @@
 #       Otherwise we could introduce a new OPTIONAL_DEPENDS (ADDITIONAL_DEPENDS) variable for this
 
 # get FPK_NAME of a package
-# since the spk name might be different to the (spk/){package} folder
+# since the fpk name might be different to the (fpk/){package} folder
 # we need to parse the variable in the Makefile
 # param1: package folder
-function get_spk_name ()
+function get_fpk_name ()
 {
    if [ -f ${1}/Makefile ]; then
       grep "^FPK_NAME" ${1}/Makefile | cut -d= -f2 | xargs
    fi
 }
 
-# evaluate python dependency in an spk Makefile
-# param1: spk package folder (like spk/{name})
+# evaluate python dependency in an fpk Makefile
+# param1: fpk package folder (like fpk/{name})
 function get_python_dependency ()
 {
    if [ -f ${1}/Makefile -a "$(grep ^include.*\/fpksrc\.python\.mk ${1}/Makefile)" ]; then
@@ -46,8 +46,8 @@ function get_python_dependency ()
    fi
 }
 
-# evaluate ffmpeg dependency in an spk Makefile
-# param1: spk package folder (like spk/{name})
+# evaluate ffmpeg dependency in an fpk Makefile
+# param1: fpk package folder (like fpk/{name})
 function get_ffmpeg_dependency ()
 {
    if [ -f ${1}/Makefile -a "$(grep ^include.*\/fpksrc\.ffmpeg\.mk ${1}/Makefile)" ]; then
@@ -58,7 +58,7 @@ function get_ffmpeg_dependency ()
 
 
 # evaluates all dependencies in a single Makefile
-# param1: folder (like spk/{name}, cross/{name}, native/{name})
+# param1: folder (like fpk/{name}, cross/{name}, native/{name})
 function get_file_dependencies ()
 {
    if [ -f ${1}/Makefile ]; then
@@ -96,7 +96,7 @@ function get_dependencies ()
 
 # get all dependencies of a package
 # param1: list of toplevel dependencies
-function get_spk_dependencies ()
+function get_fpk_dependencies ()
 {
    local dependencies=$(get_dependencies "${1}")
    local cumulated_dependencies=$(get_dependencies "${dependencies}")
@@ -108,18 +108,18 @@ function get_spk_dependencies ()
 }
 
 # get the dependency list for a package
-# param1: spk package folder (like spk/{name})
+# param1: fpk package folder (like fpk/{name})
 function get_dependency_list ()
 {
-   local spk_name=$(get_spk_name ${1})
+   local fpk_name=$(get_fpk_name ${1})
    local toplevel_dependencies="$(get_file_dependencies ${1}) $(get_python_dependency ${1}) $(get_ffmpeg_dependency ${1})"
-   local spk_dependencies=$(get_spk_dependencies "${toplevel_dependencies}")
-   echo "${spk_name}: ${spk_dependencies}"
+   local fpk_dependencies=$(get_fpk_dependencies "${toplevel_dependencies}")
+   echo "${fpk_name}: ${fpk_dependencies}"
 }
 
 # iterate all packages
-for package in $(find spk/ -maxdepth 1 -type d | cut -c 5- | sort); do
-   if [ ! -f spk/${package}/BROKEN ]; then
-      get_dependency_list spk/${package}
+for package in $(find fpk/ -maxdepth 1 -type d | cut -c 5- | sort); do
+   if [ ! -f fpk/${package}/BROKEN ]; then
+      get_dependency_list fpk/${package}
    fi
 done

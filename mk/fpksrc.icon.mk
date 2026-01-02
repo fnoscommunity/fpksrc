@@ -1,7 +1,7 @@
 ### Package Icon creation
 #   Create package icons for SPK
 #   Icons are created if FNOS_UI_DIR is set in 
-#   spk/Makefile, otherwise skipped.
+#   fpk/Makefile, otherwise skipped.
 
 # Targets are executed in the following order:
 #  icon_msg_target

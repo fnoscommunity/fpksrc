@@ -13,7 +13,7 @@ kernel-modules:
 	  for depend in $(KERNEL_DEPEND); \
 	  do \
 	    { \
-	      $(MAKE) spkclean ; \
+	      $(MAKE) fpkclean ; \
 	      $(MSG) "Building kernel-modules for $${depend} ARCH" ; \
 	      if ! $(MAKE) LOGGING_ENABLED=1 \
 	          WORK_DIR=$(CURDIR)/work$(ARCH_SUFFIX) \

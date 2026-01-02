@@ -2,15 +2,15 @@
 ### Reuse videodriver libraries
 ###
 # Variables:
-#  FFMPEG_PACKAGE      Must be set to the ffmpeg spk folder (ffmpeg5, ffmpeg6, ...)
+#  FFMPEG_PACKAGE      Must be set to the ffmpeg fpk folder (ffmpeg5, ffmpeg6, ...)
 
 # Set videodriver package name
 ifeq ($(strip $(FFMPEG_PACKAGE)),)
 export FFMPEG_PACKAGE = ffmpeg6
 endif
 
-# set default spk/synocli-videodriver path to use
-export FFMPEG_PACKAGE_ROOT = $(realpath $(CURDIR)/../../spk/$(FFMPEG_PACKAGE)/work-$(ARCH)-$(TCVERSION))
+# set default fpk/synocli-videodriver path to use
+export FFMPEG_PACKAGE_ROOT = $(realpath $(CURDIR)/../../fpk/$(FFMPEG_PACKAGE)/work-$(ARCH)-$(TCVERSION))
 
 include ../../mk/fpksrc.archs.mk
 

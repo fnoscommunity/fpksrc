@@ -7,8 +7,8 @@ ifeq ($(strip $(VIDEODRV_PACKAGE)),)
 export VIDEODRV_PACKAGE = synocli-videodriver
 endif
 
-# set default spk/synocli-videodriver path to use
-VIDEODRV_PACKAGE_ROOT = $(realpath $(CURDIR)/../../spk/$(VIDEODRV_PACKAGE)/work-$(ARCH)-$(TCVERSION))
+# set default fpk/synocli-videodriver path to use
+VIDEODRV_PACKAGE_ROOT = $(realpath $(CURDIR)/../../fpk/$(VIDEODRV_PACKAGE)/work-$(ARCH)-$(TCVERSION))
 
 include ../../mk/fpksrc.archs.mk
 

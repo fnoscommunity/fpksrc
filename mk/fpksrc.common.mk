@@ -2,7 +2,7 @@
 
 ###
 
-# Set basedir in case called from spkrc/ or from normal sub-dir
+# Set basedir in case called from fpkrc/ or from normal sub-dir
 # Note that github-action uses workspace/ in place of fpksrc/
 ifeq ($(BASEDIR),)
 ifeq ($(filter fpksrc workspace,$(shell basename $(CURDIR))),)

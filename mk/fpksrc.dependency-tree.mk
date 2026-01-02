@@ -38,7 +38,7 @@ dependency-list:
 
 .PHONY: dependency-flat
 dependency-flat:
-	@echo "$(CURDIR)" | grep -Po "/\K(spk|cross|python|native|diyspk|toolchain)/.*"
+	@echo "$(CURDIR)" | grep -Po "/\K(fpk|cross|python|native|diyfpk|toolchain)/.*"
 	@for depend in $$(echo "$(NATIVE_DEPENDS) $(BUILD_DEPENDS) $(DEPENDS) $(OPTIONAL_DEPENDS)" | tr ' ' '\n' | sort -u | tr '\n' ' ') ; \
 	do \
 	  DEPENDENCY_WALK=1 $(MAKE) -s -C ../../$$depend dependency-flat | sort -u ; \

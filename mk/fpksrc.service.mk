@@ -6,8 +6,8 @@
 #   config/privilege         if SERVICE_USER or DSM7
 #   config/$(FPK_NAME).sc    if SERVICE_PORT and DSM<7
 #   config/resource          if SERVICE_CERT or DSM7
-#   app/$(FPK_NAME).sc     if SERVICE_PORT and DSM7
-#   app/config             if FPK_ICON and SERVICE_PORT but not NO_SERVICE_SHORTCUT (may be overwritten by FNOS_UI_CONFIG)
+#   app/$(FPK_NAME).sc       if SERVICE_PORT and DSM7
+#   app/config               if FPK_ICON and SERVICE_PORT but not NO_SERVICE_SHORTCUT (may be overwritten by FNOS_UI_CONFIG)
 #
 # Targets are executed in the following order:
 #  service_msg_target
@@ -19,7 +19,7 @@
 #  SERVICE_SETUP                 service-setup script file for generic installer
 #  SERVICE_PORT                  for generation of service port firewall config file (*.sc) and for dsm-ui config file
 #  FWPORTS                       (optional) custom firewall port/rules file
-#  FNOS_UI_DIR                    defaults to app. May be defined different for custom DSM UI integration
+#  FNOS_UI_DIR                   defaults to app. May be defined different for custom DSM UI integration
 #  
 #  SERVICE_CERT                  (optional) configure DSM certificate management for this service name from the firewall config file (*.sc)
 #  SERVICE_CERT_RELOAD           (optional) package-relative path to a script for reloading the service after certificate changes

@@ -19,7 +19,7 @@
 # Defined using PYTHON_PACKAGE_WORK_DIR from fpksrc.python.mk or use local work directory
 PYTHON_WORK_DIR = $(or $(wildcard $(PYTHON_PACKAGE_WORK_DIR)),$(wildcard $(WORK_DIR)))
 
-# Other Python spk/python* related variables
+# Other Python fpk/python* related variables
 PYTHON_PKG_VERS             = $(or $(lastword $(subst -, ,$(notdir $(patsubst %/,%,$(wildcard $(PYTHON_WORK_DIR)/Python-[0-9]*))))),$(FPK_VERS))
 PYTHON_PKG_VERS_MAJOR_MINOR = $(or $(word 1,$(subst ., ,$(PYTHON_PKG_VERS))).$(word 2,$(subst ., ,$(PYTHON_PKG_VERS))),$(FPK_VERS_MAJOR_MINOR))
 PYTHON_PKG_NAME             = python$(subst .,,$(PYTHON_PKG_VERS_MAJOR_MINOR))
@@ -33,7 +33,7 @@ PYTHON_LIB_CROSS            = $(abspath $(PYTHON_WORK_DIR)/$(PYTHON_PKG_DIR)/bui
 
 # wheel crossenv definitions: 
 #   Use PYTHON_PACKAGE_DIR from fpksrc.python.mk
-#   OR if empty then we are building spk/python3*
+#   OR if empty then we are building fpk/python3*
 CROSSENV_CONFIG_PATH = $(realpath $(or $(PYTHON_PACKAGE_DIR),$(WORK_DIR)/..)/crossenv)
 CROSSENV_CONFIG_DEFAULT = $(CROSSENV_CONFIG_PATH)/requirements-default.txt
 CROSSENV_PATH = $(abspath $(WORK_DIR)/crossenv-$(CROSSENV_WHEEL)/)

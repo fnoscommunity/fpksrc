@@ -21,16 +21,16 @@ test:
 
 ###
 
-TEST_DEFAULT_SPK = spk/demoservice diyspk/tmux
+TEST_DEFAULT_SPK = fpk/demoservice diyfpk/tmux
 TEST_DEFAULT = cross/tree cross/libtree cross/zsh
 TEST_RUSTC = cross/bat
 TEST_CMAKE = cross/intel-gmmlib
 TEST_GNUCONFIGURE = cross/ncursesw
 TEST_MESON = cross/libdrm
-TEST_FFMPEG = spk/ffmpeg5
-TEST_FFMPEG_DEP = spk/tvheadend
-TEST_PYTHON = spk/python311
-TEST_PYTHON_DEP = spk/borgbackup
+TEST_FFMPEG = fpk/ffmpeg5
+TEST_FFMPEG_DEP = fpk/tvheadend
+TEST_PYTHON = fpk/python311
+TEST_PYTHON_DEP = fpk/borgbackup
 
 .PHONY: test-all
 test-all: test-dependency-tree test-dependency-flat test-dependency-list
@@ -74,7 +74,7 @@ test-%:
 	fi
 
 .PHONY: test-clean
-test-clean: native-clean cross-clean spk-clean
+test-clean: native-clean cross-clean fpk-clean
 
 .PHONY: test-dependency-%
 test-dependency-%: dependency-$*

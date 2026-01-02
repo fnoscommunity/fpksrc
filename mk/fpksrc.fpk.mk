@@ -1,4 +1,4 @@
-### Rules to create the spk package
+### Rules to create the fpk package
 #   Most of the rules are imported from fpksrc.*.mk files
 #
 # Variables:
@@ -6,8 +6,8 @@
 #  FPK_NAME                     Package name
 #  MAINTAINER                   Package maintainer (mandatory)
 #  MAINTAINER_URL               URL of package maintainer (optional when MAINTAINER is a valid github user)
-#  FPK_NAME_ARCH                (optional) arch specific spk file name (default: $(ARCH))
-#  FPK_PACKAGE_ARCHS            (optional) list of archs in the spk file (default: $(ARCH) or list of archs when generic arch)
+#  FPK_NAME_ARCH                (optional) arch specific fpk file name (default: $(ARCH))
+#  FPK_PACKAGE_ARCHS            (optional) list of archs in the fpk file (default: $(ARCH) or list of archs when generic arch)
 #  UNSUPPORTED_ARCHS            (optional) Unsupported archs are removed from gemeric arch list (ignored when FPK_PACKAGE_ARCHS is used)
 #  REMOVE_FROM_GENERIC_ARCHS    (optional) A list of archs to be excluded from generic archs (ignored when FPK_PACKAGE_ARCHS is used)
 #  SSS_SCRIPT                   (optional) Use service start stop script from given file
@@ -22,8 +22,8 @@
 #                               package names starting with upper case letters.
 #                               (e.g. Mono => synology.com, mono => FnOScommunity.com)
 #  FPK_FILE_NAME                The full fpk name with folder, package name, arch, tc- and package version.
-#  FPK_CONTENT                  List of files and folders that are added to app.tgz within the spk file.
-#  FNOS_SCRIPT_FILES             List of script files that are in the cmd folder within the spk file.
+#  FPK_CONTENT                  List of files and folders that are added to app.tgz within the fpk file.
+#  FNOS_SCRIPT_FILES            List of script files that are in the cmd folder within the fpk file.
 #
 
 # Common makefiles
@@ -156,7 +156,7 @@ include ../../mk/fpksrc.icon.mk
 endif
 
 ifeq ($(strip $(MAINTAINER)),)
-$(error Add MAINTAINER for '$(FPK_NAME)' in spk Makefile or set default MAINTAINER in local.mk.)
+$(error Add MAINTAINER for '$(FPK_NAME)' in fpk Makefile or set default MAINTAINER in local.mk.)
 endif
 
 ifeq ($(strip $(DISABLE_GITHUB_MAINTAINER)),)
@@ -515,7 +515,7 @@ package: $(FPK_FILE_NAME)
 all: package
 
 
-### spk-specific clean rules
+### fpk-specific clean rules
 
 # Remove work-*/<pkgname>* directories while keeping
 # work-*/.<pkgname>*|<pkgname>.plist status files
@@ -524,7 +524,7 @@ all: package
 # when building online thru github-action, in particular
 # for "packages-to-keep" such as python* and ffmpeg*
 clean-source: SHELL:=/bin/bash
-clean-source: spkclean
+clean-source: fpkclean
 	@make --no-print-directory dependency-flat | sort -u | grep cross/ | while read depend ; do \
 	   makefile="../../$${depend}/Makefile" ; \
 	   pkgdirstr=$$(grep ^PKG_DIR $${makefile} || true) ; \
@@ -542,7 +542,7 @@ clean-source: spkclean
 	   done ; \
 	done
 
-spkclean:
+fpkclean:
 	rm -fr work-*/.copy_done \
 	       work-*/.depend_done \
 	       work-*/.icon_done \
@@ -560,7 +560,7 @@ spkclean:
 	       work-*/PACKAGE_ICON* \
 	       work-*/wizard
 
-wheelclean: spkclean
+wheelclean: fpkclean
 	rm -fr work*/.wheel_done \
 	       work*/.wheel_*_done \
 	       work-*/wheelhouse \
@@ -576,7 +576,7 @@ wheelclean: spkclean
 	   fi ; \
 	done
 
-wheelclean-%: spkclean
+wheelclean-%: fpkclean
 	rm -f work-*/.wheel_done \
 	      work-*/wheelhouse/$*-*.whl
 	find work-* -type f -regex '.*\.wheel_\(download\|compile\|install\)-$*_done' -exec rm -f {} \;

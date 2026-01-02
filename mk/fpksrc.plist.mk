@@ -11,7 +11,7 @@ endif
 
 ###
 ### When processing PLIST entries where we are re-using existing
-### shared object from another spk (ex: python* or ffmpeg),
+### shared object from another fpk (ex: python* or ffmpeg),
 ### always check that a $(PKG_NAME).plist exists as it won't
 ### be created when the shared build environment is being
 ### populated with symlinks to $(PKG_NAME)*_done

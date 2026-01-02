@@ -2,10 +2,10 @@
 ### Reuse Python libraries
 ###
 # Variables:
-#  PYTHON_PACKAGE       Must be set to the python spk folder (python310, python311, ...)
+#  PYTHON_PACKAGE       Must be set to the python fpk folder (python310, python311, ...)
 
-# set default spk/python* path to use
-PYTHON_PACKAGE_DIR = $(realpath $(CURDIR)/../../spk/$(PYTHON_PACKAGE))
+# set default fpk/python* path to use
+PYTHON_PACKAGE_DIR = $(realpath $(CURDIR)/../../fpk/$(PYTHON_PACKAGE))
 PYTHON_PACKAGE_WORK_DIR = $(PYTHON_PACKAGE_DIR)/work-$(ARCH)-$(TCVERSION))
 
 include ../../mk/fpksrc.common.mk
@@ -20,7 +20,7 @@ endif
 # entire python binaries+libraries as build dependency.
 
 ifeq ($(wildcard $(PYTHON_PACKAGE_WORK_DIR)),)
-# Needed to find the spk/python3*/crossenv/requirement-*.txt files
+# Needed to find the fpk/python3*/crossenv/requirement-*.txt files
 export PYTHON_PACKAGE_DIR
 
 BUILD_DEPENDS += cross/$(PYTHON_PACKAGE)
