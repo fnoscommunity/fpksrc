@@ -311,7 +311,7 @@ INSTALLER_OUTPUT = > $$TRIM_TEMP_LOGFILE
 endif
 
 # Wizard
-DSM_WIZARDS_DIR = $(WORK_DIR)/wizard
+FNOS_WIZARDS_DIR = $(WORK_DIR)/wizard
 
 ifneq ($(strip $(WIZARDS_TEMPLATES_DIR)),)
 WIZARDS_DIR = $(WORK_DIR)/generated-wizards
@@ -426,8 +426,8 @@ WIZARD_FILE_NAMES += -or -name "config_???.sh"
 wizards:
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@$(MSG) "Create default DSM7 uninstall wizard"
-	@mkdir -p $(DSM_WIZARDS_DIR)
-	@find $(SPKSRC_MK)wizard -maxdepth 1 -type f -and \( -name "uninstall" -or -name "uninstall_???" \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \;
+	@mkdir -p $(FNOS_WIZARDS_DIR)
+	@find $(SPKSRC_MK)wizard -maxdepth 1 -type f -and \( -name "uninstall" -or -name "uninstall_???" \) -print -exec cp -f {} $(FNOS_WIZARDS_DIR) \;
 ifeq ($(strip $(WIZARDS_DIR)),)
 	$(eval FPK_CONTENT += wizard)
 endif
@@ -475,18 +475,18 @@ endif
 ifneq ($(strip $(WIZARDS_DIR)),)
 	@$(MSG) "Create DSM Wizards"
 	$(eval FPK_CONTENT += wizard)
-	@mkdir -p $(DSM_WIZARDS_DIR)
-	@find $${SPKSRC_WIZARDS_DIR} -maxdepth 1 -type f -and \( $(WIZARD_FILE_NAMES) \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \;
-	@if [ -f "$(DSM_WIZARDS_DIR)/uninstall.sh" ] && [ -f "$(DSM_WIZARDS_DIR)/uninstall" ]; then \
-		rm "$(DSM_WIZARDS_DIR)/uninstall"; \
+	@mkdir -p $(FNOS_WIZARDS_DIR)
+	@find $${SPKSRC_WIZARDS_DIR} -maxdepth 1 -type f -and \( $(WIZARD_FILE_NAMES) \) -print -exec cp -f {} $(FNOS_WIZARDS_DIR) \;
+	@if [ -f "$(FNOS_WIZARDS_DIR)/uninstall.sh" ] && [ -f "$(FNOS_WIZARDS_DIR)/uninstall" ]; then \
+		rm "$(FNOS_WIZARDS_DIR)/uninstall"; \
 	fi
 	@if [ -d "$(WIZARDS_DIR)$(TCVERSION)" ]; then \
 	   $(MSG) "Create DSM Version specific Wizards: $(WIZARDS_DIR)$(TCVERSION)"; \
-	   find $${SPKSRC_WIZARDS_DIR}$(TCVERSION) -maxdepth 1 -type f -and \( $(WIZARD_FILE_NAMES) \) -print -exec cp -f {} $(DSM_WIZARDS_DIR) \; ;\
+	   find $${SPKSRC_WIZARDS_DIR}$(TCVERSION) -maxdepth 1 -type f -and \( $(WIZARD_FILE_NAMES) \) -print -exec cp -f {} $(FNOS_WIZARDS_DIR) \; ;\
 	fi
-	@if [ -d "$(DSM_WIZARDS_DIR)" ]; then \
-	   find $(DSM_WIZARDS_DIR) -maxdepth 1 -type f -not -name "*.sh" -print -exec chmod 0644 {} \; ;\
-	   find $(DSM_WIZARDS_DIR) -maxdepth 1 -type f -name "*.sh" -print -exec chmod 0755 {} \; ;\
+	@if [ -d "$(FNOS_WIZARDS_DIR)" ]; then \
+	   find $(FNOS_WIZARDS_DIR) -maxdepth 1 -type f -not -name "*.sh" -print -exec chmod 0644 {} \; ;\
+	   find $(FNOS_WIZARDS_DIR) -maxdepth 1 -type f -name "*.sh" -print -exec chmod 0755 {} \; ;\
 	fi
 endif
 
