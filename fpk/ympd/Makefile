@@ -2,7 +2,7 @@ FPK_NAME = ympd
 FPK_VERS = 1.3.0
 FPK_REV = 2
 FPK_ICON = src/ympd.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS = cross/ympd
 

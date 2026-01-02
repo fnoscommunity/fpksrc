@@ -2,7 +2,7 @@ FPK_NAME = plexivity
 FPK_VERS = 0.9.9
 FPK_REV = 4
 FPK_ICON = src/plexivity.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 BETA = 1
 
 DEPENDS  =

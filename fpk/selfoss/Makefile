@@ -26,7 +26,7 @@ SYSTEM_GROUP = http
 # Admin link for in DSM UI
 ADMIN_URL = /selfoss/
 
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 
 # Set user as 'auto' for DSM 6 privilege

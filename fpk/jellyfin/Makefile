@@ -31,7 +31,7 @@ SERVICE_USER = auto
 SERVICE_SETUP = src/service-setup.sh
 STARTABLE = yes
 
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 CONF_DIR = src/conf
 
 # Service configuration

@@ -17,7 +17,7 @@ CHANGELOG = "Update to 2.0.44"
 STARTABLE = yes
 
 WIZARDS_DIR = src/wizard/
-DSM_UI_DIR = ui
+FNOS_UI_DIR = ui
 CONF_DIR = src/conf
 FWPORTS = src/${FPK_NAME}.sc
 SERVICE_USER = auto
@@ -53,7 +53,7 @@ dnscrypt_extra_install: copy_msg
 	cp -rf $(CURDIR)/src/offline-cache/* $(STAGING_DIR)/offline-cache/
 	install -m 755 $(CURDIR)/src/update-blocklist.sh $(STAGING_DIR)/blocklist/update-blocklist.sh
 	@$(MSG) "UI - Copying files"
-	install -m 755 -d $(STAGING_DIR)/$(DSM_UI_DIR)/
-	cp -rf $(CURDIR)/src/$(DSM_UI_DIR)/* $(STAGING_DIR)/$(DSM_UI_DIR)/
+	install -m 755 -d $(STAGING_DIR)/$(FNOS_UI_DIR)/
+	cp -rf $(CURDIR)/src/$(FNOS_UI_DIR)/* $(STAGING_DIR)/$(FNOS_UI_DIR)/
 	@$(MSG) "UI - Compiling cgi"
-	env $(ENV) go build $(GO_BUILD_ARGS) -o $(STAGING_DIR)/$(DSM_UI_DIR)/index.cgi $(CURDIR)/src/$(DSM_UI_DIR)/cgi.go
+	env $(ENV) go build $(GO_BUILD_ARGS) -o $(STAGING_DIR)/$(FNOS_UI_DIR)/index.cgi $(CURDIR)/src/$(FNOS_UI_DIR)/cgi.go

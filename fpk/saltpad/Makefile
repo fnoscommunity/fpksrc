@@ -2,7 +2,7 @@ FPK_NAME = saltpad
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 5
 FPK_ICON = src/saltpad.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS =
 WHEELS = src/requirements.txt

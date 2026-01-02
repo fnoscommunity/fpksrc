@@ -2,7 +2,7 @@ FPK_NAME = debian-chroot
 FPK_VERS = 8.4
 FPK_REV = 7
 FPK_ICON = src/debian.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS =
 WHEELS = pyextdirect==0.3.1 flask Werkzeug Jinja2 itsdangerous

@@ -2,7 +2,7 @@ FPK_NAME = jappix
 FPK_VERS = 1.0.1
 FPK_REV = 2
 FPK_ICON = src/jappix.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS  = cross/jappix
 

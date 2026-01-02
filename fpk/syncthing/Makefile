@@ -2,7 +2,7 @@ FPK_NAME = syncthing
 FPK_VERS = 1.30.0
 FPK_REV = 32
 FPK_ICON = src/syncthing.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS = cross/syncthing
 

@@ -2,7 +2,7 @@ FPK_NAME = adminer
 FPK_VERS = 5.4.1
 FPK_REV = 8
 FPK_ICON = src/adminer.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS = cross/adminer
 

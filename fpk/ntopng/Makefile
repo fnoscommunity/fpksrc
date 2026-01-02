@@ -26,7 +26,7 @@ SERVICE_PORT = 3000
 SERVICE_PORT_TITLE = ntopng (HTTP)
 
 # generate app/config and app/images/*.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 include ../../mk/fpksrc.common.mk
 

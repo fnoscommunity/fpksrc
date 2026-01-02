@@ -2,7 +2,7 @@ FPK_NAME = gateone
 FPK_VERS = 20171125
 FPK_REV = 9
 FPK_ICON = src/gateone.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS  = cross/busybox cross/dtach cross/gateone
 WHEELS = src/requirements.txt

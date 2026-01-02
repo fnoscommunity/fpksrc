@@ -29,7 +29,7 @@ ADMIN_URL = /roundcube/
 WIZARDS_DIR = src/wizard/
 SYSTEM_GROUP = http
 
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 
 include ../../mk/fpksrc.common.mk

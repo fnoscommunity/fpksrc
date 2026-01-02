@@ -2,7 +2,7 @@ FPK_NAME = maraschino
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 5
 FPK_ICON = src/maraschino.png
-DSM_UI_DIR = app
+FNOS_UI_DIRR = app
 
 DEPENDS  =
 FPK_DEPENDS = "python>2.7.3-3:git"

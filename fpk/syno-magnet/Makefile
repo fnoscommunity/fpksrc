@@ -20,7 +20,7 @@ HOMEPAGE = https://github.com/neykov/syno-magnet
 LICENSE = Apache 2.0
 
 STARTABLE  = no
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 SERVICE_TYPE = legacy
 SERVICE_URL = /webman/3rdparty/syno-magnet/index.html
 SERVICE_PORT_ALL_USERS = true
@@ -61,8 +61,8 @@ $(WORK_DIR)/config:
 		'{".url":{($$id):{"title":$$name, "desc":$$desc, "icon":$$icon, "type":$$type, "url":$$url, "allUsers":$$allUsers}}}' > $@
 		
 syno_magnet_copy: extract $(WORK_DIR)/config
-	install -m 755 -d $(STAGING_DIR)/$(DSM_UI_DIR)
-	install -m 644 $(WORK_DIR)/config $(STAGING_DIR)/$(DSM_UI_DIR)/config
+	install -m 755 -d $(STAGING_DIR)/$(FNOS_UI_DIR)
+	install -m 644 $(WORK_DIR)/config $(STAGING_DIR)/$(FNOS_UI_DIR)/config
 	cp PLIST $(INSTALL_PLIST)
 	(cd $(WORK_DIR)/$(PKG_DIR) && tar cpf - `cat $(INSTALL_PLIST) | cut -d':' -f2` | \
-	  tar xpf - -C $(STAGING_DIR)/$(DSM_UI_DIR))
+	  tar xpf - -C $(STAGING_DIR)/$(FNOS_UI_DIR))

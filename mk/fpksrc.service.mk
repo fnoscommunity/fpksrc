@@ -19,7 +19,7 @@
 #  SERVICE_SETUP                 service-setup script file for generic installer
 #  SERVICE_PORT                  for generation of service port firewall config file (*.sc) and for dsm-ui config file
 #  FWPORTS                       (optional) custom firewall port/rules file
-#  DSM_UI_DIR                    defaults to app. May be defined different for custom DSM UI integration
+#  FNOS_UI_DIR                    defaults to app. May be defined different for custom DSM UI integration
 #  
 #  SERVICE_CERT                  (optional) configure DSM certificate management for this service name from the firewall config file (*.sc)
 #  SERVICE_CERT_RELOAD           (optional) package-relative path to a script for reloading the service after certificate changes
@@ -79,15 +79,15 @@ else
 $(PRE_SERVICE_TARGET): service_msg_target
 endif
 
-ifeq ($(strip $(DSM_UI_DIR)),)
-DSM_UI_DIR=app
+ifeq ($(strip $(FNOS_UI_DIR)),)
+FNOS_UI_DIR=ui
 endif
 
 .PHONY: service_target service_msg_target
 .PHONY: $(PRE_SERVICE_TARGET) $(SERVICE_TARGET) $(POST_SERVICE_TARGET)
 .PHONY: $(DSM_SCRIPTS_DIR)/service-setup $(DSM_SCRIPTS_DIR)/main
 .PHONY: $(DSM_CONF_DIR)/privilege $(DSM_CONF_DIR)/resource
-.PHONY: $(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc $(STAGING_DIR)/$(DSM_UI_DIR)/config
+.PHONY: $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc $(STAGING_DIR)/$(FNOS_UI_DIR)/config
 
 service_msg_target:
 	@$(MSG) "Generating service scripts for $(NAME)"
@@ -232,12 +232,12 @@ $(DSM_CONF_DIR)/resource:
 	@$(MSG) "Creating $@"
 	@echo '{}' > $@
 ifneq ($(strip $(SERVICE_PORT)),)
-	@jq '."port-config"."protocol-file" = "$(DSM_UI_DIR)/$(FPK_NAME).sc"' $@ | sponge $@
+	@jq '."port-config"."protocol-file" = "$(FNOS_UI_DIR)/$(FPK_NAME).sc"' $@ | sponge $@
 endif
 ifneq ($(strip $(FWPORTS)),)
 # e.g. FWPORTS=src/foo.sc
 	@jq --arg file $(FWPORTS) \
-		'."port-config"."protocol-file" = "$(DSM_UI_DIR)/"+($$file | split("/")[-1])' $@ | sponge $@
+		'."port-config"."protocol-file" = "$(FNOS_UI_DIR)/"+($$file | split("/")[-1])' $@ | sponge $@
 endif
 ifneq ($(strip $(FPK_COMMANDS)),)
 # e.g. FPK_COMMANDS=bin/foo bin/bar
@@ -394,7 +394,7 @@ SERVICE_FILES += $(DSM_CONF_DIR)/privilege
 # Generate service configuration for admin port
 ifeq ($(strip $(FWPORTS)),)
 ifneq ($(strip $(SERVICE_PORT)),)
-$(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc:
+$(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc:
 	$(create_target_dir)
 	@echo "[$(FPK_NAME)]" > $@
 ifneq ($(strip $(SERVICE_PORT_TITLE)),)
@@ -409,13 +409,13 @@ else
 endif
 	@echo "port_forward=\"yes\"" >> $@
 	@echo "dst.ports=\"${SERVICE_PORT}/tcp\"" >> $@
-SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc
+SERVICE_FILES += $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc
 endif
 else
-$(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc: $(filter %.sc,$(FWPORTS))
+$(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc: $(filter %.sc,$(FWPORTS))
 	@$(dsm_resource_copy)
 
-SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/$(FPK_NAME).sc
+SERVICE_FILES += $(STAGING_DIR)/$(FNOS_UI_DIR)/$(FPK_NAME).sc
 endif
 
 # Generate DSM UI configuration (app/config)
@@ -433,10 +433,10 @@ endif
 ifneq ($(strip $(FPK_ICON)),)
 ifeq ($(strip $(NO_SERVICE_SHORTCUT)),)
 ifneq ($(wildcard $(DSM_UI_CONFIG)),)
-$(STAGING_DIR)/$(DSM_UI_DIR)/config:
+$(STAGING_DIR)/$(FNOS_UI_DIR)/config:
 	$(create_target_dir)
 	cat $(DSM_UI_CONFIG) > $@
-SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/config
+SERVICE_FILES += $(STAGING_DIR)/$(FNOS_UI_DIR)/config
 else ifneq ($(strip $(SERVICE_PORT)),)
 # Set some defaults
 ifeq ($(strip $(SERVICE_URL)),)
@@ -454,7 +454,7 @@ endif
 ifeq ($(strip $(SERVICE_DESC)),)
 SERVICE_DESC=$(shell echo ${DESCRIPTION} | sed -e 's/\\//g' -e 's/"/\\"/g')
 endif
-$(STAGING_DIR)/$(DSM_UI_DIR)/config:
+$(STAGING_DIR)/$(FNOS_UI_DIR)/config:
 	$(create_target_dir)
 	@echo '{}' | jq --arg name "${DISPLAY_NAME}" \
 		--arg desc "${SERVICE_DESC}" \
@@ -466,7 +466,7 @@ $(STAGING_DIR)/$(DSM_UI_DIR)/config:
 		--arg type "${SERVICE_TYPE}" \
 		--argjson allUsers ${SERVICE_PORT_ALL_USERS} \
 		'{".url":{($$id):{"title":$$name, "desc":$$desc, "icon":$$icon, "type":$$type, "protocol":$$prot, "port":$$port, "url":$$url, "allUsers":$$allUsers, "grantPrivilege":"all", "advanceGrantPrivilege":true}}}' > $@
-SERVICE_FILES += $(STAGING_DIR)/$(DSM_UI_DIR)/config
+SERVICE_FILES += $(STAGING_DIR)/$(FNOS_UI_DIR)/config
 endif
 endif
 endif

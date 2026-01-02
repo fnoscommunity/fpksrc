@@ -252,8 +252,8 @@ endif
 ifneq ($(strip $(DISPLAY_NAME)),)
 	@echo display_name=\"$(DISPLAY_NAME)\" >> $@
 endif
-ifneq ($(strip $(DSM_UI_DIR)),)
-	@[ -d $(STAGING_DIR)/$(DSM_UI_DIR) ] && echo desktop_uidir=\"$(DSM_UI_DIR)\" >> $@ || true
+ifneq ($(strip $(FNOS_UI_DIR)),)
+	@[ -d $(STAGING_DIR)/$(FNOS_UI_DIR) ] && echo desktop_uidir=\"$(FNOS_UI_DIR)\" >> $@ || true
 endif
 ifneq ($(strip $(DSM_APP_NAME)),)
 	@echo appname=\"$(DSM_APP_NAME)\" >> $@

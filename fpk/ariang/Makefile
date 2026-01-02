@@ -2,7 +2,7 @@ FPK_NAME = ariang
 FPK_VERS = 1.3.7
 FPK_REV = 1
 FPK_ICON = src/ariang.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS = cross/ariang
 

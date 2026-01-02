@@ -30,7 +30,7 @@ ADMIN_URL = /tt-rss/
 WIZARDS_TEMPLATES_DIR = src/wizard_templates
 SYSTEM_GROUP = http
 
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 
 include ../../mk/fpksrc.common.mk

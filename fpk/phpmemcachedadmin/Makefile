@@ -2,7 +2,7 @@ FPK_NAME = phpmemcachedadmin
 FPK_VERS = 1.3.0
 FPK_REV = 3
 FPK_ICON = src/phpmemcachedadmin.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS = cross/phpmemcachedadmin
 # Pure PHP package, make sure ARCH is noarch

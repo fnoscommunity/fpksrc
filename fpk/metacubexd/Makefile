@@ -27,7 +27,7 @@ SYSTEM_GROUP = http
 
 SERVICE_SETUP = src/service-setup.sh
 
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 
 CONF_DIR = src/conf/

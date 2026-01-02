@@ -2,7 +2,7 @@ FPK_NAME = gentoo-chroot
 FPK_VERS = 13.0
 FPK_REV = 1
 FPK_ICON = src/gentoo.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS =
 WHEELS = pyextdirect==0.3.1 flask Werkzeug Jinja2 itsdangerous

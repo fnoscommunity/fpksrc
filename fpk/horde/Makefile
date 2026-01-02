@@ -2,7 +2,7 @@ FPK_NAME = horde
 FPK_VERS = 5.1.0
 FPK_REV = 2
 FPK_ICON = src/horde.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS  = cross/busybox
 

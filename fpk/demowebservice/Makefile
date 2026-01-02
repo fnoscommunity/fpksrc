@@ -36,7 +36,7 @@ SERVICE_WIZARD_SHARENAME = wizard_shared_folder_name
 
 SYSTEM_GROUP = http
 
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 # webservice resource definition is for DSM 7 only

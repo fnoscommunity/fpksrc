@@ -2,7 +2,7 @@ FPK_NAME = pyload
 FPK_VERS = 0.4.20
 FPK_REV = 4
 FPK_ICON = src/pyload.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS = cross/pyload
 FPK_DEPENDS = "python>2.7.3-3"

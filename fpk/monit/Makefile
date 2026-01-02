@@ -2,7 +2,7 @@ FPK_NAME = monit
 FPK_VERS = 5.34.4
 FPK_REV = 11
 FPK_ICON = src/monit.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS = cross/monit
 

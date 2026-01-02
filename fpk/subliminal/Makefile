@@ -2,7 +2,7 @@ FPK_NAME = subliminal
 FPK_VERS = 0.7.5
 FPK_REV = 12
 FPK_ICON = src/subliminal.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 BETA = 1
 

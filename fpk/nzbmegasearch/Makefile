@@ -2,7 +2,7 @@ FPK_NAME = nzbmegasearch
 FPK_VERS = $(shell date +%Y%m%d)
 FPK_REV = 3
 FPK_ICON = src/nzbmegasearch.png
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 
 DEPENDS =
 FPK_DEPENDS = "python>2.7.3-3:git"

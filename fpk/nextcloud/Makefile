@@ -32,7 +32,7 @@ SYSTEM_GROUP = http
 ADMIN_URL = /nextcloud/
 ADMIN_PROTOCOL = https
 
-DSM_UI_DIR = app
+FNOS_UI_DIR = app
 DSM_UI_CONFIG = src/app/config
 
 SERVICE_SETUP = src/service-setup.sh
