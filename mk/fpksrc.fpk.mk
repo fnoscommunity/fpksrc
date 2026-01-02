@@ -348,7 +348,7 @@ $(WORK_DIR)/app.tgz: icon service
 
 FNOS_CMDS = $(addprefix $(FNOS_CMD_DIR)/,$(FNOS_SCRIPT_FILES))
 
-define dsm_script_redirect
+define fnos_script_redirect
 $(create_target_dir)
 $(MSG) "Creating $@"
 echo '#!/bin/bash' > $@
@@ -365,21 +365,21 @@ chmod 755 $@
 endef
 
 $(FNOS_CMD_DIR)/install_init:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 $(FNOS_CMD_DIR)/install_callback:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 $(FNOS_CMD_DIR)/uninstall_init:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 $(FNOS_CMD_DIR)/uninstall_callback:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 $(FNOS_CMD_DIR)/upgrade_init:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 $(FNOS_CMD_DIR)/upgrade_callback:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 $(FNOS_CMD_DIR)/config_init:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 $(FNOS_CMD_DIR)/config_callback:
-	@$(dsm_script_redirect)
+	@$(fnos_script_redirect)
 
 # Package Icons
 .PHONY: icons
