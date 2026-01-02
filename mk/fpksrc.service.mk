@@ -295,17 +295,17 @@ endif
 endif
 
 
-DSM_SCRIPT_FILES += service-setup
+FNOS_SCRIPT_FILES += service-setup
 SERVICE_FILES += $(DSM_SCRIPTS_DIR)/service-setup
 
 
 # Control use of generic installer
 ifeq ($(strip $(INSTALLER_SCRIPT)),)
-DSM_SCRIPT_FILES += functions
+FNOS_SCRIPT_FILES += functions
 $(DSM_SCRIPTS_DIR)/functions: $(SPKSRC_MK)fpksrc.service.installer.functions
 	@$(dsm_script_copy)
 
-DSM_SCRIPT_FILES += installer
+FNOS_SCRIPT_FILES += installer
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 $(DSM_SCRIPTS_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm7
 	@$(dsm_script_copy)
@@ -321,7 +321,7 @@ endif
 
 # Control use of generic main scripts
 ifeq ($(strip $(SSS_SCRIPT)),)
-DSM_SCRIPT_FILES += main
+FNOS_SCRIPT_FILES += main
 ifeq ($(STARTABLE),false)
 $(DSM_SCRIPTS_DIR)/main: $(SPKSRC_MK)fpksrc.service.non-startable
 	@$(dsm_script_copy)

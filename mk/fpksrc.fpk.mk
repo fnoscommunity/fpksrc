@@ -23,7 +23,7 @@
 #                               (e.g. Mono => synology.com, mono => FnOScommunity.com)
 #  FPK_FILE_NAME                The full fpk name with folder, package name, arch, tc- and package version.
 #  FPK_CONTENT                  List of files and folders that are added to app.tgz within the spk file.
-#  DSM_SCRIPT_FILES             List of script files that are in the cmd folder within the spk file.
+#  FNOS_SCRIPT_FILES             List of script files that are in the cmd folder within the spk file.
 #
 
 # Common makefiles
@@ -117,22 +117,22 @@ include ../../mk/fpksrc.strip.mk
 DSM_SCRIPTS_DIR = $(WORK_DIR)/cmd
 
 # Generated scripts
-DSM_SCRIPT_FILES  = install_init   install_callback
-DSM_SCRIPT_FILES += uninstall_init uninstall_callback
-DSM_SCRIPT_FILES += upgrade_init   upgrade_callback
-DSM_SCRIPT_FILES += config_init    config_callback
-DSM_SCRIPT_FILES += main
+FNOS_SCRIPT_FILES  = install_init   install_callback
+FNOS_SCRIPT_FILES += uninstall_init uninstall_callback
+FNOS_SCRIPT_FILES += upgrade_init   upgrade_callback
+FNOS_SCRIPT_FILES += config_init    config_callback
+FNOS_SCRIPT_FILES += main
 
 # SPK specific scripts
 ifneq ($(strip $(SSS_SCRIPT)),)
-DSM_SCRIPT_FILES += main
+FNOS_SCRIPT_FILES += main
 
 $(DSM_SCRIPTS_DIR)/main: $(SSS_SCRIPT)
 	@$(dsm_script_copy)
 endif
 
 ifneq ($(strip $(INSTALLER_SCRIPT)),)
-DSM_SCRIPT_FILES += installer
+FNOS_SCRIPT_FILES += installer
 
 $(DSM_SCRIPTS_DIR)/installer: $(INSTALLER_SCRIPT)
 	@$(dsm_script_copy)
@@ -346,7 +346,7 @@ $(WORK_DIR)/app.tgz: icon service
 	@[ -f $@ ] && rm $@ || true
 	(cd $(STAGING_DIR) && find . -mindepth 1 -maxdepth 1 -not -empty | tar cpzf $@ --owner=root --group=root --files-from=/dev/stdin)
 
-DSM_SCRIPTS = $(addprefix $(DSM_SCRIPTS_DIR)/,$(DSM_SCRIPT_FILES))
+DSM_SCRIPTS = $(addprefix $(DSM_SCRIPTS_DIR)/,$(FNOS_SCRIPT_FILES))
 
 define dsm_script_redirect
 $(create_target_dir)
