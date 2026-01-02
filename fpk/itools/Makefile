@@ -27,8 +27,6 @@ CHANGELOG = "1. Update usb tools and imobile device libraries to v2.0<br/>2. Upd
 HOMEPAGE = https://www.libimobiledevice.org
 LICENSE = LGPL 2.1
 
-SERVICE_SETUP = src/service-setup.sh
-
 include ../../mk/fpksrc.common.mk
 ifeq ($(call version_lt, $(TCVERSION), 7.0),1)
 

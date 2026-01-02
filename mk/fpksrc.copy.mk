@@ -44,7 +44,6 @@ pre_copy_target: copy_msg
 copy_target: SHELL:=/bin/bash
 copy_target: .SHELLFLAGS := -o pipefail -c
 copy_target: $(PRE_COPY_TARGET) $(INSTALL_PLIST)
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@$(MSG) [DSM7+] Copy target to staging, discard var directory
 	@(mkdir -p $(STAGING_DIR) && cd $(STAGING_INSTALL_PREFIX) && tar cpf - $$(cat $(INSTALL_PLIST) | sed -e '/^.*:var\/.*/d' -e 's/^.*://g')) | \
 	  tar xpf - -C $(STAGING_DIR)
@@ -54,10 +53,6 @@ ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	  (cd $(STAGING_INSTALL_PREFIX)/../ && tar cpf - $$(eval ls -d $$(cat $(INSTALL_PLIST) | sed -n 's?^.*:var/??p' | sed -e 's?^?{var,target/var}/?') 2>/dev/null)) | \
 	    tar xpf - -C $(STAGING_DIR)/var --strip-components=1 --transform='s!^target/!!' ; \
 	fi
-else
-	@$(MSG) [DSM6] Copy target to staging
-	@(mkdir -p $(STAGING_DIR) && cd $(STAGING_INSTALL_PREFIX) && tar cpf - $$(cat $(INSTALL_PLIST) | cut -d':' -f2)) | tar xpf - -C $(STAGING_DIR)
-endif
 
 post_copy_target: $(COPY_TARGET)
 

@@ -19,18 +19,8 @@ LICENSE = MIT
 
 include ../../mk/fpksrc.common.mk
 # use the latest php version
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 PHP_VERSION = 8.2
-endif
-
-# only for DSM 7 we have dedicated dependencies (must match the configuration in conf/resource)
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 FPK_DEPENDS = WebStation:PHP$(PHP_VERSION):Apache2.4
-else ifeq ($(call version_ge, ${TCVERSION}, 6.0),1)
-# on DSM 6 the default web server and PHP version are used
-FPK_DEPENDS = WebStation
-endif
-
 WIZARDS_DIR = src/wizard/
 SERVICE_WIZARD_SHARENAME = wizard_shared_folder_name
 
@@ -38,7 +28,6 @@ SYSTEM_GROUP = http
 
 FNOS_UI_DIR = app
 FNOS_UI_CONFIG = src/app/config
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 # webservice resource definition is for DSM 7 only
 CONF_DIR = src/conf_php$(PHP_VERSION)/
 # The app/config file is not used on DSM 7 for web services, the app icon is created based on the resources in CONF_DIR only.
@@ -47,7 +36,6 @@ CONF_DIR = src/conf_php$(PHP_VERSION)/
 NO_SERVICE_SHORTCUT = y
 # create firewall rules, since we add a port based "Web Portal"
 SERVICE_PORT = 18889
-endif
 
 # apache-web dependency is not used:
 # on DSM 7 the settings are ignored as dependency is defined in conf/resource

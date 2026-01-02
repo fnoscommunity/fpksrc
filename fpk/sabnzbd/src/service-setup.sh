@@ -6,11 +6,6 @@ PYTHON="${SYNOPKG_PKGDEST}/env/bin/python3"
 SABNZBD="${SYNOPKG_PKGDEST}/share/SABnzbd/SABnzbd.py"
 CFG_FILE="${SYNOPKG_PKGVAR}/config.ini"
 LANGUAGE="env LANG=en_US.UTF-8"
-
-if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-    GROUP="sc-download"
-fi
-
 SERVICE_COMMAND="${LANGUAGE} ${PYTHON} -OO ${SABNZBD} -f ${CFG_FILE} --pidfile ${PID_FILE} -d"
 
 service_postinst ()

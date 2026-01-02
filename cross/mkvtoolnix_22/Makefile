@@ -33,12 +33,10 @@ NATIVE_RUBY_DIR = $(realpath $(WORK_DIR)/../../../native/ruby/work-native/instal
 ENV += PATH=$(NATIVE_RUBY_DIR):$$PATH
 
 include ../../mk/fpksrc.common.mk
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 # fix compilation with newer compilers
 ADDITIONAL_CXXFLAGS = -D_GLIBCXX_USE_C99_MATH=1
 # disable warnings (by includes of boost header files)
 ADDITIONAL_CXXFLAGS += -Wno-implicit-fallthrough
-endif
 
 ADDITIONAL_CXXFLAGS += -Os
 

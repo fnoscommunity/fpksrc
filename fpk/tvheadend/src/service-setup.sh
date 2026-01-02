@@ -38,16 +38,6 @@ service_postupgrade ()
         TRUNC_DIR=$(echo "$(realpath ${DVR_DIR})" | awk -F/ '{print "/"$3}')
         if [ "${TRUNC_DIR}" = "/@appstore" ]; then
             echo "Skip: ${DVR_DIR} (system directory)"
-        elif [ $TRIM_SYS_VERSION_MAJOR -lt 7 ]; then
-            echo "Done: ${DVR_DIR}"
-            set_syno_permissions "${DVR_DIR}" "${GROUP}"
         fi
     done
-
-    # For backwards compatibility, restore ownership of package system directories
-    if [ $TRIM_SYS_VERSION_MAJOR -lt 7 ]; then
-        echo "Restore '${EFF_USER}' unix permissions on package system directories"
-        chown ${EFF_USER}:${USER} "${SYNOPKG_PKGDEST}"
-        set_unix_permissions "${SYNOPKG_PKGVAR}"
-    fi
 }

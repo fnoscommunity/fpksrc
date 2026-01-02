@@ -5,8 +5,4 @@ OPTIONAL_DEPENDS += cross/libva-2.17
 
 include ../../mk/fpksrc.main-depends.mk
 
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 DEPENDS = cross/libva-latest
-else
-DEPENDS = cross/libva-2.17
-endif

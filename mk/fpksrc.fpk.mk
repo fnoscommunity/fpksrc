@@ -424,13 +424,11 @@ WIZARD_FILE_NAMES += -or -name "config_???.sh"
 
 .PHONY: wizards
 wizards:
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@$(MSG) "Create default DSM7 uninstall wizard"
 	@mkdir -p $(FNOS_WIZARDS_DIR)
 	@find $(SPKSRC_MK)wizard -maxdepth 1 -type f -and \( -name "uninstall" -or -name "uninstall_???" \) -print -exec cp -f {} $(FNOS_WIZARDS_DIR) \;
 ifeq ($(strip $(WIZARDS_DIR)),)
 	$(eval FPK_CONTENT += wizard)
-endif
 endif
 ifneq ($(strip $(WIZARDS_TEMPLATES_DIR)),)
 	@$(MSG) "Generate DSM Wizards from templates"

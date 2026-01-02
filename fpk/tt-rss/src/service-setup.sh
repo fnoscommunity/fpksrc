@@ -17,11 +17,6 @@ LOGS_DIR="${WEB_DIR}/${PACKAGE}/logs"
 VERSION_FILE_DIRECTORY="var"
 VERSION_FILE="${VERSION_FILE_DIRECTORY}/version.txt"
 
-if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-    WEB_USER="http"
-    WEB_GROUP="http"
-fi
-
 if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
     if [ "${TRIM_SYS_VERSION_MINOR}" -ge 2 ]; then
         PHP="/usr/local/bin/php82"
@@ -42,91 +37,19 @@ MYSQL_DATABASE="ttrss"
 
 exec_update_schema() {
   TTRSS="${WEB_DIR}/${PACKAGE}/update.php"
-  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-      /bin/su "$WEB_USER" -s /bin/sh -c "\"${PHP}\" \"${TTRSS}\" --update-schema=force-yes"
-  else
-      "${PHP}" "${TTRSS}" --update-schema=force-yes
-  fi
+  "${PHP}" "${TTRSS}" --update-schema=force-yes
 }
 
 service_prestart ()
 {
   TTRSS="${WEB_DIR}/${PACKAGE}/update.php"
   LOG_FILE="${LOGS_DIR}/daemon.log"
-  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-      /bin/su "$WEB_USER" -s /bin/sh -c "\"${PHP}\" \"${TTRSS}\" --daemon" >> "${LOG_FILE}" 2>&1 &
-  else
-      "${PHP}" "${TTRSS}" --daemon >> "${LOG_FILE}" 2>&1 &
-  fi
+  "${PHP}" "${TTRSS}" --daemon >> "${LOG_FILE}" 2>&1 &
   echo "$!" > "${PID_FILE}"
 }
 
 service_postinst ()
 {
-  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-    # Install the web interface
-    ${CP} "${SYNOPKG_PKGDEST}/share/${PACKAGE}" ${WEB_DIR}
-
-    TEMPDIR="${SYNOPKG_PKGTMP}/web"
-    ${MKDIR} "${TEMPDIR}"
-
-    WS_CFG_PATH="/usr/syno/etc/packages/WebStation"
-    WS_CFG_FILE="WebStation.json"
-    FULL_WS_CFG_FILE="${WS_CFG_PATH}/${WS_CFG_FILE}"
-    TEMP_WS_CFG_FILE="${TEMPDIR}/${WS_CFG_FILE}"
-    PHP_CFG_FILE="PHPSettings.json"
-    PHP_PROF_NAME="Default PHP 7.4 Profile"
-    FULL_PHP_CFG_FILE="${WS_CFG_PATH}/${PHP_CFG_FILE}"
-    TEMP_PHP_CFG_FILE="${TEMPDIR}/${PHP_CFG_FILE}"
-    WS_BACKEND=$(${JQ} -r '.default.backend' "${FULL_WS_CFG_FILE}")
-    WS_PHP=$(${JQ} -r '.default.php' "${FULL_WS_CFG_FILE}")
-    RESTART_APACHE="no"
-    RSYNC_ARCH_ARGS="--backup --suffix=.bak --remove-source-files"
-    # Check if Apache is the selected back-end
-    if [ ! "$WS_BACKEND" = "2" ]; then
-        echo "Set Apache as the back-end server"
-        ${JQ} '.default.backend = 2' "${FULL_WS_CFG_FILE}" > "${TEMP_WS_CFG_FILE}"
-        # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
-        rsync -aX ${RSYNC_ARCH_ARGS} "${TEMP_WS_CFG_FILE}" "${WS_CFG_PATH}/" 2>&1
-        RESTART_APACHE="yes"
-    fi
-    # Check if default PHP profile is selected
-    if [ -z "$WS_PHP" ] || [ "$WS_PHP" = "null" ]; then
-        echo "Enable default PHP profile"
-        # Locate default PHP profile
-        PHP_PROF_ID=$(${JQ} -r '. | to_entries[] | select(.value | type == "object" and .profile_desc == "'"$PHP_PROF_NAME"'") | .key' "${FULL_PHP_CFG_FILE}")
-        ${JQ} ".default.php = \"$PHP_PROF_ID\"" "${FULL_WS_CFG_FILE}" > "${TEMP_WS_CFG_FILE}"
-        # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
-        rsync -aX ${RSYNC_ARCH_ARGS} "${TEMP_WS_CFG_FILE}" "${WS_CFG_PATH}/" 2>&1
-        RESTART_APACHE="yes"
-    fi
-    # Check for tt-rss PHP profile
-    if ! ${JQ} -e '.["com-FnOScommunity-packages-tt-rss"]' "${FULL_PHP_CFG_FILE}" >/dev/null; then
-        echo "Add PHP profile for tt-rss"
-        ${JQ} --slurpfile ttRssNode "${SYNOPKG_PKGDEST}/web/tt-rss.json" '.["com-FnOScommunity-packages-tt-rss"] = $ttRssNode[0]' "${FULL_PHP_CFG_FILE}" > "${TEMP_PHP_CFG_FILE}"
-        # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
-        rsync -aX ${RSYNC_ARCH_ARGS} "${TEMP_PHP_CFG_FILE}" "${WS_CFG_PATH}/" 2>&1
-        RESTART_APACHE="yes"
-    fi
-    # Check for tt-rss Apache config
-    if [ ! -f "/usr/local/etc/apache24/sites-enabled/tt-rss.conf" ]; then
-        echo "Add Apache config for tt-rss"
-        rsync -aX "${SYNOPKG_PKGDEST}/web/tt-rss.conf" /usr/local/etc/apache24/sites-enabled/ 2>&1
-        RESTART_APACHE="yes"
-    fi
-    # Restart Apache if configs have changed
-    if [ "${RESTART_APACHE}" = "yes" ]; then
-        if ${JQ} -e 'to_entries | map(select((.key | startswith("com-FnOScommunity-packages-")) and .key != "com-FnOScommunity-packages-tt-rss")) | length > 0' "${FULL_PHP_CFG_FILE}" >/dev/null; then
-            echo " [WARNING] Multiple PHP profiles detected, will require restart of DSM to load new configs"
-        else
-            echo "Restart Apache to load new configs"
-            ${SYNOSVC} --restart pkgctl-Apache2.4
-        fi
-    fi
-    # Clean-up temporary files
-    ${RM} "${TEMPDIR}"
-  fi
-
   ${MKDIR} -p "${LOGS_DIR}"
 
   # Setup database and configuration file
@@ -149,32 +72,11 @@ service_postinst ()
     fi
   fi
 
-  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-    # Fix permissions
-    chown -R "${WEB_USER}:${WEB_GROUP}" "${WEB_DIR}/${PACKAGE}"
-    chown -R "${WEB_USER}:${WEB_GROUP}" "${LOGS_DIR}"
-  fi
-
   if [ "${SYNOPKG_PKG_STATUS}" = "INSTALL" ]; then
     exec_update_schema
   fi
 
   return 0
-}
-
-validate_preinst ()
-{
-  # Check for modification to PHP template defaults on DSM 6
-  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-    WS_TMPL_PATH="/var/apps/WebStation/target/misc"
-    WS_TMPL_FILE="php74_fpm.mustache"
-    FULL_WS_TMPL_FILE="${WS_TMPL_PATH}/${WS_TMPL_FILE}"
-    # Check for PHP template defaults
-    if ! grep -q -E '^user = http$' "${FULL_WS_TMPL_FILE}" || ! grep -q -E '^listen\.owner = http$' "${FULL_WS_TMPL_FILE}"; then
-      echo "PHP template defaults have been modified. Installation is not supported."
-      exit 1
-    fi
-  fi
 }
 
 validate_preuninst ()
@@ -218,52 +120,6 @@ service_preuninst ()
       ${MYSQLDUMP} -u root -p"${wizard_mysql_password_root}" "${MYSQL_DATABASE}" > "${wizard_dbexport_path}/${MYSQL_DATABASE}.sql"
     fi
   fi  
-}
-
-service_postuninst ()
-{
-  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-    # Remove the web interface
-    ${RM} ${WEB_DIR}/${PACKAGE}
-
-    # Remove web configurations
-    TEMPDIR="${SYNOPKG_PKGTMP}/web"
-    ${MKDIR} "${TEMPDIR}"
-    WS_CFG_PATH="/usr/syno/etc/packages/WebStation"
-    PHP_CFG_FILE="PHPSettings.json"
-    FULL_PHP_CFG_FILE="${WS_CFG_PATH}/${PHP_CFG_FILE}"
-    TEMP_PHP_CFG_FILE="${TEMPDIR}/${PHP_CFG_FILE}"
-    RESTART_APACHE="no"
-    RSYNC_ARCH_ARGS="--backup --suffix=.bak --remove-source-files"
-    # Check for tt-rss PHP profile
-    if ${JQ} -e '.["com-FnOScommunity-packages-tt-rss"]' "${FULL_PHP_CFG_FILE}" >/dev/null; then
-        echo "Removing PHP profile for tt-rss"
-        ${JQ} 'del(.["com-FnOScommunity-packages-tt-rss"])' "${FULL_PHP_CFG_FILE}" > "${TEMP_PHP_CFG_FILE}"
-        # shellcheck disable=SC2086  # RSYNC_ARCH_ARGS is intentionally a multi-word arg list
-        rsync -aX ${RSYNC_ARCH_ARGS} "${TEMP_PHP_CFG_FILE}" "${WS_CFG_PATH}/" 2>&1
-        ${RM} "${WS_CFG_PATH}/php_profile/com-FnOScommunity-packages-tt-rss"
-        RESTART_APACHE="yes"
-    fi
-    # Check for tt-rss Apache config
-    if [ -f "/usr/local/etc/apache24/sites-enabled/tt-rss.conf" ]; then
-        echo "Removing Apache config for tt-rss"
-        ${RM} /usr/local/etc/apache24/sites-enabled/tt-rss.conf
-        RESTART_APACHE="yes"
-    fi
-    # Restart Apache if configs have changed
-    if [ "$RESTART_APACHE" = "yes" ]; then
-        if ${JQ} -e 'to_entries | map(select((.key | startswith("com-FnOScommunity-packages-")) and .key != "com-FnOScommunity-packages-tt-rss")) | length > 0' "${FULL_PHP_CFG_FILE}" >/dev/null; then
-            echo " [WARNING] Multiple PHP profiles detected, will require restart of DSM to load new configs"
-        else
-            echo "Restart Apache to load new configs"
-            ${SYNOSVC} --restart pkgctl-Apache2.4
-        fi
-    fi
-    # Clean-up temporary files
-    ${RM} "${TEMPDIR}"
-  fi
-
-  return 0
 }
 
 service_save ()

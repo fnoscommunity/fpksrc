@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# DSM 5 -> 7 upgrade path:
-# - Not supported
-
 # installer log is not writable, use for reference only.
 INST_LOG="/var/log/apps/${TRIM_APPNAME}.log"
 
@@ -76,37 +73,6 @@ call_func "initialize_variables"
 
 
 ### Functions library
-
-set_unix_permissions ()
-{
-    echo "Notice: set_unix_permissions() is no longer required on DSM7."
-}
-
-syno_remove_user ()
-{
-    echo "${TRIM_APPNAME} has not been updated to DSM7 yet. syno_remove_user() is no longer supported."
-}
-
-syno_group_create ()
-{
-    echo "${TRIM_APPNAME} has not been updated to DSM7 yet. syno_group_create() is no longer supported."
-}
-
-syno_group_remove ()
-{
-    echo "${TRIM_APPNAME} has not been updated to DSM7 yet. syno_group_remove() is no longer supported."
-}
-
-syno_user_add_to_group ()
-{
-    echo "${TRIM_APPNAME} has not been updated to DSM7 yet. syno_user_add_to_group() is no longer supported."
-}
-
-set_syno_permissions ()
-{
-    echo "${TRIM_APPNAME} has not been updated to DSM7 yet. set_syno_permissions() is no longer supported."
-}
-
 syno_user_add_to_legacy_group () {
     echo "${TRIM_APPNAME} has not been updated to DSM7 yet. syno_user_add_to_legacy_group() is no longer supported."
 }

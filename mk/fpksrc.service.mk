@@ -94,13 +94,10 @@ service_msg_target:
 
 pre_service_target: service_msg_target
 
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-# always use FPK_USER on DSM >= 7
 SERVICE_USER = auto
 ifneq ($(strip $(SERVICE_WIZARD_SHARE)),)
 # always use data share worker on DSM >= 7
 USE_DATA_SHARE_WORKER = yes
-endif
 endif
 
 # we need the service user to define access rights for the shared folder
@@ -155,18 +152,8 @@ else
 ifneq ($(strip $(SERVICE_WIZARD_SHARENAME)),)
 	@echo "# DSM name of shared folder from UI if provided" >> $@
 	@echo 'if [ -n "$${$(SERVICE_WIZARD_SHARENAME)}" ]; then' >> $@
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@echo '   SHARE_PATH=$$(realpath "/var/apps/$${TRIM_APPNAME}/shares/$${$(SERVICE_WIZARD_SHARENAME)}" 2> /dev/null)' >> $@
 	@echo '   install_log "SHARE_PATH from share [$${SHARE_PATH}], variable [$(SERVICE_WIZARD_SHARENAME)=$${$(SERVICE_WIZARD_SHARENAME)}]"' >> $@
-else
-	@echo '   if synoshare --get "$${$(SERVICE_WIZARD_SHARENAME)}" &> /dev/null; then ' >> $@
-	@echo '      SHARE_PATH=$$(synoshare --get "$${$(SERVICE_WIZARD_SHARENAME)}" | awk 'NR==4' | cut -d] -f1 | cut -d[ -f2)' >> $@
-	@echo '      install_log "SHARE_PATH from share [$${SHARE_PATH}], variable [$(SERVICE_WIZARD_SHARENAME)=$${$(SERVICE_WIZARD_SHARENAME)}]"' >> $@
-	@echo '   else' >> $@
-	@echo '      SHARE_PATH="$${$(SERVICE_WIZARD_SHARENAME)}"' >> $@
-	@echo '      install_log "SHARE_PATH [$${$(SERVICE_WIZARD_SHARENAME)}] does not yet exist."' >> $@
-	@echo '   fi' >> $@
-endif
 	@echo '   SHARE_NAME="$${$(SERVICE_WIZARD_SHARENAME)}"' >> $@
 	@echo 'fi' >> $@
 endif
@@ -205,11 +192,7 @@ ifneq ($(strip $(SERVICE_OPTIONS)),)
 	@echo '' >> $@
 endif
 ifeq ($(strip $(USE_ALTERNATE_TMPDIR)),1)
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@cat $(SPKSRC_MK)fpksrc.service.use_alternate_tmpdir.dsm7 >> $@
-else
-	@cat $(SPKSRC_MK)fpksrc.service.use_alternate_tmpdir >> $@
-endif
 endif
 ifneq ($(strip $(SERVICE_SETUP)),)
 	@echo '' >> $@
@@ -331,9 +314,7 @@ $(FNOS_CMD_DIR)/main: $(SPKSRC_MK)fpksrc.service.start-stop-status
 endif
 endif
 
-
 # Generate privilege file for service user (prefixed to avoid collision with busybox account)
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 $(FNOS_CONFIG_DIR)/privilege:
 	$(create_target_dir)
 	@jq -n '."defaults" = {"run-as": "package"}' > $@
@@ -351,45 +332,14 @@ endif
 ifneq ($(strip $(GROUP)),)
 	@jq '."groupname" = "$(GROUP)"' $@ | sponge $@
 else
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@jq '."groupname" = "fnoscommunity"' $@ | sponge $@
-else
-	@jq '."groupname" = "sc-$(FPK_USER)"' $@ | sponge $@
-endif
 endif
 ifneq ($(findstring config,$(FPK_CONTENT)),config)
 FPK_CONTENT += config
-endif
-
-# DSM <= 6 and SERVICE_USER defined
-else ifneq ($(strip $(SERVICE_USER)),)
-$(FNOS_CONFIG_DIR)/privilege: $(SPKSRC_MK)fpksrc.service.privilege-installasroot
-	@$(fnos_resource_copy)
-	@$(MSG) "(privilege) fpksrc.service.privilege-installasroot"
-ifneq ($(strip $(SYSTEM_GROUP)),)
-# options: http, system
-	@jq '."join-groupname" = "$(SYSTEM_GROUP)"' $@ | sponge $@
-endif
-ifneq ($(strip $(FPK_USER)),)
-	@jq '."username" = "sc-$(FPK_USER)"' $@ | sponge $@
-endif
-ifneq ($(strip $(FPK_GROUP)),)
-	@jq '."groupname" = "$(FPK_GROUP)"' $@ | sponge $@
-endif
-ifneq ($(findstring config,$(FPK_CONTENT)),config)
-FPK_CONTENT += config
-endif
-
-# DSM <= 6 and SERVICE_USER is NOT defined
-else
-$(FNOS_CONFIG_DIR)/privilege:
-	@$(MSG) "NOT creating $@"
-	@$(MSG) "(privilege) DSM <= 6 and SERVICE_USER undefined"
 endif
 
 # Call $(FNOS_CONFIG_DIR)/privilege:
 SERVICE_FILES += $(FNOS_CONFIG_DIR)/privilege
-
 
 # Generate service configuration for admin port
 ifeq ($(strip $(FWPORTS)),)

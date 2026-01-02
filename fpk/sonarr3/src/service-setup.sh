@@ -20,12 +20,6 @@ if [ "$SYNOPKG_DSM_ARCH" = "88f6281" ] || [ "$SYNOPKG_DSM_ARCH" = "88f6282" ]; t
     MONO="MONO_ENV_OPTIONS='-O=-aot,-float32' ${MONO}"
 fi
 
-# for DSM < 7 only:
-if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
-    GROUP="sc-download"
-    LEGACY_GROUP="sc-media"
-fi
-
 SERVICE_COMMAND="env PATH=${MONO_PATH}:${PATH} HOME=${HOME_DIR} LD_LIBRARY_PATH=${SYNOPKG_PKGDEST}/lib ${MONO} ${SONARR} ${CMD_ARGS}"
 SVC_BACKGROUND=y
 SVC_WAIT_TIMEOUT=90
@@ -45,10 +39,6 @@ service_postinst ()
     echo "Set update required"
     # Make Sonarr do an update check on start to update to the latest version available
     touch ${SONARR_CONFIG_DIR}/update_required 2>&1
-    
-    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
-        set_unix_permissions "${CONFIG_DIR}"
-    fi
 }
 
 service_preupgrade ()
@@ -86,9 +76,5 @@ service_postupgrade ()
         rm -rf ${SYNOPKG_PKGDEST}/share/Sonarr/bin 2>&1
         # prevent overwrite of updated package_info
         rsync -aX --exclude=package_info ${SYNOPKG_TEMP_UPGRADE_FOLDER}/backup/share/ ${SYNOPKG_PKGDEST}/share 2>&1
-    fi
-
-    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
-        set_unix_permissions "${SYNOPKG_PKGDEST}/share"
     fi
 }

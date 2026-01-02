@@ -49,11 +49,6 @@ service_postinst ()
     echo ${separator}
     echo "Install pure python packages from index"
     pip install --disable-pip-version-check --no-deps --no-input --cache-dir ${PIP_CACHE_DIR} --requirement ${SYNOPKG_PKGDEST}/share/wheelhouse/requirements-pure.txt
-
-    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-        # allow installation of plugins
-        set_unix_permissions "${SYNOPKG_PKGDEST}/env/"
-    fi
 }
 
 

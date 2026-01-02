@@ -13,9 +13,7 @@ GNU_CONFIGURE = 1
 
 include ../../mk/fpksrc.common.mk
 
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 ADDITIONAL_CPPFLAGS = -D_GLIBCXX_USE_C99_MATH -D_GLIBCXX_HAVE_OBSOLETE_ISNAN -D_GLIBCXX_HAVE_OBSOLETE_ISINF
 ADDITIONAL_CXXFLAGS = $(ADDITIONAL_CPPFLAGS)
-endif
 
 include ../../mk/fpksrc.cross-cc.mk

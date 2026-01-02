@@ -11,14 +11,7 @@ CMD_ARGS="-nobrowser -data=${RADARR_CONFIG_DIR}"
 
 # FPK_REV 15 has it in the wrong place for DSM 7
 LEGACY_CONFIG_DIR="${SYNOPKG_PKGDEST}/var/.config"
-
-if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-    GROUP="sc-download"
-    SERVICE_COMMAND="env HOME=${HOME_DIR} LD_LIBRARY_PATH=${SYNOPKG_PKGDEST}/lib ${RADARR} ${CMD_ARGS}"
-else
-    SERVICE_COMMAND="env HOME=${HOME_DIR} ${RADARR} ${CMD_ARGS}"
-fi
-
+SERVICE_COMMAND="env HOME=${HOME_DIR} ${RADARR} ${CMD_ARGS}"
 SVC_BACKGROUND=y
 SVC_WAIT_TIMEOUT=90
 
@@ -44,10 +37,6 @@ service_postinst ()
             # downgrade when FnOScommunity package is updated
             echo "Set update required"
             touch "${RADARR_CONFIG_DIR}/update_required" 2>&1
-        fi
-
-        if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-            set_unix_permissions "${CONFIG_DIR}"
         fi
     fi
 }
@@ -81,9 +70,5 @@ service_postupgrade ()
         rm -rf "${SYNOPKG_PKGDEST}/share/Radarr/bin" 2>&1
         # prevent overwrite of updated package_info
         rsync -aX --exclude=package_info "${SYNOPKG_TEMP_UPGRADE_FOLDER}/backup/share/" "${SYNOPKG_PKGDEST}/share" 2>&1
-    fi
-
-    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-        set_unix_permissions "${SYNOPKG_PKGDEST}/share"
     fi
 }

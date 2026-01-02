@@ -58,20 +58,6 @@ deluge_default_install ()
     install -m 0775 -o ${EFF_USER} -g ${GROUP} -d "${complete_folder}"
     install -m 0775 -o ${EFF_USER} -g ${GROUP} -d "${watch_folder}"
 
-    # DSM<=6: add group ACL
-    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-        echo "Setting-up group ACL permissions"
-        if [ -n "${incomplete_folder}" ] && [ -d "${incomplete_folder}" ]; then
-            set_syno_permissions "${incomplete_folder}" "${GROUP}"
-        fi
-        if [ -n "${complete_folder}" ] && [ -d "${complete_folder}" ]; then
-            set_syno_permissions "${complete_folder}" "${GROUP}"
-        fi
-        if [ -n "${watch_folder}" ] && [ -d "${watch_folder}" ]; then
-            set_syno_permissions "${watch_folder}" "${GROUP}"
-        fi
-    fi
-
     # Edit the configuration files according to the wizard
     for cfg_file in "${CFG_FILE} ${CFG_WATCH}"; do
         # Default download directory
@@ -104,39 +90,11 @@ service_postinst ()
     if [ "${SYNOPKG_PKG_STATUS}" == "INSTALL" ]; then
         deluge_default_install
     fi
-
-    # DSM<=6: Copy new default configuration files prior from them being
-    #         overwritten by old version during postupgrade recovery
-    if [ -r "${CFG_FILE}" -a "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-        cp -p ${CFG_WATCH} ${CFG_WATCH}.new
-        cp -p ${CFG_FILE} ${CFG_FILE}.new
-        # Ensure core.conf as no newline at end of file
-        sed -i -z 's/\n$//' ${CFG_FILE}.new
-    fi
 }
 
 
 service_postupgrade ()
 {
-    # Adjust permissions on new path for DSM <= 6
-    # Needed to force correct permissions, during update from prior version
-    # Extract the right paths from config file
-    if [ -r "${CFG_FILE}" -a "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-        # Older versions of Deluge on DSM <= 6 must
-        # be updated using a newer configuration
-
-        # Backup current old version of core.conf and autoadd.conf
-        cp -p ${CFG_FILE} ${CFG_FILE}.bak.$(date +%Y%m%d%H%M)
-        cp -p ${CFG_WATCH} ${CFG_WATCH}.bak.$(date +%Y%m%d%H%M)
-
-        # Copy new "default" version of core.conf and autoadd.conf
-        cp -p ${CFG_WATCH}.new ${CFG_WATCH}
-        cp -p ${CFG_FILE}.new ${CFG_FILE}
-
-        # Reset to default installation
-        deluge_default_install
-    fi
-
     # At first run always ensure core.conf as no newline at end of file
     sed -i -z 's/\n$//' ${CFG_FILE}
 }

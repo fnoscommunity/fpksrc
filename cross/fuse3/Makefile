@@ -17,11 +17,7 @@ UNSUPPORTED_ARCHS = $(OLD_PPC_ARCHS)
 
 include ../../mk/fpksrc.common.mk
 
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 DEPENDS = cross/libudev_219
-else
-DEPENDS = cross/libudev_204
-endif
 
 ifeq ($(findstring $(ARCH),$(ARMv5_ARCHS) $(PPC_ARCHS)),$(ARCH))
 PRE_CONFIGURE_TARGET = fuse3_add_missing_toolchain_file

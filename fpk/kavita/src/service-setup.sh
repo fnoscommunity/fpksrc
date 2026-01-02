@@ -17,8 +17,4 @@ service_postinst ()
     # Remove default config directory and link to var
     ${RM} "${HOME_DIR}/config"
     ${LN} "${CONFIG_DIR}" "${HOME_DIR}/config"
-
-    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-        set_unix_permissions "${CONFIG_DIR}"
-    fi
 }

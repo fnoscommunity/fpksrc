@@ -8,11 +8,6 @@ if [ -z "${SYNOPKG_PKGNAME}" ] || [ -z "${TRIM_SYS_VERSION_MAJOR}" ]; then
     exit 1
 fi
 
-if [ "$TRIM_SYS_VERSION_MAJOR" -lt 7 ]; then
-    # define SYNOPKG_PKGVAR for forward compatibility
-    SYNOPKG_PKGVAR="${SYNOPKG_PKGDEST}/var"
-fi
-
 SERVICE_CFG_FILE="${SYNOPKG_PKGVAR}/ntopng.conf"
 SERVICE_COMMAND="${SYNOPKG_PKGDEST}/bin/ntopng ${SERVICE_CFG_FILE}"
 SERVICE_LOG_FILE="${SYNOPKG_PKGVAR}/ntopng.log"

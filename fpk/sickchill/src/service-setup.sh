@@ -41,17 +41,10 @@ service_postinst() {
     if [ "${SYNOPKG_PKG_STATUS}" == "INSTALL" ]; then
         set_config
     fi
-
-    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-        set_unix_permissions "${SYNOPKG_PKGDEST}"
-    fi
 }
 
 service_postupgrade() {
     set_config
-    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
-      set_unix_permissions "${SYNOPKG_PKGDEST}"
-    fi
 }
 
 service_postuninst ()

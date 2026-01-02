@@ -30,10 +30,8 @@ INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) prefix=$(INSTALL_PREFIX)
 endif
 
 # Define find search path for creating plist
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 ifeq ($(lastword $(subst /, ,$(INSTALL_PREFIX))),target)
 PLIST_SEARCH_PATH = $(INSTALL_DIR)/$(INSTALL_PREFIX)/../
-endif
 endif
 ifeq ($(strip $(PLIST_SEARCH_PATH)),)
 PLIST_SEARCH_PATH = $(INSTALL_DIR)/$(INSTALL_PREFIX)/

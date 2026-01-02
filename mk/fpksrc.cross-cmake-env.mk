@@ -16,11 +16,7 @@ CMAKE_ARGS += -DCMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
 # Set the default install prefix
 CMAKE_ARGS += -DCMAKE_INSTALL_PREFIX=$(INSTALL_PREFIX)
-
-# DSM7 appdir
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 CMAKE_ARGS += -DCMAKE_INSTALL_LOCALSTATEDIR=$(INSTALL_PREFIX_VAR)
-endif
 
 # Necessary variables for the toolchain file
 # used at generation from fpksrc.tc.mk that

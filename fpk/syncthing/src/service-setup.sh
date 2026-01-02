@@ -82,25 +82,6 @@ service_prestart ()
     fi
 }
 
-
-service_save ()
-{
-    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
-        if [ -e ${SYNCTHING_OPTIONS_FILE}.new ]; then
-            echo "remove former version of options.conf.new"
-            rm -f ${SYNCTHING_OPTIONS_FILE}.new
-        fi
-    fi
-}
-
-service_restore ()
-{
-    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
-        echo "install updated options.conf as options.conf.new"
-        mv -f ${SYNCTHING_OPTIONS_FILE} ${SYNCTHING_OPTIONS_FILE}.new
-    fi
-}
-
 version_le()
 {
     if printf '%s\n' "$1" "$2" | sort -VC ; then

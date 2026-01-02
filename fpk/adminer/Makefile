@@ -52,11 +52,7 @@ INSTUNINST_RESTART_SERVICES = apache-web
 
 SERVICE_SETUP = src/service-setup.sh
 STARTABLE = false
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 WIZARDS_DIR = src/wizard7/
-else
-WIZARDS_DIR = src/wizard/
-endif
 
 POST_STRIP_TARGET = adminer_extra_install
 

@@ -59,13 +59,11 @@ ifneq ($(UNSUPPORTED_ARCHS_TCVERSION),)
   endif
 endif
 
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-  ifneq ($(strip $(INSTALLER_SCRIPT)),)
-    ifneq ($(BUILD_UNSUPPORTED_FILE),)
-      $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): INSTALLER_SCRIPT '$(INSTALLER_SCRIPT)' cannot be used for DSM ${TCVERSION} >> $(BUILD_UNSUPPORTED_FILE))
-    endif
-    @$(error INSTALLER_SCRIPT '$(INSTALLER_SCRIPT)' cannot be used for DSM ${TCVERSION})
+ifneq ($(strip $(INSTALLER_SCRIPT)),)
+  ifneq ($(BUILD_UNSUPPORTED_FILE),)
+    $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): INSTALLER_SCRIPT '$(INSTALLER_SCRIPT)' cannot be used for DSM ${TCVERSION} >> $(BUILD_UNSUPPORTED_FILE))
   endif
+  @$(error INSTALLER_SCRIPT '$(INSTALLER_SCRIPT)' cannot be used for DSM ${TCVERSION})
 endif
 
 # Check maximal DSM requirements of package

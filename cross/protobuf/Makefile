@@ -21,10 +21,8 @@ PRE_COMPILE_TARGET = protobuf_pre_compile
 
 
 include ../../mk/fpksrc.common.mk
-ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 # fix compilation with newer compilers
 ADDITIONAL_CXXFLAGS = -D_GLIBCXX_USE_C99_MATH=1
-endif
 
 include ../../mk/fpksrc.cross-cc.mk
 

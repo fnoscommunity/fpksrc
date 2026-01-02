@@ -7,10 +7,6 @@ CFG_FILE="${SYNOPKG_PKGVAR}/config.ini"
 
 SERVICE_COMMAND="${PYTHON} ${HEADPHONES} --daemon --pidfile ${PID_FILE} --config ${CFG_FILE} --datadir ${SYNOPKG_PKGVAR}/"
 
-if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
-    GROUP="sc-download"
-fi
-
 service_postinst ()
 {
     # Create a Python virtualenv
