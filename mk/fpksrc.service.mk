@@ -303,18 +303,18 @@ SERVICE_FILES += $(FNOS_CMD_DIR)/service-setup
 ifeq ($(strip $(INSTALLER_SCRIPT)),)
 FNOS_SCRIPT_FILES += functions
 $(FNOS_CMD_DIR)/functions: $(SPKSRC_MK)fpksrc.service.installer.functions
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 
 FNOS_SCRIPT_FILES += installer
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 $(FNOS_CMD_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm7
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 else ifeq ($(call version_ge, ${TCVERSION}, 6.0),1)
 $(FNOS_CMD_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm6
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 else
 $(FNOS_CMD_DIR)/installer: $(SPKSRC_MK)fpksrc.service.installer.dsm5
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 endif
 endif
 
@@ -324,10 +324,10 @@ ifeq ($(strip $(SSS_SCRIPT)),)
 FNOS_SCRIPT_FILES += main
 ifeq ($(STARTABLE),false)
 $(FNOS_CMD_DIR)/main: $(SPKSRC_MK)fpksrc.service.non-startable
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 else
 $(FNOS_CMD_DIR)/main: $(SPKSRC_MK)fpksrc.service.start-stop-status
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 endif
 endif
 

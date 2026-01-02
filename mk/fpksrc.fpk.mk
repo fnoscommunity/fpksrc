@@ -128,14 +128,14 @@ ifneq ($(strip $(SSS_SCRIPT)),)
 FNOS_SCRIPT_FILES += main
 
 $(FNOS_CMD_DIR)/main: $(SSS_SCRIPT)
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 endif
 
 ifneq ($(strip $(INSTALLER_SCRIPT)),)
 FNOS_SCRIPT_FILES += installer
 
 $(FNOS_CMD_DIR)/installer: $(INSTALLER_SCRIPT)
-	@$(dsm_script_copy)
+	@$(fnos_cmd_copy)
 endif
 
 FPK_CONTENT = app.tgz manifest cmd
@@ -357,7 +357,7 @@ echo '$$(basename $$0) $(INSTALLER_OUTPUT)' >> $@
 chmod 755 $@
 endef
 
-define dsm_script_copy
+define fnos_cmd_copy
 $(create_target_dir)
 $(MSG) "Creating $@"
 cp $< $@
