@@ -261,8 +261,8 @@ else
 	@echo appname=\"com.fnoscomm.pkgs.$(FPK_NAME)\" >> $@
 endif
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-ifneq ($(strip $(DSM_APP_PAGE)),)
-	@echo dsmapppage=\"$(DSM_APP_PAGE)\" >> $@
+ifneq ($(strip $(FNOS_APP_PAGE)),)
+	@echo dsmapppage=\"$(FNOS_APP_PAGE)\" >> $@
 endif
 ifneq ($(strip $(DSM_APP_LAUNCH_NAME)),)
 	@echo dsmapplaunchname=\"$(DSM_APP_LAUNCH_NAME)\" >> $@
@@ -346,7 +346,7 @@ $(WORK_DIR)/app.tgz: icon service
 	@[ -f $@ ] && rm $@ || true
 	(cd $(STAGING_DIR) && find . -mindepth 1 -maxdepth 1 -not -empty | tar cpzf $@ --owner=root --group=root --files-from=/dev/stdin)
 
-DSM_SCRIPTS = $(addprefix $(FNOS_CMD_DIR)/,$(FNOS_SCRIPT_FILES))
+FNOS_CMDS = $(addprefix $(FNOS_CMD_DIR)/,$(FNOS_SCRIPT_FILES))
 
 define dsm_script_redirect
 $(create_target_dir)
@@ -506,7 +506,7 @@ ifneq ($(strip $(FNOS_LICENSE)),)
 FPK_CONTENT += LICENSE
 endif
 
-$(FPK_FILE_NAME): $(WORK_DIR)/app.tgz $(WORK_DIR)/manifest info-checksum icons service $(DSM_SCRIPTS) wizards $(FNOS_LICENSE) config
+$(FPK_FILE_NAME): $(WORK_DIR)/app.tgz $(WORK_DIR)/manifest info-checksum icons service $(FNOS_CMDS) wizards $(FNOS_LICENSE) config
 	$(create_target_dir)
 	(cd $(WORK_DIR) && tar czpf $@ --group=root --owner=root $(FPK_CONTENT))
 
