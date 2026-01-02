@@ -18,7 +18,7 @@ service_postinst ()
 # service_restore is called by post_upgrade before restoring files from ${TMP_DIR}
 service_restore ()
 {
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         # make a copy of the new config files before those are overwritten by restore
         # overwrite existing *.new files in ${TMP_DIR}/ as all files in ${TMP_DIR}/
         # are restored to ${SYNOPKG_PKGVAR}/

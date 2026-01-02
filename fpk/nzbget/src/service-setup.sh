@@ -33,7 +33,7 @@ service_postinst ()
     chmod +x "${NZBGET_INSTALLER}"
     ${NZBGET_INSTALLER} --destdir ${SYNOPKG_PKGDEST}/bin
 
-    if [ $SYNOPKG_DSM_VERSION_MAJOR -lt 7 ]; then
+    if [ $TRIM_SYS_VERSION_MAJOR -lt 7 ]; then
         # On DSM 5 and 6 the nzbget archive is extracted with the internal build owner (id 1001).
         # Overwrite with the package owner
         set_unix_permissions "${SYNOPKG_PKGDEST}/bin"

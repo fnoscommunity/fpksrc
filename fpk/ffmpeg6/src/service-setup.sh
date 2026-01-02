@@ -21,7 +21,7 @@ disable_iHD ()
 
 service_postinst ()
 {
-    if [ $SYNOPKG_DSM_VERSION_MAJOR -lt 7 ];then
+    if [ $TRIM_SYS_VERSION_MAJOR -lt 7 ];then
         # setuid for proper vaapi access
         chmod u+s ${FFMPEG_DIR}/bin/ffmpeg
         chmod u+s ${FFMPEG_DIR}/bin/vainfo
@@ -32,7 +32,7 @@ service_postinst ()
 
 service_postupgrade ()
 {
-    if [ $SYNOPKG_DSM_VERSION_MAJOR -lt 7 ];then
+    if [ $TRIM_SYS_VERSION_MAJOR -lt 7 ];then
         # setuid for proper vaapi access
         chmod u+s ${FFMPEG_DIR}/bin/ffmpeg
         chmod u+s ${FFMPEG_DIR}/bin/vainfo

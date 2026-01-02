@@ -7,7 +7,7 @@ SABNZBD="${SYNOPKG_PKGDEST}/share/SABnzbd/SABnzbd.py"
 CFG_FILE="${SYNOPKG_PKGVAR}/config.ini"
 LANGUAGE="env LANG=en_US.UTF-8"
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     GROUP="sc-download"
 fi
 
@@ -26,7 +26,7 @@ service_postinst ()
         sed -i -e "s|@shared_folder@|${SHARE_PATH}|g" ${CFG_FILE}
         sed -i -e "s|@script_dir@|${SYNOPKG_PKGVAR}/scripts|g" ${CFG_FILE}
 
-        if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+        if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
             # DSM7: SABnzbd should not set permissions, but let DSM handle it
             sed -i -e "s|permissions\s*=.*|permissions = ""|g" ${CFG_FILE}
         else

@@ -1,7 +1,7 @@
 
 
 # service requires root access, not supported on DSM >= 7
-if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
 
 VOLUME_DIR="${SYNOPKG_PKGDEST}/volume"
 

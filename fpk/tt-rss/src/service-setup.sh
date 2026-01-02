@@ -7,7 +7,7 @@ SVC_WRITE_PID=y
 
 # Others
 DSM6_WEB_DIR="/var/services/web"
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
   WEB_DIR="/var/services/web_packages"
 else
   WEB_DIR="${DSM6_WEB_DIR}"
@@ -17,12 +17,12 @@ LOGS_DIR="${WEB_DIR}/${PACKAGE}/logs"
 VERSION_FILE_DIRECTORY="var"
 VERSION_FILE="${VERSION_FILE_DIRECTORY}/version.txt"
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     WEB_USER="http"
     WEB_GROUP="http"
 fi
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
     if [ "${SYNOPKG_DSM_VERSION_MINOR}" -ge 2 ]; then
         PHP="/usr/local/bin/php82"
     else
@@ -42,7 +42,7 @@ MYSQL_DATABASE="ttrss"
 
 exec_update_schema() {
   TTRSS="${WEB_DIR}/${PACKAGE}/update.php"
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
       /bin/su "$WEB_USER" -s /bin/sh -c "\"${PHP}\" \"${TTRSS}\" --update-schema=force-yes"
   else
       "${PHP}" "${TTRSS}" --update-schema=force-yes
@@ -53,7 +53,7 @@ service_prestart ()
 {
   TTRSS="${WEB_DIR}/${PACKAGE}/update.php"
   LOG_FILE="${LOGS_DIR}/daemon.log"
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
       /bin/su "$WEB_USER" -s /bin/sh -c "\"${PHP}\" \"${TTRSS}\" --daemon" >> "${LOG_FILE}" 2>&1 &
   else
       "${PHP}" "${TTRSS}" --daemon >> "${LOG_FILE}" 2>&1 &
@@ -63,7 +63,7 @@ service_prestart ()
 
 service_postinst ()
 {
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     # Install the web interface
     ${CP} "${SYNOPKG_PKGDEST}/share/${PACKAGE}" ${WEB_DIR}
 
@@ -144,12 +144,12 @@ service_postinst ()
       echo "putenv('TTRSS_PHP_EXECUTABLE=${PHP}');"
       echo "putenv('TTRSS_MYSQL_DB_SOCKET=/run/mysqld/mysqld10.sock');"
     } >>"${WEB_DIR}/${PACKAGE}/config.php"
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
       touch "${SYNOPKG_PKGVAR}/.dsm7_migrated"
     fi
   fi
 
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     # Fix permissions
     chown -R "${WEB_USER}:${WEB_GROUP}" "${WEB_DIR}/${PACKAGE}"
     chown -R "${WEB_USER}:${WEB_GROUP}" "${LOGS_DIR}"
@@ -165,7 +165,7 @@ service_postinst ()
 validate_preinst ()
 {
   # Check for modification to PHP template defaults on DSM 6
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     WS_TMPL_PATH="/var/apps/WebStation/target/misc"
     WS_TMPL_FILE="php74_fpm.mustache"
     FULL_WS_TMPL_FILE="${WS_TMPL_PATH}/${WS_TMPL_FILE}"
@@ -222,7 +222,7 @@ service_preuninst ()
 
 service_postuninst ()
 {
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     # Remove the web interface
     ${RM} ${WEB_DIR}/${PACKAGE}
 
@@ -270,7 +270,7 @@ service_save ()
 {
   SOURCE_WEB_DIR="${WEB_DIR}"
   if [ ! -f "${SYNOPKG_PKGVAR}/.dsm7_migrated" ]; then
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
       SOURCE_WEB_DIR="${DSM6_WEB_DIR}"
     fi
   fi
@@ -295,7 +295,7 @@ service_save ()
 
 service_restore ()
 {
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
     touch "${SYNOPKG_PKGVAR}/.dsm7_migrated"
   fi
   # Restore the configuration file

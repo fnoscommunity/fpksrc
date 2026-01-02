@@ -1,5 +1,5 @@
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
 WEB_ROOT=/var/services/web
 GROUP=http
 else
@@ -12,7 +12,7 @@ service_postinst ()
 {
     echo "Install the web app (${WEB_DIR})"
 
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         # Install the web interface
         # only DSM 7+ installs the web service based on the "webservice" resource.
         cp -rp "${SYNOPKG_PKGDEST}/web/${SYNOPKG_PKGNAME}" ${WEB_ROOT}/
@@ -33,7 +33,7 @@ service_postinst ()
 
 service_postuninst ()
 {
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         if [ -d "${WEB_DIR}" ]; then
             echo "Remove the web app (${WEB_DIR})"
             rm -rf ${WEB_DIR}

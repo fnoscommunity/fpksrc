@@ -2,7 +2,7 @@ GITEA="${SYNOPKG_PKGDEST}/bin/gitea"
 CFG_FILE="${SYNOPKG_PKGVAR}/conf.ini"
 PATH="/var/apps/git/target/bin:${PATH}"
 
-if [ $SYNOPKG_DSM_VERSION_MAJOR -lt 7 ]; then
+if [ $TRIM_SYS_VERSION_MAJOR -lt 7 ]; then
     SYNOPKG_PKGHOME="${SYNOPKG_PKGVAR}"
 fi
 
@@ -25,7 +25,7 @@ service_postinst ()
 # service_restore is called by post_upgrade before restoring files from ${TMP_DIR}
 service_restore ()
 {
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         # make a copy of the new config file before it gets overwritten by restore
         # overwrite existing *.new files in ${TMP_DIR}/ as all files in ${TMP_DIR}/
         # are restored to ${SYNOPKG_PKGVAR}/

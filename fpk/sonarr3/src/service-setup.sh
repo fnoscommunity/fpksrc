@@ -21,7 +21,7 @@ if [ "$SYNOPKG_DSM_ARCH" = "88f6281" ] || [ "$SYNOPKG_DSM_ARCH" = "88f6282" ]; t
 fi
 
 # for DSM < 7 only:
-if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
     GROUP="sc-download"
     LEGACY_GROUP="sc-media"
 fi
@@ -46,14 +46,14 @@ service_postinst ()
     # Make Sonarr do an update check on start to update to the latest version available
     touch ${SONARR_CONFIG_DIR}/update_required 2>&1
     
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         set_unix_permissions "${CONFIG_DIR}"
     fi
 }
 
 service_preupgrade ()
 {
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -ge 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -ge 7 ]; then
         # ensure config is in @appdata folder
         if [ -d "${LEGACY_CONFIG_DIR}" ]; then
             if [ "$(realpath ${LEGACY_CONFIG_DIR})" != "$(realpath ${CONFIG_DIR})" ]; then
@@ -88,7 +88,7 @@ service_postupgrade ()
         rsync -aX --exclude=package_info ${SYNOPKG_TEMP_UPGRADE_FOLDER}/backup/share/ ${SYNOPKG_PKGDEST}/share 2>&1
     fi
 
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         set_unix_permissions "${SYNOPKG_PKGDEST}/share"
     fi
 }

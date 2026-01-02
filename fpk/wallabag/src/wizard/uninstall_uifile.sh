@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # for backwards compatability
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
 	if [ -z "${SYNOPKG_PKGDEST_VOL}" ]; then
 		SYNOPKG_PKGDEST_VOL="/volume1"
 	fi

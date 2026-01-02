@@ -47,7 +47,7 @@ initialize_variables ()
         # this is required for installers without resource worker for file share (SRM 1, DSM 5, DSM 6 old packages)
         if [ "$(echo ${SHARE_PATH} | grep ^/)" != "${SHARE_PATH}" ]; then
             SHARE_NAME=${SHARE_PATH}
-            if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+            if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
                 if synoshare --get "${SHARE_NAME}" &> /dev/null; then
                     SHARE_PATH=$(synoshare --get "${SHARE_NAME}" | awk 'NR==4' | cut -d] -f1 | cut -d[ -f2)
                     install_log "Path of existing share [${SHARE_NAME}] is [${SHARE_PATH}]"
@@ -84,7 +84,7 @@ install_python_virtualenv ()
     # Create a Python virtualenv
     python3 -m venv --system-site-packages ${TRIM_APPDEST}/env
 
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         set_unix_permissions ${TRIM_APPDEST}/env
     fi
 }
@@ -110,7 +110,7 @@ install_python_wheels ()
        || echo "ERROR: Python package installation failed" 1>&2
     fi
 
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         set_unix_permissions ${TRIM_APPDEST}/env
     fi
 

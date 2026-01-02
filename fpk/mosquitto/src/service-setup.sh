@@ -7,7 +7,7 @@ SERVICE_COMMAND="${SYNOPKG_PKGDEST}/sbin/mosquitto -d -c ${CFG_FILE}"
 # service_restore is called by post_upgrade before restoring files from ${TMP_DIR}
 service_restore ()
 {
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         OLD_FPK_REV="${SYNOPKG_OLD_PKGVER##*-}"
         if [ -n "${OLD_FPK_REV}" ] && [ ${OLD_FPK_REV} -lt 13 ]; then
             # make a copy of the new config file before it is overwritten by restore

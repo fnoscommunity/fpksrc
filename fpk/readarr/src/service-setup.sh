@@ -9,7 +9,7 @@ READARR_CONFIG_DIR="${CONFIG_DIR}/Readarr"
 PID_FILE="${READARR_CONFIG_DIR}/readarr.pid"
 CMD_ARGS="-nobrowser -data=${READARR_CONFIG_DIR}"
 
-if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
     GROUP="sc-download"
     SERVICE_COMMAND="env HOME=${HOME_DIR} LD_LIBRARY_PATH=${SYNOPKG_PKGDEST}/lib ${READARR} ${CMD_ARGS}"
 else
@@ -25,7 +25,7 @@ service_postinst ()
     # Make Readarr do an update check on start
     touch ${READARR_CONFIG_DIR}/update_required 2>&1
 
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         set_unix_permissions "${CONFIG_DIR}"
     fi
 }
@@ -49,7 +49,7 @@ service_postupgrade ()
         rsync -aX --exclude=package_info ${SYNOPKG_TEMP_UPGRADE_FOLDER}/backup/share/ ${SYNOPKG_PKGDEST}/share 2>&1
     fi
 
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         set_unix_permissions "${SYNOPKG_PKGDEST}/share"
     fi
 }

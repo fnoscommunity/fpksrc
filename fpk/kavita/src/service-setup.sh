@@ -18,7 +18,7 @@ service_postinst ()
     ${RM} "${HOME_DIR}/config"
     ${LN} "${CONFIG_DIR}" "${HOME_DIR}/config"
 
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         set_unix_permissions "${CONFIG_DIR}"
     fi
 }

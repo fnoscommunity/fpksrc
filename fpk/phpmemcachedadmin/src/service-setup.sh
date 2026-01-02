@@ -8,7 +8,7 @@ SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 
 # Others
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
     WEB_DIR="/var/services/web_packages"
 else
     WEB_DIR="/var/services/web"
@@ -25,7 +25,7 @@ SYNOSVC="/usr/syno/sbin/synoservice"
 validate_preinst ()
 {
    # Check for modification to PHP template defaults on DSM 6
-   if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+   if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
       WS_TMPL_DIR="/var/apps/WebStation/target/misc"
       WS_TMPL_FILE="php74_fpm.mustache"
       WS_TMPL_PATH="${WS_TMPL_DIR}/${WS_TMPL_FILE}"
@@ -46,7 +46,7 @@ service_postinst ()
    fi
 
    # Web interface setup for DSM 6 -- used by INSTALL and UPGRADE
-   if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+   if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
       # Install the web interface
       echo "Installing web interface"
       ${MKDIR} "${WEB_ROOT}"
@@ -123,7 +123,7 @@ service_postinst ()
 service_postuninst ()
 {
     # Web interface removal for DSM 6 -- used by UNINSTALL and UPGRADE
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         # Remove the web interface
         echo "Removing web interface"
         ${RM} "${WEB_ROOT}"

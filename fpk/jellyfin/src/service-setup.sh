@@ -19,7 +19,7 @@ SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 
 service_postinst() {
-    if [ "$SYNOPKG_DSM_VERSION_MAJOR" -ge 7 ]; then
+    if [ "$TRIM_SYS_VERSION_MAJOR" -ge 7 ]; then
         mkdir -p --mode=0777 "${SYNOPKG_PKGVAR}/data/transcodes"
     fi
 }

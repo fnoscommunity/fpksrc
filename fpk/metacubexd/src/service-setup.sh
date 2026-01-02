@@ -1,6 +1,6 @@
 WEB_DIR="/var/services/web_packages"
 
-if [ $SYNOPKG_DSM_VERSION_MAJOR -lt 7 ];then
+if [ $TRIM_SYS_VERSION_MAJOR -lt 7 ];then
     WEB_DIR="/var/services/web"
 fi
 
@@ -11,14 +11,14 @@ fi
 WEB_ROOT="${WEB_DIR}/${SYNOPKG_PKGNAME}"
 SYNOSVC="/usr/syno/sbin/synoservice"
 
-if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
     WEB_USER="http"
     WEB_GROUP="http"
 fi
 
 set_metacubexd_permissions ()
 {
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         DIRAPP=$1
         echo "Setting the correct ownership and permissions of the files and folders in ${DIRAPP}"
         # Set the ownership for all files and folders to http:http
@@ -34,7 +34,7 @@ set_metacubexd_permissions ()
 
 service_postinst ()
 {
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         echo "Installing web interface"
         ${MKDIR} ${WEB_ROOT}/
         rsync -aX ${SYNOPKG_PKGDEST}/web/ ${WEB_ROOT} 2>&1
@@ -76,14 +76,14 @@ service_postinst ()
     fi
 
     # Fix permissions
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         set_metacubexd_permissions ${WEB_ROOT}
     fi
 }
 
 service_postuninst ()
 {
-    if [ ${SYNOPKG_DSM_VERSION_MAJOR} -lt 7 ]; then
+    if [ ${TRIM_SYS_VERSION_MAJOR} -lt 7 ]; then
         echo "Removing web interface"
         ${RM} ${WEB_ROOT}
 

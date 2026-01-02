@@ -12,7 +12,7 @@ CMD_ARGS="-nobrowser -data=${LIDARR_CONFIG_DIR}"
 # Older installations have it in the wrong place for DSM 7
 LEGACY_CONFIG_DIR="${SYNOPKG_PKGDEST}/.config"
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     GROUP="sc-download"
     SERVICE_COMMAND="env HOME=${HOME_DIR} LD_LIBRARY_PATH=${SYNOPKG_PKGDEST}/lib ${LIDARR} ${CMD_ARGS}"
 else
@@ -46,7 +46,7 @@ service_postinst ()
             touch "${LIDARR_CONFIG_DIR}/update_required" 2>&1
         fi
 
-        if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+        if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
             set_unix_permissions "${CONFIG_DIR}"
         fi
     fi
@@ -54,7 +54,7 @@ service_postinst ()
 
 service_preupgrade ()
 {
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
         # ensure config is in @appdata folder
         if [ -d "${LEGACY_CONFIG_DIR}" ]; then
             if [ "$(realpath "${LEGACY_CONFIG_DIR}")" != "$(realpath "${CONFIG_DIR}")" ]; then
@@ -83,7 +83,7 @@ service_postupgrade ()
         rsync -aX --exclude=package_info "${SYNOPKG_TEMP_UPGRADE_FOLDER}/backup/share/" "${SYNOPKG_PKGDEST}/share" 2>&1
     fi
 
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         set_unix_permissions "${SYNOPKG_PKGDEST}/share"
     fi
 }

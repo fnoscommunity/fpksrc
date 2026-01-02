@@ -5,7 +5,7 @@ VIRTUALENV="${PYTHON_DIR}/virtualenv"
 GATEONE="${SYNOPKG_PKGDEST}/env/bin/gateone"
 SETTINGS_DIR="${SYNOPKG_PKGDEST}/var/conf.d"
 CONF_FILE="${SYNOPKG_PKGDEST}/var/conf.d/90custom.conf"
-if [ $SYNOPKG_DSM_VERSION_MAJOR -ge 6 ]; then
+if [ $TRIM_SYS_VERSION_MAJOR -ge 6 ]; then
     CERTPATH="/usr/syno/etc/certificate/system/default/"
     CERTIFICATE="cert.pem"
     KEYPATH="/usr/syno/etc/certificate/system/default/"

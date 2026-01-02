@@ -2,7 +2,7 @@
 # Selfoss service setup
 WEB_DIR="/var/services/web_packages"
 # for backwards compatability
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     WEB_DIR="/var/services/web"
 fi
 if [ -z "${SYNOPKG_PKGTMP}" ]; then
@@ -14,14 +14,14 @@ SELFOSS_ROOT="${WEB_DIR}/${SYNOPKG_PKGNAME}"
 JQ="/bin/jq"
 SYNOSVC="/usr/syno/sbin/synoservice"
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     WEB_USER="http"
     WEB_GROUP="http"
 fi
 
 set_selfoss_permissions ()
 {
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         DIRAPP=$1
         echo "Setting the correct ownership and permissions of the files and folders in ${DIRAPP}"
         # Set the ownership for all files and folders to http:http
@@ -38,7 +38,7 @@ set_selfoss_permissions ()
 service_postinst ()
 {
     # Web interface setup for DSM 6 -- used by INSTALL and UPGRADE
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         # Install the web interface
         echo "Installing web interface"
         ${MKDIR} "${SELFOSS_ROOT}"
@@ -106,7 +106,7 @@ service_postinst ()
 
     if [ "${SYNOPKG_PKG_STATUS}" = "INSTALL" ]; then
         # Fix permissions
-        if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+        if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
             set_selfoss_permissions "${SELFOSS_ROOT}"
         fi
     fi
@@ -115,7 +115,7 @@ service_postinst ()
 service_postuninst ()
 {
     # Web interface removal for DSM 6 -- used by UNINSTALL and UPGRADE
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         # Remove the web interface
         echo "Removing web interface"
         ${RM} "${SELFOSS_ROOT}"
@@ -161,7 +161,7 @@ service_postuninst ()
 validate_preinst ()
 {
     # Check for modification to PHP template defaults on DSM 6
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         WS_TMPL_DIR="/var/apps/WebStation/target/misc"
         WS_TMPL_FILE="php74_fpm.mustache"
         WS_TMPL_PATH="${WS_TMPL_DIR}/${WS_TMPL_FILE}"
@@ -195,7 +195,7 @@ service_restore ()
     fi
 
     # Fix permissions
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         set_selfoss_permissions "${SELFOSS_ROOT}"
     fi
 

@@ -9,7 +9,7 @@ PROWLARR_CONFIG_DIR="${CONFIG_DIR}/Prowlarr"
 PID_FILE="${PROWLARR_CONFIG_DIR}/prowlarr.pid"
 CMD_ARGS="-nobrowser -data=${PROWLARR_CONFIG_DIR}"
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     GROUP="sc-download"
     SERVICE_COMMAND="env HOME=${HOME_DIR} LD_LIBRARY_PATH=${SYNOPKG_PKGDEST}/lib ${PROWLARR} ${CMD_ARGS}"
 else
@@ -42,7 +42,7 @@ service_postinst ()
             touch "${PROWLARR_CONFIG_DIR}/update_required" 2>&1
         fi
 
-        if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+        if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
             set_unix_permissions "${CONFIG_DIR}"
         fi
     fi
@@ -69,7 +69,7 @@ service_postupgrade ()
         rsync -aX --exclude=package_info "${SYNOPKG_TEMP_UPGRADE_FOLDER}/backup/share/" "${SYNOPKG_PKGDEST}/share" 2>&1
     fi
 
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         set_unix_permissions "${SYNOPKG_PKGDEST}/share"
     fi
 }

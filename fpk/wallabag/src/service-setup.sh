@@ -9,7 +9,7 @@ MYSQL="/usr/local/mariadb10/bin/mysql"
 MYSQLDUMP="/usr/local/mariadb10/bin/mysqldump"
 MYSQL_USER="${SYNOPKG_PKGNAME}"
 MYSQL_DATABASE="${SYNOPKG_PKGNAME}"
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
     WEB_DIR="/var/services/web_packages"
 else
     WEB_DIR="/var/services/web"
@@ -25,7 +25,7 @@ IDX_FILE="${WEB_ROOT}/index.php"
 exec_php ()
 {
     # Pick PHP by DSM version
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
         if [ "${SYNOPKG_DSM_VERSION_MINOR}" -ge 2 ]; then
             PHP="/usr/local/bin/php82"
         else
@@ -49,11 +49,11 @@ exec_php ()
         PHP_SETTINGS=""
     fi
     # Fix for pdo_mysql default socket on DSM 6
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         PHP_SETTINGS="${PHP_SETTINGS} -d pdo_mysql.default_socket=/run/mysqld/mysqld10.sock"
     fi
     COMMAND="${PHP} ${PHP_SETTINGS} $*"
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         /bin/su "$WEB_USER" -s /bin/sh -c "${COMMAND}"
     else
         $COMMAND
@@ -64,7 +64,7 @@ exec_php ()
 validate_preinst ()
 {
     # Check for modification to PHP template defaults on DSM 6
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         WS_TMPL_DIR="/var/apps/WebStation/target/misc"
         WS_TMPL_FILE="php74_fpm.mustache"
         WS_TMPL_PATH="${WS_TMPL_DIR}/${WS_TMPL_FILE}"
@@ -110,7 +110,7 @@ validate_preinst ()
 service_postinst ()
 {
     # Web interface setup for DSM 6 -- used by INSTALL and UPGRADE
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         # Install the web interface
         echo "Installing web interface"
         ${MKDIR} "${WEB_ROOT}"
@@ -177,7 +177,7 @@ service_postinst ()
     fi
 
     # Fix permissions
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         chown -R "${WEB_USER}":"${WEB_GROUP}" "${WEB_ROOT}" 2>/dev/null
     fi
 
@@ -190,7 +190,7 @@ service_postinst ()
             ${MKDIR} "${TEMPDIR}"
             tar -xzf "${wizard_backup_file}" -C "${TEMPDIR}" 2>&1
             # Fix file ownership
-            if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+            if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
                 chown -R "${WEB_USER}":"${WEB_GROUP}" "${TEMPDIR}" 2>/dev/null
             fi
 
@@ -313,7 +313,7 @@ service_preuninst ()
 service_postuninst ()
 {
     # Web interface removal for DSM 6 -- used by UNINSTALL and UPGRADE
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         # Remove the web interface
         echo "Removing web interface"
         ${RM} "${WEB_ROOT}"

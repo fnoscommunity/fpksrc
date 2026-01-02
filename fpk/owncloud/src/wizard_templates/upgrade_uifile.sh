@@ -5,7 +5,7 @@ OC_OLD_VER=$(echo "${SYNOPKG_OLD_PKGVER}" | cut -d '-' -f 1)
 
 WEB_DIR="/var/services/web_packages"
 # for backwards compatability
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ];then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ];then
 	WEB_DIR="/var/services/web"
 fi
 WEB_ROOT="${WEB_DIR}/${SYNOPKG_PKGNAME}"

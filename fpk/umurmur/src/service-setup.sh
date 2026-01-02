@@ -62,7 +62,7 @@ service_preupgrade ()
     fi
 
     # Remove nobody user and group from configuration to address changed permission management in DSM6+
-    if [ $SYNOPKG_DSM_VERSION_MAJOR -gt 5 ]; then
+    if [ $TRIM_SYS_VERSION_MAJOR -gt 5 ]; then
         if [ -e "${CFG_FILE}" ]; then
             USER_NOBODY=$(grep -e 'username = "nobody";' "${CFG_FILE}" | cut -c1)
             if [ "${USER_NOBODY}" != "" ] && [ "${USER_NOBODY}" != "#" ]; then

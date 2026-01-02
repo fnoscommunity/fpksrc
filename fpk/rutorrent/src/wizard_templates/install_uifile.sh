@@ -133,7 +133,7 @@ END_OF_STEP
 {
   echo "[";
   base_install_step;
-  if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+  if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
     echo ",";
     additional_configuration_step;
   fi

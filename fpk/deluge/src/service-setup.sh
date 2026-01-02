@@ -36,7 +36,7 @@ DELUGED_DAEMON="${DELUGED} -c ${CFG_PATH} ${DELUGE_ARGS} -l ${DELUGED_LOG} -L in
 
 SERVICE_COMMAND=$(printf "${DELUGED_DAEMON}\n${DELUGEWEB_DAEMON}")
 
-if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -ge 7 ]; then
+if [ "${TRIM_SYS_VERSION_MAJOR}" -ge 7 ]; then
     GROUP="FnOScommunity"
 else
     GROUP="sc-download"
@@ -59,7 +59,7 @@ deluge_default_install ()
     install -m 0775 -o ${EFF_USER} -g ${GROUP} -d "${watch_folder}"
 
     # DSM<=6: add group ACL
-    if [ "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         echo "Setting-up group ACL permissions"
         if [ -n "${incomplete_folder}" ] && [ -d "${incomplete_folder}" ]; then
             set_syno_permissions "${incomplete_folder}" "${GROUP}"
@@ -107,7 +107,7 @@ service_postinst ()
 
     # DSM<=6: Copy new default configuration files prior from them being
     #         overwritten by old version during postupgrade recovery
-    if [ -r "${CFG_FILE}" -a "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ -r "${CFG_FILE}" -a "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         cp -p ${CFG_WATCH} ${CFG_WATCH}.new
         cp -p ${CFG_FILE} ${CFG_FILE}.new
         # Ensure core.conf as no newline at end of file
@@ -121,7 +121,7 @@ service_postupgrade ()
     # Adjust permissions on new path for DSM <= 6
     # Needed to force correct permissions, during update from prior version
     # Extract the right paths from config file
-    if [ -r "${CFG_FILE}" -a "${SYNOPKG_DSM_VERSION_MAJOR}" -lt 7 ]; then
+    if [ -r "${CFG_FILE}" -a "${TRIM_SYS_VERSION_MAJOR}" -lt 7 ]; then
         # Older versions of Deluge on DSM <= 6 must
         # be updated using a newer configuration
 

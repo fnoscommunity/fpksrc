@@ -2,13 +2,13 @@
 
 # start/stop script derived from ntopng/packages/etc/init.d/ntopng
 
-if [ -z "${SYNOPKG_PKGNAME}" ] || [ -z "${SYNOPKG_DSM_VERSION_MAJOR}" ]; then
+if [ -z "${SYNOPKG_PKGNAME}" ] || [ -z "${TRIM_SYS_VERSION_MAJOR}" ]; then
     echo "Error: Environment variables are not set." 1>&2;
     echo "Please run me using synopkg instead. Example: 'synopkg start ntopng'" 1>&2;
     exit 1
 fi
 
-if [ "$SYNOPKG_DSM_VERSION_MAJOR" -lt 7 ]; then
+if [ "$TRIM_SYS_VERSION_MAJOR" -lt 7 ]; then
     # define SYNOPKG_PKGVAR for forward compatibility
     SYNOPKG_PKGVAR="${SYNOPKG_PKGDEST}/var"
 fi
