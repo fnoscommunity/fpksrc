@@ -8,7 +8,7 @@ BACKUP_PORT="10053"
 ## I need root to bind to port 53 see `service_prestart()` below
 #SERVICE_COMMAND="${DNSCRYPT_PROXY} --config ${CFG_FILE} --pidfile ${PID_FILE} &"
 
-echo "DSM Version: $TRIM_SYS_VERSION_MAJOR.$TRIM_SYS_VERSION_MINOR-$SYNOPKG_DSM_VERSION_BUILD"
+echo "DSM Version: $TRIM_SYS_VERSION_MAJOR.$TRIM_SYS_VERSION_MINOR-$TRIM_SYS_VERSION_BUILD"
 # SRM 1.2 example: DSM Version: 5.2-7915
 # DSM 6.2 example: DSM Version: 6.2-23739
 UNAME=$(uname -a)
