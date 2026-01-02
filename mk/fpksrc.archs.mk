@@ -22,9 +22,9 @@ SRM_ARMv8_ARCHS = cypress
 SRM_ARCHS = $(SRM_ARMv7_ARCHS) $(SRM_ARMv8_ARCHS)
 
 # DSM - all ARMv7 except SRM specific archs
-DSM_ARMv7_ARCHS = alpine alpine4k armada370 armada375 armada38x armadaxp monaco
+FNOS_ARMv7_ARCHS = alpine alpine4k armada370 armada375 armada38x armadaxp monaco
 # comcerto2k is the only ARMv7 arch that uses an GCC (4.9.3) and GLIBC (2.20)
-DSM_ARMv7_ARCHS += comcerto2k
+FNOS_ARMv7_ARCHS += comcerto2k
 
 # Generic archs used for packages supporting multiple archs (where applicable)
 GENERIC_ARMv7_ARCH = armv7
@@ -33,7 +33,7 @@ GENERIC_x64_ARCH = x64
 GENERIC_ARCHS = $(GENERIC_ARMv7_ARCH) $(GENERIC_ARMv8_ARCH) $(GENERIC_x64_ARCH)
 
 ARMv5_ARCHS = 88f6281
-ARMv7_ARCHS = $(GENERIC_ARMv7_ARCH) $(DSM_ARMv7_ARCHS) $(SRM_ARMv7_ARCHS)
+ARMv7_ARCHS = $(GENERIC_ARMv7_ARCH) $(FNOS_ARMv7_ARCHS) $(SRM_ARMv7_ARCHS)
 # hi3535 is not supported by generic ARMv7 arch
 ARMv7L_ARCHS = hi3535
 ARMv8_ARCHS = $(GENERIC_ARMv8_ARCH) $(SRM_ARMv8_ARCHS) rtd1296 rtd1619b armada37xx
