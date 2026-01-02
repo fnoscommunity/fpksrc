@@ -38,7 +38,7 @@
 #  SERVICE_COMMAND               service command, to be used with generic service support
 #  SERVICE_EXE                   (not supported anymore) service command, implemented with busybox start-stop-daemon
 #  FPK_COMMANDS                  (optional) list of "folder/command" to create links for in folder /usr/local
-#  SPK_USR_LOCAL_LINKS           (optional) list of "folder:command" to create links for in folder /usr/local
+#  FPK_USR_LOCAL_LINKS           (optional) list of "folder:command" to create links for in folder /usr/local
 #                                           with 'command' in relative folder
 #  USE_ALTERNATE_TMPDIR          (optional) with USE_ALTERNATE_TMPDIR=1 TMD_DIR is defined to use a package specific temp
 #                                           folder at intallation and runtime.
@@ -119,8 +119,8 @@ endif
 
 # Recommend explicit STARTABLE=false
 ifeq ($(strip $(SSS_SCRIPT) $(SERVICE_COMMAND) $(STARTABLE)),)
-ifeq ($(strip $(FPK_COMMANDS) $(SPK_USR_LOCAL_LINKS)),)
-$(error Set STARTABLE=false or provide either SERVICE_COMMAND, SSS_SCRIPT, FPK_COMMANDS or SPK_USR_LOCAL_LINKS)
+ifeq ($(strip $(FPK_COMMANDS) $(FPK_USR_LOCAL_LINKS)),)
+$(error Set STARTABLE=false or provide either SERVICE_COMMAND, SSS_SCRIPT, FPK_COMMANDS or FPK_USR_LOCAL_LINKS)
 endif
 endif
 
@@ -244,9 +244,9 @@ ifneq ($(strip $(FPK_COMMANDS)),)
 	@jq --arg binaries '$(FPK_COMMANDS)' \
 		'."usr-local-linker" = {"bin": $$binaries | split(" ")}' $@ | sponge $@
 endif
-ifneq ($(strip $(SPK_USR_LOCAL_LINKS)),)
-# e.g. SPK_USR_LOCAL_LINKS=etc:var/foo lib:libs/bar
-	@jq --arg links_str '${SPK_USR_LOCAL_LINKS}' \
+ifneq ($(strip $(FPK_USR_LOCAL_LINKS)),)
+# e.g. FPK_USR_LOCAL_LINKS=etc:var/foo lib:libs/bar
+	@jq --arg links_str '${FPK_USR_LOCAL_LINKS}' \
 		'."usr-local-linker" += ($$links_str | split (" ") | map(split(":")) | group_by(.[0]) | map({(.[0][0]) : map(.[1])}) | add )' $@ | sponge $@
 endif
 ifneq ($(strip $(SERVICE_WIZARD_SHARE)),)
@@ -286,10 +286,10 @@ endif
 
 # Less than DSM 6.0
 else
-ifneq ($(strip $(FPK_COMMANDS) $(SPK_USR_LOCAL_LINKS)),)
+ifneq ($(strip $(FPK_COMMANDS) $(FPK_USR_LOCAL_LINKS)),)
 	@echo "# List of commands to create links for" >> $@
 	@echo "FPK_COMMANDS=\"${FPK_COMMANDS}\"" >> $@
-	@echo "SPK_USR_LOCAL_LINKS=\"${SPK_USR_LOCAL_LINKS}\"" >> $@
+	@echo "FPK_USR_LOCAL_LINKS=\"${FPK_USR_LOCAL_LINKS}\"" >> $@
 	@cat $(SPKSRC_MK)fpksrc.service.create_links >> $@
 endif
 endif

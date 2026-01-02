@@ -33,7 +33,7 @@ PYTHON_LIB_DIR = lib/python$(FPK_VERS_MAJOR_MINOR)
 
 POST_STRIP_TARGET = python313_extra_install
 
-SPK_USR_LOCAL_LINKS = bin:bin/python3.13
+FPK_USR_LOCAL_LINKS = bin:bin/python3.13
 
 include ../../mk/fpksrc.fpk.mk
 

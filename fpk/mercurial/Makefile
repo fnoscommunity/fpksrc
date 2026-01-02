@@ -20,6 +20,6 @@ LICENSE  = MPL1.1
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_USR_LOCAL_LINKS = bin:env/bin/hg
+FPK_USR_LOCAL_LINKS = bin:env/bin/hg
 
 include ../../mk/fpksrc.python.mk

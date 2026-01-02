@@ -11,7 +11,7 @@ service_create_links ()
         fi
     done
 
-    for item in ${SPK_USR_LOCAL_LINKS}
+    for item in ${FPK_USR_LOCAL_LINKS}
     do
         _target=$(echo ${item} | sed "s/.*://g")
         _link=/usr/local/$(echo ${item} | sed "s/:.*//g")/${_target##*/}
@@ -40,7 +40,7 @@ service_remove_links ()
         fi
     done
 
-    for item in ${SPK_USR_LOCAL_LINKS}
+    for item in ${FPK_USR_LOCAL_LINKS}
     do
         _target=$(echo ${item} | sed "s/.*://g")
         _link=/usr/local/$(echo ${item} | sed "s/:.*//g")/${_target##*/}

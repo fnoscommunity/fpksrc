@@ -30,8 +30,8 @@ USE_ALTERNATE_TMPDIR = 1
 
 FPK_COMMANDS = bin/duply bin/duplicity
 
-SPK_USR_LOCAL_LINKS  = bin:env/bin/duplicity
-SPK_USR_LOCAL_LINKS += bin:bin/duply
+FPK_USR_LOCAL_LINKS  = bin:env/bin/duplicity
+FPK_USR_LOCAL_LINKS += bin:bin/duply
 
 # [cryptography]
 DEPENDS += cross/openssl3

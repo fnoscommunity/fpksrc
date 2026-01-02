@@ -27,10 +27,10 @@ SERVICE_USER  = auto
 SERVICE_SETUP = src/service-setup.sh
 STARTABLE     = yes
 
-SPK_USR_LOCAL_LINKS  = bin:env/bin/salt-call
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-minion
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-proxy
-SPK_USR_LOCAL_LINKS += bin:env/bin/spm
+FPK_USR_LOCAL_LINKS  = bin:env/bin/salt-call
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-minion
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-proxy
+FPK_USR_LOCAL_LINKS += bin:env/bin/spm
 
 USE_ALTERNATE_TMPDIR = 1
 

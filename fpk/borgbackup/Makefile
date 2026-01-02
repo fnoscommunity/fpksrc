@@ -49,7 +49,7 @@ LICENSE  = 3-Clause BSD
 
 SERVICE_SETUP = src/service-setup.sh
 
-SPK_USR_LOCAL_LINKS = bin:env/bin/borg bin:env/bin/borgmatic bin:env/bin/emborg
+FPK_USR_LOCAL_LINKS = bin:env/bin/borg bin:env/bin/borgmatic bin:env/bin/emborg
 
 include ../../mk/fpksrc.python.mk
 

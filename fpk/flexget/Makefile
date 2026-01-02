@@ -35,7 +35,7 @@ ADMIN_PORT = $(SERVICE_PORT)
 
 USE_ALTERNATE_TMPDIR = 1
 
-SPK_USR_LOCAL_LINKS = bin:env/bin/flexget bin:env/bin/flexget-headless
+FPK_USR_LOCAL_LINKS = bin:env/bin/flexget bin:env/bin/flexget-headless
 
 # [Pendulum]
 DEPENDS += python/pendulum

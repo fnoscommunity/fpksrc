@@ -35,14 +35,14 @@ SERVICE_PORT_TITLE = Salt Master UI
 # Admin link for in DSM UI
 ADMIN_PORT = $(SERVICE_PORT)
 
-SPK_USR_LOCAL_LINKS  = bin:env/bin/salt
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-api
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-cp
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-key
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-master
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-run
-SPK_USR_LOCAL_LINKS += bin:env/bin/salt-ssh
-SPK_USR_LOCAL_LINKS += bin:env/bin/spm
+FPK_USR_LOCAL_LINKS  = bin:env/bin/salt
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-api
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-cp
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-key
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-master
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-run
+FPK_USR_LOCAL_LINKS += bin:env/bin/salt-ssh
+FPK_USR_LOCAL_LINKS += bin:env/bin/spm
 
 USE_ALTERNATE_TMPDIR = 1
 

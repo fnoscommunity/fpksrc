@@ -29,6 +29,6 @@ SERVICE_SETUP = src/service-setup.sh
 # https://github.com/fnoscommunity/fpksrc/issues/4427
 USE_ALTERNATE_TMPDIR = 1
 
-SPK_USR_LOCAL_LINKS = bin:env/bin/rdiff-backup bin:env/bin/rdiff-backup-statistics
+FPK_USR_LOCAL_LINKS = bin:env/bin/rdiff-backup bin:env/bin/rdiff-backup-statistics
 
 include ../../mk/fpksrc.python.mk
