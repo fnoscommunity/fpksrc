@@ -53,7 +53,7 @@ POST_STRIP_TARGET += prowlarr_extra_install
 
 include ../../mk/fpksrc.fpk.mk
 
-PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(FPK_REV)
+PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(FPK_TCVERS)_$(FPK_VERS)-$(FPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com/)
 
 .PHONY: prowlarr_custom_libe_sqlite3

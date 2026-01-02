@@ -53,7 +53,7 @@ CHECKPORT = true
 
 include ../../mk/fpksrc.fpk.mk
 
-PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(FPK_REV)
+PACKAGE_VERSION = $(FPK_NAME_ARCH)-$(FPK_TCVERS)_$(FPK_VERS)-$(FPK_REV)
 PACKAGE_AUTHOR = [FnOScommunity](https://FnOScommunity.com)
 
 .PHONY: sonarr_extra_install

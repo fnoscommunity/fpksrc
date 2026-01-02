@@ -48,7 +48,7 @@ endif
 ifeq ($(FPK_NAME_ARCH),)
 FPK_NAME_ARCH = $(ARCH)
 endif
-SPK_TCVERS = $(TCVERSION)
+FPK_TCVERS = $(TCVERSION)
 TC = syno$(ARCH_SUFFIX)
 endif
 endif
@@ -63,20 +63,20 @@ SPK_ARCH = noarch
 FPK_NAME_ARCH = noarch
 ifeq ($(call version_ge, $(TCVERSION), 7.0),1)
 ifeq ($(call version_ge, $(TCVERSION), 7.2),1)
-SPK_TCVERS = dsm72
+FPK_TCVERS = dsm72
 TC_OS_MIN_VER = 7.2-63134
 else
-SPK_TCVERS = dsm7
+FPK_TCVERS = dsm7
 TC_OS_MIN_VER = 7.0-40000
 endif
 else ifeq ($(call version_ge, $(TCVERSION), 6.1),1)
-SPK_TCVERS = dsm6
+FPK_TCVERS = dsm6
 TC_OS_MIN_VER = 6.1-15047
 else ifeq ($(call version_ge, $(TCVERSION), 3.0),1)
-SPK_TCVERS = all
+FPK_TCVERS = all
 TC_OS_MIN_VER = 3.1-1594
 else
-SPK_TCVERS = srm
+FPK_TCVERS = srm
 TC_OS_MIN_VER = 1.1-6931
 endif
 endif
@@ -92,7 +92,7 @@ OS_MIN_VER = $(TC_OS_MIN_VER)
 endif
 endif
 
-FPK_FILE_NAME = $(PACKAGES_DIR)/$(FPK_NAME)_$(FPK_NAME_ARCH)-$(SPK_TCVERS)_$(FPK_VERS)-$(FPK_REV).fpk
+FPK_FILE_NAME = $(PACKAGES_DIR)/$(FPK_NAME)_$(FPK_NAME_ARCH)-$(FPK_TCVERS)_$(FPK_VERS)-$(FPK_REV).fpk
 
 #####
 
