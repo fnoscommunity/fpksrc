@@ -95,7 +95,7 @@ service_msg_target:
 pre_service_target: service_msg_target
 
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
-# always use SPK_USER on DSM >= 7
+# always use FPK_USER on DSM >= 7
 SERVICE_USER = auto
 ifneq ($(strip $(SERVICE_WIZARD_SHARE)),)
 # always use data share worker on DSM >= 7
@@ -112,7 +112,7 @@ endif
 
 # SERVICE_USER=auto uses FPK_NAME
 ifeq ($(SERVICE_USER),auto)
-SPK_USER = $(FPK_NAME)
+FPK_USER = $(FPK_NAME)
 else ifneq ($(strip $(SERVICE_USER)),)
 $(error Only 'SERVICE_USER=auto' is supported since DSM7)
 endif
@@ -141,8 +141,8 @@ $(DSM_SCRIPTS_DIR)/service-setup:
 	@echo 'fi' >> $@
 	@echo '' >> $@
 ifneq ($(strip $(SERVICE_USER)),)
-	@echo USER=\"$(SPK_USER)\" >> $@
-	@echo EFF_USER=\"sc-$(SPK_USER)\" >> $@
+	@echo USER=\"$(FPK_USER)\" >> $@
+	@echo EFF_USER=\"sc-$(FPK_USER)\" >> $@
 	@echo '' >> $@
 endif
 ifneq ($(strip $(SERVICE_WIZARD_GROUP)),)
@@ -252,14 +252,14 @@ endif
 ifneq ($(strip $(SERVICE_WIZARD_SHARE)),)
 # e.g. SERVICE_WIZARD_SHARE=wizard_download_dir, for DSM 6 with USE_DATA_SHARE_WORKER = yes
 ifeq ($(strip $(USE_DATA_SHARE_WORKER)),yes)
-	@jq --arg share "{{${SERVICE_WIZARD_SHARE}}}" --arg user sc-${SPK_USER} \
+	@jq --arg share "{{${SERVICE_WIZARD_SHARE}}}" --arg user sc-${FPK_USER} \
 		'."data-share" = {"shares": [{"name": $$share, "permission":{"rw":[$$user]}} ] }' $@ | sponge $@
 endif
 else
 ifneq ($(strip $(SERVICE_WIZARD_SHARENAME)),)
 # e.g. SERVICE_WIZARD_SHARENAME=wizard_sharename, for DSM 6 and DSM 7
 ifeq ($(call version_ge, ${TCVERSION}, 6.1),1)
-	@jq --arg share "{{${SERVICE_WIZARD_SHARENAME}}}" --arg user sc-${SPK_USER} \
+	@jq --arg share "{{${SERVICE_WIZARD_SHARENAME}}}" --arg user sc-${FPK_USER} \
 		'."data-share" = {"shares": [{"name": $$share, "permission":{"rw":[$$user]}} ] }' $@ | sponge $@
 endif
 endif
@@ -345,8 +345,8 @@ ifneq ($(strip $(SYSTEM_GROUP)),)
 # options: http, system
 	@jq '."join-groupname" = "$(SYSTEM_GROUP)"' $@ | sponge $@
 endif
-ifneq ($(strip $(SPK_USER)),)
-	@jq '."username" = "sc-$(SPK_USER)"' $@ | sponge $@
+ifneq ($(strip $(FPK_USER)),)
+	@jq '."username" = "sc-$(FPK_USER)"' $@ | sponge $@
 endif
 ifneq ($(strip $(GROUP)),)
 	@jq '."groupname" = "$(GROUP)"' $@ | sponge $@
@@ -354,7 +354,7 @@ else
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
 	@jq '."groupname" = "fnoscommunity"' $@ | sponge $@
 else
-	@jq '."groupname" = "sc-$(SPK_USER)"' $@ | sponge $@
+	@jq '."groupname" = "sc-$(FPK_USER)"' $@ | sponge $@
 endif
 endif
 ifneq ($(findstring config,$(FPK_CONTENT)),config)
@@ -370,8 +370,8 @@ ifneq ($(strip $(SYSTEM_GROUP)),)
 # options: http, system
 	@jq '."join-groupname" = "$(SYSTEM_GROUP)"' $@ | sponge $@
 endif
-ifneq ($(strip $(SPK_USER)),)
-	@jq '."username" = "sc-$(SPK_USER)"' $@ | sponge $@
+ifneq ($(strip $(FPK_USER)),)
+	@jq '."username" = "sc-$(FPK_USER)"' $@ | sponge $@
 endif
 ifneq ($(strip $(FPK_GROUP)),)
 	@jq '."groupname" = "$(FPK_GROUP)"' $@ | sponge $@

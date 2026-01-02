@@ -48,7 +48,7 @@ DEPENDS = cross/curl cross/jackett-mono
 SERVICE_SETUP = src/service-setup-mono.sh
 FPK_DEPENDS = "mono>=5.8"
 # create one package for all ARMv7 archs that depend on mono
-SPK_PACKAGE_ARCHS = $(DSM7_ARMv7_ARCHS_DEPENDING_ON_MONO)
+FPK_PACKAGE_ARCHS = $(DSM7_ARMv7_ARCHS_DEPENDING_ON_MONO)
 else
 DEPENDS = cross/jackett
 # exclude archs that depend on mono from generic package for ARMv7

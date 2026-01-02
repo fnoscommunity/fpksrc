@@ -1,6 +1,6 @@
 FPK_NAME = tcl
 FPK_VERS = 8.6.14
-SPK_MAIN_VERS=$(word 1,$(subst ., ,$(FPK_VERS))).$(word 2,$(subst ., ,$(FPK_VERS)))
+FPK_MAIN_VERS=$(word 1,$(subst ., ,$(FPK_VERS))).$(word 2,$(subst ., ,$(FPK_VERS)))
 FPK_REV = 8
 FPK_ICON = src/tcl.png
 
@@ -20,6 +20,6 @@ CHANGELOG = "Update tcl to 8.6.14 released 2024-02-28."
 HOMEPAGE = https://www.tcl.tk
 LICENSE = Tcl/Tk License
 
-FPK_COMMANDS = bin/tclsh bin/tclsh$(SPK_MAIN_VERS)
+FPK_COMMANDS = bin/tclsh bin/tclsh$(FPK_MAIN_VERS)
 
 include ../../mk/fpksrc.fpk.mk

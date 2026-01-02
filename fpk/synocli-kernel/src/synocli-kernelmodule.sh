@@ -46,9 +46,9 @@ usage() {
 verbose() {
    printf '%20s %s\n' "" "$0 (verbose)"
    printf '%60s %s\n' "FnOScommunity kernel driver package name (SPK)" "[${SPK}]"
-   printf '%60s %s\n' "FnOScommunity configuration file (SPK_CFG)" "[${SPK_CFG}]"
-   printf '%60s %s\n' "FnOScommunity configuration path (SPK_CFG_PATH)" "[${SPK_CFG_PATH}]"
-   printf '%60s %s\n' "FnOScommunity configuration option (SPK_CFG_OPT)" "[${SPK_CFG_OPT}]"
+   printf '%60s %s\n' "FnOScommunity configuration file (FPK_CFG)" "[${FPK_CFG}]"
+   printf '%60s %s\n' "FnOScommunity configuration path (FPK_CFG_PATH)" "[${FPK_CFG_PATH}]"
+   printf '%60s %s\n' "FnOScommunity configuration option (FPK_CFG_OPT)" "[${FPK_CFG_OPT}]"
    printf '%60s %s\n' "Synology NAS arch (ARCH)" "[${ARCH}]"
    printf '%60s %s\n' "Synology DSM version (DSM_VERSION)" "[${DSM_VERSION}]"
    printf '%60s %s\n' "Running kernel version (KVER)" "[${KVER}]"
@@ -70,29 +70,29 @@ verbose() {
 get_ko_list() {
    ko_list_cfg=""
 
-   if [ "${SPK_CFG}" ]; then
+   if [ "${FPK_CFG}" ]; then
       # Check that configuration exists (if requested)
-      if [ ! -r ${SPK_CFG_PATH}/${SPK_CFG} ]; then
+      if [ ! -r ${FPK_CFG_PATH}/${FPK_CFG} ]; then
          usage
-         echo -ne "\nERROR: Configuration file [${SPK_CFG_PATH}/${SPK_CFG}] does not exist or inaccessible...\n\n"
+         echo -ne "\nERROR: Configuration file [${FPK_CFG_PATH}/${FPK_CFG}] does not exist or inaccessible...\n\n"
          exit 1
       fi
 
       # Always include default first
-      ko_list_cfg=$(sed -n "s/^default:\(.*\)/\1/p" ${SPK_CFG_PATH}/${SPK_CFG})
+      ko_list_cfg=$(sed -n "s/^default:\(.*\)/\1/p" ${FPK_CFG_PATH}/${FPK_CFG})
       if [ ! "${ko_list_cfg}" ]; then
          usage
-         echo -ne "\nERROR: Configuration option [default] not found in file [${SPK_CFG_PATH}/${SPK_CFG}]...\n\n"
+         echo -ne "\nERROR: Configuration option [default] not found in file [${FPK_CFG_PATH}/${FPK_CFG}]...\n\n"
          exit 1
       fi
 
       IFS=","
-      for config in ${SPK_CFG_OPT}
+      for config in ${FPK_CFG_OPT}
       do
-         ko_list_cfg_tmp=$(sed -n "s/^${config}:\(.*\)/\1/p" ${SPK_CFG_PATH}/${SPK_CFG})
+         ko_list_cfg_tmp=$(sed -n "s/^${config}:\(.*\)/\1/p" ${FPK_CFG_PATH}/${FPK_CFG})
          if [ ! "${ko_list_cfg}" ]; then
             usage
-            echo -ne "\nERROR: Configuration option [${config}:] not found in file [${SPK_CFG_PATH}/${SPK_CFG}]...\n\n"
+            echo -ne "\nERROR: Configuration option [${config}:] not found in file [${FPK_CFG_PATH}/${FPK_CFG}]...\n\n"
             exit 1
          fi
          ko_list_cfg+="${ko_list_cfg_tmp} "
@@ -159,9 +159,9 @@ fi
 ### Global variables
 ###
 SPK=""                                                                 # FnOScommunity kernel driver package name
-SPK_CFG=""                                                             # FnOScommunity configuration file
-SPK_CFG_OPT=""                                                         # FnOScommunity configuration option
-SPK_CFG_PATH=""                                                        # FnOScommunity configuration path
+FPK_CFG=""                                                             # FnOScommunity configuration file
+FPK_CFG_OPT=""                                                         # FnOScommunity configuration option
+FPK_CFG_PATH=""                                                        # FnOScommunity configuration path
 ACTION=""                                                              # Module action insmod|rmmod|reload|status
 VERBOSE="FALSE"                                                        # Set verbose mode
 HELP="FALSE"                                                           # Print help
@@ -173,8 +173,8 @@ do
                                         -s|--spk ) shift 1
                                                    SPK=$1;;
                                      -c|--config ) shift 1
-                                                   SPK_CFG=$(echo $1 | cut -f1 -d:)
-                                                   SPK_CFG_OPT=$(echo $1 | cut -f2 -d:);;
+                                                   FPK_CFG=$(echo $1 | cut -f1 -d:)
+                                                   FPK_CFG_OPT=$(echo $1 | cut -f2 -d:);;
                                        -u|--udev ) shift 1
                                                    URULE=$(echo $1 | cut -f1 -d:);;
                                        -h|--help ) HELP="TRUE";;
@@ -203,7 +203,7 @@ SYNOLOG=${SYNOLOG_PATH}/synocli-kernelmodule.log                       # Default
 
 # If SPK is set reassign variables
 if [ -n "${SPK}" ]; then
-   SPK_CFG_PATH="/var/apps/${SPK}/target/etc"
+   FPK_CFG_PATH="/var/apps/${SPK}/target/etc"
    FPATH="/var/apps/${SPK}/target/lib/firmware"
    MPATH="/var/apps/${SPK}/target/lib/modules"
    UPATH="/var/apps/${SPK}/target/rules.d"

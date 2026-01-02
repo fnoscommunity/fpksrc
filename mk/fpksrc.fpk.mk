@@ -7,9 +7,9 @@
 #  MAINTAINER                   Package maintainer (mandatory)
 #  MAINTAINER_URL               URL of package maintainer (optional when MAINTAINER is a valid github user)
 #  FPK_NAME_ARCH                (optional) arch specific spk file name (default: $(ARCH))
-#  SPK_PACKAGE_ARCHS            (optional) list of archs in the spk file (default: $(ARCH) or list of archs when generic arch)
-#  UNSUPPORTED_ARCHS            (optional) Unsupported archs are removed from gemeric arch list (ignored when SPK_PACKAGE_ARCHS is used)
-#  REMOVE_FROM_GENERIC_ARCHS    (optional) A list of archs to be excluded from generic archs (ignored when SPK_PACKAGE_ARCHS is used)
+#  FPK_PACKAGE_ARCHS            (optional) list of archs in the spk file (default: $(ARCH) or list of archs when generic arch)
+#  UNSUPPORTED_ARCHS            (optional) Unsupported archs are removed from gemeric arch list (ignored when FPK_PACKAGE_ARCHS is used)
+#  REMOVE_FROM_GENERIC_ARCHS    (optional) A list of archs to be excluded from generic archs (ignored when FPK_PACKAGE_ARCHS is used)
 #  SSS_SCRIPT                   (optional) Use service start stop script from given file
 #  INSTALLER_SCRIPT             (optional) Use installer script from given file
 #  CONF_DIR                     (optional) To provide a package specific config folder with files (e.g. privilege file)
@@ -36,13 +36,13 @@ ifneq ($(ARCH),)
 ARCH_SUFFIX = -$(ARCH)-$(TCVERSION)
 ifneq ($(ARCH),noarch)
 # arch specific packages
-ifneq ($(SPK_PACKAGE_ARCHS),)
-SPK_ARCH = $(SPK_PACKAGE_ARCHS)
+ifneq ($(FPK_PACKAGE_ARCHS),)
+FPK_ARCH = $(FPK_PACKAGE_ARCHS)
 else
 ifeq ($(findstring $(ARCH),$(GENERIC_ARCHS)),$(ARCH))
-SPK_ARCH = $(filter-out $(UNSUPPORTED_ARCHS) $(REMOVE_FROM_GENERIC_ARCHS),$(TC_ARCH))
+FPK_ARCH = $(filter-out $(UNSUPPORTED_ARCHS) $(REMOVE_FROM_GENERIC_ARCHS),$(TC_ARCH))
 else
-SPK_ARCH = $(filter-out $(UNSUPPORTED_ARCHS),$(TC_ARCH))
+FPK_ARCH = $(filter-out $(UNSUPPORTED_ARCHS),$(TC_ARCH))
 endif
 endif
 ifeq ($(FPK_NAME_ARCH),)
@@ -59,7 +59,7 @@ include ../../mk/fpksrc.directories.mk
 ifeq ($(ARCH),noarch)
 ifneq ($(strip $(TCVERSION)),)
 # different noarch packages
-SPK_ARCH = noarch
+FPK_ARCH = noarch
 FPK_NAME_ARCH = noarch
 ifeq ($(call version_ge, $(TCVERSION), 7.0),1)
 ifeq ($(call version_ge, $(TCVERSION), 7.2),1)
@@ -144,7 +144,7 @@ FPK_CONTENT = app.tgz manifest cmd
 DSM_CONF_DIR = $(WORK_DIR)/config
 
 ifneq ($(CONF_DIR),)
-SPK_CONF_DIR = $(CONF_DIR)
+FPK_CONF_DIR = $(CONF_DIR)
 endif
 
 # Generic service scripts
@@ -171,7 +171,7 @@ $(WORK_DIR)/manifest: SHELL:=/bin/sh
 $(WORK_DIR)/manifest:
 	$(create_target_dir)
 	@$(MSG) "Creating manifest file for $(FPK_NAME)"
-	@if [ -z "$(SPK_ARCH)" ]; then \
+	@if [ -z "$(FPK_ARCH)" ]; then \
 	   if [ "$(ARCH)" = "noarch" ]; then \
 	      echo "ERROR: 'noarch' package without TCVERSION is not supported" ; \
 	      exit 1; \
@@ -495,7 +495,7 @@ config:
 ifneq ($(strip $(CONF_DIR)),)
 	@$(MSG) "Preparing config"
 	@mkdir -p $(DSM_CONF_DIR)
-	@find $(SPK_CONF_DIR) -maxdepth 1 -type f -print -exec cp -f {} $(DSM_CONF_DIR) \;
+	@find $(FPK_CONF_DIR) -maxdepth 1 -type f -print -exec cp -f {} $(DSM_CONF_DIR) \;
 	@find $(DSM_CONF_DIR) -maxdepth 1 -type f -print -exec chmod 0644 {} \;
 ifneq ($(findstring config,$(FPK_CONTENT)),config)
 FPK_CONTENT += config

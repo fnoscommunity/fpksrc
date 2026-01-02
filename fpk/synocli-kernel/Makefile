@@ -14,7 +14,7 @@ CHANGELOG     = "1. Add support for r1000 arch"
 HOMEPAGE = https://FnOScommunity.com/
 LICENSE  = Each tool is licensed under it\'s respective license.
 
-SPK_LINKS     = /usr/local/bin/synocli-kernelmodule:bin/synocli-kernelmodule.sh
+FPK_LINKS     = /usr/local/bin/synocli-kernelmodule:bin/synocli-kernelmodule.sh
 FPK_COMMANDS  = bin/fuser
 FPK_COMMANDS += bin/usb-devices
 FPK_COMMANDS += bin/usbhid-dump

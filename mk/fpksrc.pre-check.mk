@@ -12,15 +12,15 @@
 # disable checks for dependency targets
 ifneq ($(DEPENDENCY_WALK),1)
 
-# SPK_FOLDER    
+# FPK_FOLDER    
 # name of the spk package folder
 # github status check does not rely on the (SPK) NAME but uses the folder name
 # required for packages that have folder name different to FPK_NAME (sonarr -> nzbget, mono_58 -> mono)
-SPK_FOLDER = $(notdir $(CURDIR))
+FPK_FOLDER = $(notdir $(CURDIR))
 
 ifneq ($(wildcard BROKEN),)
   ifneq ($(BUILD_UNSUPPORTED_FILE),)
-    $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): Broken package >> $(BUILD_UNSUPPORTED_FILE))
+    $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): Broken package >> $(BUILD_UNSUPPORTED_FILE))
   endif
   @$(error $(NAME): Broken package)
 endif
@@ -31,7 +31,7 @@ ifneq ($(REQUIRE_KERNEL),)
   ifeq ($(REQUIRE_KERNEL_MODULE),)
     ifneq (,$(findstring $(ARCH),$(GENERIC_ARCHS)))
       ifneq ($(BUILD_UNSUPPORTED_FILE),)
-        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): Generic arch '$(ARCH)' cannot be used when REQUIRE_KERNEL is set unless using REQUIRE_KERNEL_MODULE >> $(BUILD_UNSUPPORTED_FILE))
+        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): Generic arch '$(ARCH)' cannot be used when REQUIRE_KERNEL is set unless using REQUIRE_KERNEL_MODULE >> $(BUILD_UNSUPPORTED_FILE))
       endif
       @$(error Generic arch '$(ARCH)' cannot be used when REQUIRE_KERNEL is set unless using REQUIRE_KERNEL_MODULE)
     endif
@@ -42,7 +42,7 @@ endif
 ifneq ($(UNSUPPORTED_ARCHS),)
   ifneq (,$(findstring $(ARCH),$(UNSUPPORTED_ARCHS)))
     ifneq (,$(BUILD_UNSUPPORTED_FILE))
-      $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): Arch '$(ARCH)' is not a supported architecture >> $(BUILD_UNSUPPORTED_FILE))
+      $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): Arch '$(ARCH)' is not a supported architecture >> $(BUILD_UNSUPPORTED_FILE))
     endif
     @$(error Arch '$(ARCH)' is not a supported architecture)
   endif
@@ -53,7 +53,7 @@ ifneq ($(TCVERSION),)
 ifneq ($(UNSUPPORTED_ARCHS_TCVERSION),)
   ifneq (,$(findstring $(ARCH)-$(TCVERSION),$(UNSUPPORTED_ARCHS_TCVERSION)))
     ifneq (,$(BUILD_UNSUPPORTED_FILE))
-      $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): Arch '$(ARCH)-$(TCVERSION)' is not a supported architecture >> $(BUILD_UNSUPPORTED_FILE))
+      $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): Arch '$(ARCH)-$(TCVERSION)' is not a supported architecture >> $(BUILD_UNSUPPORTED_FILE))
     endif
     @$(error Arch '$(ARCH)-$(TCVERSION)' is not a supported architecture)
   endif
@@ -62,7 +62,7 @@ endif
 ifeq ($(call version_ge, ${TCVERSION}, 7.0),1)
   ifneq ($(strip $(INSTALLER_SCRIPT)),)
     ifneq ($(BUILD_UNSUPPORTED_FILE),)
-      $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): INSTALLER_SCRIPT '$(INSTALLER_SCRIPT)' cannot be used for DSM ${TCVERSION} >> $(BUILD_UNSUPPORTED_FILE))
+      $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): INSTALLER_SCRIPT '$(INSTALLER_SCRIPT)' cannot be used for DSM ${TCVERSION} >> $(BUILD_UNSUPPORTED_FILE))
     endif
     @$(error INSTALLER_SCRIPT '$(INSTALLER_SCRIPT)' cannot be used for DSM ${TCVERSION})
   endif
@@ -73,7 +73,7 @@ ifneq ($(REQUIRED_MAX_DSM),)
   ifeq ($(call version_ge, ${TCVERSION}, 3.0),1)
     ifneq ($(TCVERSION),$(firstword $(sort $(TCVERSION) $(REQUIRED_MAX_DSM))))
       ifneq (,$(BUILD_UNSUPPORTED_FILE))
-        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): DSM Toolchain $(TCVERSION) is higher than $(REQUIRED_MAX_DSM) >> $(BUILD_UNSUPPORTED_FILE))
+        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): DSM Toolchain $(TCVERSION) is higher than $(REQUIRED_MAX_DSM) >> $(BUILD_UNSUPPORTED_FILE))
       endif
       @$(error DSM Toolchain $(TCVERSION) is higher than $(REQUIRED_MAX_DSM))
     endif
@@ -85,7 +85,7 @@ ifneq ($(REQUIRED_MIN_DSM),)
   ifeq ($(call version_ge, ${TCVERSION}, 3.0),1)
     ifneq ($(REQUIRED_MIN_DSM),$(firstword $(sort $(TCVERSION) $(REQUIRED_MIN_DSM))))
       ifneq (,$(BUILD_UNSUPPORTED_FILE))
-        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): DSM Toolchain $(TCVERSION) is lower than $(REQUIRED_MIN_DSM) >> $(BUILD_UNSUPPORTED_FILE))
+        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): DSM Toolchain $(TCVERSION) is lower than $(REQUIRED_MIN_DSM) >> $(BUILD_UNSUPPORTED_FILE))
       endif
       @$(error DSM Toolchain $(TCVERSION) is lower than $(REQUIRED_MIN_DSM))
     endif
@@ -97,7 +97,7 @@ ifneq ($(REQUIRED_MIN_SRM),)
   ifeq ($(call version_lt, ${TCVERSION}, 3.0),1)
     ifneq ($(REQUIRED_MIN_SRM),$(firstword $(sort $(TCVERSION) $(REQUIRED_MIN_SRM))))
       ifneq (,$(BUILD_UNSUPPORTED_FILE))
-        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(SPK_FOLDER): SRM Toolchain $(TCVERSION) is lower than $(REQUIRED_MIN_SRM) >> $(BUILD_UNSUPPORTED_FILE))
+        $(shell echo $(date --date=now +"%Y.%m.%d %H:%M:%S") - $(FPK_FOLDER): SRM Toolchain $(TCVERSION) is lower than $(REQUIRED_MIN_SRM) >> $(BUILD_UNSUPPORTED_FILE))
       endif
       @$(error SRM Toolchain $(TCVERSION) is lower than $(REQUIRED_MIN_SRM))
     endif
