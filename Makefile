@@ -4,11 +4,11 @@ include mk/fpksrc.test-rules.mk
 
 AVAILABLE_TCS = $(notdir $(wildcard toolchain/syno-*))
 AVAILABLE_ARCHS = $(notdir $(subst syno-,/,$(AVAILABLE_TCS)))
-SUPPORTED_SPKS = $(sort $(patsubst spk/%/Makefile,%,$(wildcard spk/*/Makefile)))
+SUPPORTED_FPKS = $(sort $(patsubst fpk/%/Makefile,%,$(wildcard fpk/*/Makefile)))
 
 
 ifneq ($(firstword $(MAKECMDGOALS)),test)
-all: $(SUPPORTED_SPKS)
+all: $(SUPPORTED_FPKS)
 endif
 
 all-noarch:
@@ -18,7 +18,7 @@ all-noarch:
 	done
 
 ifneq ($(firstword $(MAKECMDGOALS)),test)
-clean: $(addsuffix -clean,$(SUPPORTED_SPKS))
+clean: $(addsuffix -clean,$(SUPPORTED_FPKS))
 clean: native-clean cross-clean
 endif
 
@@ -89,7 +89,7 @@ define FPK_ARCH_template =
 spk-$(1)-$(2): spk/$(1)/Makefile setup
 	cd spk/$(1) && env $(MAKE) arch-$(2)
 endef
-$(foreach arch,$(AVAILABLE_ARCHS),$(foreach spk,$(SUPPORTED_SPKS),$(eval $(call FPK_ARCH_template,$(spk),$(arch)))))
+$(foreach arch,$(AVAILABLE_ARCHS),$(foreach spk,$(SUPPORTED_FPKS),$(eval $(call FPK_ARCH_template,$(spk),$(arch)))))
 
 prepare: downloads
 	@for tc in $(dir $(wildcard toolchain/*/Makefile)) ; \
