@@ -31,7 +31,6 @@ RUN apt update && apt install --no-install-recommends -y \
 	fakeroot \
 	flex \
 	gh \
-	g++-multilib \
 	gawk \
 	gettext \
 	gfortran \
@@ -84,7 +83,9 @@ RUN apt update && apt install --no-install-recommends -y \
 	xmlto \
 	yasm \
 	zip \
-	zlib1g-dev
+	zlib1g-dev \
+	gcc-12 \
+	gcc-12-aarch64-linux-gnu
 
 # Python based apps
 RUN apt install --no-install-recommends -y \
