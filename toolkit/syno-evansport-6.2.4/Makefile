@@ -1,6 +1,0 @@
-TK_ARCH = evansport
-TK_VERS = 6.2
-
-TK_TARGET = i686-pc-linux-gnu
-
-include ../../mk/fpksrc.toolkit.mk

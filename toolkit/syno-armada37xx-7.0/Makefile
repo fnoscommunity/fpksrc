@@ -1,7 +1,0 @@
-TK_ARCH = armada37xx
-TK_VERS = 7.0
-
-TK_TARGET = aarch64-unknown-linux-gnueabi
-TK_SYSROOT = sysroot
-
-include ../../mk/fpksrc.toolkit.mk

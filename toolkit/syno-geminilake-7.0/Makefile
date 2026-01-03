@@ -1,6 +1,0 @@
-TK_ARCH = geminilake
-TK_VERS = 7.0
-
-TK_TARGET = x86_64-pc-linux-gnu
-
-include ../../mk/fpksrc.toolkit.mk
