@@ -28,7 +28,7 @@ echo "Building dependency list..."
 DEPENDENCY_LIST=./dependency-list.txt
 make dependency-list 2> /dev/null > ${DEPENDENCY_LIST}
 
-# search for dependent spk packages
+# search for dependent fpk packages
 for package in ${GH_DEPENDENCY_FOLDERS}
 do
     echo "===> Searching for dependent package: ${package}"
@@ -50,10 +50,10 @@ packages=$(printf %s "${FPK_TO_BUILD}" | tr ' ' '\n' | sort -u | tr '\n' ' ')
 
 # for ffmpeg v5-7 find all packages that depend on them
 for i in {5..7}; do
-    ffmpeg_dependent_packages=$(find spk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "FFMPEG_PACKAGE = ffmpeg${i}" {} \; | grep -Po ".*spk/\K[^/]*" | sort | tr '\n' ' ')
+    ffmpeg_dependent_packages=$(find fpk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "FFMPEG_PACKAGE = ffmpeg${i}" {} \; | grep -Po ".*fpk/\K[^/]*" | sort | tr '\n' ' ')
 
     # If packages contain a package that depends on ffmpeg (or is ffmpeg),
-    # then ensure relevant ffmpeg spk is first in list
+    # then ensure relevant ffmpeg fpk is first in list
     for package in ${packages}
     do
         if [ "$(echo ffmpeg${i} ${ffmpeg_dependent_packages} | grep -ow ${package})" != "" ]; then
@@ -65,10 +65,10 @@ for i in {5..7}; do
 done
 
 # for synocli-videodriver that ffmpeg v5-7 depends on
-videodrv_dependent_packages=$(find spk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "fpksrc.videodriver.mk" {} \; | grep -Po ".*spk/\K[^/]*" | sort | tr '\n' ' ')
+videodrv_dependent_packages=$(find fpk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "fpksrc.videodriver.mk" {} \; | grep -Po ".*fpk/\K[^/]*" | sort | tr '\n' ' ')
 
 # If packages contain a package that depends on fpksrc.videodriver.mk,
-# then ensure synocli-videodriver spk is first in list
+# then ensure synocli-videodriver fpk is first in list
 for package in ${packages}
 do
     if [ "$(echo synocli-videodriver ${videodrv_dependent_packages} | grep -ow ${package})" != "" ]; then
@@ -80,10 +80,10 @@ done
 
 # for python (310, 311, 312, 313) find all packages that depend on them
 for py in python310 python311 python312 python313; do
-    python_dependent_packages=$(find spk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "PYTHON_PACKAGE = ${py}" {} \; | grep -Po ".*spk/\K[^/]*" | sort | tr '\n' ' ')
+    python_dependent_packages=$(find fpk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "PYTHON_PACKAGE = ${py}" {} \; | grep -Po ".*fpk/\K[^/]*" | sort | tr '\n' ' ')
 
     # If packages contain a package that depends on python (or is python), then ensure
-    # relevant python spk is first in list
+    # relevant python fpk is first in list
     for package in ${packages}
     do
         if [ "$(echo ${py} ${python_dependent_packages} | grep -ow ${package})" != "" ]; then
@@ -95,7 +95,7 @@ for py in python310 python311 python312 python313; do
 done
 
 # find all noarch packages
-all_noarch=$(find spk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "override ARCH" {} \; | grep -Po ".*spk/\K[^/]*" | sort | tr '\n' ' ')
+all_noarch=$(find fpk/ -maxdepth 2 -mindepth 2 -name "Makefile" -exec grep -Ho "override ARCH" {} \; | grep -Po ".*fpk/\K[^/]*" | sort | tr '\n' ' ')
 
 # separate noarch and arch specific packages
 # and filter out packages that are removed or do not exist (e.g. nzbdrone)
@@ -105,7 +105,7 @@ has_arch_packages='false'
 has_noarch_packages='false'
 for package in ${packages}
 do
-    if [ -f "./spk/${package}/Makefile" ]; then
+    if [ -f "./fpk/${package}/Makefile" ]; then
         if [ "$(echo ${all_noarch} | grep -ow ${package})" = "" ]; then
             arch_packages+="${package} "
             has_arch_packages='true'
@@ -121,8 +121,8 @@ min_dsm72_packages=
 has_min_dsm72_packages='false'
 for package in ${packages}
 do
-    if [ -f "./spk/${package}/Makefile" ]; then
-        if [ "$(grep REQUIRED_MIN_DSM ./spk/${package}/Makefile | cut -d= -f2 | xargs)" = "7.2" ]; then
+    if [ -f "./fpk/${package}/Makefile" ]; then
+        if [ "$(grep REQUIRED_MIN_DSM ./fpk/${package}/Makefile | cut -d= -f2 | xargs)" = "7.2" ]; then
             min_dsm72_packages+="${package} "
             has_min_dsm72_packages='true'
         fi

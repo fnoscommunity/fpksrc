@@ -1,9 +1,9 @@
-# Allow overriding the name, used by spk/zsh-static.
+# Allow overriding the name, used by fpk/zsh-static.
 FPK_NAME ?= zsh
 FPK_VERS = 5.9
 FPK_CONFLICT ?= zsh-static
-# Allow overriding the revision, used by spk/zsh-static.
-# If you rev here, please also rev spk/zsh-static.
+# Allow overriding the revision, used by fpk/zsh-static.
+# If you rev here, please also rev fpk/zsh-static.
 FPK_REV ?= 14
 FPK_ICON = ../zsh/src/zsh.png
 

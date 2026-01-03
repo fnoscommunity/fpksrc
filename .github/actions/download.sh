@@ -78,7 +78,7 @@ if [ ${#build_pkgs[@]} -eq 0 ]; then
 else
     echo "===> Downloading wheels: ${build_pkgs[*]}"
     for pkg in "${build_pkgs[@]}"; do
-        current="spk/${pkg}"
+        current="fpk/${pkg}"
         echo "  -> ${current}: download-wheels"
         # Wheels don't have checksum verification, so no retry needed
         make -C "${current}" download-wheels

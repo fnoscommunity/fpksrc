@@ -12,9 +12,9 @@ all: $(SUPPORTED_FPKS)
 endif
 
 all-noarch:
-	@for spk in $(filter-out $(dir $(wildcard spk/*/BROKEN)),$(dir $(wildcard spk/*/Makefile))) ; \
+	@for fpk in $(filter-out $(dir $(wildcard fpk/*/BROKEN)),$(dir $(wildcard fpk/*/Makefile))) ; \
 	do \
-	   grep -q "override ARCH" "$${spk}/Makefile" && $(MAKE) -C $${spk} ; \
+	   grep -q "override ARCH" "$${fpk}/Makefile" && $(MAKE) -C $${fpk} ; \
 	done
 
 ifneq ($(firstword $(MAKECMDGOALS)),test)
@@ -55,13 +55,13 @@ cross-clean:
 	    $(MAKE) -C $${cross} clean ; \
 	done
 
-spk-clean:
-	@for spk in $(filter-out $(dir $(wildcard spk/*/BROKEN)),$(dir $(wildcard spk/*/Makefile))) ; \
+fpk-clean:
+	@for fpk in $(filter-out $(dir $(wildcard fpk/*/BROKEN)),$(dir $(wildcard fpk/*/Makefile))) ; \
 	do \
-	    $(MAKE) -C $${spk} clean ; \
+	    $(MAKE) -C $${fpk} clean ; \
 	done
 
-%: spk/%/Makefile
+%: fpk/%/Makefile
 	cd $(dir $^) && env $(MAKE)
 
 native-%: native/%/Makefile
@@ -73,9 +73,9 @@ native-%-clean: native/%/Makefile
 # build dependency tree for all packages
 # - exclude broken packages
 dependency-tree:
-	@for spk in $(filter-out $(dir $(wildcard spk/*/BROKEN)),$(dir $(wildcard spk/*/Makefile))) ; \
+	@for fpk in $(filter-out $(dir $(wildcard fpk/*/BROKEN)),$(dir $(wildcard fpk/*/Makefile))) ; \
 	do \
-	    $(MAKE) --no-print-directory -C $${spk} dependency-tree ; \
+	    $(MAKE) --no-print-directory -C $${fpk} dependency-tree ; \
 	done
 
 # build dependency list for all packages
@@ -84,12 +84,12 @@ dependency-list:
 	@mk/dependency-list.sh
 
 # define a template that instantiates a 'python3-avoton-6.1' -style target for
-# every ($2) arch, every ($1) spk
+# every ($2) arch, every ($1) fpk
 define FPK_ARCH_template =
-spk-$(1)-$(2): spk/$(1)/Makefile setup
-	cd spk/$(1) && env $(MAKE) arch-$(2)
+fpk-$(1)-$(2): fpk/$(1)/Makefile setup
+	cd fpk/$(1) && env $(MAKE) arch-$(2)
 endef
-$(foreach arch,$(AVAILABLE_ARCHS),$(foreach spk,$(SUPPORTED_FPKS),$(eval $(call FPK_ARCH_template,$(spk),$(arch)))))
+$(foreach arch,$(AVAILABLE_ARCHS),$(foreach fpk,$(SUPPORTED_FPKS),$(eval $(call FPK_ARCH_template,$(fpk),$(arch)))))
 
 prepare: downloads
 	@for tc in $(dir $(wildcard toolchain/*/Makefile)) ; \
@@ -143,7 +143,7 @@ jsonlint:
 ifeq (,$(shell which jsonlint))
 	$(error "jsonlint not found, install with: npm install -g jsonlint")
 else
-	find spk/ -not -path "*work*" -regextype posix-extended -regex '.*(\.json|install\w*|upgrade\w*|app/config)' -print -exec jsonlint -q -c {} \;
+	find fpk/ -not -path "*work*" -regextype posix-extended -regex '.*(\.json|install\w*|upgrade\w*|app/config)' -print -exec jsonlint -q -c {} \;
 endif
 lint: jsonlint
 

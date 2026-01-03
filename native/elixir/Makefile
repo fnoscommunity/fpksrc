@@ -19,7 +19,7 @@ INSTALL_MAKE_OPTIONS = install DESTDIR=$(INSTALL_DIR) PREFIX=$(INSTALL_PREFIX)
 
 # REMARKS: 
 # build fails in native/elixir folder due to ERLANG_BIN_DIR, 
-# but succeeds in dependencies folders (i.e. cross/rabbitmq and spk/rabbitmq)
+# but succeeds in dependencies folders (i.e. cross/rabbitmq and fpk/rabbitmq)
 ENV += PATH=$$PATH:$(ERLANG_BIN_DIR)
 
 include ../../mk/fpksrc.native-cc.mk

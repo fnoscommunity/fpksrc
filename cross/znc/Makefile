@@ -35,7 +35,7 @@ DEPENDS += cross/cyrus-sasl
 CMAKE_ARGS += -DWANT_CYRUS=true
 
 # Boost mandatory for i18n and
-# can only be built from spk
+# can only be built from fpk
 ifneq ($(strip $(BOOST_BUILD_PATH)),)
 CMAKE_ARGS += -DWANT_I18N=true
 endif

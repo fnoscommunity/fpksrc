@@ -1,4 +1,4 @@
-#default file provided by monit spk
+#default file provided by monit fpk
 
 check process SickBeard-Custom with pidfile /var/apps/sickbeard-custom/var/sickbeard-custom.pid
     start program = "/var/apps/sickbeard-custom/scripts/start-stop-status start"

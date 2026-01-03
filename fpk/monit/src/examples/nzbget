@@ -1,4 +1,4 @@
-#default file provided by monit spk
+#default file provided by monit fpk
 
 check process nzbget with pidfile /var/apps/nzbget/var/nzbget.pid
     start program = "/var/apps/nzbget/scripts/start-stop-status start"

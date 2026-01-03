@@ -25,7 +25,7 @@ BUILD_DEPENDS += cross/libXt
 # REMARKS:
 # for a (currently) unknown reason, building in the cross folder fails
 # - it does not find system libraries like libjpeg, libpng, ...
-# but building as package dependency in the spk folder works.
+# but building as package dependency in the fpk folder works.
 
 # Dependencies used as system dependencies:
 DEPENDS  = cross/alsa-lib

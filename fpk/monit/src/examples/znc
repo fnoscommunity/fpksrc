@@ -1,4 +1,4 @@
-#default file provided by monit spk
+#default file provided by monit fpk
 
 check process ZNC with pidfile /var/apps/znc/var/znc.pid
     start program = "/var/apps/znc/scripts/start-stop-status start"

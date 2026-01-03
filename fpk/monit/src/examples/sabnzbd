@@ -1,4 +1,4 @@
-#default file provided by monit spk
+#default file provided by monit fpk
 
 check process Sabnzb with pidfile /var/apps/sabnzbd/var/sabnzbd.pid
     start program = "/var/apps/sabnzbd/scripts/start-stop-status start"

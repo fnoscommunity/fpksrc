@@ -20,8 +20,8 @@ CONFIGURE_ARGS += --disable-debug
 CONFIGURE_ARGS += --disable-static
 CONFIGURE_ARGS += --disable-doc
 
-# Must match $(FPK_REV) from spk/ffmpeg5/Makefile
-CONFIGURE_ARGS += --extra-version=$(shell sed -n 's/^FPK_REV = \(.*\)/\1/p' $(WORK_DIR)/../../../spk/ffmpeg5/Makefile)
+# Must match $(FPK_REV) from fpk/ffmpeg5/Makefile
+CONFIGURE_ARGS += --extra-version=$(shell sed -n 's/^FPK_REV = \(.*\)/\1/p' $(WORK_DIR)/../../../fpk/ffmpeg5/Makefile)
 
 # Enable Synology specific -hls_seek_time option and other optimizations
 CONFIGURE_ARGS += --extra-cflags=-DSYNO_VIDEOSTATION

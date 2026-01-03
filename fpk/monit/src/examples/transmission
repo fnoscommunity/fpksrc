@@ -1,4 +1,4 @@
-#default file provided by monit spk
+#default file provided by monit fpk
 
 check process Transmission with pidfile /var/apps/transmission/var/transmission.pid
     start program = "/var/apps/transmission/scripts/start-stop-status start"

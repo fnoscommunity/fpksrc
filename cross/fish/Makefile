@@ -9,7 +9,7 @@ DEPENDS =
 
 # requirements: C++11 compiler (g++ 4.8 or later, or clang 3.3 or later)
 UNSUPPORTED_ARCHS = $(ARMv5_ARCHS) $(OLD_PPC_ARCHS)
-# build with custom qoriq rust_target fails to build in spk folder (but not in cross/fish)
+# build with custom qoriq rust_target fails to build in fpk folder (but not in cross/fish)
 UNSUPPORTED_ARCHS += $(PPC_ARCHS)
 
 HOMEPAGE = https://fishshell.com

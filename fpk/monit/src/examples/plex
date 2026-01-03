@@ -1,4 +1,4 @@
-#default file provided by monit spk
+#default file provided by monit fpk
 
 check process Plex with pidfile "/volume1/Plex/Library/Application Support/Plex Media Server/plexmediaserver.pid"
     start program = "/var/apps/Plex Media Server/scripts/start-stop-status start"

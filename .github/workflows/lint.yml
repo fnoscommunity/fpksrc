@@ -18,9 +18,9 @@ jobs:
       - name: Lint
         run: |
           npm install jsonlint
-          find spk/ \
+          find fpk/ \
            -not -path "*work*" \
-           -not -path "spk/transmission/src/settings.json" \
+           -not -path "fpk/transmission/src/settings.json" \
            -not -path "*/wizard_templates/install" \
            -not -path "*/wizard_templates/upgrade" \
            -regextype posix-extended \

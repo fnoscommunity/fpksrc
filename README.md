@@ -10,7 +10,7 @@ fpksrc is a cross compilation framework intended to compile and package software
 # DSM 7
 DSM 7 was released on June 29 2021 as Version 7.0.41890.
 
-* The main issue we had with our reposity is fixed in [spkrepo](https://github.com/FnOScommunity/spkrepo/pull/112) and online since February 2024
+* The main issue we had with our reposity is fixed in [fpkrepo](https://github.com/FnOScommunity/fpkrepo/pull/112) and online since February 2024
   - before the repository deliverd DSM 6 packages for Systems with DSM 7, when no DSM 7 package was available
   - this gave errors like "invalid file format" (or "package requires root privileges")
   - you still get this error when manually installing a DSM 6 package on DSM 7

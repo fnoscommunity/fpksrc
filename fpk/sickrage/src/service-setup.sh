@@ -50,7 +50,7 @@ service_postinst ()
     syno_user_add_to_legacy_group "${EFF_USER}" "${USER}" "${LEGACY_GROUP}"
 
     # Remove legacy user
-    # Commands of busybox from spk/python
+    # Commands of busybox from fpk/python
     delgroup "${USER}" "users"
     deluser "${USER}"
 }

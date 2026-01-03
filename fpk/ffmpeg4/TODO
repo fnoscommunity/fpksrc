@@ -27,7 +27,7 @@ Candidates for enablement:
   --enable-libiec61883 
 
 Not to be enabled:
-  --enable-librsvg   ==> Requires gobject-introspection + python + many other dependencies increasing spk size
+  --enable-librsvg   ==> Requires gobject-introspection + python + many other dependencies increasing fpk size
   --enable-libjack 
   --enable-libpulse 
   --enable-openal 

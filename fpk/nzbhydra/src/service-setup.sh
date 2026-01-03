@@ -15,7 +15,7 @@ service_postinst ()
     ${VIRTUALENV} --system-site-packages ${SYNOPKG_PKGDEST}/env
 
     # Remove legacy user
-    # Commands of busybox from spk/python
+    # Commands of busybox from fpk/python
     delgroup "${USER}" "users"
     deluser "${USER}"
 }

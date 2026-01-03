@@ -1,4 +1,4 @@
-#default file provided by monit spk
+#default file provided by monit fpk
 
 check process CouchPotato-Custom with pidfile /var/apps/couchpotatoserver-custom/var/couchpotatoserver.pid
     start program = "/var/apps/couchpotatoserver-custom/scripts/start-stop-status start"

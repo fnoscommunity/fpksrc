@@ -5,7 +5,7 @@ untar squid package en cd intio squid directory
 ./configure
 make -C lib
 make -C src
-cp cf_gen .../spk/squidguard/work.../squid-*/src/
+cp cf_gen .../fpk/squidguard/work.../squid-*/src/
 
 run make for target architecture again
 

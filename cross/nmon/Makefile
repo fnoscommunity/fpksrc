@@ -32,7 +32,7 @@ nmon_configure:
 # of the toolchain.
 # You will get compiler errors about invalid flags (like cc: error: unrecognized command-line option ‘-mfloat-abi=hard’ for comcerto2k-7.1)
 # or targets are built for x86_64.
-# Building in fpksrc/diyspk/nmon or fpksrc/spk/synocli-monitor works as expected.
+# Building in fpksrc/diyfpk/nmon or fpksrc/fpk/synocli-monitor works as expected.
 .PHONY: nmon_compile
 nmon_compile:
 	@$(RUN) $(CC) $(PKG_DIST_NAME) $(CFLAGS) $(LDFLAGS)

@@ -69,11 +69,11 @@ do
 
     if [ "${GH_ARCH%%-*}" != "noarch" ]; then
         if [ "${package}" == "${PACKAGE_TO_PUBLISH}" ]; then
-            echo "$ make ${MAKE_ARGS}arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./spk/${package}" >>build.log
-            make ${MAKE_ARGS}arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./spk/${package} |& tee >(tail -15 >>build.log)
+            echo "$ make ${MAKE_ARGS}arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./fpk/${package}" >>build.log
+            make ${MAKE_ARGS}arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./fpk/${package} |& tee >(tail -15 >>build.log)
         else
-            echo "$ make arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./spk/${package}" >>build.log
-            make arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./spk/${package} |& tee >(tail -15 >>build.log)
+            echo "$ make arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./fpk/${package}" >>build.log
+            make arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./fpk/${package} |& tee >(tail -15 >>build.log)
         fi
     else
         if [ "${GH_ARCH}" = "noarch" ]; then
@@ -82,18 +82,18 @@ do
             TCVERSION=${GH_ARCH##*-}
         fi
         # noarch package must be first built then published
-        echo "$ make TCVERSION=${TCVERSION} ARCH= -C ./spk/${package}" >>build.log
-        make TCVERSION=${TCVERSION} ARCH= -C ./spk/${package} |& tee >(tail -15 >>build.log)
+        echo "$ make TCVERSION=${TCVERSION} ARCH= -C ./fpk/${package}" >>build.log
+        make TCVERSION=${TCVERSION} ARCH= -C ./fpk/${package} |& tee >(tail -15 >>build.log)
 
         if [ "${package}" == "${PACKAGE_TO_PUBLISH}" ]; then
-            echo "$ make TCVERSION=${TCVERSION} ARCH= -C ./spk/${package} ${MAKE_ARGS%%-}" >>build.log
-            make TCVERSION=${TCVERSION} ARCH= -C ./spk/${package} ${MAKE_ARGS%%-} |& tee >(tail -15 >>build.log)
+            echo "$ make TCVERSION=${TCVERSION} ARCH= -C ./fpk/${package} ${MAKE_ARGS%%-}" >>build.log
+            make TCVERSION=${TCVERSION} ARCH= -C ./fpk/${package} ${MAKE_ARGS%%-} |& tee >(tail -15 >>build.log)
         fi
     fi
     result=$?
 
     # For a build to succeed a <package>_<arch>-<version>.fpk must also be generated
-    if [ ${result} -eq 0 -a "$(ls -1 ./packages/$(sed -n -e '/^FPK_NAME/ s/.*= *//p' spk/${package}/Makefile)_*.fpk 2> /dev/null)" ]; then
+    if [ ${result} -eq 0 -a "$(ls -1 ./packages/$(sed -n -e '/^FPK_NAME/ s/.*= *//p' fpk/${package}/Makefile)_*.fpk 2> /dev/null)" ]; then
         echo "$(date --date=now +"%Y.%m.%d %H:%M:%S") - ${package}: (${GH_ARCH}) DONE"   >> ${BUILD_SUCCESS_FILE}
     # Ensure it's not a false-positive due to pre-check
     elif tail -15 build.log | grep -viq 'fpksrc.pre-check.mk'; then
@@ -103,10 +103,10 @@ do
 
     if [ "$(echo ${PACKAGES_TO_KEEP} | grep -ow ${package})" = "" ]; then
         # free disk space (but not for packages to keep)
-        make -C ./spk/${package} clean |& tee >(tail -15 >>build.log)
+        make -C ./fpk/${package} clean |& tee >(tail -15 >>build.log)
     else
         # free disk space by removing source and staging directories (for packages to keep)
-        make arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./spk/${package} clean-source |& tee >(tail -15 >>build.log)
+        make arch-${GH_ARCH%%-*}-${GH_ARCH##*-} -C ./fpk/${package} clean-source |& tee >(tail -15 >>build.log)
     fi
 
     echo "::endgroup::"

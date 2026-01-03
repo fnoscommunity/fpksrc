@@ -28,7 +28,7 @@ include ../../mk/fpksrc.cross-cc.mk
 # of the toolchain.
 # You will get compiler errors about invalid flags (like cc: error: unrecognized command-line option ‘-mfloat-abi=hard’ for comcerto2k-7.1)
 # or targets are built for x86_64.
-# Building in fpksrc/diyspk/njmon or fpksrc/spk/synocli-monitor works as expected.
+# Building in fpksrc/diyfpk/njmon or fpksrc/fpk/synocli-monitor works as expected.
 .PHONY: njmon_compile
 njmon_compile:
 	@$(RUN) $(CC) $(FILE) $(CFLAGS) $(VERSION_CFLAGS)

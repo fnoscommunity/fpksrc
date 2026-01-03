@@ -15,9 +15,9 @@ fpk/*/build*
 fpk/*/publish*
 fpk/*/status*
 fpk/*/wheel*
-diyspk/*/work*
-diyspk/*/build*
-diyspk/*/status*
+diyfpk/*/work*
+diyfpk/*/build*
+diyfpk/*/status*
 toolchain/*/work*
 toolchain/*/build*
 toolchain/*/status*

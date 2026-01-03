@@ -23,20 +23,20 @@
 #------------------------------------------------
 usage() {
    echo
-   printf '%10s %s\n' "Usage :" "$0 [-s|--spk <package>] [<insmod,start|rmmod,stop|reload,restart|status>] module1.ko module2.ko ..."
+   printf '%10s %s\n' "Usage :" "$0 [-s|--fpk <package>] [<insmod,start|rmmod,stop|reload,restart|status>] module1.ko module2.ko ..."
    printf '%20s %s\n' "Optional :" "[-c|--config <file>:<option1>,<option2>,...]"
    printf '%20s %s\n' "" "[-u|--udev <file>]"
    echo
-   printf '%40s %s\n' "[-s|--spk <package>] : " "FnOScommunity package name containing kernel modules"
+   printf '%40s %s\n' "[-s|--fpk <package>] : " "FnOScommunity package name containing kernel modules"
    printf '%40s %s\n' "[<insmod|rmmod|reload|status>] : " "Action to be performed"
    printf '%40s %s\n' "[-h|--help] : " "Print this help"
    printf '%40s %s\n' "[-v|--verbose] : " "Verbose mode"
    echo
    printf '%10s %s\n' "" "Examples :"
-   printf '%20s %s\n' "" "$0 --spk synokernel-cdrom --verbose cdrom sr_mod status"
-   printf '%20s %s\n' "" "$0 --spk synokernel-cdrom --config synokernel-cdrom.cfg:default status"
-   printf '%20s %s\n' "" "$0 --spk synokernel-usbserial --udev 60-synokernel-usbserial.rules usbserial ch341 cp210x status"
-   printf '%20s %s\n' "" "$0 --spk synokernel-usbserial --config synokernel-usbserial.cfg:ch341,cp210x status"
+   printf '%20s %s\n' "" "$0 --fpk synokernel-cdrom --verbose cdrom sr_mod status"
+   printf '%20s %s\n' "" "$0 --fpk synokernel-cdrom --config synokernel-cdrom.cfg:default status"
+   printf '%20s %s\n' "" "$0 --fpk synokernel-usbserial --udev 60-synokernel-usbserial.rules usbserial ch341 cp210x status"
+   printf '%20s %s\n' "" "$0 --fpk synokernel-usbserial --config synokernel-usbserial.cfg:ch341,cp210x status"
    echo
 }
 
@@ -170,7 +170,7 @@ URULE="FALSE"                                                          # Set ude
 while [ $# -gt 0 ] 
 do
    case $1 in
-                                        -s|--spk ) shift 1
+                                        -s|--fpk ) shift 1
                                                    SPK=$1;;
                                      -c|--config ) shift 1
                                                    FPK_CFG=$(echo $1 | cut -f1 -d:)
